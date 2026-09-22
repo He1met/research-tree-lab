@@ -64,7 +64,9 @@
       "manual_trials": "PASS_OFFICIAL_APP_MANUAL_NOT_NATIVE_RUN_NOW",
       "completed_task_observations": 1,
       "completion_receipt": "docs/first-native-research-completion.json",
-      "natural_identity": "UNKNOWN_NOT_PROMOTED_FROM_AUTOMATION_HEADER"
+      "natural_identity": "UNKNOWN_NOT_PROMOTED_FROM_AUTOMATION_HEADER",
+      "configuration_observed_at": "2026-09-22T18:36:18.283659+00:00",
+      "completion_observed_at": "2026-09-22T19:30:59.697719Z"
     },
     "permission_probe": {
       "local_receipt": ".local/receipts/permission-probe.json",
@@ -140,13 +142,14 @@
       "scenario": "没有任何历史复核",
       "requirement": "可以从官方资料/数据调查独立启动真实研究",
       "status": "REAL_PASS",
-      "verified_scope": "无历史复核时，官方应用手动试跑先冻结协议，再下载官方资金费资料并实际审计，发现 UTC 日缺一个结算点。",
+      "verified_scope": "无历史复核时，官方应用手动试跑先冻结协议，再下载官方资金费资料实际审计。后续分区核验表明该UTC+8日文件不覆盖所请求完整UTC日；源事件全集未获证明。",
       "evidence": [
         "research/bootstrap-v1/REPORT.md",
         "research/bootstrap-v1/execution_receipt.json",
-        "research/bootstrap-v1/verification_receipt.json"
+        "research/bootstrap-v1/verification_receipt.json",
+        "review/continuation-audit/source-capability-independent.json"
       ],
-      "limitations": "native_task_id 为空、natural_trigger=false；不是自然调度或经济有效性证明。",
+      "limitations": "native_task_id 为空、natural_trigger=false；不是自然调度或经济有效性证明。 原首轮用语保留在原件，当前索引不将分区差异称作交易所漏结算。",
       "next_verification": "自然研究另按 F07 记录。"
     },
     {
@@ -883,7 +886,7 @@
       "scenario": "实际打开Pages并核对snapshot后才记发布确认",
       "requirement": "实际打开Pages并核对snapshot后才记发布确认；部署前不声称已上线。",
       "status": "REAL_PASS",
-      "verified_scope": "首次 Pages 回读核验 52 个 HTTP 资源并实际打开每日复核定位；最新 b8633ae1ad392b613c312e0754b472a0eace2ef3fb9caa2c3e4075114411679a 又完成 56 个资源哈希与实际浏览器回读，3轮27记录，Pages Actions success。",
+      "verified_scope": "首次Pages回读核验52个HTTP资源并实际打开每日复核定位；当前最新已验快照429c7ab2a4f89a7512eb3357908352f4f65ad15ab4a881145fe52e02faaea7aa完成56资源hash与实际浏览器回读，3轮27记录，Pages Actions success。新增12记录尚待发布核验。",
       "evidence": [
         "tests/browser/artifacts/chromium-genuine-projection.json",
         "tests/browser/artifacts/webkit-genuine-projection.json",
@@ -952,12 +955,14 @@
       "scenario": "四真实任务有可回读ID、正文、路径、频率/时区、模型与权限。意图JSON不算安装。",
       "requirement": "四真实任务有可回读ID、正文、路径、频率/时区、模型与权限。意图JSON不算安装。",
       "status": "REAL_PASS",
-      "verified_scope": "四项真实业务任务已创建并启用 ACTIVE，官方回读确认登记、模型、时区、状态；本地安装回执保留真实ID、正文/配置哈希与目录。",
+      "verified_scope": "四项真实业务任务已创建并启用ACTIVE，官方回读确认登记、模型与状态；本地安装回执保留真实ID、正文/配置哈希和目录。宿主时区可独立读取，安装时区仅声明，原生调度器自身时区未暴露。",
       "evidence": [
         "docs/INSTALLATION.md",
-        "config/native_task_status.json"
+        "config/native_task_status.json",
+        "docs/first-native-research-completion.json",
+        "review/continuation-audit/timezone-independent-receipt.json"
       ],
-      "limitations": "调度器实际下一触发仍未由管理工具暴露，保持 UNKNOWN；手动安全试跑均 PASS 但非 native Run now，自然回执为 0。",
+      "limitations": "调度器实际下一触发和自身时区仍UNKNOWN；首个自动化任务头/完成已观察，严格自然身份未确认、计数仍0。手动安全试跑不等于native Run now。",
       "next_verification": "保持实际用户配置；下一步只凭真实触发身份累计自然证据。"
     },
     {
@@ -1097,7 +1102,7 @@
         "review/continuation-audit/frontend-staleness.md",
         "review/continuation-audit/frontend-staleness.json"
       ],
-      "limitations": "未实际整台Mac/App离线到恢复演练；认证只在真实必要时由用户处理。 36小时内快照新鲜度不证明生产任务存活，需明确状态含义。",
+      "limitations": "未实际整台Mac/App离线到恢复演练；认证只在真实必要时由用户处理。页面已明确36小时内快照新鲜度不证明发布任务存活。",
       "next_verification": "上线后可受控停止发布核对陈旧提示，保持本机停机局限，不越权重启。"
     }
   ],
