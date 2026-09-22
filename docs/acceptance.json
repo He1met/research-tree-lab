@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "spec": "planning/current/docs/ACCEPTANCE.md",
-  "updated_at": "2026-09-22T19:43:37.242690Z",
+  "updated_at": "2026-09-22T20:16:25.965518Z",
   "overall": "SCOPED_DELIVERY_VERIFIED_FORWARD_EVALUATOR_IMPLEMENTATION_REQUIRED_AND_NATURAL_EVIDENCE_PENDING",
   "method": "59项逐项证据映射；各层级不相加为整体通过率。测试源码只定位场景，运行通过以执行回执为准。",
   "status_definitions": {
@@ -56,7 +56,7 @@
       "surface": "LOCAL_TEST_SERVER_NOT_PAGES"
     },
     "native": {
-      "observed_at": "2026-09-22T18:36:18.283659+00:00",
+      "observed_at": "2026-09-22T20:11:56.323910+00:00",
       "registered": 4,
       "status": "ACTIVE",
       "natural_runs": 0,
@@ -65,8 +65,14 @@
       "completed_task_observations": 1,
       "completion_receipt": "docs/first-native-research-completion.json",
       "natural_identity": "UNKNOWN_NOT_PROMOTED_FROM_AUTOMATION_HEADER",
-      "configuration_observed_at": "2026-09-22T18:36:18.283659+00:00",
-      "completion_observed_at": "2026-09-22T19:30:59.697719Z"
+      "configuration_observed_at": "2026-09-22T19:37:10.435537+00:00",
+      "completion_observed_at": "2026-09-22T19:30:59.697719Z",
+      "official_task_start_observations": 2,
+      "latest_start_receipt": "docs/second-native-research-observation.json",
+      "latest_started_at": "2026-09-22T20:06:16+00:00",
+      "latest_observed_task_status": "active",
+      "latest_research_completion_accepted": false,
+      "natural_review_observed": false
     },
     "permission_probe": {
       "local_receipt": ".local/receipts/permission-probe.json",
@@ -81,6 +87,78 @@
       "restricted_source_recovered": false
     },
     "public_delivery": {
+      "schema_version": "1.0",
+      "verified_at": "2026-09-22T20:12:29.806075+00:00",
+      "snapshot_id": "87a7725123ed070e2d489087b2edb1901eaccce338acb50beed2fe107be7acf7",
+      "pages_url": "https://he1met.github.io/research-tree-lab/",
+      "http_status": "PUBLIC_SNAPSHOT_HTTP_VERIFIED",
+      "http_verified_at": "2026-09-22T20:11:49.221410Z",
+      "http_files_verified": 72,
+      "browser_visual_acceptance": "PENDING_MAC_LOCKED",
+      "last_browser_verified_snapshot_id": "27c87850828234709756683c95344f572e4fdc86fb90ab9beeb4baa3a6a19b8e",
+      "visible_rounds": 5,
+      "store_records": 39,
+      "publication_proof_included": true,
+      "remote_source_commit": "96639b110f6ba92ee0354d2b4079b1135ad85e91",
+      "pages_run_url": "https://github.com/He1met/research-tree-lab/actions/runs/35778414375",
+      "pages_conclusion": "success",
+      "ci_scope": "THIRD_MAINTENANCE_9a5259b_190_BACKEND_24_REFERENCE_AND_BUILD",
+      "ci_run_url": "https://github.com/He1met/research-tree-lab/actions/runs/35778072581",
+      "ci_conclusion": "success",
+      "source_sha256": "c1aa9e50635b4591514dc17e2d5123f3742a6b4a7b6b90c9403f6f84bd043592",
+      "shell_built": false,
+      "trigger_origin": "OFFICIAL_APP_MANUAL_MAINTENANCE_PUBLICATION",
+      "scheduler_event_identity": "NOT_APPLICABLE_MANUAL",
+      "manual_trial": true,
+      "natural_run": false,
+      "change_scope": "REUSE_39_RECORDS_AND_STATIC_SHELL_INCLUDE_EXISTING_ROUND_SOURCE_REVIEW_REFS",
+      "business_original_records_unchanged": 39,
+      "previous_snapshot_id": "27c87850828234709756683c95344f572e4fdc86fb90ab9beeb4baa3a6a19b8e",
+      "archive_receipts": [
+        "docs/archive-upload-recovery-20260923.json",
+        "docs/archive-supplement-20260923.json"
+      ],
+      "all_public_records_equal_originals": true,
+      "new_research_records": 0,
+      "limitations": [
+        "Current HTTP bytes, CI and deployment verified. New snapshot browser visual readback awaits manual Mac unlock; previous visual check is a different snapshot.",
+        "This maintenance publication and local supplement restore are not natural-run or economic evidence."
+      ]
+    },
+    "remote_restore": {
+      "receipt": "docs/remote-restore.json",
+      "files_verified": 46,
+      "records_verified": 26,
+      "new_directory_restore": true,
+      "derived_calculations_reproduced": 2,
+      "restricted_upstream_restored": false
+    },
+    "maintenance_funding_file_and_waiting_review": {
+      "verified_at": "2026-09-22T19:33:07.696606Z",
+      "backend_tests_passed": 143,
+      "reference_tests_passed": 24,
+      "author_targeted_tests_independently_rerun": 55,
+      "independent_probe_groups": 15,
+      "source_sha256": "0b6047c816779f4d2d48cc9435768e5cde7a34a55af9e7ecc7b52298f41841ae",
+      "receipt": "review/continuation-audit/funding-review-source-receipt.json",
+      "scope": "Single supplied funding file decode and status-only review outbox; no economic review or natural identity"
+    },
+    "latest_publisher_run": {
+      "receipt": "docs/publication-maintenance-trade-20260923.json",
+      "published_records": 39,
+      "published_rounds": 5,
+      "new_public_records": 0,
+      "http_files_verified": 72,
+      "archive_receipts": [
+        "docs/archive-upload-recovery-20260923.json",
+        "docs/archive-supplement-20260923.json"
+      ],
+      "trigger_origin": "OFFICIAL_APP_MANUAL_MAINTENANCE_PUBLICATION",
+      "natural_run": false,
+      "browser_visual_acceptance": "PENDING_MAC_LOCKED",
+      "last_browser_verified_snapshot_id": "27c87850828234709756683c95344f572e4fdc86fb90ab9beeb4baa3a6a19b8e"
+    },
+    "last_browser_verified_delivery": {
       "schema_version": "1.0",
       "verified_at": "2026-09-22T19:43:37.242690Z",
       "snapshot_id": "27c87850828234709756683c95344f572e4fdc86fb90ab9beeb4baa3a6a19b8e",
@@ -110,25 +188,7 @@
       "previous_snapshot_id": "429c7ab2a4f89a7512eb3357908352f4f65ad15ab4a881145fe52e02faaea7aa",
       "archive_receipt": "docs/archive-increment-20260923.json"
     },
-    "remote_restore": {
-      "receipt": "docs/remote-restore.json",
-      "files_verified": 46,
-      "records_verified": 26,
-      "new_directory_restore": true,
-      "derived_calculations_reproduced": 2,
-      "restricted_upstream_restored": false
-    },
-    "maintenance_funding_file_and_waiting_review": {
-      "verified_at": "2026-09-22T19:33:07.696606Z",
-      "backend_tests_passed": 143,
-      "reference_tests_passed": 24,
-      "author_targeted_tests_independently_rerun": 55,
-      "independent_probe_groups": 15,
-      "source_sha256": "0b6047c816779f4d2d48cc9435768e5cde7a34a55af9e7ecc7b52298f41841ae",
-      "receipt": "review/continuation-audit/funding-review-source-receipt.json",
-      "scope": "Single supplied funding file decode and status-only review outbox; no economic review or natural identity"
-    },
-    "latest_publisher_run": {
+    "previous_native_publisher_run": {
       "receipt": "docs/publication-run-20260923-v1.json",
       "published_records": 39,
       "published_rounds": 5,
@@ -136,13 +196,63 @@
       "http_files_verified": 72,
       "archive": "docs/archive-increment-20260923.json",
       "natural_identity": "UNKNOWN_NOT_PROMOTED_FROM_AUTOMATION_HEADER"
+    },
+    "maintenance_trade_file_and_public_archive": {
+      "verified_at": "2026-09-22T20:06:07.335327+00:00",
+      "source_sha256": "c1aa9e50635b4591514dc17e2d5123f3742a6b4a7b6b90c9403f6f84bd043592",
+      "review_receipt": "review/continuation-audit/trade-public-source-receipt.json",
+      "integration_receipt": "review/continuation-audit/trade-public-integration-tests.json",
+      "backend_tests_passed": 190,
+      "reference_tests_passed": 24,
+      "author_targeted_tests_independently_rerun": 81,
+      "round_source_review_refs_compatibility": "FIXED_INDEPENDENTLY_REVIEWED_AND_INSTALLED",
+      "scope": "Single BTC trade file streaming decode and exact public archive field compatibility; no complete source coverage or formal economic review"
+    },
+    "increment_archive_upload": {
+      "receipt": "docs/archive-upload-recovery-20260923.json",
+      "state": "PUBLISHED_SERVER_DIGEST_VERIFIED_REMOTE_DOWNLOAD_UNVERIFIED",
+      "historical_failure_receipt": "docs/archive-increment-20260923.json",
+      "release_url": "https://github.com/He1met/research-tree-lab/releases/tag/research-increment-20260923-v1",
+      "archive_sha256": "3467ea715b9ef638f897e94f13d5ca267e65ea3069a56a9f53132321cf72cf7f",
+      "new_record_count": 9,
+      "closure_record_count": 14,
+      "file_count": 35,
+      "server_digest_verified": true,
+      "remote_download_verified": false,
+      "remote_restored": false,
+      "download_blocker": "CHROME_ERR_BLOCKED_BY_CLIENT_AND_BROWSER_POLICY_REJECTION_NO_WORKAROUND"
+    },
+    "supplement_archive": {
+      "receipt": "docs/archive-supplement-20260923.json",
+      "state": "LOCAL_SUPPLEMENT_VERIFIED_MAC_LOCKED_UPLOAD_PENDING",
+      "archive_sha256": "ae8ec8612992154f0ec7b7957d45bdaffdbd81ca9795a91543f2f2af4f04a674",
+      "new_record_count": 4,
+      "closure_record_count": 15,
+      "file_count": 36,
+      "local_restore_files_verified": 36,
+      "three_archive_union_records": 39,
+      "frozen_store_record_count": 39,
+      "frozen_store_missing_refs": [],
+      "upload_status": "NOT_UPLOADED",
+      "upload_blocker": "MAC_LOCKED",
+      "remote_download_verified": false,
+      "remote_restored": false,
+      "scientific_reproduction": "NOT_RUN"
+    },
+    "index_scope": {
+      "snapshot_id": "87a7725123ed070e2d489087b2edb1901eaccce338acb50beed2fe107be7acf7",
+      "snapshot_verified_at": "2026-09-22T20:12:29.806075+00:00",
+      "frozen_records": 39,
+      "frozen_rounds": 5,
+      "live_store_count": "NOT_ASSERTED_BY_THIS_INDEX_UPDATE",
+      "later_task_records": "OUTSIDE_THIS_PUBLISHED_SNAPSHOT_REQUIRE_SEPARATE_UNPUBLISHED_INCREMENT_CHECK"
     }
   },
   "operator_pending": [
     "OFFICIAL_SOURCE_PROVENANCE_COVERAGE_TRADE_ORDER_AND_MARK_INPUTS",
     "ACCEPTED_EVENT_FORMAL_ECONOMIC_REVIEW_AND_STATE_MIGRATION",
-    "PUBLIC_ARCHIVE_ROUND_SOURCE_REVIEW_REFS_COMPATIBILITY",
-    "CHROME_EXTENSION_FILE_UPLOAD_PERMISSION"
+    "MAC_UNLOCK_FOR_SUPPLEMENT_UPLOAD_AND_BROWSER_CHECK",
+    "INCREMENT_REMOTE_DOWNLOAD_RESTORE_UNVERIFIED"
   ],
   "not_claimed": [
     "整体59项通过",
@@ -274,13 +384,14 @@
       "scenario": "用户不读网页不回复继续",
       "requirement": "原生任务仍接续，不形成普通研究审批",
       "status": "WAITING_NATURAL_OUTCOME",
-      "verified_scope": "四项业务任务ACTIVE；官方应用观察到首个带自动化任务头的研究任务完成并追加12条，监督任务未手动派发或发送继续。",
+      "verified_scope": "四项业务任务ACTIVE；官方应用观察到首个带自动化任务头的研究任务完成并追加12条，监督任务未手动派发或发送继续。 第二个独立任务于2026-09-22T20:06:16Z启动，观察时仍active；仅累计2次启动观察、1次完成观察。",
       "evidence": [
         "docs/INSTALLATION.md",
         "config/native_task_status.json",
-        "docs/first-native-research-completion.json"
+        "docs/first-native-research-completion.json",
+        "docs/second-native-research-observation.json"
       ],
-      "limitations": "完成状态和任务头已核实，但scheduler-event身份未暴露；原run natural_trigger=null，严格自然计数仍0。",
+      "limitations": "首个完成状态和两次任务头/启动已核实，但scheduler-event身份未暴露；第二个任务尚未形成完成验收，原run natural_trigger=null不改，严格自然计数仍0。",
       "next_verification": "在用户无额外回复期间保留真实自然触发身份与接续产物。"
     },
     {
@@ -339,7 +450,7 @@
       "scenario": "跨日观察",
       "requirement": "模拟状态接续；日终不强制退出、不重新进入",
       "status": "IMPLEMENTATION_REQUIRED",
-      "verified_scope": "实际账本测试跨日库存、资金费、退出成本、幂等，复核须接续原状态。 新增条件内核、单资金费文件离线解码、两个原状态到等待处置outbox，经独立限定批准；143后端与24参考检查通过。",
+      "verified_scope": "实际账本测试跨日库存、资金费、退出成本、幂等，复核须接续原状态。 新增条件内核、单资金费文件离线解码、两个原状态到等待处置outbox，经独立限定批准；143后端与24参考检查通过。 第三维护新增单BTC成交文件流式解码和公开字段兼容，190后端/24参考通过。",
       "evidence": [
         "review/bootstrap-review/engineering-tests-final.txt",
         "tests/test_replay_ledger.py",
@@ -349,9 +460,12 @@
         "review/continuation-audit/FORWARD_EVALUATOR_AUDIT.md",
         "review/continuation-audit/funding-review-source-receipt.json",
         "docs/FUNDING_WAITING_REVIEW.md",
-        "docs/OKX_FUNDING_FILE.md"
+        "docs/OKX_FUNDING_FILE.md",
+        "review/continuation-audit/trade-public-source-receipt.json",
+        "review/continuation-audit/trade-public-integration-tests.json",
+        "docs/OKX_TRADE_FILE.md"
       ],
-      "limitations": "仅能对所给资料作条件算术、单文件校验和无经济结果的等待处置；来源真实可得、事件全集、成交顺序、精确mark及已接受事件的正式经济复核/跨日迁移仍未完成。没有真实最终路径或账户利润。",
+      "limitations": "仅能对所给资料作条件算术、单文件校验和无经济结果的等待处置；来源真实可得、事件全集、成交顺序、精确mark及已接受事件的正式经济复核/跨日迁移仍未完成。没有真实最终路径或账户利润。 当前隔离开发的conditional-review层仍在进行中，未作为已交付能力。",
       "next_verification": "按原窗口收集许可来源并分项验证，补已接受事件的正式经济状态迁移；日复核可使用已审等待预备器，当前不能生成经济FINAL。"
     },
     {
@@ -359,7 +473,7 @@
       "scenario": "最终与阶段",
       "requirement": "到原终点且数据齐全才最终；等待/缺数/未触发分别表示",
       "status": "ENGINEERING_PARTIAL",
-      "verified_scope": "测试拒绝未到原终点或路径不全的 FINAL；真实两份复核均 NOT_YET_EFFECTIVE，区分等待、阶段、缺数和未触发。 新增条件内核、单资金费文件离线解码、两个原状态到等待处置outbox，经独立限定批准；143后端与24参考检查通过。",
+      "verified_scope": "测试拒绝未到原终点或路径不全的 FINAL；真实两份复核均 NOT_YET_EFFECTIVE，区分等待、阶段、缺数和未触发。 新增条件内核、单资金费文件离线解码、两个原状态到等待处置outbox，经独立限定批准；143后端与24参考检查通过。 第三维护新增单BTC成交文件流式解码和公开字段兼容，190后端/24参考通过。",
       "evidence": [
         "review/bootstrap-review/engineering-tests-final.txt",
         "tests/test_storage_contracts.py",
@@ -371,9 +485,12 @@
         "review/continuation-audit/FORWARD_EVALUATOR_AUDIT.md",
         "review/continuation-audit/funding-review-source-receipt.json",
         "docs/FUNDING_WAITING_REVIEW.md",
-        "docs/OKX_FUNDING_FILE.md"
+        "docs/OKX_FUNDING_FILE.md",
+        "review/continuation-audit/trade-public-source-receipt.json",
+        "review/continuation-audit/trade-public-integration-tests.json",
+        "docs/OKX_TRADE_FILE.md"
       ],
-      "limitations": "仅能对所给资料作条件算术、单文件校验和无经济结果的等待处置；来源真实可得、事件全集、成交顺序、精确mark及已接受事件的正式经济复核/跨日迁移仍未完成。没有真实最终路径或账户利润。",
+      "limitations": "仅能对所给资料作条件算术、单文件校验和无经济结果的等待处置；来源真实可得、事件全集、成交顺序、精确mark及已接受事件的正式经济复核/跨日迁移仍未完成。没有真实最终路径或账户利润。 当前隔离开发的conditional-review层仍在进行中，未作为已交付能力。",
       "next_verification": "按原窗口收集许可来源并分项验证，补已接受事件的正式经济状态迁移；日复核可使用已审等待预备器，当前不能生成经济FINAL。"
     },
     {
@@ -394,7 +511,7 @@
       "scenario": "费用与网格",
       "requirement": "未知不填0；库存/未实现/资金费/退出纳入，手算样例核验",
       "status": "ENGINEERING_PARTIAL",
-      "verified_scope": "账本测试未知费用不填零，计入库存、未实现变化、资金费和退出；真实派生 48 情景另经独立 46 项算术核验。 新增条件内核、单资金费文件离线解码、两个原状态到等待处置outbox，经独立限定批准；143后端与24参考检查通过。",
+      "verified_scope": "账本测试未知费用不填零，计入库存、未实现变化、资金费和退出；真实派生 48 情景另经独立 46 项算术核验。 新增条件内核、单资金费文件离线解码、两个原状态到等待处置outbox，经独立限定批准；143后端与24参考检查通过。 第三维护新增单BTC成交文件流式解码和公开字段兼容，190后端/24参考通过。",
       "evidence": [
         "review/bootstrap-review/engineering-tests-final.txt",
         "tests/test_replay_ledger.py",
@@ -406,9 +523,12 @@
         "review/continuation-audit/FORWARD_EVALUATOR_AUDIT.md",
         "review/continuation-audit/funding-review-source-receipt.json",
         "docs/FUNDING_WAITING_REVIEW.md",
-        "docs/OKX_FUNDING_FILE.md"
+        "docs/OKX_FUNDING_FILE.md",
+        "review/continuation-audit/trade-public-source-receipt.json",
+        "review/continuation-audit/trade-public-integration-tests.json",
+        "docs/OKX_TRADE_FILE.md"
       ],
-      "limitations": "仅能对所给资料作条件算术、单文件校验和无经济结果的等待处置；来源真实可得、事件全集、成交顺序、精确mark及已接受事件的正式经济复核/跨日迁移仍未完成。没有真实最终路径或账户利润。",
+      "limitations": "仅能对所给资料作条件算术、单文件校验和无经济结果的等待处置；来源真实可得、事件全集、成交顺序、精确mark及已接受事件的正式经济复核/跨日迁移仍未完成。没有真实最终路径或账户利润。 当前隔离开发的conditional-review层仍在进行中，未作为已交付能力。",
       "next_verification": "按原窗口收集许可来源并分项验证，补已接受事件的正式经济状态迁移；日复核可使用已审等待预备器，当前不能生成经济FINAL。"
     },
     {
@@ -849,7 +969,7 @@
       "scenario": "公开镜像、网页投影可从原件重建",
       "requirement": "公开镜像、网页投影可从原件重建；同输入生成一致；全历史索引与大文件链接可追溯。",
       "status": "ENGINEERING_PASS",
-      "verified_scope": "同输入投影确定、历史搜索、详情/附件内容寻址通过；真实本地26对象与附件可追溯bundle。",
+      "verified_scope": "同输入投影确定、历史搜索、详情/附件内容寻址通过，首版真实本地26对象与附件可追溯bundle。第三维护已独立批准安装round.source_review_refs兼容修复；87a772快照中的39条公开记录与原件字段/内容一致，4条曾受阻对象的完整引用闭包经独立核验，补充包15条闭包/36文件在本机新目录恢复通过。",
       "evidence": [
         "review/bootstrap-review/engineering-tests-final.txt",
         "tests/test_storage_contracts.py",
@@ -860,10 +980,15 @@
         "research/bootstrap-v1/PUBLIC_SCOPE.md",
         "tests/test_public_guard.py",
         "docs/publication-run-20260923-v1.json",
-        "docs/archive-increment-20260923.json"
+        "docs/archive-increment-20260923.json",
+        "review/continuation-audit/trade-public-source-receipt.json",
+        "review/continuation-audit/trade-public-integration-tests.json",
+        "tests/receipts/public-round-source-review-archive.json",
+        "docs/publication-maintenance-trade-20260923.json",
+        "docs/archive-supplement-20260923.json"
       ],
-      "limitations": "公开派生可重建不等于受限上游已远端备份；E09/E10 已单独验证允许范围的远端发布与恢复。 当前round.source_review_refs不在公开白名单，投影省略该冗余字段但其他正式引用保留主关系；完整字节归档已拒绝，独立维护事项见本次归档回执。",
-      "next_verification": "后续新增内容继续核对允许闭包并保留 LOCAL_ONLY 缺口。"
+      "limitations": "原公开字段缺项的失败回执保留，工程缺项已关闭；未知字段、披露限制和隐私扫描仍有效。当前快照视觉核对待Mac解锁；本机补充归档不等于远端上传恢复，受限上游仍LOCAL_ONLY。",
+      "next_verification": "解锁后完成补充包上传及当前快照视觉回读；后续新增内容继续核对允许闭包并保留LOCAL_ONLY缺口。"
     },
     {
       "id": "E07",
@@ -907,7 +1032,7 @@
       "scenario": "实际打开Pages并核对snapshot后才记发布确认",
       "requirement": "实际打开Pages并核对snapshot后才记发布确认；部署前不声称已上线。",
       "status": "REAL_PASS",
-      "verified_scope": "最新发布快照27c87850828234709756683c95344f572e4fdc86fb90ab9beeb4baa3a6a19b8e完成72个HTTP资源hash及实际Chrome浏览器回读，5轮39记录；新增12条已展示，反馈后继第3代及详情加载实证；Pages作业success，前端壳未重建。",
+      "verified_scope": "快照27c87850828234709756683c95344f572e4fdc86fb90ab9beeb4baa3a6a19b8e已有72个HTTP资源hash与实际Chrome浏览器回读、5轮39记录和反馈后继第3代详情实证。最新维护快照87a7725123ed070e2d489087b2edb1901eaccce338acb50beed2fe107be7acf7复用同39记录与前端壳，72个HTTP资源核验通过；源码9a5259b的CI及发布96639b1的Pages成功。",
       "evidence": [
         "tests/browser/artifacts/chromium-genuine-projection.json",
         "tests/browser/artifacts/webkit-genuine-projection.json",
@@ -919,17 +1044,18 @@
         "docs/public-browser-readback.json",
         "docs/current-publication.json",
         "docs/publication-run-20260923-v1.json",
-        "docs/archive-increment-20260923.json"
+        "docs/archive-increment-20260923.json",
+        "docs/publication-maintenance-trade-20260923.json"
       ],
-      "limitations": "本次官方自动化任务头可见，但调度事件身份仍UNKNOWN，不计入自然发布或自然研究验收。成功仅对应所列snapshot与实际回读时点。",
-      "next_verification": "自然发布继续保存远端身份、完整性和页面回读，不从本地构建推断远端更新。"
+      "limitations": "REAL_PASS保留在此前实际视觉核对范围。最新87a772快照browser_visual_acceptance=PENDING_MAC_LOCKED，最近实际视觉核对仍27c878，不能混为同一次；本次为手动维护发布、新研究0条、natural_run=false，前次任务的调度身份仍UNKNOWN。",
+      "next_verification": "Mac解锁后用受支持浏览器实际回读87a772快照并另存回执；保持HTTP、部署、视觉与自然身份分别记录。"
     },
     {
       "id": "E10",
       "scenario": "从一个新目录恢复一项允许公开的完整研究，验证代码/数据/结果与清单",
       "requirement": "从一个新目录恢复一项允许公开的完整研究，验证代码/数据/结果与清单；尚未远端保存的部分如实标明。",
       "status": "REAL_PASS",
-      "verified_scope": "从 GitHub Release 下载允许公开的研究归档到全新目录，46 文件/26 记录逐哈希验证，两项派生脚本实际复算与预期一致。",
+      "verified_scope": "首批GitHub Release下载到全新目录的46文件/26记录逐hash验证与两项派生复算证据保留。本次增量包9条新增/14条闭包/35文件已发布且服务器digest一致，未验证下载恢复；补充包4条新增/15条闭包/36文件在本机新目录恢复通过。三包本机并集覆盖冻结39条，无缺失引用。",
       "evidence": [
         "review/bootstrap-review/engineering-tests-final.txt",
         "tests/test_storage_contracts.py",
@@ -940,10 +1066,13 @@
         "docs/remote-restore.json",
         "docs/current-publication.json",
         "docs/publication-run-20260923-v1.json",
-        "docs/archive-increment-20260923.json"
+        "docs/archive-increment-20260923.json",
+        "docs/archive-upload-recovery-20260923.json",
+        "docs/archive-supplement-20260923.json",
+        "review/continuation-audit/trade-public-source-receipt.json"
       ],
-      "limitations": "历史26条远端恢复实证保持；本次9条新增的14条引用闭包已在本机归档，但浏览器文件权限阻止上传，13条新增仍未有远端归档确认，其中4条需独立公开字段兼容维护。受限源与新方法未许可附件仍LOCAL_ONLY，不声称完整科学恢复。",
-      "next_verification": "权限恢复后只续传已核验归档草稿；公开字段兼容单列独立维护；周日恢复到新的目录。"
+      "limitations": "REAL_PASS只保持首批26条远端恢复范围。增量下载遇Chrome ERR_BLOCKED_BY_CLIENT、downloadMedia无可见文件及Browser安全策略拒绝，未绕过；补充包因Mac锁定未上传。服务器digest、本机并集和本机恢复不能替代新增包远端恢复；受限原始行情与未许可脚本仍LOCAL_ONLY，新增研究未从远端包科学复算。",
+      "next_verification": "待用户解锁后通过原生文件选择器追加已核验补充包，保留现有附件并核对服务器digest；远端下载须由受支持能力实际取得字节后，另在新目录验证恢复，禁止绕过Browser策略。"
     },
     {
       "id": "E11",
@@ -987,9 +1116,10 @@
         "docs/first-native-research-completion.json",
         "review/continuation-audit/timezone-independent-receipt.json",
         "docs/publication-run-20260923-v1.json",
-        "docs/archive-increment-20260923.json"
+        "docs/archive-increment-20260923.json",
+        "docs/second-native-research-observation.json"
       ],
-      "limitations": "调度器实际下一触发和自身时区仍UNKNOWN；首个自动化任务头/完成已观察，严格自然身份未确认、计数仍0。手动安全试跑不等于native Run now。",
+      "limitations": "调度器实际下一触发和自身时区仍UNKNOWN；已观察2次任务启动，但完成观察仍1，第二次仅active，严格自然计数仍0。手动安全试跑不等于native Run now。",
       "next_verification": "保持实际用户配置；下一步只凭真实触发身份累计自然证据。"
     },
     {
@@ -1083,7 +1213,7 @@
       "scenario": "手动试跑、自然运行分开",
       "requirement": "手动试跑、自然运行分开；至少两个不同自然研究时点、一轮自然日复核和真实后继有证据。",
       "status": "WAITING_NATURAL_OUTCOME",
-      "verified_scope": "手动首轮与后续任务分开；首次自动化任务头及completed已观察，39条原库回读通过、真实反馈后继成立；调度事件身份未核实，严格自然计数仍0。",
+      "verified_scope": "手动首轮与后续任务分开；首次自动化任务头及completed已观察，39条原库回读通过、真实反馈后继成立。第二个任务于2026-09-22T20:06:16Z启动，观察时仍active；启动观察2次、完成观察1次、严格自然计数0。",
       "evidence": [
         "docs/INSTALLATION.md",
         "config/native_task_status.json",
@@ -1095,9 +1225,10 @@
         "review/bootstrap-review/review_bundle.json",
         "docs/first-native-research-completion.json",
         "docs/publication-run-20260923-v1.json",
-        "docs/archive-increment-20260923.json"
+        "docs/archive-increment-20260923.json",
+        "docs/second-native-research-observation.json"
       ],
-      "limitations": "仍缺两个具有已核实身份的自然研究时点和一轮自然日复核；真实反馈采用不替代自然触发证明。",
+      "limitations": "第二个启动不是第二次完成；两次调度事件身份均未核实，仍缺两个具有已核实身份的自然研究时点和一轮自然日复核。真实反馈采用与手动维护发布不替代自然触发证明。",
       "next_verification": "通过受支持官方能力补充真实触发证据，保留原run的UNKNOWN，不修改原记录或以手工补齐。"
     },
     {
