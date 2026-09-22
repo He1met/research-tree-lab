@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.0",
+  "state": "PASS_SCOPED_READ_ONLY_COMMITTED_RESEARCH_AUDIT",
+  "observed_at": "2026-09-22T22:30:15.727687+00:00",
+  "scope": "FOURTH_OFFICIAL_TASK_COMPLETION_AND_COMMITTED_EVIDENCE_READBACK_NOT_NEW_SCIENTIFIC_RECALCULATION",
+  "official_task_observation": {
+    "source": "OFFICIAL_CODEX_APP_WAIT_THREADS",
+    "thread_id": "01a0cb26-d8e8-7cb2-b103-8708109f2424",
+    "turn_id": "01a0cb26-db54-7442-abfa-dc4cc5116cce",
+    "status": "completed",
+    "thread_status": "idle",
+    "started_at": "2026-09-22T22:05:16+00:00",
+    "completed_at": "2026-09-22T22:25:11+00:00",
+    "duration_ms": 1195040,
+    "cursor": "00d59a3e-9a7c-4a58-b981-727030b0a413:9",
+    "supervisor_dispatch_or_control": false,
+    "actual_trigger_origin": "UNKNOWN",
+    "original_natural_trigger": null,
+    "strict_natural_acceptance_increment": 0,
+    "boundary": "Official completion and an automation task card do not establish the actual trigger source. The stored UNKNOWN/null identity is preserved; no particular scheduler-ID format is required as the only possible evidence."
+  },
+  "baseline": {
+    "scope": "FIRST_COMBINED_INSTALL_BASELINE_ALL_COMMITTED_RECORDS_BUNDLE_FILES_AND_DATA_OBJECTS",
+    "baseline_sha256": "8f50a69580a9fa2d47a1192e58e2aaa15922d69fad6ad84647b3bc1214ddb3a4",
+    "record_hashes_checked": 54,
+    "record_hashes_unchanged": 54,
+    "files_checked": 366,
+    "file_hashes_unchanged": 366,
+    "private_ids_paths_withheld": true,
+    "author_baseline_files": 361,
+    "baseline_count_boundary": "The author postcommit receipt covers its own 361-file selection. This independent audit checked the separately frozen 366-file baseline; the two counts are not rewritten or conflated."
+  },
+  "store": {
+    "strict_load": "PASS",
+    "relationships": "PASS",
+    "anomalies": 0,
+    "record_count": 60,
+    "public_record_count": 57,
+    "local_only_record_count": 3,
+    "round_count": 9,
+    "uncommitted_staging_count": 0,
+    "in_progress_claim_count": 0,
+    "installation_source_sha256": "eca93fe70146b1c6962842cd6b62dc8f66f89a47e8249017387202e1a6985277",
+    "release_ref": "ce8d239788392c143ae971732d185627907e6b26"
+  },
+  "increment": {
+    "records": 6,
+    "public_records": 5,
+    "local_only_records": 1,
+    "rounds": 1,
+    "plans": 0,
+    "formal_reviews": 0,
+    "review_batches": 0,
+    "readiness_assessments": 0,
+    "datasets": 0,
+    "new_market_files": 0,
+    "public_record_hashes": {
+      "decision-stock-corporate-action-boundary-20260923": "548b3caea353712af32a23ffd79037af0723e03b5762dffd40e7e874d30bdcd8",
+      "e-stock-corporate-action-sources-20260923": "ad46a4f4b08c0ae5129fa594f40d48de2fdbe224b6ac440ae81bcc1bdf79c74d",
+      "m-stock-corporate-action-accounting-20260923@1": "11cf44cf3295965dad3d71f8560b8e4b235a0f1ebaeb58d4534f36995c5349b7",
+      "r-stock-corporate-action-accounting-20260923": "6f553cef581313e1f88beb9b6d96fbc95efc48b6d72512a7afbb4a258c96fa3b",
+      "run-stock-corporate-action-accounting-20260923@attempt-1": "742516c86a8b36862ebe3feb2ef480078f20c29df009cf7e882abcfbec594cef"
+    },
+    "public_records_committed_at": "2026-09-22T22:22:43.373668Z",
+    "local_only_record_type": "evidence",
+    "private_identity_and_paths": "WITHHELD"
+  },
+  "lineage": {
+    "round_ref": "r-stock-corporate-action-accounting-20260923",
+    "parent_round_id": null,
+    "derived_from_feedback_refs": [],
+    "purpose": "INDEPENDENT_CORPORATE_ACTION_ACCOUNTING_AND_DATA_CONTRACT_RESEARCH",
+    "products": [
+      "aapl",
+      "qqq"
+    ],
+    "existing_feedback_principles_applied": true,
+    "duplicate_funding_feedback_successor_created": false,
+    "run_method_ref": "m-stock-corporate-action-accounting-20260923@1",
+    "run_method_ref_is_top_level_semantic_dependency": true,
+    "selected_plan_ref": null
+  },
+  "research_scope": {
+    "real_work": "Official documentary source comparison and authored corporate-action accounting analysis with separate synthetic algebra checks.",
+    "source_count": 11,
+    "source_attempt_groups": 9,
+    "source_html_bytes_captured": false,
+    "source_observation": "Saved official-web-tool observations, timestamps and attempted/failed retrievals are retained; this audit did not retrieve sources again.",
+    "prior_source_exposure": "Protocol explicitly disclosed prior general-page and preliminary source findings before the fixed algebra grid; not an unexposed forward market test.",
+    "actual_target_net_pnl": null,
+    "actual_trade_count": null,
+    "economic_sample_count": 0,
+    "new_formal_plan": false,
+    "execution_readiness": "UNKNOWN",
+    "account_eligibility": "NOT_ASSESSED"
+  },
+  "documentary_boundaries": [
+    {
+      "topic": "DIVIDEND_RIGHTS_AND_CONTRACT_ADJUSTMENT",
+      "observed_claim": "Current UK FAQ small-dividend wording, general ownership limits and product-terms adjustment possibilities were kept distinct.",
+      "prohibited_inference": "No shareholder entitlement does not imply no possible contract adjustment; no mechanical adjustment does not imply no market price movement.",
+      "source_urls": [
+        "https://www.okx.com/help/stock-perpetuals",
+        "https://www.okx.com/en-gb/help/stock-perpetuals-faq",
+        "https://www.okx.com/help/terms-and-conditions-for-stock-perpetuals"
+      ]
+    },
+    {
+      "topic": "SPLIT_AND_REGIONAL_ORDER_RULES",
+      "observed_claim": "Generic split documentation describes proportional unit/price rebasing and realized-PnL transfer. UAE and generic documents differ on TP/SL handling; event settlement/delisting can differ.",
+      "prohibited_inference": "The exact-scaling equation is one documented mechanism, not a universal AAPL/QQQ event or regional execution rule. No default assumption that orders survive, cancel identically or remain executable.",
+      "source_urls": [
+        "https://www.okx.com/help/stock-split-adjustments-for-stock-perpetuals",
+        "https://www.okx.com/en-ae/help/tradfi-perpetuals-and-corporate-action-faq-uae"
+      ]
+    },
+    {
+      "topic": "REFERENCE_ISSUER_EVENT",
+      "observed_claim": "Apple issuer sources were recorded as a reference USD 0.27 dividend declared 2026-07-30, record date 2026-08-10 and payable date 2026-08-13.",
+      "prohibited_inference": "Record/payable dates are not an established ex-date; no target AAPL perpetual cashflow, synchronous price response or USDT FX equivalence was established.",
+      "source_urls": [
+        "https://www.apple.com/newsroom/2026/07/apple-reports-third-quarter-results/",
+        "https://investor.apple.com/dividend-history/"
+      ]
+    },
+    {
+      "topic": "NON_TARGET_AND_FAILED_RETRIEVALS",
+      "observed_claim": "KORU planned adjustment lacks execution completion and issuer cross-check; STRC is a separate contract example; current QQQ distributions were not obtained.",
+      "prohibited_inference": "Do not register these examples as active target products or infer AAPL/QQQ treatment, zero events or completed adjustments."
+    }
+  ],
+  "scientific_evidence_read_not_rerun": {
+    "science_receipt_state": "PASS_SCOPED_DOCUMENTARY_ACCOUNTING_VALIDATION",
+    "science_receipt_sha256": "dab701b95bceb35ae2a97f20e76de09eda8675a155fe0cc5f5b4532a90cea1e6",
+    "independent_method": "Exact Fraction model independently written; author runner not executed; existing immutable author outputs compared. Source facts reviewed against source-agent saved web-tool captures, not a separate fresh retrieval.",
+    "synthetic": true,
+    "author_hand_checks": 26,
+    "fixed_grid_cases": 54,
+    "independent_numeric_field_checks": 864,
+    "independent_exact_identity_checks": 162,
+    "independent_pure_function_probes": 50,
+    "independent_rejection_probes": 4,
+    "maximum_decimal_deviation_exact": "3/10000000000000000000000000",
+    "tolerance_exact": "1/100000000000000000000",
+    "counterexamples": {
+      "naive_unchanged_quantity_and_entry": 54,
+      "discard_pre_split_realized": 36,
+      "add_realized_to_scaled_original_cost_basis": 36,
+      "zero_pre_split_unrealized_cases": 18
+    },
+    "scientific_calculation_reexecuted_by_this_auditor": false
+  },
+  "payload_binding": {
+    "payload_record_count": 5,
+    "attachment_count": 52,
+    "record_dicts_equal_committed": true,
+    "all_attachment_bytes_equal_committed": true,
+    "payload_file_sha256": "cb05172d637bc047557cc54c4e1fc351b8e2281c3f9702ee6d142f92e0e87007",
+    "store_payload_hash": "0b9a4bc541ad6bf75ff928a56879d3c1a3f952f89368859c3114c378b92b6de0",
+    "manifest_payload_hash_equal_reconstructed": true,
+    "final_gate_payload_hash_matches": true,
+    "postcommit_payload_hash_matches": true,
+    "method_code_sha256": "00132f7c9b7616c5727a50d258124c42c7e2589f3e54f1ad5327addc4c25e601",
+    "method_code_matches_committed_attachment": true,
+    "science_input_hashes_checked": 9,
+    "source_agent_manifest_files_checked": 4,
+    "preparation_and_science_receipts_bound_to_final_gate": true,
+    "final_precommit_checks": 151,
+    "final_precommit_all_pass": true,
+    "final_precommit_receipt_sha256": "d4202a1ff0dab1b03ec352736421157db6fba3386fe0f85b84ddd0552c7a789b",
+    "postcommit_receipt_sha256": "5f25bf1ad4d9cfb034bf4edbbcca051f880834b535d98d7ac86af197d76eb37e",
+    "postcommit_scope_count": 59,
+    "postcommit_scope_boundary": "The 59-record receipt is after the five public records and before the additional LOCAL_ONLY audit record. The independent final Store count is 60."
+  },
+  "public_projection": {
+    "installed_projection_exact_public_records": 5,
+    "omitted_fields": [],
+    "permitted_authored_attachments": [
+      "attachments/METHOD.md",
+      "attachments/REPORT.md",
+      "attachments/public_findings.json"
+    ],
+    "public_attachment_count": 3,
+    "other_science_attachments_retained_locally": 49,
+    "public_record_and_allowed_attachment_scans": "PASS",
+    "reference_does_not_grant_attachment_permission": true,
+    "full_method_source_and_operational_captures_publicly_exported": false,
+    "public_archive_created_by_this_audit": false,
+    "remote_restore_or_new_website_publication_verified_by_this_audit": false
+  },
+  "not_claimed": [
+    "Real target-event economic return, official event completion or full source/market coverage",
+    "Formal evaluation, FINAL, new plan or readiness qualification",
+    "Known natural trigger source or natural daily-review completion",
+    "Universal dividend/split/order semantics across regions, products or events",
+    "Complete public recovery of the 49 unlicensed/local-only attachments",
+    "A newly published webpage or remotely archived increment"
+  ],
+  "performed": {
+    "official_wait_read_only": true,
+    "task_messages_or_controls": false,
+    "store_records_changed": false,
+    "scientific_recalculation": false,
+    "new_market_or_source_acquisition": false,
+    "source_or_shared_index_edits": false,
+    "archive_or_publication": false,
+    "git_operations": false
+  },
+  "findings": [],
+  "final_recheck": {
+    "records_unchanged_during_audit": 60,
+    "baseline_files_unchanged": 366,
+    "anomalies": 0
+  }
+}
