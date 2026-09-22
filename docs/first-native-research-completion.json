@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "observed_at": "2026-09-22T19:30:59.697719Z",
+  "evidence_source": "OFFICIAL_APP_COMPLETION_AND_STRICT_STORE_READBACK",
+  "task_title": "research-tree-lab · 策略研究推进",
+  "official_task_started_at": "2026-09-22T19:05:45Z",
+  "official_task_completed_at": "2026-09-22T19:28:21Z",
+  "official_task_status": "completed",
+  "automation_header_observed": true,
+  "manual_dispatch_by_supervisor": false,
+  "completed_task_observations": 1,
+  "accepted_natural_runs": 0,
+  "natural_trigger_status": "UNKNOWN",
+  "natural_trigger_limitation": "App task header and completion observed; scheduler-event identity not exposed. Original run records remain natural_trigger=null and are not rewritten.",
+  "record_count": 39,
+  "record_types": {
+    "discovery": 9,
+    "publication": 1,
+    "decision": 4,
+    "plan": 2,
+    "product": 4,
+    "round": 5,
+    "run": 4,
+    "dataset": 3,
+    "method": 2,
+    "feedback": 2,
+    "review": 2,
+    "review_batch": 1
+  },
+  "original_records_unchanged": 27,
+  "new_record_count": 12,
+  "new_record_metadata": {
+    "d-btc-eth-funding-exposed-20260921@1": {
+      "bundle_id": "research-btc-eth-paired-funding-mechanism-20260923-v1",
+      "committed_at": "2026-09-22T19:26:52.396053Z",
+      "producer_role": "research",
+      "record_hash": "735625aec2c75ae507ca59075f008623db05ff2500e1cc676a64566b1391c6a3"
+    },
+    "decision-paired-funding-boundary-20260923": {
+      "bundle_id": "research-btc-eth-paired-funding-mechanism-20260923-v1",
+      "committed_at": "2026-09-22T19:26:52.396053Z",
+      "producer_role": "research",
+      "record_hash": "490e40e8b9a081a48601f1807d8c7c3025a8327b3b0b2730dc8ba52ee2206abc"
+    },
+    "m-paired-funding-component-20260923@1": {
+      "bundle_id": "research-btc-eth-paired-funding-mechanism-20260923-v1",
+      "committed_at": "2026-09-22T19:26:52.396053Z",
+      "producer_role": "research",
+      "record_hash": "2e29bb0642866c05de0293861a63aa82a0e5d921841decbc1c27cdd7430b91b1"
+    },
+    "r-btc-eth-paired-funding-20260923": {
+      "bundle_id": "research-btc-eth-paired-funding-mechanism-20260923-v1",
+      "committed_at": "2026-09-22T19:26:52.396053Z",
+      "producer_role": "research",
+      "record_hash": "df34983d87b647aea7891b3785b8a981eb4390001b6db361616fc34a39434a85"
+    },
+    "run-btc-eth-paired-funding-20260923@attempt-1": {
+      "bundle_id": "research-btc-eth-paired-funding-mechanism-20260923-v1",
+      "committed_at": "2026-09-22T19:26:52.396053Z",
+      "producer_role": "research",
+      "record_hash": "8adf5f0322743d710adcac543afa29c7a78020dd946b3256b413d15ac3001d94"
+    },
+    "d-btc-candles-20260921@1": {
+      "bundle_id": "research-feedback-input-completeness-20260923-v1",
+      "committed_at": "2026-09-22T19:26:52.338145Z",
+      "producer_role": "research",
+      "record_hash": "05b48757938f592956a465bbe0f18c03a1754d270237f8c3521017ed02901c70"
+    },
+    "d-btc-trades-20260921@1": {
+      "bundle_id": "research-feedback-input-completeness-20260923-v1",
+      "committed_at": "2026-09-22T19:26:52.338145Z",
+      "producer_role": "research",
+      "record_hash": "ed2df5284b083d82af19ce8bb35b3e1e8c1d4dd590b6141070c02987f8ed87a9"
+    },
+    "decision-adopt-input-feedback-long-20260923": {
+      "bundle_id": "research-feedback-input-completeness-20260923-v1",
+      "committed_at": "2026-09-22T19:26:52.338145Z",
+      "producer_role": "research",
+      "record_hash": "99b62e71e39a7c2193f4695a95da7b9a476be092febbb5ffd0596f840d13dc4f"
+    },
+    "decision-adopt-input-feedback-short-20260923": {
+      "bundle_id": "research-feedback-input-completeness-20260923-v1",
+      "committed_at": "2026-09-22T19:26:52.338145Z",
+      "producer_role": "research",
+      "record_hash": "c48bfa609de54d869c3da9f04f1cca6ab6bb5f9990f948c24159cd5be21b3bfa"
+    },
+    "m-trade-candle-development-audit-20260923@1": {
+      "bundle_id": "research-feedback-input-completeness-20260923-v1",
+      "committed_at": "2026-09-22T19:26:52.338145Z",
+      "producer_role": "research",
+      "record_hash": "01787042471b02755fa8ad18f0fa516b8597d7591891679df3b6252f590c1af7"
+    },
+    "r-feedback-input-completeness-20260923": {
+      "bundle_id": "research-feedback-input-completeness-20260923-v1",
+      "committed_at": "2026-09-22T19:26:52.338145Z",
+      "producer_role": "research",
+      "record_hash": "0ad6526c2a838b2f236759fb09e38030823ed172b83d95db64be008a16e9a38c"
+    },
+    "run-feedback-input-completeness-20260923@attempt-1": {
+      "bundle_id": "research-feedback-input-completeness-20260923-v1",
+      "committed_at": "2026-09-22T19:26:52.338145Z",
+      "producer_role": "research",
+      "record_hash": "55fae3643fa8b8ee98c02cf371fa4ab400a737b0b240997b01a0a31ac82181d6"
+    }
+  },
+  "strict_manifest_validation": "PASS",
+  "record_relationships": "PASS",
+  "store_anomalies": [],
+  "feedback_adoption": {
+    "status": "REAL_SUCCESSOR_VERIFIED",
+    "feedback_refs": [
+      "feedback-btc-funding-short-manual-20260923-v1",
+      "feedback-btc-funding-long-control-manual-20260923-v1"
+    ],
+    "successor_round_id": "r-feedback-input-completeness-20260923",
+    "parent_round_id": "r-btc-funding-cost-counterevidence-20260923",
+    "adoption_scope": "Actual official historical trade/candle decoding and cross-file checks; two feedbacks deduplicated to one successor.",
+    "still_unknown": [
+      "EXACT_SETTLEMENT_MARK",
+      "SOURCE_EVENT_COMPLETENESS",
+      "SAME_MILLISECOND_EXECUTION_ORDER",
+      "ACTUAL_COSTS",
+      "FORWARD_ECONOMIC_RESULT"
+    ]
+  },
+  "source_validation_scope": "Read stored independent validation and original authored reports, verified committed byte hashes; supervisor did not repeat full 4.97m-row arithmetic scan.",
+  "economic_final_reviews": 0,
+  "natural_daily_reviews": 0,
+  "public_snapshot_at_readback": "429c7ab2a4f89a7512eb3357908352f4f65ad15ab4a881145fe52e02faaea7aa",
+  "new_records_publication": "PENDING_NATIVE_PUBLISHER"
+}

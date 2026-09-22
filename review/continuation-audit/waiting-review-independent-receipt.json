@@ -1,0 +1,46 @@
+{
+  "decision": "PASS_WAITING_REVIEW_OUTBOX_ONLY",
+  "synthetic_temporary_store_probe_groups": [
+    {
+      "case": "same_batch_cannot_change_freeze_by_output_alias",
+      "result": "PASS"
+    },
+    {
+      "case": "legacy_bridge_cross_day_unknown_inventory_endpoint_waiting_immutable_old",
+      "result": "PASS"
+    },
+    {
+      "case": "legacy_method_string_and_empty_state_cannot_impersonate_original",
+      "result": "PASS"
+    },
+    {
+      "case": "dangling_previous_method_is_item_failure_not_accepted_continuation",
+      "result": "PASS"
+    },
+    {
+      "case": "unknown_plan_in_full_registry_fails_separately_no_economic_coverage",
+      "result": "PASS"
+    },
+    {
+      "case": "late_commit_does_not_leak_via_backdated_available_at",
+      "result": "PASS"
+    },
+    {
+      "case": "public_outputs_have_no_private_or_raw_data_no_free_native_backdate",
+      "result": "PASS"
+    },
+    {
+      "case": "local_python_import_hash_closure_includes_package_side_imports",
+      "result": "PASS"
+    }
+  ],
+  "source_sha256": {
+    "researchlib/funding_review.py": "e3b5afd7eeea6754e2723bdb5039c17086da8247330f4983c8d80f1bfb83148a",
+    "scripts/prepare_funding_review.py": "4290cecc2fdf4a86dca7f235501a06b9eb11e0467a4fe9f79689139c1c4caedf",
+    "tests/test_funding_review.py": "e94122415f1ddadacf66dc6c511698e393ca2733ef845c4bc6acda37c888da97"
+  },
+  "formal_economic_results": false,
+  "natural_review_proven": false,
+  "production_store_writes": false,
+  "new_real_market_data": false
+}

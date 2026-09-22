@@ -1,0 +1,54 @@
+{
+  "decision": "PASS_SCOPED_SINGLE_FUNDING_FILE_DECODE",
+  "synthetic_probe_groups": [
+    {
+      "case": "declared_utc8_partition_exact_millisecond_edges",
+      "result": "PASS"
+    },
+    {
+      "case": "numeric_dedup_keeps_source_rows_non_target_conflict_blocks",
+      "result": "PASS"
+    },
+    {
+      "case": "excluded_rows_still_validate_rate_timestamp_partition",
+      "result": "PASS"
+    },
+    {
+      "case": "missing_target_does_not_infer_zero_or_coverage",
+      "result": "PASS"
+    },
+    {
+      "case": "false_identity_backdate_and_complete_assertion_rejected",
+      "result": "PASS"
+    },
+    {
+      "case": "ambient_precision_cannot_change_normalized_rate",
+      "result": "PASS"
+    },
+    {
+      "case": "zip_paths_do_not_extract_or_parse_as_valid_source",
+      "result": "PASS"
+    }
+  ],
+  "real_old_sample_recheck": {
+    "source_sha256": "34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c",
+    "rows": 2103,
+    "target_events": 3,
+    "excluded_rows": 2100,
+    "all_target_rates_equal_independent_csv_decode": true,
+    "zip_crc": "PASS",
+    "source_coverage": "UNKNOWN",
+    "settlement_marks": "MISSING"
+  },
+  "source_sha256": {
+    "researchlib/okx_funding_file.py": "6043a04010e8aed025542857b4eecc1f947cc564863e7435d54db0a652cd006d",
+    "tests/test_okx_funding_file.py": "7cf1d4051bf3bd4ccf3b2e79ebc8df5e645bf854046c35802a5aa85f0a6820df",
+    "tests/replay_okx_funding_sample.py": "686413242878a70c74acf6b563d0728e115bc342a61c5bc2c4397a5398196177",
+    "docs/OKX_FUNDING_FILE.md": "d575350783de155e3b919f13302e60866f8d61f162a9699c72194899e2e371e6",
+    "tests/receipts/okx-funding-real-sample.json": "473c37c30f01ee842d936c868b9bf20c563a16f6b22404486f90ac30bb1bcdba"
+  },
+  "economic_or_natural_result": false,
+  "production_store_writes": false,
+  "new_source_acquisition": false,
+  "raw_rows_written_to_receipt": false
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "status": "PASS_SCOPED_REAL_FUNDING_FILE_DECODE",
+  "evidence_stage": "REAL_EXISTING_FILE_OFFLINE_RECHECK_NOT_NEW_ACQUISITION_OR_ECONOMIC_RESULT",
+  "checked_at": "2026-09-22T19:22:37.805591Z",
+  "source_manifest": {
+    "schema_version": 1,
+    "format": "zip",
+    "filename": "allswap-fundingrates-2026-09-21.zip",
+    "sha256": "34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c",
+    "size_bytes": 12419,
+    "source_url": "https://www.okx.com/zh-hans/historical-data",
+    "obtained_at": "2026-09-22T17:51:24.065702Z",
+    "declared_partition": {
+      "date": "2026-09-21",
+      "timezone": "UTC+08:00"
+    }
+  },
+  "observed": {
+    "adapter_version": "okx-allswap-funding-file-v1",
+    "zip_crc": "PASS",
+    "csv_member": "allswap-fundingrates-2026-09-21.csv",
+    "csv_bytes": 82188,
+    "csv_sha256": "c2ae92301fd8ace5682729e46e58ff959d14b7ebf948ead7d9c4f533d5a9950c",
+    "partition_utc": {
+      "start_inclusive": "2026-09-20T16:00:00.000Z",
+      "end_exclusive": "2026-09-21T16:00:00.000Z"
+    },
+    "rows_read": 2103,
+    "target_rows_read": 3,
+    "excluded_rows": 2100,
+    "unique_rows_all_instruments": 2103,
+    "duplicate_rows_removed_all_instruments": 0,
+    "target_events": 3,
+    "source_coverage": "UNKNOWN",
+    "data_complete": false,
+    "expected_event_count": null,
+    "settlement_schedule_inferred": false
+  },
+  "source_origin": "DECLARED_URL_ALLOWLIST_ONLY_NOT_NETWORK_PROOF",
+  "source_acquisition_basis": "Previously recorded official browser download; offline constraints do not independently prove origin or timestamp",
+  "raw_disclosure": "LOCAL_ONLY_NOT_INCLUDED_IN_RECEIPT",
+  "adapter_sha256": "6043a04010e8aed025542857b4eecc1f947cc564863e7435d54db0a652cd006d",
+  "replay_script_sha256": "686413242878a70c74acf6b563d0728e115bc342a61c5bc2c4397a5398196177",
+  "network_calls": 0,
+  "production_or_native_writes": 0,
+  "complete_coverage_verified": false,
+  "settlement_mark_verified": false,
+  "kernel_economic_result_executed": false,
+  "synthetic_tests_included": false
+}

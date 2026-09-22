@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "reviewed_at": "2026-09-22T19:30:43.417368+00:00",
+  "decision": "PASS_SCOPED_FUNDING_FILE_AND_WAITING_REVIEW_OUTBOX",
+  "scope": [
+    "SINGLE_SUPPLIED_FUNDING_FILE_OFFLINE_NORMALIZATION",
+    "TWO_FROZEN_PLAN_EMPTY_STATE_BRIDGE_AND_WAITING_STATUS_BUNDLE_PREPARATION"
+  ],
+  "publisher_source_hash": "0b6047c816779f4d2d48cc9435768e5cde7a34a55af9e7ecc7b52298f41841ae",
+  "source_hash_command": "python3 scripts/publish.py --source-hash",
+  "source_sha256": {
+    "researchlib/okx_funding_file.py": "6043a04010e8aed025542857b4eecc1f947cc564863e7435d54db0a652cd006d",
+    "tests/test_okx_funding_file.py": "7cf1d4051bf3bd4ccf3b2e79ebc8df5e645bf854046c35802a5aa85f0a6820df",
+    "tests/replay_okx_funding_sample.py": "686413242878a70c74acf6b563d0728e115bc342a61c5bc2c4397a5398196177",
+    "docs/OKX_FUNDING_FILE.md": "d575350783de155e3b919f13302e60866f8d61f162a9699c72194899e2e371e6",
+    "tests/receipts/okx-funding-real-sample.json": "473c37c30f01ee842d936c868b9bf20c563a16f6b22404486f90ac30bb1bcdba",
+    "researchlib/funding_review.py": "e3b5afd7eeea6754e2723bdb5039c17086da8247330f4983c8d80f1bfb83148a",
+    "scripts/prepare_funding_review.py": "4290cecc2fdf4a86dca7f235501a06b9eb11e0467a4fe9f79689139c1c4caedf",
+    "tests/test_funding_review.py": "e94122415f1ddadacf66dc6c511698e393ca2733ef845c4bc6acda37c888da97"
+  },
+  "waiting_method_code_sha256": "becb0b1862b25bac1907676b5644bbcbccfb7974dd7f28bcef25e8704901931e",
+  "waiting_method_dependency_closure_sha256": {
+    "researchlib/__init__.py": "6a52c32055618076a5a44b9dacc39d79711ef3ab7a4de73f9f5ddc9015268741",
+    "researchlib/common.py": "a3e7aa7619acee94e05e733c20a4ae4eb30ff7056f9b0fca0b441ecb55d9b683",
+    "researchlib/contracts.py": "60a65556a02328b309f016a602ba142b887d23771556a907ecce2b71144c6041",
+    "researchlib/funding_review.py": "e3b5afd7eeea6754e2723bdb5039c17086da8247330f4983c8d80f1bfb83148a",
+    "researchlib/novelty.py": "e7390b597cfd2a978fa3e9b9208213b6cbb0f331407bb762a5a62a1b8b1b3d08",
+    "researchlib/public.py": "028f4dc0f79274c97355c8d4c4653c777f5e3d6d8018f81228465bd3b0f9e1cc",
+    "researchlib/readiness.py": "ad57c793f68a53c848048d84e21370811b7470bf71e8770d3f2a76cb2df059c7",
+    "researchlib/review.py": "771f64a7764f2c957dcce98cc54cdc1bad5fb4381f9b465175cfa153bba4b906",
+    "researchlib/snapshot.py": "e5404cf0775ab6b99906a8115a2bb6cf97c05f86fc8bc9b0979d25bf64f22e15",
+    "researchlib/store.py": "6a9e7bc0ac8ee533fedb94bab0c87b9217436dbf4d8437f99fba9af8a02e06f6",
+    "scripts/prepare_funding_review.py": "4290cecc2fdf4a86dca7f235501a06b9eb11e0467a4fe9f79689139c1c4caedf"
+  },
+  "waiting_method_runtime": {
+    "implementation": "CPython",
+    "python_version": "3.9.6",
+    "third_party_runtime_dependencies": []
+  },
+  "author_tests_independently_rerun": {
+    "funding_file": 27,
+    "waiting_review": 28
+  },
+  "independent_probe_groups": {
+    "funding_file_synthetic": 7,
+    "waiting_review_temporary_store": 8
+  },
+  "real_evidence_review": [
+    "EXISTING_FUNDING_ZIP_INDEPENDENT_CSV_RECHECK",
+    "EXACT_TWO_LEGACY_REVIEW_HASHES_AND_MEMORY_ONLY_PRODUCTION_PREPARATION"
+  ],
+  "resolved_findings": [
+    "SAME_BATCH_DIFFERENT_PREPARATION_IDENTITY",
+    "INCOMPLETE_METHOD_SOURCE_CLOSURE",
+    "UNRESOLVED_PREVIOUS_METHOD_ACCEPTED"
+  ],
+  "unresolved_findings_in_approved_scope": [],
+  "not_accepted": [
+    "OFFICIAL_PROVENANCE_AND_ACTUAL_ACQUISITION_TIME_PROOF",
+    "SOURCE_EVENT_COMPLETENESS",
+    "TARGET_TRADE_ORDER_AND_EXACT_SETTLEMENT_MARK",
+    "ACCEPTED_MARKET_EVENTS_FORMAL_ECONOMIC_REVIEW",
+    "NATURAL_REVIEW_IDENTITY",
+    "ECONOMIC_EFFECT"
+  ],
+  "production_store_writes": false,
+  "production_outbox_written": false,
+  "native_task_mutation": false,
+  "new_market_download": false,
+  "raw_source_rows_public": false,
+  "report_sha256": "1a904f90566fed7adb04cc2fa2bf4ecdfd0ee87846aef03145de6e619dd5a560"
+}
