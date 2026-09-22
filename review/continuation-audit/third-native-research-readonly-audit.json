@@ -1,0 +1,371 @@
+{
+  "schema_version": "1.0",
+  "state": "PASS_READ_ONLY_STORE_AND_PROJECTION_AUDIT_WITH_REFERENCE_CLOSURE_LIMITATION",
+  "observed_at": "2026-09-22T21:27:55.287830Z",
+  "scope": "THIRD_RESEARCH_COMMITTED_ARTIFACTS_ONLY_NOT_TASK_COMPLETION_OR_PUBLICATION",
+  "task_observation_boundary": {
+    "official_task_status_at_delegation": "active",
+    "official_task_state_read_by_this_auditor": false,
+    "official_task_messages_read_or_sent": false,
+    "later_root_completion_notice_received": true,
+    "completion_assertion": "ROOT_MAINTAINS_SEPARATE_OFFICIAL_COMPLETION_RECEIPT",
+    "accepted_natural_run_increment": 0
+  },
+  "baseline": {
+    "source_receipt_sha256": "4f410cee54361a2836d01a65fb62130981485674da5b116b6daa317a55217436",
+    "source_checked_at": "2026-09-22T20:37:23.500997Z",
+    "canonical_records_verified_unchanged": 49,
+    "baseline_files_verified_unchanged": 271,
+    "private_record_ids_and_paths_disclosed": false
+  },
+  "store": {
+    "total_records": 54,
+    "public_records": 52,
+    "local_only_records": 2,
+    "rounds": 8,
+    "strict_load": "PASS",
+    "installed_relationships": "PASS",
+    "candidate_relationships": "PASS",
+    "anomalies": []
+  },
+  "increment": {
+    "records": 5,
+    "public_records": 4,
+    "local_only_records": 1,
+    "public_record_metadata": [
+      {
+        "record_ref": "decision-grid-inventory-boundary-20260923",
+        "record_type": "decision",
+        "visibility": "PUBLIC",
+        "canonical_sha256": "cb3214e1c0d3024ecc933b8fb80b9d206b0eebe797b13e3e2b814cdbdd65c11f",
+        "available_at": "2026-09-22T21:19:22.004088+00:00",
+        "committed_at": "2026-09-22T21:20:33.561757Z"
+      },
+      {
+        "record_ref": "m-btc-close-grid-inventory-component-20260923@1",
+        "record_type": "method",
+        "visibility": "PUBLIC",
+        "canonical_sha256": "d77a8854f47514aa4e728cde4dec0ad6df48a9da7c51a02478071f8b6370f1c7",
+        "available_at": "2026-09-22T21:19:22.004088+00:00",
+        "committed_at": "2026-09-22T21:20:33.561757Z"
+      },
+      {
+        "record_ref": "r-btc-grid-inventory-attribution-20260923",
+        "record_type": "round",
+        "visibility": "PUBLIC",
+        "canonical_sha256": "e06441e412aee6b1406e5c03d7b4ba31a65b2907748468f33b20235fee0ac184",
+        "available_at": "2026-09-22T21:19:22.004088+00:00",
+        "committed_at": "2026-09-22T21:20:33.561757Z"
+      },
+      {
+        "record_ref": "run-btc-grid-inventory-attribution-20260923@attempt-1",
+        "record_type": "run",
+        "visibility": "PUBLIC",
+        "canonical_sha256": "7426c16ed0f84acce0185135c56c4d3188581add7fa9d3f04e807bcba46e3956",
+        "available_at": "2026-09-22T21:19:22.004088+00:00",
+        "committed_at": "2026-09-22T21:20:33.561757Z"
+      }
+    ],
+    "local_only_description": {
+      "record_type": "evidence",
+      "purpose": "Preserve submitted independent validation and post-commit evidence; identity and local paths withheld."
+    },
+    "new_plan_count": 0,
+    "new_review_count": 0,
+    "new_readiness_count": 0
+  },
+  "research": {
+    "round_id": "r-btc-grid-inventory-attribution-20260923",
+    "parent_round_id": null,
+    "derived_from_feedback_refs": [],
+    "seed": "seed-c-20260923",
+    "kind": "INDEPENDENT_GRID_INVENTORY_ATTRIBUTION_DEVELOPMENT",
+    "evidence_stage": "EXPOSED_DEVELOPMENT_ONLY",
+    "data_cutoff": "2026-09-21T16:00:00Z",
+    "question": "Can positive realized range/grid income coexist with negative complete inventory-plus-exit price PnL, and does a fixed dormancy rule change that attribution?",
+    "candidate_set": [
+      "grid_always",
+      "grid_dormant",
+      "hold_initial",
+      "wait"
+    ],
+    "candidate_scenario_rows": 12,
+    "scenario_count": 3,
+    "result_summary": "Two ladder arms are flat at the fixed endpoint, so terminal residual-inventory-loss hypothesis is not exposed in this sample. Modeled fee/slippage scenarios turn both price components negative. Different exposures do not establish signal-specific advantage or a chosen strategy.",
+    "moderate_friction": {
+      "fee_bps_per_side": "5",
+      "slippage_bps_per_side": "1",
+      "grid_always_price_component_usdt": "-0.927982511070",
+      "grid_dormant_price_component_usdt": "-0.693429423180",
+      "actual_funding_included": false,
+      "actual_net_pnl": null
+    },
+    "selected_plan_ref": null,
+    "new_market_data": "NO_NEW_MARKET_DATA_RECORD_EXISTING_EXPOSED_DAY_REUSED",
+    "formal_daily_review": false,
+    "readiness": "UNKNOWN",
+    "feedback_adoption": "General completeness/exposure boundaries acknowledged; independent null-parent seed-C root, not an additional derived funding successor."
+  },
+  "committed_independent_evidence_read": {
+    "disclosure": "Summary only; LOCAL_ONLY evidence identities, local paths and rows are omitted. No attachment publication authorization added.",
+    "arithmetic": {
+      "status": "PASS",
+      "reported_checks": 230445,
+      "reported_case_count": 12,
+      "numeric_tolerance": "1e-30",
+      "receipt_sha256": "e0f754e53539907c69a80a5d47efefae81652b7169cc69ec229361b485c1346b",
+      "author_artifact_and_independent_code_ledger_hash_bindings": "MATCH_COMMITTED_MANIFESTS",
+      "recomputed_by_this_auditor": false
+    },
+    "science": {
+      "status": "PASS",
+      "role": "INDEPENDENT_DEVELOPMENT_VALIDATION_NOT_FORMAL_DAILY_REVIEW",
+      "reported_independent_selfchecks": 7,
+      "reported_author_selftests": 19,
+      "receipt_sha256": "81fd75b63a298972ca8b434eb1976090d25bd60a36c467f2366fb1b356520748",
+      "bound_author_and_independent_artifact_hashes": "MATCH_COMMITTED_MANIFESTS"
+    },
+    "final_payload": {
+      "status": "PASS",
+      "passed_checks": 60,
+      "failed_checks": 0,
+      "receipt_sha256": "9cf6b3732b081ec813014536ee9d4353fef2a4da919fd4d32579d5dccbfc5e3e",
+      "payload_hash_matches_committed_scientific_manifest": true,
+      "public_record_set_and_attachment_allowlist_match": true
+    },
+    "earlier_payload_receipt": {
+      "status_as_recorded": "PASS",
+      "is_current_payload": false,
+      "treatment": "Preserved earlier payload check; final_payload receipt is the binding for the committed payload."
+    },
+    "earlier_checklist": {
+      "status_as_recorded": "PROTOCOL_PENDING",
+      "treatment": "Historical protocol-stage checklist, not used as current completion evidence."
+    },
+    "postcommit": {
+      "state": "PASS_POSTCOMMIT_REHASH",
+      "receipt_sha256": "ef244e01e5f7dd561c38645ab694044a6bfc73da16d87e53aac65a2975f08d57",
+      "reported_record_count_at_check": 53,
+      "reported_old_file_count": 266,
+      "current_count_difference": "53 was after the four public scientific records, before the separate local-only evidence record raised the store to 54.",
+      "scientific_payload_and_final_gate_hash_bindings": "MATCH_COMMITTED_MANIFESTS"
+    }
+  },
+  "public_projection": {
+    "scope": "IN_MEMORY_RECORD_PROJECTION_ONLY_NO_SNAPSHOT_WRITTEN",
+    "installed_public_sha256": "514263bb4038d7d1b1548f31ba9d3d00d67c0f0410990456fc9f02e85e9fd063",
+    "candidate_source_sha256": {
+      "researchlib/public.py": "db4eb97c35a312277798605f76ac334dfd57bbc6fe3b1b6d718cd86f00d20dbd",
+      "researchlib/contracts.py": "7929f554936294d08407fd7198a2aa0fdfc72ee466c386c34244a711edbc55fd"
+    },
+    "checks": {
+      "installed": {
+        "public_record_count": 52,
+        "new_public_records": [
+          {
+            "record_ref": "decision-grid-inventory-boundary-20260923",
+            "omitted_fields": [],
+            "exact_dict_match": true
+          },
+          {
+            "record_ref": "m-btc-close-grid-inventory-component-20260923@1",
+            "omitted_fields": [],
+            "exact_dict_match": true
+          },
+          {
+            "record_ref": "r-btc-grid-inventory-attribution-20260923",
+            "omitted_fields": [],
+            "exact_dict_match": true
+          },
+          {
+            "record_ref": "run-btc-grid-inventory-attribution-20260923@attempt-1",
+            "omitted_fields": [],
+            "exact_dict_match": true
+          }
+        ],
+        "all_public_omission_count": 4,
+        "existing_omissions": [
+          {
+            "record_ref": "decision-entry-confirmation-boundary-20260923",
+            "omitted_fields": [
+              "comparison_set",
+              "feedback_disposition",
+              "selected_plan_ref"
+            ],
+            "exact_dict_match": false
+          },
+          {
+            "record_ref": "m-btc-entry-confirmation-component-20260923@1",
+            "omitted_fields": [
+              "protocol_refs"
+            ],
+            "exact_dict_match": false
+          },
+          {
+            "record_ref": "run-boundary-sensitivity-20260923@attempt-1",
+            "omitted_fields": [
+              "method_ref"
+            ],
+            "exact_dict_match": false
+          },
+          {
+            "record_ref": "run-btc-entry-confirmation-20260923@attempt-1",
+            "omitted_fields": [
+              "method_ref"
+            ],
+            "exact_dict_match": false
+          }
+        ]
+      },
+      "candidate": {
+        "public_record_count": 52,
+        "new_public_records": [
+          {
+            "record_ref": "decision-grid-inventory-boundary-20260923",
+            "omitted_fields": [],
+            "exact_dict_match": true
+          },
+          {
+            "record_ref": "m-btc-close-grid-inventory-component-20260923@1",
+            "omitted_fields": [],
+            "exact_dict_match": true
+          },
+          {
+            "record_ref": "r-btc-grid-inventory-attribution-20260923",
+            "omitted_fields": [],
+            "exact_dict_match": true
+          },
+          {
+            "record_ref": "run-btc-grid-inventory-attribution-20260923@attempt-1",
+            "omitted_fields": [],
+            "exact_dict_match": true
+          }
+        ],
+        "all_public_omission_count": 0,
+        "existing_omissions": []
+      }
+    },
+    "new_public_allowed_attachment_count": 3,
+    "allowed_attachment_public_scan": "PASS"
+  },
+  "record_reference_closures": {
+    "installed": {
+      "direct_run_semantic_refs": [
+        "r-btc-grid-inventory-attribution-20260923"
+      ],
+      "single_run_closure_refs": [
+        "batch-manual-safe-review-20260923-v1",
+        "btc@observed-20260923-v1",
+        "d-btc-candles-20260921@1",
+        "feedback-btc-funding-long-control-manual-20260923-v1",
+        "feedback-btc-funding-short-manual-20260923-v1",
+        "p-btc-funding-long-control-20260923@1",
+        "p-btc-funding-short-20260923@1",
+        "r-btc-funding-cost-counterevidence-20260923",
+        "r-btc-grid-inventory-attribution-20260923",
+        "r-funding-data-audit-20260923",
+        "review-btc-funding-long-control-manual-20260923-v1",
+        "review-btc-funding-short-manual-20260923-v1",
+        "run-btc-grid-inventory-attribution-20260923@attempt-1",
+        "seed-c-20260923"
+      ],
+      "single_run_closure_count": 14,
+      "single_run_includes_new_method": false,
+      "all_four_roots_closure_refs": [
+        "batch-manual-safe-review-20260923-v1",
+        "btc@observed-20260923-v1",
+        "d-btc-candles-20260921@1",
+        "decision-grid-inventory-boundary-20260923",
+        "feedback-btc-funding-long-control-manual-20260923-v1",
+        "feedback-btc-funding-short-manual-20260923-v1",
+        "m-btc-close-grid-inventory-component-20260923@1",
+        "p-btc-funding-long-control-20260923@1",
+        "p-btc-funding-short-20260923@1",
+        "r-btc-funding-cost-counterevidence-20260923",
+        "r-btc-grid-inventory-attribution-20260923",
+        "r-funding-data-audit-20260923",
+        "review-btc-funding-long-control-manual-20260923-v1",
+        "review-btc-funding-short-manual-20260923-v1",
+        "run-btc-grid-inventory-attribution-20260923@attempt-1",
+        "seed-c-20260923"
+      ],
+      "all_four_roots_closure_count": 16,
+      "method_is_explicit_selected_root": true,
+      "all_four_closure_records_exact_public": true,
+      "run_top_level_method_ref_present": false,
+      "run_results_method_ref": "m-btc-close-grid-inventory-component-20260923@1",
+      "run_parent_round_refs_present": false,
+      "run_evidence_refs_are_record_dependencies": false
+    },
+    "candidate": {
+      "direct_run_semantic_refs": [
+        "r-btc-grid-inventory-attribution-20260923"
+      ],
+      "single_run_closure_refs": [
+        "batch-manual-safe-review-20260923-v1",
+        "btc@observed-20260923-v1",
+        "d-btc-candles-20260921@1",
+        "feedback-btc-funding-long-control-manual-20260923-v1",
+        "feedback-btc-funding-short-manual-20260923-v1",
+        "p-btc-funding-long-control-20260923@1",
+        "p-btc-funding-short-20260923@1",
+        "r-btc-funding-cost-counterevidence-20260923",
+        "r-btc-grid-inventory-attribution-20260923",
+        "r-funding-data-audit-20260923",
+        "review-btc-funding-long-control-manual-20260923-v1",
+        "review-btc-funding-short-manual-20260923-v1",
+        "run-btc-grid-inventory-attribution-20260923@attempt-1",
+        "seed-c-20260923"
+      ],
+      "single_run_closure_count": 14,
+      "single_run_includes_new_method": false,
+      "all_four_roots_closure_refs": [
+        "batch-manual-safe-review-20260923-v1",
+        "btc@observed-20260923-v1",
+        "d-btc-candles-20260921@1",
+        "decision-grid-inventory-boundary-20260923",
+        "feedback-btc-funding-long-control-manual-20260923-v1",
+        "feedback-btc-funding-short-manual-20260923-v1",
+        "m-btc-close-grid-inventory-component-20260923@1",
+        "p-btc-funding-long-control-20260923@1",
+        "p-btc-funding-short-20260923@1",
+        "r-btc-funding-cost-counterevidence-20260923",
+        "r-btc-grid-inventory-attribution-20260923",
+        "r-funding-data-audit-20260923",
+        "review-btc-funding-long-control-manual-20260923-v1",
+        "review-btc-funding-short-manual-20260923-v1",
+        "run-btc-grid-inventory-attribution-20260923@attempt-1",
+        "seed-c-20260923"
+      ],
+      "all_four_roots_closure_count": 16,
+      "method_is_explicit_selected_root": true,
+      "all_four_closure_records_exact_public": true,
+      "run_top_level_method_ref_present": false,
+      "run_results_method_ref": "m-btc-close-grid-inventory-component-20260923@1",
+      "run_parent_round_refs_present": false,
+      "run_evidence_refs_are_record_dependencies": false
+    }
+  },
+  "remaining_boundary": "The new run stores its method identity only at results.method_ref. Neither installed nor candidate semantic_refs treats this nested value or bundle evidence locators as a method record dependency. Actual recursive traversal confirms the method is absent from the 14-record single-run closure. Explicitly selecting all four new public records includes the method in a 16-record closure; this preserves the allowed originals when selected together and is not an automatic dependency fix. No ZIP was produced.",
+  "future_authoring_guidance": "After independent approval installs a typed reference, use its formal top-level field when programmatic dependency tracking is required; do not hide that relationship in a generic analysis container to evade checks. Preserve the current sealed originals unchanged.",
+  "performed": {
+    "historical_arithmetic_rerun": false,
+    "archive_export": false,
+    "publication": false,
+    "production_write": false,
+    "shared_index_change": false,
+    "source_change": false,
+    "native_task_control": false
+  },
+  "limitations": [
+    "A stored independent arithmetic receipt is checked for identity and artifact binding; this auditor did not rerun the historical strategy calculations.",
+    "Research development results are not actual net return, economic validation, execution readiness, formal daily review or natural scheduling proof.",
+    "Exact field projection does not imply complete method/source/attachment recovery or a completed archive.",
+    "Task completion and public deployment remain separate receipts maintained by root."
+  ],
+  "final_recheck": {
+    "all_54_canonical_records_unchanged_during_audit": true,
+    "baseline_271_files_unchanged": true,
+    "installation_unchanged": true
+  }
+}

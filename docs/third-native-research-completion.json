@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0",
+  "observed_at": "2026-09-22T21:29:36.800627+00:00",
+  "evidence_source": "OFFICIAL_APP_WAIT_THREADS_AND_INDEPENDENT_STRICT_STORE_READBACK",
+  "task_title": "research-tree-lab · 策略研究推进",
+  "official_task_started_at": "2026-09-22T21:05:16Z",
+  "official_task_completed_at": "2026-09-22T21:22:26Z",
+  "official_task_status": "completed",
+  "automation_header_observed": true,
+  "manual_dispatch_by_supervisor": false,
+  "official_task_start_observations": 3,
+  "completed_task_observations": 3,
+  "accepted_natural_runs": 0,
+  "natural_trigger_status": "UNKNOWN",
+  "natural_trigger_limitation": "Official task header and completion observed; scheduler event identity unavailable. Stored natural_trigger is not rewritten.",
+  "store_at_completed_readback": {
+    "total_records": 54,
+    "public_records": 52,
+    "local_only_records": 2,
+    "rounds": 8,
+    "strict_load": "PASS",
+    "installed_relationships": "PASS",
+    "candidate_relationships": "PASS",
+    "anomalies": []
+  },
+  "original_records_unchanged": 49,
+  "original_baseline_files_unchanged": 271,
+  "new_record_count": 5,
+  "new_public_record_count": 4,
+  "new_local_only_record_count": 1,
+  "new_public_record_metadata": [
+    {
+      "record_ref": "decision-grid-inventory-boundary-20260923",
+      "record_type": "decision",
+      "visibility": "PUBLIC",
+      "canonical_sha256": "cb3214e1c0d3024ecc933b8fb80b9d206b0eebe797b13e3e2b814cdbdd65c11f",
+      "available_at": "2026-09-22T21:19:22.004088+00:00",
+      "committed_at": "2026-09-22T21:20:33.561757Z"
+    },
+    {
+      "record_ref": "m-btc-close-grid-inventory-component-20260923@1",
+      "record_type": "method",
+      "visibility": "PUBLIC",
+      "canonical_sha256": "d77a8854f47514aa4e728cde4dec0ad6df48a9da7c51a02478071f8b6370f1c7",
+      "available_at": "2026-09-22T21:19:22.004088+00:00",
+      "committed_at": "2026-09-22T21:20:33.561757Z"
+    },
+    {
+      "record_ref": "r-btc-grid-inventory-attribution-20260923",
+      "record_type": "round",
+      "visibility": "PUBLIC",
+      "canonical_sha256": "e06441e412aee6b1406e5c03d7b4ba31a65b2907748468f33b20235fee0ac184",
+      "available_at": "2026-09-22T21:19:22.004088+00:00",
+      "committed_at": "2026-09-22T21:20:33.561757Z"
+    },
+    {
+      "record_ref": "run-btc-grid-inventory-attribution-20260923@attempt-1",
+      "record_type": "run",
+      "visibility": "PUBLIC",
+      "canonical_sha256": "7426c16ed0f84acce0185135c56c4d3188581add7fa9d3f04e807bcba46e3956",
+      "available_at": "2026-09-22T21:19:22.004088+00:00",
+      "committed_at": "2026-09-22T21:20:33.561757Z"
+    }
+  ],
+  "research_scope": "EXPOSED_HISTORICAL_DEVELOPMENT_ONLY",
+  "research_summary": {
+    "round_id": "r-btc-grid-inventory-attribution-20260923",
+    "parent_round_id": null,
+    "derived_from_feedback_refs": [],
+    "seed": "seed-c-20260923",
+    "kind": "INDEPENDENT_GRID_INVENTORY_ATTRIBUTION_DEVELOPMENT",
+    "evidence_stage": "EXPOSED_DEVELOPMENT_ONLY",
+    "data_cutoff": "2026-09-21T16:00:00Z",
+    "question": "Can positive realized range/grid income coexist with negative complete inventory-plus-exit price PnL, and does a fixed dormancy rule change that attribution?",
+    "candidate_set": [
+      "grid_always",
+      "grid_dormant",
+      "hold_initial",
+      "wait"
+    ],
+    "candidate_scenario_rows": 12,
+    "scenario_count": 3,
+    "result_summary": "Two ladder arms are flat at the fixed endpoint, so terminal residual-inventory-loss hypothesis is not exposed in this sample. Modeled fee/slippage scenarios turn both price components negative. Different exposures do not establish signal-specific advantage or a chosen strategy.",
+    "moderate_friction": {
+      "fee_bps_per_side": "5",
+      "slippage_bps_per_side": "1",
+      "grid_always_price_component_usdt": "-0.927982511070",
+      "grid_dormant_price_component_usdt": "-0.693429423180",
+      "actual_funding_included": false,
+      "actual_net_pnl": null
+    },
+    "selected_plan_ref": null,
+    "new_market_data": "NO_NEW_MARKET_DATA_RECORD_EXISTING_EXPOSED_DAY_REUSED",
+    "formal_daily_review": false,
+    "readiness": "UNKNOWN",
+    "feedback_adoption": "General completeness/exposure boundaries acknowledged; independent null-parent seed-C root, not an additional derived funding successor."
+  },
+  "independent_readonly_audit": "review/continuation-audit/third-native-research-readonly-audit.json",
+  "independent_readonly_audit_sha256": "bbd672c5b4307f8b961ee42397edf10f3c55c7913eb73dfe1b63ab3b387688f5",
+  "stored_validation_receipts": "HASH_BOUND_FINAL_PAYLOAD_AND_INDEPENDENT_ARITHMETIC_READ_NOT_REEXECUTED",
+  "new_plan_count": 0,
+  "new_formal_review_count": 0,
+  "new_readiness_count": 0,
+  "natural_daily_reviews": 0,
+  "economic_final_reviews": 0,
+  "public_snapshot_at_completion": "f7feb8b441e6361d6dc1d31535b9787dbe0703dd43a553b1711c075fc6adc53c",
+  "public_snapshot_record_count": 48,
+  "new_public_records_publication": "PENDING_NATIVE_PUBLISHER",
+  "new_public_records_archive": "NOT_YET_ARCHIVED",
+  "archive_selection_requirement": "Select all four new public roots including the method explicitly; the nested results.method_ref is not an automatic semantic dependency.",
+  "boundaries": [
+    "Completion is an official task observation, not proof of a scheduled event identity.",
+    "Scenario price components omit funding and are not actual net PnL.",
+    "The new null-parent seed-C round is independent; it does not add another derived funding-feedback successor."
+  ]
+}

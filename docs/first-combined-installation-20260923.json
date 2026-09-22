@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "installed_at": "2026-09-22T21:33:30.106035+00:00",
+  "state": "INSTALLED_SCOPED_FIRST_COMBINED_MAINTENANCE",
+  "release_ref": "ce8d239788392c143ae971732d185627907e6b26",
+  "remote_main_verified": true,
+  "approved_source_sha256": "eca93fe70146b1c6962842cd6b62dc8f66f89a47e8249017387202e1a6985277",
+  "approved_method_sha256": "7dbdd186fd04ddca07dc3bfa933f9a0fae1ce66e1f1d91447e0bbeff5332d3ce",
+  "runtime": {
+    "implementation": "CPython",
+    "python_version": "3.9.6",
+    "third_party_runtime_dependencies": []
+  },
+  "independent_review_receipt": "review/continuation-audit/first-combined-source-receipt.json",
+  "independent_review_receipt_sha256": "c5f4945c393c9e33f6c013f190a0510139842e9873f685bf54e47ee9846ac3ce",
+  "exact_delivery_files_verified": 23,
+  "source_ci": {
+    "state": "SUCCESS",
+    "head_sha": "ce8d239788392c143ae971732d185627907e6b26",
+    "url": "https://github.com/He1met/research-tree-lab/actions/runs/35786914133"
+  },
+  "public_source_locator": {
+    "url": "https://github.com/He1met/research-tree-lab/blob/e65bb32e162ddc21b2513ee4edfd4d90829c5b5b/researchlib/public.py",
+    "sha256": "db4eb97c35a312277798605f76ac334dfd57bbc6fe3b1b6d718cd86f00d20dbd",
+    "remote_exact_bytes_verified": true
+  },
+  "installation_changed_fields": [
+    "approved_at",
+    "approved_source_sha256",
+    "independent_review_receipt",
+    "maintenance_scope",
+    "release_ref"
+  ],
+  "old_configuration_preserved_locally": true,
+  "original_records_unchanged": 54,
+  "original_files_unchanged": 366,
+  "original_plan_hashes_unchanged": true,
+  "production_formal_reviews": 2,
+  "conditional_reviews_created": 0,
+  "production_outbox_exists": false,
+  "native_task_settings_changed": false,
+  "backend_tests_passed": 267,
+  "reference_tests_passed": 24,
+  "public_guard_files": 464,
+  "public_guard_rejections": 0,
+  "current_public_snapshot_unchanged": "f7feb8b441e6361d6dc1d31535b9787dbe0703dd43a553b1711c075fc6adc53c",
+  "future_native_publisher_may_use_installed_version": true,
+  "boundaries": [
+    "Scoped engineering installation only; formal metrics remain null and source coverage UNKNOWN.",
+    "B04/B05/B07, natural review evidence and economic FINAL remain open.",
+    "No production preparation, research rerun, archive upload or webpage publication performed by this installation.",
+    "Nested results.method_ref is not an automatic semantic dependency; explicitly select all new third-research public roots for archival."
+  ]
+}
