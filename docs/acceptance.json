@@ -1,350 +1,1061 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "spec": "planning/current/docs/ACCEPTANCE.md",
-  "updated_at": "2026-09-22T18:12:04.846519+00:00",
-  "overall": "IN_PROGRESS_CHANGES_REQUIRED",
+  "updated_at": "2026-09-22T18:41:44+00:00",
+  "overall": "ENGINEERING_AND_SCOPED_PUBLIC_DELIVERY_VERIFIED_WITH_GAPS_WAITING_NATURAL_OUTCOME",
+  "method": "59项逐项证据映射；各层级不相加为整体通过率。测试源码只定位场景，运行通过以执行回执为准。",
+  "status_definitions": {
+    "ENGINEERING_PASS": "已有工程实际执行回执；限机制与测试范围，不代表自然、经济或远端通过。",
+    "REAL_PASS": "真实材料/记录上的有界实例通过；手动、受控与自然分别在边界说明，非完整长期结论。",
+    "ENGINEERING_PARTIAL": "部分实测成立，条款仍有明确未覆盖场景。",
+    "WAITING_NATURAL_OUTCOME": "所需自然触发、未来窗口或真实后继尚未发生，手动和合成不能补齐。",
+    "WEAK_ISOLATION_CONFIRMED": "角色约定和程序准入可用，环境无角色级硬隔离；不是强隔离通过。",
+    "REMOTE_PENDING": "实际公开可见、Pages回读或远端下载恢复尚待证据。",
+    "PENDING": "缺直接完整证据，或根任务负责的操作尚未完成。",
+    "NO_AUTOMATIC_CLEANUP": "有意不实现自动删除，未执行GC，不声称清理器验收通过。",
+    "CONDITIONAL_NOT_TRIGGERED": "条件未发生，未实测分支不记通过。"
+  },
+  "status_counts": {
+    "REAL_PASS": 16,
+    "ENGINEERING_PASS": 29,
+    "WAITING_NATURAL_OUTCOME": 4,
+    "PENDING": 1,
+    "ENGINEERING_PARTIAL": 4,
+    "WEAK_ISOLATION_CONFIRMED": 3,
+    "NO_AUTOMATIC_CLEANUP": 1,
+    "CONDITIONAL_NOT_TRIGGERED": 1
+  },
+  "evidence_baseline": {
+    "backend": {
+      "tests_passed": 55,
+      "receipt": "review/bootstrap-review/engineering-tests-final.txt",
+      "scope": "synthetic engineering; includes eight novelty regressions"
+    },
+    "browser": {
+      "tests_passed": 54,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "receipt": "tests/browser/artifacts/verification.json",
+      "scale_combinations": 12
+    },
+    "independent": {
+      "readiness_cases_passed": 19,
+      "novelty_cases_passed": 9,
+      "arithmetic_assertions_passed": 46,
+      "manual_review_coverage": "2/2",
+      "economic_final_reviews": 0
+    },
+    "genuine_projection_tested": {
+      "snapshot_id": "8fed09b78ee830b69e2e50c8a7706b84fc12e238f89a2f819252c0d3bcc2510c",
+      "as_of": "2026-09-22T18:20:38.520520Z",
+      "public_objects": 26,
+      "rounds": 3,
+      "surface": "LOCAL_TEST_SERVER_NOT_PAGES"
+    },
+    "native": {
+      "observed_at": "2026-09-22T18:36:18.283659+00:00",
+      "registered": 4,
+      "status": "ACTIVE",
+      "natural_runs": 0,
+      "native_next_run_at": null,
+      "manual_trials": "PASS_OFFICIAL_APP_MANUAL_NOT_NATIVE_RUN_NOW"
+    },
+    "permission_probe": {
+      "local_receipt": ".local/receipts/permission-probe.json",
+      "observed_at": "2026-09-22T17:57:05.177742+00:00",
+      "raw_shell_can_overwrite_same_user_project_file": true,
+      "global_permissions_changed": false
+    },
+    "local_reproduction": {
+      "local_receipt": ".local/receipts/scientific-restore-bootstrap-v1.json",
+      "origin": "LOCAL_PUBLIC_ARCHIVE_NOT_YET_REMOTE",
+      "derived_reproduced": true,
+      "restricted_source_recovered": false
+    },
+    "public_delivery": {
+      "schema_version": "1.0",
+      "verified_at": "2026-09-22T18:39:07.444694+00:00",
+      "snapshot_id": "b8633ae1ad392b613c312e0754b472a0eace2ef3fb9caa2c3e4075114411679a",
+      "pages_url": "https://he1met.github.io/research-tree-lab/",
+      "http_status": "PUBLIC_SNAPSHOT_HTTP_VERIFIED",
+      "http_files_verified": 56,
+      "browser_visual_acceptance": "ACTUALLY_OPENED_AND_VISUALLY_INSPECTED",
+      "visible_rounds": 3,
+      "store_records": 27,
+      "publication_proof_included": true,
+      "remote_source_commit": "e69e691058ca21ed7bc203c0d5646b59307a0ba5",
+      "pages_run_url": "https://github.com/He1met/research-tree-lab/actions/runs/35768224573",
+      "pages_conclusion": "success",
+      "source_sha256": "721597059c7976c56b78970b280aa7b46eee255560092f1966f5e714355550a3",
+      "manual_trial": true,
+      "natural_run": false
+    },
+    "remote_restore": {
+      "receipt": "docs/remote-restore.json",
+      "files_verified": 46,
+      "records_verified": 26,
+      "new_directory_restore": true,
+      "derived_calculations_reproduced": 2,
+      "restricted_upstream_restored": false
+    }
+  },
+  "operator_pending": [],
+  "not_claimed": [
+    "整体59项通过",
+    "自然任务已经运行",
+    "受限上游已远端备份或恢复",
+    "盈利策略或实际前瞻收益",
+    "账户适配或交易授权",
+    "环境角色级硬隔离",
+    "实际下一调度时点已知"
+  ],
   "checks": [
     {
       "id": "A01",
+      "scenario": "没有任何历史复核",
+      "requirement": "可以从官方资料/数据调查独立启动真实研究",
       "status": "REAL_PASS",
+      "verified_scope": "无历史复核时，官方应用手动试跑先冻结协议，再下载官方资金费资料并实际审计，发现 UTC 日缺一个结算点。",
       "evidence": [
         "research/bootstrap-v1/REPORT.md",
-        "research/bootstrap-v1/execution_receipt.json"
-      ]
+        "research/bootstrap-v1/execution_receipt.json",
+        "research/bootstrap-v1/verification_receipt.json"
+      ],
+      "limitations": "native_task_id 为空、natural_trigger=false；不是自然调度或经济有效性证明。",
+      "next_verification": "自然研究另按 F07 记录。"
     },
     {
       "id": "A02",
-      "status": "REAL_PARTIAL",
+      "scenario": "原方向等待未来数据",
+      "requirement": "其他有意义方向继续，等待不成为全局锁",
+      "status": "REAL_PASS",
+      "verified_scope": "资金费方案等待未来目标数据期间，实际执行独立股票永续时段与指数机制调查。",
       "evidence": [
+        "research/bootstrap-v1/REPORT.md",
+        "research/bootstrap-v1/execution_receipt.json",
+        "research/bootstrap-v1/verification_receipt.json",
         "research/bootstrap-v1/SESSION_MECHANISM.md"
-      ]
+      ],
+      "limitations": "证明本次手动研究未被全局锁住；未证明自然调度公平性。",
+      "next_verification": "自然时点核对无依赖方向的实际输入与产物。"
     },
     {
       "id": "A03",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "同机制改名或同数据重复尝试",
+      "requirement": "去重/标变体/合法复现，不虚报新机制",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "55 项后端回归含 8 项 novelty 测试，另 9 项独立矩阵通过：改名重复、参数变体、跨产品/新样本仅为复现候选、多个来源不复制轮次、未知自由文本不自证创新。",
+      "evidence": [
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "review/bootstrap-review/novelty-matrix.json",
+        "tests/test_storage_novelty.py"
+      ],
+      "limitations": "仅结构性去重提示，不是科学或经济独立性；夹具未写生产。",
+      "next_verification": "真实接续保留结构家族和复现依据，不以候选标签计算独立发现数。"
     },
     {
       "id": "A04",
+      "scenario": "有价值新方向长期被延后",
+      "requirement": "真实获得执行或明确不可行证据，不只改优先级数字",
       "status": "REAL_PASS",
+      "verified_scope": "股票永续新方向实际查阅官方机制并封存可证伪设计；资金费成本后继也实际执行。",
       "evidence": [
         "research/bootstrap-v1/REPORT.md",
-        "research/bootstrap-v1/SESSION_MECHANISM.md"
-      ]
+        "research/bootstrap-v1/execution_receipt.json",
+        "research/bootstrap-v1/verification_receipt.json",
+        "research/bootstrap-v1/SESSION_MECHANISM.md",
+        "research/bootstrap-v1/cost_stress.json",
+        "review/bootstrap-review/independent_arithmetic.json"
+      ],
+      "limitations": "有界真实实例，未测长期队列饥饿或覆盖率。",
+      "next_verification": "自然运行保留方向选择与真实执行的对应证据。"
     },
     {
       "id": "A05",
-      "status": "REAL_PASS_BOUNDED",
+      "scenario": "有开发支持的方向",
+      "requirement": "后继至少实际检查一种成本/反例/暴露/边界/新样本，而非只有调参",
+      "status": "REAL_PASS",
+      "verified_scope": "后继实际计算 48 个成本敏感性情景并独立核验，检查净收益的成本与价格路径边界，封存两个前瞻对照方案。",
       "evidence": [
+        "research/bootstrap-v1/REPORT.md",
+        "research/bootstrap-v1/execution_receipt.json",
+        "research/bootstrap-v1/verification_receipt.json",
         "research/bootstrap-v1/cost_stress.json",
-        "research/bootstrap-v1/forward_plans.json"
-      ]
+        "review/bootstrap-review/independent_arithmetic.json",
+        "research/bootstrap-v1/forward_plans.json",
+        "research/bootstrap-v1/frozen_protocol.json"
+      ],
+      "limitations": "恒定标记/名义金额是明示假设；这些计算不是实际回测盈亏。",
+      "next_verification": "原未来窗口完成且目标数据齐全后再评价前瞻方案。"
     },
     {
       "id": "A06",
+      "scenario": "已完成反馈",
+      "requirement": "新研究引用原feedback并实际采用、检验或解释不采用",
       "status": "WAITING_NATURAL_OUTCOME",
+      "verified_scope": "两条真实手动复核反馈已追加，存储与页面支持精确反馈及采用状态。",
       "evidence": [
-        "research/bootstrap-v1/forward_plans.json"
-      ]
+        "docs/INDEPENDENT_REVIEW.md",
+        "review/bootstrap-review/frozen_batch.json",
+        "review/bootstrap-review/review_bundle.json",
+        "docs/real-append-c05.json",
+        "review/bootstrap-review/actual-append-recheck.json",
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md"
+      ],
+      "limitations": "没有真实后继实际采用、检验或有理由拒绝这两条反馈；成本后继早于该批反馈，不能冒充采用。",
+      "next_verification": "自然后继引用精确 feedback ID，附实际执行或拒绝理由。"
     },
     {
       "id": "A07",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "原假设在一类状态失败",
+      "requirement": "暂停范围准确，留下新证据重启条件，不推广到所有市场",
+      "status": "PENDING",
+      "verified_scope": "真实调查限定了 UTC 日数据缺口与条件性成本结论，未推广为所有市场失效。",
+      "evidence": [
+        "research/bootstrap-v1/REPORT.md",
+        "research/bootstrap-v1/execution_receipt.json",
+        "research/bootstrap-v1/verification_receipt.json",
+        "research/bootstrap-v1/SESSION_MECHANISM.md",
+        "research/bootstrap-v1/forward_plans.json",
+        "research/bootstrap-v1/frozen_protocol.json"
+      ],
+      "limitations": "缺少假设在一类状态实际失败、限定暂停、满足新证据重启的完整实例。",
+      "next_verification": "出现对应失败时核对暂停范围和重启条件；工程夹具与真实案例分别记录。"
     },
     {
       "id": "A08",
-      "status": "WAITING_NATIVE_ENABLE_AND_NATURAL_RUN",
+      "scenario": "用户不读网页不回复继续",
+      "requirement": "原生任务仍接续，不形成普通研究审批",
+      "status": "WAITING_NATURAL_OUTCOME",
+      "verified_scope": "四项业务原生任务已由官方管理工具启用 ACTIVE 并回读；普通研究没有用户阅读/回复审批门槛。",
       "evidence": [
+        "docs/INSTALLATION.md",
         "config/native_task_status.json"
-      ]
+      ],
+      "limitations": "启用不等于已自然运行，当前自然回执仍为 0。",
+      "next_verification": "在用户无额外回复期间保留真实自然触发身份与接续产物。"
     },
     {
       "id": "B01",
-      "status": "REAL_PASS_WITH_EXPLICIT_GAPS",
+      "scenario": "四产品数据不同",
+      "requirement": "合约、参考标的、价格类型与费用分开，未知原生代码不猜",
+      "status": "REAL_PASS",
+      "verified_scope": "四产品能力卡分别列目标合约、参考标的/指数、价格类型与费用能力，未知字段保持 UNKNOWN。",
       "evidence": [
-        "research/bootstrap-v1/product_capability_cards.json"
-      ]
+        "research/bootstrap-v1/product_capability_cards.json",
+        "config/products.json",
+        "research/bootstrap-v1/REPORT.md",
+        "research/bootstrap-v1/execution_receipt.json",
+        "research/bootstrap-v1/verification_receipt.json"
+      ],
+      "limitations": "日资金费文件不能充当目标成交、标记、价差或实际账户费率。",
+      "next_verification": "新增来源继续按产品、价格类型、可得时点绑定。"
     },
     {
       "id": "B02",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "新增INTC",
+      "requirement": "同类只加配置和来源映射，网页/任务正文不改ticker，旧方案集合不变",
+      "status": "ENGINEERING_PARTIAL",
+      "verified_scope": "界面动态显示配置产品并支持带版本引用；后端验证新产品不漏入旧 as_of；生产 INTC 示例仍禁用。",
+      "evidence": [
+        "research/bootstrap-v1/product_capability_cards.json",
+        "config/products.json",
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md",
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_storage_contracts.py"
+      ],
+      "limitations": "缺只加 INTC 配置/来源映射后任务、核心代码、web/src 哈希不变且旧方案集合不变的完整追加回执。",
+      "next_verification": "在隔离副本做一次配置追加并比较哈希、旧方案集合和页面，无需启用真实 INTC。"
     },
     {
       "id": "B03",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "所有正式方案",
+      "requirement": "旧版、被替代、负结果、多候选、未触发全部纳入每日清单",
+      "status": "REAL_PASS",
+      "verified_scope": "真实冻结清单含两方案，独立手动处置 2/2；全版本测试含等待、负结果等，冻结同时约束 available_at 与 committed_at。",
+      "evidence": [
+        "docs/INDEPENDENT_REVIEW.md",
+        "review/bootstrap-review/frozen_batch.json",
+        "review/bootstrap-review/review_bundle.json",
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_storage_contracts.py"
+      ],
+      "limitations": "生产仅两个前瞻方案，未自然经历全部历史类别；2/2 是处置覆盖，经济最终评价为 0。",
+      "next_verification": "自然日批次冻结所有 plan@version，分别报告等待、阶段与最终数量。"
     },
     {
       "id": "B04",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "跨日观察",
+      "requirement": "模拟状态接续；日终不强制退出、不重新进入",
+      "status": "WAITING_NATURAL_OUTCOME",
+      "verified_scope": "实际账本测试跨日库存、资金费、退出成本、幂等，复核须接续原状态。",
+      "evidence": [
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_replay_ledger.py",
+        "tests/test_storage_contracts.py",
+        "research/bootstrap-v1/forward_plans.json",
+        "research/bootstrap-v1/frozen_protocol.json"
+      ],
+      "limitations": "真实前瞻方案尚未走完跨日轨迹，无真实净值或持仓结果。",
+      "next_verification": "按原规则续写真实事件账本，日终不强平或重新入场。"
     },
     {
       "id": "B05",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "最终与阶段",
+      "requirement": "到原终点且数据齐全才最终；等待/缺数/未触发分别表示",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "测试拒绝未到原终点或路径不全的 FINAL；真实两份复核均 NOT_YET_EFFECTIVE，区分等待、阶段、缺数和未触发。",
+      "evidence": [
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_storage_contracts.py",
+        "docs/INDEPENDENT_REVIEW.md",
+        "review/bootstrap-review/frozen_batch.json",
+        "review/bootstrap-review/review_bundle.json",
+        "research/bootstrap-v1/forward_plans.json",
+        "research/bootstrap-v1/frozen_protocol.json"
+      ],
+      "limitations": "没有真实终点完整路径；日历到点不能代替数据完整。",
+      "next_verification": "终点到达先核对数据再决定阶段、等待或 FINAL。"
     },
     {
       "id": "B06",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "路径歧义",
+      "requirement": "同K线触发先后按预登记或报告未知/范围，不择优",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "粗粒度 K 线触发顺序不明时，账本测试保留歧义/范围，不选择有利成交。",
+      "evidence": [
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_replay_ledger.py"
+      ],
+      "limitations": "合成边界测试，不补证真实分钟内路径。",
+      "next_verification": "遇实际歧义引用预登记规则或保留 UNKNOWN/范围。"
     },
     {
       "id": "B07",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "费用与网格",
+      "requirement": "未知不填0；库存/未实现/资金费/退出纳入，手算样例核验",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "账本测试未知费用不填零，计入库存、未实现变化、资金费和退出；真实派生 48 情景另经独立 46 项算术核验。",
+      "evidence": [
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_replay_ledger.py",
+        "research/bootstrap-v1/cost_stress.json",
+        "review/bootstrap-review/independent_arithmetic.json",
+        "docs/INDEPENDENT_REVIEW.md",
+        "review/bootstrap-review/frozen_batch.json",
+        "review/bootstrap-review/review_bundle.json"
+      ],
+      "limitations": "成本情景不是完整价格路径或账户利润；真实未来成交与费率待取得。",
+      "next_verification": "未来评价附目标价格、库存账本、费率来源和手算抽样。"
     },
     {
       "id": "B08",
-      "status": "LOCAL_SEALED_PUBLIC_PENDING",
+      "scenario": "公开与本地时点",
+      "requirement": "先封存再使用后续行情；无公开证明不能冒充公开事前",
+      "status": "REAL_PASS",
+      "verified_scope": "本地封存、公开可见与方案生效分开：首次 Pages 实际回读为 2026-09-22T18:34:55.539293Z，早于两个封存方案 2026-09-23T00:05:00Z 生效；正式 publication 记录已追加。",
       "evidence": [
-        "research/bootstrap-v1/frozen_protocol.json"
-      ]
+        "research/bootstrap-v1/forward_plans.json",
+        "research/bootstrap-v1/frozen_protocol.json",
+        "docs/INDEPENDENT_REVIEW.md",
+        "review/bootstrap-review/frozen_batch.json",
+        "review/bootstrap-review/review_bundle.json",
+        "research/bootstrap-v1/REPORT.md",
+        "research/bootstrap-v1/execution_receipt.json",
+        "research/bootstrap-v1/verification_receipt.json",
+        "docs/publication-readback.json",
+        "docs/current-publication.json"
+      ],
+      "limitations": "较早复核中的 public_visibility_ref=null 是当时真实状态，不能倒填。公开证明不补齐未来行情，也不把手动发布称自然事前评价。",
+      "next_verification": "未来仅使用原有效时点后的目标数据，并引用已存在的公开证明，旧原件不改。"
     },
     {
       "id": "B09",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "动态LLM判断",
+      "requirement": "必需的当时输出真实存在，否则不事后补问当原决策",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "账本测试要求动态模型输出在事件前真实存在且可得，缺失/未来输出不能当原决策。",
+      "evidence": [
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_replay_ledger.py",
+        "research/bootstrap-v1/forward_plans.json",
+        "research/bootstrap-v1/frozen_protocol.json"
+      ],
+      "limitations": "当前真实方案不依赖未来动态 LLM；未发生自然动态输出链。",
+      "next_verification": "若将来采用动态方案，届时保存原输出/版本/时点，缺失不得事后补问。"
     },
     {
       "id": "B10",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "复核修订",
+      "requirement": "新ID/版本说明原因，旧文件不变；受影响下游明示需复查",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "不可变修订、纠错影响下游并保留旧快照通过；网页按具体 review 版本显示修订原因。",
+      "evidence": [
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_storage_contracts.py",
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md"
+      ],
+      "limitations": "真实库尚未发生该纠错修订链；合成 revision 不算自然纠错。",
+      "next_verification": "真实纠错追加新 ID/版本、原因并核对旧字节与下游需复查标志。"
     },
     {
       "id": "B11",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "重叠独立方案",
+      "requirement": "不相加为账户利润，样本角色和相关性说明",
+      "status": "REAL_PASS",
+      "verified_scope": "两个相反方向方案明确主研究/方向对照角色，不相加为账户利润、不当独立样本；相反方向不冒充 beta 匹配。",
+      "evidence": [
+        "research/bootstrap-v1/forward_plans.json",
+        "research/bootstrap-v1/frozen_protocol.json",
+        "docs/INDEPENDENT_REVIEW.md",
+        "review/bootstrap-review/frozen_batch.json",
+        "review/bootstrap-review/review_bundle.json"
+      ],
+      "limitations": "没有实际未来盈亏，不能由两个候选制造样本量或正收益结论。",
+      "next_verification": "最终按原样本角色分别报告，相关性需另有足够数据和方法。"
     },
     {
       "id": "C01",
+      "scenario": "真实组件",
+      "requirement": "安装并构建实际@xyflow/react；原生HTML不能冒充",
       "status": "ENGINEERING_PASS",
+      "verified_scope": "真实 npm 锁文件、npm ci、类型检查与 Vite 构建通过，React Flow 为唯一图引擎；空生产库不回退示例。",
       "evidence": [
-        "web/package-lock.json",
-        "web/src/App.tsx"
-      ]
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md"
+      ],
+      "limitations": "依赖审计限本次时点；构建不是远端部署确认。",
+      "next_verification": "代码或依赖变更后按锁文件复建并回归受影响范围。"
     },
     {
       "id": "C02",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "两代分叉与多日复核",
+      "requirement": "第一轮内部P/R/F，下一代在下一列；复核不增代",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "两代分叉、隐藏第三代和多日复核通过；P/R/F 在轮次内部，仅派生轮次增代；真实投影三轮两代。",
+      "evidence": [
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md",
+        "tests/browser/artifacts/chromium-genuine-projection.json",
+        "tests/browser/artifacts/webkit-genuine-projection.json"
+      ],
+      "limitations": "完整结构矩阵为合成案例，真实规模较小。",
+      "next_verification": "自然记录按相同结构追加并保留历史。"
     },
     {
       "id": "C03",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "两种展开",
+      "requirement": "本轮材料与后继可分别展开，不相互隐藏",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "本轮材料和后继展开独立，收起一种不隐式改变另一种。",
+      "evidence": [
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md"
+      ],
+      "limitations": "合成浏览器行为测试。",
+      "next_verification": "相关交互改动时回归即可。"
     },
     {
       "id": "C04",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "多候选",
+      "requirement": "显式主选引用；无主选分开列，不取第一项或赢家",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "主选只认显式 selected_plan_ref，无主选分别显示，不取第一项或收益赢家。",
+      "evidence": [
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md",
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_storage_contracts.py"
+      ],
+      "limitations": "界面不替研究挑选方案。",
+      "next_verification": "真实多候选明确选择引用或保持并列。"
     },
     {
       "id": "C05",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "新结果接入",
+      "requirement": "追加完整记录后运行发布逻辑即可出现；web/src哈希不因加记录变化",
+      "status": "REAL_PASS",
+      "verified_scope": "生产受控追加批次/两复核/两反馈共五记录，21→26，轮次代际不变且 web/src 前后哈希相同，独立复验通过；测试副本另验证追加后继/根并刷新。",
+      "evidence": [
+        "docs/real-append-c05.json",
+        "review/bootstrap-review/actual-append-recheck.json",
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md",
+        "tests/browser/artifacts/chromium-genuine-projection.json",
+        "tests/browser/artifacts/webkit-genuine-projection.json"
+      ],
+      "limitations": "真实追加是手动流程非自然发布；后续 UI 修复不回填该哈希范围。最终浏览器已显示 26 对象。",
+      "next_verification": "后续自然追加沿用源哈希与投影身份回执。"
     },
     {
       "id": "C06",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "历史搜索",
+      "requirement": "能搜折叠/未加载记录，显示祖先；未加载不等于不存在",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "全历史摘要搜索能找第 10000 轮、折叠/未加载后代并恢复祖先，多来源不复制节点。",
+      "evidence": [
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md",
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_storage_contracts.py"
+      ],
+      "limitations": "摘要目录整体加载、详情按需；没有无限规模保证。",
+      "next_verification": "实际更大负载有压力再测量索引演进。"
     },
     {
       "id": "C07",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "每日复核入口",
+      "requirement": "按批次/日期/产品查看，点入具体review版本并定位轮次",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "每日抽屉按日期/产品/批次筛选，进入精确 review 版本并定位轮次；真实手动批次已入投影。",
+      "evidence": [
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md",
+        "tests/browser/artifacts/chromium-genuine-projection.json",
+        "tests/browser/artifacts/webkit-genuine-projection.json",
+        "docs/INDEPENDENT_REVIEW.md",
+        "review/bootstrap-review/frozen_batch.json",
+        "review/bootstrap-review/review_bundle.json"
+      ],
+      "limitations": "界面可用不是自然日覆盖通过。",
+      "next_verification": "自然批次以原回执核对页面精确版本。"
     },
     {
       "id": "C08",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "历史时点",
+      "requirement": "旧快照不含未来产品、修订、解释和采用状态",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "旧快照不混读 latest，未来产品/修订/解释/采用及晚提交复核不漏入旧时点。",
+      "evidence": [
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md",
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_storage_contracts.py"
+      ],
+      "limitations": "升级旧格式兼容另列 E11，不从新快照推断旧事实。",
+      "next_verification": "时点逻辑变更后复验旧真实快照及未来隔离。"
     },
     {
       "id": "C09",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "新快照",
+      "requirement": "用户视窗/选中不被抢；失败保留旧快照并明确陈旧",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "原子切换保持视窗/选中，网络中断/哈希错/未知 schema 保留最后完整快照并标陈旧。",
+      "evidence": [
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md"
+      ],
+      "limitations": "本地故障注入，非整台 Mac/App 自然离线实录。",
+      "next_verification": "远端上线后另核对 latest 与发布身份。"
     },
     {
       "id": "C10",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "手机和只读",
+      "requirement": "390px可读；键盘/Escape可用；无账户/审批/交易/改图动作",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "两浏览器 390×844 可读，焦点/Escape返回通过，方向/Delete不能改图，无账户/审批/交易按钮。",
+      "evidence": [
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md",
+        "tests/browser/artifacts/chromium-genuine-projection.json",
+        "tests/browser/artifacts/webkit-genuine-projection.json"
+      ],
+      "limitations": "独立无头实例，未覆盖全部设备或辅助技术。",
+      "next_verification": "UI 变更后按影响复验手机和键盘。"
     },
     {
       "id": "C11",
-      "status": "BROWSER_SCALE_MEASURED",
+      "scenario": "实际规模",
+      "requirement": "分别测试总历史1000/10000记录与可见50/100/200节点，记录实际设备/浏览器和问题；档位不是产品上限",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "两浏览器各测历史 1000/10000 × 实际渲染 50/100/200，共 12 组合，节点计数、设备、版本与实际耗时有逐项回执。",
       "evidence": [
-        "tests/browser/artifacts/scale/"
-      ]
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md"
+      ],
+      "limitations": "Apple M5/16GB 单次测量；渲染节点不等于一屏全部可读，10000轮目录约7MB，档位不是上限。",
+      "next_verification": "实际更大负载或退化时扩测，不将结果当通用保证。"
     },
     {
       "id": "C12",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "前端安全",
+      "requirement": "文本/Markdown转义或安全白名单，无任意HTML执行、路径逃逸或敏感下载暴露",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "转义、路径/脚本拒绝、http/https 链接及白名单附件 hash/bytes 验证通过；真实允许公开附件在两浏览器实际打开。",
+      "evidence": [
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md",
+        "tests/browser/artifacts/chromium-genuine-projection.json",
+        "tests/browser/artifacts/webkit-genuine-projection.json",
+        "research/bootstrap-v1/PUBLIC_SCOPE.md",
+        "tests/test_public_guard.py",
+        "review/bootstrap-review/engineering-tests-final.txt"
+      ],
+      "limitations": "不执行任意 HTML，LOCAL_ONLY 无任意下载；安全仍依赖发布扫描与许可白名单。",
+      "next_verification": "新类型先明确白名单与安全渲染。"
     },
     {
       "id": "D01",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "规则完整但只有参考数据或陈旧数据，只能可回放/研究，不高亮当前执行。",
+      "requirement": "规则完整但只有参考数据或陈旧数据，只能可回放/研究，不高亮当前执行。",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "参考/陈旧/断链数据不能高亮，发布器及前端按精确方案和有效期降级。",
+      "evidence": [
+        "review/bootstrap-review/readiness-recheck.json",
+        "review/bootstrap-review/readiness-matrix.json",
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md"
+      ],
+      "limitations": "真实方案缺执行事实保持 UNKNOWN，没有真实就绪候选。",
+      "next_verification": "真实达到固定政策与当前触发后才允许对应计划高亮。"
     },
     {
       "id": "D02",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "某候选盈利但缺执行事实，不能升格",
+      "requirement": "某候选盈利但缺执行事实，不能升格；负结果也不自动决定市场规则完整性。",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "测试明确收益不是执行条件门槛；盈利不能补执行事实，负结果不自动决定规则完整性。",
+      "evidence": [
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_storage_contracts.py",
+        "review/bootstrap-review/readiness-recheck.json",
+        "review/bootstrap-review/readiness-matrix.json"
+      ],
+      "limitations": "不授予经济有效性、账户适配或交易授权。",
+      "next_verification": "不得加入按历史收益升格当前条件的逻辑。"
     },
     {
       "id": "D03",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "满足全部有证据的检查、当前触发与有效窗口时，具体plan显示“具备交易执行条件 · 截至…”，同处保留证据阶段。",
+      "requirement": "满足全部有证据的检查、当前触发与有效窗口时，具体plan显示“具备交易执行条件 · 截至…”，同处保留证据阶段。",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "独立正对照满足规则/方法/来源/范围/触发/有效期才 READY，浏览器精确 plan@version 标志同处保留证据阶段与截至时点。",
+      "evidence": [
+        "review/bootstrap-review/readiness-recheck.json",
+        "review/bootstrap-review/readiness-matrix.json",
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md"
+      ],
+      "limitations": "正对照仅合成夹具，生产没有全部执行事实，不制造生产高亮。",
+      "next_verification": "未来真实达标时以真实链和当前窗口另验。"
     },
     {
       "id": "D04",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "重新发布页面不能延長证据有效期。有效期到达前端即降级",
+      "requirement": "重新发布页面不能延長证据有效期。有效期到达前端即降级；缺有效时点保持未知。",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "重新发布不续期，打开页面到期即降级，缺时区/截止或时钟跳变也降级。",
+      "evidence": [
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md",
+        "review/bootstrap-review/readiness-recheck.json",
+        "review/bootstrap-review/readiness-matrix.json",
+        "review/bootstrap-review/engineering-tests-final.txt"
+      ],
+      "limitations": "标志有效期不是持仓生命周期，不声称已经平仓。",
+      "next_verification": "真实就绪证据出现后核对原窗口，不为验收制造结果。"
     },
     {
       "id": "D05",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "一个轮次仅一方案满足时，不给整轮其余候选统一高亮。",
+      "requirement": "一个轮次仅一方案满足时，不给整轮其余候选统一高亮。",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "仅精确达标候选高亮，其他候选不继承，错计划/版本绑定拒绝。",
+      "evidence": [
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md",
+        "review/bootstrap-review/readiness-recheck.json",
+        "review/bootstrap-review/readiness-matrix.json",
+        "review/bootstrap-review/engineering-tests-final.txt"
+      ],
+      "limitations": "是机制通过，没有生产就绪候选。",
+      "next_verification": "新候选独立绑定证据和时效。"
     },
     {
       "id": "D06",
-      "status": "CHANGES_REQUIRED",
+      "scenario": "假数据、字段缺失、失效/纠错、未知schema不能高亮生产标志。",
+      "requirement": "假数据、字段缺失、失效/纠错、未知schema不能高亮生产标志。",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "原独立审查的缺规则/政策/来源/范围仍 READY 问题已修复；原复现现在 UNKNOWN，19项矩阵及浏览器负例通过。",
       "evidence": [
-        "review/bootstrap-review/readiness-repro.json"
-      ]
+        "review/bootstrap-review/readiness-recheck.json",
+        "review/bootstrap-review/readiness-matrix.json",
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md"
+      ],
+      "limitations": "保留原失败历史；合成、缺项、失效与未知 schema 不得高亮；正对照不写生产。",
+      "next_verification": "判定逻辑变更保留回归，禁止自证式 readiness。"
     },
     {
       "id": "D07",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "账户适配始终未评估",
+      "requirement": "账户适配始终未评估；无下单/资金操作；有效期到期不声称已经平仓。",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "页面无资金/下单操作，账户适配未评估；到期只降级；真实研究没有连接交易账户或提交订单。",
+      "evidence": [
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md",
+        "docs/INSTALLATION.md",
+        "config/native_task_status.json",
+        "research/bootstrap-v1/forward_plans.json",
+        "research/bootstrap-v1/frozen_protocol.json"
+      ],
+      "limitations": "执行条件不等于账户适配、盈利或资金授权。",
+      "next_verification": "保持观察边界，任何实盘另需授权。"
     },
     {
       "id": "E01",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "同ID同内容重放幂等，异内容冲突拒收，已封存字节不被改写。",
+      "requirement": "同ID同内容重放幂等，异内容冲突拒收，已封存字节不被改写。",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "同ID同内容幂等、异内容拒绝、原字节不变、请求键跨bundle去重实测通过。",
+      "evidence": [
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_storage_contracts.py"
+      ],
+      "limitations": "受控入口保证，同用户任意shell可绕过，见F03。",
+      "next_verification": "生产写入继续受控入口和manifest。"
     },
     {
       "id": "E02",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "写入一半中断，没有完成manifest不参与正式评价",
+      "requirement": "写入一半中断，没有完成manifest不参与正式评价；恢复只续缺项。",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "未完成manifest的半写入排除正式读取，恢复续缺项，中断/幂等通过。",
+      "evidence": [
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_storage_contracts.py"
+      ],
+      "limitations": "临时目录故障注入，非自然崩溃回执。",
+      "next_verification": "真实中断保留原attempt/checkpoint，不重抽已完成结果。"
     },
     {
       "id": "E03",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "两个并行研究独立写",
+      "requirement": "两个并行研究独立写；两个相同任务不能同时成为同问题owner；旧owner不能覆盖新owner。",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "进程并发同问题只有一个owner，独立提交可并存；调查后转移generation，旧owner被拒。",
+      "evidence": [
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_storage_contracts.py"
+      ],
+      "limitations": "程序锁和角色控制，不是操作系统隔离。",
+      "next_verification": "自然并发保留request_key/owner/generation及拒收回执。"
     },
     {
       "id": "E04",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "研究/复核不直接git操作公共HEAD",
+      "requirement": "研究/复核不直接git操作公共HEAD；公共发布短暂单写，不长锁计算。",
+      "status": "WEAK_ISOLATION_CONFIRMED",
+      "verified_scope": "研究/复核受控入口不操作公共Git，发布验证唯一remote/批准源码与短发布锁，越界remote或源码变化停止测试通过。",
+      "evidence": [
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_publisher.py",
+        "review/bootstrap-review/publisher-hash-recheck.json",
+        "review/bootstrap-review/publication-integrity-recheck.json",
+        "docs/INSTALLATION.md",
+        "config/native_task_status.json",
+        "docs/OPERATIONS.md"
+      ],
+      "limitations": "同用户full access仍可绕过入口改公共HEAD；没有环境级单发布者保证。",
+      "next_verification": "保持单发布入口、拒收越界结果；环境若改变须哨兵复测。"
     },
     {
       "id": "E05",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "数据一次共享、多轮引用",
+      "requirement": "数据一次共享、多轮引用；临时worktree删除后原档仍在稳定根。",
+      "status": "REAL_PASS",
+      "verified_scope": "真实临时Git worktree从显式稳定根读26记录，只移除新建worktree后58个原件/共享数据文件哈希均不变；共享去重测试亦通过。",
+      "evidence": [
+        "docs/stable-root-worktree-check.json",
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_storage_contracts.py",
+        "research/bootstrap-v1/REPORT.md",
+        "research/bootstrap-v1/execution_receipt.json",
+        "research/bootstrap-v1/verification_receipt.json"
+      ],
+      "limitations": "有界受控生命周期，未删除正式原档或其他worktree。",
+      "next_verification": "后续临时工作区继续显式绑定稳定根，不持有唯一证据。"
     },
     {
       "id": "E06",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "公开镜像、网页投影可从原件重建",
+      "requirement": "公开镜像、网页投影可从原件重建；同输入生成一致；全历史索引与大文件链接可追溯。",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "同输入投影确定、历史搜索、详情/附件内容寻址通过；真实本地26对象与附件可追溯bundle。",
+      "evidence": [
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_storage_contracts.py",
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md",
+        "tests/browser/artifacts/chromium-genuine-projection.json",
+        "tests/browser/artifacts/webkit-genuine-projection.json",
+        "research/bootstrap-v1/PUBLIC_SCOPE.md",
+        "tests/test_public_guard.py"
+      ],
+      "limitations": "公开派生可重建不等于受限上游已远端备份；E09/E10 已单独验证允许范围的远端发布与恢复。",
+      "next_verification": "后续新增内容继续核对允许闭包并保留 LOCAL_ONLY 缺口。"
     },
     {
       "id": "E07",
-      "status": "ENGINEERING_PASS_WITH_LOCAL_ONLY_UPSTREAM",
+      "scenario": "公开前秘密/许可检查，普通摘要不能代替未备份原件",
+      "requirement": "公开前秘密/许可检查，普通摘要不能代替未备份原件；嵌套包不绕过扫描。",
+      "status": "REAL_PASS",
+      "verified_scope": "秘密/私有路径/嵌套包魔数/符号链接/许可白名单拒绝测试通过，真实上游ZIP/CSV/HTML保留LOCAL_ONLY，仅公开允许派生物。",
       "evidence": [
-        "scripts/public_guard.py",
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "research/bootstrap-v1/PUBLIC_SCOPE.md",
         "tests/test_public_guard.py",
-        "research/bootstrap-v1/PUBLIC_SCOPE.md"
-      ]
+        "research/bootstrap-v1/REPORT.md",
+        "research/bootstrap-v1/execution_receipt.json",
+        "research/bootstrap-v1/verification_receipt.json"
+      ],
+      "limitations": "摘要不能代替原档备份；受限上游远端未保存。",
+      "next_verification": "公开清单继续列限制，不绕许可搬运。"
     },
     {
       "id": "E08",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "发布中断只补发",
+      "requirement": "发布中断只补发；不能重抽原模型结果。不完整snapshot不会成为latest。",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "中断快照不成为latest，重用不可变结果补发；浏览器保留旧快照；源码/资源/快照身份拒绝测试通过。",
+      "evidence": [
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_storage_contracts.py",
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md",
+        "tests/test_publisher.py",
+        "review/bootstrap-review/publisher-hash-recheck.json",
+        "review/bootstrap-review/publication-integrity-recheck.json"
+      ],
+      "limitations": "受控故障非自然中断，未重新调用模型。",
+      "next_verification": "真实中断继续原snapshot/attempt，留失败与续传回执。"
     },
     {
       "id": "E09",
-      "status": "PUBLIC_REPOSITORY_CREATED_PAGES_PENDING",
+      "scenario": "实际打开Pages并核对snapshot后才记发布确认",
+      "requirement": "实际打开Pages并核对snapshot后才记发布确认；部署前不声称已上线。",
+      "status": "REAL_PASS",
+      "verified_scope": "首次 Pages 回读核验 52 个 HTTP 资源并实际打开每日复核定位；最新 b8633ae1ad392b613c312e0754b472a0eace2ef3fb9caa2c3e4075114411679a 又完成 56 个资源哈希与实际浏览器回读，3轮27记录，Pages Actions success。",
       "evidence": [
-        "https://github.com/He1met/research-tree-lab"
-      ]
+        "tests/browser/artifacts/chromium-genuine-projection.json",
+        "tests/browser/artifacts/webkit-genuine-projection.json",
+        "tests/test_publisher.py",
+        "review/bootstrap-review/publisher-hash-recheck.json",
+        "review/bootstrap-review/publication-integrity-recheck.json",
+        "docs/OPERATIONS.md",
+        "docs/publication-readback.json",
+        "docs/public-browser-readback.json",
+        "docs/current-publication.json"
+      ],
+      "limitations": "均为正式应用手动受控发布，不是自然发布任务；成功只对应回执中内容与时点。",
+      "next_verification": "自然发布继续保存远端身份、完整性和页面回读，不从本地构建推断远端更新。"
     },
     {
       "id": "E10",
-      "status": "LOCAL_DERIVED_RESTORE_PASS_REMOTE_PENDING",
+      "scenario": "从一个新目录恢复一项允许公开的完整研究，验证代码/数据/结果与清单",
+      "requirement": "从一个新目录恢复一项允许公开的完整研究，验证代码/数据/结果与清单；尚未远端保存的部分如实标明。",
+      "status": "REAL_PASS",
+      "verified_scope": "从 GitHub Release 下载允许公开的研究归档到全新目录，46 文件/26 记录逐哈希验证，两项派生脚本实际复算与预期一致。",
       "evidence": [
-        "research/bootstrap-v1/PUBLIC_SCOPE.md"
-      ]
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_storage_contracts.py",
+        "researchlib/archive.py",
+        "research/bootstrap-v1/PUBLIC_SCOPE.md",
+        "tests/test_public_guard.py",
+        "docs/OPERATIONS.md",
+        "docs/remote-restore.json",
+        "docs/current-publication.json"
+      ],
+      "limitations": "恢复是该研究的允许公开闭包；受限上游仍 LOCAL_ONLY、未备份/恢复。后加第27条发布证明不在当时Release内，已另存公开Git/Pages。",
+      "next_verification": "后续新增研究归档继续说明闭包与未远存资料，禁止把派生恢复声称全部上游恢复。"
     },
     {
       "id": "E11",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "升级读取器仍能读旧schema",
+      "requirement": "升级读取器仍能读旧schema；未知新格式明确不支持，不静默丢历史。",
+      "status": "REAL_PASS",
+      "verified_scope": "当前v1.1读取器验证5个既有真实snapshot，含旧v1.0生成的空/21/26记录投影，manifest/object/content身份均通过；未知schema拒绝回归通过。",
+      "evidence": [
+        "docs/old-snapshot-readback.json",
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_storage_contracts.py",
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md"
+      ],
+      "limitations": "均为schema1.0，未声称尚未实现的schema2迁移。",
+      "next_verification": "将来实际schema升级须另有旧版本夹具与不丢历史回执。"
     },
     {
       "id": "E12",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "缓存清理排除在途、被引用、未备份唯一资料",
+      "requirement": "缓存清理排除在途、被引用、未备份唯一资料；恢复目录不递归纳入备份。",
+      "status": "NO_AUTOMATIC_CLEANUP",
+      "verified_scope": "没有自动删除器；真实26记录46文件显式归档闭包核对时恢复目录已在场，但未递归纳入，未删除在途/引用/唯一资料。",
+      "evidence": [
+        "docs/storage-recovery-scope.json",
+        "researchlib/archive.py",
+        "docs/OPERATIONS.md"
+      ],
+      "limitations": "没有执行GC，不声称清理器测试通过；保守不删是当前实现选择。",
+      "next_verification": "维持不自动删除；以后若加GC，先测dry-run保护集合，不为验收新增无需要的删除器。"
     },
     {
       "id": "F01",
-      "status": "CREATED_PAUSED_READBACK_VERIFIED",
+      "scenario": "四真实任务有可回读ID、正文、路径、频率/时区、模型与权限。意图JSON不算安装。",
+      "requirement": "四真实任务有可回读ID、正文、路径、频率/时区、模型与权限。意图JSON不算安装。",
+      "status": "REAL_PASS",
+      "verified_scope": "四项真实业务任务已创建并启用 ACTIVE，官方回读确认登记、模型、时区、状态；本地安装回执保留真实ID、正文/配置哈希与目录。",
       "evidence": [
-        "config/native_task_status.json",
-        "docs/INSTALLATION.md"
-      ]
+        "docs/INSTALLATION.md",
+        "config/native_task_status.json"
+      ],
+      "limitations": "调度器实际下一触发仍未由管理工具暴露，保持 UNKNOWN；手动安全试跑均 PASS 但非 native Run now，自然回执为 0。",
+      "next_verification": "保持实际用户配置；下一步只凭真实触发身份累计自然证据。"
     },
     {
       "id": "F02",
-      "status": "OFFICIAL_MANAGEMENT_AVAILABLE",
+      "scenario": "管理能力不可用时明确缺项与一次性UI操作，不编辑产品内部数据库、不用CLI/API回退。",
+      "requirement": "管理能力不可用时明确缺项与一次性UI操作，不编辑产品内部数据库、不用CLI/API回退。",
+      "status": "CONDITIONAL_NOT_TRIGGERED",
+      "verified_scope": "官方管理本次可用；无Run now时明确采用官方应用手动安全试跑，未伪造原生触发或用内部数据库/CLI/API回退。",
       "evidence": [
-        "docs/INSTALLATION.md"
-      ]
+        "docs/INSTALLATION.md",
+        "config/native_task_status.json",
+        "research/bootstrap-v1/REPORT.md",
+        "research/bootstrap-v1/execution_receipt.json",
+        "research/bootstrap-v1/verification_receipt.json",
+        "docs/INDEPENDENT_REVIEW.md",
+        "review/bootstrap-review/frozen_batch.json",
+        "review/bootstrap-review/review_bundle.json"
+      ],
+      "limitations": "管理不可用条件未发生，不能称该故障路径实测通过。",
+      "next_verification": "若不可用，列缺项与一次性受支持UI步骤，不改产品内部数据库。"
     },
     {
       "id": "F03",
+      "scenario": "权限分别记录工作约定、程序检查和环境强制",
+      "requirement": "权限分别记录工作约定、程序检查和环境强制；测试哨兵证明实际边界，不能凭提示词宣称只读隔离。",
       "status": "WEAK_ISOLATION_CONFIRMED",
+      "verified_scope": "权限按角色约定、程序检查和环境分层；牺牲哨兵实测同用户shell可以覆盖原文件，未改全局权限。",
       "evidence": [
-        "docs/INSTALLATION.md"
-      ]
+        "docs/INSTALLATION.md",
+        "config/native_task_status.json"
+      ],
+      "limitations": "没有角色级硬只读隔离，哨兵非生产原件；本地回执不公开私人路径。",
+      "next_verification": "保留实测边界；权限改变重测，不凭prompt宣称只读。"
     },
     {
       "id": "F04",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "真实复核能写自己的结果，但无覆盖原件路径",
+      "requirement": "真实复核能写自己的结果，但无覆盖原件路径；发布仅访问本项目获准仓库；若原生边界达不到，标明弱隔离并拒收越界结果。",
+      "status": "WEAK_ISOLATION_CONFIRMED",
+      "verified_scope": "真实复核写自己outbox再受控追加，程序拒绝越权/覆盖原件及外仓库发布。",
+      "evidence": [
+        "docs/INDEPENDENT_REVIEW.md",
+        "review/bootstrap-review/frozen_batch.json",
+        "review/bootstrap-review/review_bundle.json",
+        "docs/real-append-c05.json",
+        "review/bootstrap-review/actual-append-recheck.json",
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_storage_contracts.py",
+        "tests/test_publisher.py",
+        "review/bootstrap-review/publisher-hash-recheck.json",
+        "review/bootstrap-review/publication-integrity-recheck.json",
+        "docs/INSTALLATION.md",
+        "config/native_task_status.json"
+      ],
+      "limitations": "同用户shell仍可直接改原件或用其他可用Git权限，环境不保证无覆盖路径/仅单仓库。",
+      "next_verification": "继续outbox准入与remote检查，拒收越界结果并披露弱隔离。"
     },
     {
       "id": "F05",
-      "status": "INSTALLATION_DEDUP_VERIFIED_FREQUENCY_DRIFT_PENDING",
+      "scenario": "改变用户频率后不被配置重置",
+      "requirement": "改变用户频率后不被配置重置；同一项目去重，不改变其他项目任务。",
+      "status": "REAL_PASS",
+      "verified_scope": "PAUSED项目任务受控改频后两次只读回读仍保持新频率，四任务正文/模型/状态不被助手重置，只读本项目已知ID，原频率恢复已核对。",
       "evidence": [
-        "scripts/native_receipts.py"
-      ]
+        "docs/frequency-preservation.json",
+        "docs/INSTALLATION.md",
+        "config/native_task_status.json",
+        "docs/OPERATIONS.md"
+      ],
+      "limitations": "标记CONTROLLED_PAUSED_NATIVE_CONFIG_TRIAL_NOT_USER_CHANGE；不是用户自然改频或调度触发证明，项目登记去重沿用已知ID。",
+      "next_verification": "后续用户变频优先，回读不重设；自然触发另按F07。"
     },
     {
       "id": "F06",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "单项权限、配额或数据问题不让无依赖研究全部停止",
+      "requirement": "单项权限、配额或数据问题不让无依赖研究全部停止；没有额度不推算余额或无限重试。",
+      "status": "ENGINEERING_PARTIAL",
+      "verified_scope": "无关损坏记录不阻塞独立研究测试通过；真实缺目标数据时仍执行独立机制调查，没有猜余额或无限重试。",
+      "evidence": [
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_storage_contracts.py",
+        "research/bootstrap-v1/SESSION_MECHANISM.md",
+        "docs/INSTALLATION.md",
+        "config/native_task_status.json"
+      ],
+      "limitations": "未覆盖原生权限失败和额度耗尽时其他无依赖任务继续的全部分支。",
+      "next_verification": "真实阻塞保存可核实错误和有限重试决定，可用隔离夹具补程序分支，不消耗额度探测。"
     },
     {
       "id": "F07",
+      "scenario": "手动试跑、自然运行分开",
+      "requirement": "手动试跑、自然运行分开；至少两个不同自然研究时点、一轮自然日复核和真实后继有证据。",
       "status": "WAITING_NATURAL_OUTCOME",
+      "verified_scope": "手动研究、独立复核和追加明确natural_trigger=false；自然回执数0。",
       "evidence": [
-        "config/native_task_status.json"
-      ]
+        "docs/INSTALLATION.md",
+        "config/native_task_status.json",
+        "research/bootstrap-v1/REPORT.md",
+        "research/bootstrap-v1/execution_receipt.json",
+        "research/bootstrap-v1/verification_receipt.json",
+        "docs/INDEPENDENT_REVIEW.md",
+        "review/bootstrap-review/frozen_batch.json",
+        "review/bootstrap-review/review_bundle.json"
+      ],
+      "limitations": "缺两个不同自然研究时点、一轮自然日复核及真实反馈后继；手工/合成不能补齐。",
+      "next_verification": "启用后按真实触发身份累计2研究时点、1日复核和反馈实际采用链。"
     },
     {
       "id": "F08",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "scenario": "长任务有实际进展继续",
+      "requirement": "长任务有实际进展继续；失联只调查确认的本项目对象，未有控制能力不假称重启。",
+      "status": "ENGINEERING_PARTIAL",
+      "verified_scope": "owner转移要求调查引用/理由并提升generation，旧owner拒收，checkpoint/claim机制实测。",
+      "evidence": [
+        "review/bootstrap-review/engineering-tests-final.txt",
+        "tests/test_storage_contracts.py",
+        "docs/INSTALLATION.md",
+        "config/native_task_status.json",
+        "docs/OPERATIONS.md"
+      ],
+      "limitations": "未实测原生长任务进展保持或失联控制/恢复；超时不等于可重启证据。",
+      "next_verification": "以实际checkpoint/owner调查确证本项目对象，记录实际控制结果，不偷锁。"
     },
     {
       "id": "F09",
-      "status": "DOCUMENTED_ACTUAL_BOUNDARY",
+      "scenario": "整个Mac/App停更时网页陈旧，不假称远程能自救",
+      "requirement": "整个Mac/App停更时网页陈旧，不假称远程能自救；必要认证由用户一次处理，普通研究不需要审批。",
+      "status": "ENGINEERING_PARTIAL",
+      "verified_scope": "网页失败保留旧快照并标陈旧，安装明确依赖本机/App、不声称远程自救，普通研究无逐次审批。",
       "evidence": [
-        "docs/INSTALLATION.md"
-      ]
+        "tests/browser/artifacts/verification.json",
+        "docs/FRONTEND_VERIFICATION.md",
+        "docs/INSTALLATION.md",
+        "config/native_task_status.json",
+        "docs/OPERATIONS.md"
+      ],
+      "limitations": "未实际整台Mac/App离线到恢复演练；认证只在真实必要时由用户处理。",
+      "next_verification": "上线后可受控停止发布核对陈旧提示，保持本机停机局限，不越权重启。"
     }
   ]
 }

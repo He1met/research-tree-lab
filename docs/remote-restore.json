@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "verified_at": "2026-09-22T18:33:38.263296+00:00",
+  "archive_url": "https://github.com/He1met/research-tree-lab/releases/download/research-bootstrap-v1/public-research-v1.zip",
+  "archive_sha256": "c8339a015bbae89cd3be5af2128fdbc29b5321822f6bc6f8bf3cd455dc475023",
+  "archive_bytes": 80774,
+  "files_verified": 46,
+  "records_verified": 26,
+  "new_directory_restore": true,
+  "status": "REMOTE_PUBLIC_DERIVED_RESEARCH_RESTORED_AND_REPRODUCED",
+  "checks": [
+    {
+      "script": "reproduce_derived.py",
+      "expected": "derived_reproduction.json",
+      "semantic_equal": true,
+      "output_sha256": "68f9e03c7f82ae1c7d38f529d9c1d7e097f17607937211284be0cd739afb6734"
+    },
+    {
+      "script": "cost_stress.py",
+      "expected": "cost_stress.json",
+      "semantic_equal": true,
+      "output_sha256": "37707ceb3541dd2f326ca0d423d0f840ad081c9d7a974b668015e2d55beb4c0d"
+    }
+  ],
+  "restricted_upstream_restored": false,
+  "limitations": [
+    "Restricted upstream originals and local-only material are not included or claimed backed up.",
+    "Recovery verifies stored bytes and contracts; scientific reproduction must be run separately."
+  ]
+}

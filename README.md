@@ -1,5 +1,7 @@
 # Research Tree Lab
 
+[打开公开研究树](https://he1met.github.io/research-tree-lab/) · [公开研究恢复包](https://github.com/He1met/research-tree-lab/releases/tag/research-bootstrap-v1)
+
 文件驱动的个人策略研究库。研究、独立复核和反馈保存为版本化原件，固定程序生成公开快照，React Flow 展示研究轮次与后继。P/R/F 属于本轮内部，每日复核不增加代际。
 
 本项目只研究和展示，不接交易账户、不下单、不提供个人测算。执行条件标签绑定具体方案版本、证据与截止时间，不表示策略盈利或账户适用。

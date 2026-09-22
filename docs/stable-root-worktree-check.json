@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "verified_at": "2026-09-22T18:32:25.167185+00:00",
+  "kind": "REAL_TEMPORARY_GIT_WORKTREE_LIFECYCLE",
+  "records_read_via_explicit_stable_roots": 26,
+  "stable_files_hashed": 58,
+  "before_digest": "345c5ea778f8f135fcb36195c2eed77abeaaba130d3b31d6721e0045574cdc03",
+  "after_digest": "345c5ea778f8f135fcb36195c2eed77abeaaba130d3b31d6721e0045574cdc03",
+  "removed_only_new_temporary_worktree": true,
+  "stable_originals_and_shared_data_unchanged": true,
+  "status": "PASS"
+}

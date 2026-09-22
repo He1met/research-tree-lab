@@ -1,0 +1,44 @@
+{
+  "http": {
+    "browser_visual_acceptance": "SEPARATE_REQUIRED",
+    "pages_url": "https://he1met.github.io/research-tree-lab/",
+    "record_count": 26,
+    "round_count": 3,
+    "schema_version": "1.0",
+    "snapshot_id": "a4fb5569c5f8f03549fa3b034f8c40fb61ced34e0302fd0ef35a837ab65e1a39",
+    "status": "PUBLIC_SNAPSHOT_HTTP_VERIFIED",
+    "verified_at": "2026-09-22T18:34:23.241960Z"
+  },
+  "http_files_verified": 52,
+  "browser": {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-22T18:34:55.539293+00:00",
+    "pages_url": "https://he1met.github.io/research-tree-lab/",
+    "browser": "Codex in-app browser via supported Computer Use",
+    "snapshot_id": "a4fb5569c5f8f03549fa3b034f8c40fb61ced34e0302fd0ef35a837ab65e1a39",
+    "visible_round_count": 3,
+    "products": [
+      "AAPL",
+      "BTC",
+      "ETH",
+      "QQQ"
+    ],
+    "explicit_candidate_count": 2,
+    "selected_plan": "NONE_EXPLICITLY_DECLARED",
+    "review_count": 2,
+    "daily_batch_click_and_review_version_location": "PASS",
+    "review_stage_observed": "NOT_YET_EFFECTIVE",
+    "actual_net_results_observed": null,
+    "status": "PUBLIC_UI_ACTUALLY_OPENED_AND_INSPECTED",
+    "limitations": [
+      "Separate from full object HTTP integrity readback",
+      "Manual safe trial, not natural automation run"
+    ]
+  },
+  "publication_record_ref": "publication-bootstrap-manual-20260923-v1",
+  "source_commit": "595b7fe0dce36cb2f7756afa41acef49b8600fb3",
+  "ci_url": "https://github.com/He1met/research-tree-lab/actions/runs/35767805354",
+  "ci_conclusion": "success",
+  "pages_run_url": "https://github.com/He1met/research-tree-lab/actions/runs/35767805208",
+  "pages_conclusion": "success"
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "verified_at": "2026-09-22T18:39:07.444694+00:00",
+  "snapshot_id": "b8633ae1ad392b613c312e0754b472a0eace2ef3fb9caa2c3e4075114411679a",
+  "pages_url": "https://he1met.github.io/research-tree-lab/",
+  "http_status": "PUBLIC_SNAPSHOT_HTTP_VERIFIED",
+  "http_files_verified": 56,
+  "browser_visual_acceptance": "ACTUALLY_OPENED_AND_VISUALLY_INSPECTED",
+  "visible_rounds": 3,
+  "store_records": 27,
+  "publication_proof_included": true,
+  "remote_source_commit": "e69e691058ca21ed7bc203c0d5646b59307a0ba5",
+  "pages_run_url": "https://github.com/He1met/research-tree-lab/actions/runs/35768224573",
+  "pages_conclusion": "success",
+  "source_sha256": "721597059c7976c56b78970b280aa7b46eee255560092f1966f5e714355550a3",
+  "manual_trial": true,
+  "natural_run": false
+}
