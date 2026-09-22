@@ -1,0 +1,66 @@
+{
+  "scope": "timezone observation only; synthetic boundary probes plus read-only host TZif observation",
+  "decision": "PASS_SCOPED_TIMEZONE_MAINTENANCE",
+  "source_sha256": "7c0e6adc0e0a351b097dcab547728fbd190b83bcb7d49ff709dbfb6d2fb59c4d",
+  "cases": [
+    {
+      "case": "raw_negative_half_hour_offset_ignores_TZ",
+      "result": "PASS"
+    },
+    {
+      "case": "unlabelled_tzif_does_not_infer_IANA",
+      "result": "PASS"
+    },
+    {
+      "case": "raw_hash_binds_actual_bytes",
+      "result": "PASS"
+    },
+    {
+      "case": "name_offset_disagreement_fails_closed",
+      "result": "PASS"
+    },
+    {
+      "case": "broken_localtime_link_unknown",
+      "result": "PASS"
+    },
+    {
+      "case": "naive_observation_time_rejected",
+      "result": "PASS"
+    },
+    {
+      "case": "unknown_host_not_no_drift",
+      "result": "PASS"
+    },
+    {
+      "case": "native_scheduler_timezone_and_effect_remain_unknown",
+      "result": "PASS"
+    },
+    {
+      "case": "source_zone_from_declared_history",
+      "result": "PASS"
+    },
+    {
+      "case": "no_schedule_action",
+      "result": "PASS"
+    },
+    {
+      "case": "live_host_observation_has_timestamp_and_raw_identity",
+      "result": "PASS"
+    }
+  ],
+  "host_observation": {
+    "observed_at": "2026-09-22T19:00:03.041876+00:00",
+    "state": "OBSERVED",
+    "timezone": "Asia/Shanghai",
+    "utc_offset_seconds": 28800,
+    "utc_offset": "+08:00",
+    "abbreviation": "CST",
+    "source": "OS_LOCALTIME_TZIF",
+    "tzif_sha256": "64ffc2e43a94435a043c040d1d3af7e92d031adc78e7737af1861baa4eeef3e6",
+    "reason": null
+  },
+  "native_task_files_read": false,
+  "native_task_mutation": false,
+  "native_schedule_timezone_verified": false,
+  "future_natural_run_verified": false
+}

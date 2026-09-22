@@ -1,0 +1,98 @@
+{
+  "scope": "independent synthetic arithmetic only; not official source, economic result, formal review or natural trigger evidence",
+  "decision": "PASS_CONDITIONAL_KERNEL",
+  "cases": [
+    {
+      "case": "two_directions_all_12_scenarios_formula_and_path_terminal",
+      "result": "PASS"
+    },
+    {
+      "case": "caller_complete_verified_never_promote",
+      "result": "PASS"
+    },
+    {
+      "case": "conflicting_mark_at_funding_time_rejected",
+      "result": "PASS"
+    },
+    {
+      "case": "equal_mark_at_funding_time_open_path_consistent",
+      "result": "PASS"
+    },
+    {
+      "case": "null_trade_sequence_with_numeric_tie_ambiguous",
+      "result": "PASS"
+    },
+    {
+      "case": "unique_exchange_sequence_selects_first",
+      "result": "PASS"
+    },
+    {
+      "case": "cross_day_and_single_prefix_identical",
+      "result": "PASS"
+    },
+    {
+      "case": "late_real_acquisition_information_cutoff_distinct",
+      "result": "PASS"
+    },
+    {
+      "case": "prior_history_remove_requires_correction",
+      "result": "PASS"
+    },
+    {
+      "case": "prior_history_revise_requires_correction",
+      "result": "PASS"
+    },
+    {
+      "case": "prior_history_late_requires_correction",
+      "result": "PASS"
+    },
+    {
+      "case": "missing_exact_settlement_mark_nulls_dependent_metrics",
+      "result": "PASS"
+    },
+    {
+      "case": "missing_exit_does_not_force_close",
+      "result": "PASS"
+    },
+    {
+      "case": "missing_entry_not_zero_trade_or_untriggered",
+      "result": "PASS"
+    },
+    {
+      "case": "entry_minute_end_is_exclusive",
+      "result": "PASS"
+    },
+    {
+      "case": "exit_minute_end_is_exclusive",
+      "result": "PASS"
+    },
+    {
+      "case": "duplicate_exact_event_idempotent_alias_timestamp_rejected",
+      "result": "PASS"
+    },
+    {
+      "case": "pre_effective_no_conditional_returns",
+      "result": "PASS"
+    },
+    {
+      "case": "ambient_decimal_context_does_not_change_results",
+      "result": "PASS"
+    },
+    {
+      "case": "canonical_plan_modification_rejected",
+      "result": "PASS"
+    },
+    {
+      "case": "helper_no_overwrite_traversal_absolute_or_symlink_escape",
+      "result": "PASS"
+    }
+  ],
+  "source_sha256": {
+    "researchlib/funding_forward.py": "79f9aa7dc3c2e1dc47b1cd2eb307cf3eaf685874f722dab21710601bdfefeb66",
+    "scripts/evaluate_funding.py": "ca954e78216509917c7055532e40d2f5acb3b7c32a3d77dc73e2cf52890c817d",
+    "docs/FUNDING_FORWARD_KERNEL.md": "a58a2a493b790d6bcf74b74c10137ecb74209993baa3af2571dd9d9b458b99fd",
+    "tests/test_funding_forward.py": "699d7b6625cb22143e83d193b5ee6d44cff469bd4827ffb43c5ab9860ac87b44"
+  },
+  "production_store_mutations": false,
+  "new_real_market_data": false
+}

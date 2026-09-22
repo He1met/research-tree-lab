@@ -95,6 +95,27 @@ test('D03-D05: precise plan badge expires while page stays open; refresh does no
   await expect(page.getByText(/账户适配未评估/)).toBeVisible();
 });
 
+test('F09: successful static snapshot keeps publisher state unknown and ages without refresh renewal', async ({ page }) => {
+  const f = fixture(); const asOf = Date.parse(f.catalog.as_of);
+  await page.clock.install({ time: asOf + 60_000 });
+  await mockData(page, f); await page.goto('/');
+  await expect(page.locator('.canvas')).toHaveAttribute('data-snapshot', f.pointer.snapshot_id);
+  await expect(page.locator('.snapshot-context')).toHaveText('截至时间仅表示记录快照时点；发布任务当前运行状态未知。最新快照超过 36 小时显示陈旧。');
+  await page.clock.pauseAt(asOf + 2 * 3600_000);
+  await expect(page.locator('.snapshot-bar')).not.toHaveClass(/\bstale\b/);
+  await expect(page.locator('.snapshot-context')).toContainText('发布任务当前运行状态未知');
+  await page.clock.pauseAt(asOf + 36 * 3600_000 + 2000);
+  await expect(page.locator('.snapshot-bar')).toContainText('最后记录 · 陈旧');
+  await expect(page.getByRole('button', { name: '刷新记录', exact: true })).toBeEnabled();
+  const latest = page.waitForResponse(response => response.url().endsWith('/data/latest.json') && response.status() === 200);
+  await page.getByRole('button', { name: '刷新记录', exact: true }).click(); await latest;
+  await expect(page.getByRole('button', { name: '刷新记录', exact: true })).toBeEnabled();
+  await expect(page.locator('.canvas')).toHaveAttribute('data-snapshot', f.pointer.snapshot_id);
+  await expect(page.locator('.snapshot-bar')).toHaveClass(/\bstale\b/);
+  await expect(page.locator('.snapshot-context')).toContainText('发布任务当前运行状态未知');
+  await expect(page.getByRole('alert')).toHaveCount(0);
+});
+
 for (const scenario of ['synthetic', 'missing-evidence', 'unknown-schema', 'invalidated', 'unbound-plan', 'unavailable-evidence', 'naive-time']) test(`D01/D06: fail-closed readiness ${scenario}`, async ({ page }) => {
   const f = fixture();
   if (scenario === 'synthetic') f.assessment.synthetic = true;
@@ -133,6 +154,8 @@ test('browser clock jump removes current-ready badges', async ({ page }) => {
 
 test('C10: 390px drawer, keyboard controls and Escape', async ({ page }, testInfo) => {
   await page.setViewportSize({ width: 390, height: 844 }); await mockData(page, fixture()); await page.goto('/');
+  await expect(page.locator('.snapshot-context')).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(390);
   await expect(page.getByRole('button', { name: '每日复核' })).toBeVisible();
   await page.getByRole('button', { name: '每日复核' }).focus(); await page.keyboard.press('Enter');
   await expect(page.getByRole('dialog')).toBeVisible();

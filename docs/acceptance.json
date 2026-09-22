@@ -1,8 +1,8 @@
 {
   "schema_version": "1.1",
   "spec": "planning/current/docs/ACCEPTANCE.md",
-  "updated_at": "2026-09-22T18:46:46.218805+00:00",
-  "overall": "ENGINEERING_AND_SCOPED_PUBLIC_DELIVERY_VERIFIED_WITH_GAPS_WAITING_NATURAL_OUTCOME",
+  "updated_at": "2026-09-22T19:09:25.017489+00:00",
+  "overall": "SCOPED_DELIVERY_VERIFIED_FORWARD_EVALUATOR_IMPLEMENTATION_REQUIRED_AND_NATURAL_EVIDENCE_PENDING",
   "method": "59项逐项证据映射；各层级不相加为整体通过率。测试源码只定位场景，运行通过以执行回执为准。",
   "status_definitions": {
     "ENGINEERING_PASS": "已有工程实际执行回执；限机制与测试范围，不代表自然、经济或远端通过。",
@@ -13,17 +13,19 @@
     "REMOTE_PENDING": "实际公开可见、Pages回读或远端下载恢复尚待证据。",
     "PENDING": "缺直接完整证据，或根任务负责的操作尚未完成。",
     "NO_AUTOMATIC_CLEANUP": "有意不实现自动删除，未执行GC，不声称清理器验收通过。",
-    "CONDITIONAL_NOT_TRIGGERED": "条件未发生，未实测分支不记通过。"
+    "CONDITIONAL_NOT_TRIGGERED": "条件未发生，未实测分支不记通过。",
+    "IMPLEMENTATION_REQUIRED": "审计确认现有原方案执行链缺实现；不能仅归为等待未来事件。"
   },
   "status_counts": {
     "REAL_PASS": 16,
-    "ENGINEERING_PASS": 30,
-    "WAITING_NATURAL_OUTCOME": 4,
+    "ENGINEERING_PASS": 28,
+    "WAITING_NATURAL_OUTCOME": 3,
     "PENDING": 1,
+    "IMPLEMENTATION_REQUIRED": 1,
+    "ENGINEERING_PARTIAL": 5,
     "WEAK_ISOLATION_CONFIRMED": 3,
     "NO_AUTOMATIC_CLEANUP": 1,
-    "CONDITIONAL_NOT_TRIGGERED": 1,
-    "ENGINEERING_PARTIAL": 3
+    "CONDITIONAL_NOT_TRIGGERED": 1
   },
   "evidence_baseline": {
     "backend": {
@@ -100,7 +102,10 @@
       "restricted_upstream_restored": false
     }
   },
-  "operator_pending": [],
+  "operator_pending": [
+    "FORWARD_SOURCE_ADAPTER_AND_COVERAGE_VERIFIER",
+    "FORMAL_REVIEW_STATE_MIGRATION_AND_EXECUTION"
+  ],
   "not_claimed": [
     "整体59项通过",
     "自然任务已经运行",
@@ -292,23 +297,24 @@
       "id": "B04",
       "scenario": "跨日观察",
       "requirement": "模拟状态接续；日终不强制退出、不重新进入",
-      "status": "WAITING_NATURAL_OUTCOME",
+      "status": "IMPLEMENTATION_REQUIRED",
       "verified_scope": "实际账本测试跨日库存、资金费、退出成本、幂等，复核须接续原状态。",
       "evidence": [
         "review/bootstrap-review/engineering-tests-final.txt",
         "tests/test_replay_ledger.py",
         "tests/test_storage_contracts.py",
         "research/bootstrap-v1/forward_plans.json",
-        "research/bootstrap-v1/frozen_protocol.json"
+        "research/bootstrap-v1/frozen_protocol.json",
+        "review/continuation-audit/FORWARD_EVALUATOR_AUDIT.md"
       ],
-      "limitations": "真实前瞻方案尚未走完跨日轨迹，无真实净值或持仓结果。",
-      "next_verification": "按原规则续写真实事件账本，日终不强平或重新入场。"
+      "limitations": "真实前瞻方案尚未走完跨日轨迹，无真实净值或持仓结果。 续接审计发现缺官方输入适配/完整性验证、原规则完整执行器和旧生效前状态迁移；通用账本测试不补证这些实现。",
+      "next_verification": "在隔离工作区实现并独立核验固定方法、官方输入能力和正式复核状态迁移，之后再验证真实前向路径。"
     },
     {
       "id": "B05",
       "scenario": "最终与阶段",
       "requirement": "到原终点且数据齐全才最终；等待/缺数/未触发分别表示",
-      "status": "ENGINEERING_PASS",
+      "status": "ENGINEERING_PARTIAL",
       "verified_scope": "测试拒绝未到原终点或路径不全的 FINAL；真实两份复核均 NOT_YET_EFFECTIVE，区分等待、阶段、缺数和未触发。",
       "evidence": [
         "review/bootstrap-review/engineering-tests-final.txt",
@@ -317,10 +323,11 @@
         "review/bootstrap-review/frozen_batch.json",
         "review/bootstrap-review/review_bundle.json",
         "research/bootstrap-v1/forward_plans.json",
-        "research/bootstrap-v1/frozen_protocol.json"
+        "research/bootstrap-v1/frozen_protocol.json",
+        "review/continuation-audit/FORWARD_EVALUATOR_AUDIT.md"
       ],
-      "limitations": "没有真实终点完整路径；日历到点不能代替数据完整。",
-      "next_verification": "终点到达先核对数据再决定阶段、等待或 FINAL。"
+      "limitations": "没有真实终点完整路径；日历到点不能代替数据完整。 续接审计发现缺官方输入适配/完整性验证、原规则完整执行器和旧生效前状态迁移；通用账本测试不补证这些实现。",
+      "next_verification": "在隔离工作区实现并独立核验固定方法、官方输入能力和正式复核状态迁移，之后再验证真实前向路径。"
     },
     {
       "id": "B06",
@@ -339,7 +346,7 @@
       "id": "B07",
       "scenario": "费用与网格",
       "requirement": "未知不填0；库存/未实现/资金费/退出纳入，手算样例核验",
-      "status": "ENGINEERING_PASS",
+      "status": "ENGINEERING_PARTIAL",
       "verified_scope": "账本测试未知费用不填零，计入库存、未实现变化、资金费和退出；真实派生 48 情景另经独立 46 项算术核验。",
       "evidence": [
         "review/bootstrap-review/engineering-tests-final.txt",
@@ -348,10 +355,11 @@
         "review/bootstrap-review/independent_arithmetic.json",
         "docs/INDEPENDENT_REVIEW.md",
         "review/bootstrap-review/frozen_batch.json",
-        "review/bootstrap-review/review_bundle.json"
+        "review/bootstrap-review/review_bundle.json",
+        "review/continuation-audit/FORWARD_EVALUATOR_AUDIT.md"
       ],
-      "limitations": "成本情景不是完整价格路径或账户利润；真实未来成交与费率待取得。",
-      "next_verification": "未来评价附目标价格、库存账本、费率来源和手算抽样。"
+      "limitations": "成本情景不是完整价格路径或账户利润；真实未来成交与费率待取得。 续接审计发现缺官方输入适配/完整性验证、原规则完整执行器和旧生效前状态迁移；通用账本测试不补证这些实现。",
+      "next_verification": "在隔离工作区实现并独立核验固定方法、官方输入能力和正式复核状态迁移，之后再验证真实前向路径。"
     },
     {
       "id": "B08",
@@ -1048,16 +1056,20 @@
       "scenario": "整个Mac/App停更时网页陈旧，不假称远程能自救",
       "requirement": "整个Mac/App停更时网页陈旧，不假称远程能自救；必要认证由用户一次处理，普通研究不需要审批。",
       "status": "ENGINEERING_PARTIAL",
-      "verified_scope": "网页失败保留旧快照并标陈旧，安装明确依赖本机/App、不声称远程自救，普通研究无逐次审批。",
+      "verified_scope": "网页失败保留旧快照并标陈旧，安装明确依赖本机/App、不声称远程自救，普通研究无逐次审批。 新增Chromium/WebKit相同快照持续200实测：超过36小时标陈旧、刷新不续期。",
       "evidence": [
         "tests/browser/artifacts/verification.json",
         "docs/FRONTEND_VERIFICATION.md",
         "docs/INSTALLATION.md",
         "config/native_task_status.json",
-        "docs/OPERATIONS.md"
+        "docs/OPERATIONS.md",
+        "review/continuation-audit/frontend-staleness.md",
+        "review/continuation-audit/frontend-staleness.json"
       ],
-      "limitations": "未实际整台Mac/App离线到恢复演练；认证只在真实必要时由用户处理。",
+      "limitations": "未实际整台Mac/App离线到恢复演练；认证只在真实必要时由用户处理。 36小时内快照新鲜度不证明生产任务存活，需明确状态含义。",
       "next_verification": "上线后可受控停止发布核对陈旧提示，保持本机停机局限，不越权重启。"
     }
-  ]
+  ],
+  "maintenance_receipt": "review/continuation-audit/maintenance-source-receipt.json",
+  "maintenance_tests": "tests/receipts/runtime-maintenance.json"
 }

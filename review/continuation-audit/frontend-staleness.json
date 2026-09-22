@@ -1,0 +1,247 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-09-22T18:52:27.570Z",
+  "kind": "SYNTHETIC_CLOCK_AUDIT_WITH_IMMUTABLE_PUBLIC_SNAPSHOT_COPY",
+  "natural_run": false,
+  "source_changed": false,
+  "production_changed": false,
+  "snapshot_id": "b8633ae1ad392b613c312e0754b472a0eace2ef3fb9caa2c3e4075114411679a",
+  "as_of": "2026-09-22T18:35:49.524051Z",
+  "threshold_hours": 36,
+  "comparison": "strictly greater than",
+  "fixture": "In-memory copy of existing public files; local server always returns the same bytes with HTTP 200. No new research records.",
+  "device": {
+    "platform": "darwin",
+    "release": "27.0.0",
+    "arch": "arm64",
+    "cpu": "Apple M5",
+    "memory_gib": 16
+  },
+  "browsers": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "samples": [
+        {
+          "label": "one_hour",
+          "snapshot_age_ms": 3600000,
+          "expected_stale": false,
+          "text": "记录快照截至 2026/09/23 GMT+8 02:35\n快照 b8633ae1ad39",
+          "stale": false,
+          "dot_color": "rgb(76, 118, 90)",
+          "wall_now": "2026-09-22T19:35:49.524Z"
+        },
+        {
+          "label": "two_hours_multiple_publish_slots_missed",
+          "snapshot_age_ms": 7200000,
+          "expected_stale": false,
+          "text": "记录快照截至 2026/09/23 GMT+8 02:35\n快照 b8633ae1ad39",
+          "stale": false,
+          "dot_color": "rgb(76, 118, 90)",
+          "wall_now": "2026-09-22T20:35:49.524Z"
+        },
+        {
+          "label": "thirty_five_hours",
+          "snapshot_age_ms": 126000000,
+          "expected_stale": false,
+          "text": "记录快照截至 2026/09/23 GMT+8 02:35\n快照 b8633ae1ad39",
+          "stale": false,
+          "dot_color": "rgb(76, 118, 90)",
+          "wall_now": "2026-09-24T05:35:49.524Z"
+        },
+        {
+          "label": "two_seconds_before_36_hours",
+          "snapshot_age_ms": 129598000,
+          "expected_stale": false,
+          "text": "记录快照截至 2026/09/23 GMT+8 02:35\n快照 b8633ae1ad39",
+          "stale": false,
+          "dot_color": "rgb(76, 118, 90)",
+          "wall_now": "2026-09-24T06:35:47.524Z"
+        },
+        {
+          "label": "exactly_36_hours",
+          "snapshot_age_ms": 129600000,
+          "expected_stale": false,
+          "text": "记录快照截至 2026/09/23 GMT+8 02:35\n快照 b8633ae1ad39",
+          "stale": false,
+          "dot_color": "rgb(76, 118, 90)",
+          "wall_now": "2026-09-24T06:35:49.524Z"
+        },
+        {
+          "label": "two_seconds_after_36_hours",
+          "snapshot_age_ms": 129602000,
+          "expected_stale": true,
+          "text": "最后记录 · 陈旧 2026/09/23 GMT+8 02:35\n快照 b8633ae1ad39",
+          "stale": true,
+          "dot_color": "rgb(172, 119, 44)",
+          "wall_now": "2026-09-24T06:35:51.524Z"
+        },
+        {
+          "label": "forty_eight_hours",
+          "snapshot_age_ms": 172800000,
+          "expected_stale": true,
+          "text": "最后记录 · 陈旧 2026/09/23 GMT+8 02:35\n快照 b8633ae1ad39",
+          "stale": true,
+          "dot_color": "rgb(172, 119, 44)",
+          "wall_now": "2026-09-24T18:35:49.524Z"
+        }
+      ],
+      "refresh_200_does_not_renew_snapshot": true,
+      "all_data_responses_http_200": true,
+      "data_requests": 35,
+      "unique_response_hashes": [
+        {
+          "path": "data/latest.json",
+          "status": 200,
+          "sha256": "a6891974487d1bbff65a10446da608c9737d790411385d5e2d50c8d243d002bd"
+        },
+        {
+          "path": "data/snapshots/b8633ae1ad392b613c312e0754b472a0eace2ef3fb9caa2c3e4075114411679a/manifest.json",
+          "status": 200,
+          "sha256": "5826704a7180afacfa6149f9c82bd608d9d4d2d4aec71cee35f0f3f19c2978c6"
+        },
+        {
+          "path": "data/snapshots/b8633ae1ad392b613c312e0754b472a0eace2ef3fb9caa2c3e4075114411679a/catalog.json",
+          "status": 200,
+          "sha256": "e9f27a1df2374929fcc91a28dcaca71aca0cb95b544e576a794139c90f5bdd2f"
+        },
+        {
+          "path": "data/history.json",
+          "status": 200,
+          "sha256": "7504f7ce1038aef7a692d5269d333f96183566c44a49d9a8e4578179fdc1f564"
+        }
+      ],
+      "history_view_explicitly_labeled": true,
+      "history_label": "历史时点 2026/09/23 GMT+8 02:35\n快照 b8633ae1ad39\n最新公开记录\n2026/09/23 GMT+8 02:35\n2026/09/23 GMT+8 02:26\n2026/09/23 GMT+8 02:20\n2026/09/23 GMT+8 02:14\n2026/09/23 GMT+8 02:06\n2026/09/23 GMT+8 02:01\n刷新记录",
+      "back_to_latest_still_stale": true,
+      "page_errors": [],
+      "status": "PASS"
+    },
+    {
+      "browser": "webkit",
+      "version": "26.6",
+      "samples": [
+        {
+          "label": "one_hour",
+          "snapshot_age_ms": 3600000,
+          "expected_stale": false,
+          "text": "记录快照截至 2026/09/23 GMT+8 02:35\n快照 b8633ae1ad39",
+          "stale": false,
+          "dot_color": "rgb(76, 118, 90)",
+          "wall_now": "2026-09-22T19:35:49.524Z"
+        },
+        {
+          "label": "two_hours_multiple_publish_slots_missed",
+          "snapshot_age_ms": 7200000,
+          "expected_stale": false,
+          "text": "记录快照截至 2026/09/23 GMT+8 02:35\n快照 b8633ae1ad39",
+          "stale": false,
+          "dot_color": "rgb(76, 118, 90)",
+          "wall_now": "2026-09-22T20:35:49.524Z"
+        },
+        {
+          "label": "thirty_five_hours",
+          "snapshot_age_ms": 126000000,
+          "expected_stale": false,
+          "text": "记录快照截至 2026/09/23 GMT+8 02:35\n快照 b8633ae1ad39",
+          "stale": false,
+          "dot_color": "rgb(76, 118, 90)",
+          "wall_now": "2026-09-24T05:35:49.524Z"
+        },
+        {
+          "label": "two_seconds_before_36_hours",
+          "snapshot_age_ms": 129598000,
+          "expected_stale": false,
+          "text": "记录快照截至 2026/09/23 GMT+8 02:35\n快照 b8633ae1ad39",
+          "stale": false,
+          "dot_color": "rgb(76, 118, 90)",
+          "wall_now": "2026-09-24T06:35:47.524Z"
+        },
+        {
+          "label": "exactly_36_hours",
+          "snapshot_age_ms": 129600000,
+          "expected_stale": false,
+          "text": "记录快照截至 2026/09/23 GMT+8 02:35\n快照 b8633ae1ad39",
+          "stale": false,
+          "dot_color": "rgb(76, 118, 90)",
+          "wall_now": "2026-09-24T06:35:49.524Z"
+        },
+        {
+          "label": "two_seconds_after_36_hours",
+          "snapshot_age_ms": 129602000,
+          "expected_stale": true,
+          "text": "最后记录 · 陈旧 2026/09/23 GMT+8 02:35\n快照 b8633ae1ad39",
+          "stale": true,
+          "dot_color": "rgb(172, 119, 44)",
+          "wall_now": "2026-09-24T06:35:51.524Z"
+        },
+        {
+          "label": "forty_eight_hours",
+          "snapshot_age_ms": 172800000,
+          "expected_stale": true,
+          "text": "最后记录 · 陈旧 2026/09/23 GMT+8 02:35\n快照 b8633ae1ad39",
+          "stale": true,
+          "dot_color": "rgb(172, 119, 44)",
+          "wall_now": "2026-09-24T18:35:49.524Z"
+        }
+      ],
+      "refresh_200_does_not_renew_snapshot": true,
+      "all_data_responses_http_200": true,
+      "data_requests": 35,
+      "unique_response_hashes": [
+        {
+          "path": "data/latest.json",
+          "status": 200,
+          "sha256": "a6891974487d1bbff65a10446da608c9737d790411385d5e2d50c8d243d002bd"
+        },
+        {
+          "path": "data/snapshots/b8633ae1ad392b613c312e0754b472a0eace2ef3fb9caa2c3e4075114411679a/manifest.json",
+          "status": 200,
+          "sha256": "5826704a7180afacfa6149f9c82bd608d9d4d2d4aec71cee35f0f3f19c2978c6"
+        },
+        {
+          "path": "data/snapshots/b8633ae1ad392b613c312e0754b472a0eace2ef3fb9caa2c3e4075114411679a/catalog.json",
+          "status": 200,
+          "sha256": "e9f27a1df2374929fcc91a28dcaca71aca0cb95b544e576a794139c90f5bdd2f"
+        },
+        {
+          "path": "data/history.json",
+          "status": 200,
+          "sha256": "7504f7ce1038aef7a692d5269d333f96183566c44a49d9a8e4578179fdc1f564"
+        }
+      ],
+      "history_view_explicitly_labeled": true,
+      "history_label": "历史时点 2026/09/23 GMT+8 02:35\n快照 b8633ae1ad39\n刷新记录",
+      "back_to_latest_still_stale": true,
+      "page_errors": [],
+      "status": "PASS"
+    }
+  ],
+  "limitations": [
+    "Does not stop or inspect the Codex/ChatGPT application.",
+    "Does not measure native task operation or authentication.",
+    "Clock is simulated; this is not an actual 48-hour outage.",
+    "The successful 200 static response is distinct from publication liveness."
+  ],
+  "after": {
+    "files": 160,
+    "sha256": "8315d36dead5decd5a3490627203a70b3f8a42804bb746e7260f0978ec1d8f2f"
+  },
+  "before": {
+    "files": 160,
+    "sha256": "8315d36dead5decd5a3490627203a70b3f8a42804bb746e7260f0978ec1d8f2f"
+  },
+  "status": "PASS_SUCCESSFUL_200_STATIC_SNAPSHOT_AGES_TO_STALE_AFTER_36_HOURS",
+  "findings": [
+    {
+      "id": "F09-G1",
+      "severity": "LIMITATION_NOT_MISSING_TIME_CHECK",
+      "summary": "The fixed 36-hour window leaves a green dot and timestamp-only label during earlier publication silence, even after multiple hourly slots. There is no independently attested producer heartbeat."
+    },
+    {
+      "id": "F09-G2",
+      "severity": "TEST_COVERAGE_GAP_CLOSED_BY_THIS_AUDIT",
+      "summary": "The previous browser suite covered failed fetch and readiness expiry, but had no successful-200 unchanged-snapshot age-boundary test."
+    }
+  ]
+}

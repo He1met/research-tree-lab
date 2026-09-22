@@ -1,0 +1,57 @@
+{
+  "reviewed_at": "2026-09-22T19:08:16.999098+00:00",
+  "decision": "PASS_SCOPED_MAINTENANCE",
+  "scope": "Conditional arithmetic kernel, read-only OS timezone observation, and F09 static snapshot wording only; full official-source/formal-review/natural acceptance remains incomplete",
+  "source_sha256": {
+    "researchlib/funding_forward.py": "79f9aa7dc3c2e1dc47b1cd2eb307cf3eaf685874f722dab21710601bdfefeb66",
+    "scripts/evaluate_funding.py": "ca954e78216509917c7055532e40d2f5acb3b7c32a3d77dc73e2cf52890c817d",
+    "docs/FUNDING_FORWARD_KERNEL.md": "a58a2a493b790d6bcf74b74c10137ecb74209993baa3af2571dd9d9b458b99fd",
+    "tests/test_funding_forward.py": "699d7b6625cb22143e83d193b5ee6d44cff469bd4827ffb43c5ab9860ac87b44",
+    "scripts/native_receipts.py": "7c0e6adc0e0a351b097dcab547728fbd190b83bcb7d49ff709dbfb6d2fb59c4d",
+    "tests/test_native_receipts_timezone.py": "f97a8064ab80b6be3a3e5f5994591bcd2f7dd91f82063c9d68a42b70f33ca329",
+    "web/src/App.tsx": "2572716bb24b49fd9dbef2727664dd55fe6bcb7a9fbf072b3a9d15848a29853f",
+    "web/src/styles.css": "61787f9252d2b624fd5cb52f321a0d1dc46bd248a15369d5b8c3eba175c234d4",
+    "tests/browser/observer.spec.ts": "9314970a022b961d7169e8b489c2ba48e64b8db85f060fc726c9e9d082b65df9"
+  },
+  "author_tests_rerun": {
+    "funding_forward": 26,
+    "native_timezone": 7
+  },
+  "independent_probe_groups": {
+    "funding_forward_and_output_safety": 21,
+    "native_timezone": 11
+  },
+  "unresolved_findings_in_limited_scope": [],
+  "remaining_capabilities": [
+    "OFFICIAL_SOURCE_ADAPTER",
+    "SOURCE_COVERAGE_VERIFIER",
+    "FORMAL_REVIEW_STATE_MIGRATION",
+    "FORMAL_REVIEW_AND_FEEDBACK_OUTPUT",
+    "NATURAL_TRIGGER_AND_RUNTIME_ACCEPTANCE",
+    "REAL_FORWARD_PATH_AND_ECONOMIC_EFFECT"
+  ],
+  "production_mutation": false,
+  "native_task_mutation": false,
+  "review_report_sha256": "c2005f4e93cfa74c2759475032d40b348c7a049938ca934b0b99a867ed0d809c",
+  "publisher_source_hash": "2add8c42b4ab1ffc541e40870c0b0f1d14fd4b871da4dd89c1af15af392d6c0c",
+  "source_hash_command": "python3 scripts/publish.py --source-hash",
+  "independent_browser_tests": {
+    "chromium": [
+      "F09 static snapshot publisher UNKNOWN; 36h aging; refresh no renewal",
+      "browser clock jump",
+      "C10 390px drawer and overflow"
+    ],
+    "webkit": [
+      "F09 static snapshot publisher UNKNOWN; 36h aging; refresh no renewal",
+      "browser clock jump",
+      "C10 390px drawer and overflow"
+    ],
+    "passed": 6,
+    "failed": 0
+  },
+  "not_established_by_f09": [
+    "HOST_SHUTDOWN_BEHAVIOR",
+    "NATIVE_PUBLISHER_CURRENT_RUNNING_STATE",
+    "NATURAL_PUBLICATION_EXECUTION"
+  ]
+}

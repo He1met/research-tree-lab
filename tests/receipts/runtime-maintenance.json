@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "tested_at": "2026-09-22T19:07:36.121544+00:00",
+  "source_sha256": "2add8c42b4ab1ffc541e40870c0b0f1d14fd4b871da4dd89c1af15af392d6c0c",
+  "python_unit_tests": {
+    "passed": 88,
+    "failed": 0
+  },
+  "reference_contract_tests": {
+    "passed": 24,
+    "failed": 0
+  },
+  "frontend_targeted_tests": {
+    "passed": 6,
+    "browsers": [
+      "Chromium",
+      "WebKit"
+    ],
+    "scope": [
+      "F09",
+      "C09/E08",
+      "C10"
+    ],
+    "reported_by": "frontend_agent",
+    "raw_report_stats": {
+      "startTime": "2026-09-22T19:07:04.995Z",
+      "duration": 4270.071000000001,
+      "expected": 6,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "report_readback_verified": true
+  },
+  "frontend_build": "PASS",
+  "git_diff_check": "PASS",
+  "scope": "ISOLATED_MAINTENANCE_ENGINEERING_ONLY",
+  "official_source_adapter_complete": false,
+  "formal_review_migration_complete": false,
+  "natural_trigger_evidence": false,
+  "synthetic_fixtures_added_to_production": false
+}
