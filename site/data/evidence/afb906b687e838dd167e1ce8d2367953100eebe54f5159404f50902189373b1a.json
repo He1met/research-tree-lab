@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "audit_kind": "REAL_DOWNLOADED_FILE_DECODE_AND_CROSS_CONSISTENCY",
+  "started_at": "2026-09-22T19:16:57.488400Z",
+  "completed_at": "2026-09-22T19:17:18.994361Z",
+  "elapsed_seconds": 21.506,
+  "synthetic": false,
+  "selftest_ref": "selftest.json",
+  "inputs": {
+    "trades": {
+      "archive_bytes": 28884745,
+      "archive_sha256": "efab589d1d2171e7bd589e334653bea29daa414b4c87239ad75c4f6c23886f69",
+      "zip_crc_pass": true,
+      "member": "BTC-USDT-SWAP-trades-2026-09-21.csv",
+      "member_bytes": 295527908,
+      "member_sha256": "478179bb74b5caceedf6fe55acb907a257bc661944b4867b559e1abaad2fde8b",
+      "member_crc32": "1fb4a533",
+      "actual_header": [
+        "instrument_name",
+        "trade_id",
+        "side",
+        "price",
+        "size",
+        "created_time",
+        "source"
+      ],
+      "expected_header_match": true
+    },
+    "candlesticks": {
+      "archive_bytes": 44243,
+      "archive_sha256": "5595c6777328eb5f392520fdf6bd9c59518018991c7f92dd376ce04b1c353287",
+      "zip_crc_pass": true,
+      "member": "BTC-USDT-SWAP-candlesticks-2026-09-21.csv",
+      "member_bytes": 131610,
+      "member_sha256": "aaf2058917ae362c71ff74d1f179af6b29ee6093cb70085b9cf9d4fe233b40df",
+      "member_crc32": "bc45c4b8",
+      "actual_header": [
+        "instrument_name",
+        "open",
+        "high",
+        "low",
+        "close",
+        "vol",
+        "vol_ccy",
+        "vol_quote",
+        "open_time",
+        "confirm"
+      ],
+      "expected_header_match": true
+    }
+  },
+  "declared_partition": {
+    "date_label": "2026-09-21",
+    "timezone": "UTC+08:00",
+    "start_inclusive_utc": "2026-09-20T16:00:00.000Z",
+    "end_exclusive_utc": "2026-09-21T16:00:00.000Z"
+  },
+  "trades": {
+    "rows": 4969733,
+    "parsed_rows": 4969733,
+    "trade_id_plus_one_transitions": 4969732,
+    "timestamp_equal_transitions": 4079251,
+    "unparseable_rows": 0,
+    "extra_column_rows": 0,
+    "wrong_instrument_rows": 0,
+    "nonpositive_price_rows": 0,
+    "nonpositive_size_rows": 0,
+    "out_of_partition_rows": 0,
+    "duplicate_trade_id_rows": 0,
+    "timestamp_decreasing_transitions": 0,
+    "trade_id_not_plus_one_transitions": 0,
+    "trade_id_decreasing_transitions": 0,
+    "null_or_blank_by_column": {},
+    "instrument_counts": {
+      "BTC-USDT-SWAP": 4969733
+    },
+    "side_counts": {
+      "sell": 2434374,
+      "buy": 2535359
+    },
+    "source_counts": {
+      "0": 4956282,
+      "1": 13451
+    },
+    "min_timestamp_ms": 1789920000052,
+    "max_timestamp_ms": 1790006399956,
+    "min_event_utc": "2026-09-20T16:00:00.052Z",
+    "max_event_utc": "2026-09-21T15:59:59.956Z",
+    "unique_trade_ids": 4969733,
+    "min_trade_id": 2933776131,
+    "max_trade_id": 2938745863,
+    "observed_id_range_missing_integer_count": 0,
+    "id_range_completeness_is_official_omission_proof": false,
+    "same_ms_groups_with_multiple_rows": 352819,
+    "same_ms_groups_with_multiple_prices": 157283,
+    "rows_in_same_ms_multi_price_groups": 3340987,
+    "largest_same_ms_group_rows": 2743,
+    "same_ms_group_counts_valid_for_full_timestamps": true,
+    "observed_minutes": 1440,
+    "expected_partition_minutes": 1440,
+    "missing_minutes_utc": [],
+    "extra_minutes_utc": [],
+    "minutes_with_ambiguous_first_ms_price": 72,
+    "minutes_with_ambiguous_last_ms_price": 48,
+    "economic_metrics": null
+  },
+  "candlesticks": {
+    "rows": 1440,
+    "unparseable_rows": 0,
+    "extra_column_rows": 0,
+    "wrong_instrument_rows": 0,
+    "duplicate_open_time_rows": 0,
+    "nonpositive_price_rows": 0,
+    "negative_volume_rows": 0,
+    "ohlc_relation_error_rows": 0,
+    "unaligned_minute_rows": 0,
+    "out_of_partition_rows": 0,
+    "timestamp_decreasing_transitions": 0,
+    "not_next_minute_transitions": 0,
+    "null_or_blank_by_column": {},
+    "instrument_counts": {
+      "BTC-USDT-SWAP": 1440
+    },
+    "confirm_counts": {
+      "1": 1440
+    },
+    "unique_minutes": 1440,
+    "missing_minutes_utc": [],
+    "extra_minutes_utc": [],
+    "min_open_utc": "2026-09-20T16:00:00.000Z",
+    "max_open_utc": "2026-09-21T15:59:00.000Z"
+  },
+  "cross_check": {
+    "comparable_minutes": 1440,
+    "only_trade_minutes_utc": [],
+    "only_candle_minutes_utc": [],
+    "exact_match_counts": {
+      "open": 1440,
+      "high": 1440,
+      "low": 1440,
+      "close": 1440,
+      "vol": 1440,
+      "vol_ccy_conditional_0_01": 1440,
+      "vol_quote_conditional_0_01": 1440
+    },
+    "mismatch_counts": {
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 0,
+      "vol": 0,
+      "vol_ccy_conditional_0_01": 0,
+      "vol_quote_conditional_0_01": 0
+    },
+    "boundary_price_membership": {
+      "candle_open_in_first_ms_observed_prices": 1440,
+      "candle_close_in_last_ms_observed_prices": 1440
+    },
+    "open_close_convention": "Earliest/latest timestamp, with physical file order as tie-break ONLY FOR THIS DESCRIPTIVE CROSS-CHECK; not verified exchange chronology or executable first/last trade.",
+    "conditional_conversion": "0.01 contract size comes from existing sealed plan; equality is a cross-field observation, not fresh instrument specification verification.",
+    "minute_files_public_export_allowed": false
+  },
+  "runtime": {
+    "python": "3.9.6 (default, Aug 25 2026, 21:26:21) \n[Clang 21.0.0 (clang-2100.3.34.2)]",
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "decimal_precision": 40
+  },
+  "method_sha256": "22bcd1d69804f1b08353e42341d39ed515fa0ef7dc7c6c0347aacdad5e8472fd",
+  "acquisition_performed_by_this_script": false,
+  "old_plan_scores_modified": false,
+  "economic_result": null,
+  "execution_conditions": "UNKNOWN",
+  "limitations": [
+    "Transport CRC/hash and observed ID continuity do not prove absence of exchange event omissions.",
+    "Trade ID uniqueness is documented; exchange chronology within equal milliseconds is not verified.",
+    "Physical order and matching candle OHLC do not prove the first eligible execution event.",
+    "Trade and candle prices cannot substitute exact settlement marks or full mark event path.",
+    "Two files from the same publisher are not independent evidence of a market or economic edge.",
+    "This historical development day is not the original frozen future entry/exit window.",
+    "Two-day publication delay is a prior official UI declaration, not a measured publication SLA.",
+    "Source publication time, actual trading costs, actual fills and net returns remain unknown.",
+    "Minute-level files contain source-derived price series and are LOCAL_ONLY; public export is not authorized."
+  ],
+  "local_detail_files": "LOCAL_ONLY_NOT_EXPORTED"
+}
