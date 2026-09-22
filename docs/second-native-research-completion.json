@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "observed_at": "2026-09-22T20:35:02.095272Z",
+  "evidence_source": "OFFICIAL_APP_WAIT_THREADS_AND_STRICT_STORE_READBACK",
+  "task_title": "research-tree-lab · 策略研究推进",
+  "official_task_started_at": "2026-09-22T20:06:16Z",
+  "official_task_completed_at": "2026-09-22T20:27:16Z",
+  "official_task_status": "completed",
+  "automation_header_observed": true,
+  "manual_dispatch_by_supervisor": false,
+  "official_task_start_observations": 2,
+  "completed_task_observations": 2,
+  "accepted_natural_runs": 0,
+  "natural_trigger_status": "UNKNOWN",
+  "natural_trigger_limitation": "Official task headers and completion are observed; scheduler event identity remains unavailable and stored natural_trigger remains null.",
+  "record_count": 49,
+  "public_record_count": 48,
+  "round_count": 7,
+  "record_types": {
+    "discovery": 9,
+    "publication": 1,
+    "decision": 7,
+    "plan": 2,
+    "product": 4,
+    "round": 7,
+    "run": 6,
+    "method": 4,
+    "dataset": 3,
+    "evidence": 1,
+    "feedback": 2,
+    "review": 2,
+    "review_batch": 1
+  },
+  "original_records_unchanged": 39,
+  "original_baseline_files_unchanged": 140,
+  "new_record_count": 10,
+  "new_public_record_count": 9,
+  "new_local_only_record_count": 1,
+  "new_public_record_metadata": {
+    "decision-boundary-further-test-long-20260923": {
+      "bundle_id": "research-boundary-sensitivity-20260923-v1",
+      "committed_at": "2026-09-22T20:22:30.282613Z",
+      "producer_role": "research",
+      "record_hash": "20037e74d381515ba865d9c63897639c978cd3a7950261455f989e735b5b1a7a"
+    },
+    "decision-boundary-further-test-short-20260923": {
+      "bundle_id": "research-boundary-sensitivity-20260923-v1",
+      "committed_at": "2026-09-22T20:22:30.282613Z",
+      "producer_role": "research",
+      "record_hash": "d79bfe06a8dd0013017480d043fbc6268178759589d42cbe66d00b66feaaa2db"
+    },
+    "decision-entry-confirmation-boundary-20260923": {
+      "bundle_id": "research-btc-entry-confirmation-20260923-v1",
+      "committed_at": "2026-09-22T20:22:30.201743Z",
+      "producer_role": "research",
+      "record_hash": "bd37cb798329b452c05addef4a28e168ab7f605fb202c0f26607f19bfa29262f"
+    },
+    "m-btc-entry-confirmation-component-20260923@1": {
+      "bundle_id": "research-btc-entry-confirmation-20260923-v1",
+      "committed_at": "2026-09-22T20:22:30.201743Z",
+      "producer_role": "research",
+      "record_hash": "e2beafbd1e10fcdcd2c11e3c5c58492e00ce528906df4dddfde4ee85246f8e75"
+    },
+    "m-minute-boundary-conditional-envelope-20260923@1": {
+      "bundle_id": "research-boundary-sensitivity-20260923-v1",
+      "committed_at": "2026-09-22T20:22:30.282613Z",
+      "producer_role": "research",
+      "record_hash": "5340f4f41c03473b1e16262ddf8a954665e4fff7d52e2d5940d141ebe95ea582"
+    },
+    "r-boundary-sensitivity-20260923": {
+      "bundle_id": "research-boundary-sensitivity-20260923-v1",
+      "committed_at": "2026-09-22T20:22:30.282613Z",
+      "producer_role": "research",
+      "record_hash": "f45252466f5d5209e714b4bf0252e8cc31ce88956f5e569a12bd699af6efd16e"
+    },
+    "r-btc-entry-confirmation-20260923": {
+      "bundle_id": "research-btc-entry-confirmation-20260923-v1",
+      "committed_at": "2026-09-22T20:22:30.201743Z",
+      "producer_role": "research",
+      "record_hash": "06c4174ee946751dc9875960c9e688eff68780f82ee4943a100326dadb440c4a"
+    },
+    "run-boundary-sensitivity-20260923@attempt-1": {
+      "bundle_id": "research-boundary-sensitivity-20260923-v1",
+      "committed_at": "2026-09-22T20:22:30.282613Z",
+      "producer_role": "research",
+      "record_hash": "a67902bb47f829d5aee785d9c701f0b06e92a9209c55031ab41fd4a21d366208"
+    },
+    "run-btc-entry-confirmation-20260923@attempt-1": {
+      "bundle_id": "research-btc-entry-confirmation-20260923-v1",
+      "committed_at": "2026-09-22T20:22:30.201743Z",
+      "producer_role": "research",
+      "record_hash": "c24901fb5af74c50e1771a62a68cc120f02e80e556b12e393fc3bb871b379b4a"
+    }
+  },
+  "strict_manifest_validation": "PASS",
+  "record_relationships": "PASS",
+  "store_anomalies": [],
+  "research_scope": "EXPOSED_HISTORICAL_DEVELOPMENT_ONLY",
+  "new_market_data_acquired": false,
+  "new_plan_count": 0,
+  "new_formal_review_count": 0,
+  "new_readiness_count": 0,
+  "economic_final_reviews": 0,
+  "natural_daily_reviews": 0,
+  "independent_final_payload_validation": "PASS_FINAL_PAYLOAD_FOR_CONTROLLED_RESEARCH_ADMISSION",
+  "source_validation_scope": "Read committed independent arithmetic, addendum, final payload and post-commit receipts; verified strict manifests, canonical record hashes and baseline file bytes. Supervisor did not repeat the historical arithmetic.",
+  "feedback_adoption": {
+    "status": "EXISTING_FEEDBACK_CONTINUED_TO_ONE_FURTHER_CHILD",
+    "successor_round_id": "r-boundary-sensitivity-20260923",
+    "parent_round_id": "r-feedback-input-completeness-20260923",
+    "additional_adoption_count": 0
+  },
+  "independent_root_round_id": "r-btc-entry-confirmation-20260923",
+  "public_snapshot_at_readback": "87a7725123ed070e2d489087b2edb1901eaccce338acb50beed2fe107be7acf7",
+  "public_snapshot_record_count": 39,
+  "new_public_records_publication": "PENDING_NATIVE_PUBLISHER",
+  "new_public_records_archive": "NOT_YET_ARCHIVED",
+  "forward_evaluation": "WAITING_NATURAL_OUTCOME"
+}

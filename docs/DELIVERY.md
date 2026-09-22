@@ -9,17 +9,17 @@
 
 | 维度 | 已有真实证据 | 尚不能据此声称 |
 |---|---|---|
-| 工程 | 首版54双浏览器检查；前两批维护88/143后端与24参考检查保留。第三维护已独立批准安装单BTC成交流式解码和公开字段兼容，190后端/24参考通过，源码c1aa9e50635b。 | 正式经济链仍有实现缺口；conditional-review层仅在隔离开发中，来源完整性与有事件经济状态迁移未交付。 |
-| 真实研究 | 官方资金费文件核验、独立会话机制调查和成本反证；另实际完成成交/K线核验和双腿资金费成本诊断；87a772维护发布所用冻结范围为5轮、39记录、2封存计划，原手动复核2/2；后续任务追加不计入此快照。 | 数据覆盖不完整，费率汇总不是净收益，两个计划尚无未来经济结果。 |
-| 公开发布 | 最新87a7725123ed快照：39记录、5轮、72个HTTP资源hash通过；CI源码9a5259b和Pages发布96639b1成功。此前27c878快照已有实际浏览器核对。 | 最新视觉回读PENDING_MAC_LOCKED，不能沿用前一快照视觉证据；本次复用39条原件与前端壳，新增研究0条，为手动维护发布。 |
-| 归档与恢复 | 首批26记录/46文件远端下载、新目录恢复与派生复算通过。增量9新增/14闭包/35文件已发布，服务器digest一致；补充4新增/15闭包/36文件本机新目录恢复通过。三包本机并集覆盖冻结39条。 | 增量下载受Chrome及Browser策略阻塞，远端恢复未验；Mac锁定，补充包未上传。上游受限原始行情和未许可脚本仍LOCAL_ONLY，本机并集不等于全量远端恢复。 |
-| 原生任务 | 四项ACTIVE；首个带自动化任务头的研究任务已完成并新增12记录。第二任务于2026-09-22 20:06:16 UTC启动，观察时仍active；启动观察2、完成观察1。 | 第二次启动不算第二次完成；调度事件身份仍UNKNOWN，严格自然计数0。实际下一触发和原生时区未暴露，宿主读数不能代证。 |
+| 工程 | 首版54双浏览器检查；前两批维护88/143后端与24参考检查保留。第三维护已独立批准安装单BTC成交流式解码和公开字段兼容，190后端/24参考通过，源码c1aa9e50635b。 | 正式经济链仍有实现缺口；conditional-review层仍在隔离开发与独立P1修复中，来源完整性与有事件经济状态迁移未交付。 |
+| 真实研究 | 第二任务完成两项历史development研究；49条本机/48可公开/7轮，原39记录hash不变；新增9条可公开已发布。 | 1条LOCAL_ONLY；没有新增行情、plan、正式review或readiness，不是前瞻收益。 |
+| 公开发布 | f7feb8b441e6快照：48公开记录、7轮、85个HTTP资源hash通过；Pages提交cd821be成功，Chrome截图/第4代详情及刷新状态保持实证通过；复用前端壳。 | 调度事件身份UNKNOWN；网页允许字段投影不等于完整原件归档，也不是新经济结果。 |
+| 归档与恢复 | 首批26记录/46文件远端下载恢复与两项复算通过；旧增量服务器digest再次一致。补充包与v2本机新目录恢复通过，v2为5新增/21闭包/46文件；四包本机并集44条。 | Mac锁定，补充包/v2未上传；增量远端下载受已有Browser策略阻塞。4条新原件因白名单字段缺项待独立维护；受限材料仍LOCAL_ONLY，本机恢复不等于远端或科学复算。 |
+| 原生任务 | 四项ACTIVE；第二任务20:06:16Z启动、20:27:16Z完成，累计启动观察2、完成观察2。首个完成任务与原第二任务active回执保留历史。 | 调度事件身份仍UNKNOWN，严格自然计数0、自然日复核0。实际下一触发和原生时区未暴露；完成观察不能代证自然触发。 |
 | 自然与经济验收 | 四业务任务负责接续，本任务另设两小时heartbeat核验。 | feedback真实后继采用已核实；两个严格自然研究时点、自然日复核及合法未来路径仍WAITING_NATURAL_OUTCOME。 |
 
 当前权限是明确弱隔离：程序可拒绝越权角色和检测原档变化，但同用户full-access进程能够绕过入口。未改全局权限，不接账户、不下单。
 
 原方案的未来评价终点是2026-09-24 00:06 UTC（上海08:06）；只有原窗口已经到达且合法数据/成本完整才允许最终评价。其他有意义方向继续，不把单方向等待变成全局锁。自然运行身份、窗口和许可缺口均不能用手动数据补造。
 
-逐项清单：`ACCEPTANCE_STATUS.md` / `acceptance.json`。关键证据：`INDEPENDENT_REVIEW.md`、`FRONTEND_VERIFICATION.md`、`current-publication.json`、`publication-maintenance-trade-20260923.json`、`archive-upload-recovery-20260923.json`、`archive-supplement-20260923.json`、`remote-restore.json`、`second-native-research-observation.json`、`real-append-c05.json`、`stable-root-worktree-check.json`、`frequency-preservation.json`。第三维护见 `../review/continuation-audit/trade-public-source-receipt.json` 与 `../review/continuation-audit/trade-public-integration-tests.json`；原native上传失败回执保留历史。原件与完整本机回执保存在安装配置指向的稳定根。
+逐项清单：`ACCEPTANCE_STATUS.md` / `acceptance.json`。关键证据：`INDEPENDENT_REVIEW.md`、`FRONTEND_VERIFICATION.md`、`current-publication.json`、`publication-maintenance-trade-20260923.json`、`archive-upload-recovery-20260923.json`、`archive-supplement-20260923.json`、`remote-restore.json`、`second-native-research-observation.json`、`second-native-research-completion.json`、`real-append-c05.json`、`stable-root-worktree-check.json`、`frequency-preservation.json`。第三维护见 `../review/continuation-audit/trade-public-source-receipt.json` 与 `../review/continuation-audit/trade-public-integration-tests.json`；原native上传失败回执保留历史。原件与完整本机回执保存在安装配置指向的稳定根。 本次增量详见 `publication-run-20260923-v2.json`、`public-browser-readback-20260923-v2.json`、`archive-increment-20260923-v2.json`、`archive-inventory-20260923-v2.json`、`PUBLIC_ARCHIVE_FIELDS_V2_MAINTENANCE.md`。
 
 当前需要用户解锁Mac，之后才能用原生文件选择器上传补充包并进行新快照视觉回读；Browser下载限制不绕过。普通研究的下一动作由现有官方原生任务和本任务接续承担，无需用户发送“继续”。只有实质变化、完成、失败或必要用户动作才通知。

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "observed_at": "2026-09-22T19:37:10.435537+00:00",
+  "observed_at": "2026-09-22T20:38:00.625753+00:00",
   "tasks": [
     {
       "logical_key": "discovery",
@@ -13,7 +13,7 @@
       "actual_timezone": "Asia/Shanghai",
       "actual_timezone_scope": "HOST_ONLY_NOT_NATIVE_TASK_TIMEZONE",
       "host_timezone_observation": {
-        "observed_at": "2026-09-22T19:37:10.433769+00:00",
+        "observed_at": "2026-09-22T20:38:00.624582+00:00",
         "state": "OBSERVED",
         "timezone": "Asia/Shanghai",
         "utc_offset_seconds": 28800,
@@ -51,7 +51,7 @@
       "actual_timezone": "Asia/Shanghai",
       "actual_timezone_scope": "HOST_ONLY_NOT_NATIVE_TASK_TIMEZONE",
       "host_timezone_observation": {
-        "observed_at": "2026-09-22T19:37:10.433769+00:00",
+        "observed_at": "2026-09-22T20:38:00.624582+00:00",
         "state": "OBSERVED",
         "timezone": "Asia/Shanghai",
         "utc_offset_seconds": 28800,
@@ -89,7 +89,7 @@
       "actual_timezone": "Asia/Shanghai",
       "actual_timezone_scope": "HOST_ONLY_NOT_NATIVE_TASK_TIMEZONE",
       "host_timezone_observation": {
-        "observed_at": "2026-09-22T19:37:10.433769+00:00",
+        "observed_at": "2026-09-22T20:38:00.624582+00:00",
         "state": "OBSERVED",
         "timezone": "Asia/Shanghai",
         "utc_offset_seconds": 28800,
@@ -127,7 +127,7 @@
       "actual_timezone": "Asia/Shanghai",
       "actual_timezone_scope": "HOST_ONLY_NOT_NATIVE_TASK_TIMEZONE",
       "host_timezone_observation": {
-        "observed_at": "2026-09-22T19:37:10.433769+00:00",
+        "observed_at": "2026-09-22T20:38:00.624582+00:00",
         "state": "OBSERVED",
         "timezone": "Asia/Shanghai",
         "utc_offset_seconds": 28800,
