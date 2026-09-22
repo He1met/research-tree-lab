@@ -8,7 +8,7 @@
 
 原生回读截至 `2026-09-22T18:36:18.283659+00:00`：四项业务任务均 **ACTIVE**，手动试跑均通过但不是 native Run now；自然回执仍 **0**，调度器实际 next_run 未暴露、保持 UNKNOWN。同用户 shell 可覆盖牺牲哨兵，实际权限继续为明确弱隔离。
 
-状态数量用于查漏，不构成总体通过率：`REAL_PASS` 16 项；`ENGINEERING_PASS` 29 项；`WAITING_NATURAL_OUTCOME` 4 项；`PENDING` 1 项；`ENGINEERING_PARTIAL` 4 项；`WEAK_ISOLATION_CONFIRMED` 3 项；`NO_AUTOMATIC_CLEANUP` 1 项；`CONDITIONAL_NOT_TRIGGERED` 1 项。公开交付原先的 `REMOTE_PENDING` 已由上述真实回执关闭；受限上游不在该通过范围。
+状态数量用于查漏，不构成总体通过率：`REAL_PASS` 16 项；`ENGINEERING_PASS` 30 项；`WAITING_NATURAL_OUTCOME` 4 项；`PENDING` 1 项；`ENGINEERING_PARTIAL` 3 项；`WEAK_ISOLATION_CONFIRMED` 3 项；`NO_AUTOMATIC_CLEANUP` 1 项；`CONDITIONAL_NOT_TRIGGERED` 1 项。公开交付原先的 `REMOTE_PENDING` 已由上述真实回执关闭；受限上游不在该通过范围。
 
 ## 状态含义
 
@@ -44,7 +44,7 @@
 | ID / 场景 | 状态 | 已验证范围与证据 | 边界 / 下一验证 |
 |---|---|---|---|
 | B01 · 四产品数据不同 | `REAL_PASS` | 四产品能力卡分别列目标合约、参考标的/指数、价格类型与费用能力，未知字段保持 UNKNOWN。 证据：[1](../research/bootstrap-v1/product_capability_cards.json)、[2](../config/products.json)、[3](../research/bootstrap-v1/REPORT.md)、[4](../research/bootstrap-v1/execution_receipt.json)、[5](../research/bootstrap-v1/verification_receipt.json)。 | 日资金费文件不能充当目标成交、标记、价差或实际账户费率。 **下一验证：**新增来源继续按产品、价格类型、可得时点绑定。 |
-| B02 · 新增INTC | `ENGINEERING_PARTIAL` | 界面动态显示配置产品并支持带版本引用；后端验证新产品不漏入旧 as_of；生产 INTC 示例仍禁用。 证据：[1](../research/bootstrap-v1/product_capability_cards.json)、[2](../config/products.json)、[3](../tests/browser/artifacts/verification.json)、[4](../docs/FRONTEND_VERIFICATION.md)、[5](../review/bootstrap-review/engineering-tests-final.txt)、[6](../tests/test_storage_contracts.py)。 | 缺只加 INTC 配置/来源映射后任务、核心代码、web/src 哈希不变且旧方案集合不变的完整追加回执。 **下一验证：**在隔离副本做一次配置追加并比较哈希、旧方案集合和页面，无需启用真实 INTC。 |
+| B02 · 新增INTC | `ENGINEERING_PASS` | 隔离副本27→28条，新增配置/来源映射并受控登记产品，新投影有INTC、旧时点无INTC；旧2方案、web/src、核心与四类项目/实际原生prompt哈希均不变，生产配置/原档未改。[可复跑脚本](../tests/verify_intc_extension.py) · [回执](../tests/receipts/intc-extension.json)。 | 仅SYNTHETIC隔离案例，INTC未启用、合约/来源为null；一次性副本使用synthetic:false走正式投影，名称/阶段标明合成，绝不用于生产。配置意图需先登记不可变产品记录，不会自动变成正式产品。 |
 | B03 · 所有正式方案 | `REAL_PASS` | 真实冻结清单含两方案，独立手动处置 2/2；全版本测试含等待、负结果等，冻结同时约束 available_at 与 committed_at。 证据：[1](../docs/INDEPENDENT_REVIEW.md)、[2](../review/bootstrap-review/frozen_batch.json)、[3](../review/bootstrap-review/review_bundle.json)、[4](../review/bootstrap-review/engineering-tests-final.txt)、[5](../tests/test_storage_contracts.py)。 | 生产仅两个前瞻方案，未自然经历全部历史类别；2/2 是处置覆盖，经济最终评价为 0。 **下一验证：**自然日批次冻结所有 plan@version，分别报告等待、阶段与最终数量。 |
 | B04 · 跨日观察 | `WAITING_NATURAL_OUTCOME` | 实际账本测试跨日库存、资金费、退出成本、幂等，复核须接续原状态。 证据：[1](../review/bootstrap-review/engineering-tests-final.txt)、[2](../tests/test_replay_ledger.py)、[3](../tests/test_storage_contracts.py)、[4](../research/bootstrap-v1/forward_plans.json)、[5](../research/bootstrap-v1/frozen_protocol.json)。 | 真实前瞻方案尚未走完跨日轨迹，无真实净值或持仓结果。 **下一验证：**按原规则续写真实事件账本，日终不强平或重新入场。 |
 | B05 · 最终与阶段 | `ENGINEERING_PASS` | 测试拒绝未到原终点或路径不全的 FINAL；真实两份复核均 NOT_YET_EFFECTIVE，区分等待、阶段、缺数和未触发。 证据：[1](../review/bootstrap-review/engineering-tests-final.txt)、[2](../tests/test_storage_contracts.py)、[3](../docs/INDEPENDENT_REVIEW.md)、[4](../review/bootstrap-review/frozen_batch.json)、[5](../review/bootstrap-review/review_bundle.json)、[6](../research/bootstrap-v1/forward_plans.json)、[7](../research/bootstrap-v1/frozen_protocol.json)。 | 没有真实终点完整路径；日历到点不能代替数据完整。 **下一验证：**终点到达先核对数据再决定阶段、等待或 FINAL。 |
@@ -118,7 +118,7 @@
 ## 剩余证据与更新方式
 
 - A06、A08、B04、F07 等待真实自然证据：至少两个不同自然研究时点、一轮自然日复核及反馈后继。B05 的工程门槛通过不代表真实终点经济评价已发生；日历到点而缺数继续等待，不补造价格或模型输出。
-- B02 可在隔离副本补验配置式产品追加、任务/代码哈希和旧方案集合不变。A07 缺真实失败范围与重启实例，不能为验收制造失败研究。
+- B02 已由隔离追加回执补齐工程验证；INTC真实来源/合约与生产启用未验收。A07仍缺真实失败范围与重启实例，不能制造失败研究。
 - F06 权限/额度局部阻塞、F08 原生长任务/失联控制、F09 整机离线仍未完整演练，不靠猜额度、超时偷锁或越权重启补齐。
 - E05 已有临时 worktree 移除前后58文件哈希不变；E11 已有升级读取器验证5个真实旧/当前投影，未声称schema2迁移；F05 已有受控PAUSED改频/两次回读/恢复，明确不是用户自然改频。
 - E12 已实测显式归档闭包排除在场恢复目录；没有自动删除器和清理运行，不为验收额外实现GC。F03/F04弱隔离是已证实环境限制，不因一次自然运行自动消失。

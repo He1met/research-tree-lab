@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "spec": "planning/current/docs/ACCEPTANCE.md",
-  "updated_at": "2026-09-22T18:41:44+00:00",
+  "updated_at": "2026-09-22T18:46:46.218805+00:00",
   "overall": "ENGINEERING_AND_SCOPED_PUBLIC_DELIVERY_VERIFIED_WITH_GAPS_WAITING_NATURAL_OUTCOME",
   "method": "59项逐项证据映射；各层级不相加为整体通过率。测试源码只定位场景，运行通过以执行回执为准。",
   "status_definitions": {
@@ -17,13 +17,13 @@
   },
   "status_counts": {
     "REAL_PASS": 16,
-    "ENGINEERING_PASS": 29,
+    "ENGINEERING_PASS": 30,
     "WAITING_NATURAL_OUTCOME": 4,
     "PENDING": 1,
-    "ENGINEERING_PARTIAL": 4,
     "WEAK_ISOLATION_CONFIRMED": 3,
     "NO_AUTOMATIC_CLEANUP": 1,
-    "CONDITIONAL_NOT_TRIGGERED": 1
+    "CONDITIONAL_NOT_TRIGGERED": 1,
+    "ENGINEERING_PARTIAL": 3
   },
   "evidence_baseline": {
     "backend": {
@@ -257,18 +257,20 @@
       "id": "B02",
       "scenario": "新增INTC",
       "requirement": "同类只加配置和来源映射，网页/任务正文不改ticker，旧方案集合不变",
-      "status": "ENGINEERING_PARTIAL",
-      "verified_scope": "界面动态显示配置产品并支持带版本引用；后端验证新产品不漏入旧 as_of；生产 INTC 示例仍禁用。",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "隔离副本从27条记录追加INTC产品意图、来源映射及受控产品登记后为28条；新投影有INTC，旧as_of和旧快照没有。旧2方案集合与字节、web/src、核心代码、四项目prompt和四真实原生prompt哈希不变，生产配置与原档未改。",
       "evidence": [
         "research/bootstrap-v1/product_capability_cards.json",
         "config/products.json",
         "tests/browser/artifacts/verification.json",
         "docs/FRONTEND_VERIFICATION.md",
         "review/bootstrap-review/engineering-tests-final.txt",
-        "tests/test_storage_contracts.py"
+        "tests/test_storage_contracts.py",
+        "tests/verify_intc_extension.py",
+        "tests/receipts/intc-extension.json"
       ],
-      "limitations": "缺只加 INTC 配置/来源映射后任务、核心代码、web/src 哈希不变且旧方案集合不变的完整追加回执。",
-      "next_verification": "在隔离副本做一次配置追加并比较哈希、旧方案集合和页面，无需启用真实 INTC。"
+      "limitations": "明确SYNTHETIC隔离工程案例，为走正式投影路径在一次性副本设synthetic:false且名称/阶段标SYNTHETIC；未进入生产。INTC未启用、原生合约与来源null，非真实INTC研究。配置意图须由发现/研究职责登记对应不可变产品记录，发布器不自动注册配置。",
+      "next_verification": "真实扩展时核实来源与合约并提交产品记录；不要把本工程案例用于市场或执行条件。"
     },
     {
       "id": "B03",
