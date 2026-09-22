@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "status": "CHANGES_REQUIRED_UNFROZEN",
+  "checked_at": "2026-09-22T22:32:46.104065+00:00",
+  "audit_scope": "DEVELOPMENT_ONLY_FORMAL_REVIEW_STORE_TRUST_HISTORY_PUBLIC_ANCESTORS_RESOURCE_BUDGET_AND_FINAL_REUSE",
+  "candidate_name": "research-formal-review-v1",
+  "approval_granted": false,
+  "installation_authorized_by_this_receipt": false,
+  "earlier_execution_identity": {
+    "exact_source_hash_captured": false,
+    "reason": "Author was actively editing; contemporaneous early tool probes did not capture source hashes. Later hashes are not retroactively attributed."
+  },
+  "captured_execution_identity": {
+    "source_capture_mode": "READ_FIXED_PATHS_ONCE_THEN_EXECUTE_TEMPORARY_COPY",
+    "captured_map_sha256": "a2b22b051db80d5e5af7412ed2b6d8b5ffd4bf9096d37c055a9362bffbe946be",
+    "source_drift_after_capture": [],
+    "source_sha256": {
+      "researchlib/formal_funding.py": "920f3348471eda846d2e28fa17398acd6174703749ce6a5455557d0e52aeae66",
+      "researchlib/formal_review.py": "b47b27f6bdf4b29245da981c59ffe64c12ae8edd18225ee682ef8ad9fc4316e6",
+      "scripts/prepare_formal_review.py": "6e0da7fbd2e06c490f5c6cc3280d149a2842d5554f98f0d409732f5c49b8a9ad",
+      "tests/test_formal_funding.py": "284592c7dc1c8703602e68afe7654cd14a173b103b06b774440e0a1774b6a34e",
+      "tests/test_formal_review.py": "44e346e4be53cda6e9df2e087249aad6a095e22215cb91efef4c369cb6e7c261"
+    },
+    "is_publish_source_hash": false,
+    "scope_is_frozen_diagnostic_copy_not_author_release": true
+  },
+  "execution": {
+    "probe_groups": 19,
+    "process_exit_code": 0,
+    "full_suite_run": false,
+    "only_temporary_synthetic_store_and_events": true,
+    "real_frozen_plans_used_only_as_test_rule_fixtures": true,
+    "final_tests_use_explicit_in_memory_fixture_resolver": true,
+    "production_store_or_data_accessed": false,
+    "candidate_source_modified": false,
+    "native_task_actions": false,
+    "network_actions": false,
+    "git_actions": false
+  },
+  "findings": [
+    {
+      "id": "EARLY-01",
+      "priority": "P1",
+      "title": "Recognized 7db ancestor permission drift exposes private computation through a new public root",
+      "historical_reproduced": true,
+      "historical_tool_chunks": [
+        "54c71f"
+      ],
+      "captured_probe": "old_private_permission",
+      "captured_recheck": "DIRECT_VARIANT_REJECTED_BEFORE_NEW_BUNDLE",
+      "issue_closed": false,
+      "closure_blocker": "EARLY-02 unknown-method bypass remains"
+    },
+    {
+      "id": "EARLY-02",
+      "priority": "P1",
+      "title": "Unknown evaluator label bypasses ancestor privacy preflight; TECHNICAL_FAILURE still exports private data",
+      "historical_reproduced": true,
+      "historical_tool_chunks": [
+        "58db52"
+      ],
+      "captured_probe": "old_private_permission_unknown_method",
+      "captured_recheck": "STILL_REPRODUCED_IN_ACTUAL_SNAPSHOT_AND_ARCHIVE",
+      "issue_closed": false
+    },
+    {
+      "id": "EARLY-03",
+      "priority": "P2",
+      "title": "Historical public identity and derived review/feedback/batch fields are not fully bound",
+      "historical_reproduced": true,
+      "historical_tool_chunks": [
+        "6e0b84",
+        "eb575f"
+      ],
+      "captured_probes": [
+        "method_hash",
+        "natural",
+        "native",
+        "origin",
+        "method_time",
+        "complete",
+        "metric",
+        "coverage",
+        "summary",
+        "limitations",
+        "feedback_facts",
+        "feedback_native",
+        "batch_coverage",
+        "batch_origin",
+        "batch_complete"
+      ],
+      "captured_recheck": "LISTED_15_DIRECT_MUTATIONS_REJECTED_OR_PLAN_ISOLATED",
+      "issue_closed": false,
+      "closure_blocker": "Full field/cross-field and unknown-method combinations require frozen-version review"
+    },
+    {
+      "id": "EARLY-04",
+      "priority": "P2",
+      "title": "Combined formal and 7db cache accounting exceeds common budget",
+      "historical_reproduced": true,
+      "historical_tool_chunks": [
+        "275593",
+        "2a6f9f"
+      ],
+      "historical_lowered_test_budget": 180000,
+      "historical_formal_bytes": 169933,
+      "historical_old_bytes": 29926,
+      "historical_combined_bytes": 199859,
+      "captured_probe": "combined_cache_budget",
+      "captured_recheck": "COMBINED_LIMIT_REJECTED",
+      "issue_closed": false,
+      "closure_blocker": "Full frozen cross-domain depth/node/deadline/cache matrix outstanding"
+    },
+    {
+      "id": "EARLY-05",
+      "priority": "P2",
+      "title": "Reused FINAL coverage diverges from real snapshot and batch-root archive",
+      "historical_reproduced": true,
+      "historical_tool_chunks": [
+        "1873d6"
+      ],
+      "captured_probe": "final_reuse_snapshot_archive",
+      "captured_recheck": "CARRIER_FIXES_SNAPSHOT_BUT_BATCH_ARCHIVE_STILL_OMITS_2_ORIGINAL_FINALS",
+      "issue_closed": false
+    }
+  ],
+  "remaining_blockers": [
+    "Unknown or renamed evaluator must never select whether private ancestor permissions are checked",
+    "Unsafe ancestors must cause no newly publishable dependent failure bundle",
+    "Complete original-time public record and private transition reconstruction",
+    "Typed final carrier continuity and economic timestamps without duplicate computation",
+    "Actual batch/review/feedback archive roots and generic snapshot integration",
+    "Frozen exact-source and overall deployment identity independent approval"
+  ],
+  "artifacts": {
+    "review/continuation-audit/FORMAL_REVIEW_EARLY_FINDINGS_20260923.md": {
+      "sha256": "8ca645a9afa34580e40e019608273908b1bec1050fe8040e9a0957f15f4660f6",
+      "bytes": 8226
+    },
+    "review/continuation-audit/probe_formal_early_20260923.py": {
+      "sha256": "4927fd6704ae2b8e424107028054ae941643da31efc230cef181290741edffe3",
+      "bytes": 11872
+    },
+    "review/continuation-audit/formal-early-captured-probes-20260923.json": {
+      "sha256": "6fdd47c12846f1f5f1d07ed6993ddb239bc4330fa16221672dd1b459612734aa",
+      "bytes": 12762
+    }
+  },
+  "supersedes": null,
+  "history_preservation": "This early failure receipt remains immutable; final review must be a separate new receipt."
+}
