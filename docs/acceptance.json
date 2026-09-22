@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "spec": "planning/current/docs/ACCEPTANCE.md",
-  "updated_at": "2026-09-22T19:33:07.696606Z",
+  "updated_at": "2026-09-22T19:43:37.242690Z",
   "overall": "SCOPED_DELIVERY_VERIFIED_FORWARD_EVALUATOR_IMPLEMENTATION_REQUIRED_AND_NATURAL_EVIDENCE_PENDING",
   "method": "59项逐项证据映射；各层级不相加为整体通过率。测试源码只定位场景，运行通过以执行回执为准。",
   "status_definitions": {
@@ -82,27 +82,33 @@
     },
     "public_delivery": {
       "schema_version": "1.0",
-      "verified_at": "2026-09-22T19:13:56.075925+00:00",
-      "snapshot_id": "429c7ab2a4f89a7512eb3357908352f4f65ad15ab4a881145fe52e02faaea7aa",
+      "verified_at": "2026-09-22T19:43:37.242690Z",
+      "snapshot_id": "27c87850828234709756683c95344f572e4fdc86fb90ab9beeb4baa3a6a19b8e",
       "pages_url": "https://he1met.github.io/research-tree-lab/",
       "http_status": "PUBLIC_SNAPSHOT_HTTP_VERIFIED",
-      "http_verified_at": "2026-09-22T19:12:39.007425Z",
-      "http_files_verified": 56,
-      "browser_visual_acceptance": "ACTUALLY_RELOADED_AND_VISUALLY_INSPECTED",
-      "visible_rounds": 3,
-      "store_records": 27,
+      "http_verified_at": "2026-09-22T19:41:48.333981Z",
+      "http_files_verified": 72,
+      "browser_visual_acceptance": "ACTUALLY_RELOADED_EXPANDED_AND_VISUALLY_INSPECTED",
+      "visible_rounds": 5,
+      "store_records": 39,
       "publication_proof_included": true,
-      "remote_source_commit": "2b4bbdffb4e048e7a5320c4aff7100e41d29d4e3",
-      "pages_run_url": "https://github.com/He1met/research-tree-lab/actions/runs/35771988071",
+      "remote_source_commit": "543b04edbbad66e74a9587ef0f349ad118bb69e3",
+      "pages_run_url": "https://github.com/He1met/research-tree-lab/actions/runs/35774980807",
       "pages_conclusion": "success",
-      "ci_run_url": "https://github.com/He1met/research-tree-lab/actions/runs/35771987939",
+      "ci_scope": "SOURCE_BASELINE_9a28bce_PASSED_NO_NEW_SOURCE_CHANGED",
+      "ci_run_url": "https://github.com/He1met/research-tree-lab/actions/runs/35774830222",
       "ci_conclusion": "success",
-      "source_sha256": "2add8c42b4ab1ffc541e40870c0b0f1d14fd4b871da4dd89c1af15af392d6c0c",
-      "manual_trial": true,
-      "natural_run": false,
-      "change_scope": "REVIEWED_CODE_AND_FRESHNESS_WORDING_NO_NEW_RESEARCH_RECORDS",
-      "browser_observed_freshness_text": "截至时间仅表示记录快照时点；发布任务当前运行状态未知。最新快照超过 36 小时显示陈旧。",
-      "business_original_records_unchanged": 27
+      "source_sha256": "0b6047c816779f4d2d48cc9435768e5cde7a34a55af9e7ecc7b52298f41841ae",
+      "shell_built": false,
+      "trigger_origin": "OFFICIAL_APP_AUTOMATION_HEADER_OBSERVED",
+      "scheduler_event_identity": "UNKNOWN",
+      "manual_trial": false,
+      "natural_run": null,
+      "change_scope": "PUBLISH_12_ALREADY_COMMITTED_NEW_RECORDS_REUSE_27_NO_RESEARCH_REEXECUTION",
+      "browser_observed_freshness_text": "截至时间仅表示记录快照时点；发布任务当前运行状态未知。最新快照超过36小时显示陈旧。",
+      "business_original_records_unchanged": 39,
+      "previous_snapshot_id": "429c7ab2a4f89a7512eb3357908352f4f65ad15ab4a881145fe52e02faaea7aa",
+      "archive_receipt": "docs/archive-increment-20260923.json"
     },
     "remote_restore": {
       "receipt": "docs/remote-restore.json",
@@ -121,11 +127,22 @@
       "source_sha256": "0b6047c816779f4d2d48cc9435768e5cde7a34a55af9e7ecc7b52298f41841ae",
       "receipt": "review/continuation-audit/funding-review-source-receipt.json",
       "scope": "Single supplied funding file decode and status-only review outbox; no economic review or natural identity"
+    },
+    "latest_publisher_run": {
+      "receipt": "docs/publication-run-20260923-v1.json",
+      "published_records": 39,
+      "published_rounds": 5,
+      "new_public_records": 12,
+      "http_files_verified": 72,
+      "archive": "docs/archive-increment-20260923.json",
+      "natural_identity": "UNKNOWN_NOT_PROMOTED_FROM_AUTOMATION_HEADER"
     }
   },
   "operator_pending": [
     "OFFICIAL_SOURCE_PROVENANCE_COVERAGE_TRADE_ORDER_AND_MARK_INPUTS",
-    "ACCEPTED_EVENT_FORMAL_ECONOMIC_REVIEW_AND_STATE_MIGRATION"
+    "ACCEPTED_EVENT_FORMAL_ECONOMIC_REVIEW_AND_STATE_MIGRATION",
+    "PUBLIC_ARCHIVE_ROUND_SOURCE_REVIEW_REFS_COMPATIBILITY",
+    "CHROME_EXTENSION_FILE_UPLOAD_PERMISSION"
   ],
   "not_claimed": [
     "整体59项通过",
@@ -841,9 +858,11 @@
         "tests/browser/artifacts/chromium-genuine-projection.json",
         "tests/browser/artifacts/webkit-genuine-projection.json",
         "research/bootstrap-v1/PUBLIC_SCOPE.md",
-        "tests/test_public_guard.py"
+        "tests/test_public_guard.py",
+        "docs/publication-run-20260923-v1.json",
+        "docs/archive-increment-20260923.json"
       ],
-      "limitations": "公开派生可重建不等于受限上游已远端备份；E09/E10 已单独验证允许范围的远端发布与恢复。",
+      "limitations": "公开派生可重建不等于受限上游已远端备份；E09/E10 已单独验证允许范围的远端发布与恢复。 当前round.source_review_refs不在公开白名单，投影省略该冗余字段但其他正式引用保留主关系；完整字节归档已拒绝，独立维护事项见本次归档回执。",
       "next_verification": "后续新增内容继续核对允许闭包并保留 LOCAL_ONLY 缺口。"
     },
     {
@@ -851,14 +870,16 @@
       "scenario": "公开前秘密/许可检查，普通摘要不能代替未备份原件",
       "requirement": "公开前秘密/许可检查，普通摘要不能代替未备份原件；嵌套包不绕过扫描。",
       "status": "REAL_PASS",
-      "verified_scope": "秘密/私有路径/嵌套包魔数/符号链接/许可白名单拒绝测试通过，真实上游ZIP/CSV/HTML保留LOCAL_ONLY，仅公开允许派生物。",
+      "verified_scope": "秘密/私有路径/嵌套包魔数/符号链接/许可白名单拒绝测试通过，真实上游ZIP/CSV/HTML保留LOCAL_ONLY，仅公开允许派生物。 本次39条公开投影及27个允许附件扫描通过，原件/公开hash映射已保存；完整归档对非白名单字段保持拒绝。",
       "evidence": [
         "review/bootstrap-review/engineering-tests-final.txt",
         "research/bootstrap-v1/PUBLIC_SCOPE.md",
         "tests/test_public_guard.py",
         "research/bootstrap-v1/REPORT.md",
         "research/bootstrap-v1/execution_receipt.json",
-        "research/bootstrap-v1/verification_receipt.json"
+        "research/bootstrap-v1/verification_receipt.json",
+        "docs/publication-run-20260923-v1.json",
+        "docs/archive-increment-20260923.json"
       ],
       "limitations": "摘要不能代替原档备份；受限上游远端未保存。",
       "next_verification": "公开清单继续列限制，不绕许可搬运。"
@@ -886,7 +907,7 @@
       "scenario": "实际打开Pages并核对snapshot后才记发布确认",
       "requirement": "实际打开Pages并核对snapshot后才记发布确认；部署前不声称已上线。",
       "status": "REAL_PASS",
-      "verified_scope": "首次Pages回读核验52个HTTP资源并实际打开每日复核定位；当前最新已验快照429c7ab2a4f89a7512eb3357908352f4f65ad15ab4a881145fe52e02faaea7aa完成56资源hash与实际浏览器回读，3轮27记录，Pages Actions success。新增12记录尚待发布核验。",
+      "verified_scope": "最新发布快照27c87850828234709756683c95344f572e4fdc86fb90ab9beeb4baa3a6a19b8e完成72个HTTP资源hash及实际Chrome浏览器回读，5轮39记录；新增12条已展示，反馈后继第3代及详情加载实证；Pages作业success，前端壳未重建。",
       "evidence": [
         "tests/browser/artifacts/chromium-genuine-projection.json",
         "tests/browser/artifacts/webkit-genuine-projection.json",
@@ -896,9 +917,11 @@
         "docs/OPERATIONS.md",
         "docs/publication-readback.json",
         "docs/public-browser-readback.json",
-        "docs/current-publication.json"
+        "docs/current-publication.json",
+        "docs/publication-run-20260923-v1.json",
+        "docs/archive-increment-20260923.json"
       ],
-      "limitations": "均为正式应用手动受控发布，不是自然发布任务；成功只对应回执中内容与时点。",
+      "limitations": "本次官方自动化任务头可见，但调度事件身份仍UNKNOWN，不计入自然发布或自然研究验收。成功仅对应所列snapshot与实际回读时点。",
       "next_verification": "自然发布继续保存远端身份、完整性和页面回读，不从本地构建推断远端更新。"
     },
     {
@@ -915,10 +938,12 @@
         "tests/test_public_guard.py",
         "docs/OPERATIONS.md",
         "docs/remote-restore.json",
-        "docs/current-publication.json"
+        "docs/current-publication.json",
+        "docs/publication-run-20260923-v1.json",
+        "docs/archive-increment-20260923.json"
       ],
-      "limitations": "恢复是该研究的允许公开闭包；受限上游仍 LOCAL_ONLY、未备份/恢复。后加第27条发布证明不在当时Release内，已另存公开Git/Pages。",
-      "next_verification": "后续新增研究归档继续说明闭包与未远存资料，禁止把派生恢复声称全部上游恢复。"
+      "limitations": "历史26条远端恢复实证保持；本次9条新增的14条引用闭包已在本机归档，但浏览器文件权限阻止上传，13条新增仍未有远端归档确认，其中4条需独立公开字段兼容维护。受限源与新方法未许可附件仍LOCAL_ONLY，不声称完整科学恢复。",
+      "next_verification": "权限恢复后只续传已核验归档草稿；公开字段兼容单列独立维护；周日恢复到新的目录。"
     },
     {
       "id": "E11",
@@ -960,7 +985,9 @@
         "docs/INSTALLATION.md",
         "config/native_task_status.json",
         "docs/first-native-research-completion.json",
-        "review/continuation-audit/timezone-independent-receipt.json"
+        "review/continuation-audit/timezone-independent-receipt.json",
+        "docs/publication-run-20260923-v1.json",
+        "docs/archive-increment-20260923.json"
       ],
       "limitations": "调度器实际下一触发和自身时区仍UNKNOWN；首个自动化任务头/完成已观察，严格自然身份未确认、计数仍0。手动安全试跑不等于native Run now。",
       "next_verification": "保持实际用户配置；下一步只凭真实触发身份累计自然证据。"
@@ -1066,7 +1093,9 @@
         "docs/INDEPENDENT_REVIEW.md",
         "review/bootstrap-review/frozen_batch.json",
         "review/bootstrap-review/review_bundle.json",
-        "docs/first-native-research-completion.json"
+        "docs/first-native-research-completion.json",
+        "docs/publication-run-20260923-v1.json",
+        "docs/archive-increment-20260923.json"
       ],
       "limitations": "仍缺两个具有已核实身份的自然研究时点和一轮自然日复核；真实反馈采用不替代自然触发证明。",
       "next_verification": "通过受支持官方能力补充真实触发证据，保留原run的UNKNOWN，不修改原记录或以手工补齐。"

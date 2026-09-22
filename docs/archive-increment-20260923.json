@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "observed_at": "2026-09-22T19:43:37.242690Z",
+  "state": "LOCAL_ARCHIVE_VERIFIED_UPLOAD_PERMISSION_BLOCKED",
+  "local_date": "2026-09-23",
+  "scope": "EXACT_PUBLIC_RECORDS_AND_EXPLICITLY_LICENSED_ATTACHMENTS",
+  "archive_id": "3ff440dd8cd68e7bcce98ca9304b0663335c1013bc2f0f41d33b990a64f44f0c",
+  "archive_sha256": "3467ea715b9ef638f897e94f13d5ca267e65ea3069a56a9f53132321cf72cf7f",
+  "archive_bytes": 64744,
+  "archive_filename": "public-research-increment-20260923-v1.zip",
+  "new_record_count": 9,
+  "closure_record_count": 14,
+  "file_count": 35,
+  "requested_increment_refs": [
+    "d-btc-candles-20260921@1",
+    "d-btc-eth-funding-exposed-20260921@1",
+    "d-btc-trades-20260921@1",
+    "decision-paired-funding-boundary-20260923",
+    "m-paired-funding-component-20260923@1",
+    "m-trade-candle-development-audit-20260923@1",
+    "publication-bootstrap-manual-20260923-v1",
+    "r-btc-eth-paired-funding-20260923",
+    "run-btc-eth-paired-funding-20260923@attempt-1"
+  ],
+  "record_refs": [
+    "d-btc-candles-20260921@1",
+    "d-btc-eth-funding-exposed-20260921@1",
+    "d-btc-trades-20260921@1",
+    "decision-paired-funding-boundary-20260923",
+    "m-paired-funding-component-20260923@1",
+    "m-trade-candle-development-audit-20260923@1",
+    "p-btc-funding-long-control-20260923@1",
+    "p-btc-funding-short-20260923@1",
+    "publication-bootstrap-manual-20260923-v1",
+    "r-btc-eth-paired-funding-20260923",
+    "r-btc-funding-cost-counterevidence-20260923",
+    "r-funding-data-audit-20260923",
+    "run-btc-eth-paired-funding-20260923@attempt-1",
+    "seed-f-20260923"
+  ],
+  "archive_pending_record_refs": [
+    "decision-adopt-input-feedback-long-20260923",
+    "decision-adopt-input-feedback-short-20260923",
+    "r-feedback-input-completeness-20260923",
+    "run-feedback-input-completeness-20260923@attempt-1"
+  ],
+  "archive_pending_reason": [
+    {
+      "record_ref": "r-feedback-input-completeness-20260923",
+      "excluded_fields": [
+        "source_review_refs"
+      ],
+      "error": "Original has non-whitelisted fields; cannot claim exact public backup"
+    }
+  ],
+  "upload_status": "NOT_UPLOADED",
+  "remote_archive_confirmed": false,
+  "draft_url": "https://github.com/He1met/research-tree-lab/releases/edit/untagged-3f3e6c653672cc13243c",
+  "draft_state": "SAVED_NOT_PUBLISHED_NO_ASSET",
+  "upload_failure": "Chrome fileChooser.setFiles: Not allowed; ChatGPT browser extension file URL permission required",
+  "prior_confirmed_remote_archive_records": 26,
+  "records_not_confirmed_remote_archive": 13,
+  "raw_local_only_unique_objects": 11,
+  "non_allowlisted_bundle_attachment_paths": 63,
+  "non_allowlisted_bundle_unique_hashes": 43,
+  "non_allowlisted_categories": {
+    "LOCAL_METADATA_DIAGNOSTICS_OR_RECEIPT": 44,
+    "METHOD_OR_LOCAL_SCRIPT": 10,
+    "LOCAL_LOG": 5,
+    "ROW_LEVEL_OR_LOCAL_ONLY": 4
+  },
+  "weekly_restore": "NOT_DUE_WEDNESDAY_NEXT_SUNDAY_2026-09-27",
+  "recursive_restore_backup": false,
+  "deleted_objects": 0,
+  "limitations": [
+    "Restricted upstream originals and local-only material are not included or claimed backed up.",
+    "Recovery verifies stored bytes and contracts; scientific reproduction must be run separately.",
+    "New method scripts lack explicit public attachment allowance; this is not a complete scientific reproduction package."
+  ],
+  "next_action": "After the one-time Chrome extension file upload permission is enabled, resume this saved draft with the same verified archive, publish, download and rehash. Separately review the round source_review_refs public field compatibility; never alter committed originals."
+}
