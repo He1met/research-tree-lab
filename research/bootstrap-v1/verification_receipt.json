@@ -1,0 +1,24 @@
+{
+  "all_nine_seed_categories_registered": "PASS",
+  "audit_repeat_same_input": "IDENTICAL_JSON",
+  "completed_at": "2026-09-22T18:04:33.786009Z",
+  "cost_scenarios_reproduction": "IDENTICAL_JSON",
+  "derived_reproduction": "IDENTICAL_JSON",
+  "forward_seal_before_effective": "PASS",
+  "independent_decimal_sums": "PASS",
+  "native_task_id": null,
+  "natural_trigger": false,
+  "not_claimed": [
+    "native_run_now",
+    "scheduled_run",
+    "natural_review",
+    "profitable_strategy",
+    "full_remote_source_backup"
+  ],
+  "production_readiness": "UNKNOWN",
+  "record_count": 12,
+  "safe_trial_mode": "OFFICIAL_APP_SUBAGENT_MANUAL",
+  "schema_version": "1.0",
+  "source_crc": "PASS",
+  "source_hash": "PASS"
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "template_only": true,
+  "record_state": "DRAFT_NOT_COMMITTED",
+  "synthetic": false,
+  "review_id": null,
+  "plan_ref": null,
+  "batch_ref": null,
+  "revision": 1,
+  "supersedes": null,
+  "correction_reason": null,
+  "plan_hash": null,
+  "review_method_ref": null,
+  "dataset_refs": [],
+  "available_at": null,
+  "data_cutoff": null,
+  "evaluation_stage": "NOT_EVALUATED",
+  "simulation_state": null,
+  "metrics": [],
+  "baseline_comparison": null,
+  "limitations": [],
+  "feedback_refs": []
+}

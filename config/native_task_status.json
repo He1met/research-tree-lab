@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "observed_at": "2026-09-22T18:30:47.552700+00:00",
+  "tasks": [
+    {
+      "logical_key": "discovery",
+      "name": "research-tree-lab · 研究方向发现",
+      "status": "PAUSED",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "ultra",
+      "source_timezone": "Asia/Tokyo",
+      "actual_timezone": "Asia/Shanghai",
+      "native_next_run_at": null,
+      "registered": true,
+      "natural_run": "WAITING_NATURAL_OUTCOME",
+      "manual_trial": "OFFICIAL_APP_MANUAL_SAFE_TRIAL_PASS_NOT_NATIVE_RUN_NOW",
+      "permission_enforcement": "WEAK_ISOLATION_POLICY_AND_PROGRAM_ADMISSION"
+    },
+    {
+      "logical_key": "research",
+      "name": "research-tree-lab · 策略研究推进",
+      "status": "PAUSED",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "ultra",
+      "source_timezone": "Asia/Tokyo",
+      "actual_timezone": "Asia/Shanghai",
+      "native_next_run_at": null,
+      "registered": true,
+      "natural_run": "WAITING_NATURAL_OUTCOME",
+      "manual_trial": "OFFICIAL_APP_MANUAL_SAFE_TRIAL_PASS_NOT_NATIVE_RUN_NOW",
+      "permission_enforcement": "WEAK_ISOLATION_POLICY_AND_PROGRAM_ADMISSION"
+    },
+    {
+      "logical_key": "review",
+      "name": "research-tree-lab · 每日独立策略复核",
+      "status": "PAUSED",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "ultra",
+      "source_timezone": "Asia/Tokyo",
+      "actual_timezone": "Asia/Shanghai",
+      "native_next_run_at": null,
+      "registered": true,
+      "natural_run": "WAITING_NATURAL_OUTCOME",
+      "manual_trial": "OFFICIAL_APP_MANUAL_SAFE_TRIAL_PASS_NOT_NATIVE_RUN_NOW",
+      "permission_enforcement": "WEAK_ISOLATION_POLICY_AND_PROGRAM_ADMISSION"
+    },
+    {
+      "logical_key": "publish",
+      "name": "research-tree-lab · 观察归档与网页发布",
+      "status": "PAUSED",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "ultra",
+      "source_timezone": "Asia/Tokyo",
+      "actual_timezone": "Asia/Shanghai",
+      "native_next_run_at": null,
+      "registered": true,
+      "natural_run": "WAITING_NATURAL_OUTCOME",
+      "manual_trial": "PENDING",
+      "permission_enforcement": "WEAK_ISOLATION_POLICY_AND_PROGRAM_ADMISSION"
+    }
+  ]
+}

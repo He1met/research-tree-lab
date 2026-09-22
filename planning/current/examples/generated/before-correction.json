@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "mode": "SYNTHETIC_UI_ONLY",
+  "as_of": "2026-09-04T12:00:00Z",
+  "round_count": 4,
+  "nodes": [
+    {
+      "id": "round-btc-1",
+      "kind": "research_round",
+      "title": "突破后进入是否有净优势",
+      "generation": 1,
+      "parent_round_id": null,
+      "plan_refs": [
+        "plan-btc-1@1"
+      ],
+      "review_refs": [
+        "review-1"
+      ],
+      "feedback_refs": [
+        "feedback-1"
+      ],
+      "selected_plan_ref": "plan-btc-1@1",
+      "latest_review_ref": "review-1",
+      "net_return_fraction": -0.0025,
+      "is_synthetic": true
+    },
+    {
+      "id": "round-btc-2",
+      "kind": "research_round",
+      "title": "确认进入是否减少假突破",
+      "generation": 2,
+      "parent_round_id": "round-btc-1",
+      "plan_refs": [
+        "plan-btc-2@1"
+      ],
+      "review_refs": [
+        "review-2"
+      ],
+      "feedback_refs": [],
+      "selected_plan_ref": "plan-btc-2@1",
+      "latest_review_ref": "review-2",
+      "net_return_fraction": 0.0032,
+      "is_synthetic": true
+    },
+    {
+      "id": "round-btc-2b",
+      "kind": "research_round",
+      "title": "降低换手的独立检验",
+      "generation": 2,
+      "parent_round_id": "round-btc-1",
+      "plan_refs": [],
+      "review_refs": [],
+      "feedback_refs": [],
+      "selected_plan_ref": null,
+      "latest_review_ref": null,
+      "net_return_fraction": null,
+      "is_synthetic": true
+    },
+    {
+      "id": "round-btc-funding",
+      "kind": "research_round",
+      "title": "资金费与拥挤的新问题",
+      "generation": 1,
+      "parent_round_id": null,
+      "plan_refs": [],
+      "review_refs": [],
+      "feedback_refs": [],
+      "selected_plan_ref": null,
+      "latest_review_ref": null,
+      "net_return_fraction": null,
+      "is_synthetic": true
+    }
+  ],
+  "edges": [
+    {
+      "source": "round-btc-1",
+      "target": "round-btc-2",
+      "relation": "DERIVED_FROM",
+      "feedback_refs": [
+        "feedback-1"
+      ]
+    },
+    {
+      "source": "round-btc-1",
+      "target": "round-btc-2b",
+      "relation": "DERIVED_FROM",
+      "feedback_refs": [
+        "feedback-1"
+      ]
+    }
+  ]
+}

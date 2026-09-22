@@ -1,0 +1,23 @@
+{
+  "classification": "SYNTHETIC_BROWSER_PERFORMANCE_ONLY",
+  "browser": "chromium",
+  "version": "153.0.8010.12",
+  "platform": "darwin",
+  "release": "27.0.0",
+  "architecture": "arm64",
+  "cpu": "Apple M5",
+  "cpuCores": 10,
+  "memoryGB": 16,
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "totalHistory": 10000,
+  "renderedNodes": 50,
+  "firstRenderAndExpansionMs": 552,
+  "searchToResultMs": 26.7,
+  "zoomClickMs": 33.1,
+  "catalogBytes": 6994478,
+  "actualDomNodes": 50,
+  "at": "2026-09-22T18:21:21.598Z"
+}

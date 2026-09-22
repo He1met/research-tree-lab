@@ -1,0 +1,19 @@
+{
+  "actual_execution": "MANUAL_OFFICIAL_APP_BOOTSTRAP",
+  "attempt_id": "attempt-1",
+  "code_sha256": "ba3a53abd1a425ec81d019b50bfe40f7e442427476acbebc14237d4aaea3607b",
+  "completed_at": "2026-09-22T17:57:57.002886Z",
+  "economic_result": "NOT_ESTIMATED",
+  "input_sha256": "34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c",
+  "natural_trigger": false,
+  "original_protocol_changed": false,
+  "output_sha256": "049eddc6f45e0e9c1592b1f82d5c4564e90c413b7b57a7e45c0bee5587539097",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "protocol_deviation": "Expected UTC calendar day was not supplied by filename-dated file. Result records mismatch and partial requested-window coverage. No window relabel or backdating.",
+  "protocol_sha256": "730216be58b9839a635306273cf03530036ce07c3416e629f4de5f3ab3fa8429",
+  "python_version": "3.9.6",
+  "run_id": "run-funding-audit-20260923",
+  "schema_version": "1.0",
+  "started_at": "2026-09-22T17:51:15.094364+00:00",
+  "status": "COMPLETED_WITH_DATA_BOUNDARY_FINDING"
+}

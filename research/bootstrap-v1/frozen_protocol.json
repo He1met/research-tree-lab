@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "protocol_id": "funding-data-audit-v1",
+  "frozen_at": "2026-09-22T17:51:15.094364+00:00",
+  "data_seen_before_freeze": false,
+  "prior_exposure": "Official stock perpetual rules and download form field descriptions; no downloaded funding values inspected.",
+  "question": "Do the official historical funding files identify the four intended USDT perpetuals, distinguish actual settlement from interest-rate assumptions, and support repeatable cost-accounting inputs?",
+  "products": [
+    "aapl",
+    "qqq",
+    "btc",
+    "eth"
+  ],
+  "sample_window": {
+    "start": "2026-09-21T00:00:00Z",
+    "end_exclusive": "2026-09-22T00:00:00Z",
+    "selection_rule": "First complete day shown as default by the official download page; no outcome-based selection."
+  },
+  "method": [
+    "Download the official funding-rate file through the public historical-data page; record original filename, retrieval time, byte count and SHA-256.",
+    "Inspect archive and CSV types; reject API responses or absent files. Preserve source bytes locally; publish only authored observations and aggregate diagnostics pending redistribution permission.",
+    "Select exact exchange instrument identifiers for each product. Do not infer missing contracts or fill absent rows.",
+    "Sort settlement timestamps per contract; report row counts, duplicates, missing values, observed spacings, positive/negative/zero counts, and sum of realized funding-rate observations.",
+    "A sum of rates is a fixed-notional diagnostic only. It is not total funding in an actual position, net return, executable carry, predictive advantage or annualized yield.",
+    "Compare stock interest-rate term I=0 with actual observed funding. Any nonzero stock settlement refutes the claim that I=0 guarantees zero funding; missing observations keep it unknown.",
+    "Unknown fees, mark-price path, entry/exit costs, trade prices and quantity stay null; no profitability or readiness flag."
+  ],
+  "failure_states": [
+    "DOWNLOAD_UNAVAILABLE",
+    "FORMAT_UNSUPPORTED",
+    "MISSING_TARGET_ROWS",
+    "UNKNOWN"
+  ],
+  "next_forward_work": "Register a fully frozen observation-only or replay plan only after its necessary data and rules are verified. Do not treat this historical audit as forward validation.",
+  "synthetic": false,
+  "evidence_stage": "REAL_HISTORICAL_DATA_AUDIT",
+  "replay_eligibility": "NOT_A_TRADING_PLAN",
+  "readiness": "UNKNOWN"
+}

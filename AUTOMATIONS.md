@@ -1,0 +1,1 @@
+planning/current/AUTOMATIONS.md

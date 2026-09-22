@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "record_type": "product_intents",
+  "verification_state": "NOT_YET_VERIFIED",
+  "products": [
+    {
+      "product_id": "aapl",
+      "display_name": "Apple",
+      "ticker": "AAPL",
+      "underlying_kind": "us_equity",
+      "research_intent": "perpetual",
+      "enabled": true,
+      "preferred_venue": "OKX",
+      "preferred_venue_is_verified": false,
+      "status": "REQUESTED",
+      "instrument_refs": [],
+      "dataset_refs": []
+    },
+    {
+      "product_id": "qqq",
+      "display_name": "Invesco QQQ",
+      "ticker": "QQQ",
+      "underlying_kind": "us_equity_etf",
+      "research_intent": "perpetual",
+      "enabled": true,
+      "preferred_venue": "OKX",
+      "preferred_venue_is_verified": false,
+      "status": "REQUESTED",
+      "instrument_refs": [],
+      "dataset_refs": []
+    },
+    {
+      "product_id": "btc",
+      "display_name": "Bitcoin",
+      "ticker": "BTC",
+      "underlying_kind": "crypto_asset",
+      "research_intent": "perpetual",
+      "enabled": true,
+      "preferred_venue": "OKX",
+      "preferred_venue_is_verified": false,
+      "status": "REQUESTED",
+      "instrument_refs": [],
+      "dataset_refs": []
+    },
+    {
+      "product_id": "eth",
+      "display_name": "Ethereum",
+      "ticker": "ETH",
+      "underlying_kind": "crypto_asset",
+      "research_intent": "perpetual",
+      "enabled": true,
+      "preferred_venue": "OKX",
+      "preferred_venue_is_verified": false,
+      "status": "REQUESTED",
+      "instrument_refs": [],
+      "dataset_refs": []
+    }
+  ],
+  "extension_example_only": {
+    "product_id": "intc",
+    "display_name": "Intel",
+    "enabled": false,
+    "status": "EXAMPLE_NOT_REGISTERED"
+  }
+}

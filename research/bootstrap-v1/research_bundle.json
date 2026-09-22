@@ -1,0 +1,1924 @@
+{
+  "attachments": {
+    "PUBLIC_SCOPE.md": "# 公开范围与恢复含义\n\n本目录允许公开的最小包由 `PUBLIC_MANIFEST.json` 明确列举。自撰报告、协议、派生诊断表与元数据可按 CC-BY-4.0 使用；自撰 Python 代码可按 MIT 使用（亦可按本项目许可合并分发）。第三方源数据、网页、名称和来源链接不因本说明被重新许可。\n\n不公开：OKX ZIP/CSV 原件、网页 HTML、行级摘录、浏览器会话/登录资料。官方源 ZIP 的 SHA-256、大小、取得时间和网址保留在公开元数据中。条款审核见 `sources.json`；未找到明确的原件再分发授权。\n\n公开包能恢复自撰研究和派生事实上的算术结果，可执行 `python3 reproduce_derived.py` 与 `python3 cost_stress.py`，分别与保存的 JSON 比较。它不能独立重建/认证上游 CSV 的所有行；本机 `audit_funding.py` 仍需已下载且哈希匹配的原 ZIP。恢复派生计算不等于完整原始市场证据远端备份，后者为 LOCAL_ONLY/未完成。\n\n本次 manual safe trial 由官方 Codex 应用中的研究子代理完成。它不是原生任务 Run now，也不是 scheduled 触发；两个自然研究时点、自然日复核与自然反馈采用仍待未来事实。\n",
+    "REPORT.md": "本轮完成了官方资金费数据的真实小样本审计：四目标原生代码均有记录；文件名日期不能直接当作 UTC 日；QQQ 存在非零资金费。它证明数据与机制边界，不证明预测优势或盈利。样本、费用、价格路径和公开许可分别登记，当前执行条件保持 UNKNOWN。\n\n# 实际输入与过程\n\n先于打开数据冻结 `frozen_protocol.json`（2026-09-22 17:51:15 UTC）。随后通过 [OKX 历史数据页面](https://www.okx.com/historical-data)的下载按钮取得 `allswap-fundingrates-2026-09-21.zip`；没有调用行情 API。ZIP 为 12,419 字节，SHA-256 为 `34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c`，CRC 通过；唯一 CSV 为 82,188 字节，2,103 行、482 个合约。程序与协议、输入、输出身份在 `execution_receipt.json` 中。\n\n下载界面字段说明把 `funding_rate` 定义为实际结算资金费率，`funding_time` 是毫秒 Unix 时间。这里不把它当成事前预计费率。实际取得时间为 2026-09-22 17:51:24 UTC，不能倒签为数据事件时已取得。\n\n| 合约 | 记录数 | 正/负/零 | 费率和（基点，仅诊断） | 预定 UTC 日内记录 |\n|---|---:|---|---:|---:|\n| AAPL-USDT-SWAP | 3 | 0/0/3 | 0 | 2 |\n| QQQ-USDT-SWAP | 3 | 1/0/2 | 0.338528711056 | 2 |\n| BTC-USDT-SWAP | 3 | 3/0/0 | 2.711593269544 | 2 |\n| ETH-USDT-SWAP | 3 | 3/0/0 | 1.418355621573 | 2 |\n\n四组事件均为 2026-09-20 16:00、2026-09-21 00:00、08:00 UTC，相邻间隔 8 小时，无重复时间。文件像 UTC+8 日期分区，但这只是样本推断，尚无官方时区声明。原协议要求的 UTC 9 月 21 日因此未齐：前一天有一条，目标日 16:00 未在此文件。保留失败边界；没有改协议或把缺记录填零。\n\n# 机制反证与限制\n\n[股票永续规则](https://www.okx.com/help/stock-perpetuals)说明利率项为零。QQQ 的非零结算直接反证“利率项为零意味着资金费永远为零”。AAPL 的三条零值也不能证明以后为零。\n\n[资金费机制](https://www.okx.com/en-sg/help/perps-funding-fee-mechanism)要求以结算时持仓价值计算现金流；实际结算频率也不能只从旧公告复制。当前机制文档区分加密与传统金融产品的自动频率调整，而 [3 月上线公告](https://www.okx.com/en-sg/help/okx-to-list-perpetual-futures-for-selected-equities)的泛化文字较旧，应保留版本差异。单日观测的 8 小时间隔不构成永久规则。\n\n费率和不是持仓利润：固定数量时每次名义价值随标记价格变化，且交易价格、完整权益、入场/退出费用和滑点尚缺。本轮没有交易、胜率、夏普、收益预测、年化或执行标志。\n\n# 实际后继与独立方向\n\n后继冻结 BTC 两个相同绝对数量和持有期的模拟方案：依据已取得的最近正资金费反向做空，与相反方向做多对照；分解价格结果、实际资金费和费用情景。生效为 2026-09-23 00:05 UTC，终点为 2026-09-24 00:05 UTC。尚无未来交易/标记路径，因此是 `INCOMPLETE_DATA`。已有的资金费样本是开发曝光，后续窗口不会倒签。它从本轮真实发现派生，但没有正式自然日复核，不能声称自然反馈闭环已通过。\n\n另一独立根研究股票会话与指数来源：休市时参考价格陈旧，永续价格和指数存在结构联系，表面价差不能直接当作可套利信号。完整对照与反证见 `SESSION_MECHANISM.md`。A-H 八类议题及 I 独立复现均已登记，登记并不等于都执行过。\n\n# 复现与公开边界\n\n本机完整重算：\n\n```sh\npython3 research/bootstrap-v1/audit_funding.py data/incoming/research-bootstrap/allswap-fundingrates-2026-09-21.zip --out /tmp/funding-audit-replay.json\n```\n\n公开包保存自撰协议、程序、派生诊断事实表和来源元数据，可复算表内诊断。官方 ZIP、CSV、网页正文和逐行摘录保持 `LOCAL_ONLY`：[条款 8.1–8.2](https://www.okx.com/help/terms-of-service)未建立公开再分发授权。公开事实表不是源文件备份；从公开包恢复派生计算，只证明派生计算可恢复。完整原始证据的远端恢复仍为未完成。\n\n唯一下一动作：按已冻结方案，在后续官方文件真实可得时取得目标交易、结算标记与实际资金费；每日独立复核保存缺数或阶段状态。自然触发尚未发生。\n\n# 已实际计算的成本反证\n\n`cost_stress.py` 已对四产品观测费率执行全部预设费用组合。为了隔离会计关系，此计算明确假设标记价和名义价值不变、空头恰好跨过样本三次结算；它不是成交回放。假设每边手续费 5 基点、滑点 1 基点时，来回成本为 12 基点，扣除后 BTC 的条件诊断为 -9.288406730456 基点，ETH 为 -10.581644378427，QQQ 为 -11.661471288944，AAPL 为 -12。价格收益仍为未知，真实费用也未知。结果支持“资金费收入本身不够支持净优势”的研究必要性；不能把这张情景表写成真实策略亏损。零费用行仅是摩擦下界，所有组合同时保存，没有选好看的组合。\n",
+    "SESSION_MECHANISM.md": "这是一项独立的真实资料研究：股票永续的参考市场休市，并不使目标永续停市；指数也不是单一股票报价的复制。本轮据官方机制形成可反证的问题，尚无价格路径，不能声称具有经济优势。\n\n# 独立问题与资料结论\n\n研究问题：AAPL/QQQ 参考市场闭市期间，目标永续相对参考收盘价的偏离，是否只是参考价陈旧、USD/USDT 转换和指数构造的共同结果？它区别于资金费数据审计，研究价格来源与会话条件。\n\n[官方股票永续规则](https://www.okx.com/help/stock-perpetuals)说明指数由多类价格来源构成，休市时来源权重结构不同；[标记价规则](https://www.okx.com/help/ii-mark-price-and-last-price)将标记价与指数、基差移动平均联系起来。因而永续与指数高度一致不等于两个独立市场共同证实价格。使用当日已知参考价、合约成交价、标记价和 USD/USDT 换算率时，必须分别保存角色与取得时间。\n\n# 冻结的后续辨别设计\n\n在拿到合法同步数据后，按 America/New_York 交易日历与夏令时分为常规、延长、夜间和周末/假日，不能固定为北京时间常数。不得把后续参考开盘价格向前填充。\n\n- H1：仅参考价陈旧就能解释相当部分价差；以“上次可得参考价年龄”作为公开可观测分层变量。\n- H2：若扣除 FX、完整入退场成本并控制参考价年龄后仍有稳定增量，才为价格偏离机制提供有限支持。\n- 反例：休市大价差在参考开盘后继续扩大；成交价跳跃但标记价未同步；不同数据来源的更新时间不一致。\n- 对照：无价差信号、单纯价格趋势、同龄参考价/同会话的匹配组；保留相同绝对暴露和持有期，不能将多产品假设结果合并为账户收益。\n- 成本：价差、滑点、双边手续费、跨结算资金费、退出成本及事件跳跃都要单列；缺一项时相应净值为未知。\n- 当前状态：`WAITING_SYNCHRONIZED_TARGET_AND_REFERENCE_DATA`。只有机制和数据要求已完成，没有启动交易回放。\n\n无反馈也可继续这一方向；当其他分支等待未来资金费时，它可独立处理合法参考来源与事件发布时间。没有新增证据时保持等待，不能给同一机制改标题重复计数。\n",
+    "audit_funding.py": "#!/usr/bin/env python3\n\"\"\"Offline audit of an explicitly downloaded OKX funding CSV/ZIP. No network/API.\nOriginal authored code: MIT. Upstream data is not relicensed by this file.\n\"\"\"\nimport argparse,csv,datetime as dt,hashlib,io,json,zipfile\nfrom collections import Counter\nfrom decimal import Decimal\nfrom pathlib import Path\nD=Decimal\nTARGETS={'aapl':'AAPL-USDT-SWAP','qqq':'QQQ-USDT-SWAP','btc':'BTC-USDT-SWAP','eth':'ETH-USDT-SWAP'}\ndef iso(ms): return dt.datetime.fromtimestamp(ms/1000,dt.timezone.utc).isoformat().replace('+00:00','Z')\ndef sha(b): return hashlib.sha256(b).hexdigest()\ndef analyze(path,protocol):\n    raw=path.read_bytes(); member=None\n    if path.suffix=='.zip':\n        with zipfile.ZipFile(io.BytesIO(raw)) as z:\n            if z.testzip() is not None: raise ValueError('ZIP CRC failure')\n            names=z.namelist()\n            if len(names)!=1 or not names[0].endswith('.csv'): raise ValueError('Expected one CSV; no extraction performed')\n            if z.getinfo(names[0]).file_size>50_000_000: raise ValueError('Sample exceeds safe audit size')\n            member=names[0]; payload=z.read(member)\n    else: payload=raw\n    reader=csv.DictReader(io.StringIO(payload.decode('utf-8-sig')))\n    if reader.fieldnames!=['instrument_name','funding_rate','funding_time']: raise ValueError('Unexpected schema')\n    rows=list(reader); p=json.loads(protocol.read_text())\n    start=int(dt.datetime.fromisoformat(p['sample_window']['start'].replace('Z','+00:00')).timestamp()*1000)\n    end=int(dt.datetime.fromisoformat(p['sample_window']['end_exclusive'].replace('Z','+00:00')).timestamp()*1000)\n    out={'schema_version':'1.0','analysis_kind':'REAL_HISTORICAL_DATA_AUDIT','synthetic':False,'protocol_sha256':sha(protocol.read_bytes()),'source_sha256':sha(raw),'source_bytes':len(raw),'member':member,'member_sha256':sha(payload),'member_bytes':len(payload),'total_rows':len(rows),'unique_instruments':len({r['instrument_name'] for r in rows}),'requested_utc_window':p['sample_window'],'products':{},'net_return':None,'current_execution_conditions':'UNKNOWN'}\n    for product,symbol in TARGETS.items():\n        selected=[r for r in rows if r['instrument_name']==symbol]\n        pairs=sorted((int(r['funding_time']),D(r['funding_rate'])) for r in selected)\n        if any(not rate.is_finite() for _,rate in pairs): raise ValueError('Non-finite rate')\n        keys=[t for t,_ in pairs]; duplicate_count=len(keys)-len(set(keys))\n        within=[(t,r) for t,r in pairs if start<=t<end]\n        rates=[r for _,r in pairs]\n        out['products'][product]={'instrument_ref':symbol,'row_count':len(pairs),'unique_event_count':len(set(keys)),'duplicate_timestamp_count':duplicate_count,'missing_value_count':sum(any(v=='' for v in r.values()) for r in selected),'first_event_at':iso(keys[0]) if keys else None,'last_event_at':iso(keys[-1]) if keys else None,'observed_intervals_hours':sorted({str(D(b-a)/D(3600000)) for a,b in zip(keys,keys[1:])}),'positive_count':sum(r>0 for r in rates),'negative_count':sum(r<0 for r in rates),'zero_count':sum(r==0 for r in rates),'sum_rates_diagnostic':str(sum(rates,D(0))),'sum_basis_points_diagnostic':str(sum(rates,D(0))*10000),'within_requested_utc_window_count':len(within),'outside_requested_utc_window_count':len(pairs)-len(within),'within_requested_window_sum_diagnostic':str(sum((r for _,r in within),D(0))),'requested_utc_day_complete':False,'quality_state':'FILENAME_UTC_WINDOW_MISMATCH' if any(not(start<=t<end) for t,_ in pairs) else 'NEEDS_EXPECTED_CALENDAR','cost_to_real_position':None}\n    out['findings']={'all_four_native_ids_observed':all(x['row_count']>0 for x in out['products'].values()),'zero_interest_implies_zero_funding_refuted':any(out['products'][s]['positive_count']+out['products'][s]['negative_count']>0 for s in ('aapl','qqq')),'filename_as_utc_day_refuted':any(x['outside_requested_utc_window_count']>0 for x in out['products'].values()),'predictive_advantage':'NOT_TESTED','profitability':'UNKNOWN'}\n    return out\nif __name__=='__main__':\n    a=argparse.ArgumentParser();a.add_argument('input',type=Path);a.add_argument('--protocol',type=Path,default=Path(__file__).with_name('frozen_protocol.json'));a.add_argument('--out',type=Path);v=a.parse_args()\n    result=json.dumps(analyze(v.input,v.protocol),ensure_ascii=False,indent=2,sort_keys=True)+'\\n'\n    if v.out:v.out.write_text(result)\n    else:print(result,end='')\n",
+    "cost_stress.json": "{\n  \"actual_trade_result\": false,\n  \"assumptions\": [\n    \"Constant mark price and fixed notional at all observed settlements\",\n    \"Short continuously present for the three observations only; no assumed subsequent rates\",\n    \"Symmetric entry/exit fee and adverse slippage scenarios, not verified venue or account costs\",\n    \"No future profit, expected return, or comparison of actual fills is implied\"\n  ],\n  \"evidence_stage\": \"REAL_DATA_CONDITIONAL_ACCOUNTING\",\n  \"price_pnl\": null,\n  \"products\": {\n    \"aapl\": {\n      \"interpretation\": \"Observed rate sum alone does not establish net advantage.\",\n      \"primary_5bp_fee_1bp_slippage_each_side\": {\n        \"conditional_flat_price_after_cost_bps\": \"-12\",\n        \"fee_bps_each_side\": 5,\n        \"funding_covers_assumed_cost\": false,\n        \"roundtrip_cost_bps\": \"12\",\n        \"short_funding_diagnostic_bps\": \"0\",\n        \"slippage_bps_each_side\": 1\n      },\n      \"scenarios\": [\n        {\n          \"conditional_flat_price_after_cost_bps\": \"0\",\n          \"fee_bps_each_side\": 0,\n          \"funding_covers_assumed_cost\": true,\n          \"roundtrip_cost_bps\": \"0\",\n          \"short_funding_diagnostic_bps\": \"0\",\n          \"slippage_bps_each_side\": 0\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-2\",\n          \"fee_bps_each_side\": 0,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"2\",\n          \"short_funding_diagnostic_bps\": \"0\",\n          \"slippage_bps_each_side\": 1\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-6\",\n          \"fee_bps_each_side\": 0,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"6\",\n          \"short_funding_diagnostic_bps\": \"0\",\n          \"slippage_bps_each_side\": 3\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-4\",\n          \"fee_bps_each_side\": 2,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"4\",\n          \"short_funding_diagnostic_bps\": \"0\",\n          \"slippage_bps_each_side\": 0\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-6\",\n          \"fee_bps_each_side\": 2,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"6\",\n          \"short_funding_diagnostic_bps\": \"0\",\n          \"slippage_bps_each_side\": 1\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-10\",\n          \"fee_bps_each_side\": 2,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"10\",\n          \"short_funding_diagnostic_bps\": \"0\",\n          \"slippage_bps_each_side\": 3\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-10\",\n          \"fee_bps_each_side\": 5,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"10\",\n          \"short_funding_diagnostic_bps\": \"0\",\n          \"slippage_bps_each_side\": 0\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-12\",\n          \"fee_bps_each_side\": 5,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"12\",\n          \"short_funding_diagnostic_bps\": \"0\",\n          \"slippage_bps_each_side\": 1\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-16\",\n          \"fee_bps_each_side\": 5,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"16\",\n          \"short_funding_diagnostic_bps\": \"0\",\n          \"slippage_bps_each_side\": 3\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-20\",\n          \"fee_bps_each_side\": 10,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"20\",\n          \"short_funding_diagnostic_bps\": \"0\",\n          \"slippage_bps_each_side\": 0\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-22\",\n          \"fee_bps_each_side\": 10,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"22\",\n          \"short_funding_diagnostic_bps\": \"0\",\n          \"slippage_bps_each_side\": 1\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-26\",\n          \"fee_bps_each_side\": 10,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"26\",\n          \"short_funding_diagnostic_bps\": \"0\",\n          \"slippage_bps_each_side\": 3\n        }\n      ]\n    },\n    \"btc\": {\n      \"interpretation\": \"Observed rate sum alone does not establish net advantage.\",\n      \"primary_5bp_fee_1bp_slippage_each_side\": {\n        \"conditional_flat_price_after_cost_bps\": \"-9.2884067304560000\",\n        \"fee_bps_each_side\": 5,\n        \"funding_covers_assumed_cost\": false,\n        \"roundtrip_cost_bps\": \"12\",\n        \"short_funding_diagnostic_bps\": \"2.7115932695440000\",\n        \"slippage_bps_each_side\": 1\n      },\n      \"scenarios\": [\n        {\n          \"conditional_flat_price_after_cost_bps\": \"2.7115932695440000\",\n          \"fee_bps_each_side\": 0,\n          \"funding_covers_assumed_cost\": true,\n          \"roundtrip_cost_bps\": \"0\",\n          \"short_funding_diagnostic_bps\": \"2.7115932695440000\",\n          \"slippage_bps_each_side\": 0\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"0.7115932695440000\",\n          \"fee_bps_each_side\": 0,\n          \"funding_covers_assumed_cost\": true,\n          \"roundtrip_cost_bps\": \"2\",\n          \"short_funding_diagnostic_bps\": \"2.7115932695440000\",\n          \"slippage_bps_each_side\": 1\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-3.2884067304560000\",\n          \"fee_bps_each_side\": 0,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"6\",\n          \"short_funding_diagnostic_bps\": \"2.7115932695440000\",\n          \"slippage_bps_each_side\": 3\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-1.2884067304560000\",\n          \"fee_bps_each_side\": 2,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"4\",\n          \"short_funding_diagnostic_bps\": \"2.7115932695440000\",\n          \"slippage_bps_each_side\": 0\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-3.2884067304560000\",\n          \"fee_bps_each_side\": 2,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"6\",\n          \"short_funding_diagnostic_bps\": \"2.7115932695440000\",\n          \"slippage_bps_each_side\": 1\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-7.2884067304560000\",\n          \"fee_bps_each_side\": 2,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"10\",\n          \"short_funding_diagnostic_bps\": \"2.7115932695440000\",\n          \"slippage_bps_each_side\": 3\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-7.2884067304560000\",\n          \"fee_bps_each_side\": 5,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"10\",\n          \"short_funding_diagnostic_bps\": \"2.7115932695440000\",\n          \"slippage_bps_each_side\": 0\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-9.2884067304560000\",\n          \"fee_bps_each_side\": 5,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"12\",\n          \"short_funding_diagnostic_bps\": \"2.7115932695440000\",\n          \"slippage_bps_each_side\": 1\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-13.2884067304560000\",\n          \"fee_bps_each_side\": 5,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"16\",\n          \"short_funding_diagnostic_bps\": \"2.7115932695440000\",\n          \"slippage_bps_each_side\": 3\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-17.2884067304560000\",\n          \"fee_bps_each_side\": 10,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"20\",\n          \"short_funding_diagnostic_bps\": \"2.7115932695440000\",\n          \"slippage_bps_each_side\": 0\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-19.2884067304560000\",\n          \"fee_bps_each_side\": 10,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"22\",\n          \"short_funding_diagnostic_bps\": \"2.7115932695440000\",\n          \"slippage_bps_each_side\": 1\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-23.2884067304560000\",\n          \"fee_bps_each_side\": 10,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"26\",\n          \"short_funding_diagnostic_bps\": \"2.7115932695440000\",\n          \"slippage_bps_each_side\": 3\n        }\n      ]\n    },\n    \"eth\": {\n      \"interpretation\": \"Observed rate sum alone does not establish net advantage.\",\n      \"primary_5bp_fee_1bp_slippage_each_side\": {\n        \"conditional_flat_price_after_cost_bps\": \"-10.5816443784270000\",\n        \"fee_bps_each_side\": 5,\n        \"funding_covers_assumed_cost\": false,\n        \"roundtrip_cost_bps\": \"12\",\n        \"short_funding_diagnostic_bps\": \"1.4183556215730000\",\n        \"slippage_bps_each_side\": 1\n      },\n      \"scenarios\": [\n        {\n          \"conditional_flat_price_after_cost_bps\": \"1.4183556215730000\",\n          \"fee_bps_each_side\": 0,\n          \"funding_covers_assumed_cost\": true,\n          \"roundtrip_cost_bps\": \"0\",\n          \"short_funding_diagnostic_bps\": \"1.4183556215730000\",\n          \"slippage_bps_each_side\": 0\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-0.5816443784270000\",\n          \"fee_bps_each_side\": 0,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"2\",\n          \"short_funding_diagnostic_bps\": \"1.4183556215730000\",\n          \"slippage_bps_each_side\": 1\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-4.5816443784270000\",\n          \"fee_bps_each_side\": 0,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"6\",\n          \"short_funding_diagnostic_bps\": \"1.4183556215730000\",\n          \"slippage_bps_each_side\": 3\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-2.5816443784270000\",\n          \"fee_bps_each_side\": 2,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"4\",\n          \"short_funding_diagnostic_bps\": \"1.4183556215730000\",\n          \"slippage_bps_each_side\": 0\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-4.5816443784270000\",\n          \"fee_bps_each_side\": 2,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"6\",\n          \"short_funding_diagnostic_bps\": \"1.4183556215730000\",\n          \"slippage_bps_each_side\": 1\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-8.5816443784270000\",\n          \"fee_bps_each_side\": 2,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"10\",\n          \"short_funding_diagnostic_bps\": \"1.4183556215730000\",\n          \"slippage_bps_each_side\": 3\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-8.5816443784270000\",\n          \"fee_bps_each_side\": 5,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"10\",\n          \"short_funding_diagnostic_bps\": \"1.4183556215730000\",\n          \"slippage_bps_each_side\": 0\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-10.5816443784270000\",\n          \"fee_bps_each_side\": 5,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"12\",\n          \"short_funding_diagnostic_bps\": \"1.4183556215730000\",\n          \"slippage_bps_each_side\": 1\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-14.5816443784270000\",\n          \"fee_bps_each_side\": 5,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"16\",\n          \"short_funding_diagnostic_bps\": \"1.4183556215730000\",\n          \"slippage_bps_each_side\": 3\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-18.5816443784270000\",\n          \"fee_bps_each_side\": 10,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"20\",\n          \"short_funding_diagnostic_bps\": \"1.4183556215730000\",\n          \"slippage_bps_each_side\": 0\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-20.5816443784270000\",\n          \"fee_bps_each_side\": 10,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"22\",\n          \"short_funding_diagnostic_bps\": \"1.4183556215730000\",\n          \"slippage_bps_each_side\": 1\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-24.5816443784270000\",\n          \"fee_bps_each_side\": 10,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"26\",\n          \"short_funding_diagnostic_bps\": \"1.4183556215730000\",\n          \"slippage_bps_each_side\": 3\n        }\n      ]\n    },\n    \"qqq\": {\n      \"interpretation\": \"Observed rate sum alone does not establish net advantage.\",\n      \"primary_5bp_fee_1bp_slippage_each_side\": {\n        \"conditional_flat_price_after_cost_bps\": \"-11.6614712889440000\",\n        \"fee_bps_each_side\": 5,\n        \"funding_covers_assumed_cost\": false,\n        \"roundtrip_cost_bps\": \"12\",\n        \"short_funding_diagnostic_bps\": \"0.3385287110560000\",\n        \"slippage_bps_each_side\": 1\n      },\n      \"scenarios\": [\n        {\n          \"conditional_flat_price_after_cost_bps\": \"0.3385287110560000\",\n          \"fee_bps_each_side\": 0,\n          \"funding_covers_assumed_cost\": true,\n          \"roundtrip_cost_bps\": \"0\",\n          \"short_funding_diagnostic_bps\": \"0.3385287110560000\",\n          \"slippage_bps_each_side\": 0\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-1.6614712889440000\",\n          \"fee_bps_each_side\": 0,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"2\",\n          \"short_funding_diagnostic_bps\": \"0.3385287110560000\",\n          \"slippage_bps_each_side\": 1\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-5.6614712889440000\",\n          \"fee_bps_each_side\": 0,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"6\",\n          \"short_funding_diagnostic_bps\": \"0.3385287110560000\",\n          \"slippage_bps_each_side\": 3\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-3.6614712889440000\",\n          \"fee_bps_each_side\": 2,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"4\",\n          \"short_funding_diagnostic_bps\": \"0.3385287110560000\",\n          \"slippage_bps_each_side\": 0\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-5.6614712889440000\",\n          \"fee_bps_each_side\": 2,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"6\",\n          \"short_funding_diagnostic_bps\": \"0.3385287110560000\",\n          \"slippage_bps_each_side\": 1\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-9.6614712889440000\",\n          \"fee_bps_each_side\": 2,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"10\",\n          \"short_funding_diagnostic_bps\": \"0.3385287110560000\",\n          \"slippage_bps_each_side\": 3\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-9.6614712889440000\",\n          \"fee_bps_each_side\": 5,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"10\",\n          \"short_funding_diagnostic_bps\": \"0.3385287110560000\",\n          \"slippage_bps_each_side\": 0\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-11.6614712889440000\",\n          \"fee_bps_each_side\": 5,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"12\",\n          \"short_funding_diagnostic_bps\": \"0.3385287110560000\",\n          \"slippage_bps_each_side\": 1\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-15.6614712889440000\",\n          \"fee_bps_each_side\": 5,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"16\",\n          \"short_funding_diagnostic_bps\": \"0.3385287110560000\",\n          \"slippage_bps_each_side\": 3\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-19.6614712889440000\",\n          \"fee_bps_each_side\": 10,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"20\",\n          \"short_funding_diagnostic_bps\": \"0.3385287110560000\",\n          \"slippage_bps_each_side\": 0\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-21.6614712889440000\",\n          \"fee_bps_each_side\": 10,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"22\",\n          \"short_funding_diagnostic_bps\": \"0.3385287110560000\",\n          \"slippage_bps_each_side\": 1\n        },\n        {\n          \"conditional_flat_price_after_cost_bps\": \"-25.6614712889440000\",\n          \"fee_bps_each_side\": 10,\n          \"funding_covers_assumed_cost\": false,\n          \"roundtrip_cost_bps\": \"26\",\n          \"short_funding_diagnostic_bps\": \"0.3385287110560000\",\n          \"slippage_bps_each_side\": 3\n        }\n      ]\n    }\n  },\n  \"schema_version\": \"1.0\"\n}\n",
+    "cost_stress.py": "#!/usr/bin/env python3\n\"\"\"Conditional accounting only: flat mark/notional and observed settlement rates.\nThis is not a trade simulation or actual net performance. Original code: MIT.\n\"\"\"\nfrom decimal import Decimal as D\nfrom pathlib import Path\nimport json\np=Path(__file__).parent\nx=json.loads((p/'derived_facts.json').read_text())\nout={'schema_version':'1.0','evidence_stage':'REAL_DATA_CONDITIONAL_ACCOUNTING','actual_trade_result':False,'price_pnl':None,'assumptions':['Constant mark price and fixed notional at all observed settlements','Short continuously present for the three observations only; no assumed subsequent rates','Symmetric entry/exit fee and adverse slippage scenarios, not verified venue or account costs','No future profit, expected return, or comparison of actual fills is implied'],'products':{}}\nfor product,v in x['products'].items():\n    carry=D(v['sum_basis_points_diagnostic'])\n    cases=[]\n    for fee in (0,2,5,10):\n        for slip in (0,1,3):\n            cost=D(2*(fee+slip))\n            cases.append({'fee_bps_each_side':fee,'slippage_bps_each_side':slip,'roundtrip_cost_bps':str(cost),'short_funding_diagnostic_bps':str(carry),'conditional_flat_price_after_cost_bps':str(carry-cost),'funding_covers_assumed_cost':carry>=cost})\n    out['products'][product]={'scenarios':cases,'primary_5bp_fee_1bp_slippage_each_side':next(c for c in cases if c['fee_bps_each_side']==5 and c['slippage_bps_each_side']==1),'interpretation':'Observed rate sum alone does not establish net advantage.'}\nprint(json.dumps(out,ensure_ascii=False,indent=2,sort_keys=True))\n",
+    "derived_facts.json": "{\n  \"kind\": \"AUTHORED_DERIVED_DIAGNOSTIC_FACTS\",\n  \"products\": {\n    \"aapl\": {\n      \"duplicate_timestamp_count\": 0,\n      \"negative_count\": 0,\n      \"observed_intervals_hours\": [\n        \"8\"\n      ],\n      \"outside_requested_utc_window_count\": 1,\n      \"positive_count\": 0,\n      \"row_count\": 3,\n      \"sum_basis_points_diagnostic\": \"0\",\n      \"sum_rates_diagnostic\": \"0\",\n      \"unique_event_count\": 3,\n      \"within_requested_utc_window_count\": 2,\n      \"zero_count\": 3\n    },\n    \"btc\": {\n      \"duplicate_timestamp_count\": 0,\n      \"negative_count\": 0,\n      \"observed_intervals_hours\": [\n        \"8\"\n      ],\n      \"outside_requested_utc_window_count\": 1,\n      \"positive_count\": 3,\n      \"row_count\": 3,\n      \"sum_basis_points_diagnostic\": \"2.7115932695440000\",\n      \"sum_rates_diagnostic\": \"0.0002711593269544\",\n      \"unique_event_count\": 3,\n      \"within_requested_utc_window_count\": 2,\n      \"zero_count\": 0\n    },\n    \"eth\": {\n      \"duplicate_timestamp_count\": 0,\n      \"negative_count\": 0,\n      \"observed_intervals_hours\": [\n        \"8\"\n      ],\n      \"outside_requested_utc_window_count\": 1,\n      \"positive_count\": 3,\n      \"row_count\": 3,\n      \"sum_basis_points_diagnostic\": \"1.4183556215730000\",\n      \"sum_rates_diagnostic\": \"0.0001418355621573\",\n      \"unique_event_count\": 3,\n      \"within_requested_utc_window_count\": 2,\n      \"zero_count\": 0\n    },\n    \"qqq\": {\n      \"duplicate_timestamp_count\": 0,\n      \"negative_count\": 0,\n      \"observed_intervals_hours\": [\n        \"8\"\n      ],\n      \"outside_requested_utc_window_count\": 1,\n      \"positive_count\": 1,\n      \"row_count\": 3,\n      \"sum_basis_points_diagnostic\": \"0.3385287110560000\",\n      \"sum_rates_diagnostic\": \"0.0000338528711056\",\n      \"unique_event_count\": 3,\n      \"within_requested_utc_window_count\": 2,\n      \"zero_count\": 2\n    }\n  },\n  \"provenance\": \"Computed by audit_funding.py from local-only official source; not a substitute for raw-data verification.\",\n  \"schema_version\": \"1.0\",\n  \"source_csv_sha256\": \"c2ae92301fd8ace5682729e46e58ff959d14b7ebf948ead7d9c4f533d5a9950c\",\n  \"source_sha256\": \"34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c\",\n  \"upstream_data_redistributed\": false\n}\n",
+    "derived_reproduction.json": "{\n  \"filename_is_utc_day_refuted\": true,\n  \"limitations\": [\n    \"Raw source excluded: redistribution permission not established\",\n    \"This is not market-data restoration or a trading backtest\"\n  ],\n  \"products\": {\n    \"aapl\": {\n      \"bps_conversion\": \"0\",\n      \"count_conservation\": true,\n      \"nonzero_rate_observed\": false,\n      \"outside_requested_window\": true\n    },\n    \"btc\": {\n      \"bps_conversion\": \"2.7115932695440000\",\n      \"count_conservation\": true,\n      \"nonzero_rate_observed\": true,\n      \"outside_requested_window\": true\n    },\n    \"eth\": {\n      \"bps_conversion\": \"1.4183556215730000\",\n      \"count_conservation\": true,\n      \"nonzero_rate_observed\": true,\n      \"outside_requested_window\": true\n    },\n    \"qqq\": {\n      \"bps_conversion\": \"0.3385287110560000\",\n      \"count_conservation\": true,\n      \"nonzero_rate_observed\": true,\n      \"outside_requested_window\": true\n    }\n  },\n  \"scope\": \"DERIVED_DIAGNOSTICS_ONLY\",\n  \"source_integrity_verified\": false,\n  \"zero_interest_implies_zero_funding_refuted\": true\n}\n",
+    "execution_receipt.json": "{\n  \"actual_execution\": \"MANUAL_OFFICIAL_APP_BOOTSTRAP\",\n  \"attempt_id\": \"attempt-1\",\n  \"code_sha256\": \"ba3a53abd1a425ec81d019b50bfe40f7e442427476acbebc14237d4aaea3607b\",\n  \"completed_at\": \"2026-09-22T17:57:57.002886Z\",\n  \"economic_result\": \"NOT_ESTIMATED\",\n  \"input_sha256\": \"34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c\",\n  \"natural_trigger\": false,\n  \"original_protocol_changed\": false,\n  \"output_sha256\": \"049eddc6f45e0e9c1592b1f82d5c4564e90c413b7b57a7e45c0bee5587539097\",\n  \"platform\": \"macOS-27.0-arm64-arm-64bit\",\n  \"protocol_deviation\": \"Expected UTC calendar day was not supplied by filename-dated file. Result records mismatch and partial requested-window coverage. No window relabel or backdating.\",\n  \"protocol_sha256\": \"730216be58b9839a635306273cf03530036ce07c3416e629f4de5f3ab3fa8429\",\n  \"python_version\": \"3.9.6\",\n  \"run_id\": \"run-funding-audit-20260923\",\n  \"schema_version\": \"1.0\",\n  \"started_at\": \"2026-09-22T17:51:15.094364+00:00\",\n  \"status\": \"COMPLETED_WITH_DATA_BOUNDARY_FINDING\"\n}\n",
+    "forward_plans.json": "{\n  \"plans\": [\n    {\n      \"account_eligibility\": \"NOT_ASSESSED\",\n      \"account_input_required\": false,\n      \"automatic_trade_authorized\": false,\n      \"available_at\": \"2026-09-22T18:02:02.485411Z\",\n      \"baseline_refs\": [\n        \"p-btc-funding-long-control-20260923@1\"\n      ],\n      \"candidate_set_ref\": \"r-btc-funding-cost-counterevidence-20260923\",\n      \"cost_model\": {\n        \"actual_entry_fee_rate\": null,\n        \"actual_exit_fee_rate\": null,\n        \"actual_slippage\": null,\n        \"exit_cost_included\": true,\n        \"funding\": \"cashflow=-direction*sum(q*actual_settlement_mark*actual_realized_rate) for every settlement with entry<=event<exit; do not prorate by hours or assume an 8h calendar forever\",\n        \"funding_missing\": \"null, never 0\",\n        \"primary_development_scenario\": {\n          \"assumption_only\": true,\n          \"fee_bps_each_side\": \"5\",\n          \"slippage_bps_each_side\": \"1\"\n        },\n        \"scenario_not_promotion\": \"Report all predeclared scenarios; do not choose best after seeing outcomes\",\n        \"scenario_per_side_fee_bps\": [\n          \"0\",\n          \"2\",\n          \"5\",\n          \"10\"\n        ],\n        \"scenario_per_side_slippage_bps\": [\n          \"0\",\n          \"1\",\n          \"3\"\n        ],\n        \"zero_cost_scenario\": \"FRICTIONLESS_LOWER_BOUND_NOT_ACTUAL\"\n      },\n      \"cost_model_ref\": \"funding-cost-counterevidence-v1-costs\",\n      \"counterevidence\": [\n        \"资金费翻负导致空头付费\",\n        \"价格变动吞没资金费收入\",\n        \"双边成本高于资金费\",\n        \"缺少结算标记价使现金流无法准确核算\",\n        \"参考样本在入场前已超过72小时则不触发\"\n      ],\n      \"created_at\": \"2026-09-22T18:02:02.485411Z\",\n      \"current_execution_conditions\": \"UNKNOWN\",\n      \"dataset_refs\": [\n        {\n          \"available_at\": \"2026-09-22T17:51:24.065702Z\",\n          \"role\": \"FROZEN_SIGNAL_DEVELOPMENT_EXPOSURE\",\n          \"source_ref\": \"34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c\"\n        }\n      ],\n      \"disclosure\": {\n        \"export_fields\": [\n          \"schema_version\",\n          \"record_type\",\n          \"created_at\",\n          \"available_at\",\n          \"synthetic\",\n          \"plan_id\",\n          \"version\",\n          \"round_id\",\n          \"product_id\",\n          \"product_refs\",\n          \"title\",\n          \"instrument_ref\",\n          \"method_ref\",\n          \"dataset_refs\",\n          \"source_review_refs\",\n          \"research_question\",\n          \"hypothesis\",\n          \"counterevidence\",\n          \"candidate_set_ref\",\n          \"baseline_refs\",\n          \"selection_rationale\",\n          \"rules\",\n          \"cost_model_ref\",\n          \"cost_model\",\n          \"fill_model_ref\",\n          \"evaluation_contract_ref\",\n          \"evaluation_contract\",\n          \"sealed_at\",\n          \"public_visibility_ref\",\n          \"effective_from\",\n          \"entry_valid_until\",\n          \"evaluation_end\",\n          \"evidence_stage\",\n          \"replay_eligibility\",\n          \"replay_missing\",\n          \"current_execution_conditions\",\n          \"account_input_required\",\n          \"account_eligibility\",\n          \"automatic_trade_authorized\",\n          \"natural_run_status\"\n        ],\n        \"license\": \"CC-BY-4.0\",\n        \"scope\": \"Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.\",\n        \"visibility\": \"PUBLIC\"\n      },\n      \"effective_from\": \"2026-09-23T00:05:00Z\",\n      \"entry_valid_until\": \"2026-09-23T00:06:00Z\",\n      \"evaluation_contract\": {\n        \"actual_net\": \"null until actual cost inputs are verified; scenario values are not actual fills\",\n        \"baseline_limits\": \"Opposite direction has matched absolute quantity and time but different market beta; the two PnLs are not account-profit components and do not establish predictive alpha.\",\n        \"cross_day\": \"Retain open quantity, entry, cumulative fees/funding and processed event IDs; a daily cutoff does not close or reset.\",\n        \"data_exposure\": \"Historical funding file already inspected; future price/funding window starts strictly after seal. No historical optimized threshold.\",\n        \"drawdown\": \"Report observed-path drawdown plus sampling limitations; not a guaranteed risk bound\",\n        \"equity\": \"Unlevered initial notional plus signed mark-to-market minus accumulated entry/exit fee/slippage and realized funding; retain trajectory at all source mark events, do not call sparse maxima an exact continuous drawdown\",\n        \"fees\": \"q*(entry_trade+exit_trade)*fee_bps/10000\",\n        \"missing_price_or_funding_mark\": \"MISSING_DATA for dependent metrics; preserve remaining evidence\",\n        \"price_pnl\": \"direction*q*(exit_trade-entry_trade)\",\n        \"scenario_net\": \"price_pnl+funding_cashflow-fees-slippage_cost\",\n        \"slippage_cost\": \"q*(entry_trade+exit_trade)*slippage_bps/10000\"\n      },\n      \"evaluation_contract_ref\": \"funding-cost-counterevidence-v1\",\n      \"evaluation_end\": \"2026-09-24T00:06:00Z\",\n      \"evidence_stage\": \"FORWARD_PROTOCOL_ONLY\",\n      \"fill_model_ref\": \"official-tick-first-within-minute-plus-adverse-scenario-v1\",\n      \"hypothesis\": \"最近正资金费不能独自支持净优势；空头可能收到资金费但被价格上涨及交易成本抵消。\",\n      \"instrument_ref\": \"BTC-USDT-SWAP\",\n      \"method_ref\": \"funding-cost-counterevidence-v1\",\n      \"natural_run_status\": \"WAITING_NATURAL_OUTCOME\",\n      \"plan_id\": \"p-btc-funding-short-20260923\",\n      \"product_id\": \"btc\",\n      \"product_refs\": [\n        \"btc\"\n      ],\n      \"public_visibility_ref\": null,\n      \"record_type\": \"plan\",\n      \"replay_eligibility\": \"INCOMPLETE_DATA\",\n      \"replay_missing\": [\n        \"future target tick path\",\n        \"future exact settlement mark values and full mark path\",\n        \"future actual realized funding\",\n        \"verified actual trading-cost schedule\"\n      ],\n      \"research_question\": \"实际资金费现金流与价格方向暴露、双边成本分别贡献什么？\",\n      \"round_id\": \"r-btc-funding-cost-counterevidence-20260923\",\n      \"rules\": {\n        \"entry\": {\n          \"latest_allowed_fill\": \"2026-09-23T00:06:00Z\",\n          \"missing_data_outcome\": \"MISSING_DATA, not NOT_TRIGGERED; no replacement timestamp\",\n          \"price_model\": \"First target exchange trade at or after scheduled time, strictly before 00:06:00 UTC; official full tick path required to establish first trade. Add adverse frozen slippage scenario; no assured fill.\",\n          \"scheduled_at\": \"2026-09-23T00:05:00Z\",\n          \"settlement_buffer_minutes\": 5\n        },\n        \"exit\": {\n          \"missing_data_outcome\": \"Keep state unresolved and MISSING_DATA; do not force a favorable close\",\n          \"price_model\": \"First target trade at or after scheduled time, strictly before 00:06:00 UTC plus adverse exit slippage; no stop/target and no inferred intrabar order.\",\n          \"scheduled_at\": \"2026-09-24T00:05:00Z\"\n        },\n        \"quantity_or_inventory\": {\n          \"base_quantity_btc\": \"0.01\",\n          \"capital_reporting\": \"Normalize analytical PnL by initial absolute notional q*entry_price; not user capital, leverage or account equity\",\n          \"contracts\": \"1\",\n          \"direction\": -1,\n          \"face_value\": \"0.01\",\n          \"multiplier\": \"1\",\n          \"position_change\": \"At most one entry and one exit; no resizing or reinvestment\"\n        },\n        \"reentry\": \"NONE. A later study requires a new plan/version and a new information cutoff.\",\n        \"signal\": {\n          \"dataset_hash\": \"34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c\",\n          \"direction\": -1,\n          \"event_at\": \"2026-09-21T08:00:00Z\",\n          \"kind\": \"FROZEN_OBSERVATION\",\n          \"observed_sign\": \"POSITIVE\",\n          \"predicate\": \"latest settled BTC rate in the sealed dataset is positive AND event age at scheduled entry <=72 hours\",\n          \"reevaluate_after_seal\": false,\n          \"use_future_funding_as_signal\": false\n        },\n        \"termination\": \"Evaluation end 2026-09-24T00:06:00Z. FINAL requires both legal fills, every funding settlement while position open, exact settlement mark values, full position/equity path and verified inputs. Missing information remains MISSING_DATA after the endpoint.\"\n      },\n      \"schema_version\": \"1.0\",\n      \"sealed_at\": \"2026-09-22T18:02:02.485411Z\",\n      \"selection_rationale\": \"仅方法/费用分解，不按首日费率大小排名；BTC作为首个已核验加密永续，另一方向为相同绝对数量和期限的反向暴露对照。主选尚无。\",\n      \"source_review_refs\": [],\n      \"synthetic\": false,\n      \"title\": \"最近正资金费反向持有\",\n      \"version\": 1\n    },\n    {\n      \"account_eligibility\": \"NOT_ASSESSED\",\n      \"account_input_required\": false,\n      \"automatic_trade_authorized\": false,\n      \"available_at\": \"2026-09-22T18:02:02.485411Z\",\n      \"baseline_refs\": [],\n      \"candidate_set_ref\": \"r-btc-funding-cost-counterevidence-20260923\",\n      \"cost_model\": {\n        \"actual_entry_fee_rate\": null,\n        \"actual_exit_fee_rate\": null,\n        \"actual_slippage\": null,\n        \"exit_cost_included\": true,\n        \"funding\": \"cashflow=-direction*sum(q*actual_settlement_mark*actual_realized_rate) for every settlement with entry<=event<exit; do not prorate by hours or assume an 8h calendar forever\",\n        \"funding_missing\": \"null, never 0\",\n        \"primary_development_scenario\": {\n          \"assumption_only\": true,\n          \"fee_bps_each_side\": \"5\",\n          \"slippage_bps_each_side\": \"1\"\n        },\n        \"scenario_not_promotion\": \"Report all predeclared scenarios; do not choose best after seeing outcomes\",\n        \"scenario_per_side_fee_bps\": [\n          \"0\",\n          \"2\",\n          \"5\",\n          \"10\"\n        ],\n        \"scenario_per_side_slippage_bps\": [\n          \"0\",\n          \"1\",\n          \"3\"\n        ],\n        \"zero_cost_scenario\": \"FRICTIONLESS_LOWER_BOUND_NOT_ACTUAL\"\n      },\n      \"cost_model_ref\": \"funding-cost-counterevidence-v1-costs\",\n      \"counterevidence\": [\n        \"资金费翻负导致空头付费\",\n        \"价格变动吞没资金费收入\",\n        \"双边成本高于资金费\",\n        \"缺少结算标记价使现金流无法准确核算\",\n        \"参考样本在入场前已超过72小时则不触发\"\n      ],\n      \"created_at\": \"2026-09-22T18:02:02.485411Z\",\n      \"current_execution_conditions\": \"UNKNOWN\",\n      \"dataset_refs\": [\n        {\n          \"available_at\": \"2026-09-22T17:51:24.065702Z\",\n          \"role\": \"FROZEN_SIGNAL_DEVELOPMENT_EXPOSURE\",\n          \"source_ref\": \"34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c\"\n        }\n      ],\n      \"disclosure\": {\n        \"export_fields\": [\n          \"schema_version\",\n          \"record_type\",\n          \"created_at\",\n          \"available_at\",\n          \"synthetic\",\n          \"plan_id\",\n          \"version\",\n          \"round_id\",\n          \"product_id\",\n          \"product_refs\",\n          \"title\",\n          \"instrument_ref\",\n          \"method_ref\",\n          \"dataset_refs\",\n          \"source_review_refs\",\n          \"research_question\",\n          \"hypothesis\",\n          \"counterevidence\",\n          \"candidate_set_ref\",\n          \"baseline_refs\",\n          \"selection_rationale\",\n          \"rules\",\n          \"cost_model_ref\",\n          \"cost_model\",\n          \"fill_model_ref\",\n          \"evaluation_contract_ref\",\n          \"evaluation_contract\",\n          \"sealed_at\",\n          \"public_visibility_ref\",\n          \"effective_from\",\n          \"entry_valid_until\",\n          \"evaluation_end\",\n          \"evidence_stage\",\n          \"replay_eligibility\",\n          \"replay_missing\",\n          \"current_execution_conditions\",\n          \"account_input_required\",\n          \"account_eligibility\",\n          \"automatic_trade_authorized\",\n          \"natural_run_status\"\n        ],\n        \"license\": \"CC-BY-4.0\",\n        \"scope\": \"Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.\",\n        \"visibility\": \"PUBLIC\"\n      },\n      \"effective_from\": \"2026-09-23T00:05:00Z\",\n      \"entry_valid_until\": \"2026-09-23T00:06:00Z\",\n      \"evaluation_contract\": {\n        \"actual_net\": \"null until actual cost inputs are verified; scenario values are not actual fills\",\n        \"baseline_limits\": \"Opposite direction has matched absolute quantity and time but different market beta; the two PnLs are not account-profit components and do not establish predictive alpha.\",\n        \"cross_day\": \"Retain open quantity, entry, cumulative fees/funding and processed event IDs; a daily cutoff does not close or reset.\",\n        \"data_exposure\": \"Historical funding file already inspected; future price/funding window starts strictly after seal. No historical optimized threshold.\",\n        \"drawdown\": \"Report observed-path drawdown plus sampling limitations; not a guaranteed risk bound\",\n        \"equity\": \"Unlevered initial notional plus signed mark-to-market minus accumulated entry/exit fee/slippage and realized funding; retain trajectory at all source mark events, do not call sparse maxima an exact continuous drawdown\",\n        \"fees\": \"q*(entry_trade+exit_trade)*fee_bps/10000\",\n        \"missing_price_or_funding_mark\": \"MISSING_DATA for dependent metrics; preserve remaining evidence\",\n        \"price_pnl\": \"direction*q*(exit_trade-entry_trade)\",\n        \"scenario_net\": \"price_pnl+funding_cashflow-fees-slippage_cost\",\n        \"slippage_cost\": \"q*(entry_trade+exit_trade)*slippage_bps/10000\"\n      },\n      \"evaluation_contract_ref\": \"funding-cost-counterevidence-v1\",\n      \"evaluation_end\": \"2026-09-24T00:06:00Z\",\n      \"evidence_stage\": \"FORWARD_PROTOCOL_ONLY\",\n      \"fill_model_ref\": \"official-tick-first-within-minute-plus-adverse-scenario-v1\",\n      \"hypothesis\": \"最近正资金费不能独自支持净优势；空头可能收到资金费但被价格上涨及交易成本抵消。\",\n      \"instrument_ref\": \"BTC-USDT-SWAP\",\n      \"method_ref\": \"funding-cost-counterevidence-v1\",\n      \"natural_run_status\": \"WAITING_NATURAL_OUTCOME\",\n      \"plan_id\": \"p-btc-funding-long-control-20260923\",\n      \"product_id\": \"btc\",\n      \"product_refs\": [\n        \"btc\"\n      ],\n      \"public_visibility_ref\": null,\n      \"record_type\": \"plan\",\n      \"replay_eligibility\": \"INCOMPLETE_DATA\",\n      \"replay_missing\": [\n        \"future target tick path\",\n        \"future exact settlement mark values and full mark path\",\n        \"future actual realized funding\",\n        \"verified actual trading-cost schedule\"\n      ],\n      \"research_question\": \"实际资金费现金流与价格方向暴露、双边成本分别贡献什么？\",\n      \"round_id\": \"r-btc-funding-cost-counterevidence-20260923\",\n      \"rules\": {\n        \"entry\": {\n          \"latest_allowed_fill\": \"2026-09-23T00:06:00Z\",\n          \"missing_data_outcome\": \"MISSING_DATA, not NOT_TRIGGERED; no replacement timestamp\",\n          \"price_model\": \"First target exchange trade at or after scheduled time, strictly before 00:06:00 UTC; official full tick path required to establish first trade. Add adverse frozen slippage scenario; no assured fill.\",\n          \"scheduled_at\": \"2026-09-23T00:05:00Z\",\n          \"settlement_buffer_minutes\": 5\n        },\n        \"exit\": {\n          \"missing_data_outcome\": \"Keep state unresolved and MISSING_DATA; do not force a favorable close\",\n          \"price_model\": \"First target trade at or after scheduled time, strictly before 00:06:00 UTC plus adverse exit slippage; no stop/target and no inferred intrabar order.\",\n          \"scheduled_at\": \"2026-09-24T00:05:00Z\"\n        },\n        \"quantity_or_inventory\": {\n          \"base_quantity_btc\": \"0.01\",\n          \"capital_reporting\": \"Normalize analytical PnL by initial absolute notional q*entry_price; not user capital, leverage or account equity\",\n          \"contracts\": \"1\",\n          \"direction\": 1,\n          \"face_value\": \"0.01\",\n          \"multiplier\": \"1\",\n          \"position_change\": \"At most one entry and one exit; no resizing or reinvestment\"\n        },\n        \"reentry\": \"NONE. A later study requires a new plan/version and a new information cutoff.\",\n        \"signal\": {\n          \"dataset_hash\": \"34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c\",\n          \"direction\": 1,\n          \"event_at\": \"2026-09-21T08:00:00Z\",\n          \"kind\": \"FROZEN_OBSERVATION\",\n          \"observed_sign\": \"POSITIVE\",\n          \"predicate\": \"latest settled BTC rate in the sealed dataset is positive AND event age at scheduled entry <=72 hours\",\n          \"reevaluate_after_seal\": false,\n          \"use_future_funding_as_signal\": false\n        },\n        \"termination\": \"Evaluation end 2026-09-24T00:06:00Z. FINAL requires both legal fills, every funding settlement while position open, exact settlement mark values, full position/equity path and verified inputs. Missing information remains MISSING_DATA after the endpoint.\"\n      },\n      \"schema_version\": \"1.0\",\n      \"sealed_at\": \"2026-09-22T18:02:02.485411Z\",\n      \"selection_rationale\": \"仅方法/费用分解，不按首日费率大小排名；BTC作为首个已核验加密永续，另一方向为相同绝对数量和期限的反向暴露对照。主选尚无。\",\n      \"source_review_refs\": [],\n      \"synthetic\": false,\n      \"title\": \"同期同绝对数量方向对照\",\n      \"version\": 1\n    }\n  ],\n  \"schema_version\": \"1.0\",\n  \"sealed_at\": \"2026-09-22T18:02:02.485411Z\"\n}\n",
+    "frozen_protocol.json": "{\n  \"schema_version\": \"1.0\",\n  \"protocol_id\": \"funding-data-audit-v1\",\n  \"frozen_at\": \"2026-09-22T17:51:15.094364+00:00\",\n  \"data_seen_before_freeze\": false,\n  \"prior_exposure\": \"Official stock perpetual rules and download form field descriptions; no downloaded funding values inspected.\",\n  \"question\": \"Do the official historical funding files identify the four intended USDT perpetuals, distinguish actual settlement from interest-rate assumptions, and support repeatable cost-accounting inputs?\",\n  \"products\": [\n    \"aapl\",\n    \"qqq\",\n    \"btc\",\n    \"eth\"\n  ],\n  \"sample_window\": {\n    \"start\": \"2026-09-21T00:00:00Z\",\n    \"end_exclusive\": \"2026-09-22T00:00:00Z\",\n    \"selection_rule\": \"First complete day shown as default by the official download page; no outcome-based selection.\"\n  },\n  \"method\": [\n    \"Download the official funding-rate file through the public historical-data page; record original filename, retrieval time, byte count and SHA-256.\",\n    \"Inspect archive and CSV types; reject API responses or absent files. Preserve source bytes locally; publish only authored observations and aggregate diagnostics pending redistribution permission.\",\n    \"Select exact exchange instrument identifiers for each product. Do not infer missing contracts or fill absent rows.\",\n    \"Sort settlement timestamps per contract; report row counts, duplicates, missing values, observed spacings, positive/negative/zero counts, and sum of realized funding-rate observations.\",\n    \"A sum of rates is a fixed-notional diagnostic only. It is not total funding in an actual position, net return, executable carry, predictive advantage or annualized yield.\",\n    \"Compare stock interest-rate term I=0 with actual observed funding. Any nonzero stock settlement refutes the claim that I=0 guarantees zero funding; missing observations keep it unknown.\",\n    \"Unknown fees, mark-price path, entry/exit costs, trade prices and quantity stay null; no profitability or readiness flag.\"\n  ],\n  \"failure_states\": [\n    \"DOWNLOAD_UNAVAILABLE\",\n    \"FORMAT_UNSUPPORTED\",\n    \"MISSING_TARGET_ROWS\",\n    \"UNKNOWN\"\n  ],\n  \"next_forward_work\": \"Register a fully frozen observation-only or replay plan only after its necessary data and rules are verified. Do not treat this historical audit as forward validation.\",\n  \"synthetic\": false,\n  \"evidence_stage\": \"REAL_HISTORICAL_DATA_AUDIT\",\n  \"replay_eligibility\": \"NOT_A_TRADING_PLAN\",\n  \"readiness\": \"UNKNOWN\"\n}\n",
+    "product_capability_cards.json": "{\n  \"created_at\": \"2026-09-22T17:57:57.002886Z\",\n  \"extension_example_only\": {\n    \"enabled\": false,\n    \"note\": \"Catalog expansion test only; no production registration or research plan.\",\n    \"product_id\": \"intc\",\n    \"source_mapping_template\": {\n      \"native_code\": null,\n      \"specification_page\": \"https://www.okx.com/zh-hans/trade-market/info/swap\",\n      \"venue\": \"OKX\"\n    },\n    \"status\": \"EXAMPLE_NOT_REGISTERED\"\n  },\n  \"products\": [\n    {\n      \"account_eligibility\": \"NOT_ASSESSED\",\n      \"calendar\": \"Target perpetual 24/7; reference exchange calendar separate\",\n      \"contract_face_value\": \"1\",\n      \"contract_kind\": \"USDT_MARGINED_PERPETUAL\",\n      \"contract_multiplier\": \"1\",\n      \"data_source\": \"https://www.okx.com/historical-data\",\n      \"displayed_max_leverage\": \"25\",\n      \"enabled\": true,\n      \"face_value_unit\": \"AAPL\",\n      \"fees\": {\n        \"actual_fee_tier\": \"UNKNOWN_NOT_ACCOUNT_ASSESSED\",\n        \"exit_cost\": null,\n        \"fee_source\": \"https://www.okx.com/fees\",\n        \"maker\": null,\n        \"slippage\": null,\n        \"taker\": null\n      },\n      \"funding_sample\": {\n        \"cost_to_real_position\": null,\n        \"duplicate_timestamp_count\": 0,\n        \"first_event_at\": \"2026-09-20T16:00:00Z\",\n        \"instrument_ref\": \"AAPL-USDT-SWAP\",\n        \"last_event_at\": \"2026-09-21T08:00:00Z\",\n        \"missing_value_count\": 0,\n        \"negative_count\": 0,\n        \"observed_intervals_hours\": [\n          \"8\"\n        ],\n        \"outside_requested_utc_window_count\": 1,\n        \"positive_count\": 0,\n        \"quality_state\": \"FILENAME_UTC_WINDOW_MISMATCH\",\n        \"requested_utc_day_complete\": false,\n        \"row_count\": 3,\n        \"sum_basis_points_diagnostic\": \"0\",\n        \"sum_rates_diagnostic\": \"0\",\n        \"unique_event_count\": 3,\n        \"within_requested_utc_window_count\": 2,\n        \"within_requested_window_sum_diagnostic\": \"0\",\n        \"zero_count\": 3\n      },\n      \"funding_schedule\": \"8-hour spacing observed in sample, not a perpetual current guarantee\",\n      \"gaps\": [\n        \"target trade/mark/index paths\",\n        \"actual trading-fee schedule and applicable tier\",\n        \"download date timezone needs further official evidence\",\n        \"source dissemination time unknown\",\n        \"regional/account eligibility not assessed\"\n      ],\n      \"instrument_ref\": \"AAPL-USDT-SWAP\",\n      \"minimum_quantity_contracts\": \"0.01\",\n      \"native_code_evidence\": [\n        \"official_download_instrument_name\",\n        \"official_swap_specification_selection\"\n      ],\n      \"normalized_format\": \"offline Decimal rates and aware UTC timestamps; no unknown filled with zero\",\n      \"price_roles\": {\n        \"funding_rate\": \"ACTUAL_SETTLEMENT_SAMPLE_DOWNLOADED\",\n        \"index_price\": \"RULE_VERIFIED_NO_PATH_DATA\",\n        \"mark_price\": \"RULE_VERIFIED_NO_PATH_DATA\",\n        \"target_trade_price\": \"NOT_DOWNLOADED\"\n      },\n      \"price_tick_usdt\": \"0.01\",\n      \"product_id\": \"aapl\",\n      \"quantity_step_contracts\": \"0.01\",\n      \"raw_format\": \"zip containing CSV instrument_name,funding_rate,funding_time; timestamp milliseconds UTC\",\n      \"readiness\": \"UNKNOWN\",\n      \"reference_underlying\": {\n        \"quote_currency\": \"USD\",\n        \"role\": \"REFERENCE_NOT_SUBSTITUTE\",\n        \"ticker\": \"AAPL\",\n        \"verified_downloaded_price_data\": false\n      },\n      \"rule_observation_recorded_at\": \"2026-09-22T17:57:57.002886Z\",\n      \"rule_valid_until\": null,\n      \"settlement_currency\": \"USDT\",\n      \"spec_version\": \"observed-20260923-v1\",\n      \"status\": \"IDENTITY_AND_SMALL_FUNDING_SAMPLE_VERIFIED\",\n      \"venue\": \"OKX\"\n    },\n    {\n      \"account_eligibility\": \"NOT_ASSESSED\",\n      \"calendar\": \"Target perpetual 24/7; reference exchange calendar separate\",\n      \"contract_face_value\": \"1\",\n      \"contract_kind\": \"USDT_MARGINED_PERPETUAL\",\n      \"contract_multiplier\": \"1\",\n      \"data_source\": \"https://www.okx.com/historical-data\",\n      \"displayed_max_leverage\": \"50\",\n      \"enabled\": true,\n      \"face_value_unit\": \"QQQ\",\n      \"fees\": {\n        \"actual_fee_tier\": \"UNKNOWN_NOT_ACCOUNT_ASSESSED\",\n        \"exit_cost\": null,\n        \"fee_source\": \"https://www.okx.com/fees\",\n        \"maker\": null,\n        \"slippage\": null,\n        \"taker\": null\n      },\n      \"funding_sample\": {\n        \"cost_to_real_position\": null,\n        \"duplicate_timestamp_count\": 0,\n        \"first_event_at\": \"2026-09-20T16:00:00Z\",\n        \"instrument_ref\": \"QQQ-USDT-SWAP\",\n        \"last_event_at\": \"2026-09-21T08:00:00Z\",\n        \"missing_value_count\": 0,\n        \"negative_count\": 0,\n        \"observed_intervals_hours\": [\n          \"8\"\n        ],\n        \"outside_requested_utc_window_count\": 1,\n        \"positive_count\": 1,\n        \"quality_state\": \"FILENAME_UTC_WINDOW_MISMATCH\",\n        \"requested_utc_day_complete\": false,\n        \"row_count\": 3,\n        \"sum_basis_points_diagnostic\": \"0.3385287110560000\",\n        \"sum_rates_diagnostic\": \"0.0000338528711056\",\n        \"unique_event_count\": 3,\n        \"within_requested_utc_window_count\": 2,\n        \"within_requested_window_sum_diagnostic\": \"0.0000338528711056\",\n        \"zero_count\": 2\n      },\n      \"funding_schedule\": \"8-hour spacing observed in sample, not a perpetual current guarantee\",\n      \"gaps\": [\n        \"target trade/mark/index paths\",\n        \"actual trading-fee schedule and applicable tier\",\n        \"download date timezone needs further official evidence\",\n        \"source dissemination time unknown\",\n        \"regional/account eligibility not assessed\"\n      ],\n      \"instrument_ref\": \"QQQ-USDT-SWAP\",\n      \"minimum_quantity_contracts\": \"0.01\",\n      \"native_code_evidence\": [\n        \"official_download_instrument_name\",\n        \"official_swap_specification_selection\"\n      ],\n      \"normalized_format\": \"offline Decimal rates and aware UTC timestamps; no unknown filled with zero\",\n      \"price_roles\": {\n        \"funding_rate\": \"ACTUAL_SETTLEMENT_SAMPLE_DOWNLOADED\",\n        \"index_price\": \"RULE_VERIFIED_NO_PATH_DATA\",\n        \"mark_price\": \"RULE_VERIFIED_NO_PATH_DATA\",\n        \"target_trade_price\": \"NOT_DOWNLOADED\"\n      },\n      \"price_tick_usdt\": \"0.01\",\n      \"product_id\": \"qqq\",\n      \"quantity_step_contracts\": \"0.01\",\n      \"raw_format\": \"zip containing CSV instrument_name,funding_rate,funding_time; timestamp milliseconds UTC\",\n      \"readiness\": \"UNKNOWN\",\n      \"reference_underlying\": {\n        \"quote_currency\": \"USD\",\n        \"role\": \"REFERENCE_NOT_SUBSTITUTE\",\n        \"ticker\": \"QQQ\",\n        \"verified_downloaded_price_data\": false\n      },\n      \"rule_observation_recorded_at\": \"2026-09-22T17:57:57.002886Z\",\n      \"rule_valid_until\": null,\n      \"settlement_currency\": \"USDT\",\n      \"spec_version\": \"observed-20260923-v1\",\n      \"status\": \"IDENTITY_AND_SMALL_FUNDING_SAMPLE_VERIFIED\",\n      \"venue\": \"OKX\"\n    },\n    {\n      \"account_eligibility\": \"NOT_ASSESSED\",\n      \"calendar\": \"Target perpetual 24/7\",\n      \"contract_face_value\": \"0.01\",\n      \"contract_kind\": \"USDT_MARGINED_PERPETUAL\",\n      \"contract_multiplier\": \"1\",\n      \"data_source\": \"https://www.okx.com/historical-data\",\n      \"displayed_max_leverage\": \"100\",\n      \"enabled\": true,\n      \"face_value_unit\": \"BTC\",\n      \"fees\": {\n        \"actual_fee_tier\": \"UNKNOWN_NOT_ACCOUNT_ASSESSED\",\n        \"exit_cost\": null,\n        \"fee_source\": \"https://www.okx.com/fees\",\n        \"maker\": null,\n        \"slippage\": null,\n        \"taker\": null\n      },\n      \"funding_sample\": {\n        \"cost_to_real_position\": null,\n        \"duplicate_timestamp_count\": 0,\n        \"first_event_at\": \"2026-09-20T16:00:00Z\",\n        \"instrument_ref\": \"BTC-USDT-SWAP\",\n        \"last_event_at\": \"2026-09-21T08:00:00Z\",\n        \"missing_value_count\": 0,\n        \"negative_count\": 0,\n        \"observed_intervals_hours\": [\n          \"8\"\n        ],\n        \"outside_requested_utc_window_count\": 1,\n        \"positive_count\": 3,\n        \"quality_state\": \"FILENAME_UTC_WINDOW_MISMATCH\",\n        \"requested_utc_day_complete\": false,\n        \"row_count\": 3,\n        \"sum_basis_points_diagnostic\": \"2.7115932695440000\",\n        \"sum_rates_diagnostic\": \"0.0002711593269544\",\n        \"unique_event_count\": 3,\n        \"within_requested_utc_window_count\": 2,\n        \"within_requested_window_sum_diagnostic\": \"0.0001925806509055\",\n        \"zero_count\": 0\n      },\n      \"funding_schedule\": \"8-hour spacing observed in sample, not a perpetual current guarantee\",\n      \"gaps\": [\n        \"target trade/mark/index paths\",\n        \"actual trading-fee schedule and applicable tier\",\n        \"download date timezone needs further official evidence\",\n        \"source dissemination time unknown\",\n        \"regional/account eligibility not assessed\"\n      ],\n      \"instrument_ref\": \"BTC-USDT-SWAP\",\n      \"minimum_quantity_contracts\": \"0.01\",\n      \"native_code_evidence\": [\n        \"official_download_instrument_name\",\n        \"official_swap_specification_selection\"\n      ],\n      \"normalized_format\": \"offline Decimal rates and aware UTC timestamps; no unknown filled with zero\",\n      \"price_roles\": {\n        \"funding_rate\": \"ACTUAL_SETTLEMENT_SAMPLE_DOWNLOADED\",\n        \"index_price\": \"RULE_VERIFIED_NO_PATH_DATA\",\n        \"mark_price\": \"RULE_VERIFIED_NO_PATH_DATA\",\n        \"target_trade_price\": \"NOT_DOWNLOADED\"\n      },\n      \"price_tick_usdt\": \"0.1\",\n      \"product_id\": \"btc\",\n      \"quantity_step_contracts\": \"0.01\",\n      \"raw_format\": \"zip containing CSV instrument_name,funding_rate,funding_time; timestamp milliseconds UTC\",\n      \"readiness\": \"UNKNOWN\",\n      \"reference_underlying\": {\n        \"quote_currency\": \"venue-dependent\",\n        \"role\": \"REFERENCE_NOT_SUBSTITUTE\",\n        \"ticker\": \"BTC\",\n        \"verified_downloaded_price_data\": false\n      },\n      \"rule_observation_recorded_at\": \"2026-09-22T17:57:57.002886Z\",\n      \"rule_valid_until\": null,\n      \"settlement_currency\": \"USDT\",\n      \"spec_version\": \"observed-20260923-v1\",\n      \"status\": \"IDENTITY_AND_SMALL_FUNDING_SAMPLE_VERIFIED\",\n      \"venue\": \"OKX\"\n    },\n    {\n      \"account_eligibility\": \"NOT_ASSESSED\",\n      \"calendar\": \"Target perpetual 24/7\",\n      \"contract_face_value\": \"0.1\",\n      \"contract_kind\": \"USDT_MARGINED_PERPETUAL\",\n      \"contract_multiplier\": \"1\",\n      \"data_source\": \"https://www.okx.com/historical-data\",\n      \"displayed_max_leverage\": \"100\",\n      \"enabled\": true,\n      \"face_value_unit\": \"ETH\",\n      \"fees\": {\n        \"actual_fee_tier\": \"UNKNOWN_NOT_ACCOUNT_ASSESSED\",\n        \"exit_cost\": null,\n        \"fee_source\": \"https://www.okx.com/fees\",\n        \"maker\": null,\n        \"slippage\": null,\n        \"taker\": null\n      },\n      \"funding_sample\": {\n        \"cost_to_real_position\": null,\n        \"duplicate_timestamp_count\": 0,\n        \"first_event_at\": \"2026-09-20T16:00:00Z\",\n        \"instrument_ref\": \"ETH-USDT-SWAP\",\n        \"last_event_at\": \"2026-09-21T08:00:00Z\",\n        \"missing_value_count\": 0,\n        \"negative_count\": 0,\n        \"observed_intervals_hours\": [\n          \"8\"\n        ],\n        \"outside_requested_utc_window_count\": 1,\n        \"positive_count\": 3,\n        \"quality_state\": \"FILENAME_UTC_WINDOW_MISMATCH\",\n        \"requested_utc_day_complete\": false,\n        \"row_count\": 3,\n        \"sum_basis_points_diagnostic\": \"1.4183556215730000\",\n        \"sum_rates_diagnostic\": \"0.0001418355621573\",\n        \"unique_event_count\": 3,\n        \"within_requested_utc_window_count\": 2,\n        \"within_requested_window_sum_diagnostic\": \"0.0001155807198601\",\n        \"zero_count\": 0\n      },\n      \"funding_schedule\": \"8-hour spacing observed in sample, not a perpetual current guarantee\",\n      \"gaps\": [\n        \"target trade/mark/index paths\",\n        \"actual trading-fee schedule and applicable tier\",\n        \"download date timezone needs further official evidence\",\n        \"source dissemination time unknown\",\n        \"regional/account eligibility not assessed\"\n      ],\n      \"instrument_ref\": \"ETH-USDT-SWAP\",\n      \"minimum_quantity_contracts\": \"0.01\",\n      \"native_code_evidence\": [\n        \"official_download_instrument_name\",\n        \"official_swap_specification_selection\"\n      ],\n      \"normalized_format\": \"offline Decimal rates and aware UTC timestamps; no unknown filled with zero\",\n      \"price_roles\": {\n        \"funding_rate\": \"ACTUAL_SETTLEMENT_SAMPLE_DOWNLOADED\",\n        \"index_price\": \"RULE_VERIFIED_NO_PATH_DATA\",\n        \"mark_price\": \"RULE_VERIFIED_NO_PATH_DATA\",\n        \"target_trade_price\": \"NOT_DOWNLOADED\"\n      },\n      \"price_tick_usdt\": \"0.01\",\n      \"product_id\": \"eth\",\n      \"quantity_step_contracts\": \"0.01\",\n      \"raw_format\": \"zip containing CSV instrument_name,funding_rate,funding_time; timestamp milliseconds UTC\",\n      \"readiness\": \"UNKNOWN\",\n      \"reference_underlying\": {\n        \"quote_currency\": \"venue-dependent\",\n        \"role\": \"REFERENCE_NOT_SUBSTITUTE\",\n        \"ticker\": \"ETH\",\n        \"verified_downloaded_price_data\": false\n      },\n      \"rule_observation_recorded_at\": \"2026-09-22T17:57:57.002886Z\",\n      \"rule_valid_until\": null,\n      \"settlement_currency\": \"USDT\",\n      \"spec_version\": \"observed-20260923-v1\",\n      \"status\": \"IDENTITY_AND_SMALL_FUNDING_SAMPLE_VERIFIED\",\n      \"venue\": \"OKX\"\n    }\n  ],\n  \"schema_version\": \"1.0\"\n}\n",
+    "reproduce_derived.py": "#!/usr/bin/env python3\n\"\"\"Reproduce PUBLIC derived diagnostics. Does not verify restricted source rows.\"\"\"\nimport json\nfrom pathlib import Path\nfrom decimal import Decimal as D\np=Path(__file__).parent\nfacts=json.loads((p/'derived_facts.json').read_text())\nresult={'source_integrity_verified':False,'scope':'DERIVED_DIAGNOSTICS_ONLY','products':{},'limitations':['Raw source excluded: redistribution permission not established','This is not market-data restoration or a trading backtest']}\nfor product,f in facts['products'].items():\n    assert f['positive_count']+f['negative_count']+f['zero_count']==f['row_count']\n    assert f['within_requested_utc_window_count']+f['outside_requested_utc_window_count']==f['row_count']\n    assert D(f['sum_rates_diagnostic'])*D(10000)==D(f['sum_basis_points_diagnostic'])\n    result['products'][product]={'count_conservation':True,'bps_conversion':str(D(f['sum_rates_diagnostic'])*D(10000)),'outside_requested_window':f['outside_requested_utc_window_count']>0,'nonzero_rate_observed':f['positive_count']+f['negative_count']>0}\nresult['zero_interest_implies_zero_funding_refuted']=any(result['products'][s]['nonzero_rate_observed'] for s in ('aapl','qqq'))\nresult['filename_is_utc_day_refuted']=any(x['outside_requested_window'] for x in result['products'].values())\nprint(json.dumps(result,ensure_ascii=False,sort_keys=True,indent=2))\n",
+    "research_seed_registry.json": "{\n  \"created_at\": \"2026-09-22T17:57:57.002886Z\",\n  \"no_fixed_daily_count\": true,\n  \"schema_version\": \"1.0\",\n  \"scope_note\": \"A-H eight initial categories plus I independent replication; registration does not claim nine executed strategies.\",\n  \"seeds\": [\n    {\n      \"baseline\": \"官方规则与真实小样本对照\",\n      \"counts_as_completed_economic_research\": false,\n      \"defer_reason\": null,\n      \"discovery_id\": \"seed-a-20260923\",\n      \"mechanism_signature\": \"A|文件日期、目标身份和资金费单位是否支持可重复成本输入？\",\n      \"next_action\": \"核对独立日文件的UTC边界及实际延迟\",\n      \"product_refs\": [\n        \"aapl\",\n        \"qqq\",\n        \"btc\",\n        \"eth\"\n      ],\n      \"question\": \"文件日期、目标身份和资金费单位是否支持可重复成本输入？\",\n      \"restart_condition\": \"原始文件哈希或官方字段规则变化\",\n      \"seed_code\": \"A\",\n      \"source_refs\": [\n        \"research-program-v1\",\n        \"funding-data-audit-v1\"\n      ],\n      \"status\": \"REAL_EXECUTED\",\n      \"title\": \"数据与规则\"\n    },\n    {\n      \"baseline\": \"相同退出、期限与名义暴露的直接进入/收盘确认\",\n      \"counts_as_completed_economic_research\": false,\n      \"defer_reason\": \"取得合法成交路径、费用后冻结候选，不预选赢家\",\n      \"discovery_id\": \"seed-b-20260923\",\n      \"mechanism_signature\": \"B|确认突破是否改善信息而非仅减少暴露？\",\n      \"next_action\": \"取得合法成交路径、费用后冻结候选，不预选赢家\",\n      \"product_refs\": [\n        \"btc\",\n        \"eth\"\n      ],\n      \"question\": \"确认突破是否改善信息而非仅减少暴露？\",\n      \"restart_condition\": \"新增目标交易路径与费用\",\n      \"seed_code\": \"B\",\n      \"source_refs\": [\n        \"research-program-v1\"\n      ],\n      \"status\": \"WAITING_TARGET_PRICE_DATA\",\n      \"title\": \"趋势与进入方式\"\n    },\n    {\n      \"baseline\": \"固定网格/冻结停用规则与持有基线\",\n      \"counts_as_completed_economic_research\": false,\n      \"defer_reason\": \"先做库存守恒与完整权益，不显示只有已实现网格收入\",\n      \"discovery_id\": \"seed-c-20260923\",\n      \"mechanism_signature\": \"C|区间往返收入扣除残余库存和退出成本后是否成立？\",\n      \"next_action\": \"先做库存守恒与完整权益，不显示只有已实现网格收入\",\n      \"product_refs\": [\n        \"eth\",\n        \"btc\"\n      ],\n      \"question\": \"区间往返收入扣除残余库存和退出成本后是否成立？\",\n      \"restart_condition\": \"足够细价格路径、单位与费用齐备\",\n      \"seed_code\": \"C\",\n      \"source_refs\": [\n        \"research-program-v1\"\n      ],\n      \"status\": \"WAITING_PATH_AND_LEDGER\",\n      \"title\": \"区间与库存\"\n    },\n    {\n      \"baseline\": \"反向资金费方向与相同数量期限的相反暴露对照\",\n      \"counts_as_completed_economic_research\": false,\n      \"defer_reason\": \"2026-09-23 00:05 UTC 开始的单次BTC观察按冻结规则待数据\",\n      \"discovery_id\": \"seed-d-20260923\",\n      \"mechanism_signature\": \"D|历史资金费方向收入是否足以覆盖价格暴露及来回成本？\",\n      \"next_action\": \"2026-09-23 00:05 UTC 开始的单次BTC观察按冻结规则待数据\",\n      \"product_refs\": [\n        \"btc\",\n        \"eth\",\n        \"qqq\",\n        \"aapl\"\n      ],\n      \"question\": \"历史资金费方向收入是否足以覆盖价格暴露及来回成本？\",\n      \"restart_condition\": \"后续合法目标交易/标记与资金费文件\",\n      \"seed_code\": \"D\",\n      \"source_refs\": [\n        \"research-program-v1\",\n        \"funding-data-audit-v1\"\n      ],\n      \"status\": \"FORWARD_PROTOCOL_REGISTERED_INCOMPLETE\",\n      \"title\": \"资金费与拥挤\"\n    },\n    {\n      \"baseline\": \"常规/延长/休市分层，目标成交-标记-参考价格分开\",\n      \"counts_as_completed_economic_research\": false,\n      \"defer_reason\": null,\n      \"discovery_id\": \"seed-e-20260923\",\n      \"mechanism_signature\": \"E|参考市场休市时指数自身反馈是否使表面价差不可交易？\",\n      \"next_action\": \"预登记时段/美元兑USDT/价差与费用联立反证\",\n      \"product_refs\": [\n        \"aapl\",\n        \"qqq\"\n      ],\n      \"question\": \"参考市场休市时指数自身反馈是否使表面价差不可交易？\",\n      \"restart_condition\": \"允许来源提供同步价格与事件发布时间\",\n      \"seed_code\": \"E\",\n      \"source_refs\": [\n        \"research-program-v1\",\n        \"stock-perpetuals\"\n      ],\n      \"status\": \"REAL_MECHANISM_REVIEW_EXECUTED\",\n      \"title\": \"事件与会话\"\n    },\n    {\n      \"baseline\": \"同时点、相同币种、匹配波动和方向的简单基准\",\n      \"counts_as_completed_economic_research\": false,\n      \"defer_reason\": \"先规定暴露匹配，不把假设资金结果相加\",\n      \"discovery_id\": \"seed-f-20260923\",\n      \"mechanism_signature\": \"F|多产品结果是否只重复共同市场暴露？\",\n      \"next_action\": \"先规定暴露匹配，不把假设资金结果相加\",\n      \"product_refs\": [\n        \"aapl\",\n        \"qqq\",\n        \"btc\",\n        \"eth\"\n      ],\n      \"question\": \"多产品结果是否只重复共同市场暴露？\",\n      \"restart_condition\": \"同步目标路径和参考数据\",\n      \"seed_code\": \"F\",\n      \"source_refs\": [\n        \"research-program-v1\"\n      ],\n      \"status\": \"WAITING_SYNCHRONIZED_DATA\",\n      \"title\": \"共同暴露\"\n    },\n    {\n      \"baseline\": \"始终运行/简单过滤/等待与条件选择\",\n      \"counts_as_completed_economic_research\": false,\n      \"defer_reason\": \"仅在有基础结果后检验边界，不追最近冠军\",\n      \"discovery_id\": \"seed-g-20260923\",\n      \"mechanism_signature\": \"G|事前状态切换是否覆盖切换成本？\",\n      \"next_action\": \"仅在有基础结果后检验边界，不追最近冠军\",\n      \"product_refs\": [\n        \"btc\",\n        \"eth\"\n      ],\n      \"question\": \"事前状态切换是否覆盖切换成本？\",\n      \"restart_condition\": \"基础方法原规则复核或新市场状态证据\",\n      \"seed_code\": \"G\",\n      \"source_refs\": [\n        \"research-program-v1\"\n      ],\n      \"status\": \"WAITING_BASE_METHOD_RESULT\",\n      \"title\": \"边界与切换\"\n    },\n    {\n      \"baseline\": \"简单价格/结构化事件/AI增量/预登记反向\",\n      \"counts_as_completed_economic_research\": false,\n      \"defer_reason\": \"先留存当时输出和信息截止，旧窗口不补问模型\",\n      \"discovery_id\": \"seed-h-20260923\",\n      \"mechanism_signature\": \"H|事前AI事件信息是否增加可检验信号？\",\n      \"next_action\": \"先留存当时输出和信息截止，旧窗口不补问模型\",\n      \"product_refs\": [\n        \"aapl\",\n        \"qqq\",\n        \"btc\",\n        \"eth\"\n      ],\n      \"question\": \"事前AI事件信息是否增加可检验信号？\",\n      \"restart_condition\": \"可核实事件发布时间与新模型前向输出\",\n      \"seed_code\": \"H\",\n      \"source_refs\": [\n        \"research-program-v1\"\n      ],\n      \"status\": \"WAITING_PROSPECTIVE_EVENT_OUTPUT\",\n      \"title\": \"AI增量与反向对照\"\n    },\n    {\n      \"baseline\": \"原方法与新产品/新时期，参数不重新优化\",\n      \"counts_as_completed_economic_research\": false,\n      \"defer_reason\": \"ETH只做将来独立复现，INTC保持禁用示例\",\n      \"discovery_id\": \"seed-i-20260923\",\n      \"mechanism_signature\": \"I|冻结机制能否在未用于选择的新样本复现？\",\n      \"next_action\": \"ETH只做将来独立复现，INTC保持禁用示例\",\n      \"product_refs\": [\n        \"btc\",\n        \"eth\"\n      ],\n      \"question\": \"冻结机制能否在未用于选择的新样本复现？\",\n      \"restart_condition\": \"有方法版本和未曝光新窗口\",\n      \"seed_code\": \"I\",\n      \"source_refs\": [\n        \"research-program-v1\"\n      ],\n      \"status\": \"WAITING_FIRST_METHOD_RESULT\",\n      \"title\": \"独立复现\"\n    }\n  ]\n}\n",
+    "results.json": "{\n  \"analysis_kind\": \"REAL_HISTORICAL_DATA_AUDIT\",\n  \"current_execution_conditions\": \"UNKNOWN\",\n  \"findings\": {\n    \"all_four_native_ids_observed\": true,\n    \"filename_as_utc_day_refuted\": true,\n    \"predictive_advantage\": \"NOT_TESTED\",\n    \"profitability\": \"UNKNOWN\",\n    \"zero_interest_implies_zero_funding_refuted\": true\n  },\n  \"member\": \"allswap-fundingrates-2026-09-21.csv\",\n  \"member_bytes\": 82188,\n  \"member_sha256\": \"c2ae92301fd8ace5682729e46e58ff959d14b7ebf948ead7d9c4f533d5a9950c\",\n  \"net_return\": null,\n  \"products\": {\n    \"aapl\": {\n      \"cost_to_real_position\": null,\n      \"duplicate_timestamp_count\": 0,\n      \"first_event_at\": \"2026-09-20T16:00:00Z\",\n      \"instrument_ref\": \"AAPL-USDT-SWAP\",\n      \"last_event_at\": \"2026-09-21T08:00:00Z\",\n      \"missing_value_count\": 0,\n      \"negative_count\": 0,\n      \"observed_intervals_hours\": [\n        \"8\"\n      ],\n      \"outside_requested_utc_window_count\": 1,\n      \"positive_count\": 0,\n      \"quality_state\": \"FILENAME_UTC_WINDOW_MISMATCH\",\n      \"requested_utc_day_complete\": false,\n      \"row_count\": 3,\n      \"sum_basis_points_diagnostic\": \"0\",\n      \"sum_rates_diagnostic\": \"0\",\n      \"unique_event_count\": 3,\n      \"within_requested_utc_window_count\": 2,\n      \"within_requested_window_sum_diagnostic\": \"0\",\n      \"zero_count\": 3\n    },\n    \"btc\": {\n      \"cost_to_real_position\": null,\n      \"duplicate_timestamp_count\": 0,\n      \"first_event_at\": \"2026-09-20T16:00:00Z\",\n      \"instrument_ref\": \"BTC-USDT-SWAP\",\n      \"last_event_at\": \"2026-09-21T08:00:00Z\",\n      \"missing_value_count\": 0,\n      \"negative_count\": 0,\n      \"observed_intervals_hours\": [\n        \"8\"\n      ],\n      \"outside_requested_utc_window_count\": 1,\n      \"positive_count\": 3,\n      \"quality_state\": \"FILENAME_UTC_WINDOW_MISMATCH\",\n      \"requested_utc_day_complete\": false,\n      \"row_count\": 3,\n      \"sum_basis_points_diagnostic\": \"2.7115932695440000\",\n      \"sum_rates_diagnostic\": \"0.0002711593269544\",\n      \"unique_event_count\": 3,\n      \"within_requested_utc_window_count\": 2,\n      \"within_requested_window_sum_diagnostic\": \"0.0001925806509055\",\n      \"zero_count\": 0\n    },\n    \"eth\": {\n      \"cost_to_real_position\": null,\n      \"duplicate_timestamp_count\": 0,\n      \"first_event_at\": \"2026-09-20T16:00:00Z\",\n      \"instrument_ref\": \"ETH-USDT-SWAP\",\n      \"last_event_at\": \"2026-09-21T08:00:00Z\",\n      \"missing_value_count\": 0,\n      \"negative_count\": 0,\n      \"observed_intervals_hours\": [\n        \"8\"\n      ],\n      \"outside_requested_utc_window_count\": 1,\n      \"positive_count\": 3,\n      \"quality_state\": \"FILENAME_UTC_WINDOW_MISMATCH\",\n      \"requested_utc_day_complete\": false,\n      \"row_count\": 3,\n      \"sum_basis_points_diagnostic\": \"1.4183556215730000\",\n      \"sum_rates_diagnostic\": \"0.0001418355621573\",\n      \"unique_event_count\": 3,\n      \"within_requested_utc_window_count\": 2,\n      \"within_requested_window_sum_diagnostic\": \"0.0001155807198601\",\n      \"zero_count\": 0\n    },\n    \"qqq\": {\n      \"cost_to_real_position\": null,\n      \"duplicate_timestamp_count\": 0,\n      \"first_event_at\": \"2026-09-20T16:00:00Z\",\n      \"instrument_ref\": \"QQQ-USDT-SWAP\",\n      \"last_event_at\": \"2026-09-21T08:00:00Z\",\n      \"missing_value_count\": 0,\n      \"negative_count\": 0,\n      \"observed_intervals_hours\": [\n        \"8\"\n      ],\n      \"outside_requested_utc_window_count\": 1,\n      \"positive_count\": 1,\n      \"quality_state\": \"FILENAME_UTC_WINDOW_MISMATCH\",\n      \"requested_utc_day_complete\": false,\n      \"row_count\": 3,\n      \"sum_basis_points_diagnostic\": \"0.3385287110560000\",\n      \"sum_rates_diagnostic\": \"0.0000338528711056\",\n      \"unique_event_count\": 3,\n      \"within_requested_utc_window_count\": 2,\n      \"within_requested_window_sum_diagnostic\": \"0.0000338528711056\",\n      \"zero_count\": 2\n    }\n  },\n  \"protocol_sha256\": \"730216be58b9839a635306273cf03530036ce07c3416e629f4de5f3ab3fa8429\",\n  \"requested_utc_window\": {\n    \"end_exclusive\": \"2026-09-22T00:00:00Z\",\n    \"selection_rule\": \"First complete day shown as default by the official download page; no outcome-based selection.\",\n    \"start\": \"2026-09-21T00:00:00Z\"\n  },\n  \"schema_version\": \"1.0\",\n  \"source_bytes\": 12419,\n  \"source_sha256\": \"34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c\",\n  \"synthetic\": false,\n  \"total_rows\": 2103,\n  \"unique_instruments\": 482\n}\n",
+    "sources.json": "{\n  \"archive\": {\n    \"backup_state\": \"LOCAL_ONLY_NO_REMOTE_RAW_BACKUP\",\n    \"bytes\": 12419,\n    \"displayed_export_time\": \"2026/09/23 01:50:45\",\n    \"displayed_export_timezone\": \"NOT_STATED_BY_UI\",\n    \"download_latency_vs_latest_target_event_hours\": \"33.8567\",\n    \"downloaded_at\": \"2026-09-22T17:51:24.065702Z\",\n    \"first_observed_available_at\": \"2026-09-22T17:51:24.065702Z\",\n    \"latency_qualification\": \"Elapsed retrieval age, not an established publisher service delay.\",\n    \"member\": \"allswap-fundingrates-2026-09-21.csv\",\n    \"member_bytes\": 82188,\n    \"member_sha256\": \"c2ae92301fd8ace5682729e46e58ff959d14b7ebf948ead7d9c4f533d5a9950c\",\n    \"original_filename\": \"allswap-fundingrates-2026-09-21.zip\",\n    \"raw_disclosure\": \"LOCAL_ONLY\",\n    \"redistribution_permission\": \"NOT_ESTABLISHED\",\n    \"retrieval_ui\": \"Funding rate / Perpetual / All / Daily / Confirm / Download; BTC text search had no selectable result but All generated a file successfully.\",\n    \"sha256\": \"34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c\",\n    \"source_period_label\": \"2026/09/21 - 2026/09/21\",\n    \"source_url\": \"https://www.okx.com/zh-hans/historical-data\",\n    \"upstream_publication_time\": null,\n    \"zip_crc\": \"PASS\"\n  },\n  \"browser_specification_observations\": {\n    \"account_information_accessed\": false,\n    \"data_role\": \"CONTRACT_RULES_NOT_EXECUTABLE_PRICE\",\n    \"observation_session_start\": \"2026-09-22T17:49:41Z\",\n    \"recorded_at\": \"2026-09-22T17:57:57.002886Z\",\n    \"selected_market\": \"永续 / USDT 本位\",\n    \"url\": \"https://www.okx.com/zh-hans/trade-market/info/swap\"\n  },\n  \"documents\": [\n    {\n      \"bytes\": 80528,\n      \"disclosure\": \"LOCAL_ONLY_REDISCLOSURE_UNVERIFIED\",\n      \"final_url\": \"https://www.okx.com/help/stock-perpetuals\",\n      \"http_status\": 200,\n      \"retrieved_at\": \"2026-09-22T17:53:09.117254+00:00\",\n      \"sha256\": \"cde15e8e92d76650333a365feecd3deebe3e2103dd513fc9aeb774862cab56e5\",\n      \"source_id\": \"stock-perpetuals\",\n      \"url\": \"https://www.okx.com/help/stock-perpetuals\"\n    },\n    {\n      \"bytes\": 84607,\n      \"disclosure\": \"LOCAL_ONLY_REDISCLOSURE_UNVERIFIED\",\n      \"final_url\": \"https://www.okx.com/en-sg/help/perps-funding-fee-mechanism\",\n      \"http_status\": 200,\n      \"retrieved_at\": \"2026-09-22T17:53:09.117576+00:00\",\n      \"sha256\": \"ad7a39c4206fead0ac28d0871fda0a2cdf48fb622b8a5f5d548996e1ab81d4c4\",\n      \"source_id\": \"funding-mechanism\",\n      \"url\": \"https://www.okx.com/en-sg/help/perps-funding-fee-mechanism\"\n    },\n    {\n      \"bytes\": 73834,\n      \"disclosure\": \"LOCAL_ONLY_REDISCLOSURE_UNVERIFIED\",\n      \"final_url\": \"https://www.okx.com/en-sg/help/okx-to-list-perpetual-futures-for-selected-equities\",\n      \"http_status\": 200,\n      \"retrieved_at\": \"2026-09-22T17:53:09.117683+00:00\",\n      \"sha256\": \"0d99c489b3841231759cac0a748f5b791eb3970171d4eeac2075db96841c7c71\",\n      \"source_id\": \"equity-listing\",\n      \"url\": \"https://www.okx.com/en-sg/help/okx-to-list-perpetual-futures-for-selected-equities\"\n    },\n    {\n      \"bytes\": 72538,\n      \"disclosure\": \"LOCAL_ONLY_REDISCLOSURE_UNVERIFIED\",\n      \"final_url\": \"https://www.okx.com/help/ii-mark-price-and-last-price\",\n      \"http_status\": 200,\n      \"retrieved_at\": \"2026-09-22T17:53:09.117771+00:00\",\n      \"sha256\": \"d06bbbaa160ce8af6cd0787bc12d34aec9a65557751f69e1415f1a2fac571034\",\n      \"source_id\": \"mark-last-price\",\n      \"url\": \"https://www.okx.com/help/ii-mark-price-and-last-price\"\n    },\n    {\n      \"bytes\": 71280,\n      \"disclosure\": \"LOCAL_ONLY_REDISCLOSURE_UNVERIFIED\",\n      \"final_url\": \"https://www.okx.com/historical-data\",\n      \"http_status\": 200,\n      \"retrieved_at\": \"2026-09-22T17:53:09.117891+00:00\",\n      \"sha256\": \"48da015351b8468d64c11c03af7124bcfc0afa0c4747b4ad9654e54333505803\",\n      \"source_id\": \"download-page\",\n      \"url\": \"https://www.okx.com/historical-data\"\n    },\n    {\n      \"bytes\": 228912,\n      \"disclosure\": \"LOCAL_ONLY_REDISCLOSURE_UNVERIFIED\",\n      \"final_url\": \"https://www.okx.com/help/terms-of-service\",\n      \"http_status\": 200,\n      \"retrieved_at\": \"2026-09-22T17:53:09.117988+00:00\",\n      \"sha256\": \"dd657516225757a4d90b740b3dd019047f9d83fd71490192fce663cf98ff426a\",\n      \"source_id\": \"terms\",\n      \"url\": \"https://www.okx.com/help/terms-of-service\"\n    }\n  ],\n  \"method\": \"Official Codex tools; public web documents, Chrome official Download button; offline Python only. No market API, credentials or trading account data.\",\n  \"recorded_at\": \"2026-09-22T17:57:57.002886Z\",\n  \"schema_version\": \"1.0\",\n  \"terms_review\": {\n    \"decision\": \"No affirmative redistribution grant established; raw downloads, webpage bodies and row-level extracts stay local. Public package contains original analysis, derived aggregate diagnostic observations and source hashes/links, not an upstream mirror.\",\n    \"last_updated\": \"2026-09-17\",\n    \"not_legal_opinion\": true,\n    \"sections\": [\n      \"8.1\",\n      \"8.2\"\n    ],\n    \"url\": \"https://www.okx.com/help/terms-of-service\"\n  }\n}\n"
+  },
+  "bundle_id": "research-bootstrap-real-20260923-v1",
+  "records": [
+    {
+      "additional_source_refs": [],
+      "available_at": "2026-09-22T18:02:02.485411Z",
+      "created_at": "2026-09-22T18:02:02.485411Z",
+      "derived_from_feedback_refs": [],
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "round_id",
+          "parent_round_id",
+          "derived_from_feedback_refs",
+          "additional_source_refs",
+          "product_refs",
+          "title",
+          "question",
+          "mechanism",
+          "purpose_kind",
+          "input_snapshot_ref",
+          "plan_refs",
+          "selected_plan_ref",
+          "evidence_stage",
+          "state",
+          "summary",
+          "next_action",
+          "status_events",
+          "report_ref",
+          "sources"
+        ],
+        "license": "CC-BY-4.0",
+        "public_attachments": [
+          "attachments/PUBLIC_SCOPE.md",
+          "attachments/REPORT.md",
+          "attachments/SESSION_MECHANISM.md",
+          "attachments/audit_funding.py",
+          "attachments/cost_stress.json",
+          "attachments/cost_stress.py",
+          "attachments/derived_facts.json",
+          "attachments/derived_reproduction.json",
+          "attachments/execution_receipt.json",
+          "attachments/forward_plans.json",
+          "attachments/frozen_protocol.json",
+          "attachments/product_capability_cards.json",
+          "attachments/reproduce_derived.py",
+          "attachments/research_seed_registry.json",
+          "attachments/results.json",
+          "attachments/sources.json"
+        ],
+        "scope": "Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.",
+        "visibility": "PUBLIC"
+      },
+      "evidence_stage": "REAL_HISTORICAL_DATA_AUDIT",
+      "input_snapshot_ref": "34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c",
+      "mechanism": "Realized settlement rates and event-time partition audit",
+      "next_action": "后继成本与暴露反证，取得后续合法目标路径。",
+      "parent_round_id": null,
+      "plan_refs": [],
+      "product_refs": [
+        "aapl",
+        "qqq",
+        "btc",
+        "eth"
+      ],
+      "purpose_kind": "DATA_METHOD_RESEARCH",
+      "question": "官方文件能否提供正确的UTC边界与实际资金费？",
+      "record_type": "round",
+      "report_ref": "REPORT.md",
+      "round_id": "r-funding-data-audit-20260923",
+      "schema_version": "1.0",
+      "selected_plan_ref": null,
+      "sources": {
+        "archive": {
+          "backup_state": "LOCAL_ONLY_NO_REMOTE_RAW_BACKUP",
+          "bytes": 12419,
+          "displayed_export_time": "2026/09/23 01:50:45",
+          "displayed_export_timezone": "NOT_STATED_BY_UI",
+          "download_latency_vs_latest_target_event_hours": "33.8567",
+          "downloaded_at": "2026-09-22T17:51:24.065702Z",
+          "first_observed_available_at": "2026-09-22T17:51:24.065702Z",
+          "latency_qualification": "Elapsed retrieval age, not an established publisher service delay.",
+          "member": "allswap-fundingrates-2026-09-21.csv",
+          "member_bytes": 82188,
+          "member_sha256": "c2ae92301fd8ace5682729e46e58ff959d14b7ebf948ead7d9c4f533d5a9950c",
+          "original_filename": "allswap-fundingrates-2026-09-21.zip",
+          "raw_disclosure": "LOCAL_ONLY",
+          "redistribution_permission": "NOT_ESTABLISHED",
+          "retrieval_ui": "Funding rate / Perpetual / All / Daily / Confirm / Download; BTC text search had no selectable result but All generated a file successfully.",
+          "sha256": "34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c",
+          "source_period_label": "2026/09/21 - 2026/09/21",
+          "source_url": "https://www.okx.com/zh-hans/historical-data",
+          "upstream_publication_time": null,
+          "zip_crc": "PASS"
+        },
+        "browser_specification_observations": {
+          "account_information_accessed": false,
+          "data_role": "CONTRACT_RULES_NOT_EXECUTABLE_PRICE",
+          "observation_session_start": "2026-09-22T17:49:41Z",
+          "recorded_at": "2026-09-22T17:57:57.002886Z",
+          "selected_market": "永续 / USDT 本位",
+          "url": "https://www.okx.com/zh-hans/trade-market/info/swap"
+        },
+        "documents": [
+          {
+            "bytes": 80528,
+            "disclosure": "LOCAL_ONLY_REDISCLOSURE_UNVERIFIED",
+            "final_url": "https://www.okx.com/help/stock-perpetuals",
+            "http_status": 200,
+            "retrieved_at": "2026-09-22T17:53:09.117254+00:00",
+            "sha256": "cde15e8e92d76650333a365feecd3deebe3e2103dd513fc9aeb774862cab56e5",
+            "source_id": "stock-perpetuals",
+            "url": "https://www.okx.com/help/stock-perpetuals"
+          },
+          {
+            "bytes": 84607,
+            "disclosure": "LOCAL_ONLY_REDISCLOSURE_UNVERIFIED",
+            "final_url": "https://www.okx.com/en-sg/help/perps-funding-fee-mechanism",
+            "http_status": 200,
+            "retrieved_at": "2026-09-22T17:53:09.117576+00:00",
+            "sha256": "ad7a39c4206fead0ac28d0871fda0a2cdf48fb622b8a5f5d548996e1ab81d4c4",
+            "source_id": "funding-mechanism",
+            "url": "https://www.okx.com/en-sg/help/perps-funding-fee-mechanism"
+          },
+          {
+            "bytes": 73834,
+            "disclosure": "LOCAL_ONLY_REDISCLOSURE_UNVERIFIED",
+            "final_url": "https://www.okx.com/en-sg/help/okx-to-list-perpetual-futures-for-selected-equities",
+            "http_status": 200,
+            "retrieved_at": "2026-09-22T17:53:09.117683+00:00",
+            "sha256": "0d99c489b3841231759cac0a748f5b791eb3970171d4eeac2075db96841c7c71",
+            "source_id": "equity-listing",
+            "url": "https://www.okx.com/en-sg/help/okx-to-list-perpetual-futures-for-selected-equities"
+          },
+          {
+            "bytes": 72538,
+            "disclosure": "LOCAL_ONLY_REDISCLOSURE_UNVERIFIED",
+            "final_url": "https://www.okx.com/help/ii-mark-price-and-last-price",
+            "http_status": 200,
+            "retrieved_at": "2026-09-22T17:53:09.117771+00:00",
+            "sha256": "d06bbbaa160ce8af6cd0787bc12d34aec9a65557751f69e1415f1a2fac571034",
+            "source_id": "mark-last-price",
+            "url": "https://www.okx.com/help/ii-mark-price-and-last-price"
+          },
+          {
+            "bytes": 71280,
+            "disclosure": "LOCAL_ONLY_REDISCLOSURE_UNVERIFIED",
+            "final_url": "https://www.okx.com/historical-data",
+            "http_status": 200,
+            "retrieved_at": "2026-09-22T17:53:09.117891+00:00",
+            "sha256": "48da015351b8468d64c11c03af7124bcfc0afa0c4747b4ad9654e54333505803",
+            "source_id": "download-page",
+            "url": "https://www.okx.com/historical-data"
+          },
+          {
+            "bytes": 228912,
+            "disclosure": "LOCAL_ONLY_REDISCLOSURE_UNVERIFIED",
+            "final_url": "https://www.okx.com/help/terms-of-service",
+            "http_status": 200,
+            "retrieved_at": "2026-09-22T17:53:09.117988+00:00",
+            "sha256": "dd657516225757a4d90b740b3dd019047f9d83fd71490192fce663cf98ff426a",
+            "source_id": "terms",
+            "url": "https://www.okx.com/help/terms-of-service"
+          }
+        ],
+        "method": "Official Codex tools; public web documents, Chrome official Download button; offline Python only. No market API, credentials or trading account data.",
+        "recorded_at": "2026-09-22T17:57:57.002886Z",
+        "schema_version": "1.0",
+        "terms_review": {
+          "decision": "No affirmative redistribution grant established; raw downloads, webpage bodies and row-level extracts stay local. Public package contains original analysis, derived aggregate diagnostic observations and source hashes/links, not an upstream mirror.",
+          "last_updated": "2026-09-17",
+          "not_legal_opinion": true,
+          "sections": [
+            "8.1",
+            "8.2"
+          ],
+          "url": "https://www.okx.com/help/terms-of-service"
+        }
+      },
+      "state": "COMPLETED_WITH_LIMITATIONS",
+      "status_events": [
+        {
+          "at": "2026-09-22T18:02:02.485411Z",
+          "status": "COMPLETED_WITH_DATA_BOUNDARY_FINDING"
+        }
+      ],
+      "summary": "四目标身份均有样本；UTC日不齐；QQQ实际非零资金费反证零利率项等于零资金费。",
+      "synthetic": false,
+      "title": "官方资金费样本：日期与零费率假设核验"
+    },
+    {
+      "additional_source_refs": [],
+      "available_at": "2026-09-22T18:02:02.485411Z",
+      "created_at": "2026-09-22T18:02:02.485411Z",
+      "derived_from_feedback_refs": [],
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "round_id",
+          "parent_round_id",
+          "derived_from_feedback_refs",
+          "additional_source_refs",
+          "product_refs",
+          "title",
+          "question",
+          "mechanism",
+          "purpose_kind",
+          "input_snapshot_ref",
+          "plan_refs",
+          "selected_plan_ref",
+          "evidence_stage",
+          "state",
+          "summary",
+          "next_action",
+          "status_events",
+          "report_ref"
+        ],
+        "license": "CC-BY-4.0",
+        "scope": "Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.",
+        "visibility": "PUBLIC"
+      },
+      "evidence_stage": "REAL_SOURCE_RESEARCH",
+      "input_snapshot_ref": "sources.json",
+      "mechanism": "Session-dependent reference age, FX conversion and index-price endogeneity",
+      "next_action": "核验合法同步价格与事件发布时间，按事前会话分层。",
+      "parent_round_id": null,
+      "plan_refs": [],
+      "product_refs": [
+        "aapl",
+        "qqq"
+      ],
+      "purpose_kind": "INDEPENDENT_MECHANISM_RESEARCH",
+      "question": "休市价差能否排除参考价陈旧与指数来源共同性？",
+      "record_type": "round",
+      "report_ref": "SESSION_MECHANISM.md",
+      "round_id": "r-stock-session-mechanism-20260923",
+      "schema_version": "1.0",
+      "selected_plan_ref": null,
+      "state": "WAITING_DATA",
+      "status_events": [
+        {
+          "at": "2026-09-22T18:02:02.485411Z",
+          "status": "MECHANISM_REVIEW_COMPLETED_WAITING_DATA"
+        }
+      ],
+      "summary": "已完成官方机制资料研究；尚无同步路径，不能认定价差可交易。",
+      "synthetic": false,
+      "title": "独立方向：参考休市与指数共同来源"
+    },
+    {
+      "additional_source_refs": [
+        "r-funding-data-audit-20260923"
+      ],
+      "available_at": "2026-09-22T18:02:02.485411Z",
+      "created_at": "2026-09-22T18:02:02.485411Z",
+      "derived_from_feedback_refs": [],
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "round_id",
+          "parent_round_id",
+          "derived_from_feedback_refs",
+          "additional_source_refs",
+          "product_refs",
+          "title",
+          "question",
+          "mechanism",
+          "purpose_kind",
+          "input_snapshot_ref",
+          "plan_refs",
+          "selected_plan_ref",
+          "evidence_stage",
+          "state",
+          "summary",
+          "next_action",
+          "status_events",
+          "not_natural_feedback_loop"
+        ],
+        "license": "CC-BY-4.0",
+        "scope": "Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.",
+        "visibility": "PUBLIC"
+      },
+      "evidence_stage": "FORWARD_PROTOCOL_ONLY",
+      "input_snapshot_ref": "34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c",
+      "mechanism": "Funding cashflow versus matched absolute price exposure and cost stress",
+      "next_action": "2026-09-23 00:05 UTC 后按冻结规则取得官方文件，独立复核并跨日接续。",
+      "not_natural_feedback_loop": true,
+      "parent_round_id": "r-funding-data-audit-20260923",
+      "plan_refs": [
+        "p-btc-funding-short-20260923@1",
+        "p-btc-funding-long-control-20260923@1"
+      ],
+      "product_refs": [
+        "btc"
+      ],
+      "purpose_kind": "COST_AND_EXPOSURE_COUNTEREVIDENCE",
+      "question": "最近正资金费反向持有24小时的现金流分解能否支持后续研究？",
+      "record_type": "round",
+      "round_id": "r-btc-funding-cost-counterevidence-20260923",
+      "schema_version": "1.0",
+      "selected_plan_ref": null,
+      "state": "WAITING_NATURAL_OUTCOME",
+      "status_events": [
+        {
+          "at": "2026-09-22T18:02:02.485411Z",
+          "status": "SEALED_INCOMPLETE_DATA"
+        }
+      ],
+      "summary": "真实发现驱动的前向成本反证；价格路径与费用未齐，尚无结果。",
+      "synthetic": false,
+      "title": "资金费收入是否抵得过价格暴露和双边成本？"
+    },
+    {
+      "account_eligibility": "NOT_ASSESSED",
+      "account_input_required": false,
+      "automatic_trade_authorized": false,
+      "available_at": "2026-09-22T18:02:02.485411Z",
+      "baseline_refs": [
+        "p-btc-funding-long-control-20260923@1"
+      ],
+      "candidate_set_ref": "r-btc-funding-cost-counterevidence-20260923",
+      "cost_model": {
+        "actual_entry_fee_rate": null,
+        "actual_exit_fee_rate": null,
+        "actual_slippage": null,
+        "exit_cost_included": true,
+        "funding": "cashflow=-direction*sum(q*actual_settlement_mark*actual_realized_rate) for every settlement with entry<=event<exit; do not prorate by hours or assume an 8h calendar forever",
+        "funding_missing": "null, never 0",
+        "primary_development_scenario": {
+          "assumption_only": true,
+          "fee_bps_each_side": "5",
+          "slippage_bps_each_side": "1"
+        },
+        "scenario_not_promotion": "Report all predeclared scenarios; do not choose best after seeing outcomes",
+        "scenario_per_side_fee_bps": [
+          "0",
+          "2",
+          "5",
+          "10"
+        ],
+        "scenario_per_side_slippage_bps": [
+          "0",
+          "1",
+          "3"
+        ],
+        "zero_cost_scenario": "FRICTIONLESS_LOWER_BOUND_NOT_ACTUAL"
+      },
+      "cost_model_ref": "funding-cost-counterevidence-v1-costs",
+      "counterevidence": [
+        "资金费翻负导致空头付费",
+        "价格变动吞没资金费收入",
+        "双边成本高于资金费",
+        "缺少结算标记价使现金流无法准确核算",
+        "参考样本在入场前已超过72小时则不触发"
+      ],
+      "created_at": "2026-09-22T18:02:02.485411Z",
+      "current_execution_conditions": "UNKNOWN",
+      "dataset_refs": [
+        {
+          "available_at": "2026-09-22T17:51:24.065702Z",
+          "role": "FROZEN_SIGNAL_DEVELOPMENT_EXPOSURE",
+          "source_ref": "34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c"
+        }
+      ],
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "plan_id",
+          "version",
+          "round_id",
+          "product_id",
+          "product_refs",
+          "title",
+          "instrument_ref",
+          "method_ref",
+          "dataset_refs",
+          "source_review_refs",
+          "research_question",
+          "hypothesis",
+          "counterevidence",
+          "candidate_set_ref",
+          "baseline_refs",
+          "selection_rationale",
+          "rules",
+          "cost_model_ref",
+          "cost_model",
+          "fill_model_ref",
+          "evaluation_contract_ref",
+          "evaluation_contract",
+          "sealed_at",
+          "public_visibility_ref",
+          "effective_from",
+          "entry_valid_until",
+          "evaluation_end",
+          "evidence_stage",
+          "replay_eligibility",
+          "replay_missing",
+          "current_execution_conditions",
+          "account_input_required",
+          "account_eligibility",
+          "automatic_trade_authorized",
+          "natural_run_status"
+        ],
+        "license": "CC-BY-4.0",
+        "scope": "Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.",
+        "visibility": "PUBLIC"
+      },
+      "effective_from": "2026-09-23T00:05:00Z",
+      "entry_valid_until": "2026-09-23T00:06:00Z",
+      "evaluation_contract": {
+        "actual_net": "null until actual cost inputs are verified; scenario values are not actual fills",
+        "baseline_limits": "Opposite direction has matched absolute quantity and time but different market beta; the two PnLs are not account-profit components and do not establish predictive alpha.",
+        "cross_day": "Retain open quantity, entry, cumulative fees/funding and processed event IDs; a daily cutoff does not close or reset.",
+        "data_exposure": "Historical funding file already inspected; future price/funding window starts strictly after seal. No historical optimized threshold.",
+        "drawdown": "Report observed-path drawdown plus sampling limitations; not a guaranteed risk bound",
+        "equity": "Unlevered initial notional plus signed mark-to-market minus accumulated entry/exit fee/slippage and realized funding; retain trajectory at all source mark events, do not call sparse maxima an exact continuous drawdown",
+        "fees": "q*(entry_trade+exit_trade)*fee_bps/10000",
+        "missing_price_or_funding_mark": "MISSING_DATA for dependent metrics; preserve remaining evidence",
+        "price_pnl": "direction*q*(exit_trade-entry_trade)",
+        "scenario_net": "price_pnl+funding_cashflow-fees-slippage_cost",
+        "slippage_cost": "q*(entry_trade+exit_trade)*slippage_bps/10000"
+      },
+      "evaluation_contract_ref": "funding-cost-counterevidence-v1",
+      "evaluation_end": "2026-09-24T00:06:00Z",
+      "evidence_stage": "FORWARD_PROTOCOL_ONLY",
+      "fill_model_ref": "official-tick-first-within-minute-plus-adverse-scenario-v1",
+      "hypothesis": "最近正资金费不能独自支持净优势；空头可能收到资金费但被价格上涨及交易成本抵消。",
+      "instrument_ref": "BTC-USDT-SWAP",
+      "method_ref": "funding-cost-counterevidence-v1",
+      "natural_run_status": "WAITING_NATURAL_OUTCOME",
+      "plan_id": "p-btc-funding-short-20260923",
+      "product_id": "btc",
+      "product_refs": [
+        "btc"
+      ],
+      "public_visibility_ref": null,
+      "record_type": "plan",
+      "replay_eligibility": "INCOMPLETE_DATA",
+      "replay_missing": [
+        "future target tick path",
+        "future exact settlement mark values and full mark path",
+        "future actual realized funding",
+        "verified actual trading-cost schedule"
+      ],
+      "research_question": "实际资金费现金流与价格方向暴露、双边成本分别贡献什么？",
+      "round_id": "r-btc-funding-cost-counterevidence-20260923",
+      "rules": {
+        "entry": {
+          "latest_allowed_fill": "2026-09-23T00:06:00Z",
+          "missing_data_outcome": "MISSING_DATA, not NOT_TRIGGERED; no replacement timestamp",
+          "price_model": "First target exchange trade at or after scheduled time, strictly before 00:06:00 UTC; official full tick path required to establish first trade. Add adverse frozen slippage scenario; no assured fill.",
+          "scheduled_at": "2026-09-23T00:05:00Z",
+          "settlement_buffer_minutes": 5
+        },
+        "exit": {
+          "missing_data_outcome": "Keep state unresolved and MISSING_DATA; do not force a favorable close",
+          "price_model": "First target trade at or after scheduled time, strictly before 00:06:00 UTC plus adverse exit slippage; no stop/target and no inferred intrabar order.",
+          "scheduled_at": "2026-09-24T00:05:00Z"
+        },
+        "quantity_or_inventory": {
+          "base_quantity_btc": "0.01",
+          "capital_reporting": "Normalize analytical PnL by initial absolute notional q*entry_price; not user capital, leverage or account equity",
+          "contracts": "1",
+          "direction": -1,
+          "face_value": "0.01",
+          "multiplier": "1",
+          "position_change": "At most one entry and one exit; no resizing or reinvestment"
+        },
+        "reentry": "NONE. A later study requires a new plan/version and a new information cutoff.",
+        "signal": {
+          "dataset_hash": "34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c",
+          "direction": -1,
+          "event_at": "2026-09-21T08:00:00Z",
+          "kind": "FROZEN_OBSERVATION",
+          "observed_sign": "POSITIVE",
+          "predicate": "latest settled BTC rate in the sealed dataset is positive AND event age at scheduled entry <=72 hours",
+          "reevaluate_after_seal": false,
+          "use_future_funding_as_signal": false
+        },
+        "termination": "Evaluation end 2026-09-24T00:06:00Z. FINAL requires both legal fills, every funding settlement while position open, exact settlement mark values, full position/equity path and verified inputs. Missing information remains MISSING_DATA after the endpoint."
+      },
+      "schema_version": "1.0",
+      "sealed_at": "2026-09-22T18:02:02.485411Z",
+      "selection_rationale": "仅方法/费用分解，不按首日费率大小排名；BTC作为首个已核验加密永续，另一方向为相同绝对数量和期限的反向暴露对照。主选尚无。",
+      "source_review_refs": [],
+      "synthetic": false,
+      "title": "最近正资金费反向持有",
+      "version": 1
+    },
+    {
+      "account_eligibility": "NOT_ASSESSED",
+      "account_input_required": false,
+      "automatic_trade_authorized": false,
+      "available_at": "2026-09-22T18:02:02.485411Z",
+      "baseline_refs": [],
+      "candidate_set_ref": "r-btc-funding-cost-counterevidence-20260923",
+      "cost_model": {
+        "actual_entry_fee_rate": null,
+        "actual_exit_fee_rate": null,
+        "actual_slippage": null,
+        "exit_cost_included": true,
+        "funding": "cashflow=-direction*sum(q*actual_settlement_mark*actual_realized_rate) for every settlement with entry<=event<exit; do not prorate by hours or assume an 8h calendar forever",
+        "funding_missing": "null, never 0",
+        "primary_development_scenario": {
+          "assumption_only": true,
+          "fee_bps_each_side": "5",
+          "slippage_bps_each_side": "1"
+        },
+        "scenario_not_promotion": "Report all predeclared scenarios; do not choose best after seeing outcomes",
+        "scenario_per_side_fee_bps": [
+          "0",
+          "2",
+          "5",
+          "10"
+        ],
+        "scenario_per_side_slippage_bps": [
+          "0",
+          "1",
+          "3"
+        ],
+        "zero_cost_scenario": "FRICTIONLESS_LOWER_BOUND_NOT_ACTUAL"
+      },
+      "cost_model_ref": "funding-cost-counterevidence-v1-costs",
+      "counterevidence": [
+        "资金费翻负导致空头付费",
+        "价格变动吞没资金费收入",
+        "双边成本高于资金费",
+        "缺少结算标记价使现金流无法准确核算",
+        "参考样本在入场前已超过72小时则不触发"
+      ],
+      "created_at": "2026-09-22T18:02:02.485411Z",
+      "current_execution_conditions": "UNKNOWN",
+      "dataset_refs": [
+        {
+          "available_at": "2026-09-22T17:51:24.065702Z",
+          "role": "FROZEN_SIGNAL_DEVELOPMENT_EXPOSURE",
+          "source_ref": "34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c"
+        }
+      ],
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "plan_id",
+          "version",
+          "round_id",
+          "product_id",
+          "product_refs",
+          "title",
+          "instrument_ref",
+          "method_ref",
+          "dataset_refs",
+          "source_review_refs",
+          "research_question",
+          "hypothesis",
+          "counterevidence",
+          "candidate_set_ref",
+          "baseline_refs",
+          "selection_rationale",
+          "rules",
+          "cost_model_ref",
+          "cost_model",
+          "fill_model_ref",
+          "evaluation_contract_ref",
+          "evaluation_contract",
+          "sealed_at",
+          "public_visibility_ref",
+          "effective_from",
+          "entry_valid_until",
+          "evaluation_end",
+          "evidence_stage",
+          "replay_eligibility",
+          "replay_missing",
+          "current_execution_conditions",
+          "account_input_required",
+          "account_eligibility",
+          "automatic_trade_authorized",
+          "natural_run_status"
+        ],
+        "license": "CC-BY-4.0",
+        "scope": "Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.",
+        "visibility": "PUBLIC"
+      },
+      "effective_from": "2026-09-23T00:05:00Z",
+      "entry_valid_until": "2026-09-23T00:06:00Z",
+      "evaluation_contract": {
+        "actual_net": "null until actual cost inputs are verified; scenario values are not actual fills",
+        "baseline_limits": "Opposite direction has matched absolute quantity and time but different market beta; the two PnLs are not account-profit components and do not establish predictive alpha.",
+        "cross_day": "Retain open quantity, entry, cumulative fees/funding and processed event IDs; a daily cutoff does not close or reset.",
+        "data_exposure": "Historical funding file already inspected; future price/funding window starts strictly after seal. No historical optimized threshold.",
+        "drawdown": "Report observed-path drawdown plus sampling limitations; not a guaranteed risk bound",
+        "equity": "Unlevered initial notional plus signed mark-to-market minus accumulated entry/exit fee/slippage and realized funding; retain trajectory at all source mark events, do not call sparse maxima an exact continuous drawdown",
+        "fees": "q*(entry_trade+exit_trade)*fee_bps/10000",
+        "missing_price_or_funding_mark": "MISSING_DATA for dependent metrics; preserve remaining evidence",
+        "price_pnl": "direction*q*(exit_trade-entry_trade)",
+        "scenario_net": "price_pnl+funding_cashflow-fees-slippage_cost",
+        "slippage_cost": "q*(entry_trade+exit_trade)*slippage_bps/10000"
+      },
+      "evaluation_contract_ref": "funding-cost-counterevidence-v1",
+      "evaluation_end": "2026-09-24T00:06:00Z",
+      "evidence_stage": "FORWARD_PROTOCOL_ONLY",
+      "fill_model_ref": "official-tick-first-within-minute-plus-adverse-scenario-v1",
+      "hypothesis": "最近正资金费不能独自支持净优势；空头可能收到资金费但被价格上涨及交易成本抵消。",
+      "instrument_ref": "BTC-USDT-SWAP",
+      "method_ref": "funding-cost-counterevidence-v1",
+      "natural_run_status": "WAITING_NATURAL_OUTCOME",
+      "plan_id": "p-btc-funding-long-control-20260923",
+      "product_id": "btc",
+      "product_refs": [
+        "btc"
+      ],
+      "public_visibility_ref": null,
+      "record_type": "plan",
+      "replay_eligibility": "INCOMPLETE_DATA",
+      "replay_missing": [
+        "future target tick path",
+        "future exact settlement mark values and full mark path",
+        "future actual realized funding",
+        "verified actual trading-cost schedule"
+      ],
+      "research_question": "实际资金费现金流与价格方向暴露、双边成本分别贡献什么？",
+      "round_id": "r-btc-funding-cost-counterevidence-20260923",
+      "rules": {
+        "entry": {
+          "latest_allowed_fill": "2026-09-23T00:06:00Z",
+          "missing_data_outcome": "MISSING_DATA, not NOT_TRIGGERED; no replacement timestamp",
+          "price_model": "First target exchange trade at or after scheduled time, strictly before 00:06:00 UTC; official full tick path required to establish first trade. Add adverse frozen slippage scenario; no assured fill.",
+          "scheduled_at": "2026-09-23T00:05:00Z",
+          "settlement_buffer_minutes": 5
+        },
+        "exit": {
+          "missing_data_outcome": "Keep state unresolved and MISSING_DATA; do not force a favorable close",
+          "price_model": "First target trade at or after scheduled time, strictly before 00:06:00 UTC plus adverse exit slippage; no stop/target and no inferred intrabar order.",
+          "scheduled_at": "2026-09-24T00:05:00Z"
+        },
+        "quantity_or_inventory": {
+          "base_quantity_btc": "0.01",
+          "capital_reporting": "Normalize analytical PnL by initial absolute notional q*entry_price; not user capital, leverage or account equity",
+          "contracts": "1",
+          "direction": 1,
+          "face_value": "0.01",
+          "multiplier": "1",
+          "position_change": "At most one entry and one exit; no resizing or reinvestment"
+        },
+        "reentry": "NONE. A later study requires a new plan/version and a new information cutoff.",
+        "signal": {
+          "dataset_hash": "34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c",
+          "direction": 1,
+          "event_at": "2026-09-21T08:00:00Z",
+          "kind": "FROZEN_OBSERVATION",
+          "observed_sign": "POSITIVE",
+          "predicate": "latest settled BTC rate in the sealed dataset is positive AND event age at scheduled entry <=72 hours",
+          "reevaluate_after_seal": false,
+          "use_future_funding_as_signal": false
+        },
+        "termination": "Evaluation end 2026-09-24T00:06:00Z. FINAL requires both legal fills, every funding settlement while position open, exact settlement mark values, full position/equity path and verified inputs. Missing information remains MISSING_DATA after the endpoint."
+      },
+      "schema_version": "1.0",
+      "sealed_at": "2026-09-22T18:02:02.485411Z",
+      "selection_rationale": "仅方法/费用分解，不按首日费率大小排名；BTC作为首个已核验加密永续，另一方向为相同绝对数量和期限的反向暴露对照。主选尚无。",
+      "source_review_refs": [],
+      "synthetic": false,
+      "title": "同期同绝对数量方向对照",
+      "version": 1
+    },
+    {
+      "actual_trigger": "MANUAL_BOOTSTRAP_IN_OFFICIAL_APP",
+      "attempt_id": "attempt-1",
+      "available_at": "2026-09-22T18:02:02.485411Z",
+      "completed_at": "2026-09-22T17:57:57.002886Z",
+      "created_at": "2026-09-22T18:02:02.485411Z",
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "run_id",
+          "attempt_id",
+          "round_id",
+          "request_key",
+          "started_at",
+          "completed_at",
+          "state",
+          "stage",
+          "actual_trigger",
+          "natural_trigger",
+          "results",
+          "receipt"
+        ],
+        "license": "CC-BY-4.0",
+        "scope": "Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.",
+        "visibility": "PUBLIC"
+      },
+      "natural_trigger": false,
+      "receipt": {
+        "actual_execution": "MANUAL_OFFICIAL_APP_BOOTSTRAP",
+        "attempt_id": "attempt-1",
+        "code_sha256": "ba3a53abd1a425ec81d019b50bfe40f7e442427476acbebc14237d4aaea3607b",
+        "completed_at": "2026-09-22T17:57:57.002886Z",
+        "economic_result": "NOT_ESTIMATED",
+        "input_sha256": "34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c",
+        "natural_trigger": false,
+        "original_protocol_changed": false,
+        "output_sha256": "049eddc6f45e0e9c1592b1f82d5c4564e90c413b7b57a7e45c0bee5587539097",
+        "platform": "macOS-27.0-arm64-arm-64bit",
+        "protocol_deviation": "Expected UTC calendar day was not supplied by filename-dated file. Result records mismatch and partial requested-window coverage. No window relabel or backdating.",
+        "protocol_sha256": "730216be58b9839a635306273cf03530036ce07c3416e629f4de5f3ab3fa8429",
+        "python_version": "3.9.6",
+        "run_id": "run-funding-audit-20260923",
+        "schema_version": "1.0",
+        "started_at": "2026-09-22T17:51:15.094364+00:00",
+        "status": "COMPLETED_WITH_DATA_BOUNDARY_FINDING"
+      },
+      "record_type": "run",
+      "request_key": "research-bootstrap-funding-audit-20260923-v1",
+      "results": {
+        "analysis_kind": "REAL_HISTORICAL_DATA_AUDIT",
+        "current_execution_conditions": "UNKNOWN",
+        "findings": {
+          "all_four_native_ids_observed": true,
+          "filename_as_utc_day_refuted": true,
+          "predictive_advantage": "NOT_TESTED",
+          "profitability": "UNKNOWN",
+          "zero_interest_implies_zero_funding_refuted": true
+        },
+        "member": "allswap-fundingrates-2026-09-21.csv",
+        "member_bytes": 82188,
+        "member_sha256": "c2ae92301fd8ace5682729e46e58ff959d14b7ebf948ead7d9c4f533d5a9950c",
+        "net_return": null,
+        "products": {
+          "aapl": {
+            "cost_to_real_position": null,
+            "duplicate_timestamp_count": 0,
+            "first_event_at": "2026-09-20T16:00:00Z",
+            "instrument_ref": "AAPL-USDT-SWAP",
+            "last_event_at": "2026-09-21T08:00:00Z",
+            "missing_value_count": 0,
+            "negative_count": 0,
+            "observed_intervals_hours": [
+              "8"
+            ],
+            "outside_requested_utc_window_count": 1,
+            "positive_count": 0,
+            "quality_state": "FILENAME_UTC_WINDOW_MISMATCH",
+            "requested_utc_day_complete": false,
+            "row_count": 3,
+            "sum_basis_points_diagnostic": "0",
+            "sum_rates_diagnostic": "0",
+            "unique_event_count": 3,
+            "within_requested_utc_window_count": 2,
+            "within_requested_window_sum_diagnostic": "0",
+            "zero_count": 3
+          },
+          "btc": {
+            "cost_to_real_position": null,
+            "duplicate_timestamp_count": 0,
+            "first_event_at": "2026-09-20T16:00:00Z",
+            "instrument_ref": "BTC-USDT-SWAP",
+            "last_event_at": "2026-09-21T08:00:00Z",
+            "missing_value_count": 0,
+            "negative_count": 0,
+            "observed_intervals_hours": [
+              "8"
+            ],
+            "outside_requested_utc_window_count": 1,
+            "positive_count": 3,
+            "quality_state": "FILENAME_UTC_WINDOW_MISMATCH",
+            "requested_utc_day_complete": false,
+            "row_count": 3,
+            "sum_basis_points_diagnostic": "2.7115932695440000",
+            "sum_rates_diagnostic": "0.0002711593269544",
+            "unique_event_count": 3,
+            "within_requested_utc_window_count": 2,
+            "within_requested_window_sum_diagnostic": "0.0001925806509055",
+            "zero_count": 0
+          },
+          "eth": {
+            "cost_to_real_position": null,
+            "duplicate_timestamp_count": 0,
+            "first_event_at": "2026-09-20T16:00:00Z",
+            "instrument_ref": "ETH-USDT-SWAP",
+            "last_event_at": "2026-09-21T08:00:00Z",
+            "missing_value_count": 0,
+            "negative_count": 0,
+            "observed_intervals_hours": [
+              "8"
+            ],
+            "outside_requested_utc_window_count": 1,
+            "positive_count": 3,
+            "quality_state": "FILENAME_UTC_WINDOW_MISMATCH",
+            "requested_utc_day_complete": false,
+            "row_count": 3,
+            "sum_basis_points_diagnostic": "1.4183556215730000",
+            "sum_rates_diagnostic": "0.0001418355621573",
+            "unique_event_count": 3,
+            "within_requested_utc_window_count": 2,
+            "within_requested_window_sum_diagnostic": "0.0001155807198601",
+            "zero_count": 0
+          },
+          "qqq": {
+            "cost_to_real_position": null,
+            "duplicate_timestamp_count": 0,
+            "first_event_at": "2026-09-20T16:00:00Z",
+            "instrument_ref": "QQQ-USDT-SWAP",
+            "last_event_at": "2026-09-21T08:00:00Z",
+            "missing_value_count": 0,
+            "negative_count": 0,
+            "observed_intervals_hours": [
+              "8"
+            ],
+            "outside_requested_utc_window_count": 1,
+            "positive_count": 1,
+            "quality_state": "FILENAME_UTC_WINDOW_MISMATCH",
+            "requested_utc_day_complete": false,
+            "row_count": 3,
+            "sum_basis_points_diagnostic": "0.3385287110560000",
+            "sum_rates_diagnostic": "0.0000338528711056",
+            "unique_event_count": 3,
+            "within_requested_utc_window_count": 2,
+            "within_requested_window_sum_diagnostic": "0.0000338528711056",
+            "zero_count": 2
+          }
+        },
+        "protocol_sha256": "730216be58b9839a635306273cf03530036ce07c3416e629f4de5f3ab3fa8429",
+        "requested_utc_window": {
+          "end_exclusive": "2026-09-22T00:00:00Z",
+          "selection_rule": "First complete day shown as default by the official download page; no outcome-based selection.",
+          "start": "2026-09-21T00:00:00Z"
+        },
+        "schema_version": "1.0",
+        "source_bytes": 12419,
+        "source_sha256": "34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c",
+        "synthetic": false,
+        "total_rows": 2103,
+        "unique_instruments": 482
+      },
+      "round_id": "r-funding-data-audit-20260923",
+      "run_id": "run-funding-audit-20260923",
+      "schema_version": "1.0",
+      "stage": "REAL_HISTORICAL_DATA_AUDIT",
+      "started_at": "2026-09-22T17:51:15.094364+00:00",
+      "state": "COMPLETED_WITH_LIMITATIONS",
+      "synthetic": false
+    },
+    {
+      "account_eligibility": "NOT_ASSESSED",
+      "available_at": "2026-09-22T18:02:02.485411Z",
+      "calendar": "Target perpetual 24/7; reference exchange calendar separate",
+      "contract_face_value": "1",
+      "contract_kind": "USDT_MARGINED_PERPETUAL",
+      "contract_multiplier": "1",
+      "created_at": "2026-09-22T18:02:02.485411Z",
+      "data_source": "https://www.okx.com/historical-data",
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "account_eligibility",
+          "calendar",
+          "contract_face_value",
+          "contract_kind",
+          "contract_multiplier",
+          "data_source",
+          "displayed_max_leverage",
+          "enabled",
+          "face_value_unit",
+          "fees",
+          "funding_sample",
+          "funding_schedule",
+          "gaps",
+          "instrument_ref",
+          "minimum_quantity_contracts",
+          "native_code_evidence",
+          "normalized_format",
+          "price_roles",
+          "price_tick_usdt",
+          "product_id",
+          "quantity_step_contracts",
+          "raw_format",
+          "readiness",
+          "reference_underlying",
+          "rule_observation_recorded_at",
+          "rule_valid_until",
+          "settlement_currency",
+          "spec_version",
+          "status",
+          "venue"
+        ],
+        "license": "CC-BY-4.0",
+        "scope": "Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.",
+        "visibility": "PUBLIC"
+      },
+      "displayed_max_leverage": "25",
+      "enabled": true,
+      "face_value_unit": "AAPL",
+      "fees": {
+        "actual_fee_tier": "UNKNOWN_NOT_ACCOUNT_ASSESSED",
+        "exit_cost": null,
+        "fee_source": "https://www.okx.com/fees",
+        "maker": null,
+        "slippage": null,
+        "taker": null
+      },
+      "funding_sample": {
+        "cost_to_real_position": null,
+        "duplicate_timestamp_count": 0,
+        "first_event_at": "2026-09-20T16:00:00Z",
+        "instrument_ref": "AAPL-USDT-SWAP",
+        "last_event_at": "2026-09-21T08:00:00Z",
+        "missing_value_count": 0,
+        "negative_count": 0,
+        "observed_intervals_hours": [
+          "8"
+        ],
+        "outside_requested_utc_window_count": 1,
+        "positive_count": 0,
+        "quality_state": "FILENAME_UTC_WINDOW_MISMATCH",
+        "requested_utc_day_complete": false,
+        "row_count": 3,
+        "sum_basis_points_diagnostic": "0",
+        "sum_rates_diagnostic": "0",
+        "unique_event_count": 3,
+        "within_requested_utc_window_count": 2,
+        "within_requested_window_sum_diagnostic": "0",
+        "zero_count": 3
+      },
+      "funding_schedule": "8-hour spacing observed in sample, not a perpetual current guarantee",
+      "gaps": [
+        "target trade/mark/index paths",
+        "actual trading-fee schedule and applicable tier",
+        "download date timezone needs further official evidence",
+        "source dissemination time unknown",
+        "regional/account eligibility not assessed"
+      ],
+      "instrument_ref": "AAPL-USDT-SWAP",
+      "minimum_quantity_contracts": "0.01",
+      "native_code_evidence": [
+        "official_download_instrument_name",
+        "official_swap_specification_selection"
+      ],
+      "normalized_format": "offline Decimal rates and aware UTC timestamps; no unknown filled with zero",
+      "price_roles": {
+        "funding_rate": "ACTUAL_SETTLEMENT_SAMPLE_DOWNLOADED",
+        "index_price": "RULE_VERIFIED_NO_PATH_DATA",
+        "mark_price": "RULE_VERIFIED_NO_PATH_DATA",
+        "target_trade_price": "NOT_DOWNLOADED"
+      },
+      "price_tick_usdt": "0.01",
+      "product_id": "aapl",
+      "quantity_step_contracts": "0.01",
+      "raw_format": "zip containing CSV instrument_name,funding_rate,funding_time; timestamp milliseconds UTC",
+      "readiness": "UNKNOWN",
+      "record_type": "product",
+      "reference_underlying": {
+        "quote_currency": "USD",
+        "role": "REFERENCE_NOT_SUBSTITUTE",
+        "ticker": "AAPL",
+        "verified_downloaded_price_data": false
+      },
+      "rule_observation_recorded_at": "2026-09-22T17:57:57.002886Z",
+      "rule_valid_until": null,
+      "schema_version": "1.0",
+      "settlement_currency": "USDT",
+      "spec_version": "observed-20260923-v1",
+      "status": "IDENTITY_AND_SMALL_FUNDING_SAMPLE_VERIFIED",
+      "synthetic": false,
+      "venue": "OKX"
+    },
+    {
+      "account_eligibility": "NOT_ASSESSED",
+      "available_at": "2026-09-22T18:02:02.485411Z",
+      "calendar": "Target perpetual 24/7; reference exchange calendar separate",
+      "contract_face_value": "1",
+      "contract_kind": "USDT_MARGINED_PERPETUAL",
+      "contract_multiplier": "1",
+      "created_at": "2026-09-22T18:02:02.485411Z",
+      "data_source": "https://www.okx.com/historical-data",
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "account_eligibility",
+          "calendar",
+          "contract_face_value",
+          "contract_kind",
+          "contract_multiplier",
+          "data_source",
+          "displayed_max_leverage",
+          "enabled",
+          "face_value_unit",
+          "fees",
+          "funding_sample",
+          "funding_schedule",
+          "gaps",
+          "instrument_ref",
+          "minimum_quantity_contracts",
+          "native_code_evidence",
+          "normalized_format",
+          "price_roles",
+          "price_tick_usdt",
+          "product_id",
+          "quantity_step_contracts",
+          "raw_format",
+          "readiness",
+          "reference_underlying",
+          "rule_observation_recorded_at",
+          "rule_valid_until",
+          "settlement_currency",
+          "spec_version",
+          "status",
+          "venue"
+        ],
+        "license": "CC-BY-4.0",
+        "scope": "Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.",
+        "visibility": "PUBLIC"
+      },
+      "displayed_max_leverage": "50",
+      "enabled": true,
+      "face_value_unit": "QQQ",
+      "fees": {
+        "actual_fee_tier": "UNKNOWN_NOT_ACCOUNT_ASSESSED",
+        "exit_cost": null,
+        "fee_source": "https://www.okx.com/fees",
+        "maker": null,
+        "slippage": null,
+        "taker": null
+      },
+      "funding_sample": {
+        "cost_to_real_position": null,
+        "duplicate_timestamp_count": 0,
+        "first_event_at": "2026-09-20T16:00:00Z",
+        "instrument_ref": "QQQ-USDT-SWAP",
+        "last_event_at": "2026-09-21T08:00:00Z",
+        "missing_value_count": 0,
+        "negative_count": 0,
+        "observed_intervals_hours": [
+          "8"
+        ],
+        "outside_requested_utc_window_count": 1,
+        "positive_count": 1,
+        "quality_state": "FILENAME_UTC_WINDOW_MISMATCH",
+        "requested_utc_day_complete": false,
+        "row_count": 3,
+        "sum_basis_points_diagnostic": "0.3385287110560000",
+        "sum_rates_diagnostic": "0.0000338528711056",
+        "unique_event_count": 3,
+        "within_requested_utc_window_count": 2,
+        "within_requested_window_sum_diagnostic": "0.0000338528711056",
+        "zero_count": 2
+      },
+      "funding_schedule": "8-hour spacing observed in sample, not a perpetual current guarantee",
+      "gaps": [
+        "target trade/mark/index paths",
+        "actual trading-fee schedule and applicable tier",
+        "download date timezone needs further official evidence",
+        "source dissemination time unknown",
+        "regional/account eligibility not assessed"
+      ],
+      "instrument_ref": "QQQ-USDT-SWAP",
+      "minimum_quantity_contracts": "0.01",
+      "native_code_evidence": [
+        "official_download_instrument_name",
+        "official_swap_specification_selection"
+      ],
+      "normalized_format": "offline Decimal rates and aware UTC timestamps; no unknown filled with zero",
+      "price_roles": {
+        "funding_rate": "ACTUAL_SETTLEMENT_SAMPLE_DOWNLOADED",
+        "index_price": "RULE_VERIFIED_NO_PATH_DATA",
+        "mark_price": "RULE_VERIFIED_NO_PATH_DATA",
+        "target_trade_price": "NOT_DOWNLOADED"
+      },
+      "price_tick_usdt": "0.01",
+      "product_id": "qqq",
+      "quantity_step_contracts": "0.01",
+      "raw_format": "zip containing CSV instrument_name,funding_rate,funding_time; timestamp milliseconds UTC",
+      "readiness": "UNKNOWN",
+      "record_type": "product",
+      "reference_underlying": {
+        "quote_currency": "USD",
+        "role": "REFERENCE_NOT_SUBSTITUTE",
+        "ticker": "QQQ",
+        "verified_downloaded_price_data": false
+      },
+      "rule_observation_recorded_at": "2026-09-22T17:57:57.002886Z",
+      "rule_valid_until": null,
+      "schema_version": "1.0",
+      "settlement_currency": "USDT",
+      "spec_version": "observed-20260923-v1",
+      "status": "IDENTITY_AND_SMALL_FUNDING_SAMPLE_VERIFIED",
+      "synthetic": false,
+      "venue": "OKX"
+    },
+    {
+      "account_eligibility": "NOT_ASSESSED",
+      "available_at": "2026-09-22T18:02:02.485411Z",
+      "calendar": "Target perpetual 24/7",
+      "contract_face_value": "0.01",
+      "contract_kind": "USDT_MARGINED_PERPETUAL",
+      "contract_multiplier": "1",
+      "created_at": "2026-09-22T18:02:02.485411Z",
+      "data_source": "https://www.okx.com/historical-data",
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "account_eligibility",
+          "calendar",
+          "contract_face_value",
+          "contract_kind",
+          "contract_multiplier",
+          "data_source",
+          "displayed_max_leverage",
+          "enabled",
+          "face_value_unit",
+          "fees",
+          "funding_sample",
+          "funding_schedule",
+          "gaps",
+          "instrument_ref",
+          "minimum_quantity_contracts",
+          "native_code_evidence",
+          "normalized_format",
+          "price_roles",
+          "price_tick_usdt",
+          "product_id",
+          "quantity_step_contracts",
+          "raw_format",
+          "readiness",
+          "reference_underlying",
+          "rule_observation_recorded_at",
+          "rule_valid_until",
+          "settlement_currency",
+          "spec_version",
+          "status",
+          "venue"
+        ],
+        "license": "CC-BY-4.0",
+        "scope": "Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.",
+        "visibility": "PUBLIC"
+      },
+      "displayed_max_leverage": "100",
+      "enabled": true,
+      "face_value_unit": "BTC",
+      "fees": {
+        "actual_fee_tier": "UNKNOWN_NOT_ACCOUNT_ASSESSED",
+        "exit_cost": null,
+        "fee_source": "https://www.okx.com/fees",
+        "maker": null,
+        "slippage": null,
+        "taker": null
+      },
+      "funding_sample": {
+        "cost_to_real_position": null,
+        "duplicate_timestamp_count": 0,
+        "first_event_at": "2026-09-20T16:00:00Z",
+        "instrument_ref": "BTC-USDT-SWAP",
+        "last_event_at": "2026-09-21T08:00:00Z",
+        "missing_value_count": 0,
+        "negative_count": 0,
+        "observed_intervals_hours": [
+          "8"
+        ],
+        "outside_requested_utc_window_count": 1,
+        "positive_count": 3,
+        "quality_state": "FILENAME_UTC_WINDOW_MISMATCH",
+        "requested_utc_day_complete": false,
+        "row_count": 3,
+        "sum_basis_points_diagnostic": "2.7115932695440000",
+        "sum_rates_diagnostic": "0.0002711593269544",
+        "unique_event_count": 3,
+        "within_requested_utc_window_count": 2,
+        "within_requested_window_sum_diagnostic": "0.0001925806509055",
+        "zero_count": 0
+      },
+      "funding_schedule": "8-hour spacing observed in sample, not a perpetual current guarantee",
+      "gaps": [
+        "target trade/mark/index paths",
+        "actual trading-fee schedule and applicable tier",
+        "download date timezone needs further official evidence",
+        "source dissemination time unknown",
+        "regional/account eligibility not assessed"
+      ],
+      "instrument_ref": "BTC-USDT-SWAP",
+      "minimum_quantity_contracts": "0.01",
+      "native_code_evidence": [
+        "official_download_instrument_name",
+        "official_swap_specification_selection"
+      ],
+      "normalized_format": "offline Decimal rates and aware UTC timestamps; no unknown filled with zero",
+      "price_roles": {
+        "funding_rate": "ACTUAL_SETTLEMENT_SAMPLE_DOWNLOADED",
+        "index_price": "RULE_VERIFIED_NO_PATH_DATA",
+        "mark_price": "RULE_VERIFIED_NO_PATH_DATA",
+        "target_trade_price": "NOT_DOWNLOADED"
+      },
+      "price_tick_usdt": "0.1",
+      "product_id": "btc",
+      "quantity_step_contracts": "0.01",
+      "raw_format": "zip containing CSV instrument_name,funding_rate,funding_time; timestamp milliseconds UTC",
+      "readiness": "UNKNOWN",
+      "record_type": "product",
+      "reference_underlying": {
+        "quote_currency": "venue-dependent",
+        "role": "REFERENCE_NOT_SUBSTITUTE",
+        "ticker": "BTC",
+        "verified_downloaded_price_data": false
+      },
+      "rule_observation_recorded_at": "2026-09-22T17:57:57.002886Z",
+      "rule_valid_until": null,
+      "schema_version": "1.0",
+      "settlement_currency": "USDT",
+      "spec_version": "observed-20260923-v1",
+      "status": "IDENTITY_AND_SMALL_FUNDING_SAMPLE_VERIFIED",
+      "synthetic": false,
+      "venue": "OKX"
+    },
+    {
+      "account_eligibility": "NOT_ASSESSED",
+      "available_at": "2026-09-22T18:02:02.485411Z",
+      "calendar": "Target perpetual 24/7",
+      "contract_face_value": "0.1",
+      "contract_kind": "USDT_MARGINED_PERPETUAL",
+      "contract_multiplier": "1",
+      "created_at": "2026-09-22T18:02:02.485411Z",
+      "data_source": "https://www.okx.com/historical-data",
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "account_eligibility",
+          "calendar",
+          "contract_face_value",
+          "contract_kind",
+          "contract_multiplier",
+          "data_source",
+          "displayed_max_leverage",
+          "enabled",
+          "face_value_unit",
+          "fees",
+          "funding_sample",
+          "funding_schedule",
+          "gaps",
+          "instrument_ref",
+          "minimum_quantity_contracts",
+          "native_code_evidence",
+          "normalized_format",
+          "price_roles",
+          "price_tick_usdt",
+          "product_id",
+          "quantity_step_contracts",
+          "raw_format",
+          "readiness",
+          "reference_underlying",
+          "rule_observation_recorded_at",
+          "rule_valid_until",
+          "settlement_currency",
+          "spec_version",
+          "status",
+          "venue"
+        ],
+        "license": "CC-BY-4.0",
+        "scope": "Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.",
+        "visibility": "PUBLIC"
+      },
+      "displayed_max_leverage": "100",
+      "enabled": true,
+      "face_value_unit": "ETH",
+      "fees": {
+        "actual_fee_tier": "UNKNOWN_NOT_ACCOUNT_ASSESSED",
+        "exit_cost": null,
+        "fee_source": "https://www.okx.com/fees",
+        "maker": null,
+        "slippage": null,
+        "taker": null
+      },
+      "funding_sample": {
+        "cost_to_real_position": null,
+        "duplicate_timestamp_count": 0,
+        "first_event_at": "2026-09-20T16:00:00Z",
+        "instrument_ref": "ETH-USDT-SWAP",
+        "last_event_at": "2026-09-21T08:00:00Z",
+        "missing_value_count": 0,
+        "negative_count": 0,
+        "observed_intervals_hours": [
+          "8"
+        ],
+        "outside_requested_utc_window_count": 1,
+        "positive_count": 3,
+        "quality_state": "FILENAME_UTC_WINDOW_MISMATCH",
+        "requested_utc_day_complete": false,
+        "row_count": 3,
+        "sum_basis_points_diagnostic": "1.4183556215730000",
+        "sum_rates_diagnostic": "0.0001418355621573",
+        "unique_event_count": 3,
+        "within_requested_utc_window_count": 2,
+        "within_requested_window_sum_diagnostic": "0.0001155807198601",
+        "zero_count": 0
+      },
+      "funding_schedule": "8-hour spacing observed in sample, not a perpetual current guarantee",
+      "gaps": [
+        "target trade/mark/index paths",
+        "actual trading-fee schedule and applicable tier",
+        "download date timezone needs further official evidence",
+        "source dissemination time unknown",
+        "regional/account eligibility not assessed"
+      ],
+      "instrument_ref": "ETH-USDT-SWAP",
+      "minimum_quantity_contracts": "0.01",
+      "native_code_evidence": [
+        "official_download_instrument_name",
+        "official_swap_specification_selection"
+      ],
+      "normalized_format": "offline Decimal rates and aware UTC timestamps; no unknown filled with zero",
+      "price_roles": {
+        "funding_rate": "ACTUAL_SETTLEMENT_SAMPLE_DOWNLOADED",
+        "index_price": "RULE_VERIFIED_NO_PATH_DATA",
+        "mark_price": "RULE_VERIFIED_NO_PATH_DATA",
+        "target_trade_price": "NOT_DOWNLOADED"
+      },
+      "price_tick_usdt": "0.01",
+      "product_id": "eth",
+      "quantity_step_contracts": "0.01",
+      "raw_format": "zip containing CSV instrument_name,funding_rate,funding_time; timestamp milliseconds UTC",
+      "readiness": "UNKNOWN",
+      "record_type": "product",
+      "reference_underlying": {
+        "quote_currency": "venue-dependent",
+        "role": "REFERENCE_NOT_SUBSTITUTE",
+        "ticker": "ETH",
+        "verified_downloaded_price_data": false
+      },
+      "rule_observation_recorded_at": "2026-09-22T17:57:57.002886Z",
+      "rule_valid_until": null,
+      "schema_version": "1.0",
+      "settlement_currency": "USDT",
+      "spec_version": "observed-20260923-v1",
+      "status": "IDENTITY_AND_SMALL_FUNDING_SAMPLE_VERIFIED",
+      "synthetic": false,
+      "venue": "OKX"
+    },
+    {
+      "available_at": "2026-09-22T18:02:02.485411Z",
+      "created_at": "2026-09-22T18:02:02.485411Z",
+      "decision": "ADOPT_RESEARCH_FINDING_FOR_COST_COUNTEREVIDENCE",
+      "decision_id": "decision-funding-cost-followup-20260923",
+      "derived_round_ref": "r-btc-funding-cost-counterevidence-20260923",
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "decision_id",
+          "source_round_ref",
+          "derived_round_ref",
+          "source_review_ref",
+          "source_feedback_ref",
+          "decision",
+          "reason",
+          "state"
+        ],
+        "license": "CC-BY-4.0",
+        "scope": "Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.",
+        "visibility": "PUBLIC"
+      },
+      "reason": "原样本反证零资金费与日期误读；后继将费用和路径分开，按真实时间前向观察。尚无自然日复核，不称自然反馈采用。",
+      "record_type": "decision",
+      "schema_version": "1.0",
+      "source_feedback_ref": null,
+      "source_review_ref": null,
+      "source_round_ref": "r-funding-data-audit-20260923",
+      "state": "SEALED_WAITING_NATURAL_OUTCOME",
+      "synthetic": false
+    },
+    {
+      "actual_trade_result": false,
+      "actual_trigger": "MANUAL_BOOTSTRAP_IN_OFFICIAL_APP",
+      "attempt_id": "attempt-1",
+      "available_at": "2026-09-22T18:03:20.888707Z",
+      "completed_at": "2026-09-22T18:03:20.888707Z",
+      "created_at": "2026-09-22T18:03:20.888707Z",
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "run_id",
+          "attempt_id",
+          "round_id",
+          "request_key",
+          "started_at",
+          "completed_at",
+          "state",
+          "stage",
+          "natural_trigger",
+          "actual_trigger",
+          "results",
+          "actual_trade_result",
+          "economic_evidence"
+        ],
+        "license": "CC-BY-4.0",
+        "scope": "Original derived diagnostic accounting, not original market data",
+        "visibility": "PUBLIC"
+      },
+      "economic_evidence": "CONDITIONAL_SCENARIO_ONLY_NOT_STRATEGY_RESULT",
+      "natural_trigger": false,
+      "record_type": "run",
+      "request_key": "research-bootstrap-cost-counterevidence-20260923-v1",
+      "results": {
+        "actual_trade_result": false,
+        "assumptions": [
+          "Constant mark price and fixed notional at all observed settlements",
+          "Short continuously present for the three observations only; no assumed subsequent rates",
+          "Symmetric entry/exit fee and adverse slippage scenarios, not verified venue or account costs",
+          "No future profit, expected return, or comparison of actual fills is implied"
+        ],
+        "evidence_stage": "REAL_DATA_CONDITIONAL_ACCOUNTING",
+        "price_pnl": null,
+        "products": {
+          "aapl": {
+            "interpretation": "Observed rate sum alone does not establish net advantage.",
+            "primary_5bp_fee_1bp_slippage_each_side": {
+              "conditional_flat_price_after_cost_bps": "-12",
+              "fee_bps_each_side": 5,
+              "funding_covers_assumed_cost": false,
+              "roundtrip_cost_bps": "12",
+              "short_funding_diagnostic_bps": "0",
+              "slippage_bps_each_side": 1
+            },
+            "scenarios": [
+              {
+                "conditional_flat_price_after_cost_bps": "0",
+                "fee_bps_each_side": 0,
+                "funding_covers_assumed_cost": true,
+                "roundtrip_cost_bps": "0",
+                "short_funding_diagnostic_bps": "0",
+                "slippage_bps_each_side": 0
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-2",
+                "fee_bps_each_side": 0,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "2",
+                "short_funding_diagnostic_bps": "0",
+                "slippage_bps_each_side": 1
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-6",
+                "fee_bps_each_side": 0,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "6",
+                "short_funding_diagnostic_bps": "0",
+                "slippage_bps_each_side": 3
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-4",
+                "fee_bps_each_side": 2,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "4",
+                "short_funding_diagnostic_bps": "0",
+                "slippage_bps_each_side": 0
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-6",
+                "fee_bps_each_side": 2,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "6",
+                "short_funding_diagnostic_bps": "0",
+                "slippage_bps_each_side": 1
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-10",
+                "fee_bps_each_side": 2,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "10",
+                "short_funding_diagnostic_bps": "0",
+                "slippage_bps_each_side": 3
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-10",
+                "fee_bps_each_side": 5,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "10",
+                "short_funding_diagnostic_bps": "0",
+                "slippage_bps_each_side": 0
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-12",
+                "fee_bps_each_side": 5,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "12",
+                "short_funding_diagnostic_bps": "0",
+                "slippage_bps_each_side": 1
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-16",
+                "fee_bps_each_side": 5,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "16",
+                "short_funding_diagnostic_bps": "0",
+                "slippage_bps_each_side": 3
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-20",
+                "fee_bps_each_side": 10,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "20",
+                "short_funding_diagnostic_bps": "0",
+                "slippage_bps_each_side": 0
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-22",
+                "fee_bps_each_side": 10,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "22",
+                "short_funding_diagnostic_bps": "0",
+                "slippage_bps_each_side": 1
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-26",
+                "fee_bps_each_side": 10,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "26",
+                "short_funding_diagnostic_bps": "0",
+                "slippage_bps_each_side": 3
+              }
+            ]
+          },
+          "btc": {
+            "interpretation": "Observed rate sum alone does not establish net advantage.",
+            "primary_5bp_fee_1bp_slippage_each_side": {
+              "conditional_flat_price_after_cost_bps": "-9.2884067304560000",
+              "fee_bps_each_side": 5,
+              "funding_covers_assumed_cost": false,
+              "roundtrip_cost_bps": "12",
+              "short_funding_diagnostic_bps": "2.7115932695440000",
+              "slippage_bps_each_side": 1
+            },
+            "scenarios": [
+              {
+                "conditional_flat_price_after_cost_bps": "2.7115932695440000",
+                "fee_bps_each_side": 0,
+                "funding_covers_assumed_cost": true,
+                "roundtrip_cost_bps": "0",
+                "short_funding_diagnostic_bps": "2.7115932695440000",
+                "slippage_bps_each_side": 0
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "0.7115932695440000",
+                "fee_bps_each_side": 0,
+                "funding_covers_assumed_cost": true,
+                "roundtrip_cost_bps": "2",
+                "short_funding_diagnostic_bps": "2.7115932695440000",
+                "slippage_bps_each_side": 1
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-3.2884067304560000",
+                "fee_bps_each_side": 0,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "6",
+                "short_funding_diagnostic_bps": "2.7115932695440000",
+                "slippage_bps_each_side": 3
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-1.2884067304560000",
+                "fee_bps_each_side": 2,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "4",
+                "short_funding_diagnostic_bps": "2.7115932695440000",
+                "slippage_bps_each_side": 0
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-3.2884067304560000",
+                "fee_bps_each_side": 2,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "6",
+                "short_funding_diagnostic_bps": "2.7115932695440000",
+                "slippage_bps_each_side": 1
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-7.2884067304560000",
+                "fee_bps_each_side": 2,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "10",
+                "short_funding_diagnostic_bps": "2.7115932695440000",
+                "slippage_bps_each_side": 3
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-7.2884067304560000",
+                "fee_bps_each_side": 5,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "10",
+                "short_funding_diagnostic_bps": "2.7115932695440000",
+                "slippage_bps_each_side": 0
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-9.2884067304560000",
+                "fee_bps_each_side": 5,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "12",
+                "short_funding_diagnostic_bps": "2.7115932695440000",
+                "slippage_bps_each_side": 1
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-13.2884067304560000",
+                "fee_bps_each_side": 5,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "16",
+                "short_funding_diagnostic_bps": "2.7115932695440000",
+                "slippage_bps_each_side": 3
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-17.2884067304560000",
+                "fee_bps_each_side": 10,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "20",
+                "short_funding_diagnostic_bps": "2.7115932695440000",
+                "slippage_bps_each_side": 0
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-19.2884067304560000",
+                "fee_bps_each_side": 10,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "22",
+                "short_funding_diagnostic_bps": "2.7115932695440000",
+                "slippage_bps_each_side": 1
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-23.2884067304560000",
+                "fee_bps_each_side": 10,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "26",
+                "short_funding_diagnostic_bps": "2.7115932695440000",
+                "slippage_bps_each_side": 3
+              }
+            ]
+          },
+          "eth": {
+            "interpretation": "Observed rate sum alone does not establish net advantage.",
+            "primary_5bp_fee_1bp_slippage_each_side": {
+              "conditional_flat_price_after_cost_bps": "-10.5816443784270000",
+              "fee_bps_each_side": 5,
+              "funding_covers_assumed_cost": false,
+              "roundtrip_cost_bps": "12",
+              "short_funding_diagnostic_bps": "1.4183556215730000",
+              "slippage_bps_each_side": 1
+            },
+            "scenarios": [
+              {
+                "conditional_flat_price_after_cost_bps": "1.4183556215730000",
+                "fee_bps_each_side": 0,
+                "funding_covers_assumed_cost": true,
+                "roundtrip_cost_bps": "0",
+                "short_funding_diagnostic_bps": "1.4183556215730000",
+                "slippage_bps_each_side": 0
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-0.5816443784270000",
+                "fee_bps_each_side": 0,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "2",
+                "short_funding_diagnostic_bps": "1.4183556215730000",
+                "slippage_bps_each_side": 1
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-4.5816443784270000",
+                "fee_bps_each_side": 0,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "6",
+                "short_funding_diagnostic_bps": "1.4183556215730000",
+                "slippage_bps_each_side": 3
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-2.5816443784270000",
+                "fee_bps_each_side": 2,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "4",
+                "short_funding_diagnostic_bps": "1.4183556215730000",
+                "slippage_bps_each_side": 0
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-4.5816443784270000",
+                "fee_bps_each_side": 2,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "6",
+                "short_funding_diagnostic_bps": "1.4183556215730000",
+                "slippage_bps_each_side": 1
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-8.5816443784270000",
+                "fee_bps_each_side": 2,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "10",
+                "short_funding_diagnostic_bps": "1.4183556215730000",
+                "slippage_bps_each_side": 3
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-8.5816443784270000",
+                "fee_bps_each_side": 5,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "10",
+                "short_funding_diagnostic_bps": "1.4183556215730000",
+                "slippage_bps_each_side": 0
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-10.5816443784270000",
+                "fee_bps_each_side": 5,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "12",
+                "short_funding_diagnostic_bps": "1.4183556215730000",
+                "slippage_bps_each_side": 1
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-14.5816443784270000",
+                "fee_bps_each_side": 5,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "16",
+                "short_funding_diagnostic_bps": "1.4183556215730000",
+                "slippage_bps_each_side": 3
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-18.5816443784270000",
+                "fee_bps_each_side": 10,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "20",
+                "short_funding_diagnostic_bps": "1.4183556215730000",
+                "slippage_bps_each_side": 0
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-20.5816443784270000",
+                "fee_bps_each_side": 10,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "22",
+                "short_funding_diagnostic_bps": "1.4183556215730000",
+                "slippage_bps_each_side": 1
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-24.5816443784270000",
+                "fee_bps_each_side": 10,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "26",
+                "short_funding_diagnostic_bps": "1.4183556215730000",
+                "slippage_bps_each_side": 3
+              }
+            ]
+          },
+          "qqq": {
+            "interpretation": "Observed rate sum alone does not establish net advantage.",
+            "primary_5bp_fee_1bp_slippage_each_side": {
+              "conditional_flat_price_after_cost_bps": "-11.6614712889440000",
+              "fee_bps_each_side": 5,
+              "funding_covers_assumed_cost": false,
+              "roundtrip_cost_bps": "12",
+              "short_funding_diagnostic_bps": "0.3385287110560000",
+              "slippage_bps_each_side": 1
+            },
+            "scenarios": [
+              {
+                "conditional_flat_price_after_cost_bps": "0.3385287110560000",
+                "fee_bps_each_side": 0,
+                "funding_covers_assumed_cost": true,
+                "roundtrip_cost_bps": "0",
+                "short_funding_diagnostic_bps": "0.3385287110560000",
+                "slippage_bps_each_side": 0
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-1.6614712889440000",
+                "fee_bps_each_side": 0,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "2",
+                "short_funding_diagnostic_bps": "0.3385287110560000",
+                "slippage_bps_each_side": 1
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-5.6614712889440000",
+                "fee_bps_each_side": 0,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "6",
+                "short_funding_diagnostic_bps": "0.3385287110560000",
+                "slippage_bps_each_side": 3
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-3.6614712889440000",
+                "fee_bps_each_side": 2,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "4",
+                "short_funding_diagnostic_bps": "0.3385287110560000",
+                "slippage_bps_each_side": 0
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-5.6614712889440000",
+                "fee_bps_each_side": 2,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "6",
+                "short_funding_diagnostic_bps": "0.3385287110560000",
+                "slippage_bps_each_side": 1
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-9.6614712889440000",
+                "fee_bps_each_side": 2,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "10",
+                "short_funding_diagnostic_bps": "0.3385287110560000",
+                "slippage_bps_each_side": 3
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-9.6614712889440000",
+                "fee_bps_each_side": 5,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "10",
+                "short_funding_diagnostic_bps": "0.3385287110560000",
+                "slippage_bps_each_side": 0
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-11.6614712889440000",
+                "fee_bps_each_side": 5,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "12",
+                "short_funding_diagnostic_bps": "0.3385287110560000",
+                "slippage_bps_each_side": 1
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-15.6614712889440000",
+                "fee_bps_each_side": 5,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "16",
+                "short_funding_diagnostic_bps": "0.3385287110560000",
+                "slippage_bps_each_side": 3
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-19.6614712889440000",
+                "fee_bps_each_side": 10,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "20",
+                "short_funding_diagnostic_bps": "0.3385287110560000",
+                "slippage_bps_each_side": 0
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-21.6614712889440000",
+                "fee_bps_each_side": 10,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "22",
+                "short_funding_diagnostic_bps": "0.3385287110560000",
+                "slippage_bps_each_side": 1
+              },
+              {
+                "conditional_flat_price_after_cost_bps": "-25.6614712889440000",
+                "fee_bps_each_side": 10,
+                "funding_covers_assumed_cost": false,
+                "roundtrip_cost_bps": "26",
+                "short_funding_diagnostic_bps": "0.3385287110560000",
+                "slippage_bps_each_side": 3
+              }
+            ]
+          }
+        },
+        "schema_version": "1.0"
+      },
+      "round_id": "r-btc-funding-cost-counterevidence-20260923",
+      "run_id": "run-cost-counterevidence-20260923",
+      "schema_version": "1.0",
+      "stage": "REAL_DATA_CONDITIONAL_ACCOUNTING",
+      "started_at": "2026-09-22T18:03:20.888707Z",
+      "state": "COMPLETED_CONDITIONAL_ACCOUNTING",
+      "synthetic": false
+    }
+  ],
+  "request_key": "research-bootstrap-funding-audit-20260923-v1",
+  "role": "research"
+}

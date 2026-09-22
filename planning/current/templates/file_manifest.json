@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "template_only": true,
+  "record_state": "DRAFT_NOT_COMMITTED",
+  "synthetic": false,
+  "bundle_id": null,
+  "owner_ref": null,
+  "producer_role": null,
+  "run_ref": null,
+  "files": [],
+  "input_refs": [],
+  "completed_at": null,
+  "commit_state": "NOT_COMMITTED",
+  "coverage_qualifications": []
+}

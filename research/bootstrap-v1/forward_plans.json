@@ -1,0 +1,366 @@
+{
+  "plans": [
+    {
+      "account_eligibility": "NOT_ASSESSED",
+      "account_input_required": false,
+      "automatic_trade_authorized": false,
+      "available_at": "2026-09-22T18:02:02.485411Z",
+      "baseline_refs": [
+        "p-btc-funding-long-control-20260923@1"
+      ],
+      "candidate_set_ref": "r-btc-funding-cost-counterevidence-20260923",
+      "cost_model": {
+        "actual_entry_fee_rate": null,
+        "actual_exit_fee_rate": null,
+        "actual_slippage": null,
+        "exit_cost_included": true,
+        "funding": "cashflow=-direction*sum(q*actual_settlement_mark*actual_realized_rate) for every settlement with entry<=event<exit; do not prorate by hours or assume an 8h calendar forever",
+        "funding_missing": "null, never 0",
+        "primary_development_scenario": {
+          "assumption_only": true,
+          "fee_bps_each_side": "5",
+          "slippage_bps_each_side": "1"
+        },
+        "scenario_not_promotion": "Report all predeclared scenarios; do not choose best after seeing outcomes",
+        "scenario_per_side_fee_bps": [
+          "0",
+          "2",
+          "5",
+          "10"
+        ],
+        "scenario_per_side_slippage_bps": [
+          "0",
+          "1",
+          "3"
+        ],
+        "zero_cost_scenario": "FRICTIONLESS_LOWER_BOUND_NOT_ACTUAL"
+      },
+      "cost_model_ref": "funding-cost-counterevidence-v1-costs",
+      "counterevidence": [
+        "资金费翻负导致空头付费",
+        "价格变动吞没资金费收入",
+        "双边成本高于资金费",
+        "缺少结算标记价使现金流无法准确核算",
+        "参考样本在入场前已超过72小时则不触发"
+      ],
+      "created_at": "2026-09-22T18:02:02.485411Z",
+      "current_execution_conditions": "UNKNOWN",
+      "dataset_refs": [
+        {
+          "available_at": "2026-09-22T17:51:24.065702Z",
+          "role": "FROZEN_SIGNAL_DEVELOPMENT_EXPOSURE",
+          "source_ref": "34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c"
+        }
+      ],
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "plan_id",
+          "version",
+          "round_id",
+          "product_id",
+          "product_refs",
+          "title",
+          "instrument_ref",
+          "method_ref",
+          "dataset_refs",
+          "source_review_refs",
+          "research_question",
+          "hypothesis",
+          "counterevidence",
+          "candidate_set_ref",
+          "baseline_refs",
+          "selection_rationale",
+          "rules",
+          "cost_model_ref",
+          "cost_model",
+          "fill_model_ref",
+          "evaluation_contract_ref",
+          "evaluation_contract",
+          "sealed_at",
+          "public_visibility_ref",
+          "effective_from",
+          "entry_valid_until",
+          "evaluation_end",
+          "evidence_stage",
+          "replay_eligibility",
+          "replay_missing",
+          "current_execution_conditions",
+          "account_input_required",
+          "account_eligibility",
+          "automatic_trade_authorized",
+          "natural_run_status"
+        ],
+        "license": "CC-BY-4.0",
+        "scope": "Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.",
+        "visibility": "PUBLIC"
+      },
+      "effective_from": "2026-09-23T00:05:00Z",
+      "entry_valid_until": "2026-09-23T00:06:00Z",
+      "evaluation_contract": {
+        "actual_net": "null until actual cost inputs are verified; scenario values are not actual fills",
+        "baseline_limits": "Opposite direction has matched absolute quantity and time but different market beta; the two PnLs are not account-profit components and do not establish predictive alpha.",
+        "cross_day": "Retain open quantity, entry, cumulative fees/funding and processed event IDs; a daily cutoff does not close or reset.",
+        "data_exposure": "Historical funding file already inspected; future price/funding window starts strictly after seal. No historical optimized threshold.",
+        "drawdown": "Report observed-path drawdown plus sampling limitations; not a guaranteed risk bound",
+        "equity": "Unlevered initial notional plus signed mark-to-market minus accumulated entry/exit fee/slippage and realized funding; retain trajectory at all source mark events, do not call sparse maxima an exact continuous drawdown",
+        "fees": "q*(entry_trade+exit_trade)*fee_bps/10000",
+        "missing_price_or_funding_mark": "MISSING_DATA for dependent metrics; preserve remaining evidence",
+        "price_pnl": "direction*q*(exit_trade-entry_trade)",
+        "scenario_net": "price_pnl+funding_cashflow-fees-slippage_cost",
+        "slippage_cost": "q*(entry_trade+exit_trade)*slippage_bps/10000"
+      },
+      "evaluation_contract_ref": "funding-cost-counterevidence-v1",
+      "evaluation_end": "2026-09-24T00:06:00Z",
+      "evidence_stage": "FORWARD_PROTOCOL_ONLY",
+      "fill_model_ref": "official-tick-first-within-minute-plus-adverse-scenario-v1",
+      "hypothesis": "最近正资金费不能独自支持净优势；空头可能收到资金费但被价格上涨及交易成本抵消。",
+      "instrument_ref": "BTC-USDT-SWAP",
+      "method_ref": "funding-cost-counterevidence-v1",
+      "natural_run_status": "WAITING_NATURAL_OUTCOME",
+      "plan_id": "p-btc-funding-short-20260923",
+      "product_id": "btc",
+      "product_refs": [
+        "btc"
+      ],
+      "public_visibility_ref": null,
+      "record_type": "plan",
+      "replay_eligibility": "INCOMPLETE_DATA",
+      "replay_missing": [
+        "future target tick path",
+        "future exact settlement mark values and full mark path",
+        "future actual realized funding",
+        "verified actual trading-cost schedule"
+      ],
+      "research_question": "实际资金费现金流与价格方向暴露、双边成本分别贡献什么？",
+      "round_id": "r-btc-funding-cost-counterevidence-20260923",
+      "rules": {
+        "entry": {
+          "latest_allowed_fill": "2026-09-23T00:06:00Z",
+          "missing_data_outcome": "MISSING_DATA, not NOT_TRIGGERED; no replacement timestamp",
+          "price_model": "First target exchange trade at or after scheduled time, strictly before 00:06:00 UTC; official full tick path required to establish first trade. Add adverse frozen slippage scenario; no assured fill.",
+          "scheduled_at": "2026-09-23T00:05:00Z",
+          "settlement_buffer_minutes": 5
+        },
+        "exit": {
+          "missing_data_outcome": "Keep state unresolved and MISSING_DATA; do not force a favorable close",
+          "price_model": "First target trade at or after scheduled time, strictly before 00:06:00 UTC plus adverse exit slippage; no stop/target and no inferred intrabar order.",
+          "scheduled_at": "2026-09-24T00:05:00Z"
+        },
+        "quantity_or_inventory": {
+          "base_quantity_btc": "0.01",
+          "capital_reporting": "Normalize analytical PnL by initial absolute notional q*entry_price; not user capital, leverage or account equity",
+          "contracts": "1",
+          "direction": -1,
+          "face_value": "0.01",
+          "multiplier": "1",
+          "position_change": "At most one entry and one exit; no resizing or reinvestment"
+        },
+        "reentry": "NONE. A later study requires a new plan/version and a new information cutoff.",
+        "signal": {
+          "dataset_hash": "34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c",
+          "direction": -1,
+          "event_at": "2026-09-21T08:00:00Z",
+          "kind": "FROZEN_OBSERVATION",
+          "observed_sign": "POSITIVE",
+          "predicate": "latest settled BTC rate in the sealed dataset is positive AND event age at scheduled entry <=72 hours",
+          "reevaluate_after_seal": false,
+          "use_future_funding_as_signal": false
+        },
+        "termination": "Evaluation end 2026-09-24T00:06:00Z. FINAL requires both legal fills, every funding settlement while position open, exact settlement mark values, full position/equity path and verified inputs. Missing information remains MISSING_DATA after the endpoint."
+      },
+      "schema_version": "1.0",
+      "sealed_at": "2026-09-22T18:02:02.485411Z",
+      "selection_rationale": "仅方法/费用分解，不按首日费率大小排名；BTC作为首个已核验加密永续，另一方向为相同绝对数量和期限的反向暴露对照。主选尚无。",
+      "source_review_refs": [],
+      "synthetic": false,
+      "title": "最近正资金费反向持有",
+      "version": 1
+    },
+    {
+      "account_eligibility": "NOT_ASSESSED",
+      "account_input_required": false,
+      "automatic_trade_authorized": false,
+      "available_at": "2026-09-22T18:02:02.485411Z",
+      "baseline_refs": [],
+      "candidate_set_ref": "r-btc-funding-cost-counterevidence-20260923",
+      "cost_model": {
+        "actual_entry_fee_rate": null,
+        "actual_exit_fee_rate": null,
+        "actual_slippage": null,
+        "exit_cost_included": true,
+        "funding": "cashflow=-direction*sum(q*actual_settlement_mark*actual_realized_rate) for every settlement with entry<=event<exit; do not prorate by hours or assume an 8h calendar forever",
+        "funding_missing": "null, never 0",
+        "primary_development_scenario": {
+          "assumption_only": true,
+          "fee_bps_each_side": "5",
+          "slippage_bps_each_side": "1"
+        },
+        "scenario_not_promotion": "Report all predeclared scenarios; do not choose best after seeing outcomes",
+        "scenario_per_side_fee_bps": [
+          "0",
+          "2",
+          "5",
+          "10"
+        ],
+        "scenario_per_side_slippage_bps": [
+          "0",
+          "1",
+          "3"
+        ],
+        "zero_cost_scenario": "FRICTIONLESS_LOWER_BOUND_NOT_ACTUAL"
+      },
+      "cost_model_ref": "funding-cost-counterevidence-v1-costs",
+      "counterevidence": [
+        "资金费翻负导致空头付费",
+        "价格变动吞没资金费收入",
+        "双边成本高于资金费",
+        "缺少结算标记价使现金流无法准确核算",
+        "参考样本在入场前已超过72小时则不触发"
+      ],
+      "created_at": "2026-09-22T18:02:02.485411Z",
+      "current_execution_conditions": "UNKNOWN",
+      "dataset_refs": [
+        {
+          "available_at": "2026-09-22T17:51:24.065702Z",
+          "role": "FROZEN_SIGNAL_DEVELOPMENT_EXPOSURE",
+          "source_ref": "34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c"
+        }
+      ],
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "plan_id",
+          "version",
+          "round_id",
+          "product_id",
+          "product_refs",
+          "title",
+          "instrument_ref",
+          "method_ref",
+          "dataset_refs",
+          "source_review_refs",
+          "research_question",
+          "hypothesis",
+          "counterevidence",
+          "candidate_set_ref",
+          "baseline_refs",
+          "selection_rationale",
+          "rules",
+          "cost_model_ref",
+          "cost_model",
+          "fill_model_ref",
+          "evaluation_contract_ref",
+          "evaluation_contract",
+          "sealed_at",
+          "public_visibility_ref",
+          "effective_from",
+          "entry_valid_until",
+          "evaluation_end",
+          "evidence_stage",
+          "replay_eligibility",
+          "replay_missing",
+          "current_execution_conditions",
+          "account_input_required",
+          "account_eligibility",
+          "automatic_trade_authorized",
+          "natural_run_status"
+        ],
+        "license": "CC-BY-4.0",
+        "scope": "Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.",
+        "visibility": "PUBLIC"
+      },
+      "effective_from": "2026-09-23T00:05:00Z",
+      "entry_valid_until": "2026-09-23T00:06:00Z",
+      "evaluation_contract": {
+        "actual_net": "null until actual cost inputs are verified; scenario values are not actual fills",
+        "baseline_limits": "Opposite direction has matched absolute quantity and time but different market beta; the two PnLs are not account-profit components and do not establish predictive alpha.",
+        "cross_day": "Retain open quantity, entry, cumulative fees/funding and processed event IDs; a daily cutoff does not close or reset.",
+        "data_exposure": "Historical funding file already inspected; future price/funding window starts strictly after seal. No historical optimized threshold.",
+        "drawdown": "Report observed-path drawdown plus sampling limitations; not a guaranteed risk bound",
+        "equity": "Unlevered initial notional plus signed mark-to-market minus accumulated entry/exit fee/slippage and realized funding; retain trajectory at all source mark events, do not call sparse maxima an exact continuous drawdown",
+        "fees": "q*(entry_trade+exit_trade)*fee_bps/10000",
+        "missing_price_or_funding_mark": "MISSING_DATA for dependent metrics; preserve remaining evidence",
+        "price_pnl": "direction*q*(exit_trade-entry_trade)",
+        "scenario_net": "price_pnl+funding_cashflow-fees-slippage_cost",
+        "slippage_cost": "q*(entry_trade+exit_trade)*slippage_bps/10000"
+      },
+      "evaluation_contract_ref": "funding-cost-counterevidence-v1",
+      "evaluation_end": "2026-09-24T00:06:00Z",
+      "evidence_stage": "FORWARD_PROTOCOL_ONLY",
+      "fill_model_ref": "official-tick-first-within-minute-plus-adverse-scenario-v1",
+      "hypothesis": "最近正资金费不能独自支持净优势；空头可能收到资金费但被价格上涨及交易成本抵消。",
+      "instrument_ref": "BTC-USDT-SWAP",
+      "method_ref": "funding-cost-counterevidence-v1",
+      "natural_run_status": "WAITING_NATURAL_OUTCOME",
+      "plan_id": "p-btc-funding-long-control-20260923",
+      "product_id": "btc",
+      "product_refs": [
+        "btc"
+      ],
+      "public_visibility_ref": null,
+      "record_type": "plan",
+      "replay_eligibility": "INCOMPLETE_DATA",
+      "replay_missing": [
+        "future target tick path",
+        "future exact settlement mark values and full mark path",
+        "future actual realized funding",
+        "verified actual trading-cost schedule"
+      ],
+      "research_question": "实际资金费现金流与价格方向暴露、双边成本分别贡献什么？",
+      "round_id": "r-btc-funding-cost-counterevidence-20260923",
+      "rules": {
+        "entry": {
+          "latest_allowed_fill": "2026-09-23T00:06:00Z",
+          "missing_data_outcome": "MISSING_DATA, not NOT_TRIGGERED; no replacement timestamp",
+          "price_model": "First target exchange trade at or after scheduled time, strictly before 00:06:00 UTC; official full tick path required to establish first trade. Add adverse frozen slippage scenario; no assured fill.",
+          "scheduled_at": "2026-09-23T00:05:00Z",
+          "settlement_buffer_minutes": 5
+        },
+        "exit": {
+          "missing_data_outcome": "Keep state unresolved and MISSING_DATA; do not force a favorable close",
+          "price_model": "First target trade at or after scheduled time, strictly before 00:06:00 UTC plus adverse exit slippage; no stop/target and no inferred intrabar order.",
+          "scheduled_at": "2026-09-24T00:05:00Z"
+        },
+        "quantity_or_inventory": {
+          "base_quantity_btc": "0.01",
+          "capital_reporting": "Normalize analytical PnL by initial absolute notional q*entry_price; not user capital, leverage or account equity",
+          "contracts": "1",
+          "direction": 1,
+          "face_value": "0.01",
+          "multiplier": "1",
+          "position_change": "At most one entry and one exit; no resizing or reinvestment"
+        },
+        "reentry": "NONE. A later study requires a new plan/version and a new information cutoff.",
+        "signal": {
+          "dataset_hash": "34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c",
+          "direction": 1,
+          "event_at": "2026-09-21T08:00:00Z",
+          "kind": "FROZEN_OBSERVATION",
+          "observed_sign": "POSITIVE",
+          "predicate": "latest settled BTC rate in the sealed dataset is positive AND event age at scheduled entry <=72 hours",
+          "reevaluate_after_seal": false,
+          "use_future_funding_as_signal": false
+        },
+        "termination": "Evaluation end 2026-09-24T00:06:00Z. FINAL requires both legal fills, every funding settlement while position open, exact settlement mark values, full position/equity path and verified inputs. Missing information remains MISSING_DATA after the endpoint."
+      },
+      "schema_version": "1.0",
+      "sealed_at": "2026-09-22T18:02:02.485411Z",
+      "selection_rationale": "仅方法/费用分解，不按首日费率大小排名；BTC作为首个已核验加密永续，另一方向为相同绝对数量和期限的反向暴露对照。主选尚无。",
+      "source_review_refs": [],
+      "synthetic": false,
+      "title": "同期同绝对数量方向对照",
+      "version": 1
+    }
+  ],
+  "schema_version": "1.0",
+  "sealed_at": "2026-09-22T18:02:02.485411Z"
+}

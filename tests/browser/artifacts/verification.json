@@ -1,0 +1,981 @@
+{
+  "schema_version": "1.0",
+  "classification": "ENGINEERING_BROWSER_VERIFICATION",
+  "stats": {
+    "startTime": "2026-09-22T18:21:10.760Z",
+    "duration": 28312.221999999998,
+    "expected": 54,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "source_sha256": {
+    "web/src/App.tsx": "eb1c99bed0f5d7e7373b980363f08c2938d571b350fc9295aaa4a81b69910b19",
+    "web/src/data.ts": "738f7893b7c31926cc32541d2a85d6fabce0e120b1d22185d2d5983c00fbbb45",
+    "web/src/main.tsx": "b18a92b1f5514bbd9ed879e04de8c25dec5682c8b4bbebcc52877fb10e4a718b",
+    "web/src/styles.css": "228c02d8707e42cbf5880cd5e997136bf009555c24d8b99ad53eb91ce6aae23b",
+    "web/package-lock.json": "37b0a4402a5c9669fd3c7ca77b5488ce85079c8f6acc5e60563e6a61f99c030d"
+  },
+  "dependencies": {
+    "@xyflow/react": "12.11.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "cases": [
+    {
+      "title": "C01-C04: real React Flow, rounds contain P/R/F, independent expansion and candidates",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 768
+        }
+      ]
+    },
+    {
+      "title": "C06: search unloaded descendant restores ancestor chain without duplicate source nodes",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 432
+        }
+      ]
+    },
+    {
+      "title": "C07/B10: daily drawer locates exact review; multi-day revisions coexist",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 425
+        }
+      ]
+    },
+    {
+      "title": "C08: selecting immutable historical snapshot excludes future products, revisions and adoption",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 482
+        }
+      ]
+    },
+    {
+      "title": "C09/E08: atomic refresh preserves viewport and selection; interrupted snapshot keeps old data",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 514
+        }
+      ]
+    },
+    {
+      "title": "D03-D05: precise plan badge expires while page stays open; refresh does not renew it",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 511
+        }
+      ]
+    },
+    {
+      "title": "D01/D06: fail-closed readiness synthetic",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 281
+        }
+      ]
+    },
+    {
+      "title": "D01/D06: fail-closed readiness missing-evidence",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 281
+        }
+      ]
+    },
+    {
+      "title": "D01/D06: fail-closed readiness unknown-schema",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 300
+        }
+      ]
+    },
+    {
+      "title": "D01/D06: fail-closed readiness invalidated",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 279
+        }
+      ]
+    },
+    {
+      "title": "D01/D06: fail-closed readiness unbound-plan",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 298
+        }
+      ]
+    },
+    {
+      "title": "D01/D06: fail-closed readiness unavailable-evidence",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 282
+        }
+      ]
+    },
+    {
+      "title": "D01/D06: fail-closed readiness naive-time",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 303
+        }
+      ]
+    },
+    {
+      "title": "stale persisted filters are cleared visibly; product versions remain catalog-driven",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 341
+        }
+      ]
+    },
+    {
+      "title": "browser clock jump removes current-ready badges",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 295
+        }
+      ]
+    },
+    {
+      "title": "C10: 390px drawer, keyboard controls and Escape",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 343
+        }
+      ]
+    },
+    {
+      "title": "C12: text escaping, path escape refusal, safe attachments and external links",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 454
+        }
+      ]
+    },
+    {
+      "title": "C12/E11: corrupt and unsupported snapshots never replace current complete state",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 467
+        }
+      ]
+    },
+    {
+      "title": "C01: empty production remains empty without synthetic fallback",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 313
+        }
+      ]
+    },
+    {
+      "title": "C11: synthetic history 1000, rendered 50",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 541
+        }
+      ]
+    },
+    {
+      "title": "C11: synthetic history 1000, rendered 100",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 559
+        }
+      ]
+    },
+    {
+      "title": "C11: synthetic history 1000, rendered 200",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 790
+        }
+      ]
+    },
+    {
+      "title": "C11: synthetic history 10000, rendered 50",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 728
+        }
+      ]
+    },
+    {
+      "title": "C11: synthetic history 10000, rendered 100",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 810
+        }
+      ]
+    },
+    {
+      "title": "C11: synthetic history 10000, rendered 200",
+      "file": "observer.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 1029
+        }
+      ]
+    },
+    {
+      "title": "C01-C04: real React Flow, rounds contain P/R/F, independent expansion and candidates",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 892
+        }
+      ]
+    },
+    {
+      "title": "C06: search unloaded descendant restores ancestor chain without duplicate source nodes",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 405
+        }
+      ]
+    },
+    {
+      "title": "C07/B10: daily drawer locates exact review; multi-day revisions coexist",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 456
+        }
+      ]
+    },
+    {
+      "title": "C08: selecting immutable historical snapshot excludes future products, revisions and adoption",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 484
+        }
+      ]
+    },
+    {
+      "title": "C09/E08: atomic refresh preserves viewport and selection; interrupted snapshot keeps old data",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 569
+        }
+      ]
+    },
+    {
+      "title": "D03-D05: precise plan badge expires while page stays open; refresh does not renew it",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 510
+        }
+      ]
+    },
+    {
+      "title": "D01/D06: fail-closed readiness synthetic",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 329
+        }
+      ]
+    },
+    {
+      "title": "D01/D06: fail-closed readiness missing-evidence",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 334
+        }
+      ]
+    },
+    {
+      "title": "D01/D06: fail-closed readiness unknown-schema",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 323
+        }
+      ]
+    },
+    {
+      "title": "D01/D06: fail-closed readiness invalidated",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 349
+        }
+      ]
+    },
+    {
+      "title": "D01/D06: fail-closed readiness unbound-plan",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 340
+        }
+      ]
+    },
+    {
+      "title": "D01/D06: fail-closed readiness unavailable-evidence",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 348
+        }
+      ]
+    },
+    {
+      "title": "D01/D06: fail-closed readiness naive-time",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 338
+        }
+      ]
+    },
+    {
+      "title": "stale persisted filters are cleared visibly; product versions remain catalog-driven",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 383
+        }
+      ]
+    },
+    {
+      "title": "browser clock jump removes current-ready badges",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 327
+        }
+      ]
+    },
+    {
+      "title": "C10: 390px drawer, keyboard controls and Escape",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 364
+        }
+      ]
+    },
+    {
+      "title": "C12: text escaping, path escape refusal, safe attachments and external links",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 490
+        }
+      ]
+    },
+    {
+      "title": "C12/E11: corrupt and unsupported snapshots never replace current complete state",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 413
+        }
+      ]
+    },
+    {
+      "title": "C01: empty production remains empty without synthetic fallback",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 352
+        }
+      ]
+    },
+    {
+      "title": "C11: synthetic history 1000, rendered 50",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 519
+        }
+      ]
+    },
+    {
+      "title": "C11: synthetic history 1000, rendered 100",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 543
+        }
+      ]
+    },
+    {
+      "title": "C11: synthetic history 1000, rendered 200",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 790
+        }
+      ]
+    },
+    {
+      "title": "C11: synthetic history 10000, rendered 50",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 699
+        }
+      ]
+    },
+    {
+      "title": "C11: synthetic history 10000, rendered 100",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 749
+        }
+      ]
+    },
+    {
+      "title": "C11: synthetic history 10000, rendered 200",
+      "file": "observer.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 990
+        }
+      ]
+    },
+    {
+      "title": "C05: complete-manifest append → actual projector → browser refresh, web/src unchanged",
+      "file": "pipeline.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 689
+        }
+      ]
+    },
+    {
+      "title": "C05: complete-manifest append → actual projector → browser refresh, web/src unchanged",
+      "file": "pipeline.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 775
+        }
+      ]
+    },
+    {
+      "title": "current genuine public projection renders and exposes verified research evidence",
+      "file": "production.spec.ts",
+      "browser": "chromium",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 575
+        }
+      ]
+    },
+    {
+      "title": "current genuine public projection renders and exposes verified research evidence",
+      "file": "production.spec.ts",
+      "browser": "webkit",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 615
+        }
+      ]
+    }
+  ],
+  "scale": [
+    {
+      "classification": "SYNTHETIC_BROWSER_PERFORMANCE_ONLY",
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "platform": "darwin",
+      "release": "27.0.0",
+      "architecture": "arm64",
+      "cpu": "Apple M5",
+      "cpuCores": 10,
+      "memoryGB": 16,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "totalHistory": 1000,
+      "renderedNodes": 100,
+      "firstRenderAndExpansionMs": 423.8,
+      "searchToResultMs": 34.2,
+      "zoomClickMs": 37.2,
+      "catalogBytes": 694468,
+      "actualDomNodes": 100,
+      "at": "2026-09-22T18:21:20.093Z"
+    },
+    {
+      "classification": "SYNTHETIC_BROWSER_PERFORMANCE_ONLY",
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "platform": "darwin",
+      "release": "27.0.0",
+      "architecture": "arm64",
+      "cpu": "Apple M5",
+      "cpuCores": 10,
+      "memoryGB": 16,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "totalHistory": 1000,
+      "renderedNodes": 200,
+      "firstRenderAndExpansionMs": 585.4,
+      "searchToResultMs": 80.5,
+      "zoomClickMs": 50.6,
+      "catalogBytes": 694468,
+      "actualDomNodes": 200,
+      "at": "2026-09-22T18:21:20.880Z"
+    },
+    {
+      "classification": "SYNTHETIC_BROWSER_PERFORMANCE_ONLY",
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "platform": "darwin",
+      "release": "27.0.0",
+      "architecture": "arm64",
+      "cpu": "Apple M5",
+      "cpuCores": 10,
+      "memoryGB": 16,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "totalHistory": 1000,
+      "renderedNodes": 50,
+      "firstRenderAndExpansionMs": 333.6,
+      "searchToResultMs": 23.1,
+      "zoomClickMs": 38.6,
+      "catalogBytes": 694468,
+      "actualDomNodes": 50,
+      "at": "2026-09-22T18:21:19.449Z"
+    },
+    {
+      "classification": "SYNTHETIC_BROWSER_PERFORMANCE_ONLY",
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "platform": "darwin",
+      "release": "27.0.0",
+      "architecture": "arm64",
+      "cpu": "Apple M5",
+      "cpuCores": 10,
+      "memoryGB": 16,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "totalHistory": 10000,
+      "renderedNodes": 100,
+      "firstRenderAndExpansionMs": 636.5,
+      "searchToResultMs": 36.7,
+      "zoomClickMs": 38.4,
+      "catalogBytes": 6994478,
+      "actualDomNodes": 100,
+      "at": "2026-09-22T18:21:22.436Z"
+    },
+    {
+      "classification": "SYNTHETIC_BROWSER_PERFORMANCE_ONLY",
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "platform": "darwin",
+      "release": "27.0.0",
+      "architecture": "arm64",
+      "cpu": "Apple M5",
+      "cpuCores": 10,
+      "memoryGB": 16,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "totalHistory": 10000,
+      "renderedNodes": 200,
+      "firstRenderAndExpansionMs": 790,
+      "searchToResultMs": 74.6,
+      "zoomClickMs": 53,
+      "catalogBytes": 6994478,
+      "actualDomNodes": 200,
+      "at": "2026-09-22T18:21:23.469Z"
+    },
+    {
+      "classification": "SYNTHETIC_BROWSER_PERFORMANCE_ONLY",
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "platform": "darwin",
+      "release": "27.0.0",
+      "architecture": "arm64",
+      "cpu": "Apple M5",
+      "cpuCores": 10,
+      "memoryGB": 16,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "totalHistory": 10000,
+      "renderedNodes": 50,
+      "firstRenderAndExpansionMs": 552,
+      "searchToResultMs": 26.7,
+      "zoomClickMs": 33.1,
+      "catalogBytes": 6994478,
+      "actualDomNodes": 50,
+      "at": "2026-09-22T18:21:21.598Z"
+    },
+    {
+      "classification": "SYNTHETIC_BROWSER_PERFORMANCE_ONLY",
+      "browser": "webkit",
+      "version": "26.6",
+      "platform": "darwin",
+      "release": "27.0.0",
+      "architecture": "arm64",
+      "cpu": "Apple M5",
+      "cpuCores": 10,
+      "memoryGB": 16,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "totalHistory": 1000,
+      "renderedNodes": 100,
+      "firstRenderAndExpansionMs": 262.4,
+      "searchToResultMs": 51.8,
+      "zoomClickMs": 44.2,
+      "catalogBytes": 694468,
+      "actualDomNodes": 100,
+      "at": "2026-09-22T18:21:34.326Z"
+    },
+    {
+      "classification": "SYNTHETIC_BROWSER_PERFORMANCE_ONLY",
+      "browser": "webkit",
+      "version": "26.6",
+      "platform": "darwin",
+      "release": "27.0.0",
+      "architecture": "arm64",
+      "cpu": "Apple M5",
+      "cpuCores": 10,
+      "memoryGB": 16,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "totalHistory": 1000,
+      "renderedNodes": 200,
+      "firstRenderAndExpansionMs": 459.3,
+      "searchToResultMs": 76.3,
+      "zoomClickMs": 65.5,
+      "catalogBytes": 694468,
+      "actualDomNodes": 200,
+      "at": "2026-09-22T18:21:35.120Z"
+    },
+    {
+      "classification": "SYNTHETIC_BROWSER_PERFORMANCE_ONLY",
+      "browser": "webkit",
+      "version": "26.6",
+      "platform": "darwin",
+      "release": "27.0.0",
+      "architecture": "arm64",
+      "cpu": "Apple M5",
+      "cpuCores": 10,
+      "memoryGB": 16,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "totalHistory": 1000,
+      "renderedNodes": 50,
+      "firstRenderAndExpansionMs": 208.4,
+      "searchToResultMs": 35.8,
+      "zoomClickMs": 52.7,
+      "catalogBytes": 694468,
+      "actualDomNodes": 50,
+      "at": "2026-09-22T18:21:33.742Z"
+    },
+    {
+      "classification": "SYNTHETIC_BROWSER_PERFORMANCE_ONLY",
+      "browser": "webkit",
+      "version": "26.6",
+      "platform": "darwin",
+      "release": "27.0.0",
+      "architecture": "arm64",
+      "cpu": "Apple M5",
+      "cpuCores": 10,
+      "memoryGB": 16,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "totalHistory": 10000,
+      "renderedNodes": 100,
+      "firstRenderAndExpansionMs": 428.3,
+      "searchToResultMs": 45.5,
+      "zoomClickMs": 51.1,
+      "catalogBytes": 6994478,
+      "actualDomNodes": 100,
+      "at": "2026-09-22T18:21:36.584Z"
+    },
+    {
+      "classification": "SYNTHETIC_BROWSER_PERFORMANCE_ONLY",
+      "browser": "webkit",
+      "version": "26.6",
+      "platform": "darwin",
+      "release": "27.0.0",
+      "architecture": "arm64",
+      "cpu": "Apple M5",
+      "cpuCores": 10,
+      "memoryGB": 16,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "totalHistory": 10000,
+      "renderedNodes": 200,
+      "firstRenderAndExpansionMs": 625.4,
+      "searchToResultMs": 77.4,
+      "zoomClickMs": 58.2,
+      "catalogBytes": 6994478,
+      "actualDomNodes": 200,
+      "at": "2026-09-22T18:21:37.569Z"
+    },
+    {
+      "classification": "SYNTHETIC_BROWSER_PERFORMANCE_ONLY",
+      "browser": "webkit",
+      "version": "26.6",
+      "platform": "darwin",
+      "release": "27.0.0",
+      "architecture": "arm64",
+      "cpu": "Apple M5",
+      "cpuCores": 10,
+      "memoryGB": 16,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "totalHistory": 10000,
+      "renderedNodes": 50,
+      "firstRenderAndExpansionMs": 371.4,
+      "searchToResultMs": 43.6,
+      "zoomClickMs": 56,
+      "catalogBytes": 6994478,
+      "actualDomNodes": 50,
+      "at": "2026-09-22T18:21:35.823Z"
+    }
+  ],
+  "genuine_projection_checks": [
+    {
+      "classification": "GENUINE_LOCAL_PUBLIC_PROJECTION_BROWSER_CHECK_NOT_PAGES_READBACK",
+      "snapshot_id": "8fed09b78ee830b69e2e50c8a7706b84fc12e238f89a2f819252c0d3bcc2510c",
+      "as_of": "2026-09-22T18:20:38.520520Z",
+      "round_count": 3,
+      "browser": "chromium",
+      "browserVersion": "153.0.8010.12",
+      "actualAttachmentChecked": true,
+      "errors": [],
+      "at": "2026-09-22T18:21:24.734Z"
+    },
+    {
+      "classification": "GENUINE_LOCAL_PUBLIC_PROJECTION_BROWSER_CHECK_NOT_PAGES_READBACK",
+      "snapshot_id": "8fed09b78ee830b69e2e50c8a7706b84fc12e238f89a2f819252c0d3bcc2510c",
+      "as_of": "2026-09-22T18:20:38.520520Z",
+      "round_count": 3,
+      "browser": "webkit",
+      "browserVersion": "26.6",
+      "actualAttachmentChecked": true,
+      "errors": [],
+      "at": "2026-09-22T18:21:39.004Z"
+    }
+  ],
+  "limitations": [
+    "Synthetic cases do not establish economic evidence or natural task execution.",
+    "Genuine projection checks load immutable generated files locally, not public Pages.",
+    "Scale counts are actual rendered React Flow nodes; the viewport may show a subset at readable zoom."
+  ]
+}

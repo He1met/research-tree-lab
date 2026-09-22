@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-09-22T18:28:10.927288Z",
+  "test_only": true,
+  "production_writes": false,
+  "cases": {
+    "renamed_is_duplicate": true,
+    "parameter_tuning_is_variant": true,
+    "cross_product_is_replication_candidate": true,
+    "new_sample_is_replication_candidate": true,
+    "multiple_sources_do_not_duplicate_rounds": true,
+    "all_candidates_share_structural_family": true,
+    "not_scientific_independence": true,
+    "detail_agrees_with_catalog": true,
+    "opaque_new_name_is_unknown": true
+  },
+  "all_passed": true,
+  "candidate_states": {
+    "Rbase": "DUPLICATE_RULES_AND_INPUTS",
+    "Reth": "CROSS_PRODUCT_REPLICATION_CANDIDATE",
+    "Rnew-sample": "NEW_SAMPLE_REPLICATION_CANDIDATE",
+    "Rrenamed": "DUPLICATE_RULES_AND_INPUTS",
+    "Rvaried": "PARAMETER_OR_RULE_VARIANT"
+  },
+  "evidence_scope": "Engineering structural deduplication hints only; no scientific or economic independence asserted."
+}

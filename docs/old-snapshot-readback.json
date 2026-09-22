@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "verified_at": "2026-09-22T18:30:47.443522+00:00",
+  "reader_version": "file-projection-v1.1.0",
+  "original_snapshot_id": "c24bc20dd78441cd253f063545e934fb2e1e60878cf6fc3bdbe79a8d238b2ba1",
+  "original_as_of": "2026-09-22T18:01:02.069674Z",
+  "original_schema_version": "1.0",
+  "status": "REAL_PREVIOUS_GENERATOR_SNAPSHOT_HASH_VERIFIED",
+  "scope": "Already-created real schema 1.0 snapshot read by upgraded v1.1 reader; not a claim of unimplemented schema 2 migration",
+  "history_verified": [
+    {
+      "snapshot_id": "c24bc20dd78441cd253f063545e934fb2e1e60878cf6fc3bdbe79a8d238b2ba1",
+      "as_of": "2026-09-22T18:01:02.069674Z",
+      "record_count": 0,
+      "round_count": 0,
+      "generator_version": "file-projection-v1.0.0",
+      "hash_verification": "PASS"
+    },
+    {
+      "snapshot_id": "e9f0fccb1872ade34a4757fdbb08a59055a677af9334af297579bb2413d0dbb3",
+      "as_of": "2026-09-22T18:06:53.448227Z",
+      "record_count": 21,
+      "round_count": 3,
+      "generator_version": "file-projection-v1.0.0",
+      "hash_verification": "PASS"
+    },
+    {
+      "snapshot_id": "f8225d2f3a7476d2e674f12368cc011b8b254b96c7bf5cc901cbb7ec36aa3d88",
+      "as_of": "2026-09-22T18:14:40.626773Z",
+      "record_count": 26,
+      "round_count": 3,
+      "generator_version": "file-projection-v1.0.0",
+      "hash_verification": "PASS"
+    },
+    {
+      "snapshot_id": "8fed09b78ee830b69e2e50c8a7706b84fc12e238f89a2f819252c0d3bcc2510c",
+      "as_of": "2026-09-22T18:20:38.520520Z",
+      "record_count": 26,
+      "round_count": 3,
+      "generator_version": "file-projection-v1.0.0",
+      "hash_verification": "PASS"
+    },
+    {
+      "snapshot_id": "a4fb5569c5f8f03549fa3b034f8c40fb61ced34e0302fd0ef35a837ab65e1a39",
+      "as_of": "2026-09-22T18:26:37.692252Z",
+      "record_count": 26,
+      "round_count": 3,
+      "generator_version": "file-projection-v1.1.0",
+      "hash_verification": "PASS"
+    }
+  ]
+}

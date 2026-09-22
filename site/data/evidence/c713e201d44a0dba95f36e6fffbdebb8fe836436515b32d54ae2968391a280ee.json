@@ -1,0 +1,337 @@
+{
+  "created_at": "2026-09-22T17:57:57.002886Z",
+  "extension_example_only": {
+    "enabled": false,
+    "note": "Catalog expansion test only; no production registration or research plan.",
+    "product_id": "intc",
+    "source_mapping_template": {
+      "native_code": null,
+      "specification_page": "https://www.okx.com/zh-hans/trade-market/info/swap",
+      "venue": "OKX"
+    },
+    "status": "EXAMPLE_NOT_REGISTERED"
+  },
+  "products": [
+    {
+      "account_eligibility": "NOT_ASSESSED",
+      "calendar": "Target perpetual 24/7; reference exchange calendar separate",
+      "contract_face_value": "1",
+      "contract_kind": "USDT_MARGINED_PERPETUAL",
+      "contract_multiplier": "1",
+      "data_source": "https://www.okx.com/historical-data",
+      "displayed_max_leverage": "25",
+      "enabled": true,
+      "face_value_unit": "AAPL",
+      "fees": {
+        "actual_fee_tier": "UNKNOWN_NOT_ACCOUNT_ASSESSED",
+        "exit_cost": null,
+        "fee_source": "https://www.okx.com/fees",
+        "maker": null,
+        "slippage": null,
+        "taker": null
+      },
+      "funding_sample": {
+        "cost_to_real_position": null,
+        "duplicate_timestamp_count": 0,
+        "first_event_at": "2026-09-20T16:00:00Z",
+        "instrument_ref": "AAPL-USDT-SWAP",
+        "last_event_at": "2026-09-21T08:00:00Z",
+        "missing_value_count": 0,
+        "negative_count": 0,
+        "observed_intervals_hours": [
+          "8"
+        ],
+        "outside_requested_utc_window_count": 1,
+        "positive_count": 0,
+        "quality_state": "FILENAME_UTC_WINDOW_MISMATCH",
+        "requested_utc_day_complete": false,
+        "row_count": 3,
+        "sum_basis_points_diagnostic": "0",
+        "sum_rates_diagnostic": "0",
+        "unique_event_count": 3,
+        "within_requested_utc_window_count": 2,
+        "within_requested_window_sum_diagnostic": "0",
+        "zero_count": 3
+      },
+      "funding_schedule": "8-hour spacing observed in sample, not a perpetual current guarantee",
+      "gaps": [
+        "target trade/mark/index paths",
+        "actual trading-fee schedule and applicable tier",
+        "download date timezone needs further official evidence",
+        "source dissemination time unknown",
+        "regional/account eligibility not assessed"
+      ],
+      "instrument_ref": "AAPL-USDT-SWAP",
+      "minimum_quantity_contracts": "0.01",
+      "native_code_evidence": [
+        "official_download_instrument_name",
+        "official_swap_specification_selection"
+      ],
+      "normalized_format": "offline Decimal rates and aware UTC timestamps; no unknown filled with zero",
+      "price_roles": {
+        "funding_rate": "ACTUAL_SETTLEMENT_SAMPLE_DOWNLOADED",
+        "index_price": "RULE_VERIFIED_NO_PATH_DATA",
+        "mark_price": "RULE_VERIFIED_NO_PATH_DATA",
+        "target_trade_price": "NOT_DOWNLOADED"
+      },
+      "price_tick_usdt": "0.01",
+      "product_id": "aapl",
+      "quantity_step_contracts": "0.01",
+      "raw_format": "zip containing CSV instrument_name,funding_rate,funding_time; timestamp milliseconds UTC",
+      "readiness": "UNKNOWN",
+      "reference_underlying": {
+        "quote_currency": "USD",
+        "role": "REFERENCE_NOT_SUBSTITUTE",
+        "ticker": "AAPL",
+        "verified_downloaded_price_data": false
+      },
+      "rule_observation_recorded_at": "2026-09-22T17:57:57.002886Z",
+      "rule_valid_until": null,
+      "settlement_currency": "USDT",
+      "spec_version": "observed-20260923-v1",
+      "status": "IDENTITY_AND_SMALL_FUNDING_SAMPLE_VERIFIED",
+      "venue": "OKX"
+    },
+    {
+      "account_eligibility": "NOT_ASSESSED",
+      "calendar": "Target perpetual 24/7; reference exchange calendar separate",
+      "contract_face_value": "1",
+      "contract_kind": "USDT_MARGINED_PERPETUAL",
+      "contract_multiplier": "1",
+      "data_source": "https://www.okx.com/historical-data",
+      "displayed_max_leverage": "50",
+      "enabled": true,
+      "face_value_unit": "QQQ",
+      "fees": {
+        "actual_fee_tier": "UNKNOWN_NOT_ACCOUNT_ASSESSED",
+        "exit_cost": null,
+        "fee_source": "https://www.okx.com/fees",
+        "maker": null,
+        "slippage": null,
+        "taker": null
+      },
+      "funding_sample": {
+        "cost_to_real_position": null,
+        "duplicate_timestamp_count": 0,
+        "first_event_at": "2026-09-20T16:00:00Z",
+        "instrument_ref": "QQQ-USDT-SWAP",
+        "last_event_at": "2026-09-21T08:00:00Z",
+        "missing_value_count": 0,
+        "negative_count": 0,
+        "observed_intervals_hours": [
+          "8"
+        ],
+        "outside_requested_utc_window_count": 1,
+        "positive_count": 1,
+        "quality_state": "FILENAME_UTC_WINDOW_MISMATCH",
+        "requested_utc_day_complete": false,
+        "row_count": 3,
+        "sum_basis_points_diagnostic": "0.3385287110560000",
+        "sum_rates_diagnostic": "0.0000338528711056",
+        "unique_event_count": 3,
+        "within_requested_utc_window_count": 2,
+        "within_requested_window_sum_diagnostic": "0.0000338528711056",
+        "zero_count": 2
+      },
+      "funding_schedule": "8-hour spacing observed in sample, not a perpetual current guarantee",
+      "gaps": [
+        "target trade/mark/index paths",
+        "actual trading-fee schedule and applicable tier",
+        "download date timezone needs further official evidence",
+        "source dissemination time unknown",
+        "regional/account eligibility not assessed"
+      ],
+      "instrument_ref": "QQQ-USDT-SWAP",
+      "minimum_quantity_contracts": "0.01",
+      "native_code_evidence": [
+        "official_download_instrument_name",
+        "official_swap_specification_selection"
+      ],
+      "normalized_format": "offline Decimal rates and aware UTC timestamps; no unknown filled with zero",
+      "price_roles": {
+        "funding_rate": "ACTUAL_SETTLEMENT_SAMPLE_DOWNLOADED",
+        "index_price": "RULE_VERIFIED_NO_PATH_DATA",
+        "mark_price": "RULE_VERIFIED_NO_PATH_DATA",
+        "target_trade_price": "NOT_DOWNLOADED"
+      },
+      "price_tick_usdt": "0.01",
+      "product_id": "qqq",
+      "quantity_step_contracts": "0.01",
+      "raw_format": "zip containing CSV instrument_name,funding_rate,funding_time; timestamp milliseconds UTC",
+      "readiness": "UNKNOWN",
+      "reference_underlying": {
+        "quote_currency": "USD",
+        "role": "REFERENCE_NOT_SUBSTITUTE",
+        "ticker": "QQQ",
+        "verified_downloaded_price_data": false
+      },
+      "rule_observation_recorded_at": "2026-09-22T17:57:57.002886Z",
+      "rule_valid_until": null,
+      "settlement_currency": "USDT",
+      "spec_version": "observed-20260923-v1",
+      "status": "IDENTITY_AND_SMALL_FUNDING_SAMPLE_VERIFIED",
+      "venue": "OKX"
+    },
+    {
+      "account_eligibility": "NOT_ASSESSED",
+      "calendar": "Target perpetual 24/7",
+      "contract_face_value": "0.01",
+      "contract_kind": "USDT_MARGINED_PERPETUAL",
+      "contract_multiplier": "1",
+      "data_source": "https://www.okx.com/historical-data",
+      "displayed_max_leverage": "100",
+      "enabled": true,
+      "face_value_unit": "BTC",
+      "fees": {
+        "actual_fee_tier": "UNKNOWN_NOT_ACCOUNT_ASSESSED",
+        "exit_cost": null,
+        "fee_source": "https://www.okx.com/fees",
+        "maker": null,
+        "slippage": null,
+        "taker": null
+      },
+      "funding_sample": {
+        "cost_to_real_position": null,
+        "duplicate_timestamp_count": 0,
+        "first_event_at": "2026-09-20T16:00:00Z",
+        "instrument_ref": "BTC-USDT-SWAP",
+        "last_event_at": "2026-09-21T08:00:00Z",
+        "missing_value_count": 0,
+        "negative_count": 0,
+        "observed_intervals_hours": [
+          "8"
+        ],
+        "outside_requested_utc_window_count": 1,
+        "positive_count": 3,
+        "quality_state": "FILENAME_UTC_WINDOW_MISMATCH",
+        "requested_utc_day_complete": false,
+        "row_count": 3,
+        "sum_basis_points_diagnostic": "2.7115932695440000",
+        "sum_rates_diagnostic": "0.0002711593269544",
+        "unique_event_count": 3,
+        "within_requested_utc_window_count": 2,
+        "within_requested_window_sum_diagnostic": "0.0001925806509055",
+        "zero_count": 0
+      },
+      "funding_schedule": "8-hour spacing observed in sample, not a perpetual current guarantee",
+      "gaps": [
+        "target trade/mark/index paths",
+        "actual trading-fee schedule and applicable tier",
+        "download date timezone needs further official evidence",
+        "source dissemination time unknown",
+        "regional/account eligibility not assessed"
+      ],
+      "instrument_ref": "BTC-USDT-SWAP",
+      "minimum_quantity_contracts": "0.01",
+      "native_code_evidence": [
+        "official_download_instrument_name",
+        "official_swap_specification_selection"
+      ],
+      "normalized_format": "offline Decimal rates and aware UTC timestamps; no unknown filled with zero",
+      "price_roles": {
+        "funding_rate": "ACTUAL_SETTLEMENT_SAMPLE_DOWNLOADED",
+        "index_price": "RULE_VERIFIED_NO_PATH_DATA",
+        "mark_price": "RULE_VERIFIED_NO_PATH_DATA",
+        "target_trade_price": "NOT_DOWNLOADED"
+      },
+      "price_tick_usdt": "0.1",
+      "product_id": "btc",
+      "quantity_step_contracts": "0.01",
+      "raw_format": "zip containing CSV instrument_name,funding_rate,funding_time; timestamp milliseconds UTC",
+      "readiness": "UNKNOWN",
+      "reference_underlying": {
+        "quote_currency": "venue-dependent",
+        "role": "REFERENCE_NOT_SUBSTITUTE",
+        "ticker": "BTC",
+        "verified_downloaded_price_data": false
+      },
+      "rule_observation_recorded_at": "2026-09-22T17:57:57.002886Z",
+      "rule_valid_until": null,
+      "settlement_currency": "USDT",
+      "spec_version": "observed-20260923-v1",
+      "status": "IDENTITY_AND_SMALL_FUNDING_SAMPLE_VERIFIED",
+      "venue": "OKX"
+    },
+    {
+      "account_eligibility": "NOT_ASSESSED",
+      "calendar": "Target perpetual 24/7",
+      "contract_face_value": "0.1",
+      "contract_kind": "USDT_MARGINED_PERPETUAL",
+      "contract_multiplier": "1",
+      "data_source": "https://www.okx.com/historical-data",
+      "displayed_max_leverage": "100",
+      "enabled": true,
+      "face_value_unit": "ETH",
+      "fees": {
+        "actual_fee_tier": "UNKNOWN_NOT_ACCOUNT_ASSESSED",
+        "exit_cost": null,
+        "fee_source": "https://www.okx.com/fees",
+        "maker": null,
+        "slippage": null,
+        "taker": null
+      },
+      "funding_sample": {
+        "cost_to_real_position": null,
+        "duplicate_timestamp_count": 0,
+        "first_event_at": "2026-09-20T16:00:00Z",
+        "instrument_ref": "ETH-USDT-SWAP",
+        "last_event_at": "2026-09-21T08:00:00Z",
+        "missing_value_count": 0,
+        "negative_count": 0,
+        "observed_intervals_hours": [
+          "8"
+        ],
+        "outside_requested_utc_window_count": 1,
+        "positive_count": 3,
+        "quality_state": "FILENAME_UTC_WINDOW_MISMATCH",
+        "requested_utc_day_complete": false,
+        "row_count": 3,
+        "sum_basis_points_diagnostic": "1.4183556215730000",
+        "sum_rates_diagnostic": "0.0001418355621573",
+        "unique_event_count": 3,
+        "within_requested_utc_window_count": 2,
+        "within_requested_window_sum_diagnostic": "0.0001155807198601",
+        "zero_count": 0
+      },
+      "funding_schedule": "8-hour spacing observed in sample, not a perpetual current guarantee",
+      "gaps": [
+        "target trade/mark/index paths",
+        "actual trading-fee schedule and applicable tier",
+        "download date timezone needs further official evidence",
+        "source dissemination time unknown",
+        "regional/account eligibility not assessed"
+      ],
+      "instrument_ref": "ETH-USDT-SWAP",
+      "minimum_quantity_contracts": "0.01",
+      "native_code_evidence": [
+        "official_download_instrument_name",
+        "official_swap_specification_selection"
+      ],
+      "normalized_format": "offline Decimal rates and aware UTC timestamps; no unknown filled with zero",
+      "price_roles": {
+        "funding_rate": "ACTUAL_SETTLEMENT_SAMPLE_DOWNLOADED",
+        "index_price": "RULE_VERIFIED_NO_PATH_DATA",
+        "mark_price": "RULE_VERIFIED_NO_PATH_DATA",
+        "target_trade_price": "NOT_DOWNLOADED"
+      },
+      "price_tick_usdt": "0.01",
+      "product_id": "eth",
+      "quantity_step_contracts": "0.01",
+      "raw_format": "zip containing CSV instrument_name,funding_rate,funding_time; timestamp milliseconds UTC",
+      "readiness": "UNKNOWN",
+      "reference_underlying": {
+        "quote_currency": "venue-dependent",
+        "role": "REFERENCE_NOT_SUBSTITUTE",
+        "ticker": "ETH",
+        "verified_downloaded_price_data": false
+      },
+      "rule_observation_recorded_at": "2026-09-22T17:57:57.002886Z",
+      "rule_valid_until": null,
+      "settlement_currency": "USDT",
+      "spec_version": "observed-20260923-v1",
+      "status": "IDENTITY_AND_SMALL_FUNDING_SAMPLE_VERIFIED",
+      "venue": "OKX"
+    }
+  ],
+  "schema_version": "1.0"
+}

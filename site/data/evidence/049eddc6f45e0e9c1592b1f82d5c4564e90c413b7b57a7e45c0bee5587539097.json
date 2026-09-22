@@ -1,0 +1,121 @@
+{
+  "analysis_kind": "REAL_HISTORICAL_DATA_AUDIT",
+  "current_execution_conditions": "UNKNOWN",
+  "findings": {
+    "all_four_native_ids_observed": true,
+    "filename_as_utc_day_refuted": true,
+    "predictive_advantage": "NOT_TESTED",
+    "profitability": "UNKNOWN",
+    "zero_interest_implies_zero_funding_refuted": true
+  },
+  "member": "allswap-fundingrates-2026-09-21.csv",
+  "member_bytes": 82188,
+  "member_sha256": "c2ae92301fd8ace5682729e46e58ff959d14b7ebf948ead7d9c4f533d5a9950c",
+  "net_return": null,
+  "products": {
+    "aapl": {
+      "cost_to_real_position": null,
+      "duplicate_timestamp_count": 0,
+      "first_event_at": "2026-09-20T16:00:00Z",
+      "instrument_ref": "AAPL-USDT-SWAP",
+      "last_event_at": "2026-09-21T08:00:00Z",
+      "missing_value_count": 0,
+      "negative_count": 0,
+      "observed_intervals_hours": [
+        "8"
+      ],
+      "outside_requested_utc_window_count": 1,
+      "positive_count": 0,
+      "quality_state": "FILENAME_UTC_WINDOW_MISMATCH",
+      "requested_utc_day_complete": false,
+      "row_count": 3,
+      "sum_basis_points_diagnostic": "0",
+      "sum_rates_diagnostic": "0",
+      "unique_event_count": 3,
+      "within_requested_utc_window_count": 2,
+      "within_requested_window_sum_diagnostic": "0",
+      "zero_count": 3
+    },
+    "btc": {
+      "cost_to_real_position": null,
+      "duplicate_timestamp_count": 0,
+      "first_event_at": "2026-09-20T16:00:00Z",
+      "instrument_ref": "BTC-USDT-SWAP",
+      "last_event_at": "2026-09-21T08:00:00Z",
+      "missing_value_count": 0,
+      "negative_count": 0,
+      "observed_intervals_hours": [
+        "8"
+      ],
+      "outside_requested_utc_window_count": 1,
+      "positive_count": 3,
+      "quality_state": "FILENAME_UTC_WINDOW_MISMATCH",
+      "requested_utc_day_complete": false,
+      "row_count": 3,
+      "sum_basis_points_diagnostic": "2.7115932695440000",
+      "sum_rates_diagnostic": "0.0002711593269544",
+      "unique_event_count": 3,
+      "within_requested_utc_window_count": 2,
+      "within_requested_window_sum_diagnostic": "0.0001925806509055",
+      "zero_count": 0
+    },
+    "eth": {
+      "cost_to_real_position": null,
+      "duplicate_timestamp_count": 0,
+      "first_event_at": "2026-09-20T16:00:00Z",
+      "instrument_ref": "ETH-USDT-SWAP",
+      "last_event_at": "2026-09-21T08:00:00Z",
+      "missing_value_count": 0,
+      "negative_count": 0,
+      "observed_intervals_hours": [
+        "8"
+      ],
+      "outside_requested_utc_window_count": 1,
+      "positive_count": 3,
+      "quality_state": "FILENAME_UTC_WINDOW_MISMATCH",
+      "requested_utc_day_complete": false,
+      "row_count": 3,
+      "sum_basis_points_diagnostic": "1.4183556215730000",
+      "sum_rates_diagnostic": "0.0001418355621573",
+      "unique_event_count": 3,
+      "within_requested_utc_window_count": 2,
+      "within_requested_window_sum_diagnostic": "0.0001155807198601",
+      "zero_count": 0
+    },
+    "qqq": {
+      "cost_to_real_position": null,
+      "duplicate_timestamp_count": 0,
+      "first_event_at": "2026-09-20T16:00:00Z",
+      "instrument_ref": "QQQ-USDT-SWAP",
+      "last_event_at": "2026-09-21T08:00:00Z",
+      "missing_value_count": 0,
+      "negative_count": 0,
+      "observed_intervals_hours": [
+        "8"
+      ],
+      "outside_requested_utc_window_count": 1,
+      "positive_count": 1,
+      "quality_state": "FILENAME_UTC_WINDOW_MISMATCH",
+      "requested_utc_day_complete": false,
+      "row_count": 3,
+      "sum_basis_points_diagnostic": "0.3385287110560000",
+      "sum_rates_diagnostic": "0.0000338528711056",
+      "unique_event_count": 3,
+      "within_requested_utc_window_count": 2,
+      "within_requested_window_sum_diagnostic": "0.0000338528711056",
+      "zero_count": 2
+    }
+  },
+  "protocol_sha256": "730216be58b9839a635306273cf03530036ce07c3416e629f4de5f3ab3fa8429",
+  "requested_utc_window": {
+    "end_exclusive": "2026-09-22T00:00:00Z",
+    "selection_rule": "First complete day shown as default by the official download page; no outcome-based selection.",
+    "start": "2026-09-21T00:00:00Z"
+  },
+  "schema_version": "1.0",
+  "source_bytes": 12419,
+  "source_sha256": "34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c",
+  "synthetic": false,
+  "total_rows": 2103,
+  "unique_instruments": 482
+}

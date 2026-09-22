@@ -1,0 +1,450 @@
+{
+  "actual_trade_result": false,
+  "assumptions": [
+    "Constant mark price and fixed notional at all observed settlements",
+    "Short continuously present for the three observations only; no assumed subsequent rates",
+    "Symmetric entry/exit fee and adverse slippage scenarios, not verified venue or account costs",
+    "No future profit, expected return, or comparison of actual fills is implied"
+  ],
+  "evidence_stage": "REAL_DATA_CONDITIONAL_ACCOUNTING",
+  "price_pnl": null,
+  "products": {
+    "aapl": {
+      "interpretation": "Observed rate sum alone does not establish net advantage.",
+      "primary_5bp_fee_1bp_slippage_each_side": {
+        "conditional_flat_price_after_cost_bps": "-12",
+        "fee_bps_each_side": 5,
+        "funding_covers_assumed_cost": false,
+        "roundtrip_cost_bps": "12",
+        "short_funding_diagnostic_bps": "0",
+        "slippage_bps_each_side": 1
+      },
+      "scenarios": [
+        {
+          "conditional_flat_price_after_cost_bps": "0",
+          "fee_bps_each_side": 0,
+          "funding_covers_assumed_cost": true,
+          "roundtrip_cost_bps": "0",
+          "short_funding_diagnostic_bps": "0",
+          "slippage_bps_each_side": 0
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-2",
+          "fee_bps_each_side": 0,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "2",
+          "short_funding_diagnostic_bps": "0",
+          "slippage_bps_each_side": 1
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-6",
+          "fee_bps_each_side": 0,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "6",
+          "short_funding_diagnostic_bps": "0",
+          "slippage_bps_each_side": 3
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-4",
+          "fee_bps_each_side": 2,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "4",
+          "short_funding_diagnostic_bps": "0",
+          "slippage_bps_each_side": 0
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-6",
+          "fee_bps_each_side": 2,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "6",
+          "short_funding_diagnostic_bps": "0",
+          "slippage_bps_each_side": 1
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-10",
+          "fee_bps_each_side": 2,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "10",
+          "short_funding_diagnostic_bps": "0",
+          "slippage_bps_each_side": 3
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-10",
+          "fee_bps_each_side": 5,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "10",
+          "short_funding_diagnostic_bps": "0",
+          "slippage_bps_each_side": 0
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-12",
+          "fee_bps_each_side": 5,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "12",
+          "short_funding_diagnostic_bps": "0",
+          "slippage_bps_each_side": 1
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-16",
+          "fee_bps_each_side": 5,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "16",
+          "short_funding_diagnostic_bps": "0",
+          "slippage_bps_each_side": 3
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-20",
+          "fee_bps_each_side": 10,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "20",
+          "short_funding_diagnostic_bps": "0",
+          "slippage_bps_each_side": 0
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-22",
+          "fee_bps_each_side": 10,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "22",
+          "short_funding_diagnostic_bps": "0",
+          "slippage_bps_each_side": 1
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-26",
+          "fee_bps_each_side": 10,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "26",
+          "short_funding_diagnostic_bps": "0",
+          "slippage_bps_each_side": 3
+        }
+      ]
+    },
+    "btc": {
+      "interpretation": "Observed rate sum alone does not establish net advantage.",
+      "primary_5bp_fee_1bp_slippage_each_side": {
+        "conditional_flat_price_after_cost_bps": "-9.2884067304560000",
+        "fee_bps_each_side": 5,
+        "funding_covers_assumed_cost": false,
+        "roundtrip_cost_bps": "12",
+        "short_funding_diagnostic_bps": "2.7115932695440000",
+        "slippage_bps_each_side": 1
+      },
+      "scenarios": [
+        {
+          "conditional_flat_price_after_cost_bps": "2.7115932695440000",
+          "fee_bps_each_side": 0,
+          "funding_covers_assumed_cost": true,
+          "roundtrip_cost_bps": "0",
+          "short_funding_diagnostic_bps": "2.7115932695440000",
+          "slippage_bps_each_side": 0
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "0.7115932695440000",
+          "fee_bps_each_side": 0,
+          "funding_covers_assumed_cost": true,
+          "roundtrip_cost_bps": "2",
+          "short_funding_diagnostic_bps": "2.7115932695440000",
+          "slippage_bps_each_side": 1
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-3.2884067304560000",
+          "fee_bps_each_side": 0,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "6",
+          "short_funding_diagnostic_bps": "2.7115932695440000",
+          "slippage_bps_each_side": 3
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-1.2884067304560000",
+          "fee_bps_each_side": 2,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "4",
+          "short_funding_diagnostic_bps": "2.7115932695440000",
+          "slippage_bps_each_side": 0
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-3.2884067304560000",
+          "fee_bps_each_side": 2,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "6",
+          "short_funding_diagnostic_bps": "2.7115932695440000",
+          "slippage_bps_each_side": 1
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-7.2884067304560000",
+          "fee_bps_each_side": 2,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "10",
+          "short_funding_diagnostic_bps": "2.7115932695440000",
+          "slippage_bps_each_side": 3
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-7.2884067304560000",
+          "fee_bps_each_side": 5,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "10",
+          "short_funding_diagnostic_bps": "2.7115932695440000",
+          "slippage_bps_each_side": 0
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-9.2884067304560000",
+          "fee_bps_each_side": 5,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "12",
+          "short_funding_diagnostic_bps": "2.7115932695440000",
+          "slippage_bps_each_side": 1
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-13.2884067304560000",
+          "fee_bps_each_side": 5,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "16",
+          "short_funding_diagnostic_bps": "2.7115932695440000",
+          "slippage_bps_each_side": 3
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-17.2884067304560000",
+          "fee_bps_each_side": 10,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "20",
+          "short_funding_diagnostic_bps": "2.7115932695440000",
+          "slippage_bps_each_side": 0
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-19.2884067304560000",
+          "fee_bps_each_side": 10,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "22",
+          "short_funding_diagnostic_bps": "2.7115932695440000",
+          "slippage_bps_each_side": 1
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-23.2884067304560000",
+          "fee_bps_each_side": 10,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "26",
+          "short_funding_diagnostic_bps": "2.7115932695440000",
+          "slippage_bps_each_side": 3
+        }
+      ]
+    },
+    "eth": {
+      "interpretation": "Observed rate sum alone does not establish net advantage.",
+      "primary_5bp_fee_1bp_slippage_each_side": {
+        "conditional_flat_price_after_cost_bps": "-10.5816443784270000",
+        "fee_bps_each_side": 5,
+        "funding_covers_assumed_cost": false,
+        "roundtrip_cost_bps": "12",
+        "short_funding_diagnostic_bps": "1.4183556215730000",
+        "slippage_bps_each_side": 1
+      },
+      "scenarios": [
+        {
+          "conditional_flat_price_after_cost_bps": "1.4183556215730000",
+          "fee_bps_each_side": 0,
+          "funding_covers_assumed_cost": true,
+          "roundtrip_cost_bps": "0",
+          "short_funding_diagnostic_bps": "1.4183556215730000",
+          "slippage_bps_each_side": 0
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-0.5816443784270000",
+          "fee_bps_each_side": 0,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "2",
+          "short_funding_diagnostic_bps": "1.4183556215730000",
+          "slippage_bps_each_side": 1
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-4.5816443784270000",
+          "fee_bps_each_side": 0,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "6",
+          "short_funding_diagnostic_bps": "1.4183556215730000",
+          "slippage_bps_each_side": 3
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-2.5816443784270000",
+          "fee_bps_each_side": 2,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "4",
+          "short_funding_diagnostic_bps": "1.4183556215730000",
+          "slippage_bps_each_side": 0
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-4.5816443784270000",
+          "fee_bps_each_side": 2,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "6",
+          "short_funding_diagnostic_bps": "1.4183556215730000",
+          "slippage_bps_each_side": 1
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-8.5816443784270000",
+          "fee_bps_each_side": 2,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "10",
+          "short_funding_diagnostic_bps": "1.4183556215730000",
+          "slippage_bps_each_side": 3
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-8.5816443784270000",
+          "fee_bps_each_side": 5,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "10",
+          "short_funding_diagnostic_bps": "1.4183556215730000",
+          "slippage_bps_each_side": 0
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-10.5816443784270000",
+          "fee_bps_each_side": 5,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "12",
+          "short_funding_diagnostic_bps": "1.4183556215730000",
+          "slippage_bps_each_side": 1
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-14.5816443784270000",
+          "fee_bps_each_side": 5,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "16",
+          "short_funding_diagnostic_bps": "1.4183556215730000",
+          "slippage_bps_each_side": 3
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-18.5816443784270000",
+          "fee_bps_each_side": 10,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "20",
+          "short_funding_diagnostic_bps": "1.4183556215730000",
+          "slippage_bps_each_side": 0
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-20.5816443784270000",
+          "fee_bps_each_side": 10,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "22",
+          "short_funding_diagnostic_bps": "1.4183556215730000",
+          "slippage_bps_each_side": 1
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-24.5816443784270000",
+          "fee_bps_each_side": 10,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "26",
+          "short_funding_diagnostic_bps": "1.4183556215730000",
+          "slippage_bps_each_side": 3
+        }
+      ]
+    },
+    "qqq": {
+      "interpretation": "Observed rate sum alone does not establish net advantage.",
+      "primary_5bp_fee_1bp_slippage_each_side": {
+        "conditional_flat_price_after_cost_bps": "-11.6614712889440000",
+        "fee_bps_each_side": 5,
+        "funding_covers_assumed_cost": false,
+        "roundtrip_cost_bps": "12",
+        "short_funding_diagnostic_bps": "0.3385287110560000",
+        "slippage_bps_each_side": 1
+      },
+      "scenarios": [
+        {
+          "conditional_flat_price_after_cost_bps": "0.3385287110560000",
+          "fee_bps_each_side": 0,
+          "funding_covers_assumed_cost": true,
+          "roundtrip_cost_bps": "0",
+          "short_funding_diagnostic_bps": "0.3385287110560000",
+          "slippage_bps_each_side": 0
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-1.6614712889440000",
+          "fee_bps_each_side": 0,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "2",
+          "short_funding_diagnostic_bps": "0.3385287110560000",
+          "slippage_bps_each_side": 1
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-5.6614712889440000",
+          "fee_bps_each_side": 0,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "6",
+          "short_funding_diagnostic_bps": "0.3385287110560000",
+          "slippage_bps_each_side": 3
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-3.6614712889440000",
+          "fee_bps_each_side": 2,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "4",
+          "short_funding_diagnostic_bps": "0.3385287110560000",
+          "slippage_bps_each_side": 0
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-5.6614712889440000",
+          "fee_bps_each_side": 2,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "6",
+          "short_funding_diagnostic_bps": "0.3385287110560000",
+          "slippage_bps_each_side": 1
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-9.6614712889440000",
+          "fee_bps_each_side": 2,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "10",
+          "short_funding_diagnostic_bps": "0.3385287110560000",
+          "slippage_bps_each_side": 3
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-9.6614712889440000",
+          "fee_bps_each_side": 5,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "10",
+          "short_funding_diagnostic_bps": "0.3385287110560000",
+          "slippage_bps_each_side": 0
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-11.6614712889440000",
+          "fee_bps_each_side": 5,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "12",
+          "short_funding_diagnostic_bps": "0.3385287110560000",
+          "slippage_bps_each_side": 1
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-15.6614712889440000",
+          "fee_bps_each_side": 5,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "16",
+          "short_funding_diagnostic_bps": "0.3385287110560000",
+          "slippage_bps_each_side": 3
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-19.6614712889440000",
+          "fee_bps_each_side": 10,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "20",
+          "short_funding_diagnostic_bps": "0.3385287110560000",
+          "slippage_bps_each_side": 0
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-21.6614712889440000",
+          "fee_bps_each_side": 10,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "22",
+          "short_funding_diagnostic_bps": "0.3385287110560000",
+          "slippage_bps_each_side": 1
+        },
+        {
+          "conditional_flat_price_after_cost_bps": "-25.6614712889440000",
+          "fee_bps_each_side": 10,
+          "funding_covers_assumed_cost": false,
+          "roundtrip_cost_bps": "26",
+          "short_funding_diagnostic_bps": "0.3385287110560000",
+          "slippage_bps_each_side": 3
+        }
+      ]
+    }
+  },
+  "schema_version": "1.0"
+}

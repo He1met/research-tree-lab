@@ -1,0 +1,1 @@
+{"batch_cutoff":"2026-01-03T00:00:00Z","checked_at":"2026-09-22T18:15:18.210952Z","expected_previous_review_ref":null,"observed_disposition":"REUSE_FINAL_UNLESS_INPUT_OR_EVALUATOR_CHANGED","observed_previous_review_ref":"V1","passed":false,"review_committed":"2026-01-04T00:00:00Z","review_created":"2026-01-02T00:00:00Z","test_only":true}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "template_only": true,
+  "record_state": "DRAFT_NOT_COMMITTED",
+  "synthetic": false,
+  "logical_key": null,
+  "native_task_id": null,
+  "actual_project_root": null,
+  "actual_store_root": null,
+  "prompt_hash": null,
+  "skill_hash": null,
+  "actual_schedule": null,
+  "timezone": null,
+  "model_observed": null,
+  "reasoning_observed": null,
+  "permission_profile_observed": null,
+  "enforcement_gaps": [],
+  "enabled": null,
+  "manual_test_ref": null,
+  "natural_run_refs": [],
+  "next_run_at": null,
+  "verified_at": null
+}

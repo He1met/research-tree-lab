@@ -1,0 +1,1 @@
+{"batch_cutoff":"2026-01-03T00:00:00Z","checked_at":"2026-09-22T18:21:30.657420Z","expected_previous_review_ref":null,"observed_disposition":"REVIEW_REQUIRED","observed_previous_review_ref":null,"passed":true,"production_writes":false,"review_committed":"2026-01-04T00:00:00Z","review_created":"2026-01-02T00:00:00Z","test_only":true}

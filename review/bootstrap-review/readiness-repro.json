@@ -1,0 +1,1 @@
+{"defects":["rules empty and INCOMPLETE_DATA accepted","source_refs dangling accepted","same unscoped evidence accepted for every check and trigger","policy_ref missing accepted"],"expected":"not EXECUTION_READY_AS_OF","observed":"EXECUTION_READY_AS_OF","production_writes":false,"test_only":true}

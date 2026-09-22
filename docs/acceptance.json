@@ -1,0 +1,350 @@
+{
+  "schema_version": "1.0",
+  "spec": "planning/current/docs/ACCEPTANCE.md",
+  "updated_at": "2026-09-22T18:12:04.846519+00:00",
+  "overall": "IN_PROGRESS_CHANGES_REQUIRED",
+  "checks": [
+    {
+      "id": "A01",
+      "status": "REAL_PASS",
+      "evidence": [
+        "research/bootstrap-v1/REPORT.md",
+        "research/bootstrap-v1/execution_receipt.json"
+      ]
+    },
+    {
+      "id": "A02",
+      "status": "REAL_PARTIAL",
+      "evidence": [
+        "research/bootstrap-v1/SESSION_MECHANISM.md"
+      ]
+    },
+    {
+      "id": "A03",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "A04",
+      "status": "REAL_PASS",
+      "evidence": [
+        "research/bootstrap-v1/REPORT.md",
+        "research/bootstrap-v1/SESSION_MECHANISM.md"
+      ]
+    },
+    {
+      "id": "A05",
+      "status": "REAL_PASS_BOUNDED",
+      "evidence": [
+        "research/bootstrap-v1/cost_stress.json",
+        "research/bootstrap-v1/forward_plans.json"
+      ]
+    },
+    {
+      "id": "A06",
+      "status": "WAITING_NATURAL_OUTCOME",
+      "evidence": [
+        "research/bootstrap-v1/forward_plans.json"
+      ]
+    },
+    {
+      "id": "A07",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "A08",
+      "status": "WAITING_NATIVE_ENABLE_AND_NATURAL_RUN",
+      "evidence": [
+        "config/native_task_status.json"
+      ]
+    },
+    {
+      "id": "B01",
+      "status": "REAL_PASS_WITH_EXPLICIT_GAPS",
+      "evidence": [
+        "research/bootstrap-v1/product_capability_cards.json"
+      ]
+    },
+    {
+      "id": "B02",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "B03",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "B04",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "B05",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "B06",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "B07",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "B08",
+      "status": "LOCAL_SEALED_PUBLIC_PENDING",
+      "evidence": [
+        "research/bootstrap-v1/frozen_protocol.json"
+      ]
+    },
+    {
+      "id": "B09",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "B10",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "B11",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "C01",
+      "status": "ENGINEERING_PASS",
+      "evidence": [
+        "web/package-lock.json",
+        "web/src/App.tsx"
+      ]
+    },
+    {
+      "id": "C02",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "C03",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "C04",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "C05",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "C06",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "C07",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "C08",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "C09",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "C10",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "C11",
+      "status": "BROWSER_SCALE_MEASURED",
+      "evidence": [
+        "tests/browser/artifacts/scale/"
+      ]
+    },
+    {
+      "id": "C12",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "D01",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "D02",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "D03",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "D04",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "D05",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "D06",
+      "status": "CHANGES_REQUIRED",
+      "evidence": [
+        "review/bootstrap-review/readiness-repro.json"
+      ]
+    },
+    {
+      "id": "D07",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "E01",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "E02",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "E03",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "E04",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "E05",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "E06",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "E07",
+      "status": "ENGINEERING_PASS_WITH_LOCAL_ONLY_UPSTREAM",
+      "evidence": [
+        "scripts/public_guard.py",
+        "tests/test_public_guard.py",
+        "research/bootstrap-v1/PUBLIC_SCOPE.md"
+      ]
+    },
+    {
+      "id": "E08",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "E09",
+      "status": "PUBLIC_REPOSITORY_CREATED_PAGES_PENDING",
+      "evidence": [
+        "https://github.com/He1met/research-tree-lab"
+      ]
+    },
+    {
+      "id": "E10",
+      "status": "LOCAL_DERIVED_RESTORE_PASS_REMOTE_PENDING",
+      "evidence": [
+        "research/bootstrap-v1/PUBLIC_SCOPE.md"
+      ]
+    },
+    {
+      "id": "E11",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "E12",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "F01",
+      "status": "CREATED_PAUSED_READBACK_VERIFIED",
+      "evidence": [
+        "config/native_task_status.json",
+        "docs/INSTALLATION.md"
+      ]
+    },
+    {
+      "id": "F02",
+      "status": "OFFICIAL_MANAGEMENT_AVAILABLE",
+      "evidence": [
+        "docs/INSTALLATION.md"
+      ]
+    },
+    {
+      "id": "F03",
+      "status": "WEAK_ISOLATION_CONFIRMED",
+      "evidence": [
+        "docs/INSTALLATION.md"
+      ]
+    },
+    {
+      "id": "F04",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "F05",
+      "status": "INSTALLATION_DEDUP_VERIFIED_FREQUENCY_DRIFT_PENDING",
+      "evidence": [
+        "scripts/native_receipts.py"
+      ]
+    },
+    {
+      "id": "F06",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "F07",
+      "status": "WAITING_NATURAL_OUTCOME",
+      "evidence": [
+        "config/native_task_status.json"
+      ]
+    },
+    {
+      "id": "F08",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "F09",
+      "status": "DOCUMENTED_ACTUAL_BOUNDARY",
+      "evidence": [
+        "docs/INSTALLATION.md"
+      ]
+    }
+  ]
+}

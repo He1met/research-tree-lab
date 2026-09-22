@@ -1,0 +1,29 @@
+test_01_fixture_valid (test_reference.ReferenceTests.test_01_fixture_valid) ... ok
+test_02_no_synthetic_production_fallback (test_reference.ReferenceTests.test_02_no_synthetic_production_fallback) ... ok
+test_03_hierarchy_and_internal_reviews (test_reference.ReferenceTests.test_03_hierarchy_and_internal_reviews) ... ok
+test_04_future_round_hidden (test_reference.ReferenceTests.test_04_future_round_hidden) ... ok
+test_05_correction_not_leaked_into_past (test_reference.ReferenceTests.test_05_correction_not_leaked_into_past) ... ok
+test_06_corrected_result_current (test_reference.ReferenceTests.test_06_corrected_result_current) ... ok
+test_07_duplicate_rejected (test_reference.ReferenceTests.test_07_duplicate_rejected) ... ok
+test_08_cycles_rejected (test_reference.ReferenceTests.test_08_cycles_rejected) ... ok
+test_09_mismatched_review_rejected (test_reference.ReferenceTests.test_09_mismatched_review_rejected) ... ok
+test_10_unknown_schema_rejected (test_reference.ReferenceTests.test_10_unknown_schema_rejected) ... ok
+test_11_deterministic_nonmutating_projection (test_reference.ReferenceTests.test_11_deterministic_nonmutating_projection) ... ok
+test_12_no_zero_imputation (test_reference.ReferenceTests.test_12_no_zero_imputation) ... ok
+test_13_ready_does_not_authorize_trade (test_reference.ReferenceTests.test_13_ready_does_not_authorize_trade) ... ok
+test_14_expired_badge (test_reference.ReferenceTests.test_14_expired_badge) ... ok
+test_15_unknown_time_not_ready (test_reference.ReferenceTests.test_15_unknown_time_not_ready) ... ok
+test_16_synthetic_not_ready (test_reference.ReferenceTests.test_16_synthetic_not_ready) ... ok
+test_17_missing_market_evidence_replay_only (test_reference.ReferenceTests.test_17_missing_market_evidence_replay_only) ... ok
+test_18_trigger_not_met (test_reference.ReferenceTests.test_18_trigger_not_met) ... ok
+test_19_invalidated (test_reference.ReferenceTests.test_19_invalidated) ... ok
+test_20_evidence_window_not_extended_by_new_publication (test_reference.ReferenceTests.test_20_evidence_window_not_extended_by_new_publication) ... ok
+test_21_profit_is_not_readiness_test (test_reference.ReferenceTests.test_21_profit_is_not_readiness_test) ... ok
+test_22_task_manifest_not_install_receipt (test_reference.ReferenceTests.test_22_task_manifest_not_install_receipt) ... ok
+test_23_products_are_intents (test_reference.ReferenceTests.test_23_products_are_intents) ... ok
+test_24_file_projection_matches_explicit_selection (test_reference.ReferenceTests.test_24_file_projection_matches_explicit_selection) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.003s
+
+OK

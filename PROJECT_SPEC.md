@@ -1,0 +1,1 @@
+planning/current/PROJECT_SPEC.md

@@ -1,0 +1,47 @@
+{
+  "classification": "SYNTHETIC_FILE_PIPELINE_TEST",
+  "first": {
+    "classification": "SYNTHETIC_FILE_PIPELINE_TEST",
+    "schema_version": "1.0",
+    "snapshot_id": "f6737dc4795852d58a412a4dcefef113ad3a454b7f99744d3d202db6d7e95ce3",
+    "manifest_url": "snapshots/f6737dc4795852d58a412a4dcefef113ad3a454b7f99744d3d202db6d7e95ce3/manifest.json",
+    "catalog_url": "snapshots/f6737dc4795852d58a412a4dcefef113ad3a454b7f99744d3d202db6d7e95ce3/catalog.json",
+    "history_url": "history.json",
+    "as_of": "2026-09-21T00:00:00Z",
+    "generated_at": "2026-09-21T00:00:00Z",
+    "mode": "PRODUCTION_NO_DEMO_FALLBACK",
+    "publication_state": "GENERATED_NOT_REMOTE_CONFIRMED",
+    "record_count": 2,
+    "round_count": 1,
+    "anomalies": []
+  },
+  "second": {
+    "classification": "SYNTHETIC_FILE_PIPELINE_TEST",
+    "schema_version": "1.0",
+    "snapshot_id": "e86c77c4e8c76764b528fe4b888fe9de1a9cb0d42483af728c2597b62276657f",
+    "manifest_url": "snapshots/e86c77c4e8c76764b528fe4b888fe9de1a9cb0d42483af728c2597b62276657f/manifest.json",
+    "catalog_url": "snapshots/e86c77c4e8c76764b528fe4b888fe9de1a9cb0d42483af728c2597b62276657f/catalog.json",
+    "history_url": "history.json",
+    "as_of": "2026-09-22T00:00:00Z",
+    "generated_at": "2026-09-22T00:00:00Z",
+    "mode": "PRODUCTION_NO_DEMO_FALLBACK",
+    "publication_state": "GENERATED_NOT_REMOTE_CONFIRMED",
+    "record_count": 6,
+    "round_count": 3,
+    "anomalies": []
+  },
+  "sourceHashesBefore": {
+    "App.tsx": "eb1c99bed0f5d7e7373b980363f08c2938d571b350fc9295aaa4a81b69910b19",
+    "data.ts": "738f7893b7c31926cc32541d2a85d6fabce0e120b1d22185d2d5983c00fbbb45",
+    "main.tsx": "b18a92b1f5514bbd9ed879e04de8c25dec5682c8b4bbebcc52877fb10e4a718b",
+    "styles.css": "228c02d8707e42cbf5880cd5e997136bf009555c24d8b99ad53eb91ce6aae23b"
+  },
+  "sourceHashesAfter": {
+    "App.tsx": "eb1c99bed0f5d7e7373b980363f08c2938d571b350fc9295aaa4a81b69910b19",
+    "data.ts": "738f7893b7c31926cc32541d2a85d6fabce0e120b1d22185d2d5983c00fbbb45",
+    "main.tsx": "b18a92b1f5514bbd9ed879e04de8c25dec5682c8b4bbebcc52877fb10e4a718b",
+    "styles.css": "228c02d8707e42cbf5880cd5e997136bf009555c24d8b99ad53eb91ce6aae23b"
+  },
+  "equal": true,
+  "checkedAt": "2026-09-22T18:21:24.151Z"
+}

@@ -1,0 +1,11 @@
+{
+  "classification": "GENUINE_LOCAL_PUBLIC_PROJECTION_BROWSER_CHECK_NOT_PAGES_READBACK",
+  "snapshot_id": "8fed09b78ee830b69e2e50c8a7706b84fc12e238f89a2f819252c0d3bcc2510c",
+  "as_of": "2026-09-22T18:20:38.520520Z",
+  "round_count": 3,
+  "browser": "chromium",
+  "browserVersion": "153.0.8010.12",
+  "actualAttachmentChecked": true,
+  "errors": [],
+  "at": "2026-09-22T18:21:24.734Z"
+}

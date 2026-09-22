@@ -1,0 +1,23 @@
+{
+  "classification": "SYNTHETIC_BROWSER_PERFORMANCE_ONLY",
+  "browser": "webkit",
+  "version": "26.6",
+  "platform": "darwin",
+  "release": "27.0.0",
+  "architecture": "arm64",
+  "cpu": "Apple M5",
+  "cpuCores": 10,
+  "memoryGB": 16,
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "totalHistory": 10000,
+  "renderedNodes": 200,
+  "firstRenderAndExpansionMs": 625.4,
+  "searchToResultMs": 77.4,
+  "zoomClickMs": 58.2,
+  "catalogBytes": 6994478,
+  "actualDomNodes": 200,
+  "at": "2026-09-22T18:21:37.569Z"
+}

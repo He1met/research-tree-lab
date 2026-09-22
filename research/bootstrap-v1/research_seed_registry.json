@@ -1,0 +1,199 @@
+{
+  "created_at": "2026-09-22T17:57:57.002886Z",
+  "no_fixed_daily_count": true,
+  "schema_version": "1.0",
+  "scope_note": "A-H eight initial categories plus I independent replication; registration does not claim nine executed strategies.",
+  "seeds": [
+    {
+      "baseline": "官方规则与真实小样本对照",
+      "counts_as_completed_economic_research": false,
+      "defer_reason": null,
+      "discovery_id": "seed-a-20260923",
+      "mechanism_signature": "A|文件日期、目标身份和资金费单位是否支持可重复成本输入？",
+      "next_action": "核对独立日文件的UTC边界及实际延迟",
+      "product_refs": [
+        "aapl",
+        "qqq",
+        "btc",
+        "eth"
+      ],
+      "question": "文件日期、目标身份和资金费单位是否支持可重复成本输入？",
+      "restart_condition": "原始文件哈希或官方字段规则变化",
+      "seed_code": "A",
+      "source_refs": [
+        "research-program-v1",
+        "funding-data-audit-v1"
+      ],
+      "status": "REAL_EXECUTED",
+      "title": "数据与规则"
+    },
+    {
+      "baseline": "相同退出、期限与名义暴露的直接进入/收盘确认",
+      "counts_as_completed_economic_research": false,
+      "defer_reason": "取得合法成交路径、费用后冻结候选，不预选赢家",
+      "discovery_id": "seed-b-20260923",
+      "mechanism_signature": "B|确认突破是否改善信息而非仅减少暴露？",
+      "next_action": "取得合法成交路径、费用后冻结候选，不预选赢家",
+      "product_refs": [
+        "btc",
+        "eth"
+      ],
+      "question": "确认突破是否改善信息而非仅减少暴露？",
+      "restart_condition": "新增目标交易路径与费用",
+      "seed_code": "B",
+      "source_refs": [
+        "research-program-v1"
+      ],
+      "status": "WAITING_TARGET_PRICE_DATA",
+      "title": "趋势与进入方式"
+    },
+    {
+      "baseline": "固定网格/冻结停用规则与持有基线",
+      "counts_as_completed_economic_research": false,
+      "defer_reason": "先做库存守恒与完整权益，不显示只有已实现网格收入",
+      "discovery_id": "seed-c-20260923",
+      "mechanism_signature": "C|区间往返收入扣除残余库存和退出成本后是否成立？",
+      "next_action": "先做库存守恒与完整权益，不显示只有已实现网格收入",
+      "product_refs": [
+        "eth",
+        "btc"
+      ],
+      "question": "区间往返收入扣除残余库存和退出成本后是否成立？",
+      "restart_condition": "足够细价格路径、单位与费用齐备",
+      "seed_code": "C",
+      "source_refs": [
+        "research-program-v1"
+      ],
+      "status": "WAITING_PATH_AND_LEDGER",
+      "title": "区间与库存"
+    },
+    {
+      "baseline": "反向资金费方向与相同数量期限的相反暴露对照",
+      "counts_as_completed_economic_research": false,
+      "defer_reason": "2026-09-23 00:05 UTC 开始的单次BTC观察按冻结规则待数据",
+      "discovery_id": "seed-d-20260923",
+      "mechanism_signature": "D|历史资金费方向收入是否足以覆盖价格暴露及来回成本？",
+      "next_action": "2026-09-23 00:05 UTC 开始的单次BTC观察按冻结规则待数据",
+      "product_refs": [
+        "btc",
+        "eth",
+        "qqq",
+        "aapl"
+      ],
+      "question": "历史资金费方向收入是否足以覆盖价格暴露及来回成本？",
+      "restart_condition": "后续合法目标交易/标记与资金费文件",
+      "seed_code": "D",
+      "source_refs": [
+        "research-program-v1",
+        "funding-data-audit-v1"
+      ],
+      "status": "FORWARD_PROTOCOL_REGISTERED_INCOMPLETE",
+      "title": "资金费与拥挤"
+    },
+    {
+      "baseline": "常规/延长/休市分层，目标成交-标记-参考价格分开",
+      "counts_as_completed_economic_research": false,
+      "defer_reason": null,
+      "discovery_id": "seed-e-20260923",
+      "mechanism_signature": "E|参考市场休市时指数自身反馈是否使表面价差不可交易？",
+      "next_action": "预登记时段/美元兑USDT/价差与费用联立反证",
+      "product_refs": [
+        "aapl",
+        "qqq"
+      ],
+      "question": "参考市场休市时指数自身反馈是否使表面价差不可交易？",
+      "restart_condition": "允许来源提供同步价格与事件发布时间",
+      "seed_code": "E",
+      "source_refs": [
+        "research-program-v1",
+        "stock-perpetuals"
+      ],
+      "status": "REAL_MECHANISM_REVIEW_EXECUTED",
+      "title": "事件与会话"
+    },
+    {
+      "baseline": "同时点、相同币种、匹配波动和方向的简单基准",
+      "counts_as_completed_economic_research": false,
+      "defer_reason": "先规定暴露匹配，不把假设资金结果相加",
+      "discovery_id": "seed-f-20260923",
+      "mechanism_signature": "F|多产品结果是否只重复共同市场暴露？",
+      "next_action": "先规定暴露匹配，不把假设资金结果相加",
+      "product_refs": [
+        "aapl",
+        "qqq",
+        "btc",
+        "eth"
+      ],
+      "question": "多产品结果是否只重复共同市场暴露？",
+      "restart_condition": "同步目标路径和参考数据",
+      "seed_code": "F",
+      "source_refs": [
+        "research-program-v1"
+      ],
+      "status": "WAITING_SYNCHRONIZED_DATA",
+      "title": "共同暴露"
+    },
+    {
+      "baseline": "始终运行/简单过滤/等待与条件选择",
+      "counts_as_completed_economic_research": false,
+      "defer_reason": "仅在有基础结果后检验边界，不追最近冠军",
+      "discovery_id": "seed-g-20260923",
+      "mechanism_signature": "G|事前状态切换是否覆盖切换成本？",
+      "next_action": "仅在有基础结果后检验边界，不追最近冠军",
+      "product_refs": [
+        "btc",
+        "eth"
+      ],
+      "question": "事前状态切换是否覆盖切换成本？",
+      "restart_condition": "基础方法原规则复核或新市场状态证据",
+      "seed_code": "G",
+      "source_refs": [
+        "research-program-v1"
+      ],
+      "status": "WAITING_BASE_METHOD_RESULT",
+      "title": "边界与切换"
+    },
+    {
+      "baseline": "简单价格/结构化事件/AI增量/预登记反向",
+      "counts_as_completed_economic_research": false,
+      "defer_reason": "先留存当时输出和信息截止，旧窗口不补问模型",
+      "discovery_id": "seed-h-20260923",
+      "mechanism_signature": "H|事前AI事件信息是否增加可检验信号？",
+      "next_action": "先留存当时输出和信息截止，旧窗口不补问模型",
+      "product_refs": [
+        "aapl",
+        "qqq",
+        "btc",
+        "eth"
+      ],
+      "question": "事前AI事件信息是否增加可检验信号？",
+      "restart_condition": "可核实事件发布时间与新模型前向输出",
+      "seed_code": "H",
+      "source_refs": [
+        "research-program-v1"
+      ],
+      "status": "WAITING_PROSPECTIVE_EVENT_OUTPUT",
+      "title": "AI增量与反向对照"
+    },
+    {
+      "baseline": "原方法与新产品/新时期，参数不重新优化",
+      "counts_as_completed_economic_research": false,
+      "defer_reason": "ETH只做将来独立复现，INTC保持禁用示例",
+      "discovery_id": "seed-i-20260923",
+      "mechanism_signature": "I|冻结机制能否在未用于选择的新样本复现？",
+      "next_action": "ETH只做将来独立复现，INTC保持禁用示例",
+      "product_refs": [
+        "btc",
+        "eth"
+      ],
+      "question": "冻结机制能否在未用于选择的新样本复现？",
+      "restart_condition": "有方法版本和未曝光新窗口",
+      "seed_code": "I",
+      "source_refs": [
+        "research-program-v1"
+      ],
+      "status": "WAITING_FIRST_METHOD_RESULT",
+      "title": "独立复现"
+    }
+  ]
+}

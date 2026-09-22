@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-09-22T18:31:30.083400+00:00",
+  "archive_id": "fc6cb5850d3d96ae8a4cdc799c71363ed4bf42af2b3975c0ebd7dffbf8b7c226",
+  "public_archive_files": 46,
+  "existing_recovery_directory_present": true,
+  "archive_contains_recovery_directory": false,
+  "archive_selection": "Explicit committed records and licensed attachment closure",
+  "cleanup_implementation": "NO_AUTOMATIC_DELETION",
+  "cleanup_run": false,
+  "unique_referenced_and_inflight_evidence_deleted": false,
+  "scope": "Conservative preservation and archive closure; not a claim that a garbage collector was tested"
+}

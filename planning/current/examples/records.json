@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "notice": "SYNTHETIC_UI_ONLY: no market data, fills, real strategy test, or current trading label",
+  "rounds": [
+    {
+      "round_id": "round-btc-1",
+      "title": "突破后进入是否有净优势",
+      "parent_round_id": null,
+      "selected_plan_ref": "plan-btc-1@1",
+      "derived_from_feedback": [],
+      "available_at": "2026-09-01T00:00:00Z",
+      "synthetic": true
+    },
+    {
+      "round_id": "round-btc-2",
+      "title": "确认进入是否减少假突破",
+      "parent_round_id": "round-btc-1",
+      "selected_plan_ref": "plan-btc-2@1",
+      "derived_from_feedback": [
+        "feedback-1"
+      ],
+      "available_at": "2026-09-03T00:00:00Z",
+      "synthetic": true
+    },
+    {
+      "round_id": "round-btc-2b",
+      "title": "降低换手的独立检验",
+      "parent_round_id": "round-btc-1",
+      "selected_plan_ref": null,
+      "derived_from_feedback": [
+        "feedback-1"
+      ],
+      "available_at": "2026-09-03T00:00:00Z",
+      "synthetic": true
+    },
+    {
+      "round_id": "round-btc-funding",
+      "title": "资金费与拥挤的新问题",
+      "parent_round_id": null,
+      "selected_plan_ref": null,
+      "derived_from_feedback": [],
+      "available_at": "2026-09-02T01:00:00Z",
+      "synthetic": true
+    }
+  ],
+  "plans": [
+    {
+      "plan_ref": "plan-btc-1@1",
+      "round_id": "round-btc-1",
+      "strategy_kind": "trend",
+      "rules_document": "模板：见RESEARCH_PROGRAM.md，不是已执行研究",
+      "evidence_stage": "SYNTHETIC",
+      "instrument_ref": null,
+      "available_at": "2026-09-01T00:00:00Z",
+      "synthetic": true
+    },
+    {
+      "plan_ref": "plan-btc-2@1",
+      "round_id": "round-btc-2",
+      "strategy_kind": "trend_confirmation",
+      "evidence_stage": "SYNTHETIC",
+      "instrument_ref": null,
+      "available_at": "2026-09-03T00:00:00Z",
+      "synthetic": true
+    }
+  ],
+  "reviews": [
+    {
+      "review_id": "review-1",
+      "plan_ref": "plan-btc-1@1",
+      "revision": 1,
+      "supersedes": null,
+      "stage": "FINAL",
+      "gross_return_fraction": 0.0045,
+      "cost_fraction": 0.007,
+      "net_return_fraction": -0.0025,
+      "data_cutoff": "2026-09-02T00:00:00Z",
+      "available_at": "2026-09-02T00:10:00Z",
+      "synthetic": true
+    },
+    {
+      "review_id": "review-2",
+      "plan_ref": "plan-btc-2@1",
+      "revision": 1,
+      "supersedes": null,
+      "stage": "FINAL",
+      "net_return_fraction": 0.0032,
+      "data_cutoff": "2026-09-04T00:00:00Z",
+      "available_at": "2026-09-04T00:10:00Z",
+      "synthetic": true
+    },
+    {
+      "review_id": "review-2-corrected",
+      "plan_ref": "plan-btc-2@1",
+      "revision": 2,
+      "supersedes": "review-2",
+      "stage": "FINAL",
+      "net_return_fraction": -0.0012,
+      "correction_reason": "合成示例：费用修订，原件仍保留",
+      "data_cutoff": "2026-09-04T00:00:00Z",
+      "available_at": "2026-09-05T00:10:00Z",
+      "synthetic": true
+    }
+  ],
+  "feedback": [
+    {
+      "feedback_id": "feedback-1",
+      "review_id": "review-1",
+      "question": "确认或降低换手能否保留信息并减少成本？",
+      "scope": "SYNTHETIC_UI_ONLY",
+      "available_at": "2026-09-02T00:20:00Z",
+      "synthetic": true
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-09-22T18:14:40.682099+00:00",
+  "classification": "REAL_RECORD_APPEND_MANUAL_NOT_NATURAL",
+  "committed_bundle": "review-bootstrap-manual-20260923-v1",
+  "source_files_unchanged": true,
+  "web_src_sha256": "611e1f3761e8ae9453d5be668e9966b371e2bdd05a68fb5cdbe3abc1aa6efd95",
+  "before_snapshot": "e9f0fccb1872ade34a4757fdbb08a59055a677af9334af297579bb2413d0dbb3",
+  "after_snapshot": "f8225d2f3a7476d2e674f12368cc011b8b254b96c7bf5cc901cbb7ec36aa3d88",
+  "round_count": 3,
+  "review_count": 2,
+  "batch_coverage": {
+    "missing": [],
+    "registered": 2,
+    "reviewed": 2
+  },
+  "generation_unchanged": true,
+  "lineage_before_after": {
+    "r-btc-funding-cost-counterevidence-20260923": {
+      "generation": 2,
+      "parent_round_id": "r-funding-data-audit-20260923"
+    },
+    "r-funding-data-audit-20260923": {
+      "generation": 1,
+      "parent_round_id": null
+    },
+    "r-stock-session-mechanism-20260923": {
+      "generation": 1,
+      "parent_round_id": null
+    }
+  }
+}

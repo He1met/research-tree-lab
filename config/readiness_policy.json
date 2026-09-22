@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "policy_id": "execution-conditions-v1",
+  "purpose": "READINESS_NOT_TRADE_AUTHORIZATION",
+  "required_checks": [
+    "target_contract_verified",
+    "rules_complete",
+    "execution_model_supported",
+    "quantity_cost_model_explicit",
+    "target_data_current",
+    "technical_validation_complete",
+    "references_intact"
+  ],
+  "require_evidence_per_check": true,
+  "require_valid_until": true,
+  "require_observed_trigger_for_ready_badge": true,
+  "profit_is_not_a_gate": true,
+  "account_eligibility": "NOT_ASSESSED",
+  "no_automatic_trade_permission": true,
+  "synthetic_cannot_be_live_ready": true,
+  "states": [
+    "RESEARCH_ONLY",
+    "REPLAYABLE_ONLY",
+    "RULES_READY_WAITING_TRIGGER",
+    "EXECUTION_READY_AS_OF",
+    "NOT_YET_EFFECTIVE",
+    "EXPIRED",
+    "INVALIDATED",
+    "UNKNOWN",
+    "DEMO_ONLY"
+  ]
+}

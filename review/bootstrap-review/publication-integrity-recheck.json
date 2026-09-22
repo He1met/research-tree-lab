@@ -1,0 +1,1 @@
+{"checked_at":"2026-09-22T18:26:05.766526Z","expected":"REJECT","network":"MOCKED_NO_HTTP_REQUESTS","observed":"REJECTED","passed":true,"production_writes":false,"reason":"Snapshot identity does not match projection","scenario":"Local and remote catalog changed with matching manifest object hash but old content-addressed snapshot ID","schema_version":"1.0","test_only":true}

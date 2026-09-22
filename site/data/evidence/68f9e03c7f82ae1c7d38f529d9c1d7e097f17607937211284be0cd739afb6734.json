@@ -1,0 +1,36 @@
+{
+  "filename_is_utc_day_refuted": true,
+  "limitations": [
+    "Raw source excluded: redistribution permission not established",
+    "This is not market-data restoration or a trading backtest"
+  ],
+  "products": {
+    "aapl": {
+      "bps_conversion": "0",
+      "count_conservation": true,
+      "nonzero_rate_observed": false,
+      "outside_requested_window": true
+    },
+    "btc": {
+      "bps_conversion": "2.7115932695440000",
+      "count_conservation": true,
+      "nonzero_rate_observed": true,
+      "outside_requested_window": true
+    },
+    "eth": {
+      "bps_conversion": "1.4183556215730000",
+      "count_conservation": true,
+      "nonzero_rate_observed": true,
+      "outside_requested_window": true
+    },
+    "qqq": {
+      "bps_conversion": "0.3385287110560000",
+      "count_conservation": true,
+      "nonzero_rate_observed": true,
+      "outside_requested_window": true
+    }
+  },
+  "scope": "DERIVED_DIAGNOSTICS_ONLY",
+  "source_integrity_verified": false,
+  "zero_interest_implies_zero_funding_refuted": true
+}

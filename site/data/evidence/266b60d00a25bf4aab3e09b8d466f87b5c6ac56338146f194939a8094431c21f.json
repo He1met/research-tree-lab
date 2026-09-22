@@ -1,0 +1,107 @@
+{
+  "archive": {
+    "backup_state": "LOCAL_ONLY_NO_REMOTE_RAW_BACKUP",
+    "bytes": 12419,
+    "displayed_export_time": "2026/09/23 01:50:45",
+    "displayed_export_timezone": "NOT_STATED_BY_UI",
+    "download_latency_vs_latest_target_event_hours": "33.8567",
+    "downloaded_at": "2026-09-22T17:51:24.065702Z",
+    "first_observed_available_at": "2026-09-22T17:51:24.065702Z",
+    "latency_qualification": "Elapsed retrieval age, not an established publisher service delay.",
+    "member": "allswap-fundingrates-2026-09-21.csv",
+    "member_bytes": 82188,
+    "member_sha256": "c2ae92301fd8ace5682729e46e58ff959d14b7ebf948ead7d9c4f533d5a9950c",
+    "original_filename": "allswap-fundingrates-2026-09-21.zip",
+    "raw_disclosure": "LOCAL_ONLY",
+    "redistribution_permission": "NOT_ESTABLISHED",
+    "retrieval_ui": "Funding rate / Perpetual / All / Daily / Confirm / Download; BTC text search had no selectable result but All generated a file successfully.",
+    "sha256": "34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c",
+    "source_period_label": "2026/09/21 - 2026/09/21",
+    "source_url": "https://www.okx.com/zh-hans/historical-data",
+    "upstream_publication_time": null,
+    "zip_crc": "PASS"
+  },
+  "browser_specification_observations": {
+    "account_information_accessed": false,
+    "data_role": "CONTRACT_RULES_NOT_EXECUTABLE_PRICE",
+    "observation_session_start": "2026-09-22T17:49:41Z",
+    "recorded_at": "2026-09-22T17:57:57.002886Z",
+    "selected_market": "永续 / USDT 本位",
+    "url": "https://www.okx.com/zh-hans/trade-market/info/swap"
+  },
+  "documents": [
+    {
+      "bytes": 80528,
+      "disclosure": "LOCAL_ONLY_REDISCLOSURE_UNVERIFIED",
+      "final_url": "https://www.okx.com/help/stock-perpetuals",
+      "http_status": 200,
+      "retrieved_at": "2026-09-22T17:53:09.117254+00:00",
+      "sha256": "cde15e8e92d76650333a365feecd3deebe3e2103dd513fc9aeb774862cab56e5",
+      "source_id": "stock-perpetuals",
+      "url": "https://www.okx.com/help/stock-perpetuals"
+    },
+    {
+      "bytes": 84607,
+      "disclosure": "LOCAL_ONLY_REDISCLOSURE_UNVERIFIED",
+      "final_url": "https://www.okx.com/en-sg/help/perps-funding-fee-mechanism",
+      "http_status": 200,
+      "retrieved_at": "2026-09-22T17:53:09.117576+00:00",
+      "sha256": "ad7a39c4206fead0ac28d0871fda0a2cdf48fb622b8a5f5d548996e1ab81d4c4",
+      "source_id": "funding-mechanism",
+      "url": "https://www.okx.com/en-sg/help/perps-funding-fee-mechanism"
+    },
+    {
+      "bytes": 73834,
+      "disclosure": "LOCAL_ONLY_REDISCLOSURE_UNVERIFIED",
+      "final_url": "https://www.okx.com/en-sg/help/okx-to-list-perpetual-futures-for-selected-equities",
+      "http_status": 200,
+      "retrieved_at": "2026-09-22T17:53:09.117683+00:00",
+      "sha256": "0d99c489b3841231759cac0a748f5b791eb3970171d4eeac2075db96841c7c71",
+      "source_id": "equity-listing",
+      "url": "https://www.okx.com/en-sg/help/okx-to-list-perpetual-futures-for-selected-equities"
+    },
+    {
+      "bytes": 72538,
+      "disclosure": "LOCAL_ONLY_REDISCLOSURE_UNVERIFIED",
+      "final_url": "https://www.okx.com/help/ii-mark-price-and-last-price",
+      "http_status": 200,
+      "retrieved_at": "2026-09-22T17:53:09.117771+00:00",
+      "sha256": "d06bbbaa160ce8af6cd0787bc12d34aec9a65557751f69e1415f1a2fac571034",
+      "source_id": "mark-last-price",
+      "url": "https://www.okx.com/help/ii-mark-price-and-last-price"
+    },
+    {
+      "bytes": 71280,
+      "disclosure": "LOCAL_ONLY_REDISCLOSURE_UNVERIFIED",
+      "final_url": "https://www.okx.com/historical-data",
+      "http_status": 200,
+      "retrieved_at": "2026-09-22T17:53:09.117891+00:00",
+      "sha256": "48da015351b8468d64c11c03af7124bcfc0afa0c4747b4ad9654e54333505803",
+      "source_id": "download-page",
+      "url": "https://www.okx.com/historical-data"
+    },
+    {
+      "bytes": 228912,
+      "disclosure": "LOCAL_ONLY_REDISCLOSURE_UNVERIFIED",
+      "final_url": "https://www.okx.com/help/terms-of-service",
+      "http_status": 200,
+      "retrieved_at": "2026-09-22T17:53:09.117988+00:00",
+      "sha256": "dd657516225757a4d90b740b3dd019047f9d83fd71490192fce663cf98ff426a",
+      "source_id": "terms",
+      "url": "https://www.okx.com/help/terms-of-service"
+    }
+  ],
+  "method": "Official Codex tools; public web documents, Chrome official Download button; offline Python only. No market API, credentials or trading account data.",
+  "recorded_at": "2026-09-22T17:57:57.002886Z",
+  "schema_version": "1.0",
+  "terms_review": {
+    "decision": "No affirmative redistribution grant established; raw downloads, webpage bodies and row-level extracts stay local. Public package contains original analysis, derived aggregate diagnostic observations and source hashes/links, not an upstream mirror.",
+    "last_updated": "2026-09-17",
+    "not_legal_opinion": true,
+    "sections": [
+      "8.1",
+      "8.2"
+    ],
+    "url": "https://www.okx.com/help/terms-of-service"
+  }
+}

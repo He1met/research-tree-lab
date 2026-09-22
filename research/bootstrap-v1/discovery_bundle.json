@@ -1,0 +1,492 @@
+{
+  "attachments": {
+    "research_seed_registry.json": "{\n  \"created_at\": \"2026-09-22T17:57:57.002886Z\",\n  \"no_fixed_daily_count\": true,\n  \"schema_version\": \"1.0\",\n  \"scope_note\": \"A-H eight initial categories plus I independent replication; registration does not claim nine executed strategies.\",\n  \"seeds\": [\n    {\n      \"baseline\": \"官方规则与真实小样本对照\",\n      \"counts_as_completed_economic_research\": false,\n      \"defer_reason\": null,\n      \"discovery_id\": \"seed-a-20260923\",\n      \"mechanism_signature\": \"A|文件日期、目标身份和资金费单位是否支持可重复成本输入？\",\n      \"next_action\": \"核对独立日文件的UTC边界及实际延迟\",\n      \"product_refs\": [\n        \"aapl\",\n        \"qqq\",\n        \"btc\",\n        \"eth\"\n      ],\n      \"question\": \"文件日期、目标身份和资金费单位是否支持可重复成本输入？\",\n      \"restart_condition\": \"原始文件哈希或官方字段规则变化\",\n      \"seed_code\": \"A\",\n      \"source_refs\": [\n        \"research-program-v1\",\n        \"funding-data-audit-v1\"\n      ],\n      \"status\": \"REAL_EXECUTED\",\n      \"title\": \"数据与规则\"\n    },\n    {\n      \"baseline\": \"相同退出、期限与名义暴露的直接进入/收盘确认\",\n      \"counts_as_completed_economic_research\": false,\n      \"defer_reason\": \"取得合法成交路径、费用后冻结候选，不预选赢家\",\n      \"discovery_id\": \"seed-b-20260923\",\n      \"mechanism_signature\": \"B|确认突破是否改善信息而非仅减少暴露？\",\n      \"next_action\": \"取得合法成交路径、费用后冻结候选，不预选赢家\",\n      \"product_refs\": [\n        \"btc\",\n        \"eth\"\n      ],\n      \"question\": \"确认突破是否改善信息而非仅减少暴露？\",\n      \"restart_condition\": \"新增目标交易路径与费用\",\n      \"seed_code\": \"B\",\n      \"source_refs\": [\n        \"research-program-v1\"\n      ],\n      \"status\": \"WAITING_TARGET_PRICE_DATA\",\n      \"title\": \"趋势与进入方式\"\n    },\n    {\n      \"baseline\": \"固定网格/冻结停用规则与持有基线\",\n      \"counts_as_completed_economic_research\": false,\n      \"defer_reason\": \"先做库存守恒与完整权益，不显示只有已实现网格收入\",\n      \"discovery_id\": \"seed-c-20260923\",\n      \"mechanism_signature\": \"C|区间往返收入扣除残余库存和退出成本后是否成立？\",\n      \"next_action\": \"先做库存守恒与完整权益，不显示只有已实现网格收入\",\n      \"product_refs\": [\n        \"eth\",\n        \"btc\"\n      ],\n      \"question\": \"区间往返收入扣除残余库存和退出成本后是否成立？\",\n      \"restart_condition\": \"足够细价格路径、单位与费用齐备\",\n      \"seed_code\": \"C\",\n      \"source_refs\": [\n        \"research-program-v1\"\n      ],\n      \"status\": \"WAITING_PATH_AND_LEDGER\",\n      \"title\": \"区间与库存\"\n    },\n    {\n      \"baseline\": \"反向资金费方向与相同数量期限的相反暴露对照\",\n      \"counts_as_completed_economic_research\": false,\n      \"defer_reason\": \"2026-09-23 00:05 UTC 开始的单次BTC观察按冻结规则待数据\",\n      \"discovery_id\": \"seed-d-20260923\",\n      \"mechanism_signature\": \"D|历史资金费方向收入是否足以覆盖价格暴露及来回成本？\",\n      \"next_action\": \"2026-09-23 00:05 UTC 开始的单次BTC观察按冻结规则待数据\",\n      \"product_refs\": [\n        \"btc\",\n        \"eth\",\n        \"qqq\",\n        \"aapl\"\n      ],\n      \"question\": \"历史资金费方向收入是否足以覆盖价格暴露及来回成本？\",\n      \"restart_condition\": \"后续合法目标交易/标记与资金费文件\",\n      \"seed_code\": \"D\",\n      \"source_refs\": [\n        \"research-program-v1\",\n        \"funding-data-audit-v1\"\n      ],\n      \"status\": \"FORWARD_PROTOCOL_REGISTERED_INCOMPLETE\",\n      \"title\": \"资金费与拥挤\"\n    },\n    {\n      \"baseline\": \"常规/延长/休市分层，目标成交-标记-参考价格分开\",\n      \"counts_as_completed_economic_research\": false,\n      \"defer_reason\": null,\n      \"discovery_id\": \"seed-e-20260923\",\n      \"mechanism_signature\": \"E|参考市场休市时指数自身反馈是否使表面价差不可交易？\",\n      \"next_action\": \"预登记时段/美元兑USDT/价差与费用联立反证\",\n      \"product_refs\": [\n        \"aapl\",\n        \"qqq\"\n      ],\n      \"question\": \"参考市场休市时指数自身反馈是否使表面价差不可交易？\",\n      \"restart_condition\": \"允许来源提供同步价格与事件发布时间\",\n      \"seed_code\": \"E\",\n      \"source_refs\": [\n        \"research-program-v1\",\n        \"stock-perpetuals\"\n      ],\n      \"status\": \"REAL_MECHANISM_REVIEW_EXECUTED\",\n      \"title\": \"事件与会话\"\n    },\n    {\n      \"baseline\": \"同时点、相同币种、匹配波动和方向的简单基准\",\n      \"counts_as_completed_economic_research\": false,\n      \"defer_reason\": \"先规定暴露匹配，不把假设资金结果相加\",\n      \"discovery_id\": \"seed-f-20260923\",\n      \"mechanism_signature\": \"F|多产品结果是否只重复共同市场暴露？\",\n      \"next_action\": \"先规定暴露匹配，不把假设资金结果相加\",\n      \"product_refs\": [\n        \"aapl\",\n        \"qqq\",\n        \"btc\",\n        \"eth\"\n      ],\n      \"question\": \"多产品结果是否只重复共同市场暴露？\",\n      \"restart_condition\": \"同步目标路径和参考数据\",\n      \"seed_code\": \"F\",\n      \"source_refs\": [\n        \"research-program-v1\"\n      ],\n      \"status\": \"WAITING_SYNCHRONIZED_DATA\",\n      \"title\": \"共同暴露\"\n    },\n    {\n      \"baseline\": \"始终运行/简单过滤/等待与条件选择\",\n      \"counts_as_completed_economic_research\": false,\n      \"defer_reason\": \"仅在有基础结果后检验边界，不追最近冠军\",\n      \"discovery_id\": \"seed-g-20260923\",\n      \"mechanism_signature\": \"G|事前状态切换是否覆盖切换成本？\",\n      \"next_action\": \"仅在有基础结果后检验边界，不追最近冠军\",\n      \"product_refs\": [\n        \"btc\",\n        \"eth\"\n      ],\n      \"question\": \"事前状态切换是否覆盖切换成本？\",\n      \"restart_condition\": \"基础方法原规则复核或新市场状态证据\",\n      \"seed_code\": \"G\",\n      \"source_refs\": [\n        \"research-program-v1\"\n      ],\n      \"status\": \"WAITING_BASE_METHOD_RESULT\",\n      \"title\": \"边界与切换\"\n    },\n    {\n      \"baseline\": \"简单价格/结构化事件/AI增量/预登记反向\",\n      \"counts_as_completed_economic_research\": false,\n      \"defer_reason\": \"先留存当时输出和信息截止，旧窗口不补问模型\",\n      \"discovery_id\": \"seed-h-20260923\",\n      \"mechanism_signature\": \"H|事前AI事件信息是否增加可检验信号？\",\n      \"next_action\": \"先留存当时输出和信息截止，旧窗口不补问模型\",\n      \"product_refs\": [\n        \"aapl\",\n        \"qqq\",\n        \"btc\",\n        \"eth\"\n      ],\n      \"question\": \"事前AI事件信息是否增加可检验信号？\",\n      \"restart_condition\": \"可核实事件发布时间与新模型前向输出\",\n      \"seed_code\": \"H\",\n      \"source_refs\": [\n        \"research-program-v1\"\n      ],\n      \"status\": \"WAITING_PROSPECTIVE_EVENT_OUTPUT\",\n      \"title\": \"AI增量与反向对照\"\n    },\n    {\n      \"baseline\": \"原方法与新产品/新时期，参数不重新优化\",\n      \"counts_as_completed_economic_research\": false,\n      \"defer_reason\": \"ETH只做将来独立复现，INTC保持禁用示例\",\n      \"discovery_id\": \"seed-i-20260923\",\n      \"mechanism_signature\": \"I|冻结机制能否在未用于选择的新样本复现？\",\n      \"next_action\": \"ETH只做将来独立复现，INTC保持禁用示例\",\n      \"product_refs\": [\n        \"btc\",\n        \"eth\"\n      ],\n      \"question\": \"冻结机制能否在未用于选择的新样本复现？\",\n      \"restart_condition\": \"有方法版本和未曝光新窗口\",\n      \"seed_code\": \"I\",\n      \"source_refs\": [\n        \"research-program-v1\"\n      ],\n      \"status\": \"WAITING_FIRST_METHOD_RESULT\",\n      \"title\": \"独立复现\"\n    }\n  ]\n}\n"
+  },
+  "bundle_id": "discovery-seeds-20260923-v1",
+  "records": [
+    {
+      "available_at": "2026-09-22T18:02:02.485411Z",
+      "baseline": "官方规则与真实小样本对照",
+      "counts_as_completed_economic_research": false,
+      "created_at": "2026-09-22T18:02:02.485411Z",
+      "defer_reason": null,
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "baseline",
+          "counts_as_completed_economic_research",
+          "defer_reason",
+          "discovery_id",
+          "mechanism_signature",
+          "next_action",
+          "product_refs",
+          "question",
+          "restart_condition",
+          "seed_code",
+          "source_refs",
+          "status",
+          "title",
+          "round_id"
+        ],
+        "license": "CC-BY-4.0",
+        "public_attachments": [
+          "attachments/research_seed_registry.json"
+        ],
+        "scope": "Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.",
+        "visibility": "PUBLIC"
+      },
+      "discovery_id": "seed-a-20260923",
+      "mechanism_signature": "A|文件日期、目标身份和资金费单位是否支持可重复成本输入？",
+      "next_action": "核对独立日文件的UTC边界及实际延迟",
+      "product_refs": [
+        "aapl",
+        "qqq",
+        "btc",
+        "eth"
+      ],
+      "question": "文件日期、目标身份和资金费单位是否支持可重复成本输入？",
+      "record_type": "discovery",
+      "restart_condition": "原始文件哈希或官方字段规则变化",
+      "round_id": "r-funding-data-audit-20260923",
+      "schema_version": "1.0",
+      "seed_code": "A",
+      "source_refs": [
+        "research-program-v1",
+        "funding-data-audit-v1"
+      ],
+      "status": "REAL_EXECUTED",
+      "synthetic": false,
+      "title": "数据与规则"
+    },
+    {
+      "available_at": "2026-09-22T18:02:02.485411Z",
+      "baseline": "相同退出、期限与名义暴露的直接进入/收盘确认",
+      "counts_as_completed_economic_research": false,
+      "created_at": "2026-09-22T18:02:02.485411Z",
+      "defer_reason": "取得合法成交路径、费用后冻结候选，不预选赢家",
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "baseline",
+          "counts_as_completed_economic_research",
+          "defer_reason",
+          "discovery_id",
+          "mechanism_signature",
+          "next_action",
+          "product_refs",
+          "question",
+          "restart_condition",
+          "seed_code",
+          "source_refs",
+          "status",
+          "title",
+          "round_id"
+        ],
+        "license": "CC-BY-4.0",
+        "scope": "Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.",
+        "visibility": "PUBLIC"
+      },
+      "discovery_id": "seed-b-20260923",
+      "mechanism_signature": "B|确认突破是否改善信息而非仅减少暴露？",
+      "next_action": "取得合法成交路径、费用后冻结候选，不预选赢家",
+      "product_refs": [
+        "btc",
+        "eth"
+      ],
+      "question": "确认突破是否改善信息而非仅减少暴露？",
+      "record_type": "discovery",
+      "restart_condition": "新增目标交易路径与费用",
+      "round_id": null,
+      "schema_version": "1.0",
+      "seed_code": "B",
+      "source_refs": [
+        "research-program-v1"
+      ],
+      "status": "WAITING_TARGET_PRICE_DATA",
+      "synthetic": false,
+      "title": "趋势与进入方式"
+    },
+    {
+      "available_at": "2026-09-22T18:02:02.485411Z",
+      "baseline": "固定网格/冻结停用规则与持有基线",
+      "counts_as_completed_economic_research": false,
+      "created_at": "2026-09-22T18:02:02.485411Z",
+      "defer_reason": "先做库存守恒与完整权益，不显示只有已实现网格收入",
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "baseline",
+          "counts_as_completed_economic_research",
+          "defer_reason",
+          "discovery_id",
+          "mechanism_signature",
+          "next_action",
+          "product_refs",
+          "question",
+          "restart_condition",
+          "seed_code",
+          "source_refs",
+          "status",
+          "title",
+          "round_id"
+        ],
+        "license": "CC-BY-4.0",
+        "scope": "Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.",
+        "visibility": "PUBLIC"
+      },
+      "discovery_id": "seed-c-20260923",
+      "mechanism_signature": "C|区间往返收入扣除残余库存和退出成本后是否成立？",
+      "next_action": "先做库存守恒与完整权益，不显示只有已实现网格收入",
+      "product_refs": [
+        "eth",
+        "btc"
+      ],
+      "question": "区间往返收入扣除残余库存和退出成本后是否成立？",
+      "record_type": "discovery",
+      "restart_condition": "足够细价格路径、单位与费用齐备",
+      "round_id": null,
+      "schema_version": "1.0",
+      "seed_code": "C",
+      "source_refs": [
+        "research-program-v1"
+      ],
+      "status": "WAITING_PATH_AND_LEDGER",
+      "synthetic": false,
+      "title": "区间与库存"
+    },
+    {
+      "available_at": "2026-09-22T18:02:02.485411Z",
+      "baseline": "反向资金费方向与相同数量期限的相反暴露对照",
+      "counts_as_completed_economic_research": false,
+      "created_at": "2026-09-22T18:02:02.485411Z",
+      "defer_reason": "2026-09-23 00:05 UTC 开始的单次BTC观察按冻结规则待数据",
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "baseline",
+          "counts_as_completed_economic_research",
+          "defer_reason",
+          "discovery_id",
+          "mechanism_signature",
+          "next_action",
+          "product_refs",
+          "question",
+          "restart_condition",
+          "seed_code",
+          "source_refs",
+          "status",
+          "title",
+          "round_id"
+        ],
+        "license": "CC-BY-4.0",
+        "scope": "Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.",
+        "visibility": "PUBLIC"
+      },
+      "discovery_id": "seed-d-20260923",
+      "mechanism_signature": "D|历史资金费方向收入是否足以覆盖价格暴露及来回成本？",
+      "next_action": "2026-09-23 00:05 UTC 开始的单次BTC观察按冻结规则待数据",
+      "product_refs": [
+        "btc",
+        "eth",
+        "qqq",
+        "aapl"
+      ],
+      "question": "历史资金费方向收入是否足以覆盖价格暴露及来回成本？",
+      "record_type": "discovery",
+      "restart_condition": "后续合法目标交易/标记与资金费文件",
+      "round_id": null,
+      "schema_version": "1.0",
+      "seed_code": "D",
+      "source_refs": [
+        "research-program-v1",
+        "funding-data-audit-v1"
+      ],
+      "status": "FORWARD_PROTOCOL_REGISTERED_INCOMPLETE",
+      "synthetic": false,
+      "title": "资金费与拥挤"
+    },
+    {
+      "available_at": "2026-09-22T18:02:02.485411Z",
+      "baseline": "常规/延长/休市分层，目标成交-标记-参考价格分开",
+      "counts_as_completed_economic_research": false,
+      "created_at": "2026-09-22T18:02:02.485411Z",
+      "defer_reason": null,
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "baseline",
+          "counts_as_completed_economic_research",
+          "defer_reason",
+          "discovery_id",
+          "mechanism_signature",
+          "next_action",
+          "product_refs",
+          "question",
+          "restart_condition",
+          "seed_code",
+          "source_refs",
+          "status",
+          "title",
+          "round_id"
+        ],
+        "license": "CC-BY-4.0",
+        "scope": "Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.",
+        "visibility": "PUBLIC"
+      },
+      "discovery_id": "seed-e-20260923",
+      "mechanism_signature": "E|参考市场休市时指数自身反馈是否使表面价差不可交易？",
+      "next_action": "预登记时段/美元兑USDT/价差与费用联立反证",
+      "product_refs": [
+        "aapl",
+        "qqq"
+      ],
+      "question": "参考市场休市时指数自身反馈是否使表面价差不可交易？",
+      "record_type": "discovery",
+      "restart_condition": "允许来源提供同步价格与事件发布时间",
+      "round_id": "r-stock-session-mechanism-20260923",
+      "schema_version": "1.0",
+      "seed_code": "E",
+      "source_refs": [
+        "research-program-v1",
+        "stock-perpetuals"
+      ],
+      "status": "REAL_MECHANISM_REVIEW_EXECUTED",
+      "synthetic": false,
+      "title": "事件与会话"
+    },
+    {
+      "available_at": "2026-09-22T18:02:02.485411Z",
+      "baseline": "同时点、相同币种、匹配波动和方向的简单基准",
+      "counts_as_completed_economic_research": false,
+      "created_at": "2026-09-22T18:02:02.485411Z",
+      "defer_reason": "先规定暴露匹配，不把假设资金结果相加",
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "baseline",
+          "counts_as_completed_economic_research",
+          "defer_reason",
+          "discovery_id",
+          "mechanism_signature",
+          "next_action",
+          "product_refs",
+          "question",
+          "restart_condition",
+          "seed_code",
+          "source_refs",
+          "status",
+          "title",
+          "round_id"
+        ],
+        "license": "CC-BY-4.0",
+        "scope": "Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.",
+        "visibility": "PUBLIC"
+      },
+      "discovery_id": "seed-f-20260923",
+      "mechanism_signature": "F|多产品结果是否只重复共同市场暴露？",
+      "next_action": "先规定暴露匹配，不把假设资金结果相加",
+      "product_refs": [
+        "aapl",
+        "qqq",
+        "btc",
+        "eth"
+      ],
+      "question": "多产品结果是否只重复共同市场暴露？",
+      "record_type": "discovery",
+      "restart_condition": "同步目标路径和参考数据",
+      "round_id": null,
+      "schema_version": "1.0",
+      "seed_code": "F",
+      "source_refs": [
+        "research-program-v1"
+      ],
+      "status": "WAITING_SYNCHRONIZED_DATA",
+      "synthetic": false,
+      "title": "共同暴露"
+    },
+    {
+      "available_at": "2026-09-22T18:02:02.485411Z",
+      "baseline": "始终运行/简单过滤/等待与条件选择",
+      "counts_as_completed_economic_research": false,
+      "created_at": "2026-09-22T18:02:02.485411Z",
+      "defer_reason": "仅在有基础结果后检验边界，不追最近冠军",
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "baseline",
+          "counts_as_completed_economic_research",
+          "defer_reason",
+          "discovery_id",
+          "mechanism_signature",
+          "next_action",
+          "product_refs",
+          "question",
+          "restart_condition",
+          "seed_code",
+          "source_refs",
+          "status",
+          "title",
+          "round_id"
+        ],
+        "license": "CC-BY-4.0",
+        "scope": "Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.",
+        "visibility": "PUBLIC"
+      },
+      "discovery_id": "seed-g-20260923",
+      "mechanism_signature": "G|事前状态切换是否覆盖切换成本？",
+      "next_action": "仅在有基础结果后检验边界，不追最近冠军",
+      "product_refs": [
+        "btc",
+        "eth"
+      ],
+      "question": "事前状态切换是否覆盖切换成本？",
+      "record_type": "discovery",
+      "restart_condition": "基础方法原规则复核或新市场状态证据",
+      "round_id": null,
+      "schema_version": "1.0",
+      "seed_code": "G",
+      "source_refs": [
+        "research-program-v1"
+      ],
+      "status": "WAITING_BASE_METHOD_RESULT",
+      "synthetic": false,
+      "title": "边界与切换"
+    },
+    {
+      "available_at": "2026-09-22T18:02:02.485411Z",
+      "baseline": "简单价格/结构化事件/AI增量/预登记反向",
+      "counts_as_completed_economic_research": false,
+      "created_at": "2026-09-22T18:02:02.485411Z",
+      "defer_reason": "先留存当时输出和信息截止，旧窗口不补问模型",
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "baseline",
+          "counts_as_completed_economic_research",
+          "defer_reason",
+          "discovery_id",
+          "mechanism_signature",
+          "next_action",
+          "product_refs",
+          "question",
+          "restart_condition",
+          "seed_code",
+          "source_refs",
+          "status",
+          "title",
+          "round_id"
+        ],
+        "license": "CC-BY-4.0",
+        "scope": "Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.",
+        "visibility": "PUBLIC"
+      },
+      "discovery_id": "seed-h-20260923",
+      "mechanism_signature": "H|事前AI事件信息是否增加可检验信号？",
+      "next_action": "先留存当时输出和信息截止，旧窗口不补问模型",
+      "product_refs": [
+        "aapl",
+        "qqq",
+        "btc",
+        "eth"
+      ],
+      "question": "事前AI事件信息是否增加可检验信号？",
+      "record_type": "discovery",
+      "restart_condition": "可核实事件发布时间与新模型前向输出",
+      "round_id": null,
+      "schema_version": "1.0",
+      "seed_code": "H",
+      "source_refs": [
+        "research-program-v1"
+      ],
+      "status": "WAITING_PROSPECTIVE_EVENT_OUTPUT",
+      "synthetic": false,
+      "title": "AI增量与反向对照"
+    },
+    {
+      "available_at": "2026-09-22T18:02:02.485411Z",
+      "baseline": "原方法与新产品/新时期，参数不重新优化",
+      "counts_as_completed_economic_research": false,
+      "created_at": "2026-09-22T18:02:02.485411Z",
+      "defer_reason": "ETH只做将来独立复现，INTC保持禁用示例",
+      "disclosure": {
+        "export_fields": [
+          "schema_version",
+          "record_type",
+          "created_at",
+          "available_at",
+          "synthetic",
+          "baseline",
+          "counts_as_completed_economic_research",
+          "defer_reason",
+          "discovery_id",
+          "mechanism_signature",
+          "next_action",
+          "product_refs",
+          "question",
+          "restart_condition",
+          "seed_code",
+          "source_refs",
+          "status",
+          "title",
+          "round_id"
+        ],
+        "license": "CC-BY-4.0",
+        "scope": "Original authored analysis and derived diagnostics only. No source ZIP/CSV/HTML or row-level extracts. Upstream rights are not relicensed.",
+        "visibility": "PUBLIC"
+      },
+      "discovery_id": "seed-i-20260923",
+      "mechanism_signature": "I|冻结机制能否在未用于选择的新样本复现？",
+      "next_action": "ETH只做将来独立复现，INTC保持禁用示例",
+      "product_refs": [
+        "btc",
+        "eth"
+      ],
+      "question": "冻结机制能否在未用于选择的新样本复现？",
+      "record_type": "discovery",
+      "restart_condition": "有方法版本和未曝光新窗口",
+      "round_id": null,
+      "schema_version": "1.0",
+      "seed_code": "I",
+      "source_refs": [
+        "research-program-v1"
+      ],
+      "status": "WAITING_FIRST_METHOD_RESULT",
+      "synthetic": false,
+      "title": "独立复现"
+    }
+  ],
+  "request_key": "discovery-seed-registration-20260923-v1",
+  "role": "discovery"
+}
