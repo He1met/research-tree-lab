@@ -1,0 +1,376 @@
+{
+  "schema_version": "1.0",
+  "state": "READ_ONLY_DIAGNOSIS_NO_COMPATIBILITY_APPROVAL",
+  "observed_at": "2026-09-22T20:46:54.137490+00:00",
+  "scope": "Compare nine second-research public originals with installed public_record; inspect exact affected protocol references and current semantic closure without modifying originals, source, existing archives or shared indexes.",
+  "source_sha256": {
+    "researchlib/public.py": "514263bb4038d7d1b1548f31ba9d3d00d67c0f0410990456fc9f02e85e9fd063",
+    "researchlib/contracts.py": "60a65556a02328b309f016a602ba142b887d23771556a907ecce2b71144c6041",
+    "researchlib/archive.py": "c238176b603cc6cef0e6418a3432b2773972b5d6803523d45c11bb096305c4b0",
+    "researchlib/store.py": "6a9e7bc0ac8ee533fedb94bab0c87b9217436dbf4d8437f99fba9af8a02e06f6"
+  },
+  "installed_public_py_sha256": "514263bb4038d7d1b1548f31ba9d3d00d67c0f0410990456fc9f02e85e9fd063",
+  "source_unchanged_during_audit": true,
+  "completion_receipt": "docs/second-native-research-completion.json",
+  "publisher_receipts": [
+    "docs/archive-increment-20260923-v2.json",
+    "docs/PUBLIC_ARCHIVE_FIELDS_V2_MAINTENANCE.md",
+    "docs/current-publication.json"
+  ],
+  "publication_receipt_at_read": {
+    "snapshot_id": "f7feb8b441e6361d6dc1d31535b9787dbe0703dd43a553b1711c075fc6adc53c",
+    "public_records": 48,
+    "visible_rounds": 7,
+    "http_files_verified": 85,
+    "browser_visual_acceptance": "ACTUALLY_RELOADED_EXPANDED_AND_VISUALLY_INSPECTED"
+  },
+  "strict_store_records_at_read": 49,
+  "strict_store_anomalies": [],
+  "existing_relationship_validation": "PASS_EXISTING_CONTRACT_SCOPE_ONLY",
+  "new_public_records": 9,
+  "exact_projection_records": 5,
+  "records_with_omitted_fields": 4,
+  "new_original_hashes_rechecked_unchanged": true,
+  "comparisons": [
+    {
+      "record_ref": "decision-boundary-further-test-long-20260923",
+      "record_type": "decision",
+      "original_sha256": "20037e74d381515ba865d9c63897639c978cd3a7950261455f989e735b5b1a7a",
+      "matches_completion_receipt_hash": true,
+      "public_projection_sha256": "20037e74d381515ba865d9c63897639c978cd3a7950261455f989e735b5b1a7a",
+      "projected_values_match_original": true,
+      "exact_dict_match": true,
+      "omitted_fields": [],
+      "full_original_public_scan": "PASS"
+    },
+    {
+      "record_ref": "decision-boundary-further-test-short-20260923",
+      "record_type": "decision",
+      "original_sha256": "d79bfe06a8dd0013017480d043fbc6268178759589d42cbe66d00b66feaaa2db",
+      "matches_completion_receipt_hash": true,
+      "public_projection_sha256": "d79bfe06a8dd0013017480d043fbc6268178759589d42cbe66d00b66feaaa2db",
+      "projected_values_match_original": true,
+      "exact_dict_match": true,
+      "omitted_fields": [],
+      "full_original_public_scan": "PASS"
+    },
+    {
+      "record_ref": "decision-entry-confirmation-boundary-20260923",
+      "record_type": "decision",
+      "original_sha256": "bd37cb798329b452c05addef4a28e168ab7f605fb202c0f26607f19bfa29262f",
+      "matches_completion_receipt_hash": true,
+      "public_projection_sha256": "f4a826f316fa786aa52258cfbac41e79876e3e77a75c4c04aa8b73b2a7aa9e71",
+      "projected_values_match_original": true,
+      "exact_dict_match": false,
+      "omitted_fields": [
+        "comparison_set",
+        "feedback_disposition",
+        "selected_plan_ref"
+      ],
+      "full_original_public_scan": "PASS"
+    },
+    {
+      "record_ref": "m-btc-entry-confirmation-component-20260923@1",
+      "record_type": "method",
+      "original_sha256": "e2beafbd1e10fcdcd2c11e3c5c58492e00ce528906df4dddfde4ee85246f8e75",
+      "matches_completion_receipt_hash": true,
+      "public_projection_sha256": "ca9b6673a35b7a06933fa5e0051000ef30e87e9dfe62da06ff8940d002fc6cfa",
+      "projected_values_match_original": true,
+      "exact_dict_match": false,
+      "omitted_fields": [
+        "protocol_refs"
+      ],
+      "full_original_public_scan": "PASS"
+    },
+    {
+      "record_ref": "m-minute-boundary-conditional-envelope-20260923@1",
+      "record_type": "method",
+      "original_sha256": "5340f4f41c03473b1e16262ddf8a954665e4fff7d52e2d5940d141ebe95ea582",
+      "matches_completion_receipt_hash": true,
+      "public_projection_sha256": "5340f4f41c03473b1e16262ddf8a954665e4fff7d52e2d5940d141ebe95ea582",
+      "projected_values_match_original": true,
+      "exact_dict_match": true,
+      "omitted_fields": [],
+      "full_original_public_scan": "PASS"
+    },
+    {
+      "record_ref": "r-boundary-sensitivity-20260923",
+      "record_type": "round",
+      "original_sha256": "f45252466f5d5209e714b4bf0252e8cc31ce88956f5e569a12bd699af6efd16e",
+      "matches_completion_receipt_hash": true,
+      "public_projection_sha256": "f45252466f5d5209e714b4bf0252e8cc31ce88956f5e569a12bd699af6efd16e",
+      "projected_values_match_original": true,
+      "exact_dict_match": true,
+      "omitted_fields": [],
+      "full_original_public_scan": "PASS"
+    },
+    {
+      "record_ref": "r-btc-entry-confirmation-20260923",
+      "record_type": "round",
+      "original_sha256": "06c4174ee946751dc9875960c9e688eff68780f82ee4943a100326dadb440c4a",
+      "matches_completion_receipt_hash": true,
+      "public_projection_sha256": "06c4174ee946751dc9875960c9e688eff68780f82ee4943a100326dadb440c4a",
+      "projected_values_match_original": true,
+      "exact_dict_match": true,
+      "omitted_fields": [],
+      "full_original_public_scan": "PASS"
+    },
+    {
+      "record_ref": "run-boundary-sensitivity-20260923@attempt-1",
+      "record_type": "run",
+      "original_sha256": "a67902bb47f829d5aee785d9c701f0b06e92a9209c55031ab41fd4a21d366208",
+      "matches_completion_receipt_hash": true,
+      "public_projection_sha256": "b8943c01a500b30fb1eb506f062a701efa420c28c9dd3b5a407f60bbd3459709",
+      "projected_values_match_original": true,
+      "exact_dict_match": false,
+      "omitted_fields": [
+        "method_ref"
+      ],
+      "full_original_public_scan": "PASS"
+    },
+    {
+      "record_ref": "run-btc-entry-confirmation-20260923@attempt-1",
+      "record_type": "run",
+      "original_sha256": "c24901fb5af74c50e1771a62a68cc120f02e80e556b12e393fc3bb871b379b4a",
+      "matches_completion_receipt_hash": true,
+      "public_projection_sha256": "b67680bac4712b1981d173db82883f6ef55062c4d3ba06c6ee85586f8c89ff71",
+      "projected_values_match_original": true,
+      "exact_dict_match": false,
+      "omitted_fields": [
+        "method_ref"
+      ],
+      "full_original_public_scan": "PASS"
+    }
+  ],
+  "affected_records": [
+    {
+      "record_ref": "decision-entry-confirmation-boundary-20260923",
+      "record_type": "decision",
+      "original_sha256": "bd37cb798329b452c05addef4a28e168ab7f605fb202c0f26607f19bfa29262f",
+      "matches_completion_receipt_hash": true,
+      "public_projection_sha256": "f4a826f316fa786aa52258cfbac41e79876e3e77a75c4c04aa8b73b2a7aa9e71",
+      "projected_values_match_original": true,
+      "exact_dict_match": false,
+      "omitted_fields": [
+        "comparison_set",
+        "feedback_disposition",
+        "selected_plan_ref"
+      ],
+      "full_original_public_scan": "PASS",
+      "omitted_values": {
+        "comparison_set": [
+          "immediate",
+          "confirmed",
+          "delayed_unconditional",
+          "wait"
+        ],
+        "feedback_disposition": {
+          "adopted": [
+            "No net result without actual funding/mark/cost facts.",
+            "Common-direction and exposure differences are not signal-specific edge."
+          ],
+          "feedback_refs": [
+            "feedback-btc-funding-short-manual-20260923-v1",
+            "feedback-btc-funding-long-control-manual-20260923-v1"
+          ],
+          "future_test": "New unexposed matched-delay window with executable fill, mark and funding evidence.",
+          "not_adopted_as_lineage": "Concrete funding successor already committed elsewhere. This question is seed-B independent with parent_round_id null.",
+          "review_refs": [
+            "review-btc-funding-short-manual-20260923-v1",
+            "review-btc-funding-long-control-manual-20260923-v1"
+          ],
+          "status": "GENERAL_BOUNDARIES_ADOPTED_NOT_A_DUPLICATE_FUNDING_SUCCESSOR"
+        },
+        "selected_plan_ref": null
+      },
+      "current_semantic_refs": [
+        "feedback-btc-funding-long-control-manual-20260923-v1",
+        "feedback-btc-funding-short-manual-20260923-v1",
+        "r-btc-entry-confirmation-20260923",
+        "review-btc-funding-long-control-manual-20260923-v1",
+        "review-btc-funding-short-manual-20260923-v1",
+        "seed-b-20260923"
+      ]
+    },
+    {
+      "record_ref": "m-btc-entry-confirmation-component-20260923@1",
+      "record_type": "method",
+      "original_sha256": "e2beafbd1e10fcdcd2c11e3c5c58492e00ce528906df4dddfde4ee85246f8e75",
+      "matches_completion_receipt_hash": true,
+      "public_projection_sha256": "ca9b6673a35b7a06933fa5e0051000ef30e87e9dfe62da06ff8940d002fc6cfa",
+      "projected_values_match_original": true,
+      "exact_dict_match": false,
+      "omitted_fields": [
+        "protocol_refs"
+      ],
+      "full_original_public_scan": "PASS",
+      "omitted_values": {
+        "protocol_refs": [
+          "bundle:research-btc-entry-confirmation-20260923-v1/attachments/protocol.json",
+          "bundle:research-btc-entry-confirmation-20260923-v1/attachments/protocol_amendment_before_analysis.json"
+        ]
+      },
+      "current_semantic_refs": []
+    },
+    {
+      "record_ref": "run-boundary-sensitivity-20260923@attempt-1",
+      "record_type": "run",
+      "original_sha256": "a67902bb47f829d5aee785d9c701f0b06e92a9209c55031ab41fd4a21d366208",
+      "matches_completion_receipt_hash": true,
+      "public_projection_sha256": "b8943c01a500b30fb1eb506f062a701efa420c28c9dd3b5a407f60bbd3459709",
+      "projected_values_match_original": true,
+      "exact_dict_match": false,
+      "omitted_fields": [
+        "method_ref"
+      ],
+      "full_original_public_scan": "PASS",
+      "omitted_values": {
+        "method_ref": "m-minute-boundary-conditional-envelope-20260923@1"
+      },
+      "current_semantic_refs": [
+        "r-boundary-sensitivity-20260923"
+      ]
+    },
+    {
+      "record_ref": "run-btc-entry-confirmation-20260923@attempt-1",
+      "record_type": "run",
+      "original_sha256": "c24901fb5af74c50e1771a62a68cc120f02e80e556b12e393fc3bb871b379b4a",
+      "matches_completion_receipt_hash": true,
+      "public_projection_sha256": "b67680bac4712b1981d173db82883f6ef55062c4d3ba06c6ee85586f8c89ff71",
+      "projected_values_match_original": true,
+      "exact_dict_match": false,
+      "omitted_fields": [
+        "method_ref"
+      ],
+      "full_original_public_scan": "PASS",
+      "omitted_values": {
+        "method_ref": "m-btc-entry-confirmation-component-20260923@1"
+      },
+      "current_semantic_refs": [
+        "r-btc-entry-confirmation-20260923"
+      ]
+    }
+  ],
+  "protocol_attachment_checks": [
+    {
+      "reference": "bundle:research-btc-entry-confirmation-20260923-v1/attachments/protocol.json",
+      "sha256": "36c28ff21e6a8341eccc81895efefb4396594ea59f48a1e7f10aea1cddd24a76",
+      "bytes": 5048,
+      "manifest_identity_matches": true,
+      "public_content_scan": "PASS",
+      "explicitly_allowlisted_by_records": [],
+      "privacy_observation": "Authored protocol/parameter and pre-analysis amendment text; no row-level source prices, private absolute path or credential pattern observed. Scanner pass is not redistribution authorization.",
+      "attachment_publication": "NOT_AUTHORIZED_BY_EXISTING_PUBLIC_ATTACHMENTS"
+    },
+    {
+      "reference": "bundle:research-btc-entry-confirmation-20260923-v1/attachments/protocol_amendment_before_analysis.json",
+      "sha256": "d3527404992d6fd9e30f033c8465cd1c3ad3c856cbc1030eb5f4e721c30551ba",
+      "bytes": 1350,
+      "manifest_identity_matches": true,
+      "public_content_scan": "PASS",
+      "explicitly_allowlisted_by_records": [],
+      "privacy_observation": "Authored protocol/parameter and pre-analysis amendment text; no row-level source prices, private absolute path or credential pattern observed. Scanner pass is not redistribution authorization.",
+      "attachment_publication": "NOT_AUTHORIZED_BY_EXISTING_PUBLIC_ATTACHMENTS"
+    }
+  ],
+  "method_reference_checks": [
+    {
+      "run_ref": "run-boundary-sensitivity-20260923@attempt-1",
+      "method_ref": "m-minute-boundary-conditional-envelope-20260923@1",
+      "method_exists": true,
+      "method_record_type": "method",
+      "method_visibility": "PUBLIC",
+      "method_available_not_after_run": true,
+      "method_committed_not_after_run": true,
+      "current_semantic_closure_record_count": 16,
+      "method_in_current_semantic_closure": false,
+      "current_semantic_closure_refs": [
+        "batch-manual-safe-review-20260923-v1",
+        "d-btc-candles-20260921@1",
+        "d-btc-trades-20260921@1",
+        "decision-adopt-input-feedback-long-20260923",
+        "decision-adopt-input-feedback-short-20260923",
+        "feedback-btc-funding-long-control-manual-20260923-v1",
+        "feedback-btc-funding-short-manual-20260923-v1",
+        "p-btc-funding-long-control-20260923@1",
+        "p-btc-funding-short-20260923@1",
+        "r-boundary-sensitivity-20260923",
+        "r-btc-funding-cost-counterevidence-20260923",
+        "r-feedback-input-completeness-20260923",
+        "r-funding-data-audit-20260923",
+        "review-btc-funding-long-control-manual-20260923-v1",
+        "review-btc-funding-short-manual-20260923-v1",
+        "run-boundary-sensitivity-20260923@attempt-1"
+      ]
+    },
+    {
+      "run_ref": "run-btc-entry-confirmation-20260923@attempt-1",
+      "method_ref": "m-btc-entry-confirmation-component-20260923@1",
+      "method_exists": true,
+      "method_record_type": "method",
+      "method_visibility": "PUBLIC",
+      "method_available_not_after_run": true,
+      "method_committed_not_after_run": true,
+      "current_semantic_closure_record_count": 14,
+      "method_in_current_semantic_closure": false,
+      "current_semantic_closure_refs": [
+        "batch-manual-safe-review-20260923-v1",
+        "btc@observed-20260923-v1",
+        "d-btc-candles-20260921@1",
+        "feedback-btc-funding-long-control-manual-20260923-v1",
+        "feedback-btc-funding-short-manual-20260923-v1",
+        "p-btc-funding-long-control-20260923@1",
+        "p-btc-funding-short-20260923@1",
+        "r-btc-entry-confirmation-20260923",
+        "r-btc-funding-cost-counterevidence-20260923",
+        "r-funding-data-audit-20260923",
+        "review-btc-funding-long-control-manual-20260923-v1",
+        "review-btc-funding-short-manual-20260923-v1",
+        "run-btc-entry-confirmation-20260923@attempt-1",
+        "seed-b-20260923"
+      ]
+    }
+  ],
+  "decision_nested_refs_already_covered_by_input_record_refs": true,
+  "minimal_compatibility_candidate": {
+    "status": "PROPOSAL_ONLY_NOT_IMPLEMENTED_OR_APPROVED",
+    "type_specific_fields": {
+      "decision": [
+        "comparison_set",
+        "feedback_disposition",
+        "selected_plan_ref"
+      ],
+      "method": [
+        "protocol_refs"
+      ],
+      "run": [
+        "method_ref"
+      ]
+    },
+    "preserve": [
+      "COMMON_FIELDS unchanged",
+      "export_fields remains restrictive",
+      "public visibility/license/synthetic gates unchanged",
+      "recursive public scanner unchanged",
+      "disclosure.public_attachments remains sole per-record attachment allowlist",
+      "old originals, snapshots and archives immutable"
+    ]
+  },
+  "reference_boundary": "Whitelisting fields preserves record bytes only. Current semantic_refs ignores run.method_ref, method.protocol_refs and decision.selected_plan_ref/nested feedback_disposition references. These current run targets exist, are PUBLIC and time-consistent; current decision nested refs duplicate input_record_refs and selected_plan_ref is null. Future non-null or novel references need separately reviewed type/existence/availability checks. Do not describe a whitelist-only change as complete method dependency recovery.",
+  "necessary_validation": [
+    "Exactly preserve all nine originals and all five new field names; deterministically export/inspect/restore the four affected records in isolated scratch only after reviewed candidate implementation.",
+    "Exercise unknown top-level fields and narrowing export_fields; both must continue to reject exact archives or omit projections as before.",
+    "Inject nested private paths, credentials, unsafe bundle references and forbidden visibility/licenses into only temporary copies; public scan and disclosure restrictions must remain enforced.",
+    "Check run.method_ref missing/wrong type/future target and archive closure expectations; either separately implement reviewed semantic tracking or explicitly select and verify target methods in the recovery closure without overstating automatic coverage.",
+    "Check current decision nested refs remain covered, selected_plan_ref=null has no selection meaning; test future non-null/mismatched references before claiming general schema support.",
+    "Check protocol references exist and hash-match, but files remain excluded when absent from public_attachments; no transitive attachment authorization from adding the field.",
+    "Restore exact public record bytes without implying protocol/code/source-row completeness; separately disclose unarchived dependency artifacts.",
+    "Preserve 49 original record hashes, old snapshot hashes and all existing archives; bind any later public.py change into the new independent source/method hash before installation."
+  ],
+  "limitations": [
+    "No source or shared index change; no candidate whitelist monkeypatch, archive export, archive upload, publication or production commit performed.",
+    "No new compatibility acceptance, research economic result or natural-run identity inferred.",
+    "Public scan success is a limited pattern check and does not establish ownership or redistribution rights.",
+    "Protocol attachment hashes refer to local committed evidence; no permission to publish their bytes is added by this report."
+  ]
+}

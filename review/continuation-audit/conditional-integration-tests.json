@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-09-22T20:56:10.649320Z",
+  "state": "ROOT_INTEGRATION_CHECKS_PASS_PENDING_INDEPENDENT_APPROVAL",
+  "source_sha256": "553a5cf1dce6f738745e1ea85d701e00c32c8876e57f17ade4ddc35c24b5197d",
+  "conditional_module_sha256": "c2ad6dd18d99ee48c6d9360307153709071bafe6f4a472b36c563247fb6518b5",
+  "conditional_method_sha256": "a1f6f384e885176dbc1680ca4b720ec13c96e2361b84b3f4512ff721cd0c88ae",
+  "runtime": {
+    "python": "3.9.6",
+    "implementation": "CPython"
+  },
+  "execution_scope": "OFFICIAL_ISOLATED_WORKTREE_WITH_FROZEN_CANDIDATE_SOURCE",
+  "checks": [
+    {
+      "command": "python3 -m unittest discover -s tests -p 'test_*.py' -v",
+      "tests": 232,
+      "duration_seconds": 13.491,
+      "exit_code": 0,
+      "result": "OK"
+    },
+    {
+      "command": "python3 -m unittest discover -s planning/current/tests -p 'test_*.py' -v",
+      "tests": 24,
+      "duration_seconds": 0.002,
+      "exit_code": 0,
+      "result": "OK"
+    }
+  ],
+  "boundary": "Engineering tests use isolated synthetic fixtures. No production review, source coverage, FINAL, actual return or natural execution is claimed."
+}

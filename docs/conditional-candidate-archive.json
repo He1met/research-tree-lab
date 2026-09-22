@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "observed_at": "2026-09-22T21:09:31.529330Z",
+  "state": "REVIEWED_SOURCE_ARCHIVED_NOT_INSTALLED",
+  "remote_commit": "9fdd00b6baec5fc948fde817db486e8be0734698",
+  "git_tag": "reviewed-conditional-candidate-20260923-v1",
+  "source_url": "https://github.com/He1met/research-tree-lab/tree/reviewed-conditional-candidate-20260923-v1",
+  "source_sha256": "553a5cf1dce6f738745e1ea85d701e00c32c8876e57f17ade4ddc35c24b5197d",
+  "method_sha256": "a1f6f384e885176dbc1680ca4b720ec13c96e2361b84b3f4512ff721cd0c88ae",
+  "review_receipt": "review/continuation-audit/conditional-source-receipt.json",
+  "root_integration_receipt": "review/continuation-audit/conditional-integration-tests.json",
+  "backend_tests_passed": 232,
+  "reference_tests_passed": 24,
+  "independent_targeted_tests_passed": 42,
+  "independent_attack_groups_passed": 13,
+  "installed": false,
+  "production_reviews_created": 0,
+  "next_step": "Combine public reference compatibility and strict waiting method profiles, then independently approve the new full source identity before first conditional installation.",
+  "boundary": "The reviewed candidate remains reproducible in Git. Its approval does not transfer to the combined package; no formal economic or natural-run acceptance is claimed."
+}

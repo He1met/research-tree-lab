@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "spec": "planning/current/docs/ACCEPTANCE.md",
-  "updated_at": "2026-09-22T20:45:18.113752Z",
+  "updated_at": "2026-09-22T21:09:31.529330Z",
   "overall": "SCOPED_DELIVERY_VERIFIED_FORWARD_EVALUATOR_IMPLEMENTATION_REQUIRED_AND_NATURAL_EVIDENCE_PENDING",
   "method": "59项逐项证据映射；各层级不相加为整体通过率。测试源码只定位场景，运行通过以执行回执为准。",
   "status_definitions": {
@@ -278,12 +278,15 @@
       "scientific_reproduction": "NOT_RUN"
     },
     "index_scope": {
-      "snapshot_id": "87a7725123ed070e2d489087b2edb1901eaccce338acb50beed2fe107be7acf7",
-      "snapshot_verified_at": "2026-09-22T20:12:29.806075+00:00",
-      "frozen_records": 39,
-      "frozen_rounds": 5,
+      "snapshot_id": "f7feb8b441e6361d6dc1d31535b9787dbe0703dd43a553b1711c075fc6adc53c",
+      "snapshot_verified_at": "2026-09-22T20:43:01.698732Z",
+      "frozen_records": 49,
+      "frozen_public_records": 48,
+      "frozen_local_only_records": 1,
+      "frozen_rounds": 7,
       "live_store_count": "NOT_ASSERTED_BY_THIS_INDEX_UPDATE",
-      "later_task_records": "SECOND_COMPLETION_9_NEW_PUBLIC_PENDING_PUBLICATION_AND_ARCHIVE_1_LOCAL_ONLY"
+      "later_task_records": "Second task: all 9 new public records are projected; 5 are locally archived; 4 await full archive compatibility; 1 additional record remains local-only.",
+      "evidence": "docs/publication-run-20260923-v2.json"
     },
     "latest_local_research_completion": {
       "receipt": "docs/second-native-research-completion.json",
@@ -378,6 +381,20 @@
       "remote_download_verified": false,
       "upload_blocker": "MAC_LOCKED",
       "maintenance_proposal": "docs/PUBLIC_ARCHIVE_FIELDS_V2_MAINTENANCE.md"
+    },
+    "conditional_candidate": {
+      "state": "REVIEWED_SOURCE_ARCHIVED_NOT_INSTALLED",
+      "source_url": "https://github.com/He1met/research-tree-lab/tree/reviewed-conditional-candidate-20260923-v1",
+      "source_sha256": "553a5cf1dce6f738745e1ea85d701e00c32c8876e57f17ade4ddc35c24b5197d",
+      "method_sha256": "a1f6f384e885176dbc1680ca4b720ec13c96e2361b84b3f4512ff721cd0c88ae",
+      "review_receipt": "review/continuation-audit/conditional-source-receipt.json",
+      "root_integration_receipt": "review/continuation-audit/conditional-integration-tests.json",
+      "backend_tests_passed": 232,
+      "reference_tests_passed": 24,
+      "independent_targeted_tests_passed": 42,
+      "independent_attack_groups_passed": 13,
+      "installed": false,
+      "archive_receipt": "docs/conditional-candidate-archive.json"
     }
   },
   "operator_pending": [
@@ -597,9 +614,11 @@
         "docs/OKX_FUNDING_FILE.md",
         "review/continuation-audit/trade-public-source-receipt.json",
         "review/continuation-audit/trade-public-integration-tests.json",
-        "docs/OKX_TRADE_FILE.md"
+        "docs/OKX_TRADE_FILE.md",
+        "review/continuation-audit/conditional-source-receipt.json",
+        "docs/conditional-candidate-archive.json"
       ],
-      "limitations": "仅能对所给资料作条件算术、单文件校验和无经济结果的等待处置；来源真实可得、事件全集、成交顺序、精确mark及已接受事件的正式经济复核/跨日迁移仍未完成。没有真实最终路径或账户利润。 conditional-review层仍在隔离开发与独立P1修复中，未作为已交付能力。",
+      "limitations": "仅能对所给资料作条件算术、单文件校验和无经济结果的等待处置；来源真实可得、事件全集、成交顺序、精确mark及已接受事件的正式经济复核/跨日迁移仍未完成。没有真实最终路径或账户利润。 conditional-review候选已通过独立受限复验并单独Git封存，首次组合安装仍待重新审查，未作为已交付能力。",
       "next_verification": "按原窗口收集许可来源并分项验证，补已接受事件的正式经济状态迁移；日复核可使用已审等待预备器，当前不能生成经济FINAL。"
     },
     {
@@ -622,9 +641,11 @@
         "docs/OKX_FUNDING_FILE.md",
         "review/continuation-audit/trade-public-source-receipt.json",
         "review/continuation-audit/trade-public-integration-tests.json",
-        "docs/OKX_TRADE_FILE.md"
+        "docs/OKX_TRADE_FILE.md",
+        "review/continuation-audit/conditional-source-receipt.json",
+        "docs/conditional-candidate-archive.json"
       ],
-      "limitations": "仅能对所给资料作条件算术、单文件校验和无经济结果的等待处置；来源真实可得、事件全集、成交顺序、精确mark及已接受事件的正式经济复核/跨日迁移仍未完成。没有真实最终路径或账户利润。 conditional-review层仍在隔离开发与独立P1修复中，未作为已交付能力。",
+      "limitations": "仅能对所给资料作条件算术、单文件校验和无经济结果的等待处置；来源真实可得、事件全集、成交顺序、精确mark及已接受事件的正式经济复核/跨日迁移仍未完成。没有真实最终路径或账户利润。 conditional-review候选已通过独立受限复验并单独Git封存，首次组合安装仍待重新审查，未作为已交付能力。",
       "next_verification": "按原窗口收集许可来源并分项验证，补已接受事件的正式经济状态迁移；日复核可使用已审等待预备器，当前不能生成经济FINAL。"
     },
     {
@@ -660,9 +681,11 @@
         "docs/OKX_FUNDING_FILE.md",
         "review/continuation-audit/trade-public-source-receipt.json",
         "review/continuation-audit/trade-public-integration-tests.json",
-        "docs/OKX_TRADE_FILE.md"
+        "docs/OKX_TRADE_FILE.md",
+        "review/continuation-audit/conditional-source-receipt.json",
+        "docs/conditional-candidate-archive.json"
       ],
-      "limitations": "仅能对所给资料作条件算术、单文件校验和无经济结果的等待处置；来源真实可得、事件全集、成交顺序、精确mark及已接受事件的正式经济复核/跨日迁移仍未完成。没有真实最终路径或账户利润。 conditional-review层仍在隔离开发与独立P1修复中，未作为已交付能力。",
+      "limitations": "仅能对所给资料作条件算术、单文件校验和无经济结果的等待处置；来源真实可得、事件全集、成交顺序、精确mark及已接受事件的正式经济复核/跨日迁移仍未完成。没有真实最终路径或账户利润。 conditional-review候选已通过独立受限复验并单独Git封存，首次组合安装仍待重新审查，未作为已交付能力。",
       "next_verification": "按原窗口收集许可来源并分项验证，补已接受事件的正式经济状态迁移；日复核可使用已审等待预备器，当前不能生成经济FINAL。"
     },
     {
@@ -1119,17 +1142,20 @@
         "review/continuation-audit/trade-public-integration-tests.json",
         "tests/receipts/public-round-source-review-archive.json",
         "docs/publication-maintenance-trade-20260923.json",
-        "docs/archive-supplement-20260923.json"
+        "docs/archive-supplement-20260923.json",
+        "docs/PUBLIC_ARCHIVE_FIELDS_V2_MAINTENANCE.md",
+        "docs/publication-run-20260923-v2.json",
+        "docs/public-browser-readback-20260923-v2.json"
       ],
-      "limitations": "原公开字段缺项的失败回执保留，工程缺项已关闭；未知字段、披露限制和隐私扫描仍有效。当前快照视觉核对待Mac解锁；本机补充归档不等于远端上传恢复，受限上游仍LOCAL_ONLY。",
-      "next_verification": "解锁后完成补充包上传及当前快照视觉回读；后续新增内容继续核对允许闭包并保留LOCAL_ONLY缺口。"
+      "limitations": "此前 round.source_review_refs 缺项已关闭，失败回执保留。当前 f7feb8 快照已实际视觉核验；另4条新原件存在不同字段兼容与run方法引用闭包缺项，尚未修复。公开投影不等于完整原件归档；受限上游仍LOCAL_ONLY。",
+      "next_verification": "独立修复新字段和方法引用闭包后，重新核对原件同一性与归档；解锁后上传补充包和v2包，远端下载恢复另验。"
     },
     {
       "id": "E07",
       "scenario": "公开前秘密/许可检查，普通摘要不能代替未备份原件",
       "requirement": "公开前秘密/许可检查，普通摘要不能代替未备份原件；嵌套包不绕过扫描。",
       "status": "REAL_PASS",
-      "verified_scope": "秘密/私有路径/嵌套包魔数/符号链接/许可白名单拒绝测试通过，真实上游ZIP/CSV/HTML保留LOCAL_ONLY，仅公开允许派生物。 本次39条公开投影及27个允许附件扫描通过，原件/公开hash映射已保存；完整归档对非白名单字段保持拒绝。",
+      "verified_scope": "秘密/私有路径/嵌套包魔数/符号链接/许可白名单拒绝测试通过，真实上游ZIP/CSV/HTML保留LOCAL_ONLY，仅公开允许派生物。最新快照48条公开投影与31个允许附件已经发布；原件/公开hash映射保留。4条原件因非白名单字段完整归档拒收，未以投影替代完整备份。",
       "evidence": [
         "review/bootstrap-review/engineering-tests-final.txt",
         "research/bootstrap-v1/PUBLIC_SCOPE.md",
@@ -1138,7 +1164,9 @@
         "research/bootstrap-v1/execution_receipt.json",
         "research/bootstrap-v1/verification_receipt.json",
         "docs/publication-run-20260923-v1.json",
-        "docs/archive-increment-20260923.json"
+        "docs/archive-increment-20260923.json",
+        "docs/publication-run-20260923-v2.json",
+        "docs/archive-inventory-20260923-v2.json"
       ],
       "limitations": "摘要不能代替原档备份；受限上游远端未保存。",
       "next_verification": "公开清单继续列限制，不绕许可搬运。"
@@ -1353,7 +1381,7 @@
       "scenario": "手动试跑、自然运行分开",
       "requirement": "手动试跑、自然运行分开；至少两个不同自然研究时点、一轮自然日复核和真实后继有证据。",
       "status": "WAITING_NATURAL_OUTCOME",
-      "verified_scope": "手动首轮与后续任务分开；第二个研究任务20:06:16Z启动、20:27:16Z完成，累计启动/完成观察均2次。完成回执时本机49条/48可公开/7轮，原39记录与140个基线文件hash不变；新增两项历史development研究，9可公开记录待发布、1条LOCAL_ONLY。",
+      "verified_scope": "手动首轮与后续任务分开；第二研究20:06:16Z启动、20:27:16Z完成，累计启动/完成观察均2次。完成回执时本机49条/48可公开/7轮，原39记录与140个基线文件hash不变。新增两项历史development研究的9条公开记录随后由第二发布任务实际发布，1条LOCAL_ONLY未公开。",
       "evidence": [
         "docs/INSTALLATION.md",
         "config/native_task_status.json",
@@ -1367,9 +1395,11 @@
         "docs/publication-run-20260923-v1.json",
         "docs/archive-increment-20260923.json",
         "docs/second-native-research-observation.json",
-        "docs/second-native-research-completion.json"
+        "docs/second-native-research-completion.json",
+        "docs/publication-run-20260923-v2.json",
+        "docs/archive-increment-20260923-v2.json"
       ],
-      "limitations": "两个完成观察仍无已核实scheduler-event身份，严格自然计数0、自然日复核0；没有新增plan、正式review或readiness。Pages仍为87a772的39条/5轮，三包本机归档并集仍限冻结39条，不扩张为49/48；原第二任务active观察回执保留历史。",
+      "limitations": "两个研究完成观察及两次发布任务头仍无已核实scheduler-event身份，严格自然计数0、自然日复核0；没有新增plan、正式review或readiness。Pages当前f7feb8为48条公开/7轮；本机归档并集44条、4条完整归档待兼容、首批远端恢复仍26条。旧active和各发布时点回执保留历史。",
       "next_verification": "通过受支持官方能力补充真实触发证据，保留原run的UNKNOWN，不修改原记录或以手工补齐。"
     },
     {
