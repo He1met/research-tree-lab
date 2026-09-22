@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-09-22T19:44:54.567517Z",
+  "natural_or_economic_review_performed": false,
+  "original_records_hash_checked": 39,
+  "originals_unchanged": true,
+  "public_source_hash": "514263bb4038d7d1b1548f31ba9d3d00d67c0f0410990456fc9f02e85e9fd063",
+  "remote_archive_verified": false,
+  "source_coverage": "PUBLIC_RECORDS_AND_EXPLICIT_ATTACHMENTS_ONLY",
+  "state": "PASS_SCOPED_LOCAL_PUBLIC_ARCHIVE",
+  "targets": [
+    {
+      "archive_id": "a25259cc6cc6acf333ba70fed54755f5c85b099efc9bf4b09215ef77e3fddb44",
+      "archive_sha256": "a388e5a6a0992130c5c3cb5c4a77821d51b9e4c420c141aaaf4b836ab48c6acd",
+      "exact_original_bytes": true,
+      "files": 34,
+      "records": 13,
+      "target": "decision-adopt-input-feedback-long-20260923"
+    },
+    {
+      "archive_id": "64e62f8594ebd5c692f59c0f20b395bb2517134312dae3ccffad824ad9583227",
+      "archive_sha256": "57a177eb407fcc07fe88df204c1415a974f9589102b0f383f2a17646a46c8350",
+      "exact_original_bytes": true,
+      "files": 34,
+      "records": 13,
+      "target": "decision-adopt-input-feedback-short-20260923"
+    },
+    {
+      "archive_id": "4015386293374b88942c9b9611e77ba76c42d43b89efeba4e670af3cd85493d1",
+      "archive_sha256": "98555566aea1b7b24304e80f5fdbdd72d236d68c1b5dbd631e989920bf5dd0f2",
+      "exact_original_bytes": true,
+      "files": 33,
+      "records": 12,
+      "target": "r-feedback-input-completeness-20260923"
+    },
+    {
+      "archive_id": "6e7fdc0386454464c5d704142c45e5f2dd3eaa9e9bc7bd09a6157c220875c4df",
+      "archive_sha256": "9c06659934912ab57de06bbdea7b7fa363eb3c161fd4d60e46787716db1d1d56",
+      "exact_original_bytes": true,
+      "files": 34,
+      "records": 13,
+      "target": "run-feedback-input-completeness-20260923@attempt-1"
+    }
+  ],
+  "waiting_method_hash": "d21b004a0efe4295f391a3f82ccba05f6a967b9205d370eabd807a8692f91f65"
+}

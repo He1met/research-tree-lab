@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "observed_at": "2026-09-22T19:57:52.577152+00:00",
+  "state": "PUBLISHED_SERVER_DIGEST_VERIFIED_REMOTE_DOWNLOAD_UNVERIFIED",
+  "historical_failure_receipt": "docs/archive-increment-20260923.json",
+  "release_url": "https://github.com/He1met/research-tree-lab/releases/tag/research-increment-20260923-v1",
+  "asset_url": "https://github.com/He1met/research-tree-lab/releases/download/research-increment-20260923-v1/public-research-increment-20260923-v1.zip",
+  "archive_filename": "public-research-increment-20260923-v1.zip",
+  "archive_sha256": "3467ea715b9ef638f897e94f13d5ca267e65ea3069a56a9f53132321cf72cf7f",
+  "github_displayed_sha256": "3467ea715b9ef638f897e94f13d5ca267e65ea3069a56a9f53132321cf72cf7f",
+  "archive_bytes": 64744,
+  "archive_id": "3ff440dd8cd68e7bcce98ca9304b0663335c1013bc2f0f41d33b990a64f44f0c",
+  "closure_record_count": 14,
+  "file_count": 35,
+  "new_record_count": 9,
+  "upload_route": "OFFICIAL_APP_NATIVE_MACOS_FILE_PICKER",
+  "permission_changes": false,
+  "upload_status": "ASSET_VISIBLE_ON_PUBLISHED_RELEASE",
+  "server_digest_verified": true,
+  "remote_download_verified": false,
+  "remote_restored": false,
+  "download_observations": [
+    "Asset link navigation reached Chrome ERR_BLOCKED_BY_CLIENT for release-assets.githubusercontent.com.",
+    "Documented browser downloadMedia returned without an observable file at the expected destination.",
+    "Browser security policy rejected inspection of chrome downloads; no workaround or permission change attempted."
+  ],
+  "public_readback_scope": "RELEASE_PAGE_ASSET_NAME_SIZE_AND_SERVER_DIGEST_ONLY",
+  "manual_recovery": true,
+  "natural_run": false,
+  "archive_pending_record_refs": [
+    "decision-adopt-input-feedback-long-20260923",
+    "decision-adopt-input-feedback-short-20260923",
+    "r-feedback-input-completeness-20260923",
+    "run-feedback-input-completeness-20260923@attempt-1"
+  ],
+  "limitations": [
+    "Restricted upstream originals and local-only material are not included or claimed backed up.",
+    "Recovery verifies stored bytes and contracts; scientific reproduction must be run separately.",
+    "Four feedback-successor records await independently reviewed public-field compatibility and a separate supplement.",
+    "The previous native failure receipt is preserved; this later manual recovery does not change its historical outcome.",
+    "Scientific reproduction of new research was not performed from this remote asset."
+  ],
+  "next_action": "Publish a separately verified supplement after source maintenance; retain download/restore as pending until an authorized browser download produces bytes."
+}

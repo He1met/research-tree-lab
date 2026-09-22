@@ -1,0 +1,15 @@
+{
+  "verified_at": "2026-09-22T20:06:07.335327+00:00",
+  "source_sha256": "c1aa9e50635b4591514dc17e2d5123f3742a6b4a7b6b90c9403f6f84bd043592",
+  "backend": {
+    "command": "python3 -m unittest discover -s tests -p 'test_*.py' -q",
+    "tests_passed": 190
+  },
+  "reference": {
+    "command": "python3 -m unittest discover -s planning/current/tests -p 'test_*.py' -q",
+    "tests_passed": 24
+  },
+  "original_record_count": 39,
+  "original_files_hash_unchanged": 140,
+  "scope": "Root rerun after exact independent-review integration; no production research, economic review or native mutation"
+}

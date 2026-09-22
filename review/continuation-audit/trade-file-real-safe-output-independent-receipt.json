@@ -1,0 +1,74 @@
+{
+  "status": "PASS_SCOPED_REAL_FILE_DECODE",
+  "evidence_class": "REAL_EXISTING_SOURCE_READ_ONLY_NOT_ECONOMIC_REVIEW",
+  "adapter_sha256": "31c79a1e31d4f2c9ad75952e87c4a7f5dcc479d4df00f127e137790fb6c44f12",
+  "adapter_version": "okx-btc-trade-file-v1",
+  "information_as_of": "2026-09-22T20:02:36.890088+00:00",
+  "source_archive_sha256": "efab589d1d2171e7bd589e334653bea29daa414b4c87239ad75c4f6c23886f69",
+  "source_archive_bytes": 28884745,
+  "dataset_ref": "d-btc-trades-20260921@1",
+  "dataset_sha256": "ed2df5284b083d82af19ce8bb35b3e1e8c1d4dd590b6141070c02987f8ed87a9",
+  "declared_obtained_at_from_dataset": "2026-09-22T19:13:41.105816+00:00",
+  "source_url_declaration": "https://www.okx.com/zh-hans/historical-data",
+  "source_origin": "DECLARED_URL_ALLOWLIST_ONLY_NOT_NETWORK_PROOF",
+  "acquisition_time": "DECLARED_OBTAINED_AT_CONSTRAINTS_CHECKED_NOT_INDEPENDENTLY_PROVEN",
+  "decode_status": "FILE_DECODE_COMPLETE",
+  "csv_bytes": 295527908,
+  "csv_sha256": "478179bb74b5caceedf6fe55acb907a257bc661944b4867b559e1abaad2fde8b",
+  "zip_crc": "PASS",
+  "rows_read": 4969733,
+  "same_ms": {
+    "multiple_row_groups": 352819,
+    "rows_in_multiple_row_groups": 4432070,
+    "multiple_price_groups": 157283,
+    "rows_in_multiple_price_groups": 3340987,
+    "max_rows_per_ms": 2743,
+    "exchange_chronology": "UNKNOWN"
+  },
+  "selection": {
+    "mode": "WINDOW",
+    "window": {
+      "start_inclusive": "2026-09-20T16:00:00.000Z",
+      "end_exclusive": "2026-09-20T16:00:01.000Z"
+    },
+    "events_returned": 112,
+    "coverage": "UNKNOWN",
+    "presence": "OBSERVED"
+  },
+  "source_coverage": "UNKNOWN",
+  "data_complete": false,
+  "same_open_fd_pre_post_sha256": "MATCH",
+  "limits": {
+    "zip_bytes": 64000000,
+    "csv_bytes": 512000000,
+    "rows": 8000000,
+    "physical_line_bytes": 1024,
+    "chunk_bytes": 262144,
+    "selected_events": 20000,
+    "timeout_seconds": 180
+  },
+  "checks": {
+    "rows_match_previous_diagnostic": true,
+    "expanded_bytes_match_previous_diagnostic": true,
+    "member_sha_matches_previous_diagnostic": true,
+    "same_ms_groups_match_previous_diagnostic": true,
+    "same_ms_multi_price_groups_match_previous_diagnostic": true,
+    "max_same_ms_rows_match_previous_diagnostic": true,
+    "selected_events_sequence_null": true,
+    "coverage_remains_unknown": true,
+    "dataset_bytes_unchanged": true
+  },
+  "elapsed_seconds_observed": 12.235,
+  "peak_rss_before": 16121856,
+  "peak_rss_after": 18743296,
+  "peak_rss_units": "bytes",
+  "python": "3.9.6",
+  "platform": "darwin",
+  "boundary": [
+    "No network or new acquisition",
+    "No source/native/store writes",
+    "No raw redistribution; receipt excludes selected rows and prices",
+    "No event ordering, first trade, omission guarantee, mark, funding, costs, or economic review",
+    "Same-ms metrics are whole-file observed groups; sequence remains null"
+  ]
+}

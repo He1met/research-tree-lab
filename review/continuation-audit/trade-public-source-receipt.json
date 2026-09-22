@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "review_state": "PASS_SCOPED_INDEPENDENT_REVIEW",
+  "scope": "SINGLE_BTC_TRADE_FILE_STREAMING_DECODE_AND_ROUND_SOURCE_REVIEW_PUBLIC_ARCHIVE_COMPATIBILITY",
+  "approved_source_sha256": "c1aa9e50635b4591514dc17e2d5123f3742a6b4a7b6b90c9403f6f84bd043592",
+  "source_hash_command": "python3 scripts/publish.py --source-hash",
+  "reviewed_files": {
+    "docs/OKX_TRADE_FILE.md": "09ecee8e4fdca119f425e24e295800e88f28d53abbad8acbfa8518a09d00fe41",
+    "researchlib/okx_trade_file.py": "31c79a1e31d4f2c9ad75952e87c4a7f5dcc479d4df00f127e137790fb6c44f12",
+    "researchlib/public.py": "514263bb4038d7d1b1548f31ba9d3d00d67c0f0410990456fc9f02e85e9fd063",
+    "tests/receipts/okx-trade-real-sample-safe-output.json": "78f10ad296df3199a161fece0c62a30565a1587163fe44b2e94da8c3f52a29f9",
+    "tests/receipts/okx-trade-real-sample.json": "fc7faeb9fa0060abfc956ad2f3788bd7c9320d159bcf32b6243e09769c2d7d7d",
+    "tests/receipts/public-round-source-review-archive.json": "eb2528a91f3030a6cd7731aefcc8cdc0994c7f4e320dbbd74214cda09544ccba",
+    "tests/replay_okx_trade_sample.py": "ec38eab70454f7d8ba942196248364c2610f07ccf43d17b5c70699ca0babb171",
+    "tests/test_okx_trade_file.py": "3b496e1e547af641a4bee40a83a03a04ada5c1c1172da70d1d2a4b280fd3d485",
+    "tests/test_okx_trade_replay.py": "330decb5065a3982f4cc5e0f50369064a4f47c95f4ad6b785f626a22f3a9d938",
+    "tests/test_public_round_archive.py": "bb9c8a66e5b2ab86b2e033afcd3f1f0bd57bae52299df5894f8aa2a93d8a8ce5"
+  },
+  "waiting_review_method": {
+    "code_sha256": "d21b004a0efe4295f391a3f82ccba05f6a967b9205d370eabd807a8692f91f65",
+    "source_sha256": {
+      "researchlib/__init__.py": "6a52c32055618076a5a44b9dacc39d79711ef3ab7a4de73f9f5ddc9015268741",
+      "researchlib/common.py": "a3e7aa7619acee94e05e733c20a4ae4eb30ff7056f9b0fca0b441ecb55d9b683",
+      "researchlib/contracts.py": "60a65556a02328b309f016a602ba142b887d23771556a907ecce2b71144c6041",
+      "researchlib/funding_review.py": "e3b5afd7eeea6754e2723bdb5039c17086da8247330f4983c8d80f1bfb83148a",
+      "researchlib/novelty.py": "e7390b597cfd2a978fa3e9b9208213b6cbb0f331407bb762a5a62a1b8b1b3d08",
+      "researchlib/public.py": "514263bb4038d7d1b1548f31ba9d3d00d67c0f0410990456fc9f02e85e9fd063",
+      "researchlib/readiness.py": "ad57c793f68a53c848048d84e21370811b7470bf71e8770d3f2a76cb2df059c7",
+      "researchlib/review.py": "771f64a7764f2c957dcce98cc54cdc1bad5fb4381f9b465175cfa153bba4b906",
+      "researchlib/snapshot.py": "e5404cf0775ab6b99906a8115a2bb6cf97c05f86fc8bc9b0979d25bf64f22e15",
+      "researchlib/store.py": "6a9e7bc0ac8ee533fedb94bab0c87b9217436dbf4d8437f99fba9af8a02e06f6",
+      "scripts/prepare_funding_review.py": "4290cecc2fdf4a86dca7f235501a06b9eb11e0467a4fe9f79689139c1c4caedf"
+    },
+    "runtime": {
+      "implementation": "CPython",
+      "python_version": "3.9.6",
+      "third_party_runtime_dependencies": []
+    },
+    "method_available_at": "NOT_REGISTERED_BY_THIS_REVIEW"
+  },
+  "tests_independently_run": {
+    "trade_decoder_author_tests": 33,
+    "trade_helper_safety_author_tests": 8,
+    "public_round_archive_and_public_guard_tests": 12,
+    "waiting_review_regressions": 28,
+    "total": 81,
+    "independent_trade_attack_groups": 10,
+    "independent_helper_cli_attack_cases": 6
+  },
+  "findings": [
+    {
+      "id": "P2_TRADE_REPLAY_RECEIPT_OVERWRITES_INPUT",
+      "status": "FIXED_INDEPENDENTLY_RETESTED",
+      "before": "Temporary source ZIP was overwritten with COMPARISON_FAILED JSON when --receipt equaled --source.",
+      "after": "Output is created exclusively through directory FDs with NOFOLLOW and held throughout scan. Existing files and aliases cannot be overwritten. No path cleanup follows failure.",
+      "evidence": "trade-helper-output-independent-receipt.json"
+    }
+  ],
+  "real_source_validation": {
+    "source_sha256": "efab589d1d2171e7bd589e334653bea29daa414b4c87239ad75c4f6c23886f69",
+    "source_bytes": 28884745,
+    "csv_sha256": "478179bb74b5caceedf6fe55acb907a257bc661944b4867b559e1abaad2fde8b",
+    "csv_bytes": 295527908,
+    "rows": 4969733,
+    "first_second_selected_events": 112,
+    "sequence": "ALL_NULL",
+    "source_coverage": "UNKNOWN",
+    "data_complete": false,
+    "zip_crc": "PASS",
+    "same_open_fd_pre_post_sha256": "MATCH",
+    "evidence": "trade-file-real-safe-output-independent-receipt.json",
+    "performance_scope": "One local CPython 3.9.6 run with a small selected window; not a maximum-output or cross-host guarantee."
+  },
+  "public_archive_validation": {
+    "targets": 4,
+    "record_file_counts": [
+      [
+        13,
+        34
+      ],
+      [
+        13,
+        34
+      ],
+      [
+        12,
+        33
+      ],
+      [
+        13,
+        34
+      ]
+    ],
+    "production_original_hashes_checked": 39,
+    "production_originals_unchanged": true,
+    "remote_recovery": "NOT_RUN",
+    "evidence": "public-round-independent-receipt.json"
+  },
+  "production_actions": {
+    "installation_modified": false,
+    "store_commit": false,
+    "original_rewrite": false,
+    "native_task_modified": false,
+    "network_acquisition": false,
+    "publish": false,
+    "economic_review": false,
+    "natural_trigger_attested": false
+  },
+  "unresolved_boundaries": [
+    "Source URL and acquired_at are validated declarations, not independent network provenance or acquisition attestation.",
+    "Single-file EOF, CRC and hash do not establish market coverage; source and selected window remain UNKNOWN.",
+    "Monotonic timestamp/increasing numeric ID are a supported file-layout restriction, not exchange sequence or missing-event proof.",
+    "All sequence values remain null; no first fill is selected.",
+    "No settlement mark path, complete funding/cost inputs, formal economic result or nonempty-state review migration is delivered.",
+    "This historical UTC+8 partition is not the frozen plans forward outcome window.",
+    "Public archive closure is tested locally; restricted upstream originals remain LOCAL_ONLY and remote restoration is not proved.",
+    "Resource deadlines are cooperative and file identity binds the opened FD; no OS isolation or blocking-I/O termination guarantee is added."
+  ],
+  "integration_instructions": [
+    "Copy exactly reviewed_files into the main checkout and verify each recorded SHA-256.",
+    "Re-run source_hash_command in main and require equality to approved_source_sha256 before installing.",
+    "Bind any subsequent waiting review to the recorded new method identity; do not reuse previous approval hash or backdate method availability.",
+    "Run applicable integration checks and public_guard over the copied files and review artifacts.",
+    "Installation, production archive append and publication remain root-controlled separate actions; retain old records and historical receipts unchanged."
+  ],
+  "reviewed_at": "2026-09-22T20:04:39Z",
+  "cross_review": {
+    "reviewer_role": "Peer reviewer who did not author trade parser",
+    "scope": "ZIP profile, decompression EOF and bounded memory",
+    "truncated_tail_rejections": 63,
+    "appended_tail_rejections": 4,
+    "chunk_sizes_verified": 9,
+    "audit_only_memory_probe": {
+      "rows": [
+        10000,
+        50000
+      ],
+      "tracemalloc_peak_bytes": [
+        550788,
+        534921
+      ]
+    },
+    "finding": "NO_ADDITIONAL_MATERIAL_FINDING",
+    "data_class": "SYNTHETIC_ONLY"
+  },
+  "public_guard": {
+    "candidate_files": 10,
+    "candidate_rejections": 0,
+    "review_artifacts_checked": 7,
+    "review_artifact_rejections": 0
+  }
+}

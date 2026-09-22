@@ -48,7 +48,7 @@ TYPE_FIELDS = {
 }
 TYPE_FIELDS["plan"].update({"product_id", "cost_model", "evaluation_contract", "replay_missing", "current_execution_conditions", "natural_run_status"})
 TYPE_FIELDS["plan"].add("input_roles")
-TYPE_FIELDS["round"].update({"mechanism_identity", "novelty_claim", "novelty_evidence_refs", "duplicate_of"})
+TYPE_FIELDS["round"].update({"mechanism_identity", "novelty_claim", "novelty_evidence_refs", "duplicate_of", "source_review_refs"})
 TYPE_FIELDS["run"].update({"actual_trigger", "natural_trigger", "receipt"})
 TYPE_FIELDS["run"].update({"economic_evidence", "actual_trade_result"})
 TYPE_FIELDS["discovery"].update({"seed_code", "restart_condition", "defer_reason", "counts_as_completed_economic_research", "mechanism_signature", "round_id"})
