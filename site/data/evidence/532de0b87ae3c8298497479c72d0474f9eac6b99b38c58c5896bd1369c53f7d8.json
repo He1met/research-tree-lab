@@ -1,0 +1,240 @@
+{
+  "synthetic": false,
+  "method": "minute-boundary-conditional-envelope-v1",
+  "started_at": "2026-09-22T20:12:44.714239Z",
+  "completed_at": "2026-09-22T20:13:03.001062Z",
+  "protocol_sha256": "ca151cde04db163bdf209563f5e584b701ec7326817bd3cc79a6459897f7ab54",
+  "code_sha256": "b85bd2664ef81dd5261669b37322c2f8829d69e32d813233d959d7ff5c924198",
+  "rows_scanned": 4969733,
+  "minutes": 1440,
+  "scenario_direction_rows": 11520,
+  "data_cutoff": "2026-09-21T15:59:59.956Z",
+  "first_spread_usdt_per_btc": {
+    "n": 1440,
+    "min": "0.0",
+    "mean": "0.1386805555555555555555555555555555555556",
+    "max": "14.9",
+    "p50": "0.0",
+    "p90": "0.0",
+    "p95": "0.0",
+    "p99": "4.5"
+  },
+  "last_spread_usdt_per_btc": {
+    "n": 1440,
+    "min": "0.0",
+    "mean": "0.069375",
+    "max": "11.8",
+    "p50": "0.0",
+    "p90": "0.0",
+    "p95": "0.0",
+    "p99": "2.3"
+  },
+  "minutes_with_first_spread": 72,
+  "minutes_with_last_spread": 48,
+  "minutes_with_either_spread": 113,
+  "minutes_first_equals_last_ms": 0,
+  "scenarios": {
+    "gross": {
+      "long": {
+        "counts": {
+          "STRICTLY_POSITIVE": 737,
+          "STRICTLY_NEGATIVE": 687,
+          "EXACT_ZERO": 15,
+          "UNRESOLVED_OR_TOUCH_ZERO": 1
+        },
+        "candle_sign_counts": {
+          "STRICTLY_NEGATIVE": 687,
+          "STRICTLY_POSITIVE": 738,
+          "EXACT_ZERO": 15
+        },
+        "baseline_contained": 1440,
+        "interval_width_usdt": {
+          "n": 1440,
+          "min": "0.000",
+          "mean": "0.002080555555555555555555555555555555555556",
+          "max": "0.160",
+          "p50": "0.000",
+          "p90": "0.000",
+          "p95": "0.008",
+          "p99": "0.053"
+        }
+      },
+      "short": {
+        "counts": {
+          "STRICTLY_POSITIVE": 687,
+          "STRICTLY_NEGATIVE": 737,
+          "EXACT_ZERO": 15,
+          "UNRESOLVED_OR_TOUCH_ZERO": 1
+        },
+        "candle_sign_counts": {
+          "STRICTLY_POSITIVE": 687,
+          "STRICTLY_NEGATIVE": 738,
+          "EXACT_ZERO": 15
+        },
+        "baseline_contained": 1440,
+        "interval_width_usdt": {
+          "n": 1440,
+          "min": "0.000",
+          "mean": "0.002080555555555555555555555555555555555556",
+          "max": "0.160",
+          "p50": "0.000",
+          "p90": "0.000",
+          "p95": "0.008",
+          "p99": "0.053"
+        }
+      }
+    },
+    "low_2bps": {
+      "long": {
+        "counts": {
+          "STRICTLY_POSITIVE": 304,
+          "STRICTLY_NEGATIVE": 1135,
+          "EXACT_ZERO": 0,
+          "UNRESOLVED_OR_TOUCH_ZERO": 1
+        },
+        "candle_sign_counts": {
+          "STRICTLY_NEGATIVE": 1135,
+          "STRICTLY_POSITIVE": 305
+        },
+        "baseline_contained": 1440,
+        "interval_width_usdt": {
+          "n": 1440,
+          "min": "0E-7",
+          "mean": "0.002080694166666666666666666666666666666667",
+          "max": "0.1600276",
+          "p50": "0E-7",
+          "p90": "0E-7",
+          "p95": "0.0080016",
+          "p99": "0.0530002"
+        }
+      },
+      "short": {
+        "counts": {
+          "STRICTLY_POSITIVE": 268,
+          "STRICTLY_NEGATIVE": 1169,
+          "EXACT_ZERO": 0,
+          "UNRESOLVED_OR_TOUCH_ZERO": 3
+        },
+        "candle_sign_counts": {
+          "STRICTLY_POSITIVE": 271,
+          "STRICTLY_NEGATIVE": 1169
+        },
+        "baseline_contained": 1440,
+        "interval_width_usdt": {
+          "n": 1440,
+          "min": "0E-7",
+          "mean": "0.002080416944444444444444444444444444444444",
+          "max": "0.1599724",
+          "p50": "0E-7",
+          "p90": "0E-7",
+          "p95": "0.0080016",
+          "p99": "0.0529998"
+        }
+      }
+    },
+    "medium_7bps": {
+      "long": {
+        "counts": {
+          "STRICTLY_POSITIVE": 46,
+          "STRICTLY_NEGATIVE": 1394,
+          "EXACT_ZERO": 0,
+          "UNRESOLVED_OR_TOUCH_ZERO": 0
+        },
+        "candle_sign_counts": {
+          "STRICTLY_NEGATIVE": 1394,
+          "STRICTLY_POSITIVE": 46
+        },
+        "baseline_contained": 1440,
+        "interval_width_usdt": {
+          "n": 1440,
+          "min": "0E-7",
+          "mean": "0.002081040694444444444444444444444444444444",
+          "max": "0.1600966",
+          "p50": "0E-7",
+          "p90": "0E-7",
+          "p95": "0.0080056",
+          "p99": "0.0530007"
+        }
+      },
+      "short": {
+        "counts": {
+          "STRICTLY_POSITIVE": 29,
+          "STRICTLY_NEGATIVE": 1411,
+          "EXACT_ZERO": 0,
+          "UNRESOLVED_OR_TOUCH_ZERO": 0
+        },
+        "candle_sign_counts": {
+          "STRICTLY_NEGATIVE": 1411,
+          "STRICTLY_POSITIVE": 29
+        },
+        "baseline_contained": 1440,
+        "interval_width_usdt": {
+          "n": 1440,
+          "min": "0E-7",
+          "mean": "0.002080070416666666666666666666666666666667",
+          "max": "0.1599034",
+          "p50": "0E-7",
+          "p90": "0E-7",
+          "p95": "0.0080056",
+          "p99": "0.0529993"
+        }
+      }
+    },
+    "stress_15bps": {
+      "long": {
+        "counts": {
+          "STRICTLY_POSITIVE": 3,
+          "STRICTLY_NEGATIVE": 1437,
+          "EXACT_ZERO": 0,
+          "UNRESOLVED_OR_TOUCH_ZERO": 0
+        },
+        "candle_sign_counts": {
+          "STRICTLY_NEGATIVE": 1437,
+          "STRICTLY_POSITIVE": 3
+        },
+        "baseline_contained": 1440,
+        "interval_width_usdt": {
+          "n": 1440,
+          "min": "0E-7",
+          "mean": "0.002081595138888888888888888888888888888889",
+          "max": "0.1602070",
+          "p50": "0E-7",
+          "p90": "0E-7",
+          "p95": "0.0080120",
+          "p99": "0.0530015"
+        }
+      },
+      "short": {
+        "counts": {
+          "STRICTLY_POSITIVE": 1,
+          "STRICTLY_NEGATIVE": 1439,
+          "EXACT_ZERO": 0,
+          "UNRESOLVED_OR_TOUCH_ZERO": 0
+        },
+        "candle_sign_counts": {
+          "STRICTLY_NEGATIVE": 1439,
+          "STRICTLY_POSITIVE": 1
+        },
+        "baseline_contained": 1440,
+        "interval_width_usdt": {
+          "n": 1440,
+          "min": "0E-7",
+          "mean": "0.002079515972222222222222222222222222222222",
+          "max": "0.1597930",
+          "p50": "0E-7",
+          "p90": "0E-7",
+          "p95": "0.0080120",
+          "p99": "0.0529985"
+        }
+      }
+    }
+  },
+  "selection": "NONE_METHOD_RESEARCH_ONLY",
+  "actual_net_pnl": null,
+  "limitations": [
+    "Conditional envelopes over observed boundary prices only, not source-complete or executable-fill bounds.",
+    "Same development day already exposed; no holdout, significance or future generalization.",
+    "Fixed costs are hypothetical; funding/mark/margin/liquidation and account eligibility not evaluated.",
+    "No strategy signal, no portfolio aggregation, no old plan score, no readiness upgrade."
+  ]
+}
