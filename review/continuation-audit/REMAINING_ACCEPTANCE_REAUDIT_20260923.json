@@ -1,0 +1,246 @@
+{
+  "schema_version": "1.0",
+  "audit_kind": "READ_ONLY_ORIGINAL_ACCEPTANCE_AND_EXISTING_REAL_EVIDENCE_REAUDIT",
+  "checked_at": "2026-09-22T22:08:56.275943+00:00",
+  "verdict": "BOUNDED_REAL_AND_ENGINEERING_RECLASSIFICATIONS_RECOMMENDED_NOT_FULL_ACCEPTANCE",
+  "index_updated": false,
+  "installed_source_sha256": "eca93fe70146b1c6962842cd6b62dc8f66f89a47e8249017387202e1a6985277",
+  "store_snapshot": {
+    "records": 54,
+    "public_records": 52,
+    "local_only_records": 2,
+    "rounds": 8,
+    "anomalies": [],
+    "record_hash_map_sha256": "714df4f9a0e24e189640dcc306296208f422c87c960a3933846eb5698eaae3d4",
+    "originals_mutated": false
+  },
+  "index_consistency": {
+    "unique_items": 59,
+    "all_evidence_paths_exist": true,
+    "status_counts_match": true,
+    "existing_status_counts": {
+      "REAL_PASS": 17,
+      "ENGINEERING_PASS": 28,
+      "PENDING": 1,
+      "WAITING_NATURAL_OUTCOME": 2,
+      "IMPLEMENTATION_REQUIRED": 1,
+      "ENGINEERING_PARTIAL": 5,
+      "WEAK_ISOLATION_CONFIRMED": 3,
+      "NO_AUTOMATIC_CLEANUP": 1,
+      "CONDITIONAL_NOT_TRIGGERED": 1
+    },
+    "full_test_suite_rerun": false
+  },
+  "official_direct_readback": {
+    "source": "OFFICIAL_CODEX_APP_READ_THREAD",
+    "raw_tool_output_not_published": true,
+    "control_calls": 0,
+    "messages_sent_to_observed_tasks": 0,
+    "observations": [
+      {
+        "title": "research-tree-lab · 策略研究推进",
+        "ordinal": 3,
+        "status": "completed",
+        "started_at": "2026-09-22T21:05:16Z",
+        "completed_at": "2026-09-22T21:22:26Z",
+        "duration_ms": 1029892,
+        "turn_count": 1,
+        "user_messages": 1,
+        "initial_message_automation_association": true,
+        "additional_user_continue_messages": 0,
+        "progress": [
+          "Fixed direction/input and approved source",
+          "Independent arithmetic and negative cost result",
+          "Explicit unsupported inventory hypothesis",
+          "Controlled append and original-hash readback"
+        ],
+        "trigger_kind_exposed": false,
+        "natural_origin": "UNKNOWN"
+      },
+      {
+        "title": "research-tree-lab · 观察归档与网页发布",
+        "ordinal": 3,
+        "status": "completed",
+        "started_at": "2026-09-22T21:35:46Z",
+        "completed_at": "2026-09-22T21:53:14Z",
+        "duration_ms": 1047886,
+        "turn_count": 1,
+        "user_messages": 1,
+        "initial_message_automation_association": true,
+        "additional_user_continue_messages": 0,
+        "progress": [
+          "Approved source and committed-record audit",
+          "Pages and 92 resource readback",
+          "Mac locked upload failure retained without bypass",
+          "Local archive restore and independent closeout",
+          "CI success"
+        ],
+        "trigger_kind_exposed": false,
+        "natural_origin": "UNKNOWN"
+      }
+    ]
+  },
+  "recommended_check_field_updates": {
+    "A07": {
+      "status": "REAL_PASS",
+      "verified_scope": "真实已暴露三事件配对资金费研究在固定非零摩擦情景下出现有限负分量结果；decision 与 round 限定样本/模型，冻结该结论并明确新证据及规则重启条件，不推广到所有市场。",
+      "limitations": "仅为开发样本成本分量的有限否定，实际交易净收益未知；重启条件尚未满足、未实际重启，但原条款不要求重启动作已经发生。",
+      "next_verification": "出现指定新、未暴露同步证据及完整数量/成本规则时，再登记受控新版本；不重复同证据追选赢家。",
+      "evidence_add": [
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.md",
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.json",
+        "docs/first-native-research-completion.json"
+      ],
+      "record_refs": [
+        "decision-paired-funding-boundary-20260923",
+        "m-paired-funding-component-20260923@1",
+        "r-btc-eth-paired-funding-20260923",
+        "run-btc-eth-paired-funding-20260923@attempt-1"
+      ]
+    },
+    "A08": {
+      "status": "REAL_PASS",
+      "verified_scope": "真实官方 Automation 研究及发布任务从初始消息到完成，无额外用户继续消息或普通研究审批；阶段产物和完成状态实际回读。流程没有等待网页访问状态或用户回复的依赖，无需监控私人浏览行为来验收。",
+      "limitations": "不声称知道用户是否浏览网页；Automation 关联和独立接续不等于定时触发来源证明，F07 单独等待。",
+      "next_verification": "继续保存无需普通接续批准的真实产物；自然来源证据另按 F07 核对，不改变原记录身份。",
+      "evidence_add": [
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.md",
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.json",
+        "docs/first-native-research-completion.json",
+        "docs/second-native-research-completion.json",
+        "docs/third-native-research-completion.json",
+        "docs/publication-run-20260923-v3.json"
+      ]
+    },
+    "F06": {
+      "status": "REAL_PASS",
+      "verified_scope": "真实目标数据不足、官方上传权限拒绝以及锁屏造成的上传阻塞未停止无依赖研究与 Pages/本机归档；受阻动作如实保留待办，未绕过浏览器策略或重做研究。",
+      "limitations": "额度耗尽及未观察的其他权限分支为 CONDITIONAL_NOT_TRIGGERED，未声称全部错误类型实测；整体账户配额不足可能阻止本地观察，不能要求无额度仍能调用模型。",
+      "next_verification": "真实新阻塞发生时记录错误范围和有限重试决定；不为验收耗尽额度、猜余额、制造权限故障或无限重试。",
+      "evidence_add": [
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.md",
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.json",
+        "docs/first-native-research-completion.json",
+        "docs/second-native-research-completion.json",
+        "docs/third-native-research-completion.json",
+        "docs/publication-run-20260923-v1.json",
+        "docs/publication-run-20260923-v2.json",
+        "docs/publication-run-20260923-v3.json",
+        "docs/archive-upload-recovery-20260923.json"
+      ]
+    },
+    "F08": {
+      "status": "REAL_PASS",
+      "verified_scope": "本次官方只读回读第三研究约17m10s、第三发布约17m28s，均有可核验计算/复算/提交或发布进展后完成，均无第二条用户接续消息；长任务未因统一秒数阈值被中断。",
+      "limitations": "未实际发生失联，失联调查/控制分支为 CONDITIONAL_NOT_TRIGGERED；没有实际重启证明，也没有声称重启。",
+      "next_verification": "继续记录有意义的进展；仅在真实失联时确认本项目对象和实际控制能力，不偷锁、不制造失联、不把恢复演练加成验收门槛。",
+      "evidence_add": [
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.md",
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.json",
+        "docs/third-native-research-completion.json",
+        "docs/publication-run-20260923-v3.json"
+      ]
+    },
+    "F09": {
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "Chromium/WebKit 实测固定快照持续 HTTP 200 超36小时仍标陈旧，刷新不延长期限；页面披露发布任务状态未知与本机/App依赖，不承诺远程自救；普通研究无逐次审批。",
+      "limitations": "整台 Mac/App 实际停止分支为 CONDITIONAL_NOT_TRIGGERED，锁屏仅证明原生UI上传受阻；未声称真实整机停机或恢复已测，原条款不要求完整离线到恢复演练。",
+      "next_verification": "继续保持陈旧判断和本机能力边界；若真实整机停更发生，只收集观察证据，不为验收主动停机、重启或制造认证失败。",
+      "evidence_add": [
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.md",
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.json",
+        "review/continuation-audit/frontend-staleness.json",
+        "docs/publication-run-20260923-v3.json"
+      ]
+    },
+    "F07": {
+      "status": "WAITING_NATURAL_OUTCOME",
+      "verified_scope": "三个官方 Automation 研究启动/完成观察和真实反馈后继已有产物；第三研究及发布完整任务过程本次直接回读。",
+      "limitations": "目前已验证自然研究计数为0、实际自然来源UNKNOWN，不代表证明实际自然执行为零。官方回读未提供定时/手动触发类型；不凭时刻吻合推断。原条款不要求 scheduler-event ID 这个特定字段，可靠官方等价来源证据也可接受。自然日复核尚无实例。",
+      "next_verification": "只用受支持官方可观察来源证据补充触发判定；自然日复核到来后按原规则核验，不手工补跑或改写原run的UNKNOWN。",
+      "evidence_add": [
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.md",
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.json"
+      ]
+    }
+  },
+  "other_scope_notes": {
+    "F01": "Unknown native timezone/next-trigger may be documented per AUTOMATIONS; host timezone is not substituted.",
+    "F02": "Management-unavailable branch not triggered; do not manufacture it.",
+    "F03_F04": "Confirmed weak isolation is explicitly permitted disclosure plus admission rejection, not proof of hard isolation.",
+    "E12": "No automatic cleanup; do not add destructive GC solely for acceptance.",
+    "C09": "Snapshot refresh and browser hard reload are distinct; append existing v2 refresh evidence if updating mapping.",
+    "B04_B05_B07": "Conditional chain and decoders exist. Formal coverage, precise mark path and actual economic terminal interfaces remain implementation requirements, separate from future data/window waits."
+  },
+  "nonclaims": [
+    "No new market evidence or economic evaluation",
+    "No natural trigger invented or inferred from clock alignment",
+    "No quota exhaustion, disconnection, whole-host outage or restart fabricated",
+    "No full 59-item behavioral retest",
+    "No production source, original records, task, installation, Git or shared-index modification"
+  ],
+  "evidence_file_sha256": {
+    "planning/current/docs/ACCEPTANCE.md": "ce80134b5dfaec201a3c477ea3e467b3b4985587f203bdf9131cfd1c700b76ca",
+    "planning/current/PROJECT_SPEC.md": "f63503199444c436a93a68d77a5f6376a9f09dd4d07288fdd0cdd9fb14d5f266",
+    "planning/current/RESEARCH_PROGRAM.md": "98f3080b2bb13c40117b0d7331d96addf17398b3a1d534ff98eb1ff1251865e2",
+    "planning/current/AUTOMATIONS.md": "06305b90d7a76b92758846200add6a2dede4cb63fc3c18819c5807c92ee4bc8d",
+    "docs/acceptance.json": "3e4548f1863dd937d92123faa0202c3c02d71e6929c6272ef0e80f15400589c1",
+    "docs/ACCEPTANCE_STATUS.md": "6e951a6c9790d0305c3055511f4709edc6eed08c9da5ffc47a1efe36dad482ce",
+    "STATE.md": "9a1cfa771da8c1074615eda253cffb7179b99ae26b0091a874b0d3f610967d23",
+    "docs/first-native-research-observation.json": "5b5b9f7ff9c6c4d0923beb0ee3de3ec15a11d5ce89ed9d473a3de3e29e90fbb2",
+    "docs/second-native-research-observation.json": "4b766d13ae06b74a80e5911e11c55c8cff7d609d796cffc81e4b67f6abdbc084",
+    "docs/first-native-research-completion.json": "f8dbc85eed49f5f427f2570f42c96e9ecfb9a079db57fa2c39010db7637a896b",
+    "docs/second-native-research-completion.json": "0824cee0963e21e94450992a2bd3d804fe17fa8fcd1f702744da1c71988762f6",
+    "docs/third-native-research-completion.json": "b3de57039de4e16d4b910c6e70ce540080fc52cbb1700a98815501a3e8fbbc61",
+    "docs/publication-run-20260923-v1.json": "c41ac095d4409b71398fd611db7fbe7d062afbc890f8c49cd7cd0420f9db0ba6",
+    "docs/publication-run-20260923-v2.json": "ffe10cf95d35998fb6044719b9613a4a24e120b06588481c22aac767f238b89a",
+    "docs/publication-run-20260923-v3.json": "2122cb43f2bc436f4eac3772cce473a05a39a12033ef3bf44385e2e4f0b667bd",
+    "docs/archive-upload-recovery-20260923.json": "7a386dedd2e66369d889cd9d556805d57a80acd1ac4d90598a150b49d0a52de7",
+    "docs/current-publication.json": "d660a76377c2cb4ab2cf7ba1cbd8bc2aa1e42f970433c92abac182a05c7008d7",
+    "docs/archive-inventory-20260923-v3.json": "60b287b9b9eba52aef8aba1cc635091cac0bb6dafe47f2da0e58af35f573f5f6",
+    "docs/public-browser-readback-20260923-v2.json": "72ab3e3bd99239a6e4940d0ab03ce16164ec2e3bbdc414b88bf2f4b154522fd8",
+    "review/continuation-audit/frontend-staleness.json": "3eab95a3e1f70a5e668afe29b14d311d52d44f095e3127a94d2acbf55d1c39c7",
+    "review/continuation-audit/first-combined-source-receipt.json": "c5f4945c393c9e33f6c013f190a0510139842e9873f685bf54e47ee9846ac3ce"
+  },
+  "public_record_evidence": {
+    "decision-paired-funding-boundary-20260923": {
+      "record_hash": "490e40e8b9a081a48601f1807d8c7c3025a8327b3b0b2730dc8ba52ee2206abc",
+      "bundle_id": "research-btc-eth-paired-funding-mechanism-20260923-v1",
+      "committed_at": "2026-09-22T19:26:52.396053Z"
+    },
+    "m-paired-funding-component-20260923@1": {
+      "record_hash": "2e29bb0642866c05de0293861a63aa82a0e5d921841decbc1c27cdd7430b91b1",
+      "bundle_id": "research-btc-eth-paired-funding-mechanism-20260923-v1",
+      "committed_at": "2026-09-22T19:26:52.396053Z"
+    },
+    "r-btc-eth-paired-funding-20260923": {
+      "record_hash": "df34983d87b647aea7891b3785b8a981eb4390001b6db361616fc34a39434a85",
+      "bundle_id": "research-btc-eth-paired-funding-mechanism-20260923-v1",
+      "committed_at": "2026-09-22T19:26:52.396053Z"
+    },
+    "run-btc-eth-paired-funding-20260923@attempt-1": {
+      "record_hash": "8adf5f0322743d710adcac543afa29c7a78020dd946b3256b413d15ac3001d94",
+      "bundle_id": "research-btc-eth-paired-funding-mechanism-20260923-v1",
+      "committed_at": "2026-09-22T19:26:52.396053Z"
+    },
+    "decision-entry-confirmation-boundary-20260923": {
+      "record_hash": "bd37cb798329b452c05addef4a28e168ab7f605fb202c0f26607f19bfa29262f",
+      "bundle_id": "research-btc-entry-confirmation-20260923-v1",
+      "committed_at": "2026-09-22T20:22:30.201743Z"
+    },
+    "decision-grid-inventory-boundary-20260923": {
+      "record_hash": "cb3214e1c0d3024ecc933b8fb80b9d206b0eebe797b13e3e2b814cdbdd65c11f",
+      "bundle_id": "research-btc-grid-inventory-attribution-20260923-v1",
+      "committed_at": "2026-09-22T21:20:33.561757Z"
+    },
+    "r-stock-session-mechanism-20260923": {
+      "record_hash": "2d112ca683fab485a5d0fc78a4a64d1133b5391135bd3a21e8e6e4bc2caee110",
+      "bundle_id": "research-bootstrap-real-20260923-v1",
+      "committed_at": "2026-09-22T18:06:34.256776Z"
+    }
+  },
+  "report": {
+    "path": "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.md",
+    "sha256": "00475e91b3ea562c490f63d0a55f111edb6f3ad631f849307ea12ce57ab033a4"
+  }
+}

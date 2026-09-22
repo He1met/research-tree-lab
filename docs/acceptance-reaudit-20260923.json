@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "applied_at": "2026-09-22T22:10:45.478499+00:00",
+  "scope": "SHARED_ACCEPTANCE_INDEX_CORRECTION_FROM_INDEPENDENT_ORIGINAL_SPEC_REAUDIT",
+  "independent_receipt": "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.json",
+  "independent_receipt_sha256": "49e1dd7dd73a5103a471960f98b24d6de08b9eac55ad87bd1e3dcb7eaaba2a4e",
+  "changed_ids": [
+    "A07",
+    "A08",
+    "F06",
+    "F08",
+    "F09",
+    "F07"
+  ],
+  "c09_existing_evidence_appended": true,
+  "old_counts": {
+    "REAL_PASS": 17,
+    "ENGINEERING_PASS": 28,
+    "PENDING": 1,
+    "WAITING_NATURAL_OUTCOME": 2,
+    "IMPLEMENTATION_REQUIRED": 1,
+    "ENGINEERING_PARTIAL": 5,
+    "WEAK_ISOLATION_CONFIRMED": 3,
+    "NO_AUTOMATIC_CLEANUP": 1,
+    "CONDITIONAL_NOT_TRIGGERED": 1
+  },
+  "new_counts": {
+    "REAL_PASS": 21,
+    "ENGINEERING_PASS": 29,
+    "IMPLEMENTATION_REQUIRED": 1,
+    "ENGINEERING_PARTIAL": 2,
+    "WEAK_ISOLATION_CONFIRMED": 3,
+    "NO_AUTOMATIC_CLEANUP": 1,
+    "CONDITIONAL_NOT_TRIGGERED": 1,
+    "WAITING_NATURAL_OUTCOME": 1
+  },
+  "before_sha256": {
+    "docs/acceptance.json": "3e4548f1863dd937d92123faa0202c3c02d71e6929c6272ef0e80f15400589c1",
+    "docs/ACCEPTANCE_STATUS.md": "6e951a6c9790d0305c3055511f4709edc6eed08c9da5ffc47a1efe36dad482ce",
+    "STATE.md": "9a1cfa771da8c1074615eda253cffb7179b99ae26b0091a874b0d3f610967d23",
+    "docs/DELIVERY.md": "f96c1c97858278291c48eba91d8016190bbf03569f4530e2c6adf3689e4bbefb"
+  },
+  "after_sha256": {
+    "docs/acceptance.json": "37df0fb2df3fd8454f1a631356f123f95b41bd13fea6f5382b9430b3e78f9347",
+    "docs/ACCEPTANCE_STATUS.md": "f80154d0027450c56f43e980acc0b64c7f06b2fa030bf2bf9c2796896722d189",
+    "STATE.md": "b161dee3273f22e3d0470ca6efdee024c9453576f3301d89e67163f686c36629",
+    "docs/DELIVERY.md": "16064e5b9f739693921ab161983516f5e98f3dfcc098b1ffa2fcb3147bc1b631"
+  },
+  "source_changed": false,
+  "production_records_changed": false,
+  "natural_identity_changed": false
+}

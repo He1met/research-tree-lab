@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "spec": "planning/current/docs/ACCEPTANCE.md",
-  "updated_at": "2026-09-22T21:43:54.931271Z",
+  "updated_at": "2026-09-22T22:10:45.478499+00:00",
   "overall": "SCOPED_DELIVERY_VERIFIED_FORWARD_EVALUATOR_IMPLEMENTATION_REQUIRED_AND_NATURAL_EVIDENCE_PENDING",
   "method": "59项逐项证据映射；各层级不相加为整体通过率。测试源码只定位场景，运行通过以执行回执为准。",
   "status_definitions": {
@@ -17,15 +17,14 @@
     "IMPLEMENTATION_REQUIRED": "审计确认现有原方案执行链缺实现；不能仅归为等待未来事件。"
   },
   "status_counts": {
-    "REAL_PASS": 17,
-    "ENGINEERING_PASS": 28,
-    "PENDING": 1,
-    "WAITING_NATURAL_OUTCOME": 2,
+    "REAL_PASS": 21,
+    "ENGINEERING_PASS": 29,
     "IMPLEMENTATION_REQUIRED": 1,
-    "ENGINEERING_PARTIAL": 5,
+    "ENGINEERING_PARTIAL": 2,
     "WEAK_ISOLATION_CONFIRMED": 3,
     "NO_AUTOMATIC_CLEANUP": 1,
-    "CONDITIONAL_NOT_TRIGGERED": 1
+    "CONDITIONAL_NOT_TRIGGERED": 1,
+    "WAITING_NATURAL_OUTCOME": 1
   },
   "evidence_baseline": {
     "backend": {
@@ -81,7 +80,9 @@
         "docs/third-native-research-completion.json"
       ],
       "publisher_observed_at": "2026-09-22T21:43:54.931271Z",
-      "publisher_scheduler_event_identity": "UNKNOWN"
+      "publisher_scheduler_event_identity": "UNKNOWN",
+      "natural_count_semantics": "VERIFIED_NATURAL_COUNT_ONLY_ACTUAL_TRIGGER_ORIGIN_UNKNOWN",
+      "natural_origin_evidence_requirement": "Reliable official scheduled-origin evidence; no mandatory scheduler-event ID field"
     },
     "permission_probe": {
       "local_receipt": ".local/receipts/permission-probe.json",
@@ -785,25 +786,34 @@
       "id": "A07",
       "scenario": "原假设在一类状态失败",
       "requirement": "暂停范围准确，留下新证据重启条件，不推广到所有市场",
-      "status": "PENDING",
-      "verified_scope": "真实调查限定了 UTC 日数据缺口与条件性成本结论，未推广为所有市场失效。",
+      "status": "REAL_PASS",
+      "verified_scope": "真实已暴露三事件配对资金费研究在固定非零摩擦情景下出现有限负分量结果；decision 与 round 限定样本/模型，冻结该结论并明确新证据及规则重启条件，不推广到所有市场。",
       "evidence": [
         "research/bootstrap-v1/REPORT.md",
         "research/bootstrap-v1/execution_receipt.json",
         "research/bootstrap-v1/verification_receipt.json",
         "research/bootstrap-v1/SESSION_MECHANISM.md",
         "research/bootstrap-v1/forward_plans.json",
-        "research/bootstrap-v1/frozen_protocol.json"
+        "research/bootstrap-v1/frozen_protocol.json",
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.md",
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.json",
+        "docs/first-native-research-completion.json"
       ],
-      "limitations": "缺少假设在一类状态实际失败、限定暂停、满足新证据重启的完整实例。",
-      "next_verification": "出现对应失败时核对暂停范围和重启条件；工程夹具与真实案例分别记录。"
+      "limitations": "仅为开发样本成本分量的有限否定，实际交易净收益未知；重启条件尚未满足、未实际重启，但原条款不要求重启动作已经发生。",
+      "next_verification": "出现指定新、未暴露同步证据及完整数量/成本规则时，再登记受控新版本；不重复同证据追选赢家。",
+      "record_refs": [
+        "decision-paired-funding-boundary-20260923",
+        "m-paired-funding-component-20260923@1",
+        "r-btc-eth-paired-funding-20260923",
+        "run-btc-eth-paired-funding-20260923@attempt-1"
+      ]
     },
     {
       "id": "A08",
       "scenario": "用户不读网页不回复继续",
       "requirement": "原生任务仍接续，不形成普通研究审批",
-      "status": "WAITING_NATURAL_OUTCOME",
-      "verified_scope": "四项原生任务ACTIVE，实际频率保留。第三研究21:05:16Z启动、21:22:26Z完成，累计3次启动/完成观察；新5条（4公开、1LOCAL_ONLY）严格验收，旧49原件hash不变。当前54本机/52公开/8轮；第三研究4条已实际发布。",
+      "status": "REAL_PASS",
+      "verified_scope": "真实官方 Automation 研究及发布任务从初始消息到完成，无额外用户继续消息或普通研究审批；阶段产物和完成状态实际回读。流程没有等待网页访问状态或用户回复的依赖，无需监控私人浏览行为来验收。",
       "evidence": [
         "docs/INSTALLATION.md",
         "config/native_task_status.json",
@@ -811,10 +821,12 @@
         "docs/second-native-research-observation.json",
         "docs/second-native-research-completion.json",
         "docs/third-native-research-completion.json",
-        "docs/publication-run-20260923-v3.json"
+        "docs/publication-run-20260923-v3.json",
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.md",
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.json"
       ],
-      "limitations": "三次任务完成观察不能代证scheduler-event身份；严格自然研究0、自然日复核0，实际下一触发和任务时区UNKNOWN。新增研究为历史development，没有新行情、plan、正式review或readiness。",
-      "next_verification": "在用户无额外回复期间保留真实自然触发身份与接续产物。"
+      "limitations": "不声称知道用户是否浏览网页；Automation 关联和独立接续不等于定时触发来源证明，F07 单独等待。",
+      "next_verification": "继续保存无需普通接续批准的真实产物；自然来源证据另按 F07 核对，不改变原记录身份。"
     },
     {
       "id": "B01",
@@ -1158,7 +1170,8 @@
       "verified_scope": "原子切换保持视窗/选中，网络中断/哈希错/未知 schema 保留最后完整快照并标陈旧。",
       "evidence": [
         "tests/browser/artifacts/verification.json",
-        "docs/FRONTEND_VERIFICATION.md"
+        "docs/FRONTEND_VERIFICATION.md",
+        "docs/public-browser-readback-20260923-v2.json"
       ],
       "limitations": "本地故障注入，非整台 Mac/App 自然离线实录。",
       "next_verification": "远端上线后另核对 latest 与发布身份。"
@@ -1662,24 +1675,33 @@
       "id": "F06",
       "scenario": "单项权限、配额或数据问题不让无依赖研究全部停止",
       "requirement": "单项权限、配额或数据问题不让无依赖研究全部停止；没有额度不推算余额或无限重试。",
-      "status": "ENGINEERING_PARTIAL",
-      "verified_scope": "无关损坏记录不阻塞独立研究测试通过；真实缺目标数据时仍执行独立机制调查，没有猜余额或无限重试。",
+      "status": "REAL_PASS",
+      "verified_scope": "真实目标数据不足、官方上传权限拒绝以及锁屏造成的上传阻塞未停止无依赖研究与 Pages/本机归档；受阻动作如实保留待办，未绕过浏览器策略或重做研究。",
       "evidence": [
         "review/bootstrap-review/engineering-tests-final.txt",
         "tests/test_storage_contracts.py",
         "research/bootstrap-v1/SESSION_MECHANISM.md",
         "docs/INSTALLATION.md",
-        "config/native_task_status.json"
+        "config/native_task_status.json",
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.md",
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.json",
+        "docs/first-native-research-completion.json",
+        "docs/second-native-research-completion.json",
+        "docs/third-native-research-completion.json",
+        "docs/publication-run-20260923-v1.json",
+        "docs/publication-run-20260923-v2.json",
+        "docs/publication-run-20260923-v3.json",
+        "docs/archive-upload-recovery-20260923.json"
       ],
-      "limitations": "未覆盖原生权限失败和额度耗尽时其他无依赖任务继续的全部分支。",
-      "next_verification": "真实阻塞保存可核实错误和有限重试决定，可用隔离夹具补程序分支，不消耗额度探测。"
+      "limitations": "额度耗尽及未观察的其他权限分支为 CONDITIONAL_NOT_TRIGGERED，未声称全部错误类型实测；整体账户配额不足可能阻止本地观察，不能要求无额度仍能调用模型。",
+      "next_verification": "真实新阻塞发生时记录错误范围和有限重试决定；不为验收耗尽额度、猜余额、制造权限故障或无限重试。"
     },
     {
       "id": "F07",
       "scenario": "手动试跑、自然运行分开",
       "requirement": "手动试跑、自然运行分开；至少两个不同自然研究时点、一轮自然日复核和真实后继有证据。",
       "status": "WAITING_NATURAL_OUTCOME",
-      "verified_scope": "四项原生任务ACTIVE，实际频率保留。第三研究21:05:16Z启动、21:22:26Z完成，累计3次启动/完成观察；新5条（4公开、1LOCAL_ONLY）严格验收，旧49原件hash不变。当前54本机/52公开/8轮；第三研究4条已实际发布。",
+      "verified_scope": "三个官方 Automation 研究启动/完成观察和真实反馈后继已有产物；第三研究及发布完整任务过程本次直接回读。",
       "evidence": [
         "docs/INSTALLATION.md",
         "config/native_task_status.json",
@@ -1697,33 +1719,39 @@
         "docs/publication-run-20260923-v2.json",
         "docs/archive-increment-20260923-v2.json",
         "docs/third-native-research-completion.json",
-        "docs/publication-run-20260923-v3.json"
+        "docs/publication-run-20260923-v3.json",
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.md",
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.json"
       ],
-      "limitations": "三次任务完成观察不能代证scheduler-event身份；严格自然研究0、自然日复核0，实际下一触发和任务时区UNKNOWN。新增研究为历史development，没有新行情、plan、正式review或readiness。",
-      "next_verification": "通过受支持官方能力补充真实触发证据，保留原run的UNKNOWN，不修改原记录或以手工补齐。"
+      "limitations": "目前已验证自然研究计数为0、实际自然来源UNKNOWN，不代表证明实际自然执行为零。官方回读未提供定时/手动触发类型；不凭时刻吻合推断。原条款不要求 scheduler-event ID 这个特定字段，可靠官方等价来源证据也可接受。自然日复核尚无实例。",
+      "next_verification": "只用受支持官方可观察来源证据补充触发判定；自然日复核到来后按原规则核验，不手工补跑或改写原run的UNKNOWN。"
     },
     {
       "id": "F08",
       "scenario": "长任务有实际进展继续",
       "requirement": "长任务有实际进展继续；失联只调查确认的本项目对象，未有控制能力不假称重启。",
-      "status": "ENGINEERING_PARTIAL",
-      "verified_scope": "owner转移要求调查引用/理由并提升generation，旧owner拒收，checkpoint/claim机制实测。",
+      "status": "REAL_PASS",
+      "verified_scope": "本次官方只读回读第三研究约17m10s、第三发布约17m28s，均有可核验计算/复算/提交或发布进展后完成，均无第二条用户接续消息；长任务未因统一秒数阈值被中断。",
       "evidence": [
         "review/bootstrap-review/engineering-tests-final.txt",
         "tests/test_storage_contracts.py",
         "docs/INSTALLATION.md",
         "config/native_task_status.json",
-        "docs/OPERATIONS.md"
+        "docs/OPERATIONS.md",
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.md",
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.json",
+        "docs/third-native-research-completion.json",
+        "docs/publication-run-20260923-v3.json"
       ],
-      "limitations": "未实测原生长任务进展保持或失联控制/恢复；超时不等于可重启证据。",
-      "next_verification": "以实际checkpoint/owner调查确证本项目对象，记录实际控制结果，不偷锁。"
+      "limitations": "未实际发生失联，失联调查/控制分支为 CONDITIONAL_NOT_TRIGGERED；没有实际重启证明，也没有声称重启。",
+      "next_verification": "继续记录有意义的进展；仅在真实失联时确认本项目对象和实际控制能力，不偷锁、不制造失联、不把恢复演练加成验收门槛。"
     },
     {
       "id": "F09",
       "scenario": "整个Mac/App停更时网页陈旧，不假称远程能自救",
       "requirement": "整个Mac/App停更时网页陈旧，不假称远程能自救；必要认证由用户一次处理，普通研究不需要审批。",
-      "status": "ENGINEERING_PARTIAL",
-      "verified_scope": "网页失败保留旧快照并标陈旧，安装明确依赖本机/App、不声称远程自救，普通研究无逐次审批。 新增Chromium/WebKit相同快照持续200实测：超过36小时标陈旧、刷新不续期。",
+      "status": "ENGINEERING_PASS",
+      "verified_scope": "Chromium/WebKit 实测固定快照持续 HTTP 200 超36小时仍标陈旧，刷新不延长期限；页面披露发布任务状态未知与本机/App依赖，不承诺远程自救；普通研究无逐次审批。",
       "evidence": [
         "tests/browser/artifacts/verification.json",
         "docs/FRONTEND_VERIFICATION.md",
@@ -1731,12 +1759,21 @@
         "config/native_task_status.json",
         "docs/OPERATIONS.md",
         "review/continuation-audit/frontend-staleness.md",
-        "review/continuation-audit/frontend-staleness.json"
+        "review/continuation-audit/frontend-staleness.json",
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.md",
+        "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.json",
+        "docs/publication-run-20260923-v3.json"
       ],
-      "limitations": "未实际整台Mac/App离线到恢复演练；认证只在真实必要时由用户处理。页面已明确36小时内快照新鲜度不证明发布任务存活。",
-      "next_verification": "上线后可受控停止发布核对陈旧提示，保持本机停机局限，不越权重启。"
+      "limitations": "整台 Mac/App 实际停止分支为 CONDITIONAL_NOT_TRIGGERED，锁屏仅证明原生UI上传受阻；未声称真实整机停机或恢复已测，原条款不要求完整离线到恢复演练。",
+      "next_verification": "继续保持陈旧判断和本机能力边界；若真实整机停更发生，只收集观察证据，不为验收主动停机、重启或制造认证失败。"
     }
   ],
   "maintenance_receipt": "review/continuation-audit/maintenance-source-receipt.json",
-  "maintenance_tests": "tests/receipts/runtime-maintenance.json"
+  "maintenance_tests": "tests/receipts/runtime-maintenance.json",
+  "acceptance_reaudit": {
+    "receipt": "review/continuation-audit/REMAINING_ACCEPTANCE_REAUDIT_20260923.json",
+    "receipt_sha256": "49e1dd7dd73a5103a471960f98b24d6de08b9eac55ad87bd1e3dcb7eaaba2a4e",
+    "applied_at": "2026-09-22T22:10:45.478499+00:00",
+    "scope": "Bounded existing evidence; no new production execution or natural trigger claim"
+  }
 }
