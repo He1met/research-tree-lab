@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-09-22T21:12:43.005401+00:00",
+  "stage": "POST_ANALYSIS_DESCRIPTIVE_NO_NEW_TRADING_TRIAL",
+  "items": [
+    {
+      "variant": "grid_always",
+      "minimum_unrealized_inventory_usdt": "-0.9995",
+      "positive_realized_but_negative_complete_minute_count": 0,
+      "first_such_index": null,
+      "minimum_complete_in_such_minutes_usdt": null,
+      "reason_attribution": {
+        "INITIAL_ENTRY": {
+          "count": 1,
+          "fifo_realized_gross_usdt": "0",
+          "reference_turnover_usdt": "161.6418"
+        },
+        "REBALANCE": {
+          "count": 70,
+          "fifo_realized_gross_usdt": "2.5786",
+          "reference_turnover_usdt": "5682.6626"
+        }
+      }
+    },
+    {
+      "variant": "grid_dormant",
+      "minimum_unrealized_inventory_usdt": "-0.9995",
+      "positive_realized_but_negative_complete_minute_count": 0,
+      "first_such_index": null,
+      "minimum_complete_in_such_minutes_usdt": null,
+      "reason_attribution": {
+        "INITIAL_ENTRY": {
+          "count": 1,
+          "fifo_realized_gross_usdt": "0",
+          "reference_turnover_usdt": "161.6418"
+        },
+        "REBALANCE": {
+          "count": 52,
+          "fifo_realized_gross_usdt": "1.9364",
+          "reference_turnover_usdt": "4221.4074"
+        }
+      }
+    },
+    {
+      "variant": "hold_initial",
+      "minimum_unrealized_inventory_usdt": "-0.4472",
+      "positive_realized_but_negative_complete_minute_count": 0,
+      "first_such_index": null,
+      "minimum_complete_in_such_minutes_usdt": null,
+      "reason_attribution": {
+        "INITIAL_ENTRY": {
+          "count": 1,
+          "fifo_realized_gross_usdt": "0",
+          "reference_turnover_usdt": "161.6418"
+        },
+        "TERMINAL_EXIT": {
+          "count": 1,
+          "fifo_realized_gross_usdt": "10.1334",
+          "reference_turnover_usdt": "171.7752"
+        }
+      }
+    },
+    {
+      "variant": "wait",
+      "minimum_unrealized_inventory_usdt": "0",
+      "positive_realized_but_negative_complete_minute_count": 0,
+      "first_such_index": null,
+      "minimum_complete_in_such_minutes_usdt": null,
+      "reason_attribution": {}
+    }
+  ]
+}
