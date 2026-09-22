@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-09-22T21:04:50.783020+00:00",
+  "state": "PASS_SCOPED_ENGINEERING_REVIEW",
+  "installed_by_review": false,
+  "production_store_or_native_modified": false,
+  "formal_economic_result": false,
+  "natural_review": false,
+  "source_hash": "553a5cf1dce6f738745e1ea85d701e00c32c8876e57f17ade4ddc35c24b5197d",
+  "exact_delivery_files": {
+    "researchlib/conditional_review.py": "c2ad6dd18d99ee48c6d9360307153709071bafe6f4a472b36c563247fb6518b5",
+    "scripts/prepare_conditional_review.py": "48c5b08dd6ca5c791e7c86735fa62b0e86b2bec604b22dd657f8127491653728",
+    "tests/test_conditional_review.py": "deb0545b2f3c64ce3731259e1b217252d4f89a25b9d021e163122ba98f2542c5",
+    "docs/CONDITIONAL_REVIEW.md": "f2a41c056782394a3f4abe8e585f377e1013734c9e9def6444e5f9f5e9a06d46",
+    "tests/receipts/conditional-real-input-only.json": "527c1a8b2606f51bc0dbd8a50e9af7c6fe6ad77be2e02df171278219f2d022e8",
+    "tests/receipts/conditional-real-input-final.json": "f9c24ef71319d45ab11563f0de6f6afefd93d5afe9bd74acec49e50444af2405",
+    "tests/receipts/conditional-real-input-repaired.json": "540b1483006515d40d9ebcdecaf36452b39cdb5ffddc16b246fdd0a9b5534e64"
+  },
+  "method_identity": {
+    "method_version": "funding-conditional-review-v1",
+    "method_code_sha256": "a1f6f384e885176dbc1680ca4b720ec13c96e2361b84b3f4512ff721cd0c88ae",
+    "source_sha256": {
+      "researchlib/__init__.py": "6a52c32055618076a5a44b9dacc39d79711ef3ab7a4de73f9f5ddc9015268741",
+      "researchlib/common.py": "a3e7aa7619acee94e05e733c20a4ae4eb30ff7056f9b0fca0b441ecb55d9b683",
+      "researchlib/conditional_review.py": "c2ad6dd18d99ee48c6d9360307153709071bafe6f4a472b36c563247fb6518b5",
+      "researchlib/contracts.py": "60a65556a02328b309f016a602ba142b887d23771556a907ecce2b71144c6041",
+      "researchlib/funding_forward.py": "79f9aa7dc3c2e1dc47b1cd2eb307cf3eaf685874f722dab21710601bdfefeb66",
+      "researchlib/funding_review.py": "e3b5afd7eeea6754e2723bdb5039c17086da8247330f4983c8d80f1bfb83148a",
+      "researchlib/novelty.py": "e7390b597cfd2a978fa3e9b9208213b6cbb0f331407bb762a5a62a1b8b1b3d08",
+      "researchlib/okx_funding_file.py": "6043a04010e8aed025542857b4eecc1f947cc564863e7435d54db0a652cd006d",
+      "researchlib/okx_trade_file.py": "31c79a1e31d4f2c9ad75952e87c4a7f5dcc479d4df00f127e137790fb6c44f12",
+      "researchlib/public.py": "514263bb4038d7d1b1548f31ba9d3d00d67c0f0410990456fc9f02e85e9fd063",
+      "researchlib/readiness.py": "ad57c793f68a53c848048d84e21370811b7470bf71e8770d3f2a76cb2df059c7",
+      "researchlib/replay.py": "6a99205c55c58ba9d4de6a9ce1e3b3f752039eea7a28f71ef8e7e40181c44b1c",
+      "researchlib/review.py": "771f64a7764f2c957dcce98cc54cdc1bad5fb4381f9b465175cfa153bba4b906",
+      "researchlib/snapshot.py": "e5404cf0775ab6b99906a8115a2bb6cf97c05f86fc8bc9b0979d25bf64f22e15",
+      "researchlib/store.py": "6a9e7bc0ac8ee533fedb94bab0c87b9217436dbf4d8437f99fba9af8a02e06f6",
+      "scripts/prepare_conditional_review.py": "48c5b08dd6ca5c791e7c86735fa62b0e86b2bec604b22dd657f8127491653728"
+    },
+    "runtime": {
+      "implementation": "CPython",
+      "python_version": "3.9.6",
+      "third_party_runtime_dependencies": []
+    },
+    "plan_hashes": {
+      "p-btc-funding-short-20260923@1": "65ff62c3603d257b82b3274785fd1bfe2c5a784d215786be4775fe7fa076bce4",
+      "p-btc-funding-long-control-20260923@1": "a8dd9a25bd4a5353bc8ed479ec41056bcf07704fccb285f2d014a9615358d02c"
+    },
+    "private_schema": "conditional-private-computation-v1",
+    "public_state_schema": "conditional-public-state-v1",
+    "public_archive": {
+      "self_contained_method_restore": false,
+      "excluded_source_attachments": [
+        {
+          "path": "SOURCE/researchlib/public.py",
+          "sha256": "514263bb4038d7d1b1548f31ba9d3d00d67c0f0410990456fc9f02e85e9fd063",
+          "reason": "SCANNER_SELF_MATCHES_OWN_PRIVATE_PATH_REGEX",
+          "published_git_source": "https://github.com/He1met/research-tree-lab/blob/9a5259b7c72c1b3d40ad4b11ae2e28210252d9a0/researchlib/public.py"
+        }
+      ],
+      "full_source_closure_retained_locally": true
+    }
+  },
+  "approved_waiting_predecessor_identity": "d21b004a0efe4295f391a3f82ccba05f6a967b9205d370eabd807a8692f91f65",
+  "independent_validation": {
+    "author_targeted_tests_independently_run": {
+      "tests": 42,
+      "pass": 42,
+      "elapsed_seconds": 11.439,
+      "runtime": "CPython 3.9.6"
+    },
+    "independently_authored_adversarial_groups": 13,
+    "independent_real_registered_decode": {
+      "rows_read": 4969733,
+      "csv_bytes": 295527908,
+      "selected_events": 112,
+      "all_sequence_null": true,
+      "elapsed_seconds": 12.538,
+      "kernel_evaluate_called": false,
+      "source_coverage": "UNKNOWN",
+      "data_complete": false
+    },
+    "candidate_public_guard": {
+      "files": 7,
+      "rejected": 0
+    }
+  },
+  "root_integration_evidence_separate": {
+    "backend_tests": 232,
+    "reference_tests": 24,
+    "state": "PASS_ROOT_EXECUTED_NOT_INDEPENDENT_RERUN"
+  },
+  "resolved_findings": [
+    "P1_PREDECESSOR_CHAIN_RESET",
+    "P2_RECOVERY_PUBLIC_ATTACHMENT_DRIFT",
+    "P2_HISTORICAL_CUTOFF_RESETS_PUBLIC_UNKNOWN",
+    "FORMAL_CUTOFF_MUST_NOT_PROMOTE_ISOLATED_EVENT_TO_COVERAGE"
+  ],
+  "unresolved_in_scope_defects": [],
+  "remaining_capabilities": {
+    "implemented_scoped": [
+      "REGISTERED_SINGLE_FILE_DECODE",
+      "BOUNDED_WHOLE_PRIVATE_CHAIN_REPLAY",
+      "EXPLICIT_CORRECTION",
+      "FULL_BATCH_DISPOSITION",
+      "CREATE_ONLY_OUTBOX_AND_EXACT_REBUILD_RECOVERY",
+      "PRIVATE_PUBLIC_BOUNDARY"
+    ],
+    "METHOD_IMPLEMENTATION_REQUIRED": [
+      "FORMAL_SOURCE_COVERAGE_VERIFIER_AND_GATE",
+      "PRECISE_SETTLEMENT_AND_FULL_PATH_MARK_ADAPTER",
+      "FORMAL_ECONOMIC_METRICS_AND_FINAL_NOT_TRIGGERED_BRANCH"
+    ],
+    "INPUT_CAPABILITY_UNVERIFIED": [
+      "OFFICIAL_SOURCE_AND_ACQUISITION_PROOF",
+      "EVENT_OMISSION_BOUNDARY",
+      "SAME_MILLISECOND_ORDER",
+      "EXACT_MARK_AND_PATH",
+      "FORMAL_COST_EVIDENCE"
+    ],
+    "WAITING_WINDOW": [
+      "ORIGINAL_FORWARD_WINDOW",
+      "NATURAL_REVIEW_OUTCOME"
+    ]
+  },
+  "acceptance_not_closed": {
+    "B04": "IMPLEMENTATION_REQUIRED",
+    "B05": "ENGINEERING_PARTIAL",
+    "B07": "ENGINEERING_PARTIAL"
+  },
+  "integration_conditions": [
+    "Copy exactly these seven added files only if selecting this unchanged candidate for installation.",
+    "Recompute source_hash and exact method identity before installation.",
+    "No approval transfers to fifth-maintenance public/contracts edits. A combined first deployment needs a fresh complete closure, strict legacy waiting identity, public exception and archive review.",
+    "Preserve old failed/development receipts with their original identities.",
+    "No production review, native trigger, source coverage or economic acceptance is implied."
+  ],
+  "evidence_sha256": {
+    "review/continuation-audit/CONDITIONAL_REVIEW_INDEPENDENT.md": "34f2b7b45ff55de150dee68f1cdfa580b571b5ccc178334ed10da3337a577baa",
+    "review/continuation-audit/conditional-findings-initial.json": "dc27b9baa839bcbe553d1b35b1adddc5a51a21fdc2114523f42a0af3f0cb0545",
+    "review/continuation-audit/check_conditional_review_independent.py": "e042e95c5c31acf3293b9eabb8e7608dc980428a5782c7db60b0484dc54ac162",
+    "review/continuation-audit/conditional-probes-independent-receipt.json": "d0ac8a297bf727f901a5153b4446774da68a80a0069e2d05ef5a13e4f3496a0b",
+    "review/continuation-audit/check_conditional_real_input_independent.py": "089ac382e8c6c9148835d846290212f02a23fc8d6375376663bb5cec9c28f26f",
+    "review/continuation-audit/conditional-real-input-independent.json": "e31493f98dd7930bbad16431d6b3f6e63de5c0a066404b99520bac80662bb41e",
+    "review/continuation-audit/conditional-integration-tests.json": "bd0fcfcecf8b390844db0bb6a957b05913193072e1aafc3df1a652d1fc84d1f4"
+  }
+}

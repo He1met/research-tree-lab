@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "review_state": "CHANGES_REQUIRED_INITIAL_FINDINGS",
+  "reviewed_module_sha256": "6bace96b47d20ac7536766103b8ee5144ca32fcbc8c559040b61b1d8ff9bae49",
+  "data_class": "ISOLATED_SYNTHETIC_ENGINEERING_REPRODUCTIONS",
+  "production_mutated": false,
+  "findings": [
+    {
+      "id": "P1_PREDECESSOR_CHAIN_RESET",
+      "priority": 1,
+      "state": "REPRODUCED_REPAIR_REQUESTED",
+      "scope": "_previous / _verify_kernel",
+      "reproduction": "Commit normal conditional OPEN b1. For b2 preserve public opening_state_hash, but replace PRIVATE requests/bindings/audits/events with empty input, recompute kernel with previous=None, keep correction=None, and update private hash/input fingerprint. Commit valid bundle. b3 with empty input is accepted WAITING_DATA and ENTRY_DATA_UNRESOLVED.",
+      "impact": "Prior accepted events and conditional position can disappear through a self-reproducible middle predecessor without explicit correction.",
+      "required": "Validate all exact ancestor transitions with bounded cycle detection, ordinary prefix invariants, correction contract, and distinct public/private opening hash domains."
+    },
+    {
+      "id": "P2_RECOVERY_PUBLIC_ATTACHMENT_DRIFT",
+      "priority": 2,
+      "state": "PEER_REPRODUCED_REPAIR_REQUESTED",
+      "scope": "prepare_outbox retained recovery",
+      "reproduction": "After preparing retained bundle, add same-bundle PRIVATE attachment to feedback public_attachments and recompute its self-contained content_sha256. Retry is accepted. Commit and export feedback closure includes PRIVATE and synthetic price canary.",
+      "impact": "Recovery accepts semantic disclosure drift and can route private raw-derived material into a public archive.",
+      "required": "Recover only fully revalidated exact batch/request/method/record/source/private semantics with exact public attachment allowlist; self-computed hash alone is not semantic authority."
+    },
+    {
+      "id": "P2_HISTORICAL_CUTOFF_RESETS_PUBLIC_UNKNOWN",
+      "priority": 2,
+      "state": "REPRODUCED_REPAIR_REQUESTED",
+      "scope": "prepare_bundle / _summary",
+      "reproduction": "At information time 2026-09-23T18:00Z create waiting state with historical market cutoff 2026-09-22T19:00Z: stage WAITING_DATA, inventory null. At information time 2026-09-23T19:00Z bridge to conditional empty input with cutoff 2026-09-22T20:00Z: stage becomes NOT_YET_EFFECTIVE and public inventory 0.",
+      "impact": "A historical calculation cutoff is promoted to current formal pre-effective state, resetting known-unknown inventory to zero after plan effectiveness.",
+      "required": "Preserve private historical kernel computation separately; public stage and actual-inventory scope must respect actual information time and original effective time."
+    }
+  ]
+}

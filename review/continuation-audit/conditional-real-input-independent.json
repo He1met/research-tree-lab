@@ -1,0 +1,60 @@
+{
+  "state": "PASS_INDEPENDENT_REGISTERED_HISTORICAL_DECODE_ONLY",
+  "information_as_of": "2026-09-22T21:02:28.619591Z",
+  "module_sha256": "c2ad6dd18d99ee48c6d9360307153709071bafe6f4a472b36c563247fb6518b5",
+  "method_code_sha256": "a1f6f384e885176dbc1680ca4b720ec13c96e2361b84b3f4512ff721cd0c88ae",
+  "runtime": {
+    "implementation": "CPython",
+    "python_version": "3.9.6",
+    "third_party_runtime_dependencies": []
+  },
+  "checks": {
+    "dataset_canonical_bytes_unchanged": true,
+    "dataset_metadata_unchanged": true,
+    "source_inode_size_mtime_unchanged": true,
+    "full_row_count_matches": true,
+    "full_expanded_byte_count_matches": true,
+    "full_csv_hash_matches": true,
+    "zip_crc_verified": true,
+    "selected_count_matches": true,
+    "sequence_all_null": true,
+    "coverage_unknown": true,
+    "data_complete_false": true,
+    "sixteen_sources_bound_and_retained": true
+  },
+  "binding": {
+    "request": {
+      "dataset_ref": "d-btc-trades-20260921@1",
+      "adapter": "okx-btc-trade-file-v1",
+      "filename": "BTC-USDT-SWAP-trades-2026-09-21.zip",
+      "declared_partition": {
+        "date": "2026-09-21",
+        "timezone": "UTC+08:00"
+      },
+      "window": {
+        "start_inclusive": "2026-09-20T16:00:00Z",
+        "end_exclusive": "2026-09-20T16:00:01Z"
+      }
+    },
+    "dataset_sha256": "ed2df5284b083d82af19ce8bb35b3e1e8c1d4dd590b6141070c02987f8ed87a9",
+    "dataset_available_at": "2026-09-22T19:26:52.136785+00:00",
+    "dataset_committed_at": "2026-09-22T19:26:52.338145Z",
+    "acquired_at": "2026-09-22T19:13:41.105816+00:00",
+    "raw_sha256": "efab589d1d2171e7bd589e334653bea29daa414b4c87239ad75c4f6c23886f69",
+    "raw_bytes": 28884745
+  },
+  "rows_read": 4969733,
+  "csv_bytes": 295527908,
+  "csv_sha256": "478179bb74b5caceedf6fe55acb907a257bc661944b4867b559e1abaad2fde8b",
+  "zip_crc": "PASS",
+  "same_open_fd_pre_post_sha256": "MATCH",
+  "selected_event_count": 112,
+  "source_coverage": "UNKNOWN",
+  "data_complete": false,
+  "elapsed_seconds_observed": 12.538,
+  "kernel_evaluate_called": false,
+  "formal_plan_evaluation_run": false,
+  "source_store_native_writes": false,
+  "raw_events_or_prices_saved": false,
+  "source_origin_and_acquisition": "REGISTERED_DECLARATIONS_NOT_INDEPENDENT_OFFICIAL_AUTHENTICATION"
+}
