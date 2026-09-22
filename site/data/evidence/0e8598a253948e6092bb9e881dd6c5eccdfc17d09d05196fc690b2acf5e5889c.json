@@ -1,0 +1,60 @@
+{
+  "observed_at": "2026-09-22T22:15:59.317906+00:00",
+  "evidence_stage": "REAL_DOCUMENTARY_RESEARCH_WITH_SYNTHETIC_ACCOUNTING_CHECKS",
+  "new_market_files": 0,
+  "historical_reference_event": {
+    "issuer": "Apple",
+    "declared_date": "2026-07-30",
+    "record_date": "2026-08-10",
+    "payable_date": "2026-08-13",
+    "cash_dividend_usd_per_common_share": "0.27",
+    "ex_date": null,
+    "target_contract_handling": null,
+    "target_path_observed": false,
+    "information_observed_now_not_backdated": true
+  },
+  "comparison_set": [
+    "NAIVE_UNADJUSTED_SHARE_PRICE_PROXY",
+    "SHAREHOLDER_TOTAL_RETURN_PROXY",
+    "EXPLICIT_CORPORATE_ACTION_AND_RIGHTS_LEDGER",
+    "UNKNOWN_IF_EVENT_RULE_OR_INPUT_MISSING"
+  ],
+  "conclusions": [
+    {
+      "claim": "Unadjusted reference share-price PnL is not generally equivalent across a split",
+      "basis": "Official rebase rule plus synthetic q/mark/cash conservation",
+      "scope": "No estimated historical AAPL/QQQ return error"
+    },
+    {
+      "claim": "Shareholder distribution cannot be credited as target perpetual cashflow without target rule evidence",
+      "basis": "No share ownership/current FAQ; issuer dividend is REFERENCE",
+      "scope": "No inference of target price drop or absence of all future contract adjustments"
+    },
+    {
+      "claim": "Exact event handling and order state must remain explicit",
+      "basis": "Generic split documentation differs from regional TP/SL FAQ and case-by-case settlement wording",
+      "scope": "Current regional/account applicability unknown"
+    }
+  ],
+  "synthetic_verification": {
+    "hand_checks": 26,
+    "fixed_cases": 54,
+    "invariants_per_case": 3,
+    "role": "SYNTHETIC_ONLY_NOT_MARKET_SAMPLE"
+  },
+  "negative_results": [
+    "QQQ current distribution table not acquired through opened official entry",
+    "No target AAPL/QQQ event handling or execution receipt found in bounded search",
+    "KORU completion unverified and issuer crosscheck incomplete",
+    "Generic vs regional TP/SL behavior unresolved",
+    "Fractional reverse split cash/margin treatment unsupported by development arithmetic"
+  ],
+  "actual_trade_count": null,
+  "actual_target_net_pnl": null,
+  "execution_readiness": "UNKNOWN",
+  "account_eligibility": "NOT_ASSESSED",
+  "formal_plan_created": false,
+  "selected_plan_ref": null,
+  "successor_status": "PROPOSED_NOT_EXECUTED",
+  "next_action": "Obtain one exact target event rule, handling confirmation, versioned units/order states and synchronous permitted target inputs before applying the ledger."
+}
