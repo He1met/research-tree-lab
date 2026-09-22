@@ -99,7 +99,7 @@ def semantic_refs(record):
     fields = {
         "round": ["parent_round_id", "selected_plan_ref"],
         "plan": ["round_id"],
-        "run": ["round_id", "plan_ref"],
+        "run": ["round_id", "plan_ref", "method_ref"],
         "review": ["plan_ref", "supersedes", "previous_review_ref", "batch_ref"],
         "feedback": ["review_ref"],
         "decision": ["feedback_ref", "source_review_ref", "successor_round_id"],
@@ -133,6 +133,8 @@ def validate_relationships(records):
                 raise ContractError("Selected plan belongs to a different round")
         if kind == "plan" and records[item["round_id"]]["record_type"] != "round":
             raise ContractError("Plan round reference has wrong type")
+        if kind == "run" and item.get("method_ref") and records[item["method_ref"]]["record_type"] != "method":
+            raise ContractError("Run method reference has wrong type")
         if kind == "review":
             plan = records[item["plan_ref"]]
             if plan["record_type"] != "plan" or item["plan_hash"] != digest(canonical(plan)):
