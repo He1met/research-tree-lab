@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "state": "FROZEN_AUTHOR_CANDIDATE_AWAITING_INDEPENDENT_REVIEW",
+  "frozen_at": "2026-09-22T20:56:02.108095Z",
+  "base_commit": "3bac79f1fc0a32fa51bf03790a8079a0c958add9",
+  "scope": "TYPE_SPECIFIC_PUBLIC_FIELD_COMPATIBILITY_AND_RUN_METHOD_RECORD_CLOSURE",
+  "source_files": {
+    "researchlib/public.py": "db4eb97c35a312277798605f76ac334dfd57bbc6fe3b1b6d718cd86f00d20dbd",
+    "researchlib/contracts.py": "7929f554936294d08407fd7198a2aa0fdfc72ee466c386c34244a711edbc55fd"
+  },
+  "two_source_files_identity_sha256": "adfa890f8d42e6328eabe0413c51b639f800682424f7f2787b4bd63dfc89795c",
+  "files": {
+    "researchlib/public.py": "db4eb97c35a312277798605f76ac334dfd57bbc6fe3b1b6d718cd86f00d20dbd",
+    "researchlib/contracts.py": "7929f554936294d08407fd7198a2aa0fdfc72ee466c386c34244a711edbc55fd",
+    "tests/test_public_fields_v2.py": "9ff17ad013c496a02a84397f69e81f1a8ed3a42fd2d686ca2cef2764f86511c2",
+    "tests/verify_public_fields_v2.py": "a90ae945a859488d0036e6e0e824c72f72bce3cb2a05ea75cedc89b88b7b143b",
+    "tests/receipts/public-fields-v2-real.json": "e57d230d57faae8ebeb47dda14809884b83a2ff92133e419244db05abc303280",
+    "docs/PUBLIC_FIELDS_V2_COMPATIBILITY.md": "9c2e54c8c1962db6f297240a9982326f5a36d077d85f6ac214c1d6cba8c813c1"
+  },
+  "checks": {
+    "synthetic_new_tests": {
+      "passed": 14,
+      "scope": "temporary stores only"
+    },
+    "backend_suite": {
+      "passed": 204,
+      "command": "python3 -m unittest discover -s tests -p 'test_*.py' -q",
+      "includes_fourth_batch_conditional_review": false
+    },
+    "reference_suite": {
+      "passed": 24,
+      "command": "python3 -m unittest discover -s planning/current/tests -p 'test_*.py' -q"
+    },
+    "public_guard": {
+      "files": 6,
+      "rejected": 0
+    },
+    "diff_check": "PASS",
+    "real_readonly_archive_verification": "tests/receipts/public-fields-v2-real.json"
+  },
+  "runtime": {
+    "python": "3.9.6",
+    "platform": "macOS-27.0-arm64-arm-64bit"
+  },
+  "source_delta": {
+    "public.py": "Three type-specific allowlist additions covering five field names; no attachment permission changes.",
+    "contracts.py": "run.method_ref joins semantic record references; existing availability/existence gates plus explicit method target type."
+  },
+  "not_changed": [
+    "installed main source",
+    "installation",
+    "native tasks",
+    "shared indexes",
+    "production records",
+    "existing archives",
+    "fourth-batch source or method constants"
+  ],
+  "independent_review": "PENDING",
+  "installed": false,
+  "publication": false,
+  "identity_boundary": "This two-file identity is not a method execution or full combined-package approval. Merge with fourth batch requires new method/source closure identity and separately reviewed explicit waiting/conditional legacy bridge."
+}

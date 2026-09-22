@@ -51,8 +51,11 @@ TYPE_FIELDS["plan"].add("input_roles")
 TYPE_FIELDS["round"].update({"mechanism_identity", "novelty_claim", "novelty_evidence_refs", "duplicate_of", "source_review_refs"})
 TYPE_FIELDS["run"].update({"actual_trigger", "natural_trigger", "receipt"})
 TYPE_FIELDS["run"].update({"economic_evidence", "actual_trade_result"})
+TYPE_FIELDS["run"].add("method_ref")
 TYPE_FIELDS["discovery"].update({"seed_code", "restart_condition", "defer_reason", "counts_as_completed_economic_research", "mechanism_signature", "round_id"})
 TYPE_FIELDS["decision"].update({"source_round_ref", "derived_round_ref", "source_feedback_ref"})
+TYPE_FIELDS["decision"].update({"comparison_set", "feedback_disposition", "selected_plan_ref"})
+TYPE_FIELDS["method"].add("protocol_refs")
 TYPE_FIELDS["product"].update({"contract_face_value", "contract_kind", "contract_multiplier", "data_source", "displayed_max_leverage", "enabled", "face_value_unit", "funding_sample", "funding_schedule", "minimum_quantity_contracts", "native_code_evidence", "normalized_format", "price_roles", "price_tick_usdt", "quantity_step_contracts", "raw_format", "readiness", "reference_underlying", "rule_observation_recorded_at", "rule_valid_until"})
 
 

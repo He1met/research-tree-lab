@@ -1,0 +1,672 @@
+{
+  "schema_version": "1.0",
+  "state": "PASS_ISOLATED_CANDIDATE_NOT_INSTALLED",
+  "observed_at": "2026-09-22T21:19:41.163869Z",
+  "scope": "REAL_COMMITTED_RECORDS_READ_ONLY_LOCAL_SCRATCH_ARCHIVE_VERIFICATION",
+  "production_records": 49,
+  "public_records_compared": 48,
+  "old_public_records_unchanged": 39,
+  "new_public_records_exact": 9,
+  "former_failures_now_exact": 4,
+  "comparisons": [
+    {
+      "record_ref": "aapl@observed-20260923-v1",
+      "original_sha256": "f2e2e68bd68c8d8ec7294544ec0ad8b34c25e8865d77420ee3bcaf74bfe4bf5c",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "batch-manual-safe-review-20260923-v1",
+      "original_sha256": "00cb81af6c6e9a9f486de3693a2f8ebad041a426610064c2b0751b3891f41b3f",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "btc@observed-20260923-v1",
+      "original_sha256": "511852c91117ead9453316696c0636661ea381d6d16e315c492861e9c4b7772a",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "d-btc-candles-20260921@1",
+      "original_sha256": "05b48757938f592956a465bbe0f18c03a1754d270237f8c3521017ed02901c70",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "d-btc-eth-funding-exposed-20260921@1",
+      "original_sha256": "735625aec2c75ae507ca59075f008623db05ff2500e1cc676a64566b1391c6a3",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "d-btc-trades-20260921@1",
+      "original_sha256": "ed2df5284b083d82af19ce8bb35b3e1e8c1d4dd590b6141070c02987f8ed87a9",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "decision-adopt-input-feedback-long-20260923",
+      "original_sha256": "99b62e71e39a7c2193f4695a95da7b9a476be092febbb5ffd0596f840d13dc4f",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "decision-adopt-input-feedback-short-20260923",
+      "original_sha256": "c48bfa609de54d869c3da9f04f1cca6ab6bb5f9990f948c24159cd5be21b3bfa",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "decision-boundary-further-test-long-20260923",
+      "original_sha256": "20037e74d381515ba865d9c63897639c978cd3a7950261455f989e735b5b1a7a",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "decision-boundary-further-test-short-20260923",
+      "original_sha256": "d79bfe06a8dd0013017480d043fbc6268178759589d42cbe66d00b66feaaa2db",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "decision-entry-confirmation-boundary-20260923",
+      "original_sha256": "bd37cb798329b452c05addef4a28e168ab7f605fb202c0f26607f19bfa29262f",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": [
+        "comparison_set",
+        "feedback_disposition",
+        "selected_plan_ref"
+      ]
+    },
+    {
+      "record_ref": "decision-funding-cost-followup-20260923",
+      "original_sha256": "816659a534be79a596400496c652ed03b8bbb83213f03c5c44a81e4bbe1ada2f",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "decision-paired-funding-boundary-20260923",
+      "original_sha256": "490e40e8b9a081a48601f1807d8c7c3025a8327b3b0b2730dc8ba52ee2206abc",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "eth@observed-20260923-v1",
+      "original_sha256": "1fe580ac35857ef1ea85755a89f82cfce91155b0a4ba234a7700bd0d2db0c060",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "feedback-btc-funding-long-control-manual-20260923-v1",
+      "original_sha256": "0bc04f617365b2b72f5100d992c2648e4c6b8e29c2f70311e2ed4b1a32530a2c",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "feedback-btc-funding-short-manual-20260923-v1",
+      "original_sha256": "59fa17345b905be5e960a72d805ae843404d83dd69e6625f9b440c77af8370df",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "m-btc-entry-confirmation-component-20260923@1",
+      "original_sha256": "e2beafbd1e10fcdcd2c11e3c5c58492e00ce528906df4dddfde4ee85246f8e75",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": [
+        "protocol_refs"
+      ]
+    },
+    {
+      "record_ref": "m-minute-boundary-conditional-envelope-20260923@1",
+      "original_sha256": "5340f4f41c03473b1e16262ddf8a954665e4fff7d52e2d5940d141ebe95ea582",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "m-paired-funding-component-20260923@1",
+      "original_sha256": "2e29bb0642866c05de0293861a63aa82a0e5d921841decbc1c27cdd7430b91b1",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "m-trade-candle-development-audit-20260923@1",
+      "original_sha256": "01787042471b02755fa8ad18f0fa516b8597d7591891679df3b6252f590c1af7",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "p-btc-funding-long-control-20260923@1",
+      "original_sha256": "a8dd9a25bd4a5353bc8ed479ec41056bcf07704fccb285f2d014a9615358d02c",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "p-btc-funding-short-20260923@1",
+      "original_sha256": "65ff62c3603d257b82b3274785fd1bfe2c5a784d215786be4775fe7fa076bce4",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "publication-bootstrap-manual-20260923-v1",
+      "original_sha256": "ad699228b3e47b63dac96c323c6e48b5a87cbd5e2bcdc2a43c98ee75e1124757",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "qqq@observed-20260923-v1",
+      "original_sha256": "e5760ff0648ab7f1388ac06e07182feb16a7eeb3f3410b128bf18120cc6d82eb",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "r-boundary-sensitivity-20260923",
+      "original_sha256": "f45252466f5d5209e714b4bf0252e8cc31ce88956f5e569a12bd699af6efd16e",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "r-btc-entry-confirmation-20260923",
+      "original_sha256": "06c4174ee946751dc9875960c9e688eff68780f82ee4943a100326dadb440c4a",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "r-btc-eth-paired-funding-20260923",
+      "original_sha256": "df34983d87b647aea7891b3785b8a981eb4390001b6db361616fc34a39434a85",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "r-btc-funding-cost-counterevidence-20260923",
+      "original_sha256": "444076756628ae610b46882053cb508d335e87634ad18edcef16ce54f115aa45",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "r-feedback-input-completeness-20260923",
+      "original_sha256": "0ad6526c2a838b2f236759fb09e38030823ed172b83d95db64be008a16e9a38c",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "r-funding-data-audit-20260923",
+      "original_sha256": "037b3b40850167877f2755b5b00cfae8905d61958a4615004310b842eea0c7c4",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "r-stock-session-mechanism-20260923",
+      "original_sha256": "2d112ca683fab485a5d0fc78a4a64d1133b5391135bd3a21e8e6e4bc2caee110",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "review-btc-funding-long-control-manual-20260923-v1",
+      "original_sha256": "c39f6f1f92be9e6f2cb12ea3919a4b97d0c107d6f45910a32f8591eced7b32e5",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "review-btc-funding-short-manual-20260923-v1",
+      "original_sha256": "ab50b6a7d78979d9ae63f65d59d683885564a31a37df6dfcb47d802a32241edd",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "run-boundary-sensitivity-20260923@attempt-1",
+      "original_sha256": "a67902bb47f829d5aee785d9c701f0b06e92a9209c55031ab41fd4a21d366208",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": [
+        "method_ref"
+      ]
+    },
+    {
+      "record_ref": "run-btc-entry-confirmation-20260923@attempt-1",
+      "original_sha256": "c24901fb5af74c50e1771a62a68cc120f02e80e556b12e393fc3bb871b379b4a",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": [
+        "method_ref"
+      ]
+    },
+    {
+      "record_ref": "run-btc-eth-paired-funding-20260923@attempt-1",
+      "original_sha256": "8adf5f0322743d710adcac543afa29c7a78020dd946b3256b413d15ac3001d94",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "run-cost-counterevidence-20260923@attempt-1",
+      "original_sha256": "22ec02c2a088c6262a30a508506bc13ac3aad7af40f1b270fe3a0e47e711598b",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "run-feedback-input-completeness-20260923@attempt-1",
+      "original_sha256": "55fae3643fa8b8ee98c02cf371fa4ab400a737b0b240997b01a0a31ac82181d6",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "run-funding-audit-20260923@attempt-1",
+      "original_sha256": "adc96bc4df51486f0ad29066fff54c780b32fc972040ab70178343089f0b195e",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "seed-a-20260923",
+      "original_sha256": "f3c6816fd61dd71d2d43320d6e89dacfef9c06e30ee6a07eecf4d629f022f941",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "seed-b-20260923",
+      "original_sha256": "2e10bc6b68a13dbb1aadff7987d26e050cc735b91c43b3a8074879fb0ed544f3",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "seed-c-20260923",
+      "original_sha256": "c57a4a2a4d1665d0b1d474909643ec08ecf2f3fb91c0b24a6efa778db18498a5",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "seed-d-20260923",
+      "original_sha256": "060ae25d4a6407e263b80acf45708416f251cce4b4a4f566e91ade07b910b040",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "seed-e-20260923",
+      "original_sha256": "3135db19982752b37ab49ac0a09a4e68524f342662aaf48498d69c80299e2dd9",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "seed-f-20260923",
+      "original_sha256": "93b215eff4cee004b334af9403bc3a9be8f260c7d6973004578d2c4b18fd89ce",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "seed-g-20260923",
+      "original_sha256": "e86b2c5a5f22898e4f7ebeba92418ea5a5e4d00a0c4fc0e013c8976392b28472",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "seed-h-20260923",
+      "original_sha256": "6c417908b4f15b3c2fb42b6eb1c23a3e1e985fd5a9e4c082cd6ef0aedb94c8bf",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    },
+    {
+      "record_ref": "seed-i-20260923",
+      "original_sha256": "f3393292a6e40510e00c73b63ebd600391602f6b3af35f58891805c532b1371b",
+      "candidate_exact": true,
+      "old_exported_values_unchanged": true,
+      "prior_omitted_fields": []
+    }
+  ],
+  "cases": [
+    {
+      "case": "decision-entry-confirmation-boundary-20260923",
+      "requested_refs": [
+        "decision-entry-confirmation-boundary-20260923"
+      ],
+      "archive_id": "60e3ba4a66f8b1d19bad336ecbbb03a141f99f1e0c36093d0cfe422e6b0d5182",
+      "archive_sha256": "537f5b31a54b84d44100deb7b90c4a069e8b3ee06d9202230487a9d9d6af2681",
+      "record_refs": [
+        "batch-manual-safe-review-20260923-v1",
+        "btc@observed-20260923-v1",
+        "d-btc-candles-20260921@1",
+        "decision-entry-confirmation-boundary-20260923",
+        "feedback-btc-funding-long-control-manual-20260923-v1",
+        "feedback-btc-funding-short-manual-20260923-v1",
+        "p-btc-funding-long-control-20260923@1",
+        "p-btc-funding-short-20260923@1",
+        "r-btc-entry-confirmation-20260923",
+        "r-btc-funding-cost-counterevidence-20260923",
+        "r-funding-data-audit-20260923",
+        "review-btc-funding-long-control-manual-20260923-v1",
+        "review-btc-funding-short-manual-20260923-v1",
+        "seed-b-20260923"
+      ],
+      "record_count": 14,
+      "file_count": 35,
+      "same_input_byte_determinism": "PASS",
+      "inspect": "PASS",
+      "new_directory_exact_restore": "PASS",
+      "single_run_method_in_closure": null,
+      "unallowlisted_protocol_files_excluded": true,
+      "private_attachment_files_excluded": true,
+      "attachment_allowlist_not_expanded": true
+    },
+    {
+      "case": "m-btc-entry-confirmation-component-20260923@1",
+      "requested_refs": [
+        "m-btc-entry-confirmation-component-20260923@1"
+      ],
+      "archive_id": "ef2111ae5ccb49c1960a2bb72e4c5101590339c8a73bf3e49143f255a17ae196",
+      "archive_sha256": "8d73681fc41d578d8ef1b17d7a910e340ef53928371b20032decae2bc7c82a0a",
+      "record_refs": [
+        "m-btc-entry-confirmation-component-20260923@1"
+      ],
+      "record_count": 1,
+      "file_count": 1,
+      "same_input_byte_determinism": "PASS",
+      "inspect": "PASS",
+      "new_directory_exact_restore": "PASS",
+      "single_run_method_in_closure": null,
+      "unallowlisted_protocol_files_excluded": true,
+      "private_attachment_files_excluded": true,
+      "attachment_allowlist_not_expanded": true
+    },
+    {
+      "case": "run-boundary-sensitivity-20260923@attempt-1",
+      "requested_refs": [
+        "run-boundary-sensitivity-20260923@attempt-1"
+      ],
+      "archive_id": "c05a6e1585cf66be324b39238f01df8b3d47d3b34d2e5cd4f44d355d4572a897",
+      "archive_sha256": "634f7992c623bae222697f75e0ea32f04b43a737aa62299dd7eb0219905fd025",
+      "record_refs": [
+        "batch-manual-safe-review-20260923-v1",
+        "d-btc-candles-20260921@1",
+        "d-btc-trades-20260921@1",
+        "decision-adopt-input-feedback-long-20260923",
+        "decision-adopt-input-feedback-short-20260923",
+        "feedback-btc-funding-long-control-manual-20260923-v1",
+        "feedback-btc-funding-short-manual-20260923-v1",
+        "m-minute-boundary-conditional-envelope-20260923@1",
+        "p-btc-funding-long-control-20260923@1",
+        "p-btc-funding-short-20260923@1",
+        "r-boundary-sensitivity-20260923",
+        "r-btc-funding-cost-counterevidence-20260923",
+        "r-feedback-input-completeness-20260923",
+        "r-funding-data-audit-20260923",
+        "review-btc-funding-long-control-manual-20260923-v1",
+        "review-btc-funding-short-manual-20260923-v1",
+        "run-boundary-sensitivity-20260923@attempt-1"
+      ],
+      "record_count": 17,
+      "file_count": 40,
+      "same_input_byte_determinism": "PASS",
+      "inspect": "PASS",
+      "new_directory_exact_restore": "PASS",
+      "single_run_method_in_closure": "m-minute-boundary-conditional-envelope-20260923@1",
+      "unallowlisted_protocol_files_excluded": true,
+      "private_attachment_files_excluded": true,
+      "attachment_allowlist_not_expanded": true
+    },
+    {
+      "case": "run-btc-entry-confirmation-20260923@attempt-1",
+      "requested_refs": [
+        "run-btc-entry-confirmation-20260923@attempt-1"
+      ],
+      "archive_id": "145a9d6838f5f06decf99439d6370fe554ea7b3ec93cfb70b04aefedcc4d469a",
+      "archive_sha256": "6c976b9ca6136aa2d686ca6dc5208b00d4a7b18f60bf3cbfe22309816a1802a3",
+      "record_refs": [
+        "batch-manual-safe-review-20260923-v1",
+        "btc@observed-20260923-v1",
+        "d-btc-candles-20260921@1",
+        "feedback-btc-funding-long-control-manual-20260923-v1",
+        "feedback-btc-funding-short-manual-20260923-v1",
+        "m-btc-entry-confirmation-component-20260923@1",
+        "p-btc-funding-long-control-20260923@1",
+        "p-btc-funding-short-20260923@1",
+        "r-btc-entry-confirmation-20260923",
+        "r-btc-funding-cost-counterevidence-20260923",
+        "r-funding-data-audit-20260923",
+        "review-btc-funding-long-control-manual-20260923-v1",
+        "review-btc-funding-short-manual-20260923-v1",
+        "run-btc-entry-confirmation-20260923@attempt-1",
+        "seed-b-20260923"
+      ],
+      "record_count": 15,
+      "file_count": 36,
+      "same_input_byte_determinism": "PASS",
+      "inspect": "PASS",
+      "new_directory_exact_restore": "PASS",
+      "single_run_method_in_closure": "m-btc-entry-confirmation-component-20260923@1",
+      "unallowlisted_protocol_files_excluded": true,
+      "private_attachment_files_excluded": true,
+      "attachment_allowlist_not_expanded": true
+    },
+    {
+      "case": "all-nine-new-public",
+      "requested_refs": [
+        "decision-boundary-further-test-long-20260923",
+        "decision-boundary-further-test-short-20260923",
+        "decision-entry-confirmation-boundary-20260923",
+        "m-btc-entry-confirmation-component-20260923@1",
+        "m-minute-boundary-conditional-envelope-20260923@1",
+        "r-boundary-sensitivity-20260923",
+        "r-btc-entry-confirmation-20260923",
+        "run-boundary-sensitivity-20260923@attempt-1",
+        "run-btc-entry-confirmation-20260923@attempt-1"
+      ],
+      "archive_id": "f91a1dc0948075f5a63444981d431b012bb75748541adaa364aca5a7e1bee1c3",
+      "archive_sha256": "b48b59dd2014a88410ad94734816241ba21c2bc4205b6dd060d09bab4d68b4f3",
+      "record_refs": [
+        "batch-manual-safe-review-20260923-v1",
+        "btc@observed-20260923-v1",
+        "d-btc-candles-20260921@1",
+        "d-btc-trades-20260921@1",
+        "decision-adopt-input-feedback-long-20260923",
+        "decision-adopt-input-feedback-short-20260923",
+        "decision-boundary-further-test-long-20260923",
+        "decision-boundary-further-test-short-20260923",
+        "decision-entry-confirmation-boundary-20260923",
+        "feedback-btc-funding-long-control-manual-20260923-v1",
+        "feedback-btc-funding-short-manual-20260923-v1",
+        "m-btc-entry-confirmation-component-20260923@1",
+        "m-minute-boundary-conditional-envelope-20260923@1",
+        "p-btc-funding-long-control-20260923@1",
+        "p-btc-funding-short-20260923@1",
+        "r-boundary-sensitivity-20260923",
+        "r-btc-entry-confirmation-20260923",
+        "r-btc-funding-cost-counterevidence-20260923",
+        "r-feedback-input-completeness-20260923",
+        "r-funding-data-audit-20260923",
+        "review-btc-funding-long-control-manual-20260923-v1",
+        "review-btc-funding-short-manual-20260923-v1",
+        "run-boundary-sensitivity-20260923@attempt-1",
+        "run-btc-entry-confirmation-20260923@attempt-1",
+        "seed-b-20260923"
+      ],
+      "record_count": 25,
+      "file_count": 50,
+      "same_input_byte_determinism": "PASS",
+      "inspect": "PASS",
+      "new_directory_exact_restore": "PASS",
+      "single_run_method_in_closure": null,
+      "unallowlisted_protocol_files_excluded": true,
+      "private_attachment_files_excluded": true,
+      "attachment_allowlist_not_expanded": true
+    },
+    {
+      "case": "all-forty-eight-public",
+      "requested_refs": [
+        "aapl@observed-20260923-v1",
+        "batch-manual-safe-review-20260923-v1",
+        "btc@observed-20260923-v1",
+        "d-btc-candles-20260921@1",
+        "d-btc-eth-funding-exposed-20260921@1",
+        "d-btc-trades-20260921@1",
+        "decision-adopt-input-feedback-long-20260923",
+        "decision-adopt-input-feedback-short-20260923",
+        "decision-boundary-further-test-long-20260923",
+        "decision-boundary-further-test-short-20260923",
+        "decision-entry-confirmation-boundary-20260923",
+        "decision-funding-cost-followup-20260923",
+        "decision-paired-funding-boundary-20260923",
+        "eth@observed-20260923-v1",
+        "feedback-btc-funding-long-control-manual-20260923-v1",
+        "feedback-btc-funding-short-manual-20260923-v1",
+        "m-btc-entry-confirmation-component-20260923@1",
+        "m-minute-boundary-conditional-envelope-20260923@1",
+        "m-paired-funding-component-20260923@1",
+        "m-trade-candle-development-audit-20260923@1",
+        "p-btc-funding-long-control-20260923@1",
+        "p-btc-funding-short-20260923@1",
+        "publication-bootstrap-manual-20260923-v1",
+        "qqq@observed-20260923-v1",
+        "r-boundary-sensitivity-20260923",
+        "r-btc-entry-confirmation-20260923",
+        "r-btc-eth-paired-funding-20260923",
+        "r-btc-funding-cost-counterevidence-20260923",
+        "r-feedback-input-completeness-20260923",
+        "r-funding-data-audit-20260923",
+        "r-stock-session-mechanism-20260923",
+        "review-btc-funding-long-control-manual-20260923-v1",
+        "review-btc-funding-short-manual-20260923-v1",
+        "run-boundary-sensitivity-20260923@attempt-1",
+        "run-btc-entry-confirmation-20260923@attempt-1",
+        "run-btc-eth-paired-funding-20260923@attempt-1",
+        "run-cost-counterevidence-20260923@attempt-1",
+        "run-feedback-input-completeness-20260923@attempt-1",
+        "run-funding-audit-20260923@attempt-1",
+        "seed-a-20260923",
+        "seed-b-20260923",
+        "seed-c-20260923",
+        "seed-d-20260923",
+        "seed-e-20260923",
+        "seed-f-20260923",
+        "seed-g-20260923",
+        "seed-h-20260923",
+        "seed-i-20260923"
+      ],
+      "archive_id": "cb1080a7c65f5c07ac8010efcc61f25d52100c532b62d73455a6e6f7633b7b34",
+      "archive_sha256": "81993cd8f8d40ace406b30a2269b514a6ccf1a66de7d8ddf21e68e2e4e19bfb8",
+      "record_refs": [
+        "aapl@observed-20260923-v1",
+        "batch-manual-safe-review-20260923-v1",
+        "btc@observed-20260923-v1",
+        "d-btc-candles-20260921@1",
+        "d-btc-eth-funding-exposed-20260921@1",
+        "d-btc-trades-20260921@1",
+        "decision-adopt-input-feedback-long-20260923",
+        "decision-adopt-input-feedback-short-20260923",
+        "decision-boundary-further-test-long-20260923",
+        "decision-boundary-further-test-short-20260923",
+        "decision-entry-confirmation-boundary-20260923",
+        "decision-funding-cost-followup-20260923",
+        "decision-paired-funding-boundary-20260923",
+        "eth@observed-20260923-v1",
+        "feedback-btc-funding-long-control-manual-20260923-v1",
+        "feedback-btc-funding-short-manual-20260923-v1",
+        "m-btc-entry-confirmation-component-20260923@1",
+        "m-minute-boundary-conditional-envelope-20260923@1",
+        "m-paired-funding-component-20260923@1",
+        "m-trade-candle-development-audit-20260923@1",
+        "p-btc-funding-long-control-20260923@1",
+        "p-btc-funding-short-20260923@1",
+        "publication-bootstrap-manual-20260923-v1",
+        "qqq@observed-20260923-v1",
+        "r-boundary-sensitivity-20260923",
+        "r-btc-entry-confirmation-20260923",
+        "r-btc-eth-paired-funding-20260923",
+        "r-btc-funding-cost-counterevidence-20260923",
+        "r-feedback-input-completeness-20260923",
+        "r-funding-data-audit-20260923",
+        "r-stock-session-mechanism-20260923",
+        "review-btc-funding-long-control-manual-20260923-v1",
+        "review-btc-funding-short-manual-20260923-v1",
+        "run-boundary-sensitivity-20260923@attempt-1",
+        "run-btc-entry-confirmation-20260923@attempt-1",
+        "run-btc-eth-paired-funding-20260923@attempt-1",
+        "run-cost-counterevidence-20260923@attempt-1",
+        "run-feedback-input-completeness-20260923@attempt-1",
+        "run-funding-audit-20260923@attempt-1",
+        "seed-a-20260923",
+        "seed-b-20260923",
+        "seed-c-20260923",
+        "seed-d-20260923",
+        "seed-e-20260923",
+        "seed-f-20260923",
+        "seed-g-20260923",
+        "seed-h-20260923",
+        "seed-i-20260923"
+      ],
+      "record_count": 48,
+      "file_count": 79,
+      "same_input_byte_determinism": "PASS",
+      "inspect": "PASS",
+      "new_directory_exact_restore": "PASS",
+      "single_run_method_in_closure": null,
+      "unallowlisted_protocol_files_excluded": true,
+      "private_attachment_files_excluded": true,
+      "attachment_allowlist_not_expanded": true
+    }
+  ],
+  "candidate_source_hashes": {
+    "researchlib/public.py": "db4eb97c35a312277798605f76ac334dfd57bbc6fe3b1b6d718cd86f00d20dbd",
+    "researchlib/contracts.py": "7929f554936294d08407fd7198a2aa0fdfc72ee466c386c34244a711edbc55fd"
+  },
+  "installed_source_hashes_unchanged": {
+    "researchlib/public.py": "514263bb4038d7d1b1548f31ba9d3d00d67c0f0410990456fc9f02e85e9fd063",
+    "researchlib/contracts.py": "60a65556a02328b309f016a602ba142b887d23771556a907ecce2b71144c6041"
+  },
+  "installation_unchanged": true,
+  "original_files_unchanged": 266,
+  "committed_store_tree_sha256_before": "1072220a990e088ef7e6a48b2e76da4740159bb76dd7bae75892f76890f3c1b8",
+  "committed_store_tree_sha256_after": "1072220a990e088ef7e6a48b2e76da4740159bb76dd7bae75892f76890f3c1b8",
+  "production_writes": false,
+  "remote_calls": false,
+  "published": false,
+  "archives_retained": false,
+  "scientific_reproduction": "NOT_RUN",
+  "limitations": [
+    "Candidate only; independent review and installation not performed.",
+    "Exact public records and explicitly allowed attachments only; protocol/code/source originals remain excluded unless already allowlisted.",
+    "Local recovery is not remote recovery, economic validation or natural-run evidence."
+  ]
+}
