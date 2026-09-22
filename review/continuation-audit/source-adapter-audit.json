@@ -1,0 +1,242 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "okx-official-download-adapter-audit-20260923",
+  "recorded_at": "2026-09-22T19:08:27.328879Z",
+  "status": "BLOCKED_FOR_FROZEN_FORWARD_PLAN_FINALIZATION",
+  "evidence_stage": "REAL_OFFICIAL_DOCUMENT_AND_EXISTING_FILE_SCHEMA_AUDIT_NOT_ECONOMIC_RESULT",
+  "scope": {
+    "plan_refs": [
+      "p-btc-funding-short-20260923@1",
+      "p-btc-funding-long-control-20260923@1"
+    ],
+    "instrument_name": "BTC-USDT-SWAP",
+    "entry_window_utc": [
+      "2026-09-23T00:05:00Z",
+      "2026-09-23T00:06:00Z"
+    ],
+    "exit_window_utc": [
+      "2026-09-24T00:05:00Z",
+      "2026-09-24T00:06:00Z"
+    ],
+    "frozen_plan_file_sha256": "fcd0972816c5dc6ebbdb13fd8d992ae8c2e0eff486fc5554c70aadda25d71360",
+    "allowed_acquisition": "official public webpages and official file downloads only",
+    "audit_download_limit_bytes": 10000000,
+    "market_api_called": false,
+    "account_page_or_account_data_accessed": false,
+    "login_action_performed": false,
+    "paid_source_used": false,
+    "new_raw_market_download_bytes": 0,
+    "new_public_document_download_bytes": 388890,
+    "existing_sample_copied_bytes": 12419,
+    "production_writes": false,
+    "native_changes": false,
+    "new_economic_result": false,
+    "raw_disclosure": "LOCAL_ONLY_ISOLATED_WORKTREE"
+  },
+  "official_documents": [
+    {
+      "source_id": "historical-data",
+      "url": "https://www.okx.com/historical-data",
+      "final_url": "https://www.okx.com/historical-data",
+      "http_status": 200,
+      "retrieved_at": "2026-09-22T19:05:48.690917Z",
+      "bytes": 71280,
+      "sha256": "c2c248464b07e9eee9e1242237f2cc88fd438beb05b4eaacf08b268ad3b17013",
+      "raw_disclosure": "LOCAL_ONLY"
+    },
+    {
+      "source_id": "funding-mechanism",
+      "url": "https://www.okx.com/en-sg/help/perps-funding-fee-mechanism",
+      "final_url": "https://www.okx.com/en-sg/help/perps-funding-fee-mechanism",
+      "http_status": 200,
+      "retrieved_at": "2026-09-22T19:05:49.592628Z",
+      "bytes": 84559,
+      "sha256": "abece88bea325ba5e0427227389874cd585328429541624ae0186c2afba1fe56",
+      "raw_disclosure": "LOCAL_ONLY"
+    },
+    {
+      "source_id": "mark-price",
+      "url": "https://www.okx.com/help/ii-mark-price-and-last-price",
+      "final_url": "https://www.okx.com/help/ii-mark-price-and-last-price",
+      "http_status": 200,
+      "retrieved_at": "2026-09-22T19:05:50.525851Z",
+      "bytes": 72538,
+      "sha256": "96a33709bec741a53d8c1055c9125c51cc3f159670053ab7368481ccaab90c99",
+      "raw_disclosure": "LOCAL_ONLY"
+    },
+    {
+      "source_id": "historical-data-terms",
+      "url": "https://www.okx.com/help/historicaldata-terms-and-conditions",
+      "final_url": "https://www.okx.com/help/historicaldata-terms-and-conditions",
+      "http_status": 200,
+      "retrieved_at": "2026-09-22T19:05:51.424740Z",
+      "bytes": 65880,
+      "sha256": "7241c2d0d8222a55476b7d62f137c823c888d1cfb46d495368db009135c8d5ff",
+      "raw_disclosure": "LOCAL_ONLY"
+    },
+    {
+      "source_id": "candlestick-faq",
+      "url": "https://www.okx.com/help/candlestick-faqs-and-settings",
+      "final_url": "https://www.okx.com/help/candlestick-faqs-and-settings",
+      "http_status": 200,
+      "retrieved_at": "2026-09-22T19:05:52.463756Z",
+      "bytes": 94633,
+      "sha256": "81fd6c507e745a8d495f8691066724bcc6eb0f21fb83ad96066e23763cea9178",
+      "raw_disclosure": "LOCAL_ONLY"
+    }
+  ],
+  "browser_observations": {
+    "url": "https://www.okx.com/zh-hans/historical-data",
+    "date_partition_observation_window_utc": [
+      "2026-09-22T19:05:58Z",
+      "2026-09-22T19:06:10Z"
+    ],
+    "navigation": "Funding rate > date picker; also observed in Trade history date picker",
+    "partition_excerpt": "每日的文件数据为 00:00 ~ 23:59 (UTC+8) 期间的数据。",
+    "publication_delay_days_declared": 2,
+    "publication_delay_scope": [
+      "trade_history",
+      "candlesticks",
+      "funding_rates"
+    ],
+    "publication_sla_verified": false,
+    "trade_fields": [
+      "instrument_name",
+      "trade_id",
+      "side",
+      "size",
+      "price",
+      "created_time",
+      "source"
+    ],
+    "trade_id_documented_semantics": "unique identifier only; no same-millisecond chronology or consecutiveness documented",
+    "trade_timestamp_unit": "unix_milliseconds",
+    "source_documented_values": {
+      "0": "normal order",
+      "1": "retail price improvement order"
+    },
+    "funding_fields": [
+      "instrument_name",
+      "funding_rate",
+      "funding_time"
+    ],
+    "funding_rate_semantics": "actual rate of latest settlement",
+    "funding_time_semantics": "latest settlement Unix timestamp in milliseconds",
+    "candlestick_fields": [
+      "instrument_name",
+      "open",
+      "high",
+      "low",
+      "close",
+      "vol",
+      "vol_ccy",
+      "vol_quote",
+      "open_time",
+      "confirm"
+    ],
+    "candlestick_confirm_semantics": "0 incomplete candle; 1 completed candle, not whole-file omission proof",
+    "archive_ui_metadata": [
+      "period",
+      "instrument_type",
+      "symbol",
+      "export_time",
+      "file_size",
+      "file_count",
+      "filename"
+    ],
+    "archive_manifest_count_checksum_sequence_or_gap_metadata_observed": false,
+    "mark_price_export_selector_observed": false,
+    "trade_file_not_downloaded": {
+      "filename": "BTC-USDT-SWAP-trades-2026-09-21.zip",
+      "displayed_size": "27.55 MB",
+      "reason": "EXCEEDS_10MB_AUDIT_LIMIT",
+      "file_count": 1,
+      "displayed_export_time": "2026/09/23 03:01:21",
+      "displayed_export_timezone": "NOT_ESTABLISHED"
+    },
+    "older_trade_sample_attempt": "Date-selector attempt did not produce a verified older export; not evidence that older samples are unavailable."
+  },
+  "real_file_recheck": {
+    "verified_at": "2026-09-22T19:05:17.911630+00:00",
+    "source_kind": "RECHECK_EXISTING_OFFICIAL_DOWNLOAD_NOT_NEW_NETWORK_DOWNLOAD",
+    "archive_name": "allswap-fundingrates-2026-09-21.zip",
+    "archive_bytes": 12419,
+    "archive_sha256": "34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c",
+    "members": [
+      {
+        "name": "allswap-fundingrates-2026-09-21.csv",
+        "bytes": 82188,
+        "compressed_bytes": 12251,
+        "crc32": "9079ba0c"
+      }
+    ],
+    "zip_crc_pass": true,
+    "member_sha256": "c2ae92301fd8ace5682729e46e58ff959d14b7ebf948ead7d9c4f533d5a9950c",
+    "header": [
+      "instrument_name",
+      "funding_rate",
+      "funding_time"
+    ],
+    "total_rows": 2103,
+    "instruments": 482,
+    "duplicate_keys": 0,
+    "local_day_utc_interval": [
+      "2026-09-20T16:00:00Z",
+      "2026-09-21T16:00:00Z"
+    ],
+    "out_of_partition_rows": 0,
+    "btc_event_count": 3,
+    "btc_event_times": [
+      "2026-09-20T16:00:00Z",
+      "2026-09-21T00:00:00Z",
+      "2026-09-21T08:00:00Z"
+    ],
+    "global_min_time": "2026-09-20T16:00:00Z",
+    "global_max_time": "2026-09-21T15:00:00Z",
+    "coverage_claim": "FILE_PARSE_AND_DECLARED_PARTITION_ONLY_NOT_OMISSION_PROOF"
+  },
+  "capabilities": {
+    "funding_csv_parser": "REAL_FILE_FIELDS_VERIFIED_FIXED_NORMALIZER_FEASIBLE",
+    "funding_event_set_coverage": "UNKNOWN_NO_EXPECTED_EVENTS_MANIFEST_OR_INTERVAL_CHANGE_HISTORY",
+    "target_trade_parser": "OFFICIAL_UI_SCHEMA_ONLY_ACTUAL_TARGET_CSV_DECODE_NOT_VERIFIED",
+    "same_millisecond_first_trade_order": "UNKNOWN_NO_DOCUMENTED_SEQUENCE_ORDER",
+    "settlement_mark_price": "BLOCKED_NO_EXACT_SETTLEMENT_MARK_DOWNLOAD_IDENTIFIED_IN_REVIEWED_SOURCES",
+    "all_mark_events_path": "BLOCKED_NO_COMPLETE_MARK_EVENT_ARCHIVE_IDENTIFIED",
+    "archive_transport_integrity": "EXISTING_FUNDING_ZIP_CRC_AND_LOCAL_SHA256_PASS",
+    "exchange_event_omission_proof": "UNKNOWN_NOT_IMPLIED_BY_ZIP_INTEGRITY_OR_FILE_DATE"
+  },
+  "blockers": [
+    "NO_VERIFIED_EXACT_SETTLEMENT_MARK_SOURCE",
+    "NO_VERIFIED_COMPLETE_MARK_EVENT_PATH",
+    "NO_VERIFIED_TRADE_SAME_MILLISECOND_ORDER",
+    "NO_VERIFIED_EVENT_SET_COMPLETENESS",
+    "TARGET_TRADE_FILE_DECODING_NOT_VERIFIED_UNDER_SIZE_LIMIT",
+    "FORWARD_WINDOW_FILES_NOT_YET_AVAILABLE_AT_AUDIT_TIME"
+  ],
+  "coverage_contract_recommendation": {
+    "partition_timezone": "UTC+08:00",
+    "interval_convention": "[local_day_start, next_local_day_start) converted to UTC; final millisecond boundary is validator convention, UI prints minute precision",
+    "required_local_day_labels_for_frozen_position": [
+      "2026-09-23",
+      "2026-09-24"
+    ],
+    "required_local_day_labels_for_original_2026_09_21_utc_day": [
+      "2026-09-21",
+      "2026-09-22"
+    ],
+    "required_proof_levels": [
+      "transport_integrity",
+      "schema_and_identity",
+      "declared_partition_union",
+      "source_event_completeness",
+      "execution_event_order_and_exact_mark_join"
+    ],
+    "missing_proof_state": "UNKNOWN_OR_MISSING_DATA_NEVER_COMPLETE",
+    "file_no_data_does_not_imply_zero_trades_or_zero_funding": true,
+    "fixed_8h_schedule_not_allowed": true,
+    "nearest_mark_or_candle_close_substitution_not_allowed": true,
+    "same_ms_arbitrary_trade_id_or_file_order_not_allowed": true,
+    "official_page_pagination": "file export UI; no event pagination or cursor chain exposed; export-history rows are not data partitions"
+  },
+  "old_record_handling": "New audit fact only; append later provenance/correction if authorized. Original plan/research records remain unchanged. UTC+8 partition explains old sample boundary but does not prove whole UTC-day coverage or scientific outcome."
+}

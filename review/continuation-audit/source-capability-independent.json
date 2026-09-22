@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "reviewed_at": "2026-09-22T19:13:51.691995+00:00",
+  "decision": "PASS_SOURCE_CAPABILITY_BOUNDARIES_NOT_ADAPTER_ACCEPTANCE",
+  "reviewed_audit_sha256": {
+    "source-adapter-audit.md": "e58a0b1f12dc46e6a13d697c5e06586c621cd6b8ba086d807ef53f6c4edb2700",
+    "source-adapter-audit.json": "ede444d448978095547d8c02ea9b9c388a70001e62464153b1d2f0b629698324"
+  },
+  "independent_checks": {
+    "archive_hash": true,
+    "archive_size": true,
+    "member_hash": true,
+    "member_size": true,
+    "rows": true,
+    "instruments": true,
+    "all_values_finite": true,
+    "all_timestamps_integer_ms": true,
+    "duplicate_keys_zero": true,
+    "all_rows_within_declared_utc8_day": true,
+    "btc_times": true
+  },
+  "plan_hashes": {
+    "p-btc-funding-short-20260923@1": "65ff62c3603d257b82b3274785fd1bfe2c5a784d215786be4775fe7fa076bce4",
+    "p-btc-funding-long-control-20260923@1": "a8dd9a25bd4a5353bc8ed479ec41056bcf07704fccb285f2d014a9615358d02c"
+  },
+  "real_file_summary": {
+    "archive_sha256": "34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c",
+    "archive_bytes": 12419,
+    "member_sha256": "c2ae92301fd8ace5682729e46e58ff959d14b7ebf948ead7d9c4f533d5a9950c",
+    "rows": 2103,
+    "instruments": 482,
+    "btc_times_utc": [
+      "2026-09-20T16:00:00Z",
+      "2026-09-21T00:00:00Z",
+      "2026-09-21T08:00:00Z"
+    ],
+    "declared_local_day_converted_to_utc": [
+      "2026-09-20T16:00:00+00:00",
+      "2026-09-21T16:00:00+00:00"
+    ],
+    "requested_utc_day_complete_proven": false,
+    "source_file_missing_rows_proven": false
+  },
+  "official_documents_independently_reopened": [
+    {
+      "url": "https://www.okx.com/help/candlestick-faqs-and-settings",
+      "scope": "FAQ 10 corroborates candlestick partition and publication declaration only; not funding/trade selector capture"
+    },
+    {
+      "url": "https://www.okx.com/help/historicaldata-terms-and-conditions",
+      "scope": "No completeness/accuracy guarantee; not evidence of a particular omission"
+    },
+    {
+      "url": "https://www.okx.com/en-sg/help/perps-funding-fee-mechanism",
+      "scope": "Mark-based funding, variable settlement interval and assessment timing"
+    },
+    {
+      "url": "https://www.okx.com/historical-data",
+      "scope": "Public category landing page only; static extraction does not expose dynamic selector fields"
+    }
+  ],
+  "browser_ui_observation_boundary": {
+    "funding_trade_utc8_two_day_and_trade_fields": "FIRST_AUDITOR_RECORDED_OBSERVATION_NOT_RECAPTURED_BY_THIS_REVIEW",
+    "original_tool_receipt_exists_reported_by_author": true,
+    "saved_ui_observations": "MANUAL_TRANSCRIPTION_NOT_INDEPENDENT_CAPTURE"
+  },
+  "conclusions": {
+    "utc8_partition_not_utc_day": "CONFIRMED_TIME_CONVERSION_AND_REAL_SAMPLE_CONSISTENCY",
+    "two_day_publication": "DECLARED_POLICY_NOT_MEASURED_RELEASE_SLA",
+    "trade_id_unique_implies_order": false,
+    "absence_of_mark_selector_proves_all_channels_unavailable": false,
+    "no_completeness_guarantee_proves_missing_rows": false,
+    "frozen_forward_plans_can_be_finalized_now": false
+  },
+  "production_originals_modified": false,
+  "market_api_called": false,
+  "new_raw_market_download": false,
+  "normalizer_reviewed": false,
+  "formal_review_outbox_reviewed": false
+}
