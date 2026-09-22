@@ -9,9 +9,11 @@ from __future__ import annotations
 import argparse
 import importlib.util
 import json
+import os
 import sys
 import tempfile
 import zipfile
+from contextlib import contextmanager
 from pathlib import Path
 
 sys.dont_write_bytecode = True
@@ -149,22 +151,70 @@ def verify(code_root):
                             "Local recovery is not remote recovery, economic validation or natural-run evidence."]}
 
 
-def main():
+@contextmanager
+def new_receipt(path):
+    """Reserve a new inode under fixed ROOT/tests/receipts before verification.
+
+    Containment is lexical: never resolve the requested path or allowed root.
+    Walk every existing directory with NOFOLLOW using directory descriptors,
+    then hold the exclusively created output FD through verification and write.
+    Replacing any pathname cannot redirect writes or failure cleanup. Failure
+    leaves an empty reservation, not a successful receipt; no path is unlinked.
+    """
+    destination = Path(path)
+    if ".." in destination.parts:
+        raise ValueError("Receipt path traversal is not allowed")
+    if destination.is_absolute():
+        try:
+            relative = destination.relative_to(ROOT)
+        except ValueError:
+            raise ValueError("Receipt must be under candidate tests/receipts") from None
+    else:
+        relative = destination
+    if relative.parts[:2] != ("tests", "receipts") or len(relative.parts) < 3:
+        raise ValueError("Receipt must be a new file under candidate tests/receipts")
+    directory_flags = os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW
+    parent_fd = os.open(ROOT.anchor, directory_flags)
+    output_fd = None
+    try:
+        for component in ROOT.parts[1:] + relative.parent.parts:
+            child_fd = os.open(component, directory_flags, dir_fd=parent_fd)
+            os.close(parent_fd)
+            parent_fd = child_fd
+        output_fd = os.open(relative.name, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW,
+                            0o600, dir_fd=parent_fd)
+    finally:
+        os.close(parent_fd)
+    try:
+        with os.fdopen(output_fd, "wb", buffering=0) as output:
+            output_fd = None
+            try:
+                yield output
+            except BaseException:
+                # Only the owned, still-open inode is touched, never its name.
+                os.ftruncate(output.fileno(), 0)
+                raise
+    finally:
+        if output_fd is not None:
+            os.close(output_fd)
+
+
+def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--code-root", type=Path, required=True, help="Installed main root; read only")
     parser.add_argument("--receipt", type=Path, required=True, help="New receipt under this checkout's tests/receipts")
-    args = parser.parse_args()
-    destination = args.receipt.resolve()
-    if not destination.is_relative_to((ROOT / "tests/receipts").resolve()) or destination.exists():
-        parser.error("Receipt must be a new file under candidate tests/receipts")
-    result = verify(args.code_root)
-    raw = (json.dumps(result, ensure_ascii=False, indent=2) + "\n").encode()
-    scan_bytes("receipt.json", raw)
-    with destination.open("xb") as output:
-        output.write(raw)
-    print(json.dumps({"state": result["state"], "old_public": result["old_public_records_unchanged"],
-                      "new_public": result["new_public_records_exact"], "former_failures": result["former_failures_now_exact"],
-                      "archive_cases": len(result["cases"]), "receipt_sha256": digest(raw)}))
+    args = parser.parse_args(argv)
+    with new_receipt(args.receipt) as output:
+        result = verify(args.code_root)
+        raw = (json.dumps(result, ensure_ascii=False, indent=2) + "\n").encode()
+        scan_bytes("receipt.json", raw)
+        summary = json.dumps({"state": result["state"], "old_public": result["old_public_records_unchanged"],
+                              "new_public": result["new_public_records_exact"], "former_failures": result["former_failures_now_exact"],
+                              "archive_cases": len(result["cases"]), "receipt_sha256": digest(raw)})
+        if output.write(raw) != len(raw):
+            raise OSError("Incomplete receipt write")
+        os.fsync(output.fileno())
+    print(summary)
 
 
 if __name__ == "__main__":

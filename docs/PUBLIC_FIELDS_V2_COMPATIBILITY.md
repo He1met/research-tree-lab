@@ -2,6 +2,8 @@
 
 状态：ISOLATED_CANDIDATE_NOT_INSTALLED。此worktree实际基线为3bac79f1fc0a32fa51bf03790a8079a0c958add9，使用第三批已安装源码，尚不含第四批 conditional-review。作者验证不代替后续独立审查、方法身份整合或安装批准。
 
+上段及本文原验证数字记录字段候选 `e65bb32e162ddc21b2513ee4edfd4d90829c5b5b` 的历史状态，原回执不改写。后续组合候选已加入第四批已审源码及精确 waiting profile 桥接，按首次 conditional 部署处理；组合范围与限制见 [CONDITIONAL_REVIEW.md](CONDITIONAL_REVIEW.md)。第四批工程候选未曾安装或产生生产 conditional/outbox，故不承诺其不存在的正式迁移。组合仍待独立审查和安装批准。
+
 第二研究的9条新增公开原件中，5条已可完整归档；另外4条的网页投影保留允许字段，但完整归档器因省略字段而拒收。本候选保留原件字节，不修改其封存内容、disclosure、已生成快照或旧归档。
 
 两处语义范围：
@@ -26,5 +28,7 @@ PYTHONDONTWRITEBYTECODE=1 python3 tests/verify_public_fields_v2.py \
 本次真实验证见 [public-fields-v2-real.json](../tests/receipts/public-fields-v2-real.json)：39条旧公开原件与旧投影逐值不变，9条新增投影均完整等于原件；4条原拒收对象各自成功导出与新目录恢复。两run单根分别包含对应method；9新增联合闭包25条/50文件，48公开原件全集48条/79文件。6个导出案例均重复生成相同字节并恢复逐hash核对。真实Store共49条，266个已提交文件在验证前后hash均不变；安装配置和主仓两源文件不变。临时归档已删除，没有上传、发布、远端恢复或经济复算。
 
 方法身份影响必须单独处理：已批准waiting方法的本地导入闭包会包含 `public.py` 与 `contracts.py`；第四批conditional方法同样固定这些源码，且对public.py的公开SOURCE例外依赖精确hash。本候选会改变二者的源码身份，不能沿用旧批准、静默替换常量或把新方法倒签为历史可得。第四批精确合入后，根任务须在组合源码上重新生成依赖身份、明确旧waiting/conditional状态接续桥接并独立审查，再决定安装。旧METHOD、SOURCE、review和feedback原件继续保留，尚未执行任何桥接或第四批改动。
+
+上述为原字段候选的整合预案。实际生产核对确认第四批没有安装或生成 conditional/outbox，后续已收敛为首次组合部署候选：只提供旧 d21 waiting 与新组合 waiting 的精确 profile 迁移；不支持未部署的第四批 conditional 身份。组合验证、真实 Gitref 与旧源码保留边界以 `CONDITIONAL_REVIEW.md` 为准。组合新增的作者封存前字段预检建议仅为文档，不改 skill、Store 门禁或附件公开许可。
 
 扫描器继续承担现有模式检查，不能据扫描通过推断所有任意文本均具有再分发许可；本候选不扩大披露范围，也不提供任意原行检测器。公开许可和附件白名单的边界保持独立。
