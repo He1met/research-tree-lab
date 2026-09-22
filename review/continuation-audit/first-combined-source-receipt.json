@@ -1,0 +1,281 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-09-22T21:27:33.863836+00:00",
+  "state": "PASS_SCOPED_FIRST_COMBINED_ENGINEERING_REVIEW",
+  "candidate_commit": "00d9e2bf334a8ec13fe19746aecf021b517a3c8f",
+  "public_source_locator_commit": "e65bb32e162ddc21b2513ee4edfd4d90829c5b5b",
+  "local_git_source_bytes_verified": true,
+  "remote_publication_verified_by_this_review": false,
+  "overall_source_hash": "eca93fe70146b1c6962842cd6b62dc8f66f89a47e8249017387202e1a6985277",
+  "exact_delivery_files": {
+    "docs/CONDITIONAL_REVIEW.md": "7bcbd2cd08523075ac43daa10bee7b64a5a2660d0434886f4570e3e51099b91d",
+    "docs/PUBLIC_FIELDS_V2_COMPATIBILITY.md": "6bd5caaeab8c71ef17fbb5e776bc5c607ccc17a404164b1e1c4bf0da15c9fcad",
+    "researchlib/conditional_review.py": "2508392c524c19b4260f6d120d4f17f80bcd0d327b8daa483036130d12b56fd6",
+    "researchlib/contracts.py": "7929f554936294d08407fd7198a2aa0fdfc72ee466c386c34244a711edbc55fd",
+    "researchlib/public.py": "db4eb97c35a312277798605f76ac334dfd57bbc6fe3b1b6d718cd86f00d20dbd",
+    "scripts/prepare_conditional_review.py": "48c5b08dd6ca5c791e7c86735fa62b0e86b2bec604b22dd657f8127491653728",
+    "tests/fixtures/waiting-d21/METHOD.template.json": "353c72da324febf1d47098a060b09622b10d968d9e76b89da9ad87acfbc1fc31",
+    "tests/fixtures/waiting-d21/README.md": "842226bfcf8903ffdfd706d60ad6c744748309eea014471c750f0d1f07f0c593",
+    "tests/fixtures/waiting-d21/contracts.py.txt": "60a65556a02328b309f016a602ba142b887d23771556a907ecce2b71144c6041",
+    "tests/receipts/conditional-combined-real-input.json": "2309a734bfa5db79592183db3b79a47b9b1b86bddaa09748d135eaf20ade5616",
+    "tests/receipts/conditional-real-input-final.json": "f9c24ef71319d45ab11563f0de6f6afefd93d5afe9bd74acec49e50444af2405",
+    "tests/receipts/conditional-real-input-only.json": "527c1a8b2606f51bc0dbd8a50e9af7c6fe6ad77be2e02df171278219f2d022e8",
+    "tests/receipts/conditional-real-input-repaired.json": "540b1483006515d40d9ebcdecaf36452b39cdb5ffddc16b246fdd0a9b5534e64",
+    "tests/receipts/first-combined-candidate-freeze.json": "a0bc408b0a04b324d275dd849611c0440dbc09fa4b59dd2a53f20ca5f84731f5",
+    "tests/receipts/public-fields-v2-candidate-freeze.json": "66cefa9815f41110ec768fd0b56c4455412e3b8375d3377476ecca6e3a0e5fad",
+    "tests/receipts/public-fields-v2-combined-real.json": "973f1ff5307419d07e84e7d30d2f4a5b77a5e81faee97a981dc16813b33bf9cd",
+    "tests/receipts/public-fields-v2-helper-fixed-real.json": "f3061428ffe7c6fa089ccee9988514ba1dd80d47f94b5c034363e99d32f6dd3f",
+    "tests/receipts/public-fields-v2-helper-repair-freeze.json": "4ef314d938ea68cc7e60ca391729b267f8a60ed49a6c95a91d8391583634b28e",
+    "tests/receipts/public-fields-v2-real.json": "e57d230d57faae8ebeb47dda14809884b83a2ff92133e419244db05abc303280",
+    "tests/test_conditional_review.py": "6adf8c430107c6f8b6a8d1d1342d3261e76b0ddde45508d46c6e6b68fdad8389",
+    "tests/test_public_fields_v2.py": "9ff17ad013c496a02a84397f69e81f1a8ed3a42fd2d686ca2cef2764f86511c2",
+    "tests/test_public_fields_v2_helper.py": "212f9e7e98c59dd96daa15b4672f386f527666d014798a8e1922d51b69c59b11",
+    "tests/verify_public_fields_v2.py": "67194d6ecbb52d193f93707d9aef6b3d2fde00d01f0b8dbfc74f12c1953babd0"
+  },
+  "exact_delivery_count": 23,
+  "method_identity": {
+    "method_version": "funding-conditional-review-v1",
+    "method_code_sha256": "7dbdd186fd04ddca07dc3bfa933f9a0fae1ce66e1f1d91447e0bbeff5332d3ce",
+    "source_sha256": {
+      "researchlib/__init__.py": "6a52c32055618076a5a44b9dacc39d79711ef3ab7a4de73f9f5ddc9015268741",
+      "researchlib/common.py": "a3e7aa7619acee94e05e733c20a4ae4eb30ff7056f9b0fca0b441ecb55d9b683",
+      "researchlib/conditional_review.py": "2508392c524c19b4260f6d120d4f17f80bcd0d327b8daa483036130d12b56fd6",
+      "researchlib/contracts.py": "7929f554936294d08407fd7198a2aa0fdfc72ee466c386c34244a711edbc55fd",
+      "researchlib/funding_forward.py": "79f9aa7dc3c2e1dc47b1cd2eb307cf3eaf685874f722dab21710601bdfefeb66",
+      "researchlib/funding_review.py": "e3b5afd7eeea6754e2723bdb5039c17086da8247330f4983c8d80f1bfb83148a",
+      "researchlib/novelty.py": "e7390b597cfd2a978fa3e9b9208213b6cbb0f331407bb762a5a62a1b8b1b3d08",
+      "researchlib/okx_funding_file.py": "6043a04010e8aed025542857b4eecc1f947cc564863e7435d54db0a652cd006d",
+      "researchlib/okx_trade_file.py": "31c79a1e31d4f2c9ad75952e87c4a7f5dcc479d4df00f127e137790fb6c44f12",
+      "researchlib/public.py": "db4eb97c35a312277798605f76ac334dfd57bbc6fe3b1b6d718cd86f00d20dbd",
+      "researchlib/readiness.py": "ad57c793f68a53c848048d84e21370811b7470bf71e8770d3f2a76cb2df059c7",
+      "researchlib/replay.py": "6a99205c55c58ba9d4de6a9ce1e3b3f752039eea7a28f71ef8e7e40181c44b1c",
+      "researchlib/review.py": "771f64a7764f2c957dcce98cc54cdc1bad5fb4381f9b465175cfa153bba4b906",
+      "researchlib/snapshot.py": "e5404cf0775ab6b99906a8115a2bb6cf97c05f86fc8bc9b0979d25bf64f22e15",
+      "researchlib/store.py": "6a9e7bc0ac8ee533fedb94bab0c87b9217436dbf4d8437f99fba9af8a02e06f6",
+      "scripts/prepare_conditional_review.py": "48c5b08dd6ca5c791e7c86735fa62b0e86b2bec604b22dd657f8127491653728"
+    },
+    "runtime": {
+      "implementation": "CPython",
+      "python_version": "3.9.6",
+      "third_party_runtime_dependencies": []
+    },
+    "plan_hashes": {
+      "p-btc-funding-short-20260923@1": "65ff62c3603d257b82b3274785fd1bfe2c5a784d215786be4775fe7fa076bce4",
+      "p-btc-funding-long-control-20260923@1": "a8dd9a25bd4a5353bc8ed479ec41056bcf07704fccb285f2d014a9615358d02c"
+    },
+    "private_schema": "conditional-private-computation-v1",
+    "public_state_schema": "conditional-public-state-v1",
+    "public_archive": {
+      "self_contained_method_restore": false,
+      "excluded_source_attachments": [
+        {
+          "path": "SOURCE/researchlib/public.py",
+          "sha256": "db4eb97c35a312277798605f76ac334dfd57bbc6fe3b1b6d718cd86f00d20dbd",
+          "reason": "SCANNER_SELF_MATCHES_OWN_PRIVATE_PATH_REGEX",
+          "git_source_locator": "https://github.com/He1met/research-tree-lab/blob/e65bb32e162ddc21b2513ee4edfd4d90829c5b5b/researchlib/public.py",
+          "locator_scope": "IMMUTABLE_GIT_REF_NOT_NETWORK_AVAILABILITY_ATTESTATION"
+        }
+      ],
+      "full_source_closure_retained_locally": true
+    }
+  },
+  "approved_waiting_profiles": {
+    "7718ec0e6f94d2c71a8cd66b0baf6b7a77b39c99312b81e744d8095ae34d3115": {
+      "availability_basis": "SOURCE_BYTES_OBSERVED_AT_PREPARATION_NOT_BACKDATED",
+      "dependency_scope": "Recursive static local import closure including package initializer; standard library bound by Python version",
+      "method_code_sha256": "7718ec0e6f94d2c71a8cd66b0baf6b7a77b39c99312b81e744d8095ae34d3115",
+      "method_version": "funding-review-waiting-v1",
+      "native_identity": "NOT_ATTESTED",
+      "plan_hashes": {
+        "p-btc-funding-long-control-20260923@1": "a8dd9a25bd4a5353bc8ed479ec41056bcf07704fccb285f2d014a9615358d02c",
+        "p-btc-funding-short-20260923@1": "65ff62c3603d257b82b3274785fd1bfe2c5a784d215786be4775fe7fa076bce4"
+      },
+      "runtime": {
+        "implementation": "CPython",
+        "python_version": "3.9.6",
+        "third_party_runtime_dependencies": []
+      },
+      "schema_version": "1.0",
+      "scope": "STATUS_MIGRATION_AND_WAITING_ONLY_NO_ECONOMIC_EVALUATION",
+      "source_coverage": "NOT_VERIFIED",
+      "source_sha256": {
+        "researchlib/__init__.py": "6a52c32055618076a5a44b9dacc39d79711ef3ab7a4de73f9f5ddc9015268741",
+        "researchlib/common.py": "a3e7aa7619acee94e05e733c20a4ae4eb30ff7056f9b0fca0b441ecb55d9b683",
+        "researchlib/contracts.py": "7929f554936294d08407fd7198a2aa0fdfc72ee466c386c34244a711edbc55fd",
+        "researchlib/funding_review.py": "e3b5afd7eeea6754e2723bdb5039c17086da8247330f4983c8d80f1bfb83148a",
+        "researchlib/novelty.py": "e7390b597cfd2a978fa3e9b9208213b6cbb0f331407bb762a5a62a1b8b1b3d08",
+        "researchlib/public.py": "db4eb97c35a312277798605f76ac334dfd57bbc6fe3b1b6d718cd86f00d20dbd",
+        "researchlib/readiness.py": "ad57c793f68a53c848048d84e21370811b7470bf71e8770d3f2a76cb2df059c7",
+        "researchlib/review.py": "771f64a7764f2c957dcce98cc54cdc1bad5fb4381f9b465175cfa153bba4b906",
+        "researchlib/snapshot.py": "e5404cf0775ab6b99906a8115a2bb6cf97c05f86fc8bc9b0979d25bf64f22e15",
+        "researchlib/store.py": "6a9e7bc0ac8ee533fedb94bab0c87b9217436dbf4d8437f99fba9af8a02e06f6",
+        "scripts/prepare_funding_review.py": "4290cecc2fdf4a86dca7f235501a06b9eb11e0467a4fe9f79689139c1c4caedf"
+      },
+      "state_schema": "funding-waiting-state-v1"
+    },
+    "d21b004a0efe4295f391a3f82ccba05f6a967b9205d370eabd807a8692f91f65": {
+      "availability_basis": "SOURCE_BYTES_OBSERVED_AT_PREPARATION_NOT_BACKDATED",
+      "dependency_scope": "Recursive static local import closure including package initializer; standard library bound by Python version",
+      "method_code_sha256": "d21b004a0efe4295f391a3f82ccba05f6a967b9205d370eabd807a8692f91f65",
+      "method_version": "funding-review-waiting-v1",
+      "native_identity": "NOT_ATTESTED",
+      "plan_hashes": {
+        "p-btc-funding-long-control-20260923@1": "a8dd9a25bd4a5353bc8ed479ec41056bcf07704fccb285f2d014a9615358d02c",
+        "p-btc-funding-short-20260923@1": "65ff62c3603d257b82b3274785fd1bfe2c5a784d215786be4775fe7fa076bce4"
+      },
+      "runtime": {
+        "implementation": "CPython",
+        "python_version": "3.9.6",
+        "third_party_runtime_dependencies": []
+      },
+      "schema_version": "1.0",
+      "scope": "STATUS_MIGRATION_AND_WAITING_ONLY_NO_ECONOMIC_EVALUATION",
+      "source_coverage": "NOT_VERIFIED",
+      "source_sha256": {
+        "researchlib/__init__.py": "6a52c32055618076a5a44b9dacc39d79711ef3ab7a4de73f9f5ddc9015268741",
+        "researchlib/common.py": "a3e7aa7619acee94e05e733c20a4ae4eb30ff7056f9b0fca0b441ecb55d9b683",
+        "researchlib/contracts.py": "60a65556a02328b309f016a602ba142b887d23771556a907ecce2b71144c6041",
+        "researchlib/funding_review.py": "e3b5afd7eeea6754e2723bdb5039c17086da8247330f4983c8d80f1bfb83148a",
+        "researchlib/novelty.py": "e7390b597cfd2a978fa3e9b9208213b6cbb0f331407bb762a5a62a1b8b1b3d08",
+        "researchlib/public.py": "514263bb4038d7d1b1548f31ba9d3d00d67c0f0410990456fc9f02e85e9fd063",
+        "researchlib/readiness.py": "ad57c793f68a53c848048d84e21370811b7470bf71e8770d3f2a76cb2df059c7",
+        "researchlib/review.py": "771f64a7764f2c957dcce98cc54cdc1bad5fb4381f9b465175cfa153bba4b906",
+        "researchlib/snapshot.py": "e5404cf0775ab6b99906a8115a2bb6cf97c05f86fc8bc9b0979d25bf64f22e15",
+        "researchlib/store.py": "6a9e7bc0ac8ee533fedb94bab0c87b9217436dbf4d8437f99fba9af8a02e06f6",
+        "scripts/prepare_funding_review.py": "4290cecc2fdf4a86dca7f235501a06b9eb11e0467a4fe9f79689139c1c4caedf"
+      },
+      "state_schema": "funding-waiting-state-v1"
+    }
+  },
+  "approved_waiting_profile_template_sha256": {
+    "7718ec0e6f94d2c71a8cd66b0baf6b7a77b39c99312b81e744d8095ae34d3115": "e078bc23f95baaf8f69f7b2a4ca39e37dd5906a41170dfb8ea5ecec4b2cf727e",
+    "d21b004a0efe4295f391a3f82ccba05f6a967b9205d370eabd807a8692f91f65": "353c72da324febf1d47098a060b09622b10d968d9e76b89da9ad87acfbc1fc31"
+  },
+  "uninstalled_fourth_conditional_identity_accepted": false,
+  "independent_checks": {
+    "conditional_targeted": {
+      "passed": 48,
+      "seconds": 14.05
+    },
+    "public_field_targeted": {
+      "passed": 14,
+      "seconds": 0.101
+    },
+    "helper_targeted": {
+      "passed": 15,
+      "seconds": 0.027
+    },
+    "fourth_safety_regression_groups": 13,
+    "additional_bridge_groups": 8,
+    "bridge_source_corruption_or_missing_cases": 24,
+    "bridge_metadata_mutation_cases": 10,
+    "independent_helper_cli_attack_cases": 10,
+    "registered_real_decode_only": {
+      "rows": 4969733,
+      "csv_bytes": 295527908,
+      "selected_events": 112,
+      "all_sequence_null": true,
+      "seconds": 12.677,
+      "evaluate_called": false
+    },
+    "real_archive_and_restore": {
+      "cases": 6,
+      "original_prefix_records": 49,
+      "original_prefix_public": 48,
+      "old_public_unchanged": 39,
+      "new_public_exact": 9,
+      "bundle_files": 266,
+      "initial_live_verification": true,
+      "repaired_cli_on_hash_identical_historical_prefix_copy": true,
+      "current_production_not_claimed_to_be_49": true
+    },
+    "fixed_current_scope_refusal": {
+      "actual_records_observed": 54,
+      "actual_public_observed": 52,
+      "expected_failure": "HISTORICAL_48_PUBLIC_DIAGNOSTIC_SCOPE_MISMATCH",
+      "successful_receipt_written": false
+    },
+    "candidate_public_guard": {
+      "files": 23,
+      "rejected": 0
+    }
+  },
+  "root_integration_evidence_separate": {
+    "backend_passed": 267,
+    "reference_passed": 24,
+    "receipt": "review/continuation-audit/combined-integration-tests.json",
+    "receipt_sha256": "60fe0d015b5c9347259a40fcd1df109cc5adeeeb528eadfea7457278d91cfe84"
+  },
+  "resolved_findings": [
+    "P1_PREDECESSOR_CHAIN_RESET",
+    "P2_RECOVERY_PUBLIC_ATTACHMENT_DRIFT",
+    "P2_HISTORICAL_CUTOFF_RESETS_PUBLIC_UNKNOWN",
+    "FORMAL_CUTOFF_MUST_REMAIN_NULL",
+    "P2_RECEIPT_ALLOWED_ROOT_FOLLOWS_DIRECTORY_SYMLINK"
+  ],
+  "unresolved_in_scope_defects": [],
+  "remaining_capabilities": {
+    "implemented_scoped": [
+      "FILE_DECODERS_AND_REGISTERED_BYTE_TIME_BINDING",
+      "CONDITIONAL_KERNEL_AND_COMPLETE_PRIVATE_CHAIN",
+      "EXACT_LEGACY_AND_TWO_WAITING_PROFILE_BRIDGES",
+      "EXPLICIT_CORRECTION_CREATE_ONLY_OUTBOX_AND_RECOVERY",
+      "PUBLIC_SUMMARY_SAFE_ATTACHMENT_SET",
+      "TYPE_SPECIFIC_FIELDS_AND_TOP_LEVEL_RUN_METHOD_REF_CLOSURE"
+    ],
+    "METHOD_IMPLEMENTATION_REQUIRED": [
+      "FORMAL_SOURCE_COVERAGE_VERIFICATION_AND_GATE",
+      "EXACT_SETTLEMENT_MARK_AND_FULL_MARK_PATH_ADAPTER",
+      "FORMAL_ACTUAL_METRICS_AND_FINAL_NOT_TRIGGERED_BRANCH"
+    ],
+    "INPUT_CAPABILITY_UNVERIFIED": [
+      "OFFICIAL_SOURCE_AND_ACQUISITION_AUTHENTICITY",
+      "EVENT_OMISSION_BOUNDS",
+      "SAME_MILLISECOND_ORDER",
+      "EXACT_MARK_PATH_AND_COST_EVIDENCE"
+    ],
+    "WAITING_WINDOW_OR_NATURAL": [
+      "ORIGINAL_FORWARD_WINDOW",
+      "NATURAL_REVIEW_EVIDENCE"
+    ]
+  },
+  "acceptance_not_closed": {
+    "B04": "IMPLEMENTATION_REQUIRED",
+    "B05": "ENGINEERING_PARTIAL",
+    "B07": "ENGINEERING_PARTIAL"
+  },
+  "not_in_scope": [
+    "AUTOMATIC_CLOSURE_FOR_NESTED_results.method_ref",
+    "GENERAL_DECISION_SELECTION_SEMANTICS",
+    "THIRD_RESEARCH_SINGLE_ROOT_ARCHIVE_ACCEPTANCE",
+    "REMOTE_ARCHIVE_RECOVERY",
+    "NATURAL_EXECUTION",
+    "FORMAL_ECONOMIC_RESULTS"
+  ],
+  "integration_conditions": [
+    "Use exactly the 23 files and recheck overall source hash and complete method/runtime identity.",
+    "Preserve old candidate/failed/development receipts unchanged.",
+    "Archive exact e65 public.py source history when integrating; local locator is not remote publication proof.",
+    "Do not infer production conditional/outbox migration for the never-installed a1 method.",
+    "Retain formal metrics null and source coverage UNKNOWN; no acceptance upgrade to FINAL or readiness."
+  ],
+  "production_store_data_native_installation_modified": false,
+  "git_mutations_by_independent_reviewer": false,
+  "economic_evaluation_performed": false,
+  "evidence_sha256": {
+    "review/continuation-audit/FIRST_COMBINED_REVIEW_INDEPENDENT.md": "9a09e57fab12ae6e3da192ce6247550f3ee8c9c3fe808565e7389bb61bbb2eef",
+    "review/continuation-audit/public-fields-v2-findings-initial.json": "b14fa3f1ce650d39b28061233ef27fa672a23498c340039bd7860f7b47fa73e5",
+    "review/continuation-audit/public-fields-v2-real-independent.json": "b79b5f92de8d434efe3aa37e5efb6bb6ab6ca10c5aa2b8896018b4c067c6ac42",
+    "review/continuation-audit/combined-regression-independent.json": "3b73af14cd03ecde7950810ab6c15c0f442a7c5328d7ef1485db7dc9ad6141c8",
+    "review/continuation-audit/check_combined_waiting_bridge_independent.py": "36d8c95e36602a2d8683c5dce5f48e98328f6c069879fe538923e16e1d701f3f",
+    "review/continuation-audit/combined-waiting-bridge-independent.json": "19ff53376044da3d0a4177a5bea100cbfa44514d034543a04f51e6bbba9ff70b",
+    "review/continuation-audit/combined-real-input-independent.json": "ca32ca9f0ae8d908487992f1bd49db7f18534808cb8ce6629e3c575771bf292e",
+    "review/continuation-audit/check_public_fields_helper_independent.py": "82db29a7b7a9b5b8d7d4d3ad40f2c4341eca3f0163417564d0e773b475d1aa12",
+    "review/continuation-audit/public-fields-helper-independent.json": "32a8f4d8e5c3c76fe33dc5e69f23815d6a44ceb4a91c486482fe00e4646d8754",
+    "review/continuation-audit/combined-current-scope-refusal.json": "a853e4eeaf8b36c45af7b250aaada0319e1d4cc468e76fdaf5772e660779fede",
+    "review/continuation-audit/combined-public-archive-cli-independent.json": "a12b429020fb85052052049e94236c78f9e1ce8d511f056f12745325385e20a4",
+    "review/continuation-audit/combined-integration-tests.json": "60fe0d015b5c9347259a40fcd1df109cc5adeeeb528eadfea7457278d91cfe84",
+    "review/continuation-audit/check_conditional_review_independent.py": "e042e95c5c31acf3293b9eabb8e7608dc980428a5782c7db60b0484dc54ac162",
+    "review/continuation-audit/check_conditional_real_input_independent.py": "089ac382e8c6c9148835d846290212f02a23fc8d6375376663bb5cec9c28f26f"
+  }
+}

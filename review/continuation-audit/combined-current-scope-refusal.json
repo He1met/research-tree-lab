@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "observed_at": "2026-09-22T21:24:43.717785+00:00",
+  "state": "EXPECTED_SCOPE_MISMATCH_NO_SUCCESS_RECEIPT",
+  "execution": "REPAIRED_CLI_ACTUAL_PRODUCTION_ATTEMPT_IN_DISPOSABLE_SOURCE_COPY",
+  "helper_sha256": "67194d6ecbb52d193f93707d9aef6b3d2fde00d01f0b8dbfc74f12c1953babd0",
+  "observed_current_records": 54,
+  "observed_current_public": 52,
+  "fixed_diagnostic_scope": {
+    "records": 49,
+    "public": 48,
+    "old_public": 39,
+    "new_public": 9
+  },
+  "reason": "Third research appended after the frozen 49-record verification; strict len(public)==48 and len(old)==39 assertion refused scope drift.",
+  "production_modified": false,
+  "empty_output_discarded_with_disposable_directory": true
+}

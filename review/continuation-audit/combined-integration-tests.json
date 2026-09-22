@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "observed_at": "2026-09-22T21:23:03.610865+00:00",
+  "state": "ROOT_INTEGRATION_CHECKS_PASS_PENDING_INDEPENDENT_APPROVAL",
+  "scope": "FIRST_CONDITIONAL_AND_PUBLIC_REFERENCE_FIELD_COMPATIBILITY_COMBINED_CANDIDATE",
+  "source_sha256": "eca93fe70146b1c6962842cd6b62dc8f66f89a47e8249017387202e1a6985277",
+  "method_sha256": "7dbdd186fd04ddca07dc3bfa933f9a0fae1ce66e1f1d91447e0bbeff5332d3ce",
+  "runtime": {
+    "implementation": "CPython",
+    "python_version": "3.9.6"
+  },
+  "exact_delivery_files": {
+    "docs/CONDITIONAL_REVIEW.md": "7bcbd2cd08523075ac43daa10bee7b64a5a2660d0434886f4570e3e51099b91d",
+    "docs/PUBLIC_FIELDS_V2_COMPATIBILITY.md": "6bd5caaeab8c71ef17fbb5e776bc5c607ccc17a404164b1e1c4bf0da15c9fcad",
+    "researchlib/conditional_review.py": "2508392c524c19b4260f6d120d4f17f80bcd0d327b8daa483036130d12b56fd6",
+    "researchlib/contracts.py": "7929f554936294d08407fd7198a2aa0fdfc72ee466c386c34244a711edbc55fd",
+    "researchlib/public.py": "db4eb97c35a312277798605f76ac334dfd57bbc6fe3b1b6d718cd86f00d20dbd",
+    "scripts/prepare_conditional_review.py": "48c5b08dd6ca5c791e7c86735fa62b0e86b2bec604b22dd657f8127491653728",
+    "tests/fixtures/waiting-d21/METHOD.template.json": "353c72da324febf1d47098a060b09622b10d968d9e76b89da9ad87acfbc1fc31",
+    "tests/fixtures/waiting-d21/README.md": "842226bfcf8903ffdfd706d60ad6c744748309eea014471c750f0d1f07f0c593",
+    "tests/fixtures/waiting-d21/contracts.py.txt": "60a65556a02328b309f016a602ba142b887d23771556a907ecce2b71144c6041",
+    "tests/receipts/conditional-combined-real-input.json": "2309a734bfa5db79592183db3b79a47b9b1b86bddaa09748d135eaf20ade5616",
+    "tests/receipts/conditional-real-input-final.json": "f9c24ef71319d45ab11563f0de6f6afefd93d5afe9bd74acec49e50444af2405",
+    "tests/receipts/conditional-real-input-only.json": "527c1a8b2606f51bc0dbd8a50e9af7c6fe6ad77be2e02df171278219f2d022e8",
+    "tests/receipts/conditional-real-input-repaired.json": "540b1483006515d40d9ebcdecaf36452b39cdb5ffddc16b246fdd0a9b5534e64",
+    "tests/receipts/first-combined-candidate-freeze.json": "a0bc408b0a04b324d275dd849611c0440dbc09fa4b59dd2a53f20ca5f84731f5",
+    "tests/receipts/public-fields-v2-candidate-freeze.json": "66cefa9815f41110ec768fd0b56c4455412e3b8375d3377476ecca6e3a0e5fad",
+    "tests/receipts/public-fields-v2-combined-real.json": "973f1ff5307419d07e84e7d30d2f4a5b77a5e81faee97a981dc16813b33bf9cd",
+    "tests/receipts/public-fields-v2-helper-fixed-real.json": "f3061428ffe7c6fa089ccee9988514ba1dd80d47f94b5c034363e99d32f6dd3f",
+    "tests/receipts/public-fields-v2-helper-repair-freeze.json": "4ef314d938ea68cc7e60ca391729b267f8a60ed49a6c95a91d8391583634b28e",
+    "tests/receipts/public-fields-v2-real.json": "e57d230d57faae8ebeb47dda14809884b83a2ff92133e419244db05abc303280",
+    "tests/test_conditional_review.py": "6adf8c430107c6f8b6a8d1d1342d3261e76b0ddde45508d46c6e6b68fdad8389",
+    "tests/test_public_fields_v2.py": "9ff17ad013c496a02a84397f69e81f1a8ed3a42fd2d686ca2cef2764f86511c2",
+    "tests/test_public_fields_v2_helper.py": "212f9e7e98c59dd96daa15b4672f386f527666d014798a8e1922d51b69c59b11",
+    "tests/verify_public_fields_v2.py": "67194d6ecbb52d193f93707d9aef6b3d2fde00d01f0b8dbfc74f12c1953babd0"
+  },
+  "checks": {
+    "backend": {
+      "command": "python3 -m unittest discover -s tests -p 'test_*.py'",
+      "passed": 267,
+      "seconds": 16.243
+    },
+    "reference": {
+      "command": "python3 -m unittest discover -s planning/current/tests -p 'test_*.py'",
+      "passed": 24,
+      "seconds": 0.002
+    },
+    "delivery_hashes": "PASS",
+    "diff_check": "PASS"
+  },
+  "production_installation_changed": false,
+  "production_reviews_created": 0,
+  "economic_evaluation_performed": false,
+  "boundaries": [
+    "Tests use isolated temporary stores; no synthetic results enter production.",
+    "Third native research may append production records; the historical 49-record archive fixture and receipts are not claims about the latest record count.",
+    "Formal final results, verified source coverage and natural task acceptance remain separate."
+  ]
+}
