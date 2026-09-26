@@ -1,0 +1,76 @@
+{
+  "rows": [
+    {
+      "date": "2026-03-06",
+      "scheduled_open_utc": "2026-03-06T14:30:00+00:00",
+      "scheduled_close_utc": "2026-03-06T21:00:00+00:00",
+      "state": "SCHEDULED_REGULAR",
+      "reference_minutes": 390,
+      "false_open_minutes": 60,
+      "false_closed_minutes": 60,
+      "mismatch_minutes": 120
+    },
+    {
+      "date": "2026-03-09",
+      "scheduled_open_utc": "2026-03-09T13:30:00+00:00",
+      "scheduled_close_utc": "2026-03-09T20:00:00+00:00",
+      "state": "SCHEDULED_REGULAR",
+      "reference_minutes": 390,
+      "false_open_minutes": 0,
+      "false_closed_minutes": 0,
+      "mismatch_minutes": 0
+    },
+    {
+      "date": "2026-07-02",
+      "scheduled_open_utc": "2026-07-02T13:30:00+00:00",
+      "scheduled_close_utc": "2026-07-02T20:00:00+00:00",
+      "state": "SCHEDULED_REGULAR",
+      "reference_minutes": 390,
+      "false_open_minutes": 0,
+      "false_closed_minutes": 0,
+      "mismatch_minutes": 0
+    },
+    {
+      "date": "2026-07-03",
+      "scheduled_open_utc": null,
+      "scheduled_close_utc": null,
+      "state": "SCHEDULED_CLOSED",
+      "reference_minutes": 0,
+      "false_open_minutes": 390,
+      "false_closed_minutes": 0,
+      "mismatch_minutes": 390
+    },
+    {
+      "date": "2026-09-07",
+      "scheduled_open_utc": null,
+      "scheduled_close_utc": null,
+      "state": "SCHEDULED_CLOSED",
+      "reference_minutes": 0,
+      "false_open_minutes": 390,
+      "false_closed_minutes": 0,
+      "mismatch_minutes": 390
+    },
+    {
+      "date": "2026-09-21",
+      "scheduled_open_utc": "2026-09-21T13:30:00+00:00",
+      "scheduled_close_utc": "2026-09-21T20:00:00+00:00",
+      "state": "SCHEDULED_REGULAR",
+      "reference_minutes": 390,
+      "false_open_minutes": 0,
+      "false_closed_minutes": 0,
+      "mismatch_minutes": 0
+    }
+  ],
+  "false_open_minutes": 840,
+  "false_closed_minutes": 60,
+  "mismatch_minutes": 900,
+  "scope": "Frozen six-date scheduled-reference diagnostic, not prevalence or actual market event proof",
+  "hypothesis": "SUPPORTED_IN_BOUNDED_DIAGNOSTIC",
+  "early_close_date_in_sample": false,
+  "economic_samples": 0,
+  "actual_net": null,
+  "synthetic_hand_cases": 4,
+  "real_date_cross_checks": 6,
+  "independent_audit": false,
+  "method_note": "4 hand cases + six alternate interval checks by same author; no trading test."
+}
