@@ -1,0 +1,74 @@
+{
+  "synthetic": true,
+  "hand_and_invalid_checks": 8,
+  "cases": [
+    {
+      "assumed_USDT_change": "-10",
+      "USD_per_USDT": "0.98",
+      "total_USD_change": "-29.80",
+      "unchanged_USDT_baseline": "-20.00",
+      "incremental_USD_vs_baseline": "-9.80"
+    },
+    {
+      "assumed_USDT_change": "-10",
+      "USD_per_USDT": "1",
+      "total_USD_change": "-10",
+      "unchanged_USDT_baseline": "0",
+      "incremental_USD_vs_baseline": "-10"
+    },
+    {
+      "assumed_USDT_change": "-10",
+      "USD_per_USDT": "1.02",
+      "total_USD_change": "9.80",
+      "unchanged_USDT_baseline": "20.00",
+      "incremental_USD_vs_baseline": "-10.20"
+    },
+    {
+      "assumed_USDT_change": "0",
+      "USD_per_USDT": "0.98",
+      "total_USD_change": "-20.00",
+      "unchanged_USDT_baseline": "-20.00",
+      "incremental_USD_vs_baseline": "0.00"
+    },
+    {
+      "assumed_USDT_change": "0",
+      "USD_per_USDT": "1",
+      "total_USD_change": "0",
+      "unchanged_USDT_baseline": "0",
+      "incremental_USD_vs_baseline": "0"
+    },
+    {
+      "assumed_USDT_change": "0",
+      "USD_per_USDT": "1.02",
+      "total_USD_change": "20.00",
+      "unchanged_USDT_baseline": "20.00",
+      "incremental_USD_vs_baseline": "0.00"
+    },
+    {
+      "assumed_USDT_change": "10",
+      "USD_per_USDT": "0.98",
+      "total_USD_change": "-10.20",
+      "unchanged_USDT_baseline": "-20.00",
+      "incremental_USD_vs_baseline": "9.80"
+    },
+    {
+      "assumed_USDT_change": "10",
+      "USD_per_USDT": "1",
+      "total_USD_change": "10",
+      "unchanged_USDT_baseline": "0",
+      "incremental_USD_vs_baseline": "10"
+    },
+    {
+      "assumed_USDT_change": "10",
+      "USD_per_USDT": "1.02",
+      "total_USD_change": "30.20",
+      "unchanged_USDT_baseline": "20.00",
+      "incremental_USD_vs_baseline": "10.20"
+    }
+  ],
+  "identity_checks": 27,
+  "actual_net": null,
+  "economic_sample_count": 0,
+  "independent_review": false,
+  "purpose": "Reporting identity only, not complete trading cost model"
+}
