@@ -1,0 +1,17 @@
+{
+  "scope": "SYNTHETIC_ORDER_QUANTITY_CONSERVATION_ONLY",
+  "cases": 64,
+  "conservation_checks": 64,
+  "full_fill_cases": 12,
+  "partial_fill_cases": 4,
+  "zero_fill_cases": 48,
+  "real_economic_samples": 0,
+  "actual_fees": null,
+  "actual_net_pnl": null,
+  "selected_plan_ref": null,
+  "full_fill_diagnostic_baseline_quantity": "2",
+  "limitations": [
+    "No dynamic book, queue priority, price-band reconstruction, latency, hidden liquidity or venue matching engine modeled.",
+    "Displayed depth is synthetic; outcome frequencies are not market probabilities."
+  ]
+}
