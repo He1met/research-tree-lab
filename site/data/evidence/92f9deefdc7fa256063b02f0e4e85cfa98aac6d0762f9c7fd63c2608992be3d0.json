@@ -1,0 +1,71 @@
+{
+  "kind": "SYNTHETIC_COMPONENT_DIAGNOSTIC_NOT_ECONOMIC_SAMPLE",
+  "historical_economic_samples": 0,
+  "actual_net": null,
+  "hand_checks": 4,
+  "invalid_checks": 3,
+  "rational_identity_checks": 12,
+  "rows": [
+    {
+      "synthetic": true,
+      "snapshot_debt_USDT": "0",
+      "snapshots": 1,
+      "hourly_rate": "0.0001",
+      "interest_component_USDT": "0.0000",
+      "incorrect_notional_proxy_USDT": "0.1000",
+      "proxy_minus_component_USDT": "0.1000",
+      "actual_net": null
+    },
+    {
+      "synthetic": true,
+      "snapshot_debt_USDT": "0",
+      "snapshots": 2,
+      "hourly_rate": "0.0001",
+      "interest_component_USDT": "0.0000",
+      "incorrect_notional_proxy_USDT": "0.2000",
+      "proxy_minus_component_USDT": "0.2000",
+      "actual_net": null
+    },
+    {
+      "synthetic": true,
+      "snapshot_debt_USDT": "100",
+      "snapshots": 1,
+      "hourly_rate": "0.0001",
+      "interest_component_USDT": "0.0100",
+      "incorrect_notional_proxy_USDT": "0.1000",
+      "proxy_minus_component_USDT": "0.0900",
+      "actual_net": null
+    },
+    {
+      "synthetic": true,
+      "snapshot_debt_USDT": "100",
+      "snapshots": 2,
+      "hourly_rate": "0.0001",
+      "interest_component_USDT": "0.0200",
+      "incorrect_notional_proxy_USDT": "0.2000",
+      "proxy_minus_component_USDT": "0.1800",
+      "actual_net": null
+    },
+    {
+      "synthetic": true,
+      "snapshot_debt_USDT": "1000",
+      "snapshots": 1,
+      "hourly_rate": "0.0001",
+      "interest_component_USDT": "0.1000",
+      "incorrect_notional_proxy_USDT": "0.1000",
+      "proxy_minus_component_USDT": "0.0000",
+      "actual_net": null
+    },
+    {
+      "synthetic": true,
+      "snapshot_debt_USDT": "1000",
+      "snapshots": 2,
+      "hourly_rate": "0.0001",
+      "interest_component_USDT": "0.2000",
+      "incorrect_notional_proxy_USDT": "0.2000",
+      "proxy_minus_component_USDT": "0.0000",
+      "actual_net": null
+    }
+  ],
+  "limitation": "Debt held constant at each snapshot by assumption; not an unpaid-loan compounding simulation; excludes funding/trading/exit costs."
+}
