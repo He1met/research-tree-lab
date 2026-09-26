@@ -1,0 +1,22 @@
+{
+  "scope": "REAL_ORIGINAL_READONLY_TEMPORARY_ENGINEERING_EXPORT_RESTORE",
+  "observed_at": "2026-09-26T16:50:58.157427Z",
+  "record_ref": "decision-numeraire-boundary-20260927",
+  "original_sha256": "6b5ec5278a5d5bdc3945d483035a4d6c9e1f9ffad8871bf71933ce109aa7c64c",
+  "archive_id": "57df0a4ee5afe23fc1de6b184360ae0c0f3dfcf1453a3bbab92cafdfeb54e454",
+  "archive_sha256": "97cfbde11c930d8f9e5bf7ffc0781b50b93defd95e1e1749a3cfbc206664101d",
+  "record_count": 18,
+  "files_verified": 41,
+  "exact_original_bytes_restored": true,
+  "prior_records_unchanged": 79,
+  "production_store_written": false,
+  "projection_and_graph_sha256_unchanged": "e4542f7a1e8c8a62816a360229bbf909ef5c9da8c7f90e2dd7bf63e50964a217",
+  "projection_still_omits_three_extensions": true,
+  "compatibility_policy": "EXACT_NUMERAIRE_DECISION_METADATA_V1",
+  "recovery_scientific_reproduction": "NOT_RUN",
+  "remote_uploaded": false,
+  "native_archive_completion": false,
+  "archive_retained": false,
+  "restore_retained": false,
+  "economic_or_natural_acceptance_upgraded": false
+}

@@ -1,0 +1,71 @@
+{
+  "publishing_source_sha256": "90382f3c07abbd57d803cc6b6f3a4314de8146237e019c9d35de7636a6c1a577",
+  "baseline_publishing_source_sha256": "63ad389e249bfaae5797eef90ba194aa3891f682d3427087c6585a8b7c26035f",
+  "changed_publishing_files": [
+    "researchlib/archive.py"
+  ],
+  "method_code_sha256": "34e0bcfce6515c0ccb5e2f742ab1936b440b6d06cf4b3670049c7993efa63be4",
+  "method_sources_map_sha256": "fdc40f30ba7265d395a6aa6e3f8bf9b183235934a214fcdc4d980ba345558baf",
+  "formal19_unchanged": true,
+  "old16_unchanged": true,
+  "public_py_sha256": "db4eb97c35a312277798605f76ac334dfd57bbc6fe3b1b6d718cd86f00d20dbd",
+  "archive_before_sha256": "c238176b603cc6cef0e6418a3432b2773972b5d6803523d45c11bb096305c4b0",
+  "delivery_files": {
+    "researchlib/archive.py": "70d50ef5e632041ac70e355f8f6f21f43a88f10c40f796b6bdc4d4eecb64ac6a",
+    "tests/test_archive_numeraire.py": "2a33ce6db3d1eee93e825ff3ed5ceeb4ffccc8ac717a91fc66f5aa414ad2fe01",
+    "tests/replay_archive_numeraire_readonly.py": "dc2efc68e0c62a96a2111ebab3b5adcd634273cde7592b95bdc5fe3560ec7e34",
+    "tests/fixtures/archive-numeraire/decision.json": "6b5ec5278a5d5bdc3945d483035a4d6c9e1f9ffad8871bf71933ce109aa7c64c",
+    "tests/fixtures/archive-numeraire/README.md": "97d368047a6676873ad37e4d85e25fd2f2ab5c4925c893a7b41a25ae01f14646",
+    "docs/ARCHIVE_COMPATIBILITY_V1.md": "621ab39c0f01240a1377fbb8af798f5a1f0288a03d5ede155f9cf014f3e23b04",
+    "tests/receipts/archive-compatibility-real-original-20260927.json": "18766a7ce715348243a19d473fa5f824e7f301639250593807edafce3ed77341",
+    "tests/receipts/archive-compatibility-existing-nine-20260927.json": "c17a65227e358f7f15886c45cc51421cca14c59457a1488e8661aab2ef90b857"
+  },
+  "schema_version": "1.0",
+  "maintenance_version": "archive-compatibility-v1",
+  "state": "FROZEN_CANDIDATE_INDEPENDENT_REVIEW_PENDING",
+  "observed_at": "2026-09-26 16:54:14 UTC",
+  "author_checks": [
+    {
+      "command": "python3 -m unittest discover -s tests -q",
+      "tests": 324,
+      "seconds": 62.958,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "command": "python3.12 -m unittest discover -s tests -p test_archive_numeraire.py -q",
+      "tests": 5,
+      "seconds": 0.048,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "command": "python3 -m unittest discover -s tests -p test_archive_numeraire.py -q",
+      "tests": 5,
+      "seconds": 0.05,
+      "failures": 0,
+      "errors": 0,
+      "note": "Final test-only dummy private-path construction change; production source unchanged from full suite."
+    },
+    {
+      "check": "public_guard",
+      "files": 8,
+      "rejected": 0
+    }
+  ],
+  "approved_original_candidate": {
+    "record_ref": "decision-numeraire-boundary-20260927",
+    "canonical_sha256": "6b5ec5278a5d5bdc3945d483035a4d6c9e1f9ffad8871bf71933ce109aa7c64c",
+    "policy": "EXACT_NUMERAIRE_DECISION_METADATA_V1",
+    "scope": "SOURCE_VERSIONED_ONE_ORIGINAL_EXPORT_PERMISSION_NOT_GENERIC_METADATA"
+  },
+  "boundaries": [
+    "No main source, installation, Store original, operational state, native task or remote mutation.",
+    "Single fixed original hash cannot be supplied or overridden by caller or metadata.",
+    "Explicit disclosure.export_fields never receives compatibility exception.",
+    "Exact full original, closed field states, existing recursive scan and manifest policy checked on export and inspect/restore.",
+    "Projection, graph semantics, formal 19-source method, old 16-source method remain unchanged.",
+    "Real local temporary 18-record/41-file recovery is engineering proof, not native catch-up or remote archive completion.",
+    "Nine existing archives inspected read-only; all original hashes unchanged."
+  ]
+}

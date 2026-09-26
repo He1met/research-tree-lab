@@ -11,6 +11,42 @@ from .contracts import record_ref, semantic_refs, validate_record, validate_rela
 from .public import attachment_allowed, public_record, scan_bytes
 
 
+def _exact_public_export_policy(original):
+    """One versioned, source-reviewed original exception, never caller policy.
+
+    Public projection and graph semantics stay unchanged. This does not allow
+    arbitrary decision metadata, a configurable hash list, or restricted fields.
+    """
+    projection = public_record(original)
+    if projection is None:
+        raise ContractError("Recovery closure includes non-public/synthetic original")
+    if any(projection[key] != original[key] for key in projection):
+        raise ContractError("Public projection changed original values")
+    if set(projection) == set(original):
+        return None
+    policy = original.get('disclosure', {})
+    extra = set(original) - set(projection)
+    child = original.get('future_child')
+    approved = (
+        'export_fields' not in policy
+        and policy.get('visibility') == 'PUBLIC' and policy.get('license') == 'OWN_ANALYSIS'
+        and original.get('record_type') == 'decision'
+        and original.get('decision_id') == 'decision-numeraire-boundary-20260927'
+        and extra == {'future_child', 'new_feedback_successor_created', 'trial_state'}
+        and isinstance(child, dict) and set(child) == {'parent_round_id', 'question', 'state'}
+        and child['parent_round_id'] == original.get('source_round_ref')
+        and child['state'] == 'PROPOSED_NOT_EXECUTED'
+        and isinstance(child['question'], str) and 0 < len(child['question']) <= 512
+        and original.get('new_feedback_successor_created') is False
+        and original.get('trial_state') == 'PREPARATION_ONLY'
+        and digest(canonical(original)) == '6b5ec5278a5d5bdc3945d483035a4d6c9e1f9ffad8871bf71933ce109aa7c64c'
+    )
+    if not approved:
+        raise ContractError("Original has non-whitelisted fields; cannot claim exact public backup")
+    scan_bytes('approved-original.json', canonical(original))
+    return 'EXACT_NUMERAIRE_DECISION_METADATA_V1'
+
+
 def export_backup(store, destination, record_refs=None, extra_files=None):
     records, metadata, anomalies = store.load(strict=True)
     selected = set(record_refs or records)
@@ -28,17 +64,15 @@ def export_backup(store, destination, record_refs=None, extra_files=None):
     bundle_cache = {}
     for ref in sorted(selected):
         original = records[ref]
-        projection = public_record(original)
-        if projection is None:
-            raise ContractError("Recovery closure includes non-public/synthetic original")
-        if set(projection) != set(original):
-            raise ContractError("Original has non-whitelisted fields; cannot claim exact public backup")
+        exact_policy = _exact_public_export_policy(original)
         relative = "records/" + ref + ".json"
         raw = canonical(original)
         scan_bytes(relative, raw)
         files[relative] = raw
         record_entries.append({"record_ref": ref, "path": relative, "producer_role": metadata[ref]["producer_role"],
                                "original_record_hash": metadata[ref]["record_hash"], "original_committed_at": metadata[ref]["committed_at"]})
+        if exact_policy is not None:
+            record_entries[-1]['exact_export_policy'] = exact_policy
         bundle_id = metadata[ref]["bundle_id"]
         directory = store.root / "bundles" / bundle_id
         if bundle_id not in bundle_cache:
@@ -115,6 +149,8 @@ def inspect_backup(path):
             ref = validate_record(record, entry["producer_role"])
             if ref != entry["record_ref"] or digest(content) != entry["original_record_hash"]:
                 raise ContractError("Recovery original identity/hash mismatch")
+            if entry.get('exact_export_policy') != _exact_public_export_policy(record):
+                raise ContractError("Recovery exact-export policy mismatch")
             records[ref] = record
         validate_relationships(records)
         return manifest

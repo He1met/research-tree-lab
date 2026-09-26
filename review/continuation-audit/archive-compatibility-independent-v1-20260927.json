@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "verdict": "APPROVED",
+  "scope": "EXACT_FROZEN_ARCHIVE_COMPATIBILITY_ENGINEERING_SECURITY_INSTALL_APPROVAL",
+  "candidate_manifest": "docs/archive-compatibility-v1-candidate.json",
+  "candidate_manifest_sha256": "c0e4b65b253a4f6d0ec221f10a6443a64126cd5b23f5373b000f7b4b00b47a6b",
+  "approved_source_sha256": "90382f3c07abbd57d803cc6b6f3a4314de8146237e019c9d35de7636a6c1a577",
+  "approved_source_identity": "scripts/publish.py --source-hash complete publishing/install source",
+  "approved_archive_source_sha256": "70d50ef5e632041ac70e355f8f6f21f43a88f10c40f796b6bdc4d4eecb64ac6a",
+  "baseline_source_sha256": "63ad389e249bfaae5797eef90ba194aa3891f682d3427087c6585a8b7c26035f",
+  "findings": [],
+  "policy_scope": {
+    "record_ref": "decision-numeraire-boundary-20260927",
+    "fixed_original_sha256": "6b5ec5278a5d5bdc3945d483035a4d6c9e1f9ffad8871bf71933ce109aa7c64c",
+    "policy": "EXACT_NUMERAIRE_DECISION_METADATA_V1",
+    "reviewed_semantics": "Only this original's proposed-not-executed child, false new successor and PREPARATION_ONLY state; no generic caller-configurable exception.",
+    "permission_source": "Literal original digest in reviewed archive source plus closed structure; recomputed metadata or manifest hashes do not confer permission.",
+    "export_fields": "Exception denied whenever explicit export_fields exists, including empty or all-field lists. Ordinary limited exports still cannot be called exact original backups."
+  },
+  "independent_verification": {
+    "script": "review/continuation-audit/probe_archive_compatibility_independent_20260927.py",
+    "script_sha256": "31f0227c05950dfa3f9765176d727412e45abfffbb8e33344188b316c9569f2d",
+    "delivery_files_checked": 8,
+    "delivery_mismatches": [],
+    "source_difference_from_main": ["researchlib/archive.py"],
+    "formal_source_files_unchanged": 19,
+    "old16_unchanged": true,
+    "formal_method_code_sha256_unchanged": "34e0bcfce6515c0ccb5e2f742ab1936b440b6d06cf4b3670049c7993efa63be4",
+    "public_projection_source_unchanged": true,
+    "real_original_local_temporary_roundtrip": {
+      "records":18,
+      "files":41,
+      "exact_original_bytes_restored":true,
+      "temporary_archive_sha256":"97cfbde11c930d8f9e5bf7ffc0781b50b93defd95e1e1749a3cfbc206664101d",
+      "retained_or_uploaded":false
+    },
+    "attack_checks":32,
+    "attack_results":"All rejected: 16 mutations each tested through export with spoofed record-hash metadata and inspect with recomputed file hashes, original hash, sizes and archive identity. Variants cover new identity, changed harmless question, nested secret/raw object, extra fields, executed child, successor created, numeric false, active trial, restricted/empty/widened export_fields, caller approval hash, LOCAL_ONLY and synthetic records.",
+    "existing_archives_inspected":9,
+    "existing_archives_changed":0,
+    "stable_original_records_rechecked_unchanged":79,
+    "graph_same_as_of_hash_unchanged":true,
+    "projection_still_omits_three_extension_fields":true,
+    "independently_rerun_author_tests":{"command":"python3 -m unittest discover -s tests -p 'test_archive*.py' -q","tests":5,"seconds":0.051,"failures":0,"errors":0},
+    "candidate_drift":false
+  },
+  "installation_conditions": [
+    "Integrate only exact frozen delivery bytes; verify the complete approved publishing source hash after integration.",
+    "Preserve old originals, archives, public projection, graph behavior and formal evaluator identity.",
+    "Coordinator verifies current installation/ownership and records a new maintenance version before normal publisher use."
+  ],
+  "limits": [
+    "This reviewer performed only local temporary engineering export/inspect/restore, not the formal catch-up archive or remote upload.",
+    "Scientific reproduction, real economics, execution successor, trial start and natural acceptance are not granted.",
+    "No production source, installation, original, existing archive, Git or task configuration was modified by the reviewer."
+  ]
+}

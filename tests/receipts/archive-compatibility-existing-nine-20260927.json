@@ -1,0 +1,80 @@
+{
+  "scope": "READONLY_EXISTING_LOCAL_ARCHIVES_NO_DOWNLOAD_OR_UPLOAD",
+  "archives": [
+    {
+      "name": "public-feedback-supplement-20260923-v1.zip",
+      "sha256": "ae8ec8612992154f0ec7b7957d45bdaffdbd81ca9795a91543f2f2af4f04a674",
+      "records": 15,
+      "files": 36,
+      "inspection": "PASS",
+      "original_bytes_unchanged": true
+    },
+    {
+      "name": "public-research-increment-20260923-v1.zip",
+      "sha256": "3467ea715b9ef638f897e94f13d5ca267e65ea3069a56a9f53132321cf72cf7f",
+      "records": 14,
+      "files": 35,
+      "inspection": "PASS",
+      "original_bytes_unchanged": true
+    },
+    {
+      "name": "public-research-increment-20260923-v2.zip",
+      "sha256": "76fe183efa73144d5ad1060355ba6babd16228d3707333b5b24d32442168cb03",
+      "records": 21,
+      "files": 46,
+      "inspection": "PASS",
+      "original_bytes_unchanged": true
+    },
+    {
+      "name": "public-research-increment-20260923-v3.zip",
+      "sha256": "b9a30287e7a003d63e629f648d82e8c9b3834037ae1fadfdd865ed8e7fb2a415",
+      "records": 28,
+      "files": 56,
+      "inspection": "PASS",
+      "original_bytes_unchanged": true
+    },
+    {
+      "name": "public-research-increment-20260923-v4.zip",
+      "sha256": "24c3e3d810d4b8939c953803c8da42baa343d3bc7133b9a479dbb0a3d06159bb",
+      "records": 19,
+      "files": 43,
+      "inspection": "PASS",
+      "original_bytes_unchanged": true
+    },
+    {
+      "name": "public-research-increment-20260926-v1.zip",
+      "sha256": "a2ed7d14efe0699b5ac0e5669e6d303fd5c27066fc95087b397047c6a4d39ccb",
+      "records": 24,
+      "files": 49,
+      "inspection": "PASS",
+      "original_bytes_unchanged": true
+    },
+    {
+      "name": "public-research-increment-20260926-v2.zip",
+      "sha256": "0329252c6f3392d5b8ca2792a176123f1b6a0e43a52c373afb045bcb5e54d7d4",
+      "records": 21,
+      "files": 44,
+      "inspection": "PASS",
+      "original_bytes_unchanged": true
+    },
+    {
+      "name": "public-research-increment-20260927-v1.zip",
+      "sha256": "98f83a56b39372698855452e0dd9d6912586dc2f9b85b6f1bfd3661fa936bcd1",
+      "records": 5,
+      "files": 7,
+      "inspection": "PASS",
+      "original_bytes_unchanged": true
+    },
+    {
+      "name": "public-research-v1.zip",
+      "sha256": "c8339a015bbae89cd3be5af2128fdbc29b5321822f6bc6f8bf3cd455dc475023",
+      "records": 26,
+      "files": 46,
+      "inspection": "PASS",
+      "original_bytes_unchanged": true
+    }
+  ],
+  "passed": 9,
+  "failed": 0,
+  "observed_at": "2026-09-26 16:51:35 UTC"
+}
