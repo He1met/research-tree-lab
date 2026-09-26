@@ -1,0 +1,14 @@
+{
+  "synthetic": true,
+  "market_observations": 0,
+  "cases": 54,
+  "rational_cross_checks": 162,
+  "negative": 16,
+  "positive": 16,
+  "zero": 22,
+  "nonzero_residual_exposure": 36,
+  "actual_net_pnl": null,
+  "adl_probability": null,
+  "validation": "AUTHOR_SELF_CHECK_NOT_INDEPENDENT_REVIEW",
+  "completed_at": "2026-09-26T13:08:38.080169+00:00"
+}
