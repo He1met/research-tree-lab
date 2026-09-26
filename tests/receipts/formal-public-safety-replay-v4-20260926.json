@@ -1,0 +1,79 @@
+{
+  "scope": "SYNTHETIC_SECURITY_REGRESSION_ONLY",
+  "command": "python3 tests/replay_formal_public_safety.py --preserved-archive .local/safety-repair-20260926/frozen-c146-source.tar.gz",
+  "preserved_archive_sha256": "93ea2b74ab4265f8ad94a5801b274d4776cec536a52708e7a5cc265619383620",
+  "preserved_base_archive_sha256": "1e3c0bd88bea154e71931c8246219df74570c749d55ac1f70e94decf1aa6949d",
+  "results": {
+    "preserved_failed": {
+      "formal_review_sha256": "8ed274cef8718fb8fcdc09d80cccb044c4232bee91c5d0e85ab8cf3e1b5cf406",
+      "probes": [
+        {
+          "attack": "renamed_layout_unknown_method",
+          "outcome": "UNSAFE_NEW_PUBLIC_ROOT_RETURNED",
+          "single_root_archive_contains_canary": true,
+          "snapshot_contains_canary": true
+        },
+        {
+          "attack": "coverage_nested_extra",
+          "outcome": "UNSAFE_NEW_PUBLIC_ROOT_RETURNED",
+          "single_root_archive_contains_canary": true,
+          "snapshot_contains_canary": true
+        }
+      ]
+    },
+    "repair_candidate": {
+      "formal_review_sha256": "f542a221e0652d20da5570caecbad90464c103fdbbbf9a7c4f7ab56bb56f5071",
+      "probes": [
+        {
+          "attack": "renamed_layout_unknown_method",
+          "outcome": "REJECTED_BEFORE_NEW_PUBLIC_ROOT",
+          "reason": "PUBLIC_ANCESTOR_METHOD_IDENTITY_REJECTED",
+          "store_unchanged": true
+        },
+        {
+          "attack": "coverage_nested_extra",
+          "outcome": "REJECTED_BEFORE_NEW_PUBLIC_ROOT",
+          "reason": "PUBLIC_ANCESTOR_PUBLIC_RECONSTRUCTION_REJECTED",
+          "store_unchanged": true
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Temporary synthetic stores only; no production record, data, native task, installation or publication was changed.",
+    "Author regression is not independent approval or a real economic result.",
+    "Existing unsafe ancestor exports remain unchanged; the repair refuses to introduce a new public root that references them."
+  ],
+  "candidate_revision": 4,
+  "observed_at": "2026-09-26 15:21:03 UTC",
+  "repair_dispatch": "repair-v3-c7c5db65d285",
+  "boundary_checks": {
+    "command": "PYTHONPATH=tests python3 -m unittest test_formal_review.FormalReviewTests.test_129_plans_with_two_historical_reviews_receive_full_batch test_formal_review.FormalReviewTests.test_real_semantic_closure_bound_4096_and_4097 test_formal_review.FormalReviewTests.test_review_node_and_depth_bounds_remain_128_and_64 -q",
+    "tests": 3,
+    "seconds": 7.767,
+    "failures": 0,
+    "errors": 0,
+    "real_temporary_store": {
+      "registered_plans": 129,
+      "prior_reviews": 2,
+      "waiting_data": 2,
+      "rules_incomplete": 127,
+      "missing": [],
+      "committed": true,
+      "semantic_nodes_accepted": [
+        4095,
+        4096
+      ],
+      "semantic_nodes_rejected": 4097
+    },
+    "isolated_recursive_guard": {
+      "review_nodes_accepted": 128,
+      "review_node_rejected": 129,
+      "depth_accepted": 64,
+      "depth_rejected": 65,
+      "inner_validation_stub": true,
+      "full_economic_replays_claimed": false
+    },
+    "production_limits_lowered": false
+  }
+}

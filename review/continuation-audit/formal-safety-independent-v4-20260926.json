@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "verdict": "APPROVED",
+  "scope": "EXACT_FROZEN_FORMAL_EVALUATOR_ENGINEERING_AND_PUBLIC_SAFETY_INSTALL_APPROVAL",
+  "candidate_manifest": "docs/formal-review-candidate-safety-v4.json",
+  "candidate_manifest_sha256": "3dfbaf7ef4dd5ea2d722a0ef6ccd54abf4c1a15e2b540cc2566d9495e9a3795d",
+  "approved_source_sha256": "63ad389e249bfaae5797eef90ba194aa3891f682d3427087c6585a8b7c26035f",
+  "approved_source_identity": "scripts/publish.py --source-hash; complete publishing/install source",
+  "formal_review_sha256": "f542a221e0652d20da5570caecbad90464c103fdbbbf9a7c4f7ab56bb56f5071",
+  "method_code_sha256": "34e0bcfce6515c0ccb5e2f742ab1936b440b6d06cf4b3670049c7993efa63be4",
+  "method_runtime": "CPython 3.9.6",
+  "method_sources_map_sha256_not_install_identity": "fdc40f30ba7265d395a6aa6e3f8bf9b183235934a214fcdc4d980ba345558baf",
+  "supersedes_finding_without_rewriting_receipt": "formal-safety-independent-v3-20260926.json",
+  "prior_finding_receipt_sha256": "c7c5db65d2855b4ca16d69391bb676ed84db1dd9096486f5285f453777ed2557",
+  "findings": [],
+  "verification": {
+    "manifest_distinct_files_independently_hashed": 33,
+    "manifest_file_mismatches": [],
+    "old_deployed_sources_compared_with_main": 16,
+    "old_deployed_source_differences": [],
+    "candidate_source_drift": false,
+    "independent_probe_script": "review/continuation-audit/probe_formal_safety_independent_v4_20260926.py",
+    "independent_probe_script_sha256": "5997c5ca5c78493c45e5ab6531485c713e94a01b8933a028bb50279ffb685bb0",
+    "independent_new_probes": 20,
+    "security_variants": "13 probes PASS: renamed layout with unknown evaluator, nested coverage/results, sibling feedback extra fields, batch extra fields, extra same-bundle member, nested inventory/private hash and renamed private under SOURCE rejected before a new public root. Unknown evaluator alone also rejected. An unlicensed extra attachment stayed absent from actual single-root archive and snapshot. Waiting reconstruction preserved shared method globals, and modified bundled Python was rejected by hash without execution.",
+    "p2_regression": {"registered_plans":129,"historical_reviews":2,"reviewed":129,"missing":[],"technical_failures":0,"evaluable_results":0,"new_economic_computations":0,"outcome":"PASS"},
+    "semantic_boundary": {"test_material":"4097 actual committed temporary evidence records; limits not reduced","4096":"ACCEPTED","4097":"PUBLIC_ANCESTOR_CLOSURE_LIMIT_EXCEEDED"},
+    "review_budget_boundary": {"scope":"Independent guard tests with stubbed expensive inner validation and injected active-depth state, not complete economic chains","128_distinct":"ACCEPTED","129_distinct":"PREVIOUS_REVIEW_NODE_LIMIT_EXCEEDED","64_depth":"ACCEPTED","65_depth":"PREVIOUS_REVIEW_CHAIN_LIMIT_EXCEEDED"},
+    "legacy_attack_probes_rerun":19,
+    "legacy_attack_execution":"review/continuation-audit/formal-v4-legacy-probe-execution-20260926.json",
+    "legacy_attack_result":"PASS: finite method-hash mismatch remains single-plan technical failure; other fourteen public mutations rejected; private and unknown-method private permissions rejected; combined cache budget enforced; actual FINAL reuse snapshot 2/2 and batch-root archive original FINAL 2/2.",
+    "formal_suite_independently_rerun":{"command":"python3 -m unittest discover -s tests -p test_formal_review.py -q","tests":37,"seconds":50.542,"failures":0,"errors":0},
+    "retained_controls":"Whole-record and allowed-attachment equality, bounded scalar normalization, FunctionType local globals, fresh child economic validation cache, combined byte/deadline accounting, immutable outbox full regeneration, old-method outbox rejection, complete predecessor/private binding, FINAL carrier continuity and mixed batch coverage remain enforced."
+  },
+  "installation_conditions": [
+    "Install only the exact frozen manifest delivery bytes and verify the complete publishing source identity after integration.",
+    "Preserve production originals, frozen plans, old 16 sources and the deployed 7db identity; record a new maintenance installation receipt.",
+    "Review does not authorize silently substituting source-map or method hashes for the approved publishing hash.",
+    "The coordinator still verifies current task/lock ownership and installation transition before changing production."
+  ],
+  "not_approved_by_this_receipt": [
+    "No real source completeness, event ordering, exact settlement mark or full mark-path capability is conferred.",
+    "No actual-cost proof, economic FINAL, profitability, native scheduling or natural acceptance is claimed.",
+    "Production resolvers still confer decode-only facts; test doubles and synthetic fixtures may not be production fallback inputs.",
+    "No claim of self-contained public method backup: excluded scanner source and private data remain outside public archives."
+  ],
+  "reviewer_mutations": "Only independent review script and receipts in main review directory; no candidate source, installation, production Store, Git or automation modifications."
+}

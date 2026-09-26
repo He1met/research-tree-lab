@@ -1,0 +1,23 @@
+{
+  "scope": "SYNTHETIC_SECURITY_REGRESSION_ONLY",
+  "command": "python3 tests/replay_formal_public_safety.py --preserved-archive .local/safety-repair-20260926/frozen-c146-source.tar.gz",
+  "preserved_archive_sha256": "93ea2b74ab4265f8ad94a5801b274d4776cec536a52708e7a5cc265619383620",
+  "preserved_base_archive_sha256": "1e3c0bd88bea154e71931c8246219df74570c749d55ac1f70e94decf1aa6949d",
+  "results": {
+    "preserved_failed": {
+      "formal_review_sha256": "8ed274cef8718fb8fcdc09d80cccb044c4232bee91c5d0e85ab8cf3e1b5cf406",
+      "probes": [
+        {"attack": "renamed_layout_unknown_method", "outcome": "UNSAFE_NEW_PUBLIC_ROOT_RETURNED", "single_root_archive_contains_canary": true, "snapshot_contains_canary": true},
+        {"attack": "coverage_nested_extra", "outcome": "UNSAFE_NEW_PUBLIC_ROOT_RETURNED", "single_root_archive_contains_canary": true, "snapshot_contains_canary": true}
+      ]
+    },
+    "repair_candidate": {
+      "formal_review_sha256": "0184424c0bd3e65b84ebf32805fe08078111e40a239041594468989849ed7a69",
+      "probes": [
+        {"attack": "renamed_layout_unknown_method", "outcome": "REJECTED_BEFORE_NEW_PUBLIC_ROOT", "reason": "PUBLIC_ANCESTOR_METHOD_IDENTITY_REJECTED", "store_unchanged": true},
+        {"attack": "coverage_nested_extra", "outcome": "REJECTED_BEFORE_NEW_PUBLIC_ROOT", "reason": "PUBLIC_ANCESTOR_PUBLIC_RECONSTRUCTION_REJECTED", "store_unchanged": true}
+      ]
+    }
+  },
+  "limits": ["Temporary synthetic stores only; no production record, data, native task, installation or publication was changed.", "Author regression is not independent approval or a real economic result.", "Existing unsafe ancestor exports remain unchanged; the repair refuses to introduce a new public root that references them."]
+}

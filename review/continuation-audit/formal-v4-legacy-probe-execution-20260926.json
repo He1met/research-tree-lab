@@ -1,0 +1,213 @@
+{
+  "schema_version": "1.0",
+  "status": "DIAGNOSTIC_UNFROZEN_NOT_APPROVAL",
+  "source_capture_mode": "READ_FIXED_PATHS_ONCE_THEN_EXECUTE_TEMPORARY_COPY",
+  "candidate_source_files_changed_after_capture": [],
+  "captured_file_sha256": {
+    "research/bootstrap-v1/research_bundle.json": "ecc7895fa0436b13f8ebcf8776e585e1d2176bf751fa32265e5b1f9463dd0d6f",
+    "researchlib/README.md": "5fcbfb9bcdee664a5f34bb16290abeac0411faeab423a2456a47b80c6102f6f1",
+    "researchlib/__init__.py": "6a52c32055618076a5a44b9dacc39d79711ef3ab7a4de73f9f5ddc9015268741",
+    "researchlib/archive.py": "c238176b603cc6cef0e6418a3432b2773972b5d6803523d45c11bb096305c4b0",
+    "researchlib/common.py": "a3e7aa7619acee94e05e733c20a4ae4eb30ff7056f9b0fca0b441ecb55d9b683",
+    "researchlib/conditional_review.py": "2508392c524c19b4260f6d120d4f17f80bcd0d327b8daa483036130d12b56fd6",
+    "researchlib/contracts.py": "7929f554936294d08407fd7198a2aa0fdfc72ee466c386c34244a711edbc55fd",
+    "researchlib/formal_funding.py": "920f3348471eda846d2e28fa17398acd6174703749ce6a5455557d0e52aeae66",
+    "researchlib/formal_review.py": "f542a221e0652d20da5570caecbad90464c103fdbbbf9a7c4f7ab56bb56f5071",
+    "researchlib/funding_forward.py": "79f9aa7dc3c2e1dc47b1cd2eb307cf3eaf685874f722dab21710601bdfefeb66",
+    "researchlib/funding_review.py": "e3b5afd7eeea6754e2723bdb5039c17086da8247330f4983c8d80f1bfb83148a",
+    "researchlib/novelty.py": "e7390b597cfd2a978fa3e9b9208213b6cbb0f331407bb762a5a62a1b8b1b3d08",
+    "researchlib/okx_funding_file.py": "6043a04010e8aed025542857b4eecc1f947cc564863e7435d54db0a652cd006d",
+    "researchlib/okx_trade_file.py": "31c79a1e31d4f2c9ad75952e87c4a7f5dcc479d4df00f127e137790fb6c44f12",
+    "researchlib/public.py": "db4eb97c35a312277798605f76ac334dfd57bbc6fe3b1b6d718cd86f00d20dbd",
+    "researchlib/readiness.py": "ad57c793f68a53c848048d84e21370811b7470bf71e8770d3f2a76cb2df059c7",
+    "researchlib/replay.py": "6a99205c55c58ba9d4de6a9ce1e3b3f752039eea7a28f71ef8e7e40181c44b1c",
+    "researchlib/review.py": "771f64a7764f2c957dcce98cc54cdc1bad5fb4381f9b465175cfa153bba4b906",
+    "researchlib/snapshot.py": "e5404cf0775ab6b99906a8115a2bb6cf97c05f86fc8bc9b0979d25bf64f22e15",
+    "researchlib/store.py": "6a9e7bc0ac8ee533fedb94bab0c87b9217436dbf4d8437f99fba9af8a02e06f6",
+    "review/bootstrap-review/review_bundle.json": "16d84a5f3cea83cccd4ab304de475e56a8cb86a2a6b4c4d369fb2ae8cb506acb",
+    "scripts/evaluate_funding.py": "ca954e78216509917c7055532e40d2f5acb3b7c32a3d77dc73e2cf52890c817d",
+    "scripts/native_receipts.py": "7c0e6adc0e0a351b097dcab547728fbd190b83bcb7d49ff709dbfb6d2fb59c4d",
+    "scripts/prepare_conditional_review.py": "48c5b08dd6ca5c791e7c86735fa62b0e86b2bec604b22dd657f8127491653728",
+    "scripts/prepare_formal_review.py": "6e0da7fbd2e06c490f5c6cc3280d149a2842d5554f98f0d409732f5c49b8a9ad",
+    "scripts/prepare_funding_review.py": "4290cecc2fdf4a86dca7f235501a06b9eb11e0467a4fe9f79689139c1c4caedf",
+    "scripts/public_guard.py": "c2de3706e4deca3ed361cba7b4ba2a5021f5a4550e5b57761ebdb75548eafd5b",
+    "scripts/publish.py": "dbf9df3e51dfbb43ed89252be72c2d1acfe558e725b920a6d34e00b94c6bf8dc",
+    "scripts/store_cli.py": "f078ca21e8ab250a9e8cbdbd876e3fb7c7126d1141295bb816635ef592ad2992",
+    "scripts/verify_publication.py": "7e322d404ef7c3c69f892d9fe88c775e7b49b34f0ab06f4510f0dabbc7815bfc",
+    "tests/fixtures/waiting-d21/METHOD.template.json": "353c72da324febf1d47098a060b09622b10d968d9e76b89da9ad87acfbc1fc31",
+    "tests/fixtures/waiting-d21/README.md": "842226bfcf8903ffdfd706d60ad6c744748309eea014471c750f0d1f07f0c593",
+    "tests/fixtures/waiting-d21/contracts.py.txt": "60a65556a02328b309f016a602ba142b887d23771556a907ecce2b71144c6041",
+    "tests/test_conditional_review.py": "6adf8c430107c6f8b6a8d1d1342d3261e76b0ddde45508d46c6e6b68fdad8389",
+    "tests/test_formal_funding.py": "284592c7dc1c8703602e68afe7654cd14a173b103b06b774440e0a1774b6a34e",
+    "tests/test_formal_review.py": "1b155e3d2d4714f191cf7e45e7f6a45a2fc51a63ca0ee818b0372e841c3d9fba"
+  },
+  "captured_map_sha256": "1132d33061b15e47db408e3580442e8b107227c7e7cb942e53318a58a7513820",
+  "production_read_or_write": false,
+  "network_or_native_actions": false,
+  "synthetic_fixture_only": true,
+  "results": [
+    {
+      "probe": "method_hash",
+      "outcome": "NEW_BUNDLE_RETURNED",
+      "review_stages": [
+        "TECHNICAL_FAILURE",
+        "WAITING_DATA"
+      ],
+      "reason_codes": [
+        [
+          "PREVIOUS_PROVENANCE_BINDING_INVALID"
+        ],
+        [
+          "ENTRY_FIRST_TRADE_UNPROVEN",
+          "EXIT_FIRST_TRADE_UNPROVEN",
+          "POSITION_AT_CUTOFF_UNPROVEN",
+          "PRICE_PNL_UNPROVEN",
+          "FUNDING_CASHFLOW_UNPROVEN",
+          "SOURCE_MARK_PATH_UNPROVEN",
+          "VERIFIED_COST_SCHEDULE_UNPROVEN",
+          "ACTUAL_COST_UNPROVEN",
+          "COST_TERMINAL_INTERPRETATION_UNPROVEN"
+        ]
+      ],
+      "changed_ancestor_accepted_without_failure": false
+    },
+    {
+      "probe": "natural",
+      "outcome": "REJECTED",
+      "error_type": "Rejected",
+      "reason": "PUBLIC_ANCESTOR_PUBLIC_RECONSTRUCTION_REJECTED"
+    },
+    {
+      "probe": "native",
+      "outcome": "REJECTED",
+      "error_type": "Rejected",
+      "reason": "PUBLIC_ANCESTOR_PUBLIC_RECONSTRUCTION_REJECTED"
+    },
+    {
+      "probe": "origin",
+      "outcome": "REJECTED",
+      "error_type": "Rejected",
+      "reason": "PUBLIC_ANCESTOR_PUBLIC_RECONSTRUCTION_REJECTED"
+    },
+    {
+      "probe": "method_time",
+      "outcome": "REJECTED",
+      "error_type": "Rejected",
+      "reason": "PUBLIC_ANCESTOR_PUBLIC_RECONSTRUCTION_REJECTED"
+    },
+    {
+      "probe": "complete",
+      "outcome": "REJECTED",
+      "error_type": "Rejected",
+      "reason": "PUBLIC_ANCESTOR_PUBLIC_RECONSTRUCTION_REJECTED"
+    },
+    {
+      "probe": "metric",
+      "outcome": "REJECTED",
+      "error_type": "Rejected",
+      "reason": "PUBLIC_ANCESTOR_PUBLIC_RECONSTRUCTION_REJECTED"
+    },
+    {
+      "probe": "coverage",
+      "outcome": "REJECTED",
+      "error_type": "Rejected",
+      "reason": "PUBLIC_ANCESTOR_FROZEN_BATCH_REJECTED"
+    },
+    {
+      "probe": "summary",
+      "outcome": "REJECTED",
+      "error_type": "Rejected",
+      "reason": "PUBLIC_ANCESTOR_DERIVED_TEXT_REJECTED"
+    },
+    {
+      "probe": "limitations",
+      "outcome": "REJECTED",
+      "error_type": "Rejected",
+      "reason": "PUBLIC_ANCESTOR_DERIVED_TEXT_REJECTED"
+    },
+    {
+      "probe": "feedback_facts",
+      "outcome": "REJECTED",
+      "error_type": "Rejected",
+      "reason": "PUBLIC_ANCESTOR_DERIVED_TEXT_REJECTED"
+    },
+    {
+      "probe": "feedback_native",
+      "outcome": "REJECTED",
+      "error_type": "Rejected",
+      "reason": "PUBLIC_ANCESTOR_DERIVED_TEXT_REJECTED"
+    },
+    {
+      "probe": "batch_coverage",
+      "outcome": "REJECTED",
+      "error_type": "Rejected",
+      "reason": "PUBLIC_ANCESTOR_BATCH_SUMMARY_REJECTED"
+    },
+    {
+      "probe": "batch_origin",
+      "outcome": "REJECTED",
+      "error_type": "Rejected",
+      "reason": "PUBLIC_ANCESTOR_BATCH_SUMMARY_REJECTED"
+    },
+    {
+      "probe": "batch_complete",
+      "outcome": "REJECTED",
+      "error_type": "Rejected",
+      "reason": "PUBLIC_ANCESTOR_BATCH_SUMMARY_REJECTED"
+    },
+    {
+      "probe": "old_private_permission",
+      "outcome": "REJECTED_BEFORE_NEW_DANGEROUS_BUNDLE",
+      "error_type": "Rejected",
+      "reason": "PUBLIC_ANCESTOR_POLICY_REJECTED"
+    },
+    {
+      "probe": "old_private_permission_unknown_method",
+      "outcome": "REJECTED_BEFORE_NEW_DANGEROUS_BUNDLE",
+      "error_type": "Rejected",
+      "reason": "PUBLIC_ANCESTOR_POLICY_REJECTED"
+    },
+    {
+      "probe": "combined_cache_budget",
+      "outcome": "REJECTED:COMBINED_HISTORY_RESOURCE_LIMIT_EXCEEDED",
+      "baseline_combined_bytes": 200141,
+      "lowered_test_threshold": 185178,
+      "production_limit_changed": false
+    },
+    {
+      "probe": "final_reuse_snapshot_archive",
+      "outcome": "EXECUTED",
+      "new_review_count": 2,
+      "record_coverage": {
+        "registered": 2,
+        "reviewed": 2,
+        "reused": 2,
+        "new_economic_computations": 0,
+        "missing": [],
+        "coverage_complete": true,
+        "review_refs": {
+          "p-btc-funding-long-control-20260923@1": [
+            "review-reuse-4809fda65a42055d"
+          ],
+          "p-btc-funding-short-20260923@1": [
+            "review-reuse-bf1f5e787c973f51"
+          ]
+        },
+        "evaluable_results": 2,
+        "final_results": 2,
+        "technical_failures": 0
+      },
+      "projected_coverage": {
+        "missing": [],
+        "registered": 2,
+        "reviewed": 2
+      },
+      "projected_review_refs": [
+        "review-reuse-4809fda65a42055d",
+        "review-reuse-bf1f5e787c973f51"
+      ],
+      "archived_original_final_count": 2,
+      "expected_original_final_count": 2
+    }
+  ]
+}

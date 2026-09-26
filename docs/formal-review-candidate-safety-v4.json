@@ -1,0 +1,98 @@
+{
+  "publishing_source_sha256": "63ad389e249bfaae5797eef90ba194aa3891f682d3427087c6585a8b7c26035f",
+  "source_sha256": "63ad389e249bfaae5797eef90ba194aa3891f682d3427087c6585a8b7c26035f",
+  "source_sha256_definition": "scripts/publish.py::source_hash complete publishing/install source identity",
+  "method_code_sha256": "34e0bcfce6515c0ccb5e2f742ab1936b440b6d06cf4b3670049c7993efa63be4",
+  "method_runtime": {
+    "implementation": "CPython",
+    "python_version": "3.9.6",
+    "third_party_runtime_dependencies": []
+  },
+  "method_sources_map_sha256": "fdc40f30ba7265d395a6aa6e3f8bf9b183235934a214fcdc4d980ba345558baf",
+  "method_source_sha256": {
+    "researchlib/__init__.py": "6a52c32055618076a5a44b9dacc39d79711ef3ab7a4de73f9f5ddc9015268741",
+    "researchlib/common.py": "a3e7aa7619acee94e05e733c20a4ae4eb30ff7056f9b0fca0b441ecb55d9b683",
+    "researchlib/conditional_review.py": "2508392c524c19b4260f6d120d4f17f80bcd0d327b8daa483036130d12b56fd6",
+    "researchlib/contracts.py": "7929f554936294d08407fd7198a2aa0fdfc72ee466c386c34244a711edbc55fd",
+    "researchlib/formal_funding.py": "920f3348471eda846d2e28fa17398acd6174703749ce6a5455557d0e52aeae66",
+    "researchlib/formal_review.py": "f542a221e0652d20da5570caecbad90464c103fdbbbf9a7c4f7ab56bb56f5071",
+    "researchlib/funding_forward.py": "79f9aa7dc3c2e1dc47b1cd2eb307cf3eaf685874f722dab21710601bdfefeb66",
+    "researchlib/funding_review.py": "e3b5afd7eeea6754e2723bdb5039c17086da8247330f4983c8d80f1bfb83148a",
+    "researchlib/novelty.py": "e7390b597cfd2a978fa3e9b9208213b6cbb0f331407bb762a5a62a1b8b1b3d08",
+    "researchlib/okx_funding_file.py": "6043a04010e8aed025542857b4eecc1f947cc564863e7435d54db0a652cd006d",
+    "researchlib/okx_trade_file.py": "31c79a1e31d4f2c9ad75952e87c4a7f5dcc479d4df00f127e137790fb6c44f12",
+    "researchlib/public.py": "db4eb97c35a312277798605f76ac334dfd57bbc6fe3b1b6d718cd86f00d20dbd",
+    "researchlib/readiness.py": "ad57c793f68a53c848048d84e21370811b7470bf71e8770d3f2a76cb2df059c7",
+    "researchlib/replay.py": "6a99205c55c58ba9d4de6a9ce1e3b3f752039eea7a28f71ef8e7e40181c44b1c",
+    "researchlib/review.py": "771f64a7764f2c957dcce98cc54cdc1bad5fb4381f9b465175cfa153bba4b906",
+    "researchlib/snapshot.py": "e5404cf0775ab6b99906a8115a2bb6cf97c05f86fc8bc9b0979d25bf64f22e15",
+    "researchlib/store.py": "6a9e7bc0ac8ee533fedb94bab0c87b9217436dbf4d8437f99fba9af8a02e06f6",
+    "scripts/prepare_conditional_review.py": "48c5b08dd6ca5c791e7c86735fa62b0e86b2bec604b22dd657f8127491653728",
+    "scripts/prepare_formal_review.py": "6e0da7fbd2e06c490f5c6cc3280d149a2842d5554f98f0d409732f5c49b8a9ad"
+  },
+  "delivery_files": {
+    "docs/FORMAL_REVIEW.md": "2e92f22cd6a43cf7fc936ebc244b32804499936488ecf66b847c69e01fc4cfe8",
+    "researchlib/formal_funding.py": "920f3348471eda846d2e28fa17398acd6174703749ce6a5455557d0e52aeae66",
+    "researchlib/formal_review.py": "f542a221e0652d20da5570caecbad90464c103fdbbbf9a7c4f7ab56bb56f5071",
+    "scripts/prepare_formal_review.py": "6e0da7fbd2e06c490f5c6cc3280d149a2842d5554f98f0d409732f5c49b8a9ad",
+    "tests/receipts/formal-real-registered-decode-frozen.json": "4f504dc209013d7ac951d5cb4c7835f8e17d12159db0751f8c53d3dcdadf4d57",
+    "tests/receipts/formal-real-registered-decode-hardened.json": "6b08e89cbdba19f638b5326f6e3099aa069d156e7fb395a8fabc0b6d1cfc99d4",
+    "tests/receipts/formal-real-registered-decode.json": "ac79c8254bc9d8aeb228aeb62ab5425e0edb9c5dba3c0877942a30e0cfcf53bf",
+    "tests/replay_formal_registered_sample.py": "96219c5f94ac0326f61395aad71e8709746362518c4a42faa60e20e402c38ab1",
+    "tests/test_formal_funding.py": "284592c7dc1c8703602e68afe7654cd14a173b103b06b774440e0a1774b6a34e",
+    "tests/test_formal_review.py": "1b155e3d2d4714f191cf7e45e7f6a45a2fc51a63ca0ee818b0372e841c3d9fba",
+    "docs/FORMAL_REVIEW_SAFETY_REVISION_20260926.md": "08ed00f489485de1ac7c9e93ac798be3fd5833bff31ee85db7a0daaf8b3f78a7",
+    "docs/FORMAL_REVIEW_SAFETY_V3_20260926.md": "7666b498d6fa31ea3b586b1b99f1ee611d2986d2a4158c4f819911741dd0b55a",
+    "tests/replay_formal_public_safety.py": "18e6d98f89dba323a9adbde08653296b77d176f5eda08cc20b0fae0b64529544",
+    "tests/receipts/formal-public-safety-replay-20260926.json": "74957cca54995575a5e4f071ca0997cdc073150344b5df6726cae7f0bb48f948",
+    "tests/receipts/formal-public-safety-replay-v3-20260926.json": "7b70f9c6ffbff8efb1a6aa291e0f4a35de6ee4ce6123906ed98de0ff89222e8b",
+    "docs/FORMAL_REVIEW_SAFETY_V4_20260926.md": "25b215cba672c5990ee8430cf2a03f3a966bbffea040e1982ac1343a3735886c",
+    "tests/receipts/formal-public-safety-replay-v4-20260926.json": "9ce3a0120010b48b03b1a5fd7c4a5f229f6ee81dfb03bf553bbd57fca651e503"
+  },
+  "old16_unchanged": true,
+  "observed_at": "2026-09-26 15:22:43 UTC",
+  "revision": 4,
+  "state": "FROZEN_SAFETY_REPAIR_CANDIDATE_INDEPENDENT_REVIEW_PENDING",
+  "scope": "ISOLATED_ENGINEERING_ONLY_NOT_INSTALLED",
+  "repair_dispatch": "repair-v3-c7c5db65d285",
+  "independent_finding_receipt_sha256": "c7c5db65d2855b4ca16d69391bb676ed84db1dd9096486f5285f453777ed2557",
+  "previous_manifest": {
+    "path": "docs/formal-review-candidate-safety-v3.json",
+    "sha256": "7a9581850f42aeb8aa1c4d717a1633972b6932e64afd6678d940ae874c27086d"
+  },
+  "preserved_v3_archive_sha256": "93c9f00976af0e369b6abaa8ada078ed086e3524fe809c974dd6c95fe6dde321",
+  "author_tests": [
+    {
+      "command": "python3 -m unittest discover -s tests -q",
+      "runtime": "CPython 3.9.6",
+      "tests": 319,
+      "seconds": 67.545,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "command": "python3.12 -m unittest discover -s tests -p 'test_formal*.py' -q",
+      "runtime": "CPython 3.12",
+      "tests": 52,
+      "seconds": 45.163,
+      "failures": 0,
+      "errors": 0
+    }
+  ],
+  "security_and_boundary_receipt": "tests/receipts/formal-public-safety-replay-v4-20260926.json",
+  "resource_limits": {
+    "semantic_ancestor_nodes": 4096,
+    "distinct_review_nodes": 128,
+    "active_review_depth": 64,
+    "combined_cache_bytes": 128000000,
+    "validation_seconds": 180
+  },
+  "boundaries": [
+    "Only P2 semantic/review-node budget separation changed from frozen v3.",
+    "Full-structure public safety, cache separation, byte limits and deadlines retained.",
+    "Frozen economic rules and all old 16 deployed sources unchanged.",
+    "Author tests are not independent approval, real economics or natural scheduling.",
+    "No main source, installation, original, operations state, task, permission or public repository writes.",
+    "Complete publishing source hash and 19-source method-map hash are distinct; installation must use the publishing source identity."
+  ]
+}
