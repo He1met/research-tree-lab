@@ -11,8 +11,50 @@ from .contracts import record_ref, semantic_refs, validate_record, validate_rela
 from .public import attachment_allowed, public_record, scan_bytes
 
 
+def _calendar_original_policy(original, extra):
+    """Two fixed authored originals; the omitted fields carry no new license.
+
+    Round membership duplicates an already exported input reference. The two
+    feedback dispositions describe bounded diagnostic use, not economic review
+    or a newly executed successor. Full original identity is pinned below.
+    """
+    if original.get('round_id') != 'r-stock-session-mechanism-20260923':
+        return None
+    inputs = original.get('input_record_refs')
+    if not isinstance(inputs, list) or original['round_id'] not in inputs:
+        return None
+    if (original.get('record_type') == 'evidence'
+            and original.get('evidence_id') == 'e-stock-session-calendar-20260927'
+            and extra == {'round_id'}
+            and digest(canonical(original)) == 'e4d1b106b95fa2a3e0f56c08c34966b1eb6ad4854a895dd0c0cc9da743acfdbb'):
+        return 'EXACT_STOCK_CALENDAR_EVIDENCE_V1'
+    if (original.get('record_type') != 'decision'
+            or original.get('decision_id') != 'decision-stock-session-calendar-20260927'
+            or extra != {'round_id', 'feedback_dispositions'}):
+        return None
+    dispositions = original.get('feedback_dispositions')
+    if not isinstance(dispositions, list) or len(dispositions) != 2:
+        return None
+    for item, side in zip(dispositions, ('long-control', 'short')):
+        if not isinstance(item, dict) or set(item) != {
+                'actual_application', 'disposition', 'existing_successor_round_id',
+                'feedback_ref', 'source_review_ref'}:
+            return None
+        feedback = 'feedback-btc-funding-' + side + '-manual-20260923-v1'
+        review = 'review-btc-funding-' + side + '-manual-20260923-v1'
+        if (item['feedback_ref'] != feedback or item['source_review_ref'] != review
+                or feedback not in inputs or review not in inputs
+                or item['existing_successor_round_id'] != 'r-feedback-input-completeness-20260923'
+                or item['disposition'] != 'ADOPT_DATA_ROLE_TIME_AND_UNKNOWN_COST_BOUNDARIES; WAIT_ECONOMIC_INPUT'
+                or item['actual_application'] != 'Calendar labels not substituted for actual quotes, price coverage or costs; retrieved sources not backdated.'):
+            return None
+    if digest(canonical(original)) == '18c5cfbf2df82e5bc8d8b9f78cb861c9a2e68bbbd3e2d2cd9af7c7a3efc3e527':
+        return 'EXACT_STOCK_CALENDAR_DECISION_V1'
+    return None
+
+
 def _exact_public_export_policy(original):
-    """One versioned, source-reviewed original exception, never caller policy.
+    """Versioned, source-reviewed original exceptions, never caller policy.
 
     Public projection and graph semantics stay unchanged. This does not allow
     arbitrary decision metadata, a configurable hash list, or restricted fields.
@@ -41,10 +83,14 @@ def _exact_public_export_policy(original):
         and original.get('trial_state') == 'PREPARATION_ONLY'
         and digest(canonical(original)) == '6b5ec5278a5d5bdc3945d483035a4d6c9e1f9ffad8871bf71933ce109aa7c64c'
     )
-    if not approved:
+    exact_policy = 'EXACT_NUMERAIRE_DECISION_METADATA_V1' if approved else None
+    if (exact_policy is None and 'export_fields' not in policy
+            and policy.get('visibility') == 'PUBLIC' and policy.get('license') == 'OWN_ANALYSIS'):
+        exact_policy = _calendar_original_policy(original, extra)
+    if exact_policy is None:
         raise ContractError("Original has non-whitelisted fields; cannot claim exact public backup")
     scan_bytes('approved-original.json', canonical(original))
-    return 'EXACT_NUMERAIRE_DECISION_METADATA_V1'
+    return exact_policy
 
 
 def export_backup(store, destination, record_refs=None, extra_files=None):
@@ -149,8 +195,11 @@ def inspect_backup(path):
             ref = validate_record(record, entry["producer_role"])
             if ref != entry["record_ref"] or digest(content) != entry["original_record_hash"]:
                 raise ContractError("Recovery original identity/hash mismatch")
-            if entry.get('exact_export_policy') != _exact_public_export_policy(record):
+            exact_policy = _exact_public_export_policy(record)
+            if entry.get('exact_export_policy') != exact_policy:
                 raise ContractError("Recovery exact-export policy mismatch")
+            if exact_policy is not None and content != canonical(record):
+                raise ContractError("Recovery reviewed original bytes mismatch")
             records[ref] = record
         validate_relationships(records)
         return manifest

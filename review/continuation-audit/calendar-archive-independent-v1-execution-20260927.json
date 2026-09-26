@@ -1,0 +1,391 @@
+{
+  "scope": "LOCAL_TEMPORARY_ENGINEERING_ONLY",
+  "restore": {
+    "records": 20,
+    "files": 43,
+    "archive_sha256": "a6a93872cdfb26f41581de79dd282e079728e03186f17dac4a07ba1df4e80743",
+    "exact_original_bytes": true
+  },
+  "attacks": [
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "round",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "caller_hash",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "nested",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "secret",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "export_empty",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "export_all",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "local",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Recovery closure includes non-public/synthetic original"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "license",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "synthetic",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Recovery closure includes non-public/synthetic original"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "reversed",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "executed",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "extra_nested",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "round",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "caller_hash",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "nested",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "secret",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "PUBLIC_SCAN_REJECTED: BEARER"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "export_empty",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "export_all",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "local",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery closure includes non-public/synthetic original"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "license",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "synthetic",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery closure includes non-public/synthetic original"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "reversed",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "executed",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "extra_nested",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "noncanonical_space",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery reviewed original bytes mismatch"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "noncanonical_order",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery reviewed original bytes mismatch"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "duplicate_false",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery reviewed original bytes mismatch"
+    },
+    {
+      "ref": "decision-stock-session-calendar-20260927",
+      "attack": "duplicate_hidden_payload",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery reviewed original bytes mismatch"
+    },
+    {
+      "ref": "e-stock-session-calendar-20260927",
+      "attack": "round",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-stock-session-calendar-20260927",
+      "attack": "caller_hash",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-stock-session-calendar-20260927",
+      "attack": "nested",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-stock-session-calendar-20260927",
+      "attack": "secret",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-stock-session-calendar-20260927",
+      "attack": "export_empty",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-stock-session-calendar-20260927",
+      "attack": "export_all",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-stock-session-calendar-20260927",
+      "attack": "local",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Recovery closure includes non-public/synthetic original"
+    },
+    {
+      "ref": "e-stock-session-calendar-20260927",
+      "attack": "license",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-stock-session-calendar-20260927",
+      "attack": "synthetic",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Recovery closure includes non-public/synthetic original"
+    },
+    {
+      "ref": "e-stock-session-calendar-20260927",
+      "attack": "round",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-stock-session-calendar-20260927",
+      "attack": "caller_hash",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-stock-session-calendar-20260927",
+      "attack": "nested",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-stock-session-calendar-20260927",
+      "attack": "secret",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "PUBLIC_SCAN_REJECTED: BEARER"
+    },
+    {
+      "ref": "e-stock-session-calendar-20260927",
+      "attack": "export_empty",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-stock-session-calendar-20260927",
+      "attack": "export_all",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-stock-session-calendar-20260927",
+      "attack": "local",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery closure includes non-public/synthetic original"
+    },
+    {
+      "ref": "e-stock-session-calendar-20260927",
+      "attack": "license",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-stock-session-calendar-20260927",
+      "attack": "synthetic",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery closure includes non-public/synthetic original"
+    },
+    {
+      "ref": "e-stock-session-calendar-20260927",
+      "attack": "noncanonical_space",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery reviewed original bytes mismatch"
+    },
+    {
+      "ref": "e-stock-session-calendar-20260927",
+      "attack": "noncanonical_order",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery reviewed original bytes mismatch"
+    },
+    {
+      "ref": "e-stock-session-calendar-20260927",
+      "attack": "duplicate_false",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery reviewed original bytes mismatch"
+    },
+    {
+      "ref": "e-stock-session-calendar-20260927",
+      "attack": "duplicate_hidden_payload",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery reviewed original bytes mismatch"
+    }
+  ],
+  "old_archives": [
+    {
+      "name": "public-decision-catchup-20260927-v1.zip",
+      "sha256": "97cfbde11c930d8f9e5bf7ffc0781b50b93defd95e1e1749a3cfbc206664101d",
+      "records": 18
+    },
+    {
+      "name": "public-feedback-supplement-20260923-v1.zip",
+      "sha256": "ae8ec8612992154f0ec7b7957d45bdaffdbd81ca9795a91543f2f2af4f04a674",
+      "records": 15
+    },
+    {
+      "name": "public-research-increment-20260923-v1.zip",
+      "sha256": "3467ea715b9ef638f897e94f13d5ca267e65ea3069a56a9f53132321cf72cf7f",
+      "records": 14
+    },
+    {
+      "name": "public-research-increment-20260923-v2.zip",
+      "sha256": "76fe183efa73144d5ad1060355ba6babd16228d3707333b5b24d32442168cb03",
+      "records": 21
+    },
+    {
+      "name": "public-research-increment-20260923-v3.zip",
+      "sha256": "b9a30287e7a003d63e629f648d82e8c9b3834037ae1fadfdd865ed8e7fb2a415",
+      "records": 28
+    },
+    {
+      "name": "public-research-increment-20260923-v4.zip",
+      "sha256": "24c3e3d810d4b8939c953803c8da42baa343d3bc7133b9a479dbb0a3d06159bb",
+      "records": 19
+    },
+    {
+      "name": "public-research-increment-20260926-v1.zip",
+      "sha256": "a2ed7d14efe0699b5ac0e5669e6d303fd5c27066fc95087b397047c6a4d39ccb",
+      "records": 24
+    },
+    {
+      "name": "public-research-increment-20260926-v2.zip",
+      "sha256": "0329252c6f3392d5b8ca2792a176123f1b6a0e43a52c373afb045bcb5e54d7d4",
+      "records": 21
+    },
+    {
+      "name": "public-research-increment-20260927-v1.zip",
+      "sha256": "98f83a56b39372698855452e0dd9d6912586dc2f9b85b6f1bfd3661fa936bcd1",
+      "records": 5
+    },
+    {
+      "name": "public-research-increment-20260927-v3.zip",
+      "sha256": "4207232771ae8b4b552eeb4b010cebbb5610efd5455abfa86781873714fccb86",
+      "records": 27
+    },
+    {
+      "name": "public-research-increment-20260927-v4.zip",
+      "sha256": "c7c8f562d8dd87e14f728358b1e0670342f833e54327cc7909e022a96290edac",
+      "records": 21
+    },
+    {
+      "name": "public-research-increment-20260927-v5.zip",
+      "sha256": "a793fd7eefc2d48c9b085d3c8fa7a2f6d962cdb378c87c1d147ec095f4dee1cd",
+      "records": 22
+    },
+    {
+      "name": "public-research-increment-20260927-v6.zip",
+      "sha256": "f68dcf23acc55b8cd9fcaa01e6b3fee5702990fccb48966b65bea2631b6bfff4",
+      "records": 24
+    },
+    {
+      "name": "public-research-increment-20260927-v7.zip",
+      "sha256": "9723e9dfd84219754e88b901a73f6e3fe9a1c3075c66ddc9664b7b39563eb785",
+      "records": 19
+    },
+    {
+      "name": "public-research-v1.zip",
+      "sha256": "c8339a015bbae89cd3be5af2128fdbc29b5321822f6bc6f8bf3cd455dc475023",
+      "records": 26
+    }
+  ],
+  "original_records_unchanged": 105,
+  "bundle_files_unchanged": 770,
+  "graph_projection_unchanged": true
+}
