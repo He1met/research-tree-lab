@@ -1,0 +1,22 @@
+{
+  "state": "COMPLETED_WITH_LIMITATIONS",
+  "answer": "Public page contains dated historical parameter-change entries, but this bounded probe did not obtain qualified BTC/ETH USDT perpetual tier history.",
+  "historical_rule_qualification": "NOT_QUALIFIED",
+  "required_field_check": {
+    "target_contract": "MISMATCH_FOR_OBSERVED_BTC_ETH_ROWS",
+    "margin_mode": "UNKNOWN",
+    "tier_basis_and_ranges": "CONTRACT_COUNTS_PARTIALLY_OBSERVED_FOR_DIFFERENT_CONTRACT",
+    "before_after_maintenance_rates": "PAIR_VALUES_OBSERVED_DIRECTION_UNVERIFIED",
+    "effective_time_timezone": "DISPLAYED_FOR_DIFFERENT_CONTRACT",
+    "coverage_completeness": "UNKNOWN"
+  },
+  "official_announcement": "Dec13 2023 announcement specifies Dec18 08:00-10:00UTC and before/after tables; inspected text lacks BTCUSDT/ETHUSDT targets. A window is not a proven exact switch time.",
+  "new_data_capability": "AAPLUSDT dated tier-change detail found; further source interpretation and completeness required.",
+  "economic_samples": 0,
+  "actual_net": null,
+  "new_rounds": 0,
+  "new_plans": 0,
+  "synthetic_checklist_cases": 4,
+  "trial_state": "PREPARATION_ONLY",
+  "natural_trigger": null
+}
