@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "verdict": "APPROVED",
+  "scope": "EXACT_FROZEN_UI_ENGINEERING_INSTALL_APPROVAL_WITH_EXISTING_TEST_TIMING_ADVISORY",
+  "candidate_manifest": "docs/ui-supplemental-navigation-v1-candidate.json",
+  "candidate_manifest_sha256": "2293aa82ca007d60a2c62a549401ff1c57c621fae15ae4136ebb7d09e1c77395",
+  "approved_source_sha256": "3c58c5bd96a7c4b0ef6c105914c6077c596851fb23f057c0c953727144d7e705",
+  "approved_source_identity": "scripts/publish.py --source-hash complete publishing/install source",
+  "baseline_source_sha256": "90382f3c07abbd57d803cc6b6f3a4314de8146237e019c9d35de7636a6c1a577",
+  "changed_source_files": ["web/src/App.tsx","web/src/data.ts","web/src/related.ts","web/src/styles.css"],
+  "blocking_findings": [],
+  "advisories": [{
+    "priority": "P3",
+    "file": "tests/browser/observer.spec.ts",
+    "line": 36,
+    "title": "Existing immediate edge-count assertion races asynchronous graph layout",
+    "evidence": "Independent full candidate rerun was 57 passed and 1 failed at C06 WebKit (2 edges immediately observed, expected 3). Focused candidate repeats: 1 passed / 4 failed; unchanged 90382f baseline under identical browser, viewport and fixture: also 1 passed / 4 failed. Independent bounded waiting assertion found all 3 edges without further action, stable afterwards, in all 10 candidate repeats across Chromium/WebKit and all 5 baseline WebKit repeats.",
+    "classification": "Existing assertion timing sensitivity; not a new persistent graph regression. Original failing evidence retained, not relabeled as a 58/58 pass.",
+    "followup": "Use an auto-retrying locator count assertion in a separately reviewed test update; this frozen candidate was not edited."
+  }],
+  "independent_verification": {
+    "manifest_source_delivery_artifact_hashes": "PASS; all complete-source, delivery, engineering, built-shell and 137 replay input hashes checked",
+    "candidate_hash_drift": false,
+    "old16_and_formal19_sources_unchanged": true,
+    "public_permission_python_schema_and_dependency_changes": false,
+    "replay_snapshot": "f694bd01460d45258c9694856371a7e1ce2f8bfcabbf03f2430925cda1c9ee44",
+    "local_only": true,
+    "isolated_ports": [5197,5198],
+    "reviewer_servers_stopped": true,
+    "full_browser_rerun": {"tests":58,"passed":57,"failed":1,"seconds":23.649524,"failure":"Existing C06 WebKit immediate edge count","report_sha256":"c1f77ac187dbce7341cba1d77e940e1fe007d12803d7bfeb311fb67a9aa5311b"},
+    "new_related_tests_both_browsers": {"tests":6,"passed":6},
+    "independent_gate_probe": "Both browsers reject cached records outside current catalog or historical as_of, cached oversize reads and aborted reads, plus invalid data paths. Exact reference association succeeds; ID fragments, nested objects and future_child proposals do not associate. Run/evidence map to plan, decision to feedback, review does not become supplemental content.",
+    "risk_review": "Lookup reads only selected validated catalog membership, sequentially at most 10 objects each bounded to 1000000 streamed bytes. Content-address verification precedes caching; cache hits recheck membership, size, abort and historical time. Failure entries remain explicitly unknown. A snapshot/round/tab key remount cancels scanning, and live/ref checks suppress stale async updates. New source does not mutate graph data or infer successor edges. Full panel opens only after explicit selection.",
+    "real_materials_opened": ["run-tier-history-probe-20260927@attempt-1","e-tier-history-probe-20260927","decision-tier-history-probe-20260927"],
+    "real_navigation_graph_viewport_selection": "PASS both browsers; real records open through proper plan/feedback tabs without changing graph count, viewport or selected round",
+    "screenshots_visually_inspected":6,
+    "visual_result":"Readable drawer records and disclosed reference fields; plan tab shows run/evidence, feedback tab shows decisions and proposed-next-step limitations. Existing three-tab layout retained. No executed-child or trial-start claim introduced.",
+    "history_refresh_failure_cancel_size_hash_tests":"Passed applicable existing and new browser cases; old snapshot restrictions retained."
+  },
+  "independent_test_files": {
+    "review/continuation-audit/probe_ui_navigation_independent_v1.mjs":"bfdba28b5b50e732564b1454c783f2a368d113ba72d7090a4dd03dc2ec8b2a0e",
+    "review/continuation-audit/ui-edge-settle-independent.spec.ts":"4c766080951972f74b69e377134c1f3958dc42177299a179077e8dddca621f60",
+    "review/continuation-audit/ui-independent-playwright.config.mjs":"fdc2c9e1bf0bfbc193e1511c26fa17634532af047860083a832a0aed8024bfb8"
+  },
+  "installation_conditions": [
+    "Install only exact approved delivery bytes and verify complete source identity after integration.",
+    "Keep research originals, snapshots, publication permissions, old 16/formal 19 method bytes and native task configuration unchanged.",
+    "Deployment and actual remote Pages readback remain the authorized native publisher's separate work."
+  ],
+  "limits": [
+    "Real public snapshot was replayed locally; this is not remote deployment, natural-run proof or economic acceptance.",
+    "No candidate source, production source, installation, Store, automation or publication was modified by this reviewer.",
+    "Independent diagnostic artifacts were written separately; frozen author artifacts and prior receipts were preserved."
+  ]
+}

@@ -11,3 +11,8 @@
 .filter-notice{background:#eef4e9;color:#6a7b5b;border:1px solid #d7e1cc;padding:9px 15px;font-size:11px;display:flex;align-items:center;justify-content:space-between;gap:8px}.filter-notice button{flex-shrink:0;font-size:10px;padding:4px 7px;background:transparent;border-color:#d4dfc9}
 .snapshot-context{margin:0;padding:0 20px 10px;border-inline:1px solid var(--line);background:#fbfcf8;color:#657469;font-size:11px;line-height:1.7}
 @media(max-width:700px){.snapshot-context{padding:0 14px 9px;font-size:10px}}
+/* Supplemental references stay inside the existing round drawer. */
+.related-materials { border-top: 1px solid #cbd8cf; margin-top: 24px; padding-top: 16px; }
+.related-materials > div { margin: 12px 0; }
+.related-materials small { display: block; overflow-wrap: anywhere; color: #52665a; }
+.related-materials button { margin: 4px 8px 4px 0; overflow-wrap: anywhere; max-width: 100%; }

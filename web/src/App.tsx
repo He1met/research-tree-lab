@@ -3,6 +3,7 @@ import { Background, Controls, Handle, Position, ReactFlow, ReactFlowProvider } 
 import type { Edge, Node, NodeChange, NodeProps, ReactFlowInstance, Viewport } from '@xyflow/react';
 import { directionLabel, formatTime, label, loadEvidence, loadHistory, loadRecord, loadSnapshot, productName, readinessState, shortText, statusLabel, uniqueProducts } from './data';
 import type { Assessment, JsonRecord, Pointer, Round, Snapshot } from './data';
+import { relatedFields, relatedTab } from './related';
 
 type Tab = 'plan' | 'review' | 'feedback';
 type DrawerState = { roundId?: string; tab: Tab; ref?: string; daily?: boolean };
@@ -44,7 +45,7 @@ const ResearchCard = memo(function ResearchCard({ data }: NodeProps<RoundNode>) 
 });
 const nodeTypes = { round: ResearchCard };
 
-function recordName(r: JsonRecord) { return String(r.record_ref ?? r.review_id ?? r.feedback_id ?? r.assessment_id ?? r.batch_id ?? r.decision_id ?? r.plan_ref ?? (r.plan_id ? `${r.plan_id}@${r.version ?? '?'}` : undefined) ?? r.round_id ?? r.record_id ?? '记录'); }
+function recordName(r: JsonRecord) { return String(r.record_ref ?? r.review_id ?? r.feedback_id ?? r.assessment_id ?? r.batch_id ?? r.decision_id ?? (r.run_id ? `${r.run_id}@${r.attempt_id ?? '?'}` : undefined) ?? r.evidence_id ?? r.plan_ref ?? (r.plan_id ? `${r.plan_id}@${r.version ?? '?'}` : undefined) ?? r.round_id ?? r.record_id ?? '记录'); }
 const fieldLabels: Record<string, string> = {
   research_question: '研究问题', question: '研究问题', hypothesis: '假设', mechanism: '机制', rules: '封存规则',
   counterevidence: '反证', baseline_comparison: '基线比较', metrics: '评价结果', limitations: '边界与缺项',
@@ -89,6 +90,53 @@ function RecordPanel({ record, focus, snapshot }: { record: JsonRecord; focus?: 
       {evidence && <section className="evidence-preview"><b>{evidence.ref}</b>{evidence.error ? <p role="alert">{evidence.error}</p> : evidence.value ? <pre>{JSON.stringify(evidence.value, null, 2)}</pre> : <p>读取已校验的公开证据…</p>}</section>}
     </details>
   </article>;
+}
+
+function RelatedMaterials({ roundId, snapshot, tab }: { roundId: string; snapshot: Snapshot; tab: 'plan' | 'feedback' }) {
+  const refs = useMemo(() => Object.keys(snapshot.catalog.details).sort(), [snapshot]);
+  const [cursor, setCursor] = useState(0);
+  const [matches, setMatches] = useState<{ ref: string; fields: string[] }[]>([]);
+  const [failures, setFailures] = useState<{ ref: string; error: string }[]>([]);
+  const [busy, setBusy] = useState(false);
+  const [stopped, setStopped] = useState(false);
+  const [opened, setOpened] = useState<{ ref: string; value?: JsonRecord; error?: string }>();
+  const controller = useRef<AbortController | undefined>(undefined);
+  const live = useRef(true);
+  useEffect(() => { live.current = true; return () => { live.current = false; controller.current?.abort(); }; }, []);
+  async function scan() {
+    if (controller.current) return;
+    const active = new AbortController(); controller.current = active; setBusy(true); setStopped(false);
+    try {
+      for (let i = cursor; i < Math.min(cursor + 10, refs.length); i++) {
+        const ref = refs[i];
+        try {
+          const record = await loadRecord(ref, snapshot, { signal: active.signal, maxBytes: 1_000_000 });
+          if (!live.current || active.signal.aborted) return;
+          const fields = relatedFields(record, roundId);
+          if (fields.length && relatedTab(record) === tab) setMatches(values => [...values, { ref, fields }]);
+        } catch (error) {
+          if (!live.current || active.signal.aborted) return;
+          setFailures(values => [...values, { ref, error: String(error) }]);
+        }
+        setCursor(i + 1);
+      }
+    } finally { if (live.current) { setBusy(false); controller.current = undefined; } }
+  }
+  async function openRecord(ref: string) {
+    setOpened({ ref });
+    try { const value = await loadRecord(ref, snapshot); if (live.current) setOpened(current => current?.ref === ref ? { ref, value } : current); }
+    catch (error) { if (live.current) setOpened(current => current?.ref === ref ? { ref, error: String(error) } : current); }
+  }
+  return <section className="related-materials" aria-label="本轮相关材料">
+    <h3>本轮相关材料 · {tab === 'plan' ? '运行与证据' : '决定'}</h3>
+    <p className="muted">仅查找所选快照内公开记录的显式引用；引用不等于派生、反馈采用或实际执行。每次最多检查 10 条、每条最多 1 MB，正文按需打开。</p>
+    <p role="status">已检查 {cursor} / {refs.length} 条 · 找到 {matches.length} 条 · 读取失败 {failures.length} 条{stopped ? ' · 已取消' : ''}。{cursor < refs.length || failures.length ? '未检查或失败部分仍为未知。' : '本次查找已完成。'}</p>
+    <button disabled={busy || cursor >= refs.length} onClick={() => void scan()}>{cursor ? '继续查找下一批' : '查找相关材料'}</button>
+    {busy && <button onClick={() => { controller.current?.abort(); setStopped(true); }}>取消查找</button>}
+    {matches.map(item => <div key={item.ref}><button onClick={() => void openRecord(item.ref)}>打开 {item.ref}</button><small>通过 {item.fields.join('、')} 引用 {roundId}</small></div>)}
+    {!!failures.length && <details><summary>未能检查的记录（不计为无关联）</summary>{failures.map(item => <p key={item.ref}>{item.ref}：{item.error}</p>)}</details>}
+    {opened && (opened.value ? <RecordPanel key={opened.ref} record={opened.value} snapshot={snapshot} /> : <p role={opened.error ? 'alert' : 'status'}>{opened.error ?? `正在读取 ${opened.ref}`}</p>)}
+  </section>;
 }
 
 function Drawer({ state, snapshot, now, clockOkay, historical, close, open }: { state: DrawerState; snapshot: Snapshot; now: number; clockOkay: boolean; historical: boolean; close: () => void; open: (id: string, tab: Tab, ref?: string) => void }) {
@@ -142,6 +190,7 @@ function Drawer({ state, snapshot, now, clockOkay, historical, close, open }: { 
       <p className="detail-context">{round.id} · 第 {round.generation} 代 · {round.product_refs.map(id => productName(snapshot.catalog.products.find(p => p.product_id === id.split('@')[0]) ?? { product_id: id.split('@')[0] })).join(' / ')}<br />所选信息时点 {formatTime(snapshot.catalog.as_of)}</p>
       {tab === 'plan' && <>{!round.selected_plan_ref && round.plan_refs.length > 0 && <p className="notice">本轮未指定主选，以下候选分别展示，不按收益自动选取。</p>}{round.readiness.map((assessment, i) => <Readiness key={String(assessment.assessment_id ?? i)} assessment={assessment} historical={historical} state={readinessState(assessment, round, historical ? Date.parse(snapshot.catalog.as_of) : now, clockOkay, snapshot.catalog.mode, new Set([...Object.keys(snapshot.catalog.details), ...Object.keys(snapshot.catalog.evidence ?? {})]))} />)}<p className="account-note">执行条件仅针对所列方案版本与观察时点。账户适配未评估（NOT_ASSESSED）；不代表盈利、保证成交或交易授权。</p></>}
       {loading ? <p role="status">按需读取已校验记录…</p> : records.length ? records.map(item => item.record ? <RecordPanel key={`${snapshot.pointer.snapshot_id}-${item.ref}`} record={item.record} focus={state.ref === item.ref} snapshot={snapshot} /> : <p className="notice" key={item.ref}>{item.error}</p>) : <div className="drawer-empty">本轮尚无{tab === 'review' ? '正式复核' : tab === 'feedback' ? '反馈记录' : '已公开方案'}。缺项保留为未知。</div>}
+      {tab !== 'review' && <RelatedMaterials key={`${snapshot.pointer.snapshot_id}:${round.id}:${tab}`} roundId={round.id} snapshot={snapshot} tab={tab} />}
     </div></>}
   </aside></div>;
 }
@@ -319,7 +368,7 @@ function Observer() {
     </section>
     <footer className="page-footer"><span>一轮一卡 · P / R / F 属于本轮 · 多日复核保留在原轮次</span><span>研究观察页 · 不提供账户接入或交易操作 · <a href="./third-party-notices.txt">开源许可</a></span></footer>
     </main>
-    {drawer && snapshot && <Drawer state={drawer} snapshot={snapshot} now={now} clockOkay={clockIsValid} historical={Boolean(historyId)} close={close} open={locate} />}
+    {drawer && snapshot && <Drawer key={`${snapshot.pointer.snapshot_id}:${drawer.roundId ?? 'daily'}`} state={drawer} snapshot={snapshot} now={now} clockOkay={clockIsValid} historical={Boolean(historyId)} close={close} open={locate} />}
   </div>;
 }
 export default function App() { return <ReactFlowProvider><Observer /></ReactFlowProvider>; }

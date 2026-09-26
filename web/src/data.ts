@@ -32,12 +32,23 @@ export function safeDataUrl(path: string): string {
   return url.href;
 }
 
-async function fetchText(path: string, signal?: AbortSignal) {
+async function fetchText(path: string, signal?: AbortSignal, maxBytes = 30_000_000) {
   const response = await fetch(safeDataUrl(path), { cache: 'no-store', signal, credentials: 'omit', redirect: 'error' });
   if (!response.ok) throw new Error(`公开快照读取失败（HTTP ${response.status}）`);
-  const text = await response.text();
-  if (text.length > 30_000_000) throw new Error('单个公开文件超出读取范围');
-  return text;
+  const reader = response.body?.getReader();
+  if (!reader) throw new Error('公开文件没有可读正文');
+  const chunks: Uint8Array[] = []; let size = 0;
+  try {
+    while (true) {
+      const { done, value } = await reader.read(); if (done) break;
+      size += value.byteLength;
+      if (size > maxBytes) throw new Error('单个公开文件超出读取范围');
+      chunks.push(value);
+    }
+  } finally { await reader.cancel(); }
+  const bytes = new Uint8Array(size); let offset = 0;
+  for (const chunk of chunks) { bytes.set(chunk, offset); offset += chunk.byteLength; }
+  return new TextDecoder().decode(bytes);
 }
 async function digest(text: string) {
   const bytes = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
@@ -84,19 +95,27 @@ export async function loadHistory(): Promise<Pointer[]> {
   if (!Array.isArray(entries)) throw new Error('历史快照目录不可读');
   return entries.map((p: Pointer) => ({ ...p, schema_version: p.schema_version ?? schema })).sort((a, b) => b.as_of.localeCompare(a.as_of));
 }
-const detailCache = new Map<string, JsonRecord>();
-export async function loadRecord(ref: string, snapshot: Snapshot): Promise<JsonRecord> {
+const detailCache = new Map<string, { value: JsonRecord; bytes: number }>();
+export async function loadRecord(ref: string, snapshot: Snapshot, options: { signal?: AbortSignal; maxBytes?: number } = {}): Promise<JsonRecord> {
   const path = snapshot.catalog.details[ref];
   if (!path) throw new Error(`此快照没有公开该记录：${ref}`);
-  if (detailCache.has(path)) return detailCache.get(path)!;
-  const text = await fetchText(path);
-  const expected = path.match(/^objects\/([a-f0-9]{64})\.json$/)?.[1];
-  if (!expected || await digest(text) !== expected) throw new Error('详情记录完整性校验失败');
-  const value: JsonRecord = JSON.parse(text);
-  assertSchema(value);
+  options.signal?.throwIfAborted();
+  let entry = detailCache.get(path);
+  if (!entry) {
+    const text = await fetchText(path, options.signal, options.maxBytes);
+    const expected = path.match(/^objects\/([a-f0-9]{64})\.json$/)?.[1];
+    if (!expected || await digest(text) !== expected) throw new Error('详情记录完整性校验失败');
+    const value: JsonRecord = JSON.parse(text); assertSchema(value);
+    entry = { value, bytes: new TextEncoder().encode(text).byteLength };
+  }
+  options.signal?.throwIfAborted();
+  if (entry.bytes > (options.maxBytes ?? 30_000_000)) throw new Error('单个公开文件超出读取范围');
+  const { value } = entry;
   const available = value.available_at ?? value.created_at;
-  if (typeof available === 'string' && Date.parse(available) > Date.parse(snapshot.catalog.as_of)) throw new Error('记录晚于所选历史时点');
-  detailCache.set(path, value);
+  if (available != null && !Number.isFinite(timestamp(available))) throw new Error('记录信息时点无法核实');
+  if (typeof available === 'string' && timestamp(available) > timestamp(snapshot.catalog.as_of)) throw new Error('记录晚于所选历史时点');
+  // Recheck the selected time even on a content-addressed cache hit.
+  if (!detailCache.has(path)) { if (detailCache.size >= 128) detailCache.delete(detailCache.keys().next().value!); detailCache.set(path, entry); }
   return value;
 }
 export async function loadEvidence(ref: string, snapshot: Snapshot): Promise<{ text?: string; downloadUrl: string; filename: string }> {
