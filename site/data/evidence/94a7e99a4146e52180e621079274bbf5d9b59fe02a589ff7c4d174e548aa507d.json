@@ -1,0 +1,14 @@
+{
+  "state": "COMPLETED_BOUNDED_PROBE_DATA_REQUIRED",
+  "before_after_direction": "UNKNOWN",
+  "historical_rule_qualification": "NOT_QUALIFIED",
+  "new_observation": "QQQ Sep17 first-five-tier paired values read for first time; explicit pair-direction legend not observed.",
+  "resolved_scientific_problem": false,
+  "economic_samples": 0,
+  "actual_net": null,
+  "synthetic_checklist_cases": 4,
+  "new_rounds": 0,
+  "new_plans": 0,
+  "trial_state": "PREPARATION_ONLY",
+  "natural_trigger": null
+}
