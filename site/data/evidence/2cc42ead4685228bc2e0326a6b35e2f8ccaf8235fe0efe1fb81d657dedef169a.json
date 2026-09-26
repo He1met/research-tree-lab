@@ -1,0 +1,46 @@
+{
+  "frozen_at": "2026-09-26T23:08:32.312348+00:00",
+  "problem_key": "perpetual-delisting-forced-exit-price-role-v1",
+  "question": "Does no scheduled expiry justify replaying a perpetual until a researcher-selected horizon when the venue terminates trading, and can last trade substitute for settlement index averaging?",
+  "hypothesis": "A verified delisting rule can force a distinct exit event and price role; perpetual label alone does not guarantee horizon continuity.",
+  "falsifier": "Official termination rules guarantee continuation to original horizon or explicitly equate settlement to last trade; no source implies unknown rather than support.",
+  "scope": "Enabled BTC/ETH/AAPL/QQQ relevance only; other delisted symbols may be documentary examples, never target economic data or enabled products.",
+  "novelty": "Exchange product termination event and settlement averaging, distinct from corporate-action unit rebasing, ADL and ordinary order fill; prior corporate-action mention of delisting disclosed.",
+  "comparison": [
+    "No-expiry implies uninterrupted holding / last trade proxy",
+    "Explicit exchange termination with event-specific price and fees",
+    "Unknown when target event absent"
+  ],
+  "data_role": "Official rule/announcement pages retrieved now, not contemporaneous price path; no API.",
+  "search_stop": "Read global official general delisting settlement rule and at most two first relevant dated official announcements; stop when rule contrast and target-data gap resolved; no repeated searches absent new evidence.",
+  "synthetic_cases": {
+    "entry": "100",
+    "signed_quantity": [
+      "1",
+      "-1"
+    ],
+    "equal_weight_index_paths": [
+      [
+        "100",
+        "100",
+        "100"
+      ],
+      [
+        "90",
+        "100",
+        "110"
+      ],
+      [
+        "110",
+        "100",
+        "90"
+      ]
+    ]
+  },
+  "fixed_arithmetic": "price_component=q*(mean(index)-entry), proxy=q*(terminal_index-entry); equal-weight toy samples NOT official TWAP sampling",
+  "costs": "Excluded from toy price component; actual_net null. Rule-specific delivery fee waiver must not imply all fees/funding/slippage zero.",
+  "completion": "6 frozen toy cases, hand unit checks, official source-role finding plus target admissibility gap; no economic plan or profitability selection",
+  "feedback": "Adopt exact price roles/time/cost unknown boundaries from both full reviews; retain existing one feedback successor; independent root not feedback duplicate",
+  "old_BTC": "Original windows ended; DATA_REQUIRED/METHOD_REQUIRED, not future wait",
+  "AB": "PREPARATION_ONLY; no launch before real cost-review/feedback/web gates"
+}

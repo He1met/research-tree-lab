@@ -1,0 +1,39 @@
+[
+  {
+    "id": "CKS-2011-v3",
+    "url": "https://arxiv.org/html/1011.6402v3",
+    "title": "The price impact of order book events",
+    "authors": [
+      "Rama Cont",
+      "Arseniy Kukanov",
+      "Sasha Stoikov"
+    ],
+    "published_at": "2010-11-29",
+    "version_at": "2011-04-13",
+    "observed_at": "2026-09-26T23:36:42.581858+00:00",
+    "sections_read": [
+      "2.1",
+      "3.1",
+      "4.1"
+    ],
+    "finding": "OFI uses changes in best bid/ask prices and displayed queue sizes; trade imbalance is a distinct variable. This is a contemporaneous price-impact comparison on US equity data, not evidence of future crypto returns.",
+    "role": "PRIMARY_PAPER_METHOD_SOURCE"
+  },
+  {
+    "id": "OKX-archive-help",
+    "url": "https://www.okx.com/zh-hans/historical-data",
+    "published_at": null,
+    "observed_at": "2026-09-26T23:36:42.581861+00:00",
+    "surface": "Official IAB / historical trades / field description",
+    "finding": "The visible archive help labels side as buy/sell transaction direction, size as traded quantity, created_time as Unix milliseconds, and source as ordinary versus retail price improvement orders. It does not explicitly say aggressor/taker.",
+    "role": "OFFICIAL_ARCHIVE_SCHEMA_HELP"
+  },
+  {
+    "id": "OKX-data-catalog",
+    "url": "https://www.okx.com/historical-data",
+    "published_at": null,
+    "observed_at": "2026-09-26T23:36:42.581864+00:00",
+    "finding": "Catalog separately offers trade and L2 history. A catalog listing is not verified acquisition or complete event coverage.",
+    "role": "OFFICIAL_DATA_SOURCE_DIRECTORY"
+  }
+]

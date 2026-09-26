@@ -1,0 +1,81 @@
+{
+  "scope": "SIX_SYNTHETIC_PRICE_ROLE_CASES_ONLY",
+  "cases": [
+    {
+      "path": [
+        "100",
+        "100",
+        "100"
+      ],
+      "q": "1",
+      "averaged_index_price_component": "0",
+      "terminal_index_proxy_component": "0",
+      "proxy_error": "0",
+      "actual_net": null
+    },
+    {
+      "path": [
+        "100",
+        "100",
+        "100"
+      ],
+      "q": "-1",
+      "averaged_index_price_component": "0",
+      "terminal_index_proxy_component": "0",
+      "proxy_error": "0",
+      "actual_net": null
+    },
+    {
+      "path": [
+        "90",
+        "100",
+        "110"
+      ],
+      "q": "1",
+      "averaged_index_price_component": "0",
+      "terminal_index_proxy_component": "10",
+      "proxy_error": "10",
+      "actual_net": null
+    },
+    {
+      "path": [
+        "90",
+        "100",
+        "110"
+      ],
+      "q": "-1",
+      "averaged_index_price_component": "0",
+      "terminal_index_proxy_component": "-10",
+      "proxy_error": "-10",
+      "actual_net": null
+    },
+    {
+      "path": [
+        "110",
+        "100",
+        "90"
+      ],
+      "q": "1",
+      "averaged_index_price_component": "0",
+      "terminal_index_proxy_component": "-10",
+      "proxy_error": "-10",
+      "actual_net": null
+    },
+    {
+      "path": [
+        "110",
+        "100",
+        "90"
+      ],
+      "q": "-1",
+      "averaged_index_price_component": "0",
+      "terminal_index_proxy_component": "10",
+      "proxy_error": "10",
+      "actual_net": null
+    }
+  ],
+  "different_cases": 4,
+  "real_economic_samples": 0,
+  "actual_net": null,
+  "complete_cost_scenario": false
+}

@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-09-26T23:36:42.581723+00:00",
+  "scope": "REAL_EXISTING_FILE_HEADER_AND_SOURCE_CONTRACT_CHECK",
+  "sha256": "efab589d1d2171e7bd589e334653bea29daa414b4c87239ad75c4f6c23886f69",
+  "archive_bytes": 28884745,
+  "member": "BTC-USDT-SWAP-trades-2026-09-21.csv",
+  "member_bytes": 295527908,
+  "header": [
+    "instrument_name",
+    "trade_id",
+    "side",
+    "price",
+    "size",
+    "created_time",
+    "source"
+  ],
+  "missing_quote_state_fields": [
+    "best_bid_price",
+    "best_bid_size",
+    "best_ask_price",
+    "best_ask_size"
+  ],
+  "full_file_row_scan_this_run": false,
+  "full_crc_this_run": false,
+  "reused_full_audit": "bundle:research-feedback-input-completeness-20260923-v1/attachments/public_results.json",
+  "ofi_identifiable_from_this_file": false,
+  "side_aggressor_mapping": "UNKNOWN_FROM_ARCHIVE_FIELD_HELP",
+  "source_help_observation": "Archive help distinguishes source 0 ordinary orders and 1 retail price improvement orders; these are not buy/sell signs.",
+  "economic_samples_this_run": 0,
+  "predictions_or_returns_computed": false,
+  "actual_net": null,
+  "formal_review_created": false,
+  "research_route_started": false,
+  "conclusion": "Reject treating this trade-only file as full quote-event OFI. Future signed-trade proxy needs explicit archive-side semantics; full OFI needs qualified quotes.",
+  "wait_reason": "L2 target bytes/identity unresolved in existing operational evidence; no new evidence resolves duplicate-transfer risk."
+}

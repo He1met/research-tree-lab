@@ -1,0 +1,16 @@
+{
+  "frozen_at": "2026-09-26T23:36:42.568055+00:00",
+  "problem_key": "ofi-versus-signed-trades-observability-v1",
+  "question": "Can the existing official BTC trade archive identify quote-event order flow imbalance, or only a separately defined trade-direction proxy?",
+  "scope": "One discovery source/schema feasibility check; not a research-route start or predictive experiment.",
+  "hypothesis": "Trade prints alone lack the best-quote price/queue transitions required by Cont-Kukanov-Stoikov OFI.",
+  "falsifier": "The exact archive contains documented best bid/ask prices and queue-size updates sufficient for quote-event reconstruction.",
+  "minimal_check": "Rehash existing data object, inspect ZIP member identity and CSV header only; compare against paper section 2.1. Reuse prior full-file audit rather than recalculate rows or returns.",
+  "stop": "Stop after exact schema comparison and official field-description inspection. Do not download L2 again or fit a price relationship.",
+  "data_ref": "d-btc-trades-20260921@1",
+  "source_file_hash": "efab589d1d2171e7bd589e334653bea29daa414b4c87239ad75c4f6c23886f69",
+  "prior_exposure": "Already used by input audit, timestamp boundary and entry/grid development; not a holdout.",
+  "trigger_origin": "UNKNOWN",
+  "natural_trigger": null,
+  "trial_state": "PREPARATION_ONLY"
+}

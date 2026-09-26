@@ -1,0 +1,57 @@
+{
+  "observed_at": "2026-09-26T23:36:42.582020+00:00",
+  "record_count": 110,
+  "round_count": 15,
+  "discovery_count": 9,
+  "dedup_dimensions": [
+    "question",
+    "mechanism",
+    "rules",
+    "input identity",
+    "completed results"
+  ],
+  "related": [
+    {
+      "ref": "r-btc-entry-confirmation-20260923",
+      "difference": "Price-close selection and delay/exposure attribution; proposed quote/signed-flow variable was not its mechanism."
+    },
+    {
+      "ref": "r-order-admission-20260926",
+      "difference": "Order admission and fill lifecycle, not quote imbalance information. Reuse its data blocker; do not re-run its quantity examples."
+    },
+    {
+      "ref": "r-feedback-input-completeness-20260923",
+      "difference": "Reuse real header/full-row audit and exposed status; new contribution is primary-paper observable mapping, not a repeated data-quality result."
+    },
+    {
+      "ref": "r-boundary-sensitivity-20260923",
+      "difference": "Within-ms executable boundary uncertainty remains; time-bucket sums do not solve source completeness or legal fills."
+    },
+    {
+      "ref": "r-btc-eth-paired-funding-20260923",
+      "difference": "Settlement carry and paired exposure differ from quote-event supply/demand imbalance."
+    }
+  ],
+  "other_completed_families": [
+    "inventory attribution",
+    "stock reference sessions",
+    "corporate actions",
+    "ADL",
+    "borrowing liability",
+    "maintenance tiers",
+    "stablecoin numeraire",
+    "delisting settlement"
+  ],
+  "novelty": "Project-level distinct proposed explanatory variable; not a scientific novelty claim. No existing completed OFI test found in current committed branch snapshot.",
+  "reuse": [
+    "Existing 28,884,745-byte trade object; no duplicate data object",
+    "Prior full-file diagnostics",
+    "Existing L2 acquisition/identity blocker"
+  ],
+  "priority": "Admit a conditional B source proposal; first resolve observable validity. Do not displace qualified formal-cost input work.",
+  "starvation": "No evidence that a profitable winner dominates scheduling: branches show diverse documentary work and no selected economic winner. Long-term waiting duration/causal resource exclusion UNKNOWN; record timestamps do not prove wait time.",
+  "defer": "Full OFI blocked by quote-event data. Signed-trade surrogate blocked by archive-specific side semantics. Price-only or shuffled-sign controls are proposed, not executed.",
+  "no_new_claim_for_research": true,
+  "trial_state": "PREPARATION_ONLY",
+  "waiting_time": "UNKNOWN"
+}
