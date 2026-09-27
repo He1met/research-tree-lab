@@ -1,0 +1,37 @@
+{
+  "checks": 5,
+  "scope": "Author classification examples only. Eligibility additionally requires provenance/coverage/time; not production method or numeric market test.",
+  "state": "PASS",
+  "cases": [
+    [
+      "trade",
+      "AAPL-USDT-SWAP",
+      true,
+      false
+    ],
+    [
+      "mark",
+      "BTC-USDT-SWAP",
+      true,
+      false
+    ],
+    [
+      "mark",
+      "AAPL-USDT-SWAP",
+      false,
+      false
+    ],
+    [
+      "index",
+      "AAPL-USDT-SWAP",
+      true,
+      true
+    ],
+    [
+      "mark",
+      "AAPL-USDT-SWAP",
+      true,
+      true
+    ]
+  ]
+}

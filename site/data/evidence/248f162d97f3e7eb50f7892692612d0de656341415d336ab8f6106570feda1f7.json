@@ -1,0 +1,26 @@
+{
+  "problem_key": "aapl-synchronized-mark-index-public-file-availability-20260925-v1",
+  "frozen_at": "2026-09-27T07:08:55.992038+00:00",
+  "question": "Can official public pages or their exposed public files provide AAPL-USDT-SWAP mark/index path for the acquired 2026-09-25 trade partition without a market API?",
+  "hypothesis": "The permitted public historical catalogue exposes a downloadable target mark or index file with identifiable role, interval and provenance.",
+  "counterevidence": "No corresponding type/link in inspected catalogue and source search leaves this route unsupported; does not prove universal nonexistence. Trade candles or live spot quotes do not establish historical mark/index.",
+  "scope": "One availability probe for existing stock-session direction. No new round, price signal, strategy, PnL or plan. Inspect official historical page type options and one focused official search; follow relevant official documentation. No API, endpoint guessing, private network inspection or alternative-client workaround.",
+  "target_interval": [
+    "2026-09-24T16:00:00Z",
+    "2026-09-25T16:00:00Z"
+  ],
+  "data_role": "Target mark/index required; existing trade archive is exposed development and not a substitute. New data if acquired later is not contemporaneously known.",
+  "reuse": [
+    "d-aapl-trades-20260925@1",
+    "e-aapl-minute-coverage-20260927",
+    "r-stock-session-mechanism-20260923"
+  ],
+  "prior_exposure": "Existing trade schema/count/minmax and minute diagnostic results read; no price study.",
+  "comparison": "Required historical mark/index file versus exposed official catalogue offerings. Qualification requires exact role/symbol/time/coverage evidence; descriptive page or formula is not a path.",
+  "costs": "Not an economic experiment. Fees/slippage/funding/exit costs remain unqualified; actual_net=null.",
+  "completion": "Save observed page categories, exact permitted links, source time and restrictions. If no matching allowed file found in this bounded scope, retain DATA_REQUIRED with precise retry condition; do not repeat trade download or minute census.",
+  "test": "No market calculation planned. Source-role acceptance examples checked before browsing; not economic or independent tests.",
+  "feedback": "Reuse both daily-input adoption decisions; preserve source completeness/order/mark/cost unknown. Existing BTC successor stays unique.",
+  "selection": "Prior independent stock-session root can progress on newly acquired target file but synchronous price-role inputs missing. New OFI direction blocked on qualified L2, no duplicate retry. Other documentary mechanisms have no new evidence; do not manufacture one.",
+  "trial": "PREPARATION_ONLY; not A/B start; first-clock fields null."
+}

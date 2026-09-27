@@ -1,0 +1,24 @@
+{
+  "completed_at": "2026-09-27T07:12:34.904233+00:00",
+  "state": "BOUNDED_CATALOGUE_PROBE_COMPLETE_DATA_REQUIRED",
+  "catalogue_categories": [
+    "Trade history",
+    "Candlestick",
+    "Funding rate",
+    "Order book",
+    "Borrowing rate"
+  ],
+  "selected_instrument_type": "Perpetual",
+  "selected_symbol": "AAPL-USDT",
+  "selected_date": "2026-09-25",
+  "observed_candidate_file": "AAPL-USDT-SWAP-candlesticks-2026-09-25.zip",
+  "mark_index_selector_observed": false,
+  "qualified_target_mark_index_files_acquired": 0,
+  "source_nonexistence_proven": false,
+  "historical_chart_route": "DOCUMENTARY_LEAD_NOT_TESTED_FOR_AAPL_EXPORT",
+  "economic_samples": 0,
+  "actual_net": null,
+  "market_calculation": "NOT_RUN_NOT_REQUIRED_FOR_AVAILABILITY_PROBE",
+  "data_cutoff_advanced": false,
+  "hypothesis_status": "NOT_SUPPORTED_IN_INSPECTED_CATALOGUE_SCOPE"
+}
