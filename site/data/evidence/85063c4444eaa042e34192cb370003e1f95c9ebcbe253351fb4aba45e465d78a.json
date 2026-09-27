@@ -1,0 +1,12 @@
+{
+  "documentary_check": "COMPLETED_LIMITED",
+  "target_effect": "UNKNOWN_NOT_TESTED",
+  "proposal_status": "PROPOSED_NOT_STARTED",
+  "eth_price_input": "DATA_REQUIRED",
+  "catalogue_option": "VERIFIED_UI_ONLY",
+  "actual_net": null,
+  "trigger_origin": "UNKNOWN",
+  "trial_state": "PREPARATION_ONLY",
+  "new_market_files": 0,
+  "synthetic_cases": 0
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "HY2005",
+    "url": "https://www.ms.u-tokyo.ac.jp/~nakahiro/mypapers_for_personal_use/hayyos03.pdf",
+    "title": "On covariance estimation of non-synchronously observed diffusion processes",
+    "authors": [
+      "Takaki Hayashi",
+      "Nakahiro Yoshida"
+    ],
+    "published_at": "2005-04",
+    "observed_at": "2026-09-27T23:36:33.169033+00:00",
+    "sections_read": [
+      "Introduction",
+      "2.1-2.2 relevant propositions",
+      "3 Condition C and Definition 3.1",
+      "Theorem 3.1 conditions"
+    ],
+    "finding": "Synchronization and interpolation can distort covariance. Equation 3.1 sums products of increments whose observation intervals overlap; its diffusion and sampling assumptions are not established for target crypto trades.",
+    "role": "PRIMARY_AUTHOR_HOSTED_PAPER"
+  },
+  {
+    "id": "HY-METADATA",
+    "url": "https://keio.elsevierpure.com/en/publications/on-covariance-estimation-of-non-synchronously-observed-diffusion-/",
+    "published_at": "2005-04",
+    "observed_at": "2026-09-27T23:36:33.169033+00:00",
+    "finding": "Institutional metadata corroborates Bernoulli 11(2), 359-379 and DOI 10.3150/bj/1116340299.",
+    "role": "PRIMARY_INSTITUTIONAL_BIBLIOGRAPHY"
+  },
+  {
+    "id": "OKX-CATALOGUE",
+    "url": "https://www.okx.com/zh-hans/historical-data",
+    "published_at": null,
+    "observed_at": "2026-09-27T23:36:33.169033+00:00",
+    "finding": "Official app browser: historical trades dialog, perpetual selected, ETH-USDT search visibly returns ETH-USDT. This establishes a catalogue option only, not bytes, coverage or download success.",
+    "role": "OFFICIAL_FILE_DISCOVERY"
+  }
+]

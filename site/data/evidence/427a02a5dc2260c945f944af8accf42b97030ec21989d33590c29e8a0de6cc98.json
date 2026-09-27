@@ -1,0 +1,39 @@
+{
+  "status": "PROPOSED_NOT_STARTED",
+  "problem_key": "cross-asset-asynchronous-covariance-measurement-v1",
+  "question": "For fixed BTC and ETH trade streams over one common day, does previous-tick grid alignment change measured joint log-price variation relative to overlapping-interval accumulation?",
+  "mechanism": "Non-synchronous observation times can suppress or alter measured cross-asset co-movement; this is an observation mechanism, not evidence of diversification or lead-lag predictability.",
+  "targets": [
+    "BTC-USDT-SWAP",
+    "ETH-USDT-SWAP"
+  ],
+  "source_ids": [
+    "HY2005",
+    "OKX-CATALOGUE"
+  ],
+  "first_action": "Research role can select a one-day ETH official public trade-file acquisition through the observed catalogue, qualify file identity/time and bind hash before scanning prices. Reuse the existing BTC file; no new scheduler or route claim.",
+  "planned_partition": "2026-09-23 in the official UTC+08:00 daily partition; verify in downloaded file, do not infer solely from filename",
+  "planned_utc_window": [
+    "2026-09-22T16:00:00Z",
+    "2026-09-23T16:00:00Z"
+  ],
+  "existing_btc_ref": "d-review-btc-trades-20260923@1",
+  "existing_btc_sha256": "c17b52f17ae7762aff2d2ef72720df08f1f0ce534331054dc11d30cff8e195aa",
+  "eth_sha256": null,
+  "exposure": "BTC input previously exposed. New ETH acquisition and all subsequent reads are development, never holdout.",
+  "data_requirements": [
+    "Exact target contracts, original timestamps and price units, UTC partition and common observed support",
+    "Same-millisecond event ordering or a frozen bound; no arbitrary first/last row selection",
+    "Source coverage and RPI segment semantics recorded; no use of funding rates as price",
+    "Qualified synchronous midquotes needed before attributing differences specifically to asynchrony rather than trade-price noise"
+  ],
+  "minimal_experiment": "After input qualification and method freeze, compare exactly one 60-second previous-tick grid with overlap-increment covariance on the same frozen support. Retain observation ages, counts and unmatched intervals. No lag, ticker, scale or threshold search.",
+  "baseline": "Grid statistic G=sum(delta log BTC at grid * delta log ETH at grid). Previous tick is an explicit estimator transformation, never a claim of actual contemporaneous observations. No leading backfill or extrapolation beyond observed support.",
+  "comparison": "H=sum(delta log BTC_i * delta log ETH_j) for intervals (t_i-1,t_i] and (s_j-1,s_j] with max(left)<min(right). Report H,G,H-G as dimensionless descriptive cumulative covariation, not the demeaned sample covariance used in Roll and not a correlation/beta.",
+  "boundary_rule": "Freeze common observed support and grid anchor after timestamp-only audit, before price calculations. Keep and disclose endpoint censoring; do not insert unobserved boundary prices. Different prices at identical unsequenced timestamps stop point estimation until bounds or ordering are separately frozen.",
+  "counterevidence": "Equal statistics within a predeclared numerical error bound fails to support alignment sensitivity on this day; a difference supports measurement dependence only. Neither result identifies true latent covariance or proves a diversification benefit.",
+  "completion": "One qualified-input descriptive comparison with all frozen diagnostics and reproducible bytes, or a precise qualification failure. No trade plan or economic evaluation. Stop after the fixed comparison; no winner selection.",
+  "resources": "One ETH daily archive, reuse ~19.5 MB BTC compressed file. ETH size, uncompressed memory and wall time UNKNOWN until file observation; timestamp audit first, ordered interval merge rather than Cartesian expansion.",
+  "restart": "Initial acquisition/protocol qualification may proceed without new user approval. After a failure, retry only with corrected path/schema or new qualified evidence. After completion, only independent frozen sample, synchronized quotes or method correction can justify a new question.",
+  "cost_boundary": "No trades or net-return estimate in diagnostic. Any later strategy requires full original allowed costs, funding, inventory and exit inputs. actual_net stays null; not an A/B gate."
+}

@@ -1,0 +1,65 @@
+{
+  "observed_at": "2026-09-27T23:36:33.169033+00:00",
+  "basis": "Complete committed dataset records, not a global search of all available markets",
+  "dataset_count": 8,
+  "inventory": [
+    {
+      "ref": "d-aapl-trades-20260925@1",
+      "instrument": "AAPL-USDT-SWAP",
+      "role": "TARGET_TRADE_ARCHIVE_DEVELOPMENT_SCHEMA_INSPECTION",
+      "sha256": "3e4c6fb6dc180e57b576cd227ef67a894fe7413edb2203c7d5442948db4017ed"
+    },
+    {
+      "ref": "d-btc-eth-funding-exposed-20260921@1",
+      "instrument": "BTC-USDT-SWAP and ETH-USDT-SWAP",
+      "role": "EXPOSED_REALIZED_FUNDING_DEVELOPMENT_NOT_CURRENT_SIGNAL",
+      "sha256": "34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c"
+    },
+    {
+      "ref": "d-btc-candles-20260921@1",
+      "instrument": "BTC-USDT-SWAP",
+      "role": "TARGET_TRADE_CANDLES_NOT_MARK",
+      "sha256": "5595c6777328eb5f392520fdf6bd9c59518018991c7f92dd376ce04b1c353287"
+    },
+    {
+      "ref": "d-btc-trades-20260921@1",
+      "instrument": "BTC-USDT-SWAP",
+      "role": "TARGET_TRADE_HISTORY",
+      "sha256": "efab589d1d2171e7bd589e334653bea29daa414b4c87239ad75c4f6c23886f69"
+    },
+    {
+      "ref": "d-review-btc-funding-20260923@1",
+      "instrument": "BTC-USDT-SWAP",
+      "role": "TARGET_REALIZED_FUNDING",
+      "sha256": "ccb7a177d16a56889a56e878402852302d57a6c8443aadf8e99814195bb6a2e8"
+    },
+    {
+      "ref": "d-review-btc-funding-20260924@1",
+      "instrument": "BTC-USDT-SWAP",
+      "role": "TARGET_REALIZED_FUNDING",
+      "sha256": "f3c2de4291bf963c8da05dc01a602d5ed06ea552df491e3b47954b41f98519a7"
+    },
+    {
+      "ref": "d-review-btc-trades-20260923@1",
+      "instrument": "BTC-USDT-SWAP",
+      "role": "TARGET_TRADE_HISTORY",
+      "sha256": "c17b52f17ae7762aff2d2ef72720df08f1f0ce534331054dc11d30cff8e195aa"
+    },
+    {
+      "ref": "d-review-btc-trades-20260924@1",
+      "instrument": "BTC-USDT-SWAP",
+      "role": "TARGET_TRADE_HISTORY",
+      "sha256": "531d1397caa0fb0bdb3158b4b0fd8acb618f7a0c7b46b17600762985993e574d"
+    }
+  ],
+  "eth_price_dataset_refs": [],
+  "eth_funding_is_not_price": true,
+  "qualified_pair_available": false,
+  "official_eth_catalogue_option": true,
+  "new_market_files": 0,
+  "raw_price_rows_read": 0,
+  "covariances_computed": 0,
+  "economic_samples": 0,
+  "actual_net": null,
+  "qualification": "DATA_REQUIRED; ETH file acquisition not attempted in this bounded discovery probe. Catalogue visibility is not an acquisition blocker or proof of coverage."
+}
