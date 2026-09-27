@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://www.okx.com/en-sg/markets/index/aapl-usdt",
+    "observed_at": "2026-09-27T08:11:06.896859+00:00",
+    "published_at": null,
+    "role": "REGIONAL_OFFICIAL_PUBLIC_INDEX_CHART_UI",
+    "finding": "Original chart rendered and Go to date Sep25 succeeded visually; inspected Advanced and right-click menus did not show data export. Same-page TradingView remained Loading.",
+    "limits": "Chart view is not an acquired path; timezone, full interval and relationship to perpetual mark remain unqualified."
+  }
+]

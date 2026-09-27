@@ -1,0 +1,18 @@
+{
+  "completed_at": "2026-09-27T08:11:06.896859+00:00",
+  "state": "PARTIAL_UI_FEASIBILITY_DATA_REQUIRED",
+  "historical_index_chart_visible": true,
+  "historical_navigation_date": "2026-09-25",
+  "selected_time_display": "08:00:00",
+  "timezone": "UNQUALIFIED",
+  "supported_data_export_observed": false,
+  "tradingview_state": "LOADING_AT_LAST_OBSERVATION_CAUSE_UNKNOWN",
+  "separate_mark_chart": "NOT_INSPECTED",
+  "qualified_target_path_files_acquired": 0,
+  "universal_export_absence_proven": false,
+  "economic_samples": 0,
+  "actual_net": null,
+  "market_calculation": "NOT_RUN_AVAILABILITY_ONLY",
+  "data_cutoff_advanced": false,
+  "hypothesis_status": "PUBLIC_HISTORICAL_DISPLAY_SUPPORTED_FULL_EXPORT_UNRESOLVED"
+}

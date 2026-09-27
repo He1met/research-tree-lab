@@ -1,0 +1,25 @@
+{
+  "problem_key": "aapl-public-chart-mark-index-export-feasibility-20260925-v1",
+  "frozen_at": "2026-09-27T08:07:38.826313+00:00",
+  "question": "Can the public official AAPL perpetual chart expose a supported historical mark/index export covering the existing Sep25 trade partition?",
+  "hypothesis": "A public chart offers target mark/index history and supported export preserving role, instrument and time.",
+  "counterevidence": "Login barrier, unavailable chart, absent export, or only image/current values cannot qualify a reproducible full historical path. A bounded failed visit does not prove global nonexistence.",
+  "scope": "Follow one official AAPL public chart entry from visible link or official search. Inspect visible price-role and export controls without login, account/order actions, market API, network inspection, endpoint guessing or other-client bypass. Stop on restriction or after visible relevant controls are exhausted.",
+  "target_interval": [
+    "2026-09-24T16:00:00Z",
+    "2026-09-25T16:00:00Z"
+  ],
+  "data_role": "Historical target mark/index; current quote, trade candles, chart screenshots and prices on another venue are not substitutes.",
+  "prior_exposure": "Existing trade schema/count/minmax, minute coverage and bounded catalogue negative already read; no new price study.",
+  "comparison": "Qualified role/time/instrument/coverage export versus only display/documentation.",
+  "costs": "Availability only; no numeric market calculation; fees, slippage, funding and exit unknown; actual_net null.",
+  "completion": "Persist observed UI and precise limitation; export only if permitted visible feature exists, then preserve bytes and inspect scope before qualification.",
+  "feedback": "Reuse daily long/short input-boundary adoption and sole BTC successor; this continues independent stock-session root.",
+  "selection": "Untested chart lead from preceding official documentation differs from completed catalogue probe. Existing OFI needs qualified L2; other mechanisms have no new supplied inputs. No near-duplicate root or candidate.",
+  "trial": "PREPARATION_ONLY, no A/B start",
+  "reuse": [
+    "r-stock-session-mechanism-20260923",
+    "e-aapl-mark-availability-20260927",
+    "d-aapl-trades-20260925@1"
+  ]
+}
