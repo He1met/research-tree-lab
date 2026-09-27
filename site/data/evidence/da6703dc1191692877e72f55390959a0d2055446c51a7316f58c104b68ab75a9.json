@@ -1,0 +1,17 @@
+{
+  "generic_identity": "I_after - I_before = w_removed / (1-w_removed) * (I_before-p_removed), only when retained relative weights and prices unchanged",
+  "algebra_result": "SUPPORTED_WITHIN_FROZEN_TOY_MODEL",
+  "universal_okx_replica": "REJECTED_AS_UNJUSTIFIED",
+  "reason": "Three-to-two transition ordinarily switches to equal weighting. Frozen unequal retained weights do not implement this. Outlier adjustment also omitted.",
+  "historical_index_reconstruction": "NOT_QUALIFIED",
+  "historical_inputs_missing": [
+    "timestamped exact BTC/ETH index constituent set and preset weights",
+    "index-specific stale timeout and valid/invalid/recovery events",
+    "synchronized constituent quotes and outlier-clipping algorithm/version",
+    "exact index outputs, target trade/mark/funding and full original-rule costs"
+  ],
+  "economic_samples": 0,
+  "actual_net": null,
+  "trial_state": "PREPARATION_ONLY",
+  "economic_successor": "NOT_EXECUTED"
+}

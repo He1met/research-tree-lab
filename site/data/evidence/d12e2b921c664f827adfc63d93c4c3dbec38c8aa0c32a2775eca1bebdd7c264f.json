@@ -1,0 +1,30 @@
+[
+  {
+    "url": "https://www.okx.com/help/i-spot-index-prices",
+    "published_date": "2022-06-16",
+    "updated_date": "2026-09-11",
+    "observed_at": "2026-09-27T02:11:05.034705+00:00",
+    "role": "CURRENT_OFFICIAL_DOCUMENT_NOT_HISTORICAL_TARGET_RULE_PROOF",
+    "findings": [
+      "Stale or maintenance sources are omitted; time threshold varies by index and is unspecified here.",
+      "At least three valid sources use preset weights with outlier adjustment; two valid sources use equal weights; one uses its price.",
+      "Some components, weights or indexes may not be publicly disclosed."
+    ],
+    "inference": "Reference composition can matter without fresh surviving quotes; plain retained-weight renormalization is not a universal venue replica."
+  },
+  {
+    "url": "https://www.okx.com/help/index-components-weightage-adjustment-faq",
+    "published_date": "2023-12-14",
+    "updated_date": "2026-08-05",
+    "observed_at": "2026-09-27T02:11:05.034705+00:00",
+    "role": "CURRENT_FAQ_NOT_EFFECTIVE_HISTORY",
+    "findings": [
+      "FAQ contrasts old equal weights with preset volume/liquidity-related weights, and old 3 percent clipping with 2 percent.",
+      "Exact index rollout dates require specific announcements; latest weights do not establish historical weights."
+    ],
+    "limitations": [
+      "General page refers to median of remaining sources; FAQ refers to all components. No exact historical algorithm inferred from this wording difference.",
+      "No API invoked despite documentation mentioning endpoints."
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "frozen_at": "2026-09-27T02:08:03.239963+00:00",
+  "problem_key": "crypto-index-stale-constituent-exclusion-mechanical-move-v1",
+  "question": "Can stale constituent exclusion move a crypto spot reference index while all surviving quotes remain unchanged?",
+  "hypothesis": "Renormalizing positive weights after removing a constituent can move a weighted mean even without any surviving price update. Official source handling determines whether this mechanism applies.",
+  "falsifier": "Weighted-mean identity fails, or official rules do not provide stale constituent exclusion/weight renormalization; historical applicability remains unknown without timestamped versions.",
+  "novelty": "Independent cross-venue reference construction and missing-source composition mechanism. Prior stock-session study concerns stale underlying/self-referential pricing, RPI study concerns trade-source counts; neither tested this constituent-removal identity. Not a scientific novelty claim.",
+  "baseline": "Weighted mean of three unchanged quotes before removal",
+  "comparison": "Same exact quotes and starting weights, remove low/middle/high constituent and renormalize remaining weights; no candidate selection",
+  "cases": {
+    "prices": [
+      90,
+      100,
+      110
+    ],
+    "weight_sets": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        1
+      ]
+    ],
+    "removal_indices": [
+      0,
+      1,
+      2
+    ],
+    "flat_control_prices": [
+      100,
+      100,
+      100
+    ]
+  },
+  "metrics": [
+    "index_before",
+    "index_after",
+    "mechanical_difference",
+    "algebra_identity_match"
+  ],
+  "source_scope": "One official-domain targeted search then at most two directly relevant official pages, full relevant text. No trading/market APIs, accounts or historical data download. Preserve failures.",
+  "data_roles": "Synthetic arithmetic only plus current official documentary evidence. No historical market sample, no production fallback.",
+  "time_scope": "Retrieval time is current knowledge, not historical effective time; no retroactive fit of thresholds",
+  "cost_and_exposure": "No trade, inventory, portfolio or economic candidate. actual_net null; future strategy requires qualified target quotes, marks, funding and complete allowed costs. Index is reference, not a fill.",
+  "completion": "Finish fixed arithmetic cases and bounded source verification; identify historical component/weight/timeout evidence gaps. No economic replay or plan/readiness.",
+  "stop": "Do not add price cases, dates or threshold calibration after sources. If insufficient sources retain UNKNOWN.",
+  "feedback_disposition": "Reuse current decisions; full current review/feedback read. Adopt source identity, chronological qualification and unknown cost boundary; existing input-completeness successor unchanged; no new adoption generation.",
+  "trial_state": "PREPARATION_ONLY",
+  "trigger_origin": "UNKNOWN",
+  "natural_trigger": null
+}
