@@ -53,6 +53,24 @@ def _calendar_original_policy(original, extra):
     return None
 
 
+def _roll_run_original_policy(original, extra):
+    """Fixed authored verification metadata, not an independent audit claim."""
+    verification = original.get('verification')
+    if (original.get('record_type') == 'run'
+            and original.get('run_id') == 'run-roll-scale-20260927'
+            and original.get('attempt_id') == 'attempt-1'
+            and extra == {'verification'}
+            and isinstance(verification, dict)
+            and set(verification) == {'alternate_formulas_and_pairs', 'independent_audit', 'synthetic_author_checks'}
+            and verification['alternate_formulas_and_pairs'] == 'PASS'
+            and verification['independent_audit'] is False
+            and type(verification['synthetic_author_checks']) is int
+            and verification['synthetic_author_checks'] == 13
+            and digest(canonical(original)) == 'b0c9eaf657c3e0120c81f76ff2e52dad8ae40fd8e2baa816375c5120fd54da69'):
+        return 'EXACT_ROLL_SCALE_RUN_VERIFICATION_V1'
+    return None
+
+
 def _exact_public_export_policy(original):
     """Versioned, source-reviewed original exceptions, never caller policy.
 
@@ -87,6 +105,8 @@ def _exact_public_export_policy(original):
     if (exact_policy is None and 'export_fields' not in policy
             and policy.get('visibility') == 'PUBLIC' and policy.get('license') == 'OWN_ANALYSIS'):
         exact_policy = _calendar_original_policy(original, extra)
+        if exact_policy is None:
+            exact_policy = _roll_run_original_policy(original, extra)
     if exact_policy is None:
         raise ContractError("Original has non-whitelisted fields; cannot claim exact public backup")
     scan_bytes('approved-original.json', canonical(original))

@@ -1,0 +1,14 @@
+{
+  "observed_at": "2026-09-27T12:53:15.247366+00:00",
+  "classification": "AUTHOR_TARGETED_ENGINEERING_CHECKS",
+  "archive_tests_passed": 13,
+  "public_round_archive_tests_passed": 6,
+  "failures": 0,
+  "all_scalar_leaf_mutations_rejected": 94,
+  "rehashed_zip_attacks_rejected": 9,
+  "public_guard": {
+    "files": 6,
+    "rejected": 0
+  },
+  "other_method_and_frontend_tests": "NOT_RERUN_UNCHANGED"
+}
