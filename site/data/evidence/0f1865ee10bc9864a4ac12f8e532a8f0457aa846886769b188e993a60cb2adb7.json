@@ -1,0 +1,23 @@
+{
+  "items": [
+    {
+      "applied": "Minute occupancy and event-time age are descriptive only; do not certify full source coverage, exchange event order, mark, cost or executable flat returns. Preserve actual_net=null.",
+      "decision": "REUSE_INPUT_QUALIFICATION_BOUNDARIES",
+      "existing_successor_round_id": "r-feedback-input-completeness-20260923",
+      "feedback_ref": "feedback-batch-daily-review-20260927-v1-4809fda65a42055d",
+      "new_feedback_child": false,
+      "reused_decision_ref": "decision-adopt-daily-input-long-20260927",
+      "review_ref": "review-batch-daily-review-20260927-v1-4809fda65a42055d"
+    },
+    {
+      "applied": "Minute occupancy and event-time age are descriptive only; do not certify full source coverage, exchange event order, mark, cost or executable flat returns. Preserve actual_net=null.",
+      "decision": "REUSE_INPUT_QUALIFICATION_BOUNDARIES",
+      "existing_successor_round_id": "r-feedback-input-completeness-20260923",
+      "feedback_ref": "feedback-batch-daily-review-20260927-v1-bf1f5e787c973f51",
+      "new_feedback_child": false,
+      "reused_decision_ref": "decision-adopt-daily-input-short-20260927",
+      "review_ref": "review-batch-daily-review-20260927-v1-bf1f5e787c973f51"
+    }
+  ],
+  "new_successor_created": false
+}

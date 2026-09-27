@@ -1,0 +1,29 @@
+{
+  "rows": 18720,
+  "minutes": 1440,
+  "occupied_minutes": 1173,
+  "empty_minutes": 267,
+  "empty_run_count": 178,
+  "max_empty_run_minutes": 9,
+  "endpoints_without_prior_observation": 0,
+  "max_endpoint_age_ms": 543774,
+  "endpoint_age_strictly_greater_than_ms": {
+    "60000": 267,
+    "300000": 8,
+    "900000": 0
+  },
+  "max_adjacent_event_gap_ms": 545395,
+  "dataset_ref": "d-aapl-trades-20260925@1",
+  "sha256": "3e4c6fb6dc180e57b576cd227ef67a894fe7413edb2203c7d5442948db4017ed",
+  "interval": [
+    "2026-09-24T16:00:00Z",
+    "2026-09-25T16:00:00Z"
+  ],
+  "completed_at": "2026-09-27T06:07:56.936273+00:00",
+  "source_completeness": "UNKNOWN",
+  "economic_samples": 0,
+  "actual_net": null,
+  "price_return_computation": "NOT_PERFORMED",
+  "crosscheck": "ALL_BINS_AND_AGES_MATCH_SIMPLE_LOOP",
+  "hypothesis": "REJECTED"
+}

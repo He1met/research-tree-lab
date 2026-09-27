@@ -1,0 +1,23 @@
+{
+  "frozen_at": "2026-09-27T06:07:31.607808+00:00",
+  "problem_key": "aapl-trade-minute-occupancy-staleness-20260925-v1",
+  "question": "Does the acquired AAPL target archive contain a trade in every fixed UTC minute, and how stale is a carried last observation at minute endpoints?",
+  "hypothesis": "Every one of the 1440 fixed minutes contains at least one archived target trade. One empty minute falsifies this descriptive hypothesis.",
+  "counterevidence": "Empty bins reject complete minute occupancy, but cannot distinguish genuine inactivity from missing source events. Even full occupancy does not prove completeness.",
+  "dataset_ref": "d-aapl-trades-20260925@1",
+  "sha256": "3e4c6fb6dc180e57b576cd227ef67a894fe7413edb2203c7d5442948db4017ed",
+  "interval": [
+    "2026-09-24T16:00:00Z",
+    "2026-09-25T16:00:00Z"
+  ],
+  "interval_reason": "fixed from prior acquired min/max partition; explicit UTC range, not inference of catalog timezone",
+  "role": "EXPOSED_DEVELOPMENT_TIMESTAMP_DIAGNOSTIC_NOT_VALIDATION",
+  "prior_exposure": "Prior schema/count/min/max/monotonicity results read; no minute occupancy or staleness results examined.",
+  "comparison": "Unfilled empty-bin mask versus hypothetical last-event-time carry; no prices or returns calculated",
+  "algorithm": "half-open minute bins; for endpoint t select last timestamp strictly less than t; age=t-last_timestamp, absent prior observation=null. Summarize all bins, empty runs, age thresholds 60/300/900 seconds strict >, and max adjacent timestamp gap; no alternate grid or parameter selection.",
+  "costs": "No strategy, fills, quantity, inventory or PnL. Fees/slippage/funding/exit costs unqualified; actual_net=null.",
+  "completion": "Author hand boundary tests pass; scan exactly one immutable target ZIP; save all 1440 bin masks and endpoint ages privately, aggregate results publicly. Stop on hash/schema/out-of-range/decreasing timestamp mismatch; do not repair data.",
+  "dedup": "Distinct from prior schema census, BTC RPI source mixing and calendar-only diagnostics; continue existing stock-session root, no new round/plan or feedback child.",
+  "other_routes": "BTC review remains PATH_AMBIGUOUS. OFI discovery requires qualified L2 and is not duplicated. No A/B start until formal real-cost/feedback/readback gate.",
+  "followup": "If empty bins exist, retain missing values and freshness metadata in future synchronization; never interpret carried prices as observed flat returns. New economic hypothesis needs synchronized references and full frozen costs."
+}
