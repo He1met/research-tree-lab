@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-09-27T11:35:14.364660+00:00",
+  "dataset_ref": "d-btc-candles-20260921@1",
+  "sha256": "5595c6777328eb5f392520fdf6bd9c59518018991c7f92dd376ce04b1c353287",
+  "archive_bytes": 44243,
+  "members": [
+    "BTC-USDT-SWAP-candlesticks-2026-09-21.csv"
+  ],
+  "header": [
+    "instrument_name",
+    "open",
+    "high",
+    "low",
+    "close",
+    "vol",
+    "vol_ccy",
+    "vol_quote",
+    "open_time",
+    "confirm"
+  ],
+  "actual_prices_read": false,
+  "full_rows_rescanned": false,
+  "crc_full_read": false,
+  "prior_full_audit_ref": "r-feedback-input-completeness-20260923",
+  "chronological_trade_order": "UNKNOWN",
+  "source_event_completeness": "UNKNOWN",
+  "actual_net": null,
+  "economic_samples_this_run": 0,
+  "research_started": false
+}

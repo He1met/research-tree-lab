@@ -1,0 +1,20 @@
+{
+  "scope": "DOCUMENTARY_AND_SMALL_FILE_SCHEMA_CHECK_COMPLETED",
+  "price_time_inputs": "Existing candle ZIP hash/header verified; contains close and open_time. This permits a recorded-proxy diagnostic without aggressor side.",
+  "cost_identification": "NOT_QUALIFIED: target efficiency/stationarity and quote validation not established; price-only estimate cannot replace required actual or predeclared full scenario costs.",
+  "prediction": "UNKNOWN_NOT_TESTED",
+  "method_formula": "Publisher equation (1) verifies covariance=-s^2/4 under its model; institutional metadata formula rendering was not used.",
+  "reused_limits": [
+    "same-ms order UNKNOWN",
+    "source completeness UNKNOWN",
+    "RPI/current-versus-historical scope"
+  ],
+  "raw_rows_read": 0,
+  "covariances_computed": 0,
+  "new_market_files": 0,
+  "synthetic_cases": 0,
+  "economic_samples": 0,
+  "actual_net": null,
+  "trial_state": "PREPARATION_ONLY",
+  "trigger_origin": "UNKNOWN"
+}

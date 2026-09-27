@@ -1,0 +1,14 @@
+{
+  "frozen_at": "2026-09-27T11:35:14.232839+00:00",
+  "problem_key": "trade-price-bounce-versus-predictive-reversal-v1",
+  "question": "Can negative serial dependence in recorded trade prices establish a reversal signal or qualified execution spread without quote evidence?",
+  "scope": "Discovery documentary and small-file identity/schema check only; no numerical market experiment or research claim.",
+  "prior_exposure": "Roll publisher sections I-II and current RPI help already read before this protocol. Existing candles are exposed development data. No covariance inspected.",
+  "minimal_check": "Verify existing 44KB candle ZIP hash and CSV header against required price/time observations; crosswalk primary-source assumptions to committed input qualifications. Reuse prior full data audit.",
+  "falsifier": "Authoritative methodology and qualified target inputs establishing that the price-only statistic identifies executable costs without unresolved assumptions would overturn rejection of direct cost admission. This check cannot establish such target evidence.",
+  "stop": "After source/input crosswalk and header check; do not scan prices, estimate covariance, download data or start research routes.",
+  "dataset_ref": "d-btc-candles-20260921@1",
+  "dataset_sha256": "5595c6777328eb5f392520fdf6bd9c59518018991c7f92dd376ce04b1c353287",
+  "trigger_origin": "UNKNOWN",
+  "trial_state": "PREPARATION_ONLY"
+}

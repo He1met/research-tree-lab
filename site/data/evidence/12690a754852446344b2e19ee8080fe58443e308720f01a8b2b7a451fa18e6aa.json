@@ -1,0 +1,11 @@
+{
+  "observed_at": "2026-09-27T12:09:39.429256+00:00",
+  "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/j.1540-6261.1984.tb03897.x",
+  "read_scope": "Abstract and I-II paragraphs including equation1 and assumptions",
+  "interpretation": "Equation1 and efficiency/stationarity assumptions corroborated. Minute-close statistic is conditional descriptive proxy, not observed target execution spread.",
+  "prior_documentary_refs": [
+    "discovery-roll-spread-20260927",
+    "e-roll-spread-20260927"
+  ],
+  "new_downloads": 0
+}

@@ -1,0 +1,64 @@
+{
+  "started_at": "2026-09-27T12:10:51.956641+00:00",
+  "completed_at": "2026-09-27T12:10:51.980914+00:00",
+  "data_sha256": "5595c6777328eb5f392520fdf6bd9c59518018991c7f92dd376ce04b1c353287",
+  "bytes": 44243,
+  "input_rows": 1440,
+  "missing_minutes": 0,
+  "prior_exposure": "EXPOSED_DEVELOPMENT_ONLY",
+  "window": [
+    "2026-09-20T16:00:00Z",
+    "2026-09-21T16:00:00Z"
+  ],
+  "results": [
+    {
+      "grid_minutes": 1,
+      "bins": 1440,
+      "missing_bins": 0,
+      "valid_lag_pairs": 1438,
+      "covariance_exact": "-8354417501/51660150",
+      "covariance": "-161.71880068098911830492168528353092277122695152840",
+      "covariance_unit": "(USDT/BTC)^2",
+      "sign": "NEGATIVE",
+      "conditional_roll_proxy": "25.433741422055003530335170436446815093174281700798",
+      "proxy_unit": "USDT/BTC",
+      "spread_identification": "CONDITIONAL_MODEL_PROXY_ONLY",
+      "actual_cost": null
+    },
+    {
+      "grid_minutes": 5,
+      "bins": 288,
+      "missing_bins": 0,
+      "valid_lag_pairs": 286,
+      "covariance_exact": "14648023997/8151000",
+      "covariance": "1797.0830569255306097411360569255306097411360569255",
+      "covariance_unit": "(USDT/BTC)^2",
+      "sign": "NONNEGATIVE",
+      "conditional_roll_proxy": null,
+      "proxy_unit": "USDT/BTC",
+      "spread_identification": "NOT_IDENTIFIED",
+      "actual_cost": null
+    },
+    {
+      "grid_minutes": 15,
+      "bins": 96,
+      "missing_bins": 0,
+      "valid_lag_pairs": 94,
+      "covariance_exact": "254658639/291400",
+      "covariance": "873.91434111187371310912834591626630061770761839396",
+      "covariance_unit": "(USDT/BTC)^2",
+      "sign": "NONNEGATIVE",
+      "conditional_roll_proxy": null,
+      "proxy_unit": "USDT/BTC",
+      "spread_identification": "NOT_IDENTIFIED",
+      "actual_cost": null
+    }
+  ],
+  "all_three_strictly_negative": false,
+  "economic_samples": 0,
+  "actual_net": null,
+  "quote_attribution": "UNKNOWN_NOT_TESTED",
+  "source_completeness": "UNKNOWN",
+  "same_ms_chronology": "UNKNOWN",
+  "parameter_search": false
+}

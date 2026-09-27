@@ -1,0 +1,18 @@
+[
+  {
+    "reused_decision_ref": "decision-adopt-daily-input-long-20260927",
+    "source_review_ref": "review-batch-daily-review-20260927-v1-4809fda65a42055d",
+    "feedback_ref": "feedback-batch-daily-review-20260927-v1-4809fda65a42055d",
+    "successor_round_id": "r-feedback-input-completeness-20260923",
+    "disposition": "ADOPT_QUALIFICATION_BOUNDARIES_REUSE_EXISTING_SUCCESSOR",
+    "applied_this_run": "Price-only covariance and model-spread remain ineligible to fill original source/order/mark/funding/cost checks; old metrics/rules unchanged. Independent root not feedback descendant."
+  },
+  {
+    "reused_decision_ref": "decision-adopt-daily-input-short-20260927",
+    "source_review_ref": "review-batch-daily-review-20260927-v1-bf1f5e787c973f51",
+    "feedback_ref": "feedback-batch-daily-review-20260927-v1-bf1f5e787c973f51",
+    "successor_round_id": "r-feedback-input-completeness-20260923",
+    "disposition": "ADOPT_QUALIFICATION_BOUNDARIES_REUSE_EXISTING_SUCCESSOR",
+    "applied_this_run": "Price-only covariance and model-spread remain ineligible to fill original source/order/mark/funding/cost checks; old metrics/rules unchanged. Independent root not feedback descendant."
+  }
+]

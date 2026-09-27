@@ -1,0 +1,39 @@
+[
+  {
+    "id": "ROLL1984",
+    "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/j.1540-6261.1984.tb03897.x",
+    "title": "A Simple Implicit Measure of the Effective Bid-Ask Spread in an Efficient Market",
+    "author": "Richard Roll",
+    "published_at": "1984-09",
+    "observed_at": "2026-09-27T11:37:26.542246+00:00",
+    "sections_read": [
+      "Abstract",
+      "I",
+      "II",
+      "III"
+    ],
+    "finding": "Under efficiency and stationarity assumptions, price-change serial covariance can imply effective spread. It is not a direct quoted-spread observation or proof of exploitable reversal.",
+    "role": "PRIMARY_METHOD_SOURCE"
+  },
+  {
+    "id": "ROLL-METADATA",
+    "url": "https://authors.library.caltech.edu/records/afwsc-6bb61",
+    "published_at": "1984-09",
+    "observed_at": "2026-09-27T11:37:26.542379+00:00",
+    "finding": "Author, journal 39(4), 1127-1139 and DOI corroborated; metadata-only page. Formula transcription there is malformed; use publisher equation (1), not search snippet.",
+    "role": "PRIMARY_INSTITUTIONAL_BIBLIOGRAPHY"
+  },
+  {
+    "id": "OKX-RPI",
+    "url": "https://www.okx.com/help/okx-retail-price-improvement-program-rpi",
+    "published_at": "2026-07-23",
+    "updated_at": "2026-08-13",
+    "observed_at": "2026-09-27T11:37:26.542380+00:00",
+    "sections_read": [
+      "Matching rules",
+      "Reference prices"
+    ],
+    "finding": "Current rules include RPI fills in last price and candles, while BBO and mark use organic orders. Current page is not historical-file applicability proof.",
+    "role": "OFFICIAL_CURRENT_RULE_BOUNDARY"
+  }
+]

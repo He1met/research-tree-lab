@@ -1,0 +1,51 @@
+{
+  "status": "FROZEN_BEFORE_NUMERICAL_SCAN",
+  "problem_key": "btc-close-lag-covariance-scale-20260921-v1",
+  "target": "BTC-USDT-SWAP",
+  "question": "Is a short-horizon trade-price reversal description robust to predeclared sampling intervals, and could it be a spread-related measurement effect?",
+  "mechanism": "Bid/ask transaction-price bounce as an alternative explanation for negative serial dependence.",
+  "data_ref": "d-btc-candles-20260921@1",
+  "data_hash": "5595c6777328eb5f392520fdf6bd9c59518018991c7f92dd376ce04b1c353287",
+  "development_window": [
+    "2026-09-20T16:00:00Z",
+    "2026-09-21T16:00:00Z"
+  ],
+  "prior_exposure": "Discovery and existing research summaries read; prices not yet read this run. Same day exposed in earlier research; no holdout.",
+  "minimal_experiment": "Research role may freeze and compute only descriptive first-lag covariance of price differences for 1, 5 and 15 minute candle-close grids anchored at window start. Keep every interval; no parameter winner, return strategy or threshold tuning.",
+  "estimator": "Let d_i=P_i-P_(i-1); pair x_i=d_i and y_i=d_(i-1) over consecutive available bins. For n pairs, c=sum((x-mean(x))*(y-mean(y)))/(n-1), n>=2. Report raw c in (USDT/BTC)^2 and pair counts; c<0 permits conditional s=2*sqrt(-c) in USDT/BTC only. c>=0 => spread estimate null/NOT_IDENTIFIED; c=0 is not confirmed zero cost.",
+  "missingness": "No forward fill or bridging missing bins. Stop incompatible timestamp/contract schema. Physical candle endpoints remain recorded proxies, not certified event chronology.",
+  "baseline": "Zero serial covariance null plus all three fixed grids; compare scale dependence, not best estimated spread. Later qualified midquote changes are an external control, not available now.",
+  "counterevidence": "Nonnegative covariance in any grid rejects an unqualified claim of negative dependence across all three grids in that exposed day. Negative values everywhere still cannot distinguish information from bounce or validate execution costs.",
+  "completion": "All fixed grids and raw signs/sample counts reported with missingness and source limits. No significance or prediction claim from this one exposed day.",
+  "stop": "After three grids or schema failure. No extra periods/tickers/threshold search to rescue a result.",
+  "future_validation": "To attribute bounce, need synchronized qualified quotes/transactions, source-specific historical rules and chronology; freeze independent window and matched information baselines before exposure. Any trading test requires full allowed costs, mark/funding/inventory/exit where required.",
+  "resource_expectation": "Existing compressed candle object 44,243 bytes, prior audit 1,440 rows; linear in rows, no new market download, runtime not benchmarked. Quote acquisition size unknown.",
+  "restart": "This first diagnostic has not run and is eligible for ordinary research selection. Once completed, repeat only with corrected source/method or independently qualified new evidence. Full attribution waits for quote evidence.",
+  "actual_net": null,
+  "research_route_started": false,
+  "frozen_at": "2026-09-27T12:09:39.429256+00:00",
+  "discovery_problem_key": "trade-price-bounce-versus-predictive-reversal-v1",
+  "grids_minutes": [
+    1,
+    5,
+    15
+  ],
+  "grid_definition": "For k-minute bins anchored at UTC start, use close of minute k-1,2k-1,...; require all k constituent minute rows present and confirm=1. No pre-window close, so M closes give M-1 changes and M-2 lag pairs. Missing bins break differences and lag pairs; no bridge.",
+  "estimation_detail": "Exact rational covariance with separate x/y pair means, denominator n-1. Decimal50 conversion and square root only for display. All pair overlaps retained, no iid/significance claim.",
+  "hypothesis": "All three raw sample lag covariances are strictly negative.",
+  "cost_exposure": "No orders, quantity, inventory or PnL. Conditional implied spread is a model statistic, not cost input. Actual net null. No fee, funding, slippage, mark or exit-cost requirement waived.",
+  "selection": "No selected plan and no winner across grids.",
+  "provenance": {
+    "trigger_origin": "UNKNOWN",
+    "natural_trigger": null,
+    "native_task_ref": "research-tree-lab-2",
+    "trial_state": "PREPARATION_ONLY",
+    "release_ref": "c7ec6ba8b0c6ab00def8c9878ea4b65fe906a82b"
+  },
+  "feedback_disposition": "Reuse decision-adopt-daily-input-long-20260927 and short; preserve null metrics and sole input-completeness successor. Independent root, not a feedback child.",
+  "source_readback": {
+    "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/j.1540-6261.1984.tb03897.x",
+    "read": "Abstract and I-II paragraphs including equation1 and assumptions",
+    "observed_at": "2026-09-27T12:09:39.429256+00:00"
+  }
+}

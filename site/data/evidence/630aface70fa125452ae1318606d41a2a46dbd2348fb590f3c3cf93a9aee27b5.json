@@ -1,0 +1,26 @@
+{
+  "status": "PROPOSED_NOT_STARTED",
+  "problem_key": "trade-price-bounce-versus-predictive-reversal-v1",
+  "target": "BTC-USDT-SWAP",
+  "question": "Is a short-horizon trade-price reversal description robust to predeclared sampling intervals, and could it be a spread-related measurement effect?",
+  "mechanism": "Bid/ask transaction-price bounce as an alternative explanation for negative serial dependence.",
+  "data_ref": "d-btc-candles-20260921@1",
+  "data_hash": "5595c6777328eb5f392520fdf6bd9c59518018991c7f92dd376ce04b1c353287",
+  "development_window": [
+    "2026-09-20T16:00:00Z",
+    "2026-09-21T16:00:00Z"
+  ],
+  "prior_exposure": "Already used for entry and input diagnostics; no holdout claim.",
+  "minimal_experiment": "Research role may freeze and compute only descriptive first-lag covariance of price differences for 1, 5 and 15 minute candle-close grids anchored at window start. Keep every interval; no parameter winner, return strategy or threshold tuning.",
+  "estimator": "Let d_i=P_i-P_(i-1); pair x_i=d_i and y_i=d_(i-1) over consecutive available bins. For n pairs, c=sum((x-mean(x))*(y-mean(y)))/(n-1), n>=2. Report raw c in (USDT/BTC)^2 and pair counts; c<0 permits conditional s=2*sqrt(-c) in USDT/BTC only. c>=0 => spread estimate null/NOT_IDENTIFIED; c=0 is not confirmed zero cost.",
+  "missingness": "No forward fill or bridging missing bins. Stop incompatible timestamp/contract schema. Physical candle endpoints remain recorded proxies, not certified event chronology.",
+  "baseline": "Zero serial covariance null plus all three fixed grids; compare scale dependence, not best estimated spread. Later qualified midquote changes are an external control, not available now.",
+  "counterevidence": "Nonnegative covariance in any grid rejects an unqualified claim of negative dependence across all three grids in that exposed day. Negative values everywhere still cannot distinguish information from bounce or validate execution costs.",
+  "completion": "All fixed grids and raw signs/sample counts reported with missingness and source limits. No significance or prediction claim from this one exposed day.",
+  "stop": "After three grids or schema failure. No extra periods/tickers/threshold search to rescue a result.",
+  "future_validation": "To attribute bounce, need synchronized qualified quotes/transactions, source-specific historical rules and chronology; freeze independent window and matched information baselines before exposure. Any trading test requires full allowed costs, mark/funding/inventory/exit where required.",
+  "resource_expectation": "Existing compressed candle object 44,243 bytes, prior audit 1,440 rows; linear in rows, no new market download, runtime not benchmarked. Quote acquisition size unknown.",
+  "restart": "This first diagnostic has not run and is eligible for ordinary research selection. Once completed, repeat only with corrected source/method or independently qualified new evidence. Full attribution waits for quote evidence.",
+  "actual_net": null,
+  "research_route_started": false
+}

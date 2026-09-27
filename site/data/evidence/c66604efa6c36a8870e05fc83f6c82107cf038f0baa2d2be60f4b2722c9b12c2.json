@@ -1,0 +1,21 @@
+{
+  "kind": "SAME_AUTHOR_ALTERNATE_FORMULA_AND_PAIR_CONSTRUCTION",
+  "checks": [
+    {
+      "grid_minutes": 1,
+      "alternate_exact_moment_formula": "PASS",
+      "direct_endpoint_pairs": "PASS"
+    },
+    {
+      "grid_minutes": 5,
+      "alternate_exact_moment_formula": "PASS",
+      "direct_endpoint_pairs": "PASS"
+    },
+    {
+      "grid_minutes": 15,
+      "alternate_exact_moment_formula": "PASS",
+      "direct_endpoint_pairs": "PASS"
+    }
+  ],
+  "independent_audit": false
+}

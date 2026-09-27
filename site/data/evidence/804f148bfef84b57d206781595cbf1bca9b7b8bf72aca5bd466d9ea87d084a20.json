@@ -1,0 +1,20 @@
+{
+  "kind": "AUTHOR_SYNTHETIC_SELFTEST_NOT_MARKET_EVIDENCE",
+  "completed_at": "2026-09-27T12:10:51.956399+00:00",
+  "passed": 13,
+  "checks": [
+    "alternating hand covariance",
+    "positive hand covariance",
+    "constant changes zero covariance",
+    "one pair insufficient",
+    "missing bars never bridged",
+    "right endpoint grid",
+    "internal missing invalidates bin",
+    "decimal exact parse",
+    "duplicate rejected",
+    "wrong contract rejected",
+    "nonfinite rejected",
+    "unaligned rejected",
+    "unconfirmed rejected"
+  ]
+}

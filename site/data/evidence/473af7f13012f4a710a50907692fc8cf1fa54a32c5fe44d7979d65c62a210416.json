@@ -1,0 +1,264 @@
+{
+  "observed_at": "2026-09-27T11:37:26.542557+00:00",
+  "records": 167,
+  "rounds": 20,
+  "discoveries": 10,
+  "dimensions": [
+    "question",
+    "mechanism",
+    "rules",
+    "inputs",
+    "completed results"
+  ],
+  "branch_inventory": [
+    {
+      "ref": "discovery-ofi-observability-20260927",
+      "type": "discovery",
+      "question": "Can the existing official BTC trade archive identify quote-event order flow imbalance, or only a separately defined trade-direction proxy?",
+      "mechanism": "Quote-event supply/demand imbalance versus signed-trade pressure; distinct observables and separate lagged predictive question.",
+      "state": "PROPOSED_NOT_STARTED"
+    },
+    {
+      "ref": "seed-a-20260923",
+      "type": "discovery",
+      "question": "文件日期、目标身份和资金费单位是否支持可重复成本输入？",
+      "mechanism": "A|文件日期、目标身份和资金费单位是否支持可重复成本输入？",
+      "state": "REAL_EXECUTED"
+    },
+    {
+      "ref": "seed-b-20260923",
+      "type": "discovery",
+      "question": "确认突破是否改善信息而非仅减少暴露？",
+      "mechanism": "B|确认突破是否改善信息而非仅减少暴露？",
+      "state": "WAITING_TARGET_PRICE_DATA"
+    },
+    {
+      "ref": "seed-c-20260923",
+      "type": "discovery",
+      "question": "区间往返收入扣除残余库存和退出成本后是否成立？",
+      "mechanism": "C|区间往返收入扣除残余库存和退出成本后是否成立？",
+      "state": "WAITING_PATH_AND_LEDGER"
+    },
+    {
+      "ref": "seed-d-20260923",
+      "type": "discovery",
+      "question": "历史资金费方向收入是否足以覆盖价格暴露及来回成本？",
+      "mechanism": "D|历史资金费方向收入是否足以覆盖价格暴露及来回成本？",
+      "state": "FORWARD_PROTOCOL_REGISTERED_INCOMPLETE"
+    },
+    {
+      "ref": "seed-e-20260923",
+      "type": "discovery",
+      "question": "参考市场休市时指数自身反馈是否使表面价差不可交易？",
+      "mechanism": "E|参考市场休市时指数自身反馈是否使表面价差不可交易？",
+      "state": "REAL_MECHANISM_REVIEW_EXECUTED"
+    },
+    {
+      "ref": "seed-f-20260923",
+      "type": "discovery",
+      "question": "多产品结果是否只重复共同市场暴露？",
+      "mechanism": "F|多产品结果是否只重复共同市场暴露？",
+      "state": "WAITING_SYNCHRONIZED_DATA"
+    },
+    {
+      "ref": "seed-g-20260923",
+      "type": "discovery",
+      "question": "事前状态切换是否覆盖切换成本？",
+      "mechanism": "G|事前状态切换是否覆盖切换成本？",
+      "state": "WAITING_BASE_METHOD_RESULT"
+    },
+    {
+      "ref": "seed-h-20260923",
+      "type": "discovery",
+      "question": "事前AI事件信息是否增加可检验信号？",
+      "mechanism": "H|事前AI事件信息是否增加可检验信号？",
+      "state": "WAITING_PROSPECTIVE_EVENT_OUTPUT"
+    },
+    {
+      "ref": "seed-i-20260923",
+      "type": "discovery",
+      "question": "冻结机制能否在未用于选择的新样本复现？",
+      "mechanism": "I|冻结机制能否在未用于选择的新样本复现？",
+      "state": "WAITING_FIRST_METHOD_RESULT"
+    },
+    {
+      "ref": "r-adl-inventory-interruption-20260926",
+      "type": "round",
+      "question": "Can venue auto-deleveraging break an assumed persistent two-leg inventory even when one leg is profitable?",
+      "mechanism": "Venue-driven involuntary position reduction creates residual exposure and changes continuation cashflows",
+      "state": "COMPLETED_WITH_LIMITATIONS"
+    },
+    {
+      "ref": "r-btc-funding-cost-counterevidence-20260923",
+      "type": "round",
+      "question": "最近正资金费反向持有24小时的现金流分解能否支持后续研究？",
+      "mechanism": "Funding cashflow versus matched absolute price exposure and cost stress",
+      "state": "WAITING_NATURAL_OUTCOME"
+    },
+    {
+      "ref": "r-funding-data-audit-20260923",
+      "type": "round",
+      "question": "官方文件能否提供正确的UTC边界与实际资金费？",
+      "mechanism": "Realized settlement rates and event-time partition audit",
+      "state": "COMPLETED_WITH_LIMITATIONS"
+    },
+    {
+      "ref": "r-stock-session-mechanism-20260923",
+      "type": "round",
+      "question": "休市价差能否排除参考价陈旧与指数来源共同性？",
+      "mechanism": "Session-dependent reference age, FX conversion and index-price endogeneity",
+      "state": "WAITING_DATA"
+    },
+    {
+      "ref": "r-borrowing-liability-20260927",
+      "type": "round",
+      "question": "Does using leverage on a USDT perpetual necessarily incur spot-margin borrowing interest on full contract notional?",
+      "mechanism": "Currency-specific interest-bearing liabilities versus derivative notional exposure",
+      "state": "COMPLETED_WITH_LIMITATIONS"
+    },
+    {
+      "ref": "r-boundary-sensitivity-20260923",
+      "type": "round",
+      "question": "How much can unknown first/last ordering inside the observed boundary millisecond alter minute open-to-close price-proxy PnL signs after predefined costs?",
+      "mechanism": "Observed earliest/latest millisecond price-set envelopes under fixed two-leg cash friction",
+      "state": "COMPLETED_WITH_LIMITATIONS"
+    },
+    {
+      "ref": "r-btc-entry-confirmation-20260923",
+      "type": "round",
+      "question": "Does one extra close confirmation change breakout entry outcomes beyond reduced exposure on the fixed exposed BTC development day?",
+      "mechanism": "Separate one-bar timing delay from close-confirmation selection under common nonoverlapping event endpoints",
+      "state": "COMPLETED_WITH_LIMITATIONS"
+    },
+    {
+      "ref": "r-btc-eth-paired-funding-20260923",
+      "type": "round",
+      "question": "Can equal-notional BTC short/ETH long funding difference cover two-leg costs, and does equal notional eliminate price risk?",
+      "mechanism": "Cross-product equal-notional funding difference versus four executions and unknown relative-price risk",
+      "state": "COMPLETED_WITH_LIMITATIONS"
+    },
+    {
+      "ref": "r-btc-grid-inventory-attribution-20260923",
+      "type": "round",
+      "question": "Can positive realized range/grid income coexist with negative complete inventory-plus-exit price PnL, and does a fixed dormancy rule change that attribution?",
+      "mechanism": "Causal close-based long-only inventory ladder; separate realized FIFO closes, marked residual inventory, terminal liquidation and modeled trading friction.",
+      "state": "COMPLETED_WITH_LIMITATIONS"
+    },
+    {
+      "ref": "r-delisting-boundary-20260927",
+      "type": "round",
+      "question": "Does no scheduled expiry justify replaying a perpetual until a researcher-selected horizon when the venue terminates trading, and can last trade substitute for settlement index averaging?",
+      "mechanism": "Exchange termination endpoint and event-specific settlement operator",
+      "state": "COMPLETED_WITH_LIMITATIONS"
+    },
+    {
+      "ref": "r-fee-rounding-20260927",
+      "type": "round",
+      "question": "Can per-fill fee quantization make equal total traded notional incur different modeled fees, and do official public rules establish the applicable rounding granularity?",
+      "mechanism": "Noncommutativity of fee quantization and aggregation, with separate venue applicability falsification.",
+      "state": "SYNTHETIC_BOUNDARY_COMPLETED_VENUE_HYPOTHESIS_NOT_SUPPORTED"
+    },
+    {
+      "ref": "r-feedback-input-completeness-20260923",
+      "type": "round",
+      "question": "Can permitted official files separately provide actual BTC trades, settlement marks and realized funding coverage, with observable availability?",
+      "mechanism": "Official trade/candle cross-file consistency and missing mark/completeness boundaries",
+      "state": "COMPLETED_WITH_LIMITATIONS"
+    },
+    {
+      "ref": "r-funding-information-20260927",
+      "type": "round",
+      "question": "Can a realized terminal funding rate identify the funding information available before settlement?",
+      "mechanism": "Non-identifiability of earlier premium states from a terminal funding rate; historical collection regime matters.",
+      "state": "DOCUMENTARY_BOUNDARY_COMPLETED_HISTORICAL_INPUT_REQUIRED"
+    },
+    {
+      "ref": "r-index-exclusion-20260927",
+      "type": "round",
+      "question": "Can stale constituent exclusion move a crypto spot reference index while all surviving quotes remain unchanged?",
+      "mechanism": "Cross-venue constituent availability and weighting regime changes in a reference index.",
+      "state": "DOCUMENTARY_BOUNDARY_COMPLETED_HISTORICAL_DATA_REQUIRED"
+    },
+    {
+      "ref": "r-maintenance-tier-20260927",
+      "type": "round",
+      "question": "Can a constant maintenance-margin percentage safely scale a USDT perpetual position across venue position tiers?",
+      "mechanism": "Position-tier-dependent normalized margin buffer",
+      "state": "COMPLETED_WITH_LIMITATIONS"
+    },
+    {
+      "ref": "r-open-interest-identifiability-20260927",
+      "type": "round",
+      "question": "Do matched traded contract volume V and change in one-sided open interest D uniquely determine both-open, both-close and position-transfer quantities?",
+      "mechanism": "Market participation and position turnover identifiability, distinct from trade side/RPI, funding information timing and quote OFI.",
+      "state": "DOCUMENTARY_DIAGNOSTIC_COMPLETED_TARGET_DATA_REQUIRED"
+    },
+    {
+      "ref": "r-order-admission-20260926",
+      "type": "round",
+      "question": "Do venue order admission, price protection and time-in-force rules make a public price touch insufficient to assert entry or exit completion?",
+      "mechanism": "Order admission and time-in-force map identical intended quantity to filled, resting and cancelled states.",
+      "state": "COMPLETED_WITH_LIMITATIONS"
+    },
+    {
+      "ref": "r-rpi-source-mixture-20260927",
+      "type": "round",
+      "question": "Do the two newly acquired BTC trade archives contain RPI source rows, and can pooling them change minute-level trade-count activity descriptions?",
+      "mechanism": "Archive selection and liquidity-segment composition; unsigned row-count activity differs from organic book and mark evidence.",
+      "state": "COMPLETED_DESCRIPTIVE_DIAGNOSTIC"
+    },
+    {
+      "ref": "r-stablecoin-numeraire-20260927",
+      "type": "round",
+      "question": "Does positive USDT equity return necessarily imply positive USD-valued equity return?",
+      "mechanism": "Settlement-currency collateral exposure differs from reporting-currency strategy increment",
+      "state": "COMPLETED_WITH_LIMITATIONS"
+    },
+    {
+      "ref": "r-stock-corporate-action-accounting-20260923",
+      "type": "round",
+      "question": "Can treating an equity perpetual as an unadjusted share-price series or a shareholder total-return series invent PnL at dividends or stock splits?",
+      "mechanism": "Event-specific corporate-action transformations of units, cost basis, realized cash and order lifecycle; shareholder entitlement mismatch.",
+      "state": "COMPLETED_WITH_LIMITATIONS"
+    }
+  ],
+  "related": [
+    {
+      "ref": "discovery-ofi-observability-20260927",
+      "difference": "OFI needs quote-state updates and signed-trade proxy needs side semantics; this proposal studies unsigned price serial dependence, not OFI."
+    },
+    {
+      "ref": "r-boundary-sensitivity-20260923",
+      "difference": "Reuse timestamp/endpoint uncertainty; old output was minute PnL-sign envelopes, not a lag covariance or implicit spread."
+    },
+    {
+      "ref": "r-rpi-source-mixture-20260927",
+      "difference": "Reuse source-mixture caveat; do not recount rows. Future covariance diagnostic is a different statistic and does not identify source-specific execution."
+    },
+    {
+      "ref": "r-btc-entry-confirmation-20260923",
+      "difference": "Old question separated confirmation selection from delay; no new entry parameter or winner proposed."
+    },
+    {
+      "ref": "r-feedback-input-completeness-20260923",
+      "difference": "Reuse exact candle identity and prior full audit; do not create another completeness study."
+    }
+  ],
+  "novelty": "Project-level measurement/alternative-explanation proposal; no prior committed implicit-spread covariance result found. Not scientific novelty.",
+  "reuse": [
+    "Existing candle ZIP and prior full audit",
+    "Existing minute-endpoint uncertainty and source-mixture results",
+    "Existing L2 unresolved acquisition identity; no retry"
+  ],
+  "priority": "Executable small descriptive diagnostic can be considered by research role without waiting for L2. It does not supersede qualified-cost input work or start B.",
+  "starvation": "No selected economic winner evident in current coverage. Long-term causal resource exclusion and wait duration UNKNOWN; do not infer timing from record timestamps.",
+  "deferrals": {
+    "OFI": "Unchanged quote/side qualification gap; no duplicate probe",
+    "AAPL": "Reuse acquired data and minute-gap/chart findings; synchronized qualified mark/reference export unresolved",
+    "ETH": "No ticker-only clone; same mechanism replication needs separate purpose and data",
+    "QQQ": "Exact qualified synchronized inputs unresolved",
+    "INTC": "Disabled extension example"
+  },
+  "waiting_time": "UNKNOWN",
+  "trial_state": "PREPARATION_ONLY"
+}
