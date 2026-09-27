@@ -1,0 +1,19 @@
+{
+  "frozen_at": "2026-09-27T05:08:03.337733+00:00",
+  "problem_key": "aapl-official-trade-archive-file-feasibility-20260927-v1",
+  "question": "Does the official public history interface currently provide an identifiable AAPL-USDT-SWAP target trade file that can advance the stock-session data gap?",
+  "hypothesis": "Target AAPL historical trades can be selected and a file identity exposed through the supported official browser.",
+  "falsifier": "Target absent, no matching file, failed supported download, or unqualified identity/schema. These are scoped availability failures, not global absence proofs.",
+  "scope": "One AAPL target, UI default latest offered date; inspect target selection and file identity, optionally download one small identifiable file through supported browser. No alternative client, guessed URL or API. No QQQ or parameter sweep.",
+  "prior_exposure": "Historical-data landing catalog viewed before protocol; no target selection, file/row inspection or result calculation yet.",
+  "data_role": "New target historical development data if obtained; not mark/index/reference share price, no holdout claim.",
+  "costs": "No economic replay, costs and actual_net null. No synthetic or market-return calculation required for source availability check.",
+  "baseline": "Existing product card target trade NOT_DOWNLOADED; stock-session mechanism waiting synchronized target/mark/reference.",
+  "completion": "Document actual selected symbol/date and result; preserve failures, identity, size/hash/schema if acquired. No plan/champion/trial start.",
+  "stop": "One supported target UI attempt; blocker retained without alternate client or speculative file inspection. Do not repeat unchanged pending BTC L2 download.",
+  "feedback": "Reuse existing two adoption decisions; exact chronology/mark/cost qualification preserved. This probe attaches to existing stock-session root, no duplicate new root or feedback child.",
+  "independent_scope": "Stock-session route is independent of BTC funding feedback; this is data feasibility advancement, not new scientific mechanism.",
+  "trigger_origin": "UNKNOWN",
+  "natural_trigger": null,
+  "trial_state": "PREPARATION_ONLY"
+}

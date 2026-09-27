@@ -1,0 +1,30 @@
+{
+  "rows": 18720,
+  "instruments": [
+    "AAPL-USDT-SWAP"
+  ],
+  "min_event_at": "2026-09-24T16:00:05.531000+00:00",
+  "max_event_at": "2026-09-25T15:59:59.947000+00:00",
+  "timestamp_decreases_in_file_order": 0,
+  "duplicate_trade_id_rows": 0,
+  "schema": [
+    "instrument_name",
+    "trade_id",
+    "side",
+    "price",
+    "size",
+    "created_time",
+    "source"
+  ],
+  "source_completeness": "UNKNOWN",
+  "same_ms_exchange_order": "UNKNOWN",
+  "side_semantics": "NOT_QUALIFIED",
+  "size_unit": "NOT_QUALIFIED",
+  "mark_price": "NOT_PRESENT",
+  "economic_samples": 0,
+  "actual_net": null,
+  "sha256": "3e4c6fb6dc180e57b576cd227ef67a894fe7413edb2203c7d5442948db4017ed",
+  "bytes": 130754,
+  "zip_crc": "PASS",
+  "completed_at": "2026-09-27T05:10:56.349169+00:00"
+}

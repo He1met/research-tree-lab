@@ -1,0 +1,20 @@
+[
+  {
+    "review_ref": "review-batch-daily-review-20260927-v1-4809fda65a42055d",
+    "feedback_ref": "feedback-batch-daily-review-20260927-v1-4809fda65a42055d",
+    "reused_decision_ref": "decision-adopt-daily-input-long-20260927",
+    "decision": "REUSE_INPUT_QUALIFICATION_BOUNDARIES",
+    "applied": "File name, CRC, matching symbol and monotone timestamps do not establish event completeness, same-ms ordering, mark or costs; actual_net null.",
+    "existing_successor_round_id": "r-feedback-input-completeness-20260923",
+    "new_feedback_child": false
+  },
+  {
+    "review_ref": "review-batch-daily-review-20260927-v1-bf1f5e787c973f51",
+    "feedback_ref": "feedback-batch-daily-review-20260927-v1-bf1f5e787c973f51",
+    "reused_decision_ref": "decision-adopt-daily-input-short-20260927",
+    "decision": "REUSE_INPUT_QUALIFICATION_BOUNDARIES",
+    "applied": "File name, CRC, matching symbol and monotone timestamps do not establish event completeness, same-ms ordering, mark or costs; actual_net null.",
+    "existing_successor_round_id": "r-feedback-input-completeness-20260923",
+    "new_feedback_child": false
+  }
+]
