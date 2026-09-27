@@ -1,0 +1,54 @@
+{
+  "frozen_at": "2026-09-27T04:08:59.285789+00:00",
+  "problem_key": "fee-rounding-fill-partition-nonadditivity-v1",
+  "question": "Can per-fill fee quantization make equal total traded notional incur different modeled fees, and do official public rules establish the applicable rounding granularity?",
+  "hypothesis": "Sum of quantized fill fees need not equal quantized aggregate fee; direction depends on rounding rule. Venue applicability must be established separately.",
+  "falsifier": "Exact calculation contradicts the fixed counterexample, or official rules establish aggregate-only charging for the target scope.",
+  "novelty": "Independent fee-accounting granularity mechanism; not order admission, funding-rate timing, borrowing or margin tiers. No same-key claim or matching question among141 committed records.",
+  "target_scope": "BTC-USDT-SWAP and ETH-USDT-SWAP documentary applicability only, no live contract revalidation.",
+  "data_role": "Explicit synthetic diagnostic; current official documentation; no historical market observations or production backfill.",
+  "comparison_set": [
+    [
+      "1000"
+    ],
+    [
+      "333",
+      "333",
+      "334"
+    ],
+    [
+      "100",
+      "100",
+      "100",
+      "100",
+      "100",
+      "100",
+      "100",
+      "100",
+      "100",
+      "100"
+    ]
+  ],
+  "rate": "0.0005",
+  "quantum": "0.01",
+  "rounding_modes": [
+    "FLOOR",
+    "HALF_UP"
+  ],
+  "parameters": "Coarse arbitrary quantum and rate chosen for hand arithmetic, not venue precision or account rate. All partitions total1000; no winner selection.",
+  "baseline": "Exact total notional times constant rate, and rounding only after aggregation.",
+  "cost_scope": "Single positive trading-fee component only, not full execution cost. Negative rebates, fee tiers, funding, slippage, exit, inventory and economic results excluded; actual_net null.",
+  "source_scope": "Two targeted official-domain searches and at most two relevant full official pages; no API, account or market-file downloads.",
+  "completion": "Save all six partition/mode outputs, hand/invalid checks and source qualification; distinguish formula, rounding direction, quantum and aggregation unit.",
+  "stop": "Do not expand partitions after search; missing target precision or aggregation is UNKNOWN, no historical reconstruction or economic plan.",
+  "feedback": "Full current and prior reviews read; reuse two daily adoption decisions and unique existing input-completeness child. Apply unknown-cost boundary without changing formal scores.",
+  "selection_log": {
+    "independent": "Chosen fee quantization question",
+    "deepening": "No new qualified OFI/L2/index/funding-prefix evidence; reuse prior work",
+    "current_plan_update": "No qualified current inputs",
+    "repair": "No new installed-source defect established"
+  },
+  "trigger_origin": "UNKNOWN",
+  "natural_trigger": null,
+  "trial_state": "PREPARATION_ONLY"
+}

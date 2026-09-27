@@ -1,0 +1,18 @@
+{
+  "at": "2026-09-27T04:08:59.314386+00:00",
+  "passed": 11,
+  "tests": [
+    "FLOOR hand counterexample",
+    "HALF_UP hand counterexample",
+    "one fill identity",
+    "exact quantum identity",
+    "zero specified rate",
+    "invalid rejected",
+    "invalid rejected",
+    "invalid rejected",
+    "invalid rejected",
+    "invalid rejected",
+    "invalid rejected"
+  ],
+  "independent_audit": false
+}

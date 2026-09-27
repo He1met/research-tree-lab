@@ -1,0 +1,89 @@
+{
+  "scope": "SYNTHETIC_POSITIVE_FEE_COMPONENT",
+  "cases": [
+    {
+      "partition": [
+        "1000"
+      ],
+      "mode": "FLOOR",
+      "exact": "0.5000",
+      "aggregate_rounded": "0.50",
+      "per_fill_rounded": "0.50",
+      "difference": "0.00"
+    },
+    {
+      "partition": [
+        "1000"
+      ],
+      "mode": "HALF_UP",
+      "exact": "0.5000",
+      "aggregate_rounded": "0.50",
+      "per_fill_rounded": "0.50",
+      "difference": "0.00"
+    },
+    {
+      "partition": [
+        "333",
+        "333",
+        "334"
+      ],
+      "mode": "FLOOR",
+      "exact": "0.5000",
+      "aggregate_rounded": "0.50",
+      "per_fill_rounded": "0.48",
+      "difference": "-0.02"
+    },
+    {
+      "partition": [
+        "333",
+        "333",
+        "334"
+      ],
+      "mode": "HALF_UP",
+      "exact": "0.5000",
+      "aggregate_rounded": "0.50",
+      "per_fill_rounded": "0.51",
+      "difference": "0.01"
+    },
+    {
+      "partition": [
+        "100",
+        "100",
+        "100",
+        "100",
+        "100",
+        "100",
+        "100",
+        "100",
+        "100",
+        "100"
+      ],
+      "mode": "FLOOR",
+      "exact": "0.5000",
+      "aggregate_rounded": "0.50",
+      "per_fill_rounded": "0.50",
+      "difference": "0.00"
+    },
+    {
+      "partition": [
+        "100",
+        "100",
+        "100",
+        "100",
+        "100",
+        "100",
+        "100",
+        "100",
+        "100",
+        "100"
+      ],
+      "mode": "HALF_UP",
+      "exact": "0.5000",
+      "aggregate_rounded": "0.50",
+      "per_fill_rounded": "0.50",
+      "difference": "0.00"
+    }
+  ],
+  "actual_net": null,
+  "economic_samples": 0
+}

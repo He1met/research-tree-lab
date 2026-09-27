@@ -1,0 +1,16 @@
+{
+  "mathematical_nonadditivity": "SUPPORTED_CONDITIONALLY_IN_FROZEN_SYNTHETIC_MODEL",
+  "venue_partition_savings": "NOT_SUPPORTED_OFFICIAL_FAQ_SAYS_EQUAL_TOTAL",
+  "target_fee_quantum": null,
+  "target_rounding_mode": null,
+  "target_quantization_stage": null,
+  "historical_applicability": "UNKNOWN",
+  "fee_component_qualification": "NOT_QUALIFIED_FOR_VENUE_PRECISION_REPLAY",
+  "synthetic_cases": 6,
+  "selftests": 11,
+  "economic_samples": 0,
+  "actual_net": null,
+  "selected_plan_ref": null,
+  "successor": "NOT_STARTED",
+  "trial_state": "PREPARATION_ONLY"
+}

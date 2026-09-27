@@ -1,0 +1,30 @@
+[
+  {
+    "url": "https://www.okx.com/help/trading-fee-rules-faq",
+    "published_date": "2024-03-22",
+    "updated_date": "2026-09-09",
+    "captured_at": "2026-09-27T04:11:55.819964+00:00",
+    "role": "CURRENT_OFFICIAL_DOCUMENT_NOT_HISTORICAL_IMPLEMENTATION_PROOF",
+    "findings": [
+      "Fees are calculated per fill and summed; FAQ explicitly states total is the same as a single fill.",
+      "Fill notional and execution fee rate define linear formula; logged-out rates are not account-applicable."
+    ],
+    "limitations": [
+      "Rounding quantum, direction, stage and residual handling for target contracts not established.",
+      "No account or historical rule applicability verified."
+    ]
+  },
+  {
+    "url": "https://www.okx.com/help/how-to-calculate-the-contract-transaction-fee",
+    "published_date": "2023-03-20",
+    "updated_date": "2026-08-26",
+    "captured_at": "2026-09-27T04:11:55.819964+00:00",
+    "role": "CURRENT_FUTURES_FORMULA_CROSSCHECK",
+    "findings": [
+      "USDT fee uses contract value, contract count, fill price and fee rate; opening and closing assessed separately."
+    ],
+    "limitations": [
+      "Fee precision and rounding implementation not specified in read text."
+    ]
+  }
+]
