@@ -1,0 +1,50 @@
+{
+  "state": "NON_UNIQUE_COMPOSITION_PROVEN_IN_MATCHED_CONTRACT_MODEL",
+  "cases": [
+    {
+      "volume": 10,
+      "delta_oi": 0,
+      "ending_oi": 100,
+      "both_open": 0,
+      "both_close": 0,
+      "transfer": 10,
+      "name": "pure_transfer"
+    },
+    {
+      "volume": 10,
+      "delta_oi": 0,
+      "ending_oi": 100,
+      "both_open": 5,
+      "both_close": 5,
+      "transfer": 0,
+      "name": "offsetting_open_close"
+    },
+    {
+      "volume": 10,
+      "delta_oi": 2,
+      "ending_oi": 102,
+      "both_open": 2,
+      "both_close": 0,
+      "transfer": 8,
+      "name": "rising_oi_low_churn"
+    },
+    {
+      "volume": 10,
+      "delta_oi": 2,
+      "ending_oi": 102,
+      "both_open": 6,
+      "both_close": 4,
+      "transfer": 0,
+      "name": "rising_oi_high_churn"
+    }
+  ],
+  "case_count": 4,
+  "pair_equalities": 2,
+  "event_construction_checks": 40,
+  "economic_samples": 0,
+  "actual_net": null,
+  "historical_oi_acquired": false,
+  "directional_predictive_value": "NOT_TESTED",
+  "synthetic_diagnostic": true,
+  "scope": "Single-sided OI and single-count matched volume in fixed integer-contract model. Net long contracts minus short contracts remains zero by accounting; this does not rule out forecasting information conditional on price or other data."
+}

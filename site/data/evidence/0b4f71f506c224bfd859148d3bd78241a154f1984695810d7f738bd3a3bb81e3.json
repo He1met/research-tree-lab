@@ -1,0 +1,30 @@
+[
+  {
+    "url": "https://www.okx.com/learn/what-is-open-interest",
+    "observed_at": "2026-09-27T09:11:55.943076+00:00",
+    "updated_at": "2025-06-09",
+    "role": "OFFICIAL_EDUCATIONAL_NOT_FIELD_SCHEMA",
+    "finding": "Explicit lack of directional detail. Counting prose adds long and short while example both-open adds one; close-row wording is insufficient to reproduce a balanced matched ledger. Do not use as definitive field unit/schema."
+  },
+  {
+    "url": "https://www.okx.com/help/how-do-i-use-the-open-interest-indicator",
+    "observed_at": "2026-09-27T09:11:55.943076+00:00",
+    "updated_at": "2026-08-05",
+    "role": "OFFICIAL_UI_DOCUMENTATION_NOT_EXPORTED_DATA",
+    "finding": "Describes chart indicator activation and total open-position value, not exact historical field counting, normalization or a supported file export."
+  },
+  {
+    "url": "https://www.okx.com/zh-hans/historical-data",
+    "observed_at": "2026-09-27T09:11:55.943076+00:00",
+    "updated_at": null,
+    "role": "BOUNDED_PUBLIC_CATALOG_TEXT",
+    "finding": "Returned catalogue text lists trades, candles, funding, L2 and borrowing. No separately labelled OI file category in that text. This is not exhaustive interactive-site inspection or global absence proof."
+  },
+  {
+    "url": "https://www.cmegroup.com/trading/about-volume.html",
+    "observed_at": "2026-09-27T09:11:55.943076+00:00",
+    "updated_at": null,
+    "role": "EXTERNAL_VENUE_ACCOUNTING_DEFINITION_ONLY",
+    "finding": "Defines open interest counting one contract side. Corroborates abstract convention, does not qualify OKX fields or substitute target market data."
+  }
+]

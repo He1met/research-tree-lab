@@ -1,0 +1,21 @@
+{
+  "status": "REUSED_EXISTING_ADOPTION_NOT_NEW_SUCCESSOR",
+  "items": [
+    {
+      "adoption_decision_ref": "decision-adopt-daily-input-long-20260927",
+      "review_ref": "review-batch-daily-review-20260927-v1-4809fda65a42055d",
+      "feedback_ref": "feedback-batch-daily-review-20260927-v1-4809fda65a42055d",
+      "existing_successor_round_id": "r-feedback-input-completeness-20260923",
+      "disposition": "ADOPT_INPUT_BOUNDARIES_DEFER_ECONOMIC_TEST",
+      "applied": "No OI estimate backfilled from trade count/side. No direction, chronology, mark, funding cashflow or cost qualification inferred from abstract identity. Old scores unchanged; actual_net null."
+    },
+    {
+      "adoption_decision_ref": "decision-adopt-daily-input-short-20260927",
+      "review_ref": "review-batch-daily-review-20260927-v1-bf1f5e787c973f51",
+      "feedback_ref": "feedback-batch-daily-review-20260927-v1-bf1f5e787c973f51",
+      "existing_successor_round_id": "r-feedback-input-completeness-20260923",
+      "disposition": "ADOPT_INPUT_BOUNDARIES_DEFER_ECONOMIC_TEST",
+      "applied": "No OI estimate backfilled from trade count/side. No direction, chronology, mark, funding cashflow or cost qualification inferred from abstract identity. Old scores unchanged; actual_net null."
+    }
+  ]
+}

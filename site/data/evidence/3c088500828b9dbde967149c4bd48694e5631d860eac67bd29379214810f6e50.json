@@ -1,0 +1,49 @@
+{
+  "problem_key": "open-interest-volume-opening-closing-identifiability-v1",
+  "frozen_at": "2026-09-27T09:08:48.207646+00:00",
+  "question": "Do matched traded contract volume V and change in one-sided open interest D uniquely determine both-open, both-close and position-transfer quantities?",
+  "hypothesis": "The pair (V,D) uniquely identifies opening/closing composition and permits a directional new-position interpretation.",
+  "counterevidence": "Two feasible nonnegative ledgers with equal V,D but different opening/closing/transfer composition disprove uniqueness. Every matched open adds one long and one short, so OI alone supplies no directional initiator.",
+  "mechanism": "Market participation and position turnover identifiability, distinct from trade side/RPI, funding information timing and quote OFI.",
+  "data_role": "SYNTHETIC_DIAGNOSTIC_ONLY; official public definitions are documentary, not qualified historical OI. Existing price/trade files not rescanned.",
+  "fixed_cases": [
+    {
+      "name": "pure_transfer",
+      "both_open": 0,
+      "both_close": 0,
+      "transfer": 10
+    },
+    {
+      "name": "offsetting_open_close",
+      "both_open": 5,
+      "both_close": 5,
+      "transfer": 0
+    },
+    {
+      "name": "rising_oi_low_churn",
+      "both_open": 2,
+      "both_close": 0,
+      "transfer": 8
+    },
+    {
+      "name": "rising_oi_high_churn",
+      "both_open": 6,
+      "both_close": 4,
+      "transfer": 0
+    }
+  ],
+  "initial_oi": 100,
+  "quantity_unit": "hypothetical contracts, single instrument and matched volume counted once; no venue factor asserted",
+  "equations": [
+    "V=both_open+both_close+transfer",
+    "D=both_open-both_close",
+    "OI_end=100+D"
+  ],
+  "comparison": "Fixed four ledgers; equal V,D compare composition, no post-result cases or parameter optimization.",
+  "source_scope": "Focused official OKX OI/volume educational definitions and visible public data availability references. No market API, account, downloads or interface retry. Current definitions do not establish historical schema.",
+  "costs": "No strategy, exposure PnL or economic returns; fees/slippage/funding/exit costs unknown, actual_net null.",
+  "completion": "Exact integer ledger checks, retain all four cases, actual official source cross-check, bounded target-data availability finding. If uniqueness fails, stop economic interpretation and specify missing inputs.",
+  "feedback": "Reuse both current daily input-boundary adoption decisions with exact review/feedback references; retain sole existing BTC successor, independent root is not feedback-derived.",
+  "selection": "Existing new-sample and current-plan comparisons await qualified coverage/mark/costs; unchanged AAPL menus and L2 download not retried. OI participation is an independent seed-D missing-information mechanism, not another archive schema census.",
+  "trial": "PREPARATION_ONLY; no A/B start"
+}

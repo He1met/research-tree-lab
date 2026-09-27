@@ -1,0 +1,17 @@
+{
+  "hypothesis": "REJECTED_IN_FIXED_MATCHED_CONTRACT_MODEL",
+  "target_historical_schema": "NOT_QUALIFIED",
+  "target_oi_files_acquired": 0,
+  "economic_samples": 0,
+  "actual_net": null,
+  "directional_signal": "NOT_TESTED",
+  "source_issue": "OKX educational wording not sufficient to pin single/double-side or value/contract unit. CME convention not transported into OKX.",
+  "dedup": "Current162-record identities/questions checked; no matching problem or live owner. RPI/OFI/funding-information differences stated in protocol. Unchanged AAPL/L2 work reused, not retried.",
+  "next_gate": [
+    "Exact target contract, one/double-side counting, quantity/value denomination and conversion timestamps",
+    "Supported official historical export with publication/acquisition times and aligned volume window",
+    "If investigating opening/closing composition, either qualified event flags or interval/bound analysis; aggregate pair cannot give unique decomposition",
+    "For predictive study use frozen price-only baseline versus price+OI in unexposed sample and full costs before economics"
+  ],
+  "restart": "Do not rerun these same four cases/pages without changed evidence; subsequent economic experiment requires parent r-open-interest-identifiability-20260927."
+}
