@@ -1,0 +1,27 @@
+[
+  {
+    "url": "https://www.okx.com/help/okx-retail-price-improvement-program-rpi",
+    "published_at_date": "2026-07-23",
+    "updated_at_date": "2026-08-13",
+    "observed_this_run": true,
+    "scope": "Current documentation; date-specific historical applicability not proven",
+    "findings": [
+      "RPI fills contribute to last-trade and candles, while BBO and mark are based on organic order book.",
+      "Access and visible liquidity differ; some hidden RPI liquidity may still execute.",
+      "These statements do not prove a particular historical fill, complete archive coverage or settlement mark."
+    ]
+  },
+  {
+    "url": "https://www.okx.com/en-eu/help/okx-enhanced-liquidity-program",
+    "updated_at_date": "2026-08-05",
+    "findings": [
+      "Current page redirects readers conceptually from ELP to RPI documentation; not historical contract proof."
+    ]
+  },
+  {
+    "reused_record_ref": "e-ofi-observability-20260927",
+    "findings": [
+      "Prior actually observed official archive help maps source 0 to ordinary and 1 to RPI; source is not aggressor side. No fresh archive help search repeated."
+    ]
+  }
+]

@@ -1,0 +1,128 @@
+{
+  "frozen_at": "2026-09-27T01:07:29.891155+00:00",
+  "problem_key": "btc-archive-rpi-source-mixture-two-new-days-v1",
+  "question": "Do the two newly acquired BTC trade archives contain RPI source rows, and can pooling them change minute-level trade-count activity descriptions?",
+  "hypothesis": "source=1 may have a nonzero uneven minute share; source-pooled and source=0-only count distributions may differ.",
+  "falsifier": "No source=1 rows or identical per-minute count summaries. Missing/unknown source codes stop interpretation, not silently discard.",
+  "novelty": "Independent archive selection/retail-liquidity segmentation mechanism. Existing OFI probe checked fields only; no source mixture census on these new two files. Not repeating side/aggressor search, prior exposed Sep21 results, or formal economic evaluation.",
+  "inputs": [
+    {
+      "dataset_ref": "d-review-btc-trades-20260923@1",
+      "record_hash": "2068aaf46a3a89800c1e6cb7709327e53c0f89b27f352d95c42805d20d6098d3",
+      "dataset": {
+        "acquired_at": "2026-09-27T00:21:40.699570Z",
+        "available_at": "2026-09-27T00:23:58.837811Z",
+        "bytes": 19459479,
+        "created_at": "2026-09-27T00:23:58.837811Z",
+        "data_available_at": "2026-09-27T00:21:40.699570Z",
+        "data_ref": "sha256:c17b52f17ae7762aff2d2ef72720df08f1f0ce534331054dc11d30cff8e195aa",
+        "data_role": "TARGET_TRADE_HISTORY",
+        "dataset_id": "d-review-btc-trades-20260923",
+        "disclosure": {
+          "license": "OWN_ANALYSIS",
+          "scope": "Acquisition metadata only; no raw ZIP/CSV/rows redistributed.",
+          "visibility": "PUBLIC"
+        },
+        "format": "Official ZIP containing CSV",
+        "granularity": "tick",
+        "instrument_ref": "BTC-USDT-SWAP",
+        "normalization": "Exact original bytes; full-file decoding by pinned evaluator. allswap file filtered to target BTC without modifying raw.",
+        "product_refs": [
+          "btc"
+        ],
+        "published_at": null,
+        "quality": {
+          "declared_partition": {
+            "date": "2026-09-23",
+            "timezone": "UTC+08:00"
+          },
+          "observed_download_url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20260923/BTC-USDT-SWAP-trades-2026-09-23.zip?v=999",
+          "publication_time": "UNKNOWN",
+          "raw_zip_crc": "PASS",
+          "same_ms_chronology": "UNKNOWN",
+          "source_event_completeness": "UNKNOWN"
+        },
+        "record_type": "dataset",
+        "redistribution": "RAW_LOCAL_ONLY_NO_REDISTRIBUTION_GRANT_ESTABLISHED",
+        "schema_version": "1.0",
+        "sha256": "c17b52f17ae7762aff2d2ef72720df08f1f0ce534331054dc11d30cff8e195aa",
+        "source_url": "https://www.okx.com/zh-hans/historical-data",
+        "source_urls": [
+          "https://static.okx.com/cdn/okex/traderecords/trades/daily/20260923/BTC-USDT-SWAP-trades-2026-09-23.zip?v=999"
+        ],
+        "synthetic": false,
+        "version": 1
+      }
+    },
+    {
+      "dataset_ref": "d-review-btc-trades-20260924@1",
+      "record_hash": "d37064d39f686ade558ab5141afd1f827085e273d84c48d216153c9f8576278f",
+      "dataset": {
+        "acquired_at": "2026-09-27T00:21:37.685663Z",
+        "available_at": "2026-09-27T00:23:58.837811Z",
+        "bytes": 19578282,
+        "created_at": "2026-09-27T00:23:58.837811Z",
+        "data_available_at": "2026-09-27T00:21:37.685663Z",
+        "data_ref": "sha256:531d1397caa0fb0bdb3158b4b0fd8acb618f7a0c7b46b17600762985993e574d",
+        "data_role": "TARGET_TRADE_HISTORY",
+        "dataset_id": "d-review-btc-trades-20260924",
+        "disclosure": {
+          "license": "OWN_ANALYSIS",
+          "scope": "Acquisition metadata only; no raw ZIP/CSV/rows redistributed.",
+          "visibility": "PUBLIC"
+        },
+        "format": "Official ZIP containing CSV",
+        "granularity": "tick",
+        "instrument_ref": "BTC-USDT-SWAP",
+        "normalization": "Exact original bytes; full-file decoding by pinned evaluator. allswap file filtered to target BTC without modifying raw.",
+        "product_refs": [
+          "btc"
+        ],
+        "published_at": null,
+        "quality": {
+          "declared_partition": {
+            "date": "2026-09-24",
+            "timezone": "UTC+08:00"
+          },
+          "observed_download_url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20260924/BTC-USDT-SWAP-trades-2026-09-24.zip?v=999",
+          "publication_time": "UNKNOWN",
+          "raw_zip_crc": "PASS",
+          "same_ms_chronology": "UNKNOWN",
+          "source_event_completeness": "UNKNOWN"
+        },
+        "record_type": "dataset",
+        "redistribution": "RAW_LOCAL_ONLY_NO_REDISTRIBUTION_GRANT_ESTABLISHED",
+        "schema_version": "1.0",
+        "sha256": "531d1397caa0fb0bdb3158b4b0fd8acb618f7a0c7b46b17600762985993e574d",
+        "source_url": "https://www.okx.com/zh-hans/historical-data",
+        "source_urls": [
+          "https://static.okx.com/cdn/okex/traderecords/trades/daily/20260924/BTC-USDT-SWAP-trades-2026-09-24.zip?v=999"
+        ],
+        "synthetic": false,
+        "version": 1
+      }
+    }
+  ],
+  "comparison": [
+    "all archived rows",
+    "source=0 rows",
+    "source=1 rows"
+  ],
+  "scope": "Full two files, UTC+8 declared day partitions; retain all 1440 minute bins per file. Count each archived row once, not individual matching-engine transactions; no size-volume unit assumption.",
+  "metrics": [
+    "source row counts",
+    "minutes with RPI rows",
+    "RPI row share",
+    "max minute RPI share among observed nonempty bins",
+    "pooled versus ordinary count difference"
+  ],
+  "analysis": "Descriptive development diagnostic only. No predictive test, parameter selection, execution path, cost or return calculation.",
+  "costs": "actual_net null; no economic candidate; future strategies require all original-rule permitted costs including funding and exit.",
+  "source_scope": "Official RPI help found through one targeted search; at most first two directly relevant official help pages. Current docs not backdated to archive date.",
+  "stop": "Complete fixed census and bounded source semantics check; unknown semantics remains unknown. No downloading, API, L2 retry or expanding dates.",
+  "feedback": "Read two current full reviews/feedback; adopt input-role and per-metric qualification boundaries in two explicit decisions pointing to existing r-feedback-input-completeness-20260923. Independent root is not derived from those feedbacks.",
+  "AB": "PREPARATION_ONLY; no trial launch",
+  "trigger_origin": "UNKNOWN",
+  "natural_trigger": null,
+  "data_exposure": "Two days already exposed to daily reviewer; newly exposed to this descriptive analysis; never holdout."
+}

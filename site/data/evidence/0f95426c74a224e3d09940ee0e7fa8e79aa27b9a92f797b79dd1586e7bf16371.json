@@ -1,0 +1,6 @@
+{
+  "passed": 7,
+  "synthetic_only": true,
+  "at": "2026-09-27T01:08:29.963596+00:00",
+  "deviation": "Official search and two documentary page reads occurred before these tests; no real raw row analysis occurred before tests. Frozen count scope unchanged."
+}

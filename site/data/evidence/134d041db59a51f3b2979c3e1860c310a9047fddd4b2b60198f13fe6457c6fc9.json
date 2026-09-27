@@ -1,0 +1,68 @@
+{
+  "completed_at": "2026-09-27T01:08:40.092177+00:00",
+  "files": [
+    {
+      "dataset_ref": "d-review-btc-trades-20260923@1",
+      "sha256": "c17b52f17ae7762aff2d2ef72720df08f1f0ce534331054dc11d30cff8e195aa",
+      "partition_label_utc8": "2026-09-23",
+      "rows": 3377579,
+      "source0_rows": 3370327,
+      "source1_rows": 7252,
+      "source1_fraction": "7252/3377579",
+      "source1_percent": 0.2147100038222644,
+      "bins": 1440,
+      "file_empty_bins": 0,
+      "source1_present_bins": 830,
+      "source1_only_bins": 0,
+      "max_minute_source1_fraction": "11/518",
+      "max_minute_source1_percent": 2.1235521235521237,
+      "source_pooling_changes_count_bins": 830,
+      "min_timestamp": 1790092800366,
+      "max_timestamp": 1790179199997,
+      "header": [
+        "instrument_name",
+        "trade_id",
+        "side",
+        "price",
+        "size",
+        "created_time",
+        "source"
+      ],
+      "zip_crc": "FULL_MEMBER_READ_OK",
+      "secondary_check": "Direct source Counter equals sum of minute bins; same-author structural check, not independent audit"
+    },
+    {
+      "dataset_ref": "d-review-btc-trades-20260924@1",
+      "sha256": "531d1397caa0fb0bdb3158b4b0fd8acb618f7a0c7b46b17600762985993e574d",
+      "partition_label_utc8": "2026-09-24",
+      "rows": 3437613,
+      "source0_rows": 3429971,
+      "source1_rows": 7642,
+      "source1_fraction": "7642/3437613",
+      "source1_percent": 0.22230541948730123,
+      "bins": 1440,
+      "file_empty_bins": 0,
+      "source1_present_bins": 842,
+      "source1_only_bins": 0,
+      "max_minute_source1_fraction": "139/2015",
+      "max_minute_source1_percent": 6.898263027295285,
+      "source_pooling_changes_count_bins": 842,
+      "min_timestamp": 1790179200062,
+      "max_timestamp": 1790265599810,
+      "header": [
+        "instrument_name",
+        "trade_id",
+        "side",
+        "price",
+        "size",
+        "created_time",
+        "source"
+      ],
+      "zip_crc": "FULL_MEMBER_READ_OK",
+      "secondary_check": "Direct source Counter equals sum of minute bins; same-author structural check, not independent audit"
+    }
+  ],
+  "actual_net": null,
+  "economic_samples": 0,
+  "scope": "Archived row-count census; not true market coverage, aggressor flow or matching-engine execution count"
+}
