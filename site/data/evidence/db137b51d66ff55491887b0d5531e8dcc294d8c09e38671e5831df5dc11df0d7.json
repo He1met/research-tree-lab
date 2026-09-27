@@ -1,0 +1,21 @@
+{
+  "terminal_identifies_earlier_prefix": "REJECTED_IN_FIXED_WEIGHTED_MEAN_MODEL",
+  "blanket_all_pre_settlement_use_is_lookahead": "REJECTED_AS_UNJUSTIFIED",
+  "reason": "Cross-period fixed-rate regimes provide an exception; current-period use requires actual information cutoff and version.",
+  "existing_settlement_archive_suffices_for_prefix_signal": "NOT_QUALIFIED",
+  "reused_schema": [
+    "instrument_name",
+    "funding_rate",
+    "funding_time"
+  ],
+  "required_evidence": [
+    "exact target contract and historical collection/formula regime",
+    "contemporaneously preserved rate estimates or reconstructible qualified premium inputs",
+    "observation/publication/receipt timestamps and rule-effective timestamps",
+    "interval/cap/floor/interest versions plus full execution,mark,funding and costs for economic study"
+  ],
+  "economic_samples": 0,
+  "actual_net": null,
+  "economic_successor": "NOT_EXECUTED",
+  "trial_state": "PREPARATION_ONLY"
+}

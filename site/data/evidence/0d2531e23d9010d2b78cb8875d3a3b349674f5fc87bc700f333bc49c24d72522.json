@@ -1,0 +1,47 @@
+{
+  "synthetic_only": true,
+  "not_exchange_replica": true,
+  "rows": [
+    {
+      "premium_bps": [
+        12,
+        -6,
+        0
+      ],
+      "prefix_weighted_premium_bps": [
+        "12",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "premium_bps": [
+        -12,
+        6,
+        0
+      ],
+      "prefix_weighted_premium_bps": [
+        "-12",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "premium_bps": [
+        0,
+        0,
+        0
+      ],
+      "prefix_weighted_premium_bps": [
+        "0",
+        "0",
+        "0"
+      ]
+    }
+  ],
+  "same_terminal": "0",
+  "distinct_first_prefixes": 3,
+  "inference": "Terminal weighted mean cannot uniquely identify prefix state. Any deterministic function of equal terminal mean and equal other inputs remains equal.",
+  "economic_samples": 0,
+  "actual_net": null
+}

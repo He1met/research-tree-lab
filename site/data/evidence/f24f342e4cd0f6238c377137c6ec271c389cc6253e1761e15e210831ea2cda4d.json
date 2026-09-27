@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://www.okx.com/help/perps-funding-fee-mechanism",
+    "published_date": "2020-12-21",
+    "updated_date": "2026-08-27",
+    "observed_at": "2026-09-27T03:10:51.734459+00:00",
+    "role": "CURRENT_DOCUMENT_NOT_TARGET_HISTORICAL_VERSION_PROOF",
+    "findings": [
+      "Current-period minute premium observations feed a progressively weighted average.",
+      "Assessment uses the preceding minute rate; realized terminal rate is not a preserved earlier estimate.",
+      "Current formula also depends on interest, interval and cap/floor; those inputs require version evidence."
+    ],
+    "limitations": [
+      "No historical BTC/ETH applicability or individual information receipt time established."
+    ]
+  },
+  {
+    "url": "https://www.okx.com/help/okx-to-change-funding-fee-collection-mechanism",
+    "published_date": "2023-12-05",
+    "observed_at": "2026-09-27T03:10:51.734459+00:00",
+    "role": "DATED_COUNTEREXAMPLE_TO_UNIVERSAL_INFORMATION_TIMING",
+    "findings": [
+      "Former cross-period collection used a prior-period rate fixed during the following period.",
+      "The announced transition uses current-period observations and may fluctuate before collection.",
+      "Named rollout covers FLOW followed by SOL/TRB/XRP/BCH/WLD in January2024; it does not give BTC/ETH transition dates."
+    ],
+    "limitations": [
+      "Documentary exception only; named contracts not enabled for this project.",
+      "API references were not invoked."
+    ]
+  }
+]

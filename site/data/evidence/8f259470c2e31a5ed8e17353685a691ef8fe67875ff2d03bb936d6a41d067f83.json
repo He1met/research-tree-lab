@@ -1,0 +1,47 @@
+{
+  "frozen_at": "2026-09-27T03:07:59.550925+00:00",
+  "problem_key": "funding-terminal-rate-does-not-identify-prefix-information-v1",
+  "question": "Can a realized terminal funding rate identify the funding information available before settlement?",
+  "hypothesis": "Many premium histories can map to one terminal rate while their earlier states differ; final rate alone is insufficient to reconstruct ex-ante signal.",
+  "falsifier": "Fixed counterexample fails, or official evidence explicitly establishes a fixed rate known at the earlier decision time. A current document alone cannot prove historical target applicability.",
+  "novelty": "Independent information-identification mechanism, not a repeated sum of funding cashflows or beta comparison. Prior work warned realized rates are not signals but did not test prefix identifiability.",
+  "baseline": "Terminal funding value used retrospectively as a prefix signal",
+  "comparison": "Three fixed abstract premium paths in basis points [12,-6,0],[-12,6,0],[0,0,0], weights1,2,3; compare first-prefix premium against terminal weighted mean. No calibration or winner.",
+  "cases": [
+    [
+      12,
+      -6,
+      0
+    ],
+    [
+      -12,
+      6,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "weights": [
+    1,
+    2,
+    3
+  ],
+  "data_roles": "Synthetic identifiability diagnostic and current official documents only; no target market sample or production input. Existing product archival fields reused without raw row rescanning.",
+  "source_scope": "One targeted official-domain search, then at most two relevant official full pages including current formula or dated formula change. No API or new market downloads.",
+  "cost_and_exposure": "No trading candidate, exposure or complete cost scenario. Fees, slippage, marks and funding cashflow unknown; actual_net null.",
+  "completion": "Compute all3 fixed histories, hand checks first, verify official formation/availability rules and identify whether existing three-column settlement files preserve prefix states.",
+  "stop": "No new paths or historical fitting after source inspection; unknown historical applicability remains unknown.",
+  "feedback_disposition": "Reuse two current adoption decisions, preserve exact-source/time and unknown-cost boundaries. Existing input-completeness child unchanged. Independent root not feedback offspring.",
+  "selection_log": {
+    "independent": "Chosen information-identification mechanism",
+    "deepening": "Existing RPI/index/OFI no new qualified input; no repeated analyses",
+    "current_plan": "No qualified current data to update main selection",
+    "repair": "Approved installed evaluator exists; no new public-code defect established"
+  },
+  "trial_state": "PREPARATION_ONLY",
+  "trigger_origin": "UNKNOWN",
+  "natural_trigger": null
+}
