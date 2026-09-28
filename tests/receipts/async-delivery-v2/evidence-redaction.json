@@ -1,0 +1,85 @@
+{
+  "version": "async-delivery-v2-evidence-redaction",
+  "observed_at": "2026-09-28T01:05:52.273633+00:00",
+  "scope": "PATH_REDACTION_ONLY_NO_FUNCTIONAL_SOURCE_CHANGE",
+  "v1_manifest_sha256": "cdd788de69f001fc8fe3e02e12150b7a288cc53aebad1b6167a6f85e5435b529",
+  "original_private_browser_receipt_sha256": "a9f2d6bd6505777fb1e34ef73245ca7c4a76473ab52b6d7d80a37c4ece921a6d",
+  "sanitized_browser_receipt_sha256": "15caacaadc2a449247a7316eeb73f8c8e2ed86e7563f547150eac01f0cc5db05",
+  "private_original_preserved": "Unmodified frozen v1 in private worktree; not a public delivery",
+  "path_normalization": "Candidate-root paths become project-relative; external runtime executable becomes basename node",
+  "changed_json_values": [
+    {
+      "json_path": [
+        "config",
+        "argv",
+        0
+      ],
+      "replacement": "node"
+    },
+    {
+      "json_path": [
+        "config",
+        "argv",
+        1
+      ],
+      "replacement": "web/node_modules/.bin/playwright"
+    },
+    {
+      "json_path": [
+        "config",
+        "configFile"
+      ],
+      "replacement": "web/playwright.async.config.ts"
+    },
+    {
+      "json_path": [
+        "config",
+        "rootDir"
+      ],
+      "replacement": "tests/browser"
+    },
+    {
+      "json_path": [
+        "config",
+        "projects",
+        0,
+        "outputDir"
+      ],
+      "replacement": "tests/browser/artifacts/results"
+    },
+    {
+      "json_path": [
+        "config",
+        "projects",
+        0,
+        "testDir"
+      ],
+      "replacement": "tests/browser"
+    },
+    {
+      "json_path": [
+        "config",
+        "projects",
+        1,
+        "outputDir"
+      ],
+      "replacement": "tests/browser/artifacts/results"
+    },
+    {
+      "json_path": [
+        "config",
+        "projects",
+        1,
+        "testDir"
+      ],
+      "replacement": "tests/browser"
+    }
+  ],
+  "browser_stats_identical": true,
+  "functional_tests_rerun": false,
+  "functional_results_reused_from_v1": true,
+  "source_files_byte_identical": true,
+  "v1_tree_unchanged": true,
+  "v1_tree_map_sha256": "a5bcd6b12ae185c37e8b221bb52b1724188da1f086a3b381cfa7acb73a77d00f",
+  "review_receipt_sha256": "863db0c6a1e6c81db4eb8bd230c6bf8f4ff159346f5abcc2c5f5caf22c2c10cb"
+}

@@ -1,0 +1,24 @@
+{
+  "observed_at": "2026-09-28T00:58:10.999073+00:00",
+  "tool": "mcp__cua_repl CUA Chrome extension",
+  "classification": "OFFICIAL_TOOL_LOCAL_CANDIDATE_PUBLIC_SNAPSHOT_REPLAY_NOT_PAGES",
+  "iab": "UNAVAILABLE_BROWSER_NOT_AVAILABLE",
+  "url": "http://127.0.0.1:28761/",
+  "snapshots": [
+    "fc28e27632c4aa5b13d17036924d7ab4cf22352009e9a6913d27c06d8706b3c8",
+    "9c5613454eda3a3bf1e0fa285f79028c329de18b59e0e6f88aafb4f39ac84d8e"
+  ],
+  "query": "异步",
+  "matching_refs": [
+    "discovery-async-covariance-20260928",
+    "e-async-covariance-20260928"
+  ],
+  "current_evidence_and_discovery_opened": true,
+  "historical_discovery_opened": true,
+  "proposal_state_both": "PROPOSED_NOT_STARTED",
+  "report_hash_and_bytes_verified_both": true,
+  "official_screenshots": "Captured in CUA tool messages; engineering screenshot files listed separately",
+  "navigation_note": "Historical select initially returned retain-option error; subsequent AX confirmed correct fc28 selection without retry",
+  "tab_closed": true,
+  "local_server_stopped": true
+}

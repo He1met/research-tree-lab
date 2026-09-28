@@ -1,0 +1,21 @@
+test_changed_values_types_ids_and_disclosure_rejected (test_archive_async.AsyncArchiveTests) ... ok
+test_exact_null_export_and_restore (test_archive_async.AsyncArchiveTests) ... ok
+test_rehashed_manifest_cannot_grant_exception_or_change_bytes (test_archive_async.AsyncArchiveTests) ... ok
+test_closed_shapes_private_payloads_and_explicit_export_restrictions (test_archive_calendar.CalendarArchiveTests) ... ok
+test_every_scalar_leaf_mutation_rejected (test_archive_calendar.CalendarArchiveTests) ... ok
+test_rehashed_manifest_does_not_authorize_byte_or_content_or_policy_mutations (test_archive_calendar.CalendarArchiveTests) ... ok
+test_two_exact_originals_export_inspect_restore_without_projection_changes (test_archive_calendar.CalendarArchiveTests) ... ok
+test_closed_extension_rejects_mutation_and_unreviewed_decisions (test_archive_numeraire.ArchiveNumeraireTests) ... ok
+test_exact_original_export_inspect_restore_and_projection_stay_separate (test_archive_numeraire.ArchiveNumeraireTests) ... ok
+test_inspector_rejects_rehashed_policy_marker_tampering (test_archive_numeraire.ArchiveNumeraireTests) ... ok
+test_nested_secret_and_encoded_payload_are_not_approved_by_scanner_alone (test_archive_numeraire.ArchiveNumeraireTests) ... ok
+test_other_records_and_explicit_export_field_restrictions_unchanged (test_archive_numeraire.ArchiveNumeraireTests) ... ok
+test_all_scalar_mutations_rejected (test_archive_roll_run.RollRunArchiveTests) ... ok
+test_closed_verification_types_disclosure_and_unknown_run (test_archive_roll_run.RollRunArchiveTests) ... ok
+test_exact_bytes_and_unchanged_projection (test_archive_roll_run.RollRunArchiveTests) ... ok
+test_rehashed_zip_cannot_grant_unknown_verification_or_original_bytes (test_archive_roll_run.RollRunArchiveTests) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.346s
+
+OK

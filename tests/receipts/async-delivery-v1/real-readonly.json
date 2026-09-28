@@ -1,0 +1,246 @@
+{
+  "archive_retained": false,
+  "bundle_file_map_sha256": "2afa87e6abc7facea451f6541b9b4c9f5fcf7ffb47e09b10798279e8c7211a60",
+  "bundle_files_unchanged": 1380,
+  "existing_archives": [
+    {
+      "files": 41,
+      "inspection": "PASS",
+      "name": "public-decision-catchup-20260927-v1.zip",
+      "records": 18,
+      "sha256": "97cfbde11c930d8f9e5bf7ffc0781b50b93defd95e1e1749a3cfbc206664101d"
+    },
+    {
+      "files": 36,
+      "inspection": "PASS",
+      "name": "public-feedback-supplement-20260923-v1.zip",
+      "records": 15,
+      "sha256": "ae8ec8612992154f0ec7b7957d45bdaffdbd81ca9795a91543f2f2af4f04a674"
+    },
+    {
+      "files": 35,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260923-v1.zip",
+      "records": 14,
+      "sha256": "3467ea715b9ef638f897e94f13d5ca267e65ea3069a56a9f53132321cf72cf7f"
+    },
+    {
+      "files": 46,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260923-v2.zip",
+      "records": 21,
+      "sha256": "76fe183efa73144d5ad1060355ba6babd16228d3707333b5b24d32442168cb03"
+    },
+    {
+      "files": 56,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260923-v3.zip",
+      "records": 28,
+      "sha256": "b9a30287e7a003d63e629f648d82e8c9b3834037ae1fadfdd865ed8e7fb2a415"
+    },
+    {
+      "files": 43,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260923-v4.zip",
+      "records": 19,
+      "sha256": "24c3e3d810d4b8939c953803c8da42baa343d3bc7133b9a479dbb0a3d06159bb"
+    },
+    {
+      "files": 49,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260926-v1.zip",
+      "records": 24,
+      "sha256": "a2ed7d14efe0699b5ac0e5669e6d303fd5c27066fc95087b397047c6a4d39ccb"
+    },
+    {
+      "files": 44,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260926-v2.zip",
+      "records": 21,
+      "sha256": "0329252c6f3392d5b8ca2792a176123f1b6a0e43a52c373afb045bcb5e54d7d4"
+    },
+    {
+      "files": 7,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260927-v1.zip",
+      "records": 5,
+      "sha256": "98f83a56b39372698855452e0dd9d6912586dc2f9b85b6f1bfd3661fa936bcd1"
+    },
+    {
+      "files": 76,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260927-v10.zip",
+      "records": 25,
+      "sha256": "903be4cb6bc1e7a2dd8c04f8ef2e93301fee473ebf5ccbd02a39dfba39d6ff4c"
+    },
+    {
+      "files": 87,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260927-v11.zip",
+      "records": 29,
+      "sha256": "2fba831cc15b8b285b4d9da0e2f3b07ef0a96e942df799244e5ed74e49042e71"
+    },
+    {
+      "files": 92,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260927-v12.zip",
+      "records": 32,
+      "sha256": "89ac5466dd37d8a7014885c5d5f1691b29e604d947b57ba51f302ec7d135a8fe"
+    },
+    {
+      "files": 88,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260927-v13.zip",
+      "records": 29,
+      "sha256": "b9ed03ad0261992695582f3c95c32bf1e4260e1b74fc723f463f518ec51ab40a"
+    },
+    {
+      "files": 85,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260927-v14.zip",
+      "records": 28,
+      "sha256": "4afa1ff0308a3a0061b614fde82ec31721d45125864b37eac14d1a56796462fe"
+    },
+    {
+      "files": 92,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260927-v15.zip",
+      "records": 29,
+      "sha256": "e90d4463d9194be66e0a66da690b13d675ceef6f29dad7d8327d82c716dd9b5e"
+    },
+    {
+      "files": 98,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260927-v16.zip",
+      "records": 29,
+      "sha256": "f9ed4e86dab1467c1eedc510d759fd37e708bfb82775caed3717c7145e6c658a"
+    },
+    {
+      "files": 91,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260927-v17.zip",
+      "records": 28,
+      "sha256": "78d6d4e1bb696aa13109620a3ed922d3d15d21f005cb5702c6b006aae81fe4b1"
+    },
+    {
+      "files": 87,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260927-v18.zip",
+      "records": 28,
+      "sha256": "01de38526f36ac2a8df399d525c85679685389be1679de56347946cb81a4d63f"
+    },
+    {
+      "files": 117,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260927-v19.zip",
+      "records": 42,
+      "sha256": "445c5b64eab69fb30e166c835e9afb591afa6ff4b29e6db835136bded23a9245"
+    },
+    {
+      "files": 89,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260927-v20.zip",
+      "records": 33,
+      "sha256": "8ff1427aa7c32387a799a907e81b0dd33fdb664d13c15b282a1df042db461713"
+    },
+    {
+      "files": 54,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260927-v3.zip",
+      "records": 27,
+      "sha256": "4207232771ae8b4b552eeb4b010cebbb5610efd5455abfa86781873714fccb86"
+    },
+    {
+      "files": 44,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260927-v4.zip",
+      "records": 21,
+      "sha256": "c7c8f562d8dd87e14f728358b1e0670342f833e54327cc7909e022a96290edac"
+    },
+    {
+      "files": 47,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260927-v5.zip",
+      "records": 22,
+      "sha256": "a793fd7eefc2d48c9b085d3c8fa7a2f6d962cdb378c87c1d147ec095f4dee1cd"
+    },
+    {
+      "files": 51,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260927-v6.zip",
+      "records": 24,
+      "sha256": "f68dcf23acc55b8cd9fcaa01e6b3fee5702990fccb48966b65bea2631b6bfff4"
+    },
+    {
+      "files": 42,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260927-v7.zip",
+      "records": 19,
+      "sha256": "9723e9dfd84219754e88b901a73f6e3fe9a1c3075c66ddc9664b7b39563eb785"
+    },
+    {
+      "files": 80,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260927-v8.zip",
+      "records": 37,
+      "sha256": "678f405a37693d6e947cdc027a34b739dfe8515100f1fc5ee4cfc57df7e44679"
+    },
+    {
+      "files": 93,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260927-v9.zip",
+      "records": 38,
+      "sha256": "49576cb474af0e53671a4d6757d4affe5f5b34d93610a0942e4e35e62efe8489"
+    },
+    {
+      "files": 96,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260928-v1.zip",
+      "records": 34,
+      "sha256": "b83ba8e8b581177971b8f6e31201fe246e94921ddf9d7c373aaa744e8667b43c"
+    },
+    {
+      "files": 154,
+      "inspection": "PASS",
+      "name": "public-research-increment-20260928-v2.zip",
+      "records": 49,
+      "sha256": "4512c880e2e0bf3f4c2277c2a3ef5130d28dae3398a83ca5f6581d7271ad3b0c"
+    },
+    {
+      "files": 46,
+      "inspection": "PASS",
+      "name": "public-research-v1.zip",
+      "records": 26,
+      "sha256": "c8339a015bbae89cd3be5af2128fdbc29b5321822f6bc6f8bf3cd455dc475023"
+    }
+  ],
+  "full_market_data_backup": false,
+  "natural_or_economic_acceptance_upgraded": false,
+  "observed_at": "2026-09-28T00:53:02.721207Z",
+  "old_archives_passed": 30,
+  "omitted_fields_still_omitted": {
+    "decision-async-qualification-20260928": [
+      "actual_net"
+    ],
+    "e-daily-review-20260928-v1": []
+  },
+  "original_sha256": {
+    "decision-async-qualification-20260928": "26361666a255e0e96e2e72e39d6b1f64b8c4fe0e3404c18a6a8aad87c9ab09ac",
+    "e-daily-review-20260928-v1": "94cbcfa4cdf7f6c8ff9d4c69b4a4e934e998788525e4d4104469d951244bcb09"
+  },
+  "prior_originals_unchanged": 186,
+  "production_written": false,
+  "projection_and_graph_unchanged_sha256": "28c5348424aa6afb36fc6807612d092da328851fccf32931fa93ed4319bd8c08",
+  "remote_uploaded": false,
+  "scientific_reproduction": "NOT_RUN",
+  "scope": "LOCAL_TEMPORARY_ENGINEERING_ONLY_NOT_NATIVE_ARCHIVE_COMPLETION",
+  "temporary_export_inspect_restore": {
+    "actual_net_restored": null,
+    "archive_id": "c4b264565df6977b47e6eb0421f25ae5bc60c961e1aac185d54664e89722af40",
+    "archive_sha256": "2df26ed77cf47e2507bb3366213f900eed1e734a8fab913680ed97baaa0aac18",
+    "copied_store_records": 186,
+    "files_verified": 173,
+    "original_bytes_exact": true,
+    "records": 51
+  }
+}

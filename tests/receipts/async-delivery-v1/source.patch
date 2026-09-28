@@ -1,0 +1,120 @@
+--- a/researchlib/archive.py
++++ b/researchlib/archive.py
+@@ -107,6 +107,11 @@
+         exact_policy = _calendar_original_policy(original, extra)
+         if exact_policy is None:
+             exact_policy = _roll_run_original_policy(original, extra)
++        if (exact_policy is None and original.get('record_type') == 'decision'
++                and original.get('decision_id') == 'decision-async-qualification-20260928'
++                and extra == {'actual_net'} and original['actual_net'] is None
++                and digest(canonical(original)) == '26361666a255e0e96e2e72e39d6b1f64b8c4fe0e3404c18a6a8aad87c9ab09ac'):
++            exact_policy = 'EXACT_ASYNC_QUALIFICATION_DECISION_NULL_NET_V1'
+     if exact_policy is None:
+         raise ContractError("Original has non-whitelisted fields; cannot claim exact public backup")
+     scan_bytes('approved-original.json', canonical(original))
+--- a/web/src/App.tsx
++++ b/web/src/App.tsx
+@@ -4,9 +4,10 @@
+ import { directionLabel, formatTime, label, loadEvidence, loadHistory, loadRecord, loadSnapshot, productName, readinessState, shortText, statusLabel, uniqueProducts } from './data';
+ import type { Assessment, JsonRecord, Pointer, Round, Snapshot } from './data';
+ import { relatedFields, relatedTab } from './related';
++import DocumentLibrary from './DocumentLibrary';
+ 
+ type Tab = 'plan' | 'review' | 'feedback';
+-type DrawerState = { roundId?: string; tab: Tab; ref?: string; daily?: boolean };
++type DrawerState = { roundId?: string; tab: Tab; ref?: string; daily?: boolean; library?: boolean };
+ type Preferences = { product: string; direction: string; openRounds: string[]; openBranches: string[]; viewport: Viewport; selected?: string };
+ const defaultViewport = { x: 38, y: 46, zoom: .88 };
+ function initialPrefs(): Preferences {
+@@ -181,8 +182,8 @@
+     else setActiveBatch(batch);
+   }
+   return <div className="drawer-layer"><button className="drawer-scrim" tabIndex={-1} onClick={close} aria-label="关闭详情背景" /><aside className="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" ref={drawerRef}>
+-    <header className="drawer-header"><div><div className="eyebrow">{state.daily ? '独立复核' : '研究轮次详情'}</div><h2 id="drawer-title">{state.daily ? '每日复核' : round?.title ?? '此快照没有该轮次'}</h2></div><button className="close-button" onClick={close} aria-label="关闭详情">关闭 <span>×</span></button></header>
+-    {state.daily ? <div className="drawer-body"><p className="muted">按原方案版本逐项复核。每日复核保留在原轮次内部，不增加研究代际。</p><div className="batch-filters"><label>日期<select value={batchDate} onChange={e => setBatchDate(e.target.value)}><option value="">全部日期</option>{Array.from(new Set(snapshot.catalog.review_batches.map(batchDay))).sort().reverse().map(date => <option key={date}>{date}</option>)}</select></label><label>产品<select value={batchProduct} onChange={e => setBatchProduct(e.target.value)}><option value="">全部产品</option>{uniqueProducts(snapshot.catalog.products).map(p => <option key={p.product_id} value={p.product_id}>{productName(p)}</option>)}</select></label></div>
++    <header className="drawer-header"><div><div className="eyebrow">{state.library ? '独立资料' : state.daily ? '独立复核' : '研究轮次详情'}</div><h2 id="drawer-title">{state.library ? '资料与发现' : state.daily ? '每日复核' : round?.title ?? '此快照没有该轮次'}</h2></div><button className="close-button" onClick={close} aria-label="关闭详情">关闭 <span>×</span></button></header>
++    {state.library ? <div className="drawer-body"><p className="detail-context">所选信息时点 {formatTime(snapshot.catalog.as_of)}</p><DocumentLibrary key={snapshot.pointer.snapshot_id} snapshot={snapshot} renderRecord={record => <RecordPanel key={recordName(record)} record={record} snapshot={snapshot} />} /></div> : state.daily ? <div className="drawer-body"><p className="muted">按原方案版本逐项复核。每日复核保留在原轮次内部，不增加研究代际。</p><div className="batch-filters"><label>日期<select value={batchDate} onChange={e => setBatchDate(e.target.value)}><option value="">全部日期</option>{Array.from(new Set(snapshot.catalog.review_batches.map(batchDay))).sort().reverse().map(date => <option key={date}>{date}</option>)}</select></label><label>产品<select value={batchProduct} onChange={e => setBatchProduct(e.target.value)}><option value="">全部产品</option>{uniqueProducts(snapshot.catalog.products).map(p => <option key={p.product_id} value={p.product_id}>{productName(p)}</option>)}</select></label></div>
+       {!batches.length && <div className="drawer-empty">所选范围尚无已提交复核批次。</div>}
+       {batches.map((batch, i) => <button className="batch-row" key={String(batch.batch_id ?? batch.id ?? i)} onClick={() => void selectBatch(batch)}><b>{batchDay(batch) || '日期未记录'}</b><span>{String(batch.batch_id ?? batch.id ?? '复核批次')}</span><small>{label(batch.status ?? batch.state, '已登记')} · {shortText(batch.summary, '查看逐项处置')}</small></button>)}
+       {activeBatch && <section className="batch-detail"><h3>{String(activeBatch.batch_id ?? activeBatch.id ?? '批次')}</h3><pre>{JSON.stringify(activeBatch, null, 2)}</pre>{snapshot.catalog.nodes.flatMap(n => n.review_refs.map(ref => ({ n, ref }))).filter(({ ref }) => JSON.stringify(activeBatch).includes(`"${ref}"`)).map(({ n, ref }) => <button className="batch-review-link" key={ref} onClick={() => open(n.id, 'review', ref)}>定位 {ref} · {n.title}</button>)}</section>}
+@@ -352,7 +353,7 @@
+     <header className="masthead"><div className="brand-mark" aria-hidden="true"><span /><span /><span /></div><div><div className="eyebrow">PERSONAL RESEARCH / 个人研究</div><h1>策略研究树</h1></div><div className="masthead-note">让每个结论，都有来路。<span>研究 · 独立复核 · 持续演进</span></div></header>
+     <main><section className="toolbar" aria-label="研究筛选"><label>产品<select aria-label="产品" value={prefs.product} onChange={e => { setPrefs(p => ({ ...p, product: e.target.value, selected: undefined })); setVisibleLimit(50); }}><option value="">全部产品</option>{uniqueProducts(catalog?.products ?? []).map(p => <option key={p.product_id} value={p.product_id}>{productName(p)}</option>)}</select></label><label>方向<select aria-label="方向" value={prefs.direction} onChange={e => { setPrefs(p => ({ ...p, direction: e.target.value, selected: undefined })); setVisibleLimit(50); }}><option value="">全部方向</option>{directions.map(d => <option key={d}>{d}</option>)}</select></label>
+       <div className="search-box"><label htmlFor="history-search">全历史搜索</label><input id="history-search" value={query} placeholder="搜索问题、机制、轮次…" autoComplete="off" onFocus={() => setSearchOpen(true)} onChange={e => { setQuery(e.target.value); setSearchOpen(true); }} onKeyDown={e => { if (e.key === 'Escape') setSearchOpen(false); if (e.key === 'Enter' && search.length) locate(search[0].id); }} aria-expanded={searchOpen && Boolean(query)} aria-controls="search-results" />{searchOpen && query && <div className="search-results" id="search-results" role="region" aria-label="全历史搜索结果">{search.length ? search.map(result => <button key={result.id} onClick={() => locate(result.id)}><b>{result.title}</b><span>{result.id} · {result.ancestor_ids?.length ?? 0} 级祖先</span></button>) : <p>此快照内没有匹配记录。</p>}<small>覆盖折叠与未加载记录；选择结果会恢复祖先路径。</small></div>}</div>
+-      <label className="ready-filter"><input type="checkbox" checked={onlyReady} onChange={e => { setOnlyReady(e.target.checked); setPrefs(p => ({ ...p, selected: undefined })); }} />仅看条件齐备</label><button className="daily-button" onClick={() => setDrawer({ daily: true, tab: 'review' })}>每日复核 <span>↗</span></button>
++      <label className="ready-filter"><input type="checkbox" checked={onlyReady} onChange={e => { setOnlyReady(e.target.checked); setPrefs(p => ({ ...p, selected: undefined })); }} />仅看条件齐备</label><button className="daily-button" onClick={() => setDrawer({ library: true, tab: 'plan' })}>资料与发现 <span>↗</span></button><button className="daily-button" onClick={() => setDrawer({ daily: true, tab: 'review' })}>每日复核 <span>↗</span></button>
+     </section>
+     <section className={`snapshot-bar ${stale ? 'stale' : ''}`} aria-label="数据新鲜度"><div><i className="freshness-dot" />{catalog ? `${historyId ? '历史时点' : stale ? '最后记录 · 陈旧' : '记录快照截至'} ${formatTime(catalog.as_of)}` : busy ? '读取完整快照…' : '尚未取得生产快照'}{catalog && <span className="snapshot-id">快照 {catalog.snapshot_id.slice(0, 12)}</span>}</div><div className="snapshot-actions"><select aria-label="历史快照" value={historyId} onChange={e => { const id = e.target.value; void refresh(history.find(h => h.snapshot_id === id), true); }}><option value="">最新公开记录</option>{history.map(h => <option key={h.snapshot_id} value={h.snapshot_id}>{formatTime(h.as_of)}</option>)}</select><button onClick={() => void refresh(history.find(h => h.snapshot_id === historyId))} disabled={busy}>{busy ? '读取中' : '刷新记录'}</button></div></section>
+     <p className="snapshot-context">截至时间仅表示记录快照时点；发布任务当前运行状态未知。最新快照超过 36 小时显示陈旧。</p>
+@@ -368,7 +369,7 @@
+     </section>
+     <footer className="page-footer"><span>一轮一卡 · P / R / F 属于本轮 · 多日复核保留在原轮次</span><span>研究观察页 · 不提供账户接入或交易操作 · <a href="./third-party-notices.txt">开源许可</a></span></footer>
+     </main>
+-    {drawer && snapshot && <Drawer key={`${snapshot.pointer.snapshot_id}:${drawer.roundId ?? 'daily'}`} state={drawer} snapshot={snapshot} now={now} clockOkay={clockIsValid} historical={Boolean(historyId)} close={close} open={locate} />}
++    {drawer && snapshot && <Drawer key={`${snapshot.pointer.snapshot_id}:${drawer.roundId ?? (drawer.library ? 'library' : 'daily')}`} state={drawer} snapshot={snapshot} now={now} clockOkay={clockIsValid} historical={Boolean(historyId)} close={close} open={locate} />}
+   </div>;
+ }
+ export default function App() { return <ReactFlowProvider><Observer /></ReactFlowProvider>; }
+--- a/web/src/DocumentLibrary.tsx
++++ b/web/src/DocumentLibrary.tsx
+@@ -0,0 +1,60 @@
++import { useEffect, useMemo, useRef, useState } from 'react';
++import type { ReactNode } from 'react';
++import { loadRecord } from './data';
++import type { JsonRecord, Snapshot } from './data';
++
++// Catalog membership and verified content determine scope; never guess a round
++// from an ID or turn a documentary proposal into a graph node.
++export default function DocumentLibrary({ snapshot, renderRecord }: { snapshot: Snapshot; renderRecord: (record: JsonRecord) => ReactNode }) {
++  const refs = useMemo(() => Object.keys(snapshot.catalog.details).sort(), [snapshot]);
++  const [cursor, setCursor] = useState(0);
++  const [query, setQuery] = useState('');
++  const [items, setItems] = useState<{ ref: string; title: string; text: string; kind: string }[]>([]);
++  const [failures, setFailures] = useState<{ ref: string; error: string }[]>([]);
++  const [busy, setBusy] = useState(false);
++  const [cancelled, setCancelled] = useState(false);
++  const [opened, setOpened] = useState<{ ref: string; record?: JsonRecord; error?: string }>();
++  const [limit, setLimit] = useState(20);
++  const controller = useRef<AbortController | undefined>(undefined);
++  const live = useRef(true);
++  useEffect(() => { live.current = true; return () => { live.current = false; controller.current?.abort(); }; }, []);
++  async function scan() {
++    if (controller.current) return;
++    const active = new AbortController(); controller.current = active; setBusy(true); setCancelled(false);
++    try {
++      for (let i = cursor; i < Math.min(cursor + 10, refs.length); i++) {
++        const ref = refs[i];
++        try {
++          const record = await loadRecord(ref, snapshot, { signal: active.signal, maxBytes: 1_000_000 });
++          if (!live.current || active.signal.aborted) return;
++          const kind = record.record_type;
++          if (kind === 'discovery' || kind === 'evidence') {
++            setItems(values => [...values, { ref, kind, title: String(record.title ?? record.summary ?? ref), text: `${ref} ${JSON.stringify(record)}`.toLocaleLowerCase() }]);
++          }
++        } catch (error) {
++          if (!live.current || active.signal.aborted) return;
++          setFailures(values => [...values, { ref, error: String(error) }]);
++        }
++        setCursor(i + 1);
++      }
++    } finally { if (live.current) { setBusy(false); controller.current = undefined; } }
++  }
++  async function open(ref: string) {
++    setOpened({ ref });
++    try { const record = await loadRecord(ref, snapshot); if (live.current) setOpened(value => value?.ref === ref ? { ref, record } : value); }
++    catch (error) { if (live.current) setOpened(value => value?.ref === ref ? { ref, error: String(error) } : value); }
++  }
++  const matches = items.filter(item => item.text.includes(query.trim().toLocaleLowerCase()));
++  return <section className="document-library" aria-label="独立资料与发现">
++    <p>资料与发现按原件展示，不要求关联研究轮次。提案状态保留原文，不代表已执行研究。</p>
++    <label>资料搜索<input aria-label="资料搜索" placeholder="搜索已检查资料的标题、内容或标识…" value={query} onChange={e => { setQuery(e.target.value); setLimit(20); }} /></label>
++    <p role="status">已检查 {cursor} / {refs.length} 条 · 资料与发现 {items.length} 条 · 当前匹配 {matches.length} 条 · 读取失败 {failures.length} 条{cancelled ? ' · 已取消' : ''}。{cursor < refs.length || failures.length ? '搜索仅覆盖已成功检查部分，未检查或失败记录仍为未知。' : '所选快照查找完成。'}</p>
++    <button disabled={busy || cursor >= refs.length} onClick={() => void scan()}>{cursor ? '继续查找资料（下一批10条）' : '查找资料（每批10条）'}</button>
++    {busy && <button onClick={() => { controller.current?.abort(); setCancelled(true); }}>取消资料查找</button>}
++    <p className="muted">仅读取当前快照许可记录，每条检查上限 1 MB；正文和附件由你按需打开。</p>
++    {matches.slice(0, limit).map(item => <button className="batch-row" key={item.ref} onClick={() => void open(item.ref)}><b>{item.title}</b><span>{item.ref}</span><small>{item.kind === 'discovery' ? '研究发现 / 提案原件' : '资料证据原件'}</small></button>)}
++    {matches.length > limit && <button onClick={() => setLimit(value => value + 20)}>显示更多匹配资料</button>}
++    {!!failures.length && <details><summary>未能检查的资料</summary>{failures.map(item => <p key={item.ref}>{item.ref}：{item.error}</p>)}</details>}
++    {opened && <section aria-label="资料原件详情">{opened.record ? renderRecord(opened.record) : <p role={opened.error ? 'alert' : 'status'}>{opened.error ?? `读取 ${opened.ref}…`}</p>}</section>}
++  </section>;
++}

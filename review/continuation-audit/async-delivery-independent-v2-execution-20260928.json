@@ -1,0 +1,97 @@
+{
+  "scope": "INDEPENDENT_REDACTION_ONLY_REVIEW",
+  "candidate_manifest_sha256": "ae670056da2b7791b7de652c6db37fa28c3f99af43e9e8832d31ea2193cd9af1",
+  "source_map_identical": true,
+  "v1_frozen_files_unchanged": true,
+  "changed_json_values": [
+    {
+      "json_path": [
+        "config",
+        "argv",
+        0
+      ],
+      "replacement": "node"
+    },
+    {
+      "json_path": [
+        "config",
+        "argv",
+        1
+      ],
+      "replacement": "web/node_modules/.bin/playwright"
+    },
+    {
+      "json_path": [
+        "config",
+        "configFile"
+      ],
+      "replacement": "web/playwright.async.config.ts"
+    },
+    {
+      "json_path": [
+        "config",
+        "rootDir"
+      ],
+      "replacement": "tests/browser"
+    },
+    {
+      "json_path": [
+        "config",
+        "projects",
+        0,
+        "outputDir"
+      ],
+      "replacement": "tests/browser/artifacts/results"
+    },
+    {
+      "json_path": [
+        "config",
+        "projects",
+        0,
+        "testDir"
+      ],
+      "replacement": "tests/browser"
+    },
+    {
+      "json_path": [
+        "config",
+        "projects",
+        1,
+        "outputDir"
+      ],
+      "replacement": "tests/browser/artifacts/results"
+    },
+    {
+      "json_path": [
+        "config",
+        "projects",
+        1,
+        "testDir"
+      ],
+      "replacement": "tests/browser"
+    }
+  ],
+  "browser_stats_unchanged": {
+    "startTime": "2026-09-28T00:53:15.315Z",
+    "duration": 35141.454,
+    "expected": 58,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "only_changed_existing_delivery": [
+    "tests/receipts/async-delivery-v1/browser-58-results.json"
+  ],
+  "all_candidate_public_guard_files": 26,
+  "candidate_public_guard_failures": [],
+  "reused_independent_evidence": {
+    "review/continuation-audit/async-delivery-independent-v1-20260928.json": "863db0c6a1e6c81db4eb8bd230c6bf8f4ff159346f5abcc2c5f5caf22c2c10cb",
+    "review/continuation-audit/probe_async_delivery_independent_v1.py": "8c45248995e7b313304ca4b0d2bd048731daa40f7477d20b45d8d2883103dfb0",
+    "review/continuation-audit/async-delivery-independent-v1-execution-20260928.json": "e06811598e5a9fd76af9e91713628c9cffac7ff18ab9031fe1f683b0ea0e0731",
+    "review/continuation-audit/probe_async_browser_independent_v1.mjs": "87c1b7e36f24cf4311b6282995ce3f2281301aaa5eb8761ea8faeb3b5803dcf8",
+    "review/continuation-audit/async-browser-independent-v1-execution-20260928.json": "d939016bebebefe108fba55591a6c7eb181a063aed44dfd5e46b0c83dc49a3df",
+    "review/continuation-audit/async-independent-playwright.config.mjs": "ddb3c376a1efc8cb7d6126ecf5e434d223755b9c9a8fd0c407187dc316fc9501"
+  },
+  "reused_evidence_public_guard_failures": [],
+  "functional_tests_rerun": false
+}

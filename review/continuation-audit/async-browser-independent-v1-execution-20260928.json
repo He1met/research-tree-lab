@@ -1,0 +1,63 @@
+{
+  "scope": "INDEPENDENT_LOCAL_BROWSER_GATES_NOT_REMOTE",
+  "outputs": [
+    {
+      "browser": "chromium",
+      "cacheLimit": "Error: 单个公开文件超出读取范围",
+      "cacheMissing": "Error: 此快照没有公开该记录：discovery-async-covariance-20260928",
+      "cacheOld": "Error: 记录晚于所选历史时点",
+      "cachedAbort": "AbortError: signal is aborted without reason",
+      "pathGate": "Error: 公开文件路径不符合白名单",
+      "associations": {
+        "exact": [
+          "round_id"
+        ],
+        "partial": [],
+        "nested": [],
+        "hypothetical": [],
+        "explicit": [
+          "source_round_ref",
+          "input_record_refs"
+        ],
+        "tabs": [
+          "plan",
+          "plan",
+          "feedback",
+          null
+        ]
+      },
+      "ref": "discovery-async-covariance-20260928",
+      "snapshot": "9c5613454eda3a3bf1e0fa285f79028c329de18b59e0e6f88aafb4f39ac84d8e",
+      "hasDiscovery": true
+    },
+    {
+      "browser": "webkit",
+      "cacheLimit": "Error: 单个公开文件超出读取范围",
+      "cacheMissing": "Error: 此快照没有公开该记录：discovery-async-covariance-20260928",
+      "cacheOld": "Error: 记录晚于所选历史时点",
+      "cachedAbort": "AbortError: The operation was aborted.",
+      "pathGate": "Error: 公开文件路径不符合白名单",
+      "associations": {
+        "exact": [
+          "round_id"
+        ],
+        "partial": [],
+        "nested": [],
+        "hypothetical": [],
+        "explicit": [
+          "source_round_ref",
+          "input_record_refs"
+        ],
+        "tabs": [
+          "plan",
+          "plan",
+          "feedback",
+          null
+        ]
+      },
+      "ref": "discovery-async-covariance-20260928",
+      "snapshot": "9c5613454eda3a3bf1e0fa285f79028c329de18b59e0e6f88aafb4f39ac84d8e",
+      "hasDiscovery": true
+    }
+  ]
+}

@@ -107,6 +107,11 @@ def _exact_public_export_policy(original):
         exact_policy = _calendar_original_policy(original, extra)
         if exact_policy is None:
             exact_policy = _roll_run_original_policy(original, extra)
+        if (exact_policy is None and original.get('record_type') == 'decision'
+                and original.get('decision_id') == 'decision-async-qualification-20260928'
+                and extra == {'actual_net'} and original['actual_net'] is None
+                and digest(canonical(original)) == '26361666a255e0e96e2e72e39d6b1f64b8c4fe0e3404c18a6a8aad87c9ab09ac'):
+            exact_policy = 'EXACT_ASYNC_QUALIFICATION_DECISION_NULL_NET_V1'
     if exact_policy is None:
         raise ContractError("Original has non-whitelisted fields; cannot claim exact public backup")
     scan_bytes('approved-original.json', canonical(original))

@@ -1,0 +1,53 @@
+{
+  "version": "async-delivery-independent-v1-20260928",
+  "verdict": "CHANGES_REQUIRED",
+  "reviewer": "/root/formal_safety_independent_v3",
+  "review_intent_sha256": "5eb930606b3f3e317bc1df76aee281438249df2c26873f8a9dea6fe7d9518726",
+  "candidate_manifest": "docs/async-delivery-v1-candidate.json",
+  "candidate_manifest_sha256": "cdd788de69f001fc8fe3e02e12150b7a288cc53aebad1b6167a6f85e5435b529",
+  "candidate_publishing_source_sha256": "e2f23937374cbf364ba5c08ce38d2794b5b5669351ed1341e63526a4a6a611c7",
+  "baseline_publishing_source_sha256": "62230c7ffe616da271044498237ac45a323b2aee26c1482cdaefd2b53219314d",
+  "approved_publishing_source_sha256": null,
+  "installation_authorized": false,
+  "findings": [{
+    "priority": "P1",
+    "file": "tests/receipts/async-delivery-v1/browser-58-results.json",
+    "lines": [4, 5, 12, 13, 29, 37, 45, 53],
+    "title": "Frozen public delivery includes private filesystem references",
+    "evidence": "Candidate public_guard.check_paths on all 10 delivery files, 14 engineering receipts and manifest rejected this manifest-bound browser results file with SECRET_OR_PRIVATE_REFERENCE; remaining 24 paths passed.",
+    "impact": "Installing and publicly delivering all frozen evidence would expose private workstation path references and violate the existing public guard.",
+    "required_change": "Preserve frozen v1. Generate a separate sanitized public browser receipt using project-relative paths, retaining equivalent counts/results and original private evidence locally; produce a new frozen manifest/version and independently recheck every delivery and evidence path. Do not patch the frozen v1 in place."
+  }],
+  "evidence": {
+    "probe": "review/continuation-audit/probe_async_delivery_independent_v1.py",
+    "probe_sha256": "8c45248995e7b313304ca4b0d2bd048731daa40f7477d20b45d8d2883103dfb0",
+    "execution": "review/continuation-audit/async-delivery-independent-v1-execution-20260928.json",
+    "execution_sha256": "e06811598e5a9fd76af9e91713628c9cffac7ff18ab9031fe1f683b0ea0e0731",
+    "browser_probe": "review/continuation-audit/probe_async_browser_independent_v1.mjs",
+    "browser_probe_sha256": "87c1b7e36f24cf4311b6282995ce3f2281301aaa5eb8761ea8faeb3b5803dcf8",
+    "browser_execution": "review/continuation-audit/async-browser-independent-v1-execution-20260928.json",
+    "browser_execution_sha256": "d939016bebebefe108fba55591a6c7eb181a063aed44dfd5e46b0c83dc49a3df",
+    "independent_attacks_rejected": 38,
+    "archive_regressions_passed": 16,
+    "candidate_document_browser_tests_independently_rerun": {"passed": 6, "browsers": ["chromium", "webkit"]},
+    "temporary_copied_store_restore": {"records": 51, "files": 173, "exact_original_bytes": true, "actual_net": null, "archive_sha256": "2df26ed77cf47e2507bb3366213f900eed1e734a8fab913680ed97baaa0aac18"},
+    "old_archives_inspected_unchanged": 30,
+    "originals_unchanged": 186,
+    "bundle_files_unchanged": 1380,
+    "same_as_of_graph_projection_unchanged": true,
+    "probe_development_note": "Initial generic attack loop also targeted ordinary daily evidence, where changing a permitted license can legitimately remain exact-public. Scope corrected to the fixed exceptional decision; both actual roots still included in positive restore. This was a probe assumption error, not a candidate permit bypass."
+  },
+  "functional_review": [
+    "Full actual decision read; fixed ID/hash, extra actual_net only and identity check is None retain exact one-original permit. Explicit export_fields, visibility/license changes, non-null values including false/zero/string/array/object, nested fields and promotion mutations reject.",
+    "Recomputed ZIP member/original/manifest hashes cannot grant an exception. Noncanonical bytes and duplicate-key variants reject before restore destination creation. Prior numeraire/calendar/Roll permits remain unchanged.",
+    "Complete source, delivery and engineering receipt hashes verified. Independent publish.py --source-hash matches candidate. Only archive.py, App.tsx and new DocumentLibrary.tsx differ; old16/formal19, public data loader and schema/contracts unchanged.",
+    "DocumentLibrary scans at most 10 current catalog references sequentially with 1 MB limit, records failures and incomplete coverage, and lists at most 20 matches before explicit expansion. Abort and mounted guards prevent stale writes; keyed snapshot remount isolates changed snapshots. Current snapshot immutable identity justifies unchanged-key refresh reuse.",
+    "Two real snapshot local replays in both browsers reached discovery/evidence and verified attachments, preserved PROPOSED_NOT_STARTED and graph viewport/count. Synthetic bounded/cancel/failure/refresh checks passed. These are local engineering replays, not Pages evidence.",
+    "Independent browser probes in both engines additionally rejected cache size, missing current catalog membership, historical as_of, aborted cache requests and unsafe paths; unchanged explicit related-record association rules passed. Record bodies use existing verified loader and attachment renderer."
+  ],
+  "production_written": false,
+  "installed": false,
+  "published": false,
+  "scientific_reproduction": "NOT_RUN",
+  "economic_or_natural_acceptance_changed": false
+}
