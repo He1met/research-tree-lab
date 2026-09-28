@@ -1,0 +1,18 @@
+[
+  {
+    "decision_ref": "decision-adopt-daily-input-long-20260927",
+    "review_ref": "review-batch-daily-review-20260927-v1-4809fda65a42055d",
+    "feedback_ref": "feedback-batch-daily-review-20260927-v1-4809fda65a42055d",
+    "successor_round_id": "r-feedback-input-completeness-20260923",
+    "disposition": "REUSE_EXISTING_ADOPTION_WAIT_FOR_QUALIFIED_INPUT",
+    "applied_now": "Retain null metrics and original rules; no repeated successor or claims; no zero-filling or upgrading scenarios."
+  },
+  {
+    "decision_ref": "decision-adopt-daily-input-short-20260927",
+    "review_ref": "review-batch-daily-review-20260927-v1-bf1f5e787c973f51",
+    "feedback_ref": "feedback-batch-daily-review-20260927-v1-bf1f5e787c973f51",
+    "successor_round_id": "r-feedback-input-completeness-20260923",
+    "disposition": "REUSE_EXISTING_ADOPTION_WAIT_FOR_QUALIFIED_INPUT",
+    "applied_now": "Retain null metrics and original rules; no repeated successor or claims; no zero-filling or upgrading scenarios."
+  }
+]

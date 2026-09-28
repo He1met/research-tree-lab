@@ -1,0 +1,29 @@
+{
+  "problem_key": "cross-asset-asynchronous-covariance-measurement-v1",
+  "phase": "BTC_INPUT_QUALIFICATION",
+  "frozen_at": "2026-09-28T00:07:44.752373+00:00",
+  "question": "Does the existing BTC input already violate the proposed unique-price-at-timestamp gate?",
+  "hypothesis": "No conflicting prices exist at identical timestamps in the existing BTC daily file.",
+  "counterexample": "Any two valid target rows with equal created_time and unequal exact Decimal price. One witness suffices; no covariance or full-day count is claimed.",
+  "source_discovery": "discovery-async-covariance-20260928",
+  "dataset_ref": "d-review-btc-trades-20260923@1",
+  "data_sha256": "c17b52f17ae7762aff2d2ef72720df08f1f0ce534331054dc11d30cff8e195aa",
+  "data_role": "Previously exposed target trade history, not quotes/mark/index",
+  "partition": "2026-09-23 UTC+08:00",
+  "window": [
+    "2026-09-22T16:00:00Z",
+    "2026-09-23T16:00:00Z"
+  ],
+  "method": "Verify exact ZIP hash; stream rows in file storage order retaining first exact price per timestamp. Stop on first conflicting timestamp. Storage order is not event chronology. Validate target, schema, positive finite price and in-window integer timestamp.",
+  "completion": "A valid conflicting pair rejects unique-price timestamp qualification; otherwise full scan reports no witness without establishing chronology or source completeness.",
+  "stop": "On counterexample, do not acquire ETH for this point-estimation attempt; do not compute H/G or invent ordering. On malformed input report technical failure.",
+  "baseline": "Equal-price repeats at same timestamp do not trigger; different timestamps do not trigger.",
+  "tests": "Equal time unequal price; equal prices different formatting; distinct times; nonadjacent duplicate; invalid price.",
+  "costs": "No trade model/returns. Fees, slippage, funding, inventory, exit all unassessed; actual_net=null.",
+  "novelty": "Admission test for newly proposed two-stream estimator; not rerun of Roll or economic review. Existing boundary findings reused, no chronology discovery claim.",
+  "parent_round_id": null,
+  "feedback": "Reuse existing daily long/short adoption and sole input-completeness successor; this independent measurement admission is not a new feedback child.",
+  "trigger_origin": "UNKNOWN",
+  "trial_state": "PREPARATION_ONLY",
+  "comparison_if_qualified": "Deferred method freeze and ETH acquisition required; no H/G experiment authorized by this protocol alone."
+}
