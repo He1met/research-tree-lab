@@ -1,0 +1,30 @@
+[
+  {
+    "review_ref": "review-batch-daily-review-20260928-v1-4809fda65a42055d",
+    "previous_review_ref": "review-batch-daily-review-20260927-v1-4809fda65a42055d",
+    "feedback_ref": "feedback-batch-daily-review-20260928-v1-4809fda65a42055d",
+    "equal": {
+      "input_fingerprint": true,
+      "plan_hash": true,
+      "metrics": true,
+      "qualification": true,
+      "scenarios": true
+    },
+    "revision": 3,
+    "disposition": "PATH_AMBIGUOUS"
+  },
+  {
+    "review_ref": "review-batch-daily-review-20260928-v1-bf1f5e787c973f51",
+    "previous_review_ref": "review-batch-daily-review-20260927-v1-bf1f5e787c973f51",
+    "feedback_ref": "feedback-batch-daily-review-20260928-v1-bf1f5e787c973f51",
+    "equal": {
+      "input_fingerprint": true,
+      "plan_hash": true,
+      "metrics": true,
+      "qualification": true,
+      "scenarios": true
+    },
+    "revision": 3,
+    "disposition": "PATH_AMBIGUOUS"
+  }
+]
