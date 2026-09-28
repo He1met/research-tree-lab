@@ -1,0 +1,15 @@
+{
+  "documentary_check": "COMPLETED_LIMITED",
+  "data_integrity_check": "PASS_EXISTING_BYTES",
+  "proposal_status": "PROPOSED_NOT_STARTED",
+  "target_RV": null,
+  "target_BV": null,
+  "target_D": null,
+  "jump_attribution": "NOT_QUALIFIED",
+  "new_market_files": 0,
+  "raw_price_rows_read": 0,
+  "economic_samples": 0,
+  "actual_net": null,
+  "trigger_origin": "UNKNOWN",
+  "trial_state": "PREPARATION_ONLY"
+}

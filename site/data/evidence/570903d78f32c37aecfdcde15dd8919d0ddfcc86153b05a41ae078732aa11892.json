@@ -1,0 +1,21 @@
+{
+  "observed_at": "2026-09-28T23:36:40.832693+00:00",
+  "check": "Exact stable object hash and byte count only; no new schema/price-row scan",
+  "result": {
+    "kind": "data",
+    "sha256": "5595c6777328eb5f392520fdf6bd9c59518018991c7f92dd376ce04b1c353287",
+    "bytes": 44243
+  },
+  "prior_audit_refs": [
+    "r-feedback-input-completeness-20260923",
+    "r-roll-scale-20260927"
+  ],
+  "known_limits": [
+    "same_ms_chronology UNKNOWN",
+    "source_event_completeness UNKNOWN",
+    "trade close is not mark, quote or unique latent timestamp price"
+  ],
+  "new_market_files": 0,
+  "raw_price_rows_read": 0,
+  "proposal_estimand": "The archived candle close field as recorded. This explicitly does not lift the different async proposal unique-price-at-timestamp gate."
+}

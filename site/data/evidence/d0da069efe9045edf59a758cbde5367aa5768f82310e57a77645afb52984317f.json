@@ -1,0 +1,39 @@
+[
+  {
+    "id": "BNS-DRAFT",
+    "url": "https://shephard.scholars.harvard.edu/sites/g/files/omnuum7741/files/power.pdf",
+    "title": "Power and bipower variation with stochastic volatility and jumps",
+    "authors": [
+      "Ole E. Barndorff-Nielsen",
+      "Neil Shephard"
+    ],
+    "document_date": "2003-11-02",
+    "published_at": null,
+    "observed_at": "2026-09-28T23:36:40.832693+00:00",
+    "access": "Official web tool author-hosted PDF text; not downloaded raw PDF",
+    "sections_read": [
+      "abstract",
+      "1.1 equations 1 and 3",
+      "2.3 normal absolute moments",
+      "2.4 normalization",
+      "3.1 finite-activity setup",
+      "3.3 theorem 5 and stated conditions"
+    ],
+    "finding": "Under stated stochastic-volatility and rare-jump assumptions, normalized bipower variation targets the continuous variation component in an asymptotic limit. This does not certify jumps in a finite crypto candle sample. For r=s=1 the normal moment factor is mu_1^-2=pi/2."
+  },
+  {
+    "id": "BNS-METADATA",
+    "url": "https://shephard.scholars.harvard.edu/publications/power-and-bipower-variation-stochastic-volatility-and-jumps",
+    "published_at": "2004",
+    "observed_at": "2026-09-28T23:36:40.832693+00:00",
+    "finding": "Author bibliography lists Journal of Financial Econometrics 2, 1-48 with discussion. The inspected PDF is separately dated 2003-11-02; metadata does not make it a final 2004 PDF."
+  },
+  {
+    "id": "ORA-FAILED",
+    "url": "https://ora.ox.ac.uk/objects/uuid%3Af927c62c-1717-4a27-8518-d272b0459d85",
+    "published_at": null,
+    "observed_at": "2026-09-28T23:36:40.832693+00:00",
+    "access": "Search metadata then page-open Internal Error",
+    "finding": "Full page not read and not relied on for formula or conditions."
+  }
+]

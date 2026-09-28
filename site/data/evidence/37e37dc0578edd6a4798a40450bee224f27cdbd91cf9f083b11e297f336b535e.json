@@ -1,0 +1,45 @@
+{
+  "problem_key": "single-asset-bipower-versus-squared-variation-v1",
+  "question": "在固定BTC五分钟文件收盘代理中，RV减去归一化BV是否为正；这一有限样本差额是否仍只能保留为描述量？",
+  "mechanism": "Rare discontinuities and continuous volatility contribute differently to squared-return sums and adjacent absolute-return products under explicit model assumptions. Single-asset risk-measurement question, not reversal, lead-lag or covariance.",
+  "status": "PROPOSED_NOT_STARTED",
+  "purpose_kind": "B_MECHANISM_AND_DATA_SOURCE_PROPOSAL",
+  "novelty": "Project-level new estimand and mechanism. Roll studies demeaned signed price-change covariance; this uses squared log returns versus adjacent absolute log returns. Async studies cross-asset alignment. Shared exposed data are reuse, not an independent new sample or scientific novelty.",
+  "input": {
+    "dataset_ref": "d-btc-candles-20260921@1",
+    "sha256": "5595c6777328eb5f392520fdf6bd9c59518018991c7f92dd376ce04b1c353287",
+    "event_start": "2026-09-20T16:00:00Z",
+    "event_end": "2026-09-21T16:00:00Z",
+    "instrument_ref": "BTC-USDT-SWAP",
+    "role": "FILE_RECORDED_TRADE_CANDLE_CLOSE_PROXY_NOT_LATENT_PRICE",
+    "exposure": "Previously read by multiple project studies; development only. No new numeric price rows read in discovery."
+  },
+  "minimal_experiment": {
+    "gate": "Research role freezes own protocol/code before reading numbers; verify exact hash, target identity, UTC conversion, unique minute timestamps and all 1440 positive finite close values. Fail on missing/duplicate/invalid minutes, no fill/interpolation. Schema and count expectations reuse the prior full audit; current discovery only rehashes bytes.",
+    "grid": "One 5-minute grid anchored to dataset event_start, use close of final minute in each complete block. Expected 288 file-proxy endpoints and 287 adjacent log returns; expectations are not new measured counts. No window-external start price; report actual endpoint support and omit initial four minutes before first selected endpoint.",
+    "formula": "r_j=ln(P_j/P_(j-1)); RV=sum(r_j^2); BV=(pi/2)*sum(abs(r_j)*abs(r_(j-1))) over adjacent returns; D=RV-BV. Use raw finite-sample BV without n/(n-1) correction. Preserve D<0, do not clip to a jump estimate.",
+    "baseline": "RV is total squared-return proxy; BV is contrasting absolute-product statistic; descriptive D=0 reference only, not a finite-sample calibrated null test.",
+    "counterevidence": "D<=0 within numerical precision rejects the narrow positive-excess description on this frozen proxy. D>0 supports only that description, not jump existence, probability or predictive value. A mismatch in input gate stops computation.",
+    "precision": "Freeze float64 plus independent Decimal log implementation with >=40 decimal precision before scan; error tolerance 1e-12*max(RV,BV,1e-12); values within tolerance of zero are NUMERICALLY_UNRESOLVED. No parameter, grid-offset or date selection after results.",
+    "outputs": [
+      "actual point/return counts and support",
+      "RV",
+      "BV",
+      "signed D",
+      "cross-calculation difference",
+      "input and code hashes",
+      "qualifications and stop decision"
+    ]
+  },
+  "required_data": [
+    "Existing exact exposed BTC candle bytes suffice only for file-proxy arithmetic",
+    "Latent jump attribution requires separately qualified price/quote observations, chronology, coverage and a noise/finite-sample inference method; none certified here",
+    "Any later trading claim needs a new prospective rule, untouched validation data and all required fee/slippage/funding/inventory/exit costs"
+  ],
+  "completion_criteria": "One frozen single-grid descriptive calculation with crosscheck, or a precise input/method failure; preserve all outputs and limitations. No jump significance, event count, strategy or economic FINAL.",
+  "resource_expectation": "One local pass through the existing 44,243-byte ZIP and at most its previously audited 1440 minute rows, standard-library arithmetic, no download, no model API or broad parameter search. Wall time and token usage UNKNOWN until executed.",
+  "priority": "Eligible small independent measurement proposal when research next selects work; does not supersede qualified formal-cost inputs or due reviews. No claim/route started by discovery.",
+  "defer_reason": "Numerical experiment belongs to research role; causal jump attribution lacks qualified observations and inference.",
+  "restart_condition": "Initial frozen diagnostic may be selected without user approval. After terminal result, do not repeat same day/grid; resume only for correction or independently qualified, predeclared new evidence. Existing async stop remains binding.",
+  "economic_scope": "No signal, positions or trades; actual_net=null, complete costs not evaluated or waived."
+}

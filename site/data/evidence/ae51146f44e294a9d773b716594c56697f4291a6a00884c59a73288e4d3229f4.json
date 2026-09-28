@@ -1,0 +1,40 @@
+{
+  "observed_at": "2026-09-28T23:36:40.832693+00:00",
+  "records": 189,
+  "rounds": 22,
+  "discoveries": 12,
+  "datasets": 8,
+  "comparison_dimensions": [
+    "question",
+    "mechanism",
+    "rules",
+    "data",
+    "completed_results"
+  ],
+  "new_proposals": 1,
+  "reuse": [
+    "d-btc-candles-20260921@1",
+    "r-roll-scale-20260927",
+    "r-boundary-sensitivity-20260923",
+    "r-rpi-source-mixture-20260927",
+    "r-feedback-input-completeness-20260923",
+    "r-async-qualification-20260928",
+    "discovery-async-covariance-20260928"
+  ],
+  "duplicate_rejected": [
+    "Repeat stopped BTC 193-row scan",
+    "Repeat Roll three-grid signed covariance",
+    "Download ETH as repair for BTC ordering",
+    "Rename old boundary-price envelope as jump detection"
+  ],
+  "deferrals": {
+    "async": "Existing timestamp qualification failure retained; no reopening",
+    "OFI": "Quote-event inputs not qualified",
+    "AAPL_QQQ": "Target synchronized mark/index/price inputs still required; no new acquisition claims",
+    "INTC": "Disabled extension"
+  },
+  "starvation": "No inspected evidence of a profitable winner monopolizing selection. New independent risk-measurement gap offered; no quota-driven branch or global opportunity-exhaustion claim.",
+  "waiting_duration": "UNKNOWN",
+  "wait_cause_attribution": "UNKNOWN",
+  "trial_state": "PREPARATION_ONLY"
+}
