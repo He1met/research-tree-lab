@@ -1,0 +1,86 @@
+[
+  {
+    "review_ref": "review-batch-daily-review-20260929-v1-4809fda65a42055d",
+    "previous_review_ref": "review-batch-daily-review-20260928-v1-4809fda65a42055d",
+    "revision": 4,
+    "equal_fields": {
+      "input_fingerprint": true,
+      "plan_hash": true,
+      "metrics": true,
+      "data_cutoff": true,
+      "disposition": true,
+      "evaluator_version": true,
+      "coverage.qualification": true,
+      "coverage.reason_codes": true,
+      "coverage.source_event_completeness": true,
+      "coverage.observed_event_max_at": true,
+      "results.scenarios": true
+    },
+    "qualification": {
+      "actual_cost": "UNPROVEN",
+      "cost_terminal_interpretation": "UNPROVEN",
+      "entry_first_trade": "UNPROVEN",
+      "exit_first_trade": "UNPROVEN",
+      "funding_cashflow": "UNPROVEN",
+      "position_at_cutoff": "UNPROVEN",
+      "price_pnl": "UNPROVEN",
+      "source_mark_path": "UNPROVEN",
+      "verified_cost_schedule": "UNPROVEN"
+    },
+    "metrics": {
+      "actual_net": null,
+      "actual_total_cost": null,
+      "funding_cashflow": null,
+      "gross_price_pnl": null,
+      "holding_period": null,
+      "net_pnl": null,
+      "observed_path_drawdown": null,
+      "realized_pnl": null,
+      "trade_count": null,
+      "unrealized_pnl": null
+    },
+    "meaning": "No new qualified economic input; version/time/state-chain change only in this comparison scope."
+  },
+  {
+    "review_ref": "review-batch-daily-review-20260929-v1-bf1f5e787c973f51",
+    "previous_review_ref": "review-batch-daily-review-20260928-v1-bf1f5e787c973f51",
+    "revision": 4,
+    "equal_fields": {
+      "input_fingerprint": true,
+      "plan_hash": true,
+      "metrics": true,
+      "data_cutoff": true,
+      "disposition": true,
+      "evaluator_version": true,
+      "coverage.qualification": true,
+      "coverage.reason_codes": true,
+      "coverage.source_event_completeness": true,
+      "coverage.observed_event_max_at": true,
+      "results.scenarios": true
+    },
+    "qualification": {
+      "actual_cost": "UNPROVEN",
+      "cost_terminal_interpretation": "UNPROVEN",
+      "entry_first_trade": "UNPROVEN",
+      "exit_first_trade": "UNPROVEN",
+      "funding_cashflow": "UNPROVEN",
+      "position_at_cutoff": "UNPROVEN",
+      "price_pnl": "UNPROVEN",
+      "source_mark_path": "UNPROVEN",
+      "verified_cost_schedule": "UNPROVEN"
+    },
+    "metrics": {
+      "actual_net": null,
+      "actual_total_cost": null,
+      "funding_cashflow": null,
+      "gross_price_pnl": null,
+      "holding_period": null,
+      "net_pnl": null,
+      "observed_path_drawdown": null,
+      "realized_pnl": null,
+      "trade_count": null,
+      "unrealized_pnl": null
+    },
+    "meaning": "No new qualified economic input; version/time/state-chain change only in this comparison scope."
+  }
+]
