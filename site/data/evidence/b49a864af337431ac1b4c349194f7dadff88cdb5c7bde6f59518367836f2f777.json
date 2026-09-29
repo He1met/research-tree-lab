@@ -1,0 +1,21 @@
+{
+  "completed_at": "2026-09-29T00:09:27.886050+00:00",
+  "kind": "AUTHOR_SYNTHETIC_SELFTEST_NOT_MARKET_EVIDENCE",
+  "passed": 14,
+  "checks": [
+    "constant returns zero",
+    "single isolated impulse",
+    "negative difference retained",
+    "exact close parse",
+    "missing rejected",
+    "duplicate rejected",
+    "wrong contract rejected",
+    "invalid rejected",
+    "nonpositive rejected",
+    "unaligned rejected",
+    "unconfirmed rejected",
+    "five-minute endpoints",
+    "decimal pi independent",
+    "decimal logarithm hand case"
+  ]
+}

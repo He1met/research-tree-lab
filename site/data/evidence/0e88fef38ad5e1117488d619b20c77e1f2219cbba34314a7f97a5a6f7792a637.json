@@ -1,0 +1,49 @@
+{
+  "started_at": "2026-09-29T00:09:27.886266+00:00",
+  "completed_at": "2026-09-29T00:09:27.902687+00:00",
+  "data_sha256": "5595c6777328eb5f392520fdf6bd9c59518018991c7f92dd376ce04b1c353287",
+  "bytes": 44243,
+  "input_rows": 1440,
+  "endpoints": 288,
+  "returns": 287,
+  "adjacent_return_pairs": 286,
+  "grid_minutes": 5,
+  "partition": [
+    "2026-09-20T16:00:00Z",
+    "2026-09-21T16:00:00Z"
+  ],
+  "selected_candle_open_support": [
+    "2026-09-20T16:04:00Z",
+    "2026-09-21T15:59:00Z"
+  ],
+  "nominal_candle_close_support": [
+    "2026-09-20T16:05:00Z",
+    "2026-09-21T16:00:00Z"
+  ],
+  "exact_last_trade_timestamps": "UNKNOWN",
+  "boundary_note": "First selected close is minute index4, nominal end16:05; no earlier return and no out-of-window price. Last selected close is minute1439.",
+  "RV": "0.000639660269127610912274344849665286947801587165897995155372970",
+  "BV": "0.000536902589458132407992089593659886010974982766533590073577308",
+  "D": "0.000102757679669478504282255256005400936826604399364405081795662",
+  "unit": "squared log return, dimensionless",
+  "float64": {
+    "RV": 0.0006396602691276078,
+    "BV": 0.0005369025894581249,
+    "D": 0.00010275767966948289
+  },
+  "crosscheck_absolute_differences": [
+    "3.114603702174351330232402187766140609901466720E-18",
+    "7.501527713835185169661819340674305654282561683E-18",
+    "4.386924011660833839429417152908165044381094963E-18"
+  ],
+  "tolerance": "6.39660269127610912274344849665286947801587165897995155372970E-16",
+  "sign": "POSITIVE",
+  "exposure": "EXPOSED_DEVELOPMENT_ONLY",
+  "actual_net": null,
+  "economic_samples": 0,
+  "jump_attribution": "NOT_IDENTIFIED",
+  "source_completeness": "UNKNOWN",
+  "same_ms_chronology": "UNKNOWN",
+  "independent_audit": false,
+  "parameter_search": false
+}

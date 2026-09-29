@@ -1,0 +1,17 @@
+{
+  "source_reviews": [
+    "review-batch-daily-review-20260928-v1-4809fda65a42055d",
+    "review-batch-daily-review-20260928-v1-bf1f5e787c973f51"
+  ],
+  "feedback_refs": [
+    "feedback-batch-daily-review-20260928-v1-4809fda65a42055d",
+    "feedback-batch-daily-review-20260928-v1-bf1f5e787c973f51"
+  ],
+  "reused_decisions": [
+    "decision-adopt-daily-input-long-20260928",
+    "decision-adopt-daily-input-short-20260928"
+  ],
+  "successor_round_id": "r-feedback-input-completeness-20260923",
+  "disposition": "ADOPT_EXISTING_INPUT_QUALIFICATION_BOUNDARIES",
+  "application": "File-close proxy not execution price, mark, chronology, funding or cost evidence. Existing adoption is reused, no duplicate successor. New measurement root is independent."
+}
