@@ -1,0 +1,73 @@
+{
+  "version": "bipower-archive-independent-v1-20260929",
+  "verdict": "APPROVED",
+  "reviewer": "/root/formal_safety_independent_v3",
+  "review_intent_sha256": "37792ca30af11a7b6e0660c426de0307456a4d8f9035fb04282372c3f0dcfb97",
+  "candidate_manifest": "docs/bipower-archive-v1-candidate.json",
+  "candidate_manifest_sha256": "bd49c66ab3ff9eb7d87b479dd7667bd7935aeb66e40414bf2de0779e3201ec55",
+  "approved_publishing_source_sha256": "3aeeaa2d978600ca1cc344a990174ffda2530a16d8844362b415085c91ae34ba",
+  "baseline_publishing_source_sha256": "e2f23937374cbf364ba5c08ce38d2794b5b5669351ed1341e63526a4a6a611c7",
+  "approved_delivery_files": {
+    "docs/bipower-archive-v1-design.md": "1a46b336a75e0077b54ab95d2ca0d73eb9e9041c11d5c146ec8b093a866b7ea3",
+    "researchlib/archive.py": "61913d32dc094a70da21613d02938d913078131aff71049bb222e9c573473058",
+    "tests/fixtures/archive-bipower/decision.json": "297e84fca931db648b0dc9380709ddc804e990b07a787fe7d9f811140ed4a445",
+    "tests/fixtures/archive-bipower/discovery.json": "0c87d67ecdf6be4c7cec60eac167e9b429c3d63b8595e5b85ae3ba3a48e47aa9",
+    "tests/fixtures/archive-bipower/evidence.json": "83e9f039ed69cb7ee4de1b857028c7ec5c2b774dcd57431bbcb554fdae0d7c3f",
+    "tests/fixtures/archive-bipower/proposal.json": "37e37dc0578edd6a4798a40450bee224f27cdbd91cf9f083b11e297f336b535e",
+    "tests/fixtures/archive-bipower/round.json": "b81bca611320803237868b26b3d0f96d562d6a32f22363a2f7ad6aaaa0860f82",
+    "tests/replay_archive_bipower_readonly.py": "4bb8391ea8b3f11db6323670966bc2738d03e8444dea58471b8f66c15a472eb8",
+    "tests/test_archive_bipower.py": "f0bf2c04eccdf2ce74dde182416591b593e08ea32f5a6a7474272f9b9011b444"
+  },
+  "approved_engineering_receipts": {
+    "review/continuation-audit/bipower-archive-real-replay.json": "af3e8aad8f72a5e20ccf1152836fbfc9fb896a1dd1974374410ced3ebde88a72",
+    "review/continuation-audit/bipower-archive-tests.txt": "548906f18a4690700551a3e0a85e949bede3218e2897b4fe866537d0e6927c8d",
+    "review/continuation-audit/bipower-public-tests.txt": "1b560a0013be790b736e2bef15d085c1179690f482b26f100996a0a2b6deccea"
+  },
+  "approval_scope": "Engineering installation of exact manifest-bound source and delivery. No production archive upload, remote recovery, scientific/economic/natural acceptance or A/B admission is granted.",
+  "installation_authorized": true,
+  "findings": [],
+  "evidence": {
+    "probe": "review/continuation-audit/probe_bipower_archive_independent_v1.py",
+    "probe_sha256": "a484294c56dd817f325cc3fd4a1e90259c2dc288441d11bfc6ba75d8621c0e0b",
+    "execution": "review/continuation-audit/bipower-archive-independent-v1-execution-20260929.json",
+    "execution_sha256": "9d7541fdb8ee674252c6ec92efb6701dde5e87cfd4a34c3a6d1b3c14f28a36af"
+  },
+  "checks": {
+    "independent_attack_checks_rejected": 106,
+    "archive_regression_tests_passed": 20,
+    "archive_regression_command": "python3 -m unittest discover -s tests -p 'test_archive*.py' -q",
+    "real_copied_store_restore": {
+      "records": 64,
+      "files": 207,
+      "archive_sha256": "a08cca625caba9bffc487dca37cac52bd67619f3d163e260c4282bf1389782c6",
+      "exact_original_bytes": true
+    },
+    "latest_gap_originals_exact": 8,
+    "latest_gap_attachments_exact": 17,
+    "old_archives_inspected_unchanged": 32,
+    "stable_originals_unchanged": 202,
+    "bundle_files_unchanged": 1459,
+    "same_as_of_graph_unchanged": true,
+    "standalone_closeout_includes_related_round": true,
+    "candidate_public_guard_files": 13,
+    "candidate_public_guard_rejected": 0,
+    "complete_source_and_delivery_maps_verified": true,
+    "source_hash_independently_executed": true,
+    "only_changed_source": "researchlib/archive.py",
+    "old16_formal19_public_schema_frontend_unchanged": true
+  },
+  "reviewed_boundaries": [
+    "Read complete three exceptional originals, fixed related round and proposal. Exact IDs, extra-field sets and full original hashes bind permit to three reviewed records; PUBLIC/OWN_ANALYSIS and no explicit export_fields remain required. Ordinary records do not receive a generalized field license.",
+    "Independent metadata-spoof and fully rehashed ZIP checks rejected extra/nested fields, forged caller hash, private paths, modified disclosure, synthetic records, non-null or bool net outcomes, trial upgrades, changed proposal/status/related/successor semantics, duplicate keys and noncanonical bytes.",
+    "Related-round closure added only for the exact reviewed decision; single-root closeout export includes the fixed round. Availability ordering is checked; related round content hash and exact bytes are bound at export and inspection.",
+    "Proposal reference remains explicitly licensed under existing disclosure. Removal, altered JSON and whitespace-only changes of the fixed proposal fail even after all ZIP hashes are recomputed. Equivalent attacks against the round fail; restore destination is never created for rejected archives.",
+    "Latest v3 request includes two additional ordinary feedback decisions. Exact source repairs their transitive closure without new exception: latest 202-record copied Store restores all eight gap originals and seventeen gap attachments byte-for-byte. No attached calculation was run.",
+    "All candidate delivery/engineering/manifest paths public_guard pass. Prior exact permits and 32 existing archives remain compatible. Public projection omits related_round_id as before and graph unchanged."
+  ],
+  "source_scope_warning": "This archive is the explicitly licensed public research subset, not a self-contained raw market data backup or method reproduction.",
+  "production_written": false,
+  "installed": false,
+  "published": false,
+  "scientific_reproduction": "NOT_RUN",
+  "economic_or_natural_acceptance_changed": false
+}

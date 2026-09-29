@@ -1,0 +1,815 @@
+{
+  "scope": "LOCAL_TEMPORARY_ENGINEERING_ONLY",
+  "restore": {
+    "records": 64,
+    "files": 207,
+    "archive_sha256": "a08cca625caba9bffc487dca37cac52bd67619f3d163e260c4282bf1389782c6",
+    "exact_original_bytes": true
+  },
+  "attacks": [
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "round",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "caller_hash",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "nested",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "secret",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "export_empty",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "export_all",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "local",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Recovery closure includes non-public/synthetic original"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "license",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "synthetic",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Recovery closure includes non-public/synthetic original"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "non_null_net",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "private_path",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "trial",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "nested_net",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "nested_bool",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "proposal",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "status",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "round",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "caller_hash",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "nested",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "secret",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "PUBLIC_SCAN_REJECTED: BEARER"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "export_empty",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "export_all",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "local",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery closure includes non-public/synthetic original"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "license",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "synthetic",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery closure includes non-public/synthetic original"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "non_null_net",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "private_path",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "PUBLIC_SCAN_REJECTED: PRIVATE_LOCAL_PATH"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "trial",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "nested_net",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "nested_bool",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "proposal",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "status",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "noncanonical_space",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery reviewed original bytes mismatch"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "noncanonical_order",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery reviewed original bytes mismatch"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "duplicate_false",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery reviewed original bytes mismatch"
+    },
+    {
+      "ref": "discovery-bipower-20260929",
+      "attack": "duplicate_hidden_payload",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "round",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "caller_hash",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "nested",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "secret",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "export_empty",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "export_all",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "local",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Recovery closure includes non-public/synthetic original"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "license",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "synthetic",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Recovery closure includes non-public/synthetic original"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "non_null_net",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "private_path",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "trial",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "nested_net",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "nested_bool",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "round",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "caller_hash",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "nested",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "secret",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "PUBLIC_SCAN_REJECTED: BEARER"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "export_empty",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "export_all",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "local",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery closure includes non-public/synthetic original"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "license",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "synthetic",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery closure includes non-public/synthetic original"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "non_null_net",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "private_path",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "PUBLIC_SCAN_REJECTED: PRIVATE_LOCAL_PATH"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "trial",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "nested_net",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "nested_bool",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "noncanonical_space",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery reviewed original bytes mismatch"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "noncanonical_order",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery reviewed original bytes mismatch"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "duplicate_false",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery reviewed original bytes mismatch"
+    },
+    {
+      "ref": "e-bipower-20260929",
+      "attack": "duplicate_hidden_payload",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "round",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "caller_hash",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "nested",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "secret",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "export_empty",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "export_all",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "local",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Recovery closure includes non-public/synthetic original"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "license",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "synthetic",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Recovery closure includes non-public/synthetic original"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "non_null_net",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "private_path",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "trial",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "related",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "successor",
+      "phase": "spoofed_metadata_export",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "round",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "caller_hash",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "nested",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "secret",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "PUBLIC_SCAN_REJECTED: BEARER"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "export_empty",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "export_all",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "local",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery closure includes non-public/synthetic original"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "license",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "synthetic",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery closure includes non-public/synthetic original"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "non_null_net",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "private_path",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "PUBLIC_SCAN_REJECTED: PRIVATE_LOCAL_PATH"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "trial",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "related",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "successor",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "noncanonical_space",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery reviewed original bytes mismatch"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "noncanonical_order",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery reviewed original bytes mismatch"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "duplicate_false",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Recovery reviewed original bytes mismatch"
+    },
+    {
+      "ref": "decision-bipower-closeout-20260929",
+      "attack": "duplicate_hidden_payload",
+      "phase": "all_hashes_recomputed_restore",
+      "rejection": "Original has non-whitelisted fields; cannot claim exact public backup"
+    },
+    {
+      "ref": "evidence/discovery-bipower-20260929-v1/attachments/proposal.json",
+      "attack": "remove",
+      "phase": "bound_dependency_all_hashes_recomputed",
+      "rejection": "Reviewed proposal attachment is missing or changed"
+    },
+    {
+      "ref": "evidence/discovery-bipower-20260929-v1/attachments/proposal.json",
+      "attack": "alter",
+      "phase": "bound_dependency_all_hashes_recomputed",
+      "rejection": "Reviewed proposal attachment is missing or changed"
+    },
+    {
+      "ref": "evidence/discovery-bipower-20260929-v1/attachments/proposal.json",
+      "attack": "noncanonical",
+      "phase": "bound_dependency_all_hashes_recomputed",
+      "rejection": "Reviewed proposal attachment is missing or changed"
+    },
+    {
+      "ref": "records/r-bipower-20260929.json",
+      "attack": "remove",
+      "phase": "bound_dependency_all_hashes_recomputed",
+      "rejection": "MISSING_REFERENCE: run-bipower-20260929@attempt-1 -> r-bipower-20260929"
+    },
+    {
+      "ref": "records/r-bipower-20260929.json",
+      "attack": "alter",
+      "phase": "bound_dependency_all_hashes_recomputed",
+      "rejection": "Reviewed related round identity mismatch"
+    },
+    {
+      "ref": "records/r-bipower-20260929.json",
+      "attack": "noncanonical",
+      "phase": "bound_dependency_all_hashes_recomputed",
+      "rejection": "Reviewed related round bytes mismatch"
+    }
+  ],
+  "old_archives": [
+    {
+      "name": "public-decision-catchup-20260927-v1.zip",
+      "sha256": "97cfbde11c930d8f9e5bf7ffc0781b50b93defd95e1e1749a3cfbc206664101d",
+      "records": 18
+    },
+    {
+      "name": "public-feedback-supplement-20260923-v1.zip",
+      "sha256": "ae8ec8612992154f0ec7b7957d45bdaffdbd81ca9795a91543f2f2af4f04a674",
+      "records": 15
+    },
+    {
+      "name": "public-research-increment-20260923-v1.zip",
+      "sha256": "3467ea715b9ef638f897e94f13d5ca267e65ea3069a56a9f53132321cf72cf7f",
+      "records": 14
+    },
+    {
+      "name": "public-research-increment-20260923-v2.zip",
+      "sha256": "76fe183efa73144d5ad1060355ba6babd16228d3707333b5b24d32442168cb03",
+      "records": 21
+    },
+    {
+      "name": "public-research-increment-20260923-v3.zip",
+      "sha256": "b9a30287e7a003d63e629f648d82e8c9b3834037ae1fadfdd865ed8e7fb2a415",
+      "records": 28
+    },
+    {
+      "name": "public-research-increment-20260923-v4.zip",
+      "sha256": "24c3e3d810d4b8939c953803c8da42baa343d3bc7133b9a479dbb0a3d06159bb",
+      "records": 19
+    },
+    {
+      "name": "public-research-increment-20260926-v1.zip",
+      "sha256": "a2ed7d14efe0699b5ac0e5669e6d303fd5c27066fc95087b397047c6a4d39ccb",
+      "records": 24
+    },
+    {
+      "name": "public-research-increment-20260926-v2.zip",
+      "sha256": "0329252c6f3392d5b8ca2792a176123f1b6a0e43a52c373afb045bcb5e54d7d4",
+      "records": 21
+    },
+    {
+      "name": "public-research-increment-20260927-v1.zip",
+      "sha256": "98f83a56b39372698855452e0dd9d6912586dc2f9b85b6f1bfd3661fa936bcd1",
+      "records": 5
+    },
+    {
+      "name": "public-research-increment-20260927-v10.zip",
+      "sha256": "903be4cb6bc1e7a2dd8c04f8ef2e93301fee473ebf5ccbd02a39dfba39d6ff4c",
+      "records": 25
+    },
+    {
+      "name": "public-research-increment-20260927-v11.zip",
+      "sha256": "2fba831cc15b8b285b4d9da0e2f3b07ef0a96e942df799244e5ed74e49042e71",
+      "records": 29
+    },
+    {
+      "name": "public-research-increment-20260927-v12.zip",
+      "sha256": "89ac5466dd37d8a7014885c5d5f1691b29e604d947b57ba51f302ec7d135a8fe",
+      "records": 32
+    },
+    {
+      "name": "public-research-increment-20260927-v13.zip",
+      "sha256": "b9ed03ad0261992695582f3c95c32bf1e4260e1b74fc723f463f518ec51ab40a",
+      "records": 29
+    },
+    {
+      "name": "public-research-increment-20260927-v14.zip",
+      "sha256": "4afa1ff0308a3a0061b614fde82ec31721d45125864b37eac14d1a56796462fe",
+      "records": 28
+    },
+    {
+      "name": "public-research-increment-20260927-v15.zip",
+      "sha256": "e90d4463d9194be66e0a66da690b13d675ceef6f29dad7d8327d82c716dd9b5e",
+      "records": 29
+    },
+    {
+      "name": "public-research-increment-20260927-v16.zip",
+      "sha256": "f9ed4e86dab1467c1eedc510d759fd37e708bfb82775caed3717c7145e6c658a",
+      "records": 29
+    },
+    {
+      "name": "public-research-increment-20260927-v17.zip",
+      "sha256": "78d6d4e1bb696aa13109620a3ed922d3d15d21f005cb5702c6b006aae81fe4b1",
+      "records": 28
+    },
+    {
+      "name": "public-research-increment-20260927-v18.zip",
+      "sha256": "01de38526f36ac2a8df399d525c85679685389be1679de56347946cb81a4d63f",
+      "records": 28
+    },
+    {
+      "name": "public-research-increment-20260927-v19.zip",
+      "sha256": "445c5b64eab69fb30e166c835e9afb591afa6ff4b29e6db835136bded23a9245",
+      "records": 42
+    },
+    {
+      "name": "public-research-increment-20260927-v20.zip",
+      "sha256": "8ff1427aa7c32387a799a907e81b0dd33fdb664d13c15b282a1df042db461713",
+      "records": 33
+    },
+    {
+      "name": "public-research-increment-20260927-v3.zip",
+      "sha256": "4207232771ae8b4b552eeb4b010cebbb5610efd5455abfa86781873714fccb86",
+      "records": 27
+    },
+    {
+      "name": "public-research-increment-20260927-v4.zip",
+      "sha256": "c7c8f562d8dd87e14f728358b1e0670342f833e54327cc7909e022a96290edac",
+      "records": 21
+    },
+    {
+      "name": "public-research-increment-20260927-v5.zip",
+      "sha256": "a793fd7eefc2d48c9b085d3c8fa7a2f6d962cdb378c87c1d147ec095f4dee1cd",
+      "records": 22
+    },
+    {
+      "name": "public-research-increment-20260927-v6.zip",
+      "sha256": "f68dcf23acc55b8cd9fcaa01e6b3fee5702990fccb48966b65bea2631b6bfff4",
+      "records": 24
+    },
+    {
+      "name": "public-research-increment-20260927-v7.zip",
+      "sha256": "9723e9dfd84219754e88b901a73f6e3fe9a1c3075c66ddc9664b7b39563eb785",
+      "records": 19
+    },
+    {
+      "name": "public-research-increment-20260927-v8.zip",
+      "sha256": "678f405a37693d6e947cdc027a34b739dfe8515100f1fc5ee4cfc57df7e44679",
+      "records": 37
+    },
+    {
+      "name": "public-research-increment-20260927-v9.zip",
+      "sha256": "49576cb474af0e53671a4d6757d4affe5f5b34d93610a0942e4e35e62efe8489",
+      "records": 38
+    },
+    {
+      "name": "public-research-increment-20260928-v1.zip",
+      "sha256": "b83ba8e8b581177971b8f6e31201fe246e94921ddf9d7c373aaa744e8667b43c",
+      "records": 34
+    },
+    {
+      "name": "public-research-increment-20260928-v2.zip",
+      "sha256": "4512c880e2e0bf3f4c2277c2a3ef5130d28dae3398a83ca5f6581d7271ad3b0c",
+      "records": 49
+    },
+    {
+      "name": "public-research-increment-20260928-v3.zip",
+      "sha256": "77cc83bcf4fad6f6cdf59b2d879407dd67cd40be5e8ce6cce4c2999fe8639041",
+      "records": 53
+    },
+    {
+      "name": "public-research-increment-20260929-v2.zip",
+      "sha256": "2bcfe10146eb6683bfd9aba58e9cd20ae8609d7c50865f2ba82118cf6142f0cb",
+      "records": 24
+    },
+    {
+      "name": "public-research-v1.zip",
+      "sha256": "c8339a015bbae89cd3be5af2128fdbc29b5321822f6bc6f8bf3cd455dc475023",
+      "records": 26
+    }
+  ],
+  "original_records_unchanged": 202,
+  "bundle_files_unchanged": 1459,
+  "graph_projection_unchanged": true,
+  "gap_originals_exact": 8,
+  "gap_attachments_exact": 17,
+  "standalone_closeout_includes_related_round": true
+}

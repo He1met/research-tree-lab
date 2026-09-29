@@ -6,7 +6,7 @@ import json
 import zipfile
 from pathlib import Path
 
-from .common import ContractError, atomic_write, canonical, digest, now_iso, read_json, under
+from .common import ContractError, atomic_write, canonical, digest, now_iso, read_json, under, utc
 from .contracts import record_ref, semantic_refs, validate_record, validate_relationships
 from .public import attachment_allowed, public_record, scan_bytes
 
@@ -71,6 +71,35 @@ def _roll_run_original_policy(original, extra):
     return None
 
 
+def _bipower_original_policy(original, extra):
+    """Three source-reviewed authored originals, never a general field permit."""
+    kind = original.get('record_type')
+    if kind in ('discovery', 'evidence'):
+        findings = original.get('findings')
+        if not isinstance(findings, dict) or findings.get('actual_net', False) is not None:
+            return None
+    if (kind == 'discovery' and original.get('discovery_id') == 'discovery-bipower-20260929'
+            and extra == {'problem_key', 'proposal_ref', 'resource_expectation'}
+            and original.get('problem_key') == 'single-asset-bipower-versus-squared-variation-v1'
+            and original.get('proposal_ref') == 'bundle:discovery-bipower-20260929-v1/attachments/proposal.json'
+            and isinstance(original.get('resource_expectation'), str)
+            and 0 < len(original['resource_expectation']) <= 512
+            and original.get('status') == 'PROPOSED_NOT_STARTED'
+            and original.get('counts_as_completed_economic_research') is False
+            and digest(canonical(original)) == '0c87d67ecdf6be4c7cec60eac167e9b429c3d63b8595e5b85ae3ba3a48e47aa9'):
+        return 'EXACT_BIPOWER_DISCOVERY_METADATA_V1'
+    if (kind == 'evidence' and original.get('evidence_id') == 'e-bipower-20260929'
+            and extra == {'product_refs'} and original.get('product_refs') == ['btc']
+            and digest(canonical(original)) == '83e9f039ed69cb7ee4de1b857028c7ec5c2b774dcd57431bbcb554fdae0d7c3f'):
+        return 'EXACT_BIPOWER_EVIDENCE_PRODUCT_V1'
+    if (kind == 'decision' and original.get('decision_id') == 'decision-bipower-closeout-20260929'
+            and extra == {'related_round_id'} and original.get('related_round_id') == 'r-bipower-20260929'
+            and original.get('successor_round_id', False) is None
+            and digest(canonical(original)) == '297e84fca931db648b0dc9380709ddc804e990b07a787fe7d9f811140ed4a445'):
+        return 'EXACT_BIPOWER_CLOSEOUT_RELATED_ROUND_V1'
+    return None
+
+
 def _exact_public_export_policy(original):
     """Versioned, source-reviewed original exceptions, never caller policy.
 
@@ -112,10 +141,50 @@ def _exact_public_export_policy(original):
                 and extra == {'actual_net'} and original['actual_net'] is None
                 and digest(canonical(original)) == '26361666a255e0e96e2e72e39d6b1f64b8c4fe0e3404c18a6a8aad87c9ab09ac'):
             exact_policy = 'EXACT_ASYNC_QUALIFICATION_DECISION_NULL_NET_V1'
+        if exact_policy is None:
+            exact_policy = _bipower_original_policy(original, extra)
     if exact_policy is None:
         raise ContractError("Original has non-whitelisted fields; cannot claim exact public backup")
     scan_bytes('approved-original.json', canonical(original))
     return exact_policy
+
+
+def _archive_refs(record):
+    refs = semantic_refs(record)
+    if _exact_public_export_policy(record) == 'EXACT_BIPOWER_CLOSEOUT_RELATED_ROUND_V1':
+        refs = sorted(set(refs + [record['related_round_id']]))
+    return refs
+
+
+def _validate_archive_closure(records):
+    for record in records.values():
+        for ref in _archive_refs(record):
+            if ref not in records:
+                raise ContractError('Missing exact archive reference')
+            if utc(records[ref]['available_at']) > utc(record['available_at']):
+                raise ContractError('Exact archive reference was unavailable')
+        if _exact_public_export_policy(record) == 'EXACT_BIPOWER_CLOSEOUT_RELATED_ROUND_V1':
+            target = records[record['related_round_id']]
+            if target.get('record_type') != 'round' or digest(canonical(target)) != 'b81bca611320803237868b26b3d0f96d562d6a32f22363a2f7ad6aaaa0860f82':
+                raise ContractError('Reviewed related round identity mismatch')
+
+
+
+def _validate_reviewed_attachments(records, files):
+    # This fixed proposal is a reference in the reviewed original, not a new
+    # attachment license. Both the existing explicit license and exact bytes
+    # remain required, including during inspection of a rehashed archive.
+    for record in records.values():
+        if _exact_public_export_policy(record) == 'EXACT_BIPOWER_CLOSEOUT_RELATED_ROUND_V1':
+            name = 'records/' + record['related_round_id'] + '.json'
+            if name not in files or digest(files[name]) != 'b81bca611320803237868b26b3d0f96d562d6a32f22363a2f7ad6aaaa0860f82':
+                raise ContractError('Reviewed related round bytes mismatch')
+        if _exact_public_export_policy(record) == 'EXACT_BIPOWER_DISCOVERY_METADATA_V1':
+            relative = 'attachments/proposal.json'
+            name = 'evidence/discovery-bipower-20260929-v1/' + relative
+            if (not attachment_allowed(record, relative) or name not in files
+                    or digest(files[name]) != '37e37dc0578edd6a4798a40450bee224f27cdbd91cf9f083b11e297f336b535e'):
+                raise ContractError('Reviewed proposal attachment is missing or changed')
 
 
 def export_backup(store, destination, record_refs=None, extra_files=None):
@@ -127,10 +196,13 @@ def export_backup(store, destination, record_refs=None, extra_files=None):
     todo = list(selected)
     while todo:
         ref = todo.pop()
-        for target in semantic_refs(records[ref]):
+        for target in _archive_refs(records[ref]):
+            if target not in records:
+                raise ContractError('Missing exact archive reference')
             if target not in selected:
                 selected.add(target)
                 todo.append(target)
+    _validate_archive_closure({ref: records[ref] for ref in selected})
     files, record_entries, excluded = {}, [], []
     bundle_cache = {}
     for ref in sorted(selected):
@@ -164,6 +236,7 @@ def export_backup(store, destination, record_refs=None, extra_files=None):
         if name in files and files[name] != content:
             raise ContractError("Backup file name conflict")
         files[name] = content
+    _validate_reviewed_attachments({ref: records[ref] for ref in selected}, files)
     manifest = {"schema_version": "1.0", "archive_kind": "PUBLIC_RESEARCH_SCOPE_V1",
                 "record_refs": sorted(selected), "records": record_entries,
                 "files": [{"path": path, "sha256": digest(raw), "bytes": len(raw)} for path, raw in sorted(files.items())],
@@ -227,6 +300,8 @@ def inspect_backup(path):
                 raise ContractError("Recovery reviewed original bytes mismatch")
             records[ref] = record
         validate_relationships(records)
+        _validate_archive_closure(records)
+        _validate_reviewed_attachments(records, {name: archive.read(name) for name in names})
         return manifest
 
 
