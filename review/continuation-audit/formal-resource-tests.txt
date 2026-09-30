@@ -1,0 +1,10 @@
+test_exact_byte_and_node_boundaries_are_unchanged (test_formal_resource_diagnostics.ResourceDiagnosticsTests) ... ok
+test_final_batch_failure_remains_fatal_and_has_accurate_diagnostics (test_formal_resource_diagnostics.ResourceDiagnosticsTests) ... ok
+test_multiple_history_subtrees_are_accounted_once_without_deduction (test_formal_resource_diagnostics.ResourceDiagnosticsTests) ... ok
+test_old_and_public_counts_and_node_union_are_not_waived (test_formal_resource_diagnostics.ResourceDiagnosticsTests) ... ok
+test_unexpected_exception_is_not_relabelled_or_swallowed (test_formal_resource_diagnostics.ResourceDiagnosticsTests) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK

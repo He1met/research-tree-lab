@@ -1,0 +1,96 @@
+{
+  "version": "formal-resource-independent-v1-20260930",
+  "verdict": "APPROVED",
+  "reviewer": "/root/formal_safety_independent_v3",
+  "review_intent_sha256": "7b6fb1d901d0b768edc7579ae071254679ed29f9c284ea59edd414ad69298e71",
+  "candidate_manifest": "docs/formal-resource-v1-candidate.json",
+  "candidate_manifest_sha256": "7d105a04d282ebcfdac5482a7cc71b424edb30195bfe91d93a42f9db6f3349aa",
+  "approved_publishing_source_sha256": "249d361bdb8d3dfaaab9adcfff3f3656caf3a02fe5e8cfde1187ad5e57e5743d",
+  "baseline_publishing_source_sha256": "3aeeaa2d978600ca1cc344a990174ffda2530a16d8844362b415085c91ae34ba",
+  "approved_delivery_files": {
+    "docs/formal-resource-v1-design.md": "525aebf8f44941d4ec581e1c391c5963d21f9d18e5311271bba9a407975c638c",
+    "scripts/diagnose_formal_resources.py": "512ea4e2cd51349aeb24008e10675c61965a277255e21bbefd08e7136f64f217",
+    "tests/test_formal_resource_diagnostics.py": "6ba0815acb3224d5ea393f0a74fe881ad3c209909c65d2bd349c9618b127e775"
+  },
+  "approved_engineering_receipts": {
+    "review/continuation-audit/formal-resource-existing-safety-tests.txt": "6fdaf7c0ff001f3ad108c7d45930b1e8ec034ca75c2f4c625cf7024fc3bbc495",
+    "review/continuation-audit/formal-resource-real-diagnosis.json": "b05daaf5412699120ff04d35428cc149e2a269ea096e15ac416b6fa97d1b3570",
+    "review/continuation-audit/formal-resource-tests.txt": "b6397a2de6da8cc42f97f388876c7cb08110654e6018adbdf4ba92e29ce9877a"
+  },
+  "approval_scope": "Exact diagnostic-only engineering installation. No evaluator capacity fix, historical backfill, new formal review, outbox, production publication or economic/natural qualification is authorized. Separate frozen review required for any capacity implementation.",
+  "capacity_bottleneck_fixed": false,
+  "findings": [],
+  "evidence": {
+    "probe": "review/continuation-audit/probe_formal_resource_independent_v1.py",
+    "probe_sha256": "9104a0df4a2ebc14433a2a012c822925d7ea915256a4326dcfb7db6c644dabc3",
+    "execution": "review/continuation-audit/formal-resource-independent-v1-execution-20260930.json",
+    "execution_sha256": "ed8e22c421ec9ceb7b05beaf98a5dca6c55ac058a5e1e4c190e6135432418453",
+    "real_replay": "review/continuation-audit/formal-resource-independent-v1-replay-20260930.json",
+    "real_replay_sha256": "b05daaf5412699120ff04d35428cc149e2a269ea096e15ac416b6fa97d1b3570"
+  },
+  "checks": {
+    "complete_source_delivery_evidence_hashes_verified": true,
+    "only_new_production_path": "scripts/diagnose_formal_resources.py",
+    "old16_formal19_unchanged": true,
+    "formal_method_sha256": "34e0bcfce6515c0ccb5e2f742ab1936b440b6d06cf4b3670049c7993efa63be4",
+    "candidate_public_guard_files": 7,
+    "candidate_public_guard_failures": 0,
+    "independently_rerun_formal_test_methods": 57,
+    "test_command": "python3 -m unittest discover -s tests -p 'test_formal*.py' -q",
+    "author_42_test_scope_included": true,
+    "independent_exact_limit_and_unexpected_failure_probes": "PASS_GLOBALS_RESTORED",
+    "real_original_count": 206,
+    "historically_visible_count": 204,
+    "bundle_files_unchanged": 1485,
+    "registered_data_files_unchanged": 4,
+    "final_counters": {
+      "bytes_exceeded": true,
+      "bytes_limit": 128000000,
+      "combined_bytes": 130760540,
+      "combined_nodes": 4,
+      "current_encoded_bytes": 16126811,
+      "nodes_exceeded": false,
+      "nodes_limit": 128,
+      "old_encoded_bytes": 57,
+      "public_replay_bytes": 114633672
+    },
+    "all_direct_child_totals_independently_reconciled": true,
+    "final_batch_outcome": "COMBINED_HISTORY_RESOURCE_LIMIT_EXCEEDED",
+    "outbox_written": false,
+    "store_committed": false
+  },
+  "diagnosis": {
+    "capacity_unit": "CUMULATIVE_CANONICAL_VALIDATION_WORK_NOT_RSS_OR_DISTINCT_RAW_BYTES",
+    "excess_bytes": 2760540,
+    "historical_combined_bytes": [
+      8935980,
+      47147080,
+      114633672,
+      130760540
+    ],
+    "same_exhausted_context_byte_rejections": 3,
+    "child_aggregate_double_add_observed": false,
+    "history_preserved": "September 27, 28, 29 historical generator contexts remain separately validated; their direct-child aggregates each contribute once. September 30 returns no prepared bundle. Historical results remain PATH_AMBIGUOUS, not new outcomes.",
+    "safety": "Command copies immutable bundles and four hash-bound inputs, restricts historical visibility using available_at and committed_at, delegates unchanged checks, restores instrumentation, checks stable Store/data after replay and emits counters only. No bundled attachment code is executed. Real failure originals and REPORT/EVIDENCE were read in full."
+  },
+  "cache_capacity_assessment": {
+    "immediate_safe_restoration_demonstrated": false,
+    "under_unchanged_accounting": "Pure content-addressed byte/decode reuse can reduce CPU or resident memory, while continuing to charge the existing validation-work counters. That alone cannot turn 130760540 into an admitted value under 128000000. Shared public verified-bundle set already avoids repeated completed public generation; indiscriminate subtraction is not a demonstrated bug fix.",
+    "future_design_constraints": [
+      "Freeze a separate evaluator/version and exact source approval; preserve financial formulas, null costs/results, plan versions and input qualification rules. Do not silently overwrite method 34e0 or relax the 128000000/128/64/4096/180 guards.",
+      "Separate pure byte parsing caches from predecessor/economic authorization caches. Never let public historical replay prewarm a cache that skips later economic validation or its required resource charge.",
+      "Bind any reusable verification to full immutable bundle/member/source hashes, exact method/runtime identity, plan and rule hashes, dataset/request/correction/fingerprint, predecessor chain, cutoff and historical visible-set identity. Recheck membership/available_at/committed_at and stale bytes on every hit.",
+      "Cache only after all closure, privacy, resource and whole-record reconstruction checks complete. Failed/partial/ambiguous validation is not positive authorization; cycles, modified siblings, unknown layouts, missing ancestors and forged public attachments must still reject.",
+      "Keep a bounded per-run cache with explicit memory, byte-work and hit accounting. If validation-work accounting is redesigned to charge unique completed checks, specify and independently approve that semantic change; retaining the numeric cap alone does not preserve the old policy.",
+      "Support complete old-method reconstruction and migration without executing archived Python or changing historical originals. Prove mixed-batch, FINAL carrier, unsupported-plan, cross-plan and cross-as_of behavior; add cold/warm equivalence plus eviction/order/poisoning and near-limit attacks.",
+      "Use isolated engineering history growth to show boundedness and genuine reuse; no fabricated speedup without timing evidence. Final global failure must still prevent any submit-ready bundle. Only future authorized natural batches may demonstrate recovery; do not backfill September 30."
+    ]
+  },
+  "production_written": false,
+  "installed": false,
+  "published": false,
+  "new_formal_reviews": 0,
+  "natural_trigger": "UNKNOWN",
+  "actual_net": null,
+  "economic_or_natural_acceptance_changed": false
+}

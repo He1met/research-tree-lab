@@ -1,0 +1,42 @@
+test_129_plans_with_two_historical_reviews_receive_full_batch (test_formal_review.FormalReviewTests) ... ok
+test_after_effective_historical_cutoff_inventory_stays_unknown (test_formal_review.FormalReviewTests) ... ok
+test_ancestor_batch_mutations_cannot_authorize_public_derived_claims (test_formal_review.FormalReviewTests) ... ok
+test_bad_identity_cannot_bypass_feedback_text_gate (test_formal_review.FormalReviewTests) ... ok
+test_bad_latest_not_skipped_and_other_plan_survives (test_formal_review.FormalReviewTests) ... ok
+test_both_waiting_profiles_bridge_and_wrong_runtime_rejects (test_formal_review.FormalReviewTests) ... ok
+test_capability_fact_change_requires_explicit_correction (test_formal_review.FormalReviewTests) ... ok
+test_chain_limits_and_deadline_fail_per_item (test_formal_review.FormalReviewTests) ... ok
+test_changed_old_closure_cannot_be_relabelled_current (test_formal_review.FormalReviewTests) ... ok
+test_changed_private_or_public_capabilities_do_not_grant_metrics (test_formal_review.FormalReviewTests) ... ok
+test_combined_old_and_new_cached_bytes_budget_is_enforced (test_formal_review.FormalReviewTests) ... ok
+test_cost_fact_revision_is_explicit_bound_correction_not_silent_recompute (test_formal_review.FormalReviewTests) ... ok
+test_deployed_7db_complete_chain_migrates_without_reset (test_formal_review.FormalReviewTests) ... ok
+test_final_cannot_reuse_with_capabilities_revoked (test_formal_review.FormalReviewTests) ... ok
+test_final_reuse_carriers_preserve_economic_time_and_generic_exports (test_formal_review.FormalReviewTests) ... ok
+test_forged_source_claims_and_unknown_backend_rejected (test_formal_review.FormalReviewTests) ... ok
+test_full_chain_once_and_split_inventory_metrics (test_formal_review.FormalReviewTests) ... ok
+test_late_source_requires_bound_correction_then_continues (test_formal_review.FormalReviewTests) ... ok
+test_middle_formal_self_consistent_reset_does_not_erase_prefix (test_formal_review.FormalReviewTests) ... ok
+test_missing_private_attachment_is_not_empty_state (test_formal_review.FormalReviewTests) ... ok
+test_mixed_final_reuse_and_new_missing_item_stays_in_public_batch (test_formal_review.FormalReviewTests) ... ok
+test_nested_provenance_cannot_carry_private_text_through_failed_ancestor (test_formal_review.FormalReviewTests) ... ok
+test_nested_public_extra_is_rejected_by_full_reconstruction (test_formal_review.FormalReviewTests) ... ok
+test_old_outbox_cannot_be_reinterpreted_as_new_method (test_formal_review.FormalReviewTests) ... ok
+test_outbox_ignores_newly_registered_plan_but_rejects_rewritten_frozen_list (test_formal_review.FormalReviewTests) ... ok
+test_outbox_retry_freezes_time_and_whole_bundle_and_committed_original (test_formal_review.FormalReviewTests) ... ok
+test_outbox_self_hash_does_not_authorize_private_public_license (test_formal_review.FormalReviewTests) ... ok
+test_public_method_provenance_mismatch_is_single_plan_failure (test_formal_review.FormalReviewTests) ... ok
+test_raw_symlink_or_physical_store_damage_never_produces_batch (test_formal_review.FormalReviewTests) ... ok
+test_real_decode_path_from_legacy_has_no_granted_business_capabilities (test_formal_review.FormalReviewTests) ... ok
+test_real_semantic_closure_bound_4096_and_4097 (test_formal_review.FormalReviewTests) ... ok
+test_renamed_unknown_layout_is_rejected_before_new_public_root (test_formal_review.FormalReviewTests) ... ok
+test_review_node_and_depth_bounds_remain_128_and_64 (test_formal_review.FormalReviewTests) ... ok
+test_safe_failed_input_can_continue_without_blocking_other_plan (test_formal_review.FormalReviewTests) ... ok
+test_unknown_evaluator_cannot_bypass_ancestor_private_permissions (test_formal_review.FormalReviewTests) ... ok
+test_unknown_plan_still_gets_complete_batch_disposition (test_formal_review.FormalReviewTests) ... ok
+test_unsupported_registered_plan_does_not_block_later_safe_batch (test_formal_review.FormalReviewTests) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 52.301s
+
+OK

@@ -1,0 +1,447 @@
+{
+  "actual_net": null,
+  "all_child_accounting_equal": true,
+  "bundle_files_unchanged": 1485,
+  "bundle_map_sha256": "8e5e36f987d301959985524762607888475b5b27a4f6ca3aefb2bf935fe0a507",
+  "capacity_unit": "CUMULATIVE_CANONICAL_VALIDATION_WORK_NOT_RSS_OR_DISTINCT_RAW_BYTES",
+  "checks_rejected": [
+    {
+      "bytes_exceeded": true,
+      "bytes_limit": 128000000,
+      "caller": "_previous",
+      "combined_bytes": 130760540,
+      "combined_nodes": 4,
+      "context": 1,
+      "current_encoded_bytes": 16126811,
+      "nodes_exceeded": false,
+      "nodes_limit": 128,
+      "old_encoded_bytes": 57,
+      "public_replay_bytes": 114633672,
+      "reason": "COMBINED_HISTORY_RESOURCE_LIMIT_EXCEEDED"
+    },
+    {
+      "bytes_exceeded": true,
+      "bytes_limit": 128000000,
+      "caller": "_prepare_bundle",
+      "combined_bytes": 130760540,
+      "combined_nodes": 4,
+      "context": 1,
+      "current_encoded_bytes": 16126811,
+      "nodes_exceeded": false,
+      "nodes_limit": 128,
+      "old_encoded_bytes": 57,
+      "public_replay_bytes": 114633672,
+      "reason": "COMBINED_HISTORY_RESOURCE_LIMIT_EXCEEDED"
+    },
+    {
+      "bytes_exceeded": true,
+      "bytes_limit": 128000000,
+      "caller": "_prepare_bundle",
+      "combined_bytes": 130760540,
+      "combined_nodes": 4,
+      "context": 1,
+      "current_encoded_bytes": 16126811,
+      "nodes_exceeded": false,
+      "nodes_limit": 128,
+      "old_encoded_bytes": 57,
+      "public_replay_bytes": 114633672,
+      "reason": "COMBINED_HISTORY_RESOURCE_LIMIT_EXCEEDED"
+    }
+  ],
+  "data_files": {
+    "d-review-btc-funding-20260923@1": {
+      "bytes": 12808,
+      "sha256": "ccb7a177d16a56889a56e878402852302d57a6c8443aadf8e99814195bb6a2e8"
+    },
+    "d-review-btc-funding-20260924@1": {
+      "bytes": 13250,
+      "sha256": "f3c2de4291bf963c8da05dc01a602d5ed06ea552df491e3b47954b41f98519a7"
+    },
+    "d-review-btc-trades-20260923@1": {
+      "bytes": 19459479,
+      "sha256": "c17b52f17ae7762aff2d2ef72720df08f1f0ce534331054dc11d30cff8e195aa"
+    },
+    "d-review-btc-trades-20260924@1": {
+      "bytes": 19578282,
+      "sha256": "531d1397caa0fb0bdb3158b4b0fd8acb618f7a0c7b46b17600762985993e574d"
+    }
+  },
+  "final_counters": {
+    "bytes_exceeded": true,
+    "bytes_limit": 128000000,
+    "combined_bytes": 130760540,
+    "combined_nodes": 4,
+    "current_encoded_bytes": 16126811,
+    "nodes_exceeded": false,
+    "nodes_limit": 128,
+    "old_encoded_bytes": 57,
+    "public_replay_bytes": 114633672
+  },
+  "formal_method_sha256": "34e0bcfce6515c0ccb5e2f742ab1936b440b6d06cf4b3670049c7993efa63be4",
+  "formal_source_sha256": {
+    "researchlib/__init__.py": "6a52c32055618076a5a44b9dacc39d79711ef3ab7a4de73f9f5ddc9015268741",
+    "researchlib/common.py": "a3e7aa7619acee94e05e733c20a4ae4eb30ff7056f9b0fca0b441ecb55d9b683",
+    "researchlib/conditional_review.py": "2508392c524c19b4260f6d120d4f17f80bcd0d327b8daa483036130d12b56fd6",
+    "researchlib/contracts.py": "7929f554936294d08407fd7198a2aa0fdfc72ee466c386c34244a711edbc55fd",
+    "researchlib/formal_funding.py": "920f3348471eda846d2e28fa17398acd6174703749ce6a5455557d0e52aeae66",
+    "researchlib/formal_review.py": "f542a221e0652d20da5570caecbad90464c103fdbbbf9a7c4f7ab56bb56f5071",
+    "researchlib/funding_forward.py": "79f9aa7dc3c2e1dc47b1cd2eb307cf3eaf685874f722dab21710601bdfefeb66",
+    "researchlib/funding_review.py": "e3b5afd7eeea6754e2723bdb5039c17086da8247330f4983c8d80f1bfb83148a",
+    "researchlib/novelty.py": "e7390b597cfd2a978fa3e9b9208213b6cbb0f331407bb762a5a62a1b8b1b3d08",
+    "researchlib/okx_funding_file.py": "6043a04010e8aed025542857b4eecc1f947cc564863e7435d54db0a652cd006d",
+    "researchlib/okx_trade_file.py": "31c79a1e31d4f2c9ad75952e87c4a7f5dcc479d4df00f127e137790fb6c44f12",
+    "researchlib/public.py": "db4eb97c35a312277798605f76ac334dfd57bbc6fe3b1b6d718cd86f00d20dbd",
+    "researchlib/readiness.py": "ad57c793f68a53c848048d84e21370811b7470bf71e8770d3f2a76cb2df059c7",
+    "researchlib/replay.py": "6a99205c55c58ba9d4de6a9ce1e3b3f752039eea7a28f71ef8e7e40181c44b1c",
+    "researchlib/review.py": "771f64a7764f2c957dcce98cc54cdc1bad5fb4381f9b465175cfa153bba4b906",
+    "researchlib/snapshot.py": "e5404cf0775ab6b99906a8115a2bb6cf97c05f86fc8bc9b0979d25bf64f22e15",
+    "researchlib/store.py": "6a9e7bc0ac8ee533fedb94bab0c87b9217436dbf4d8437f99fba9af8a02e06f6",
+    "scripts/prepare_conditional_review.py": "48c5b08dd6ca5c791e7c86735fa62b0e86b2bec604b22dd657f8127491653728",
+    "scripts/prepare_formal_review.py": "6e0da7fbd2e06c490f5c6cc3280d149a2842d5554f98f0d409732f5c49b8a9ad"
+  },
+  "frozen_batch_sha256": "8a192ab43766677a200cba3a87c33a50acf99cd21568211d4222639d79ec0420",
+  "history_contexts": [
+    {
+      "batch_id": "batch-daily-review-20260927-v1",
+      "cache_counts": {
+        "decode": 1,
+        "formal_resolution": 2,
+        "verified": 2
+      },
+      "child_accounting_equal": true,
+      "context": 4,
+      "counters": {
+        "bytes_exceeded": false,
+        "bytes_limit": 128000000,
+        "combined_bytes": 8935980,
+        "combined_nodes": 2,
+        "current_encoded_bytes": 8935866,
+        "nodes_exceeded": false,
+        "nodes_limit": 128,
+        "old_encoded_bytes": 114,
+        "public_replay_bytes": 0
+      },
+      "direct_child_combined_bytes": 0,
+      "outcome": "RETURNED_ENGINEERING_VALUE_NOT_COMMITTED",
+      "parent_context": 3,
+      "review_stages": [
+        "PATH_AMBIGUOUS",
+        "PATH_AMBIGUOUS"
+      ],
+      "verified_public_bundles": [
+        "review-bootstrap-manual-20260923-v1"
+      ]
+    },
+    {
+      "batch_id": "batch-daily-review-20260928-v1",
+      "cache_counts": {
+        "decode": 2,
+        "formal_resolution": 4,
+        "verified": 4
+      },
+      "child_accounting_equal": true,
+      "context": 3,
+      "counters": {
+        "bytes_exceeded": false,
+        "bytes_limit": 128000000,
+        "combined_bytes": 47147080,
+        "combined_nodes": 4,
+        "current_encoded_bytes": 38210986,
+        "nodes_exceeded": false,
+        "nodes_limit": 128,
+        "old_encoded_bytes": 114,
+        "public_replay_bytes": 8935980
+      },
+      "direct_child_combined_bytes": 8935980,
+      "outcome": "RETURNED_ENGINEERING_VALUE_NOT_COMMITTED",
+      "parent_context": 2,
+      "review_stages": [
+        "PATH_AMBIGUOUS",
+        "PATH_AMBIGUOUS"
+      ],
+      "verified_public_bundles": [
+        "bundle-batch-daily-review-20260927-v1",
+        "review-bootstrap-manual-20260923-v1"
+      ]
+    },
+    {
+      "batch_id": "batch-daily-review-20260929-v1",
+      "cache_counts": {
+        "decode": 3,
+        "formal_resolution": 6,
+        "verified": 6
+      },
+      "child_accounting_equal": true,
+      "context": 2,
+      "counters": {
+        "bytes_exceeded": false,
+        "bytes_limit": 128000000,
+        "combined_bytes": 114633672,
+        "combined_nodes": 6,
+        "current_encoded_bytes": 67486478,
+        "nodes_exceeded": false,
+        "nodes_limit": 128,
+        "old_encoded_bytes": 114,
+        "public_replay_bytes": 47147080
+      },
+      "direct_child_combined_bytes": 47147080,
+      "outcome": "RETURNED_ENGINEERING_VALUE_NOT_COMMITTED",
+      "parent_context": 1,
+      "review_stages": [
+        "PATH_AMBIGUOUS",
+        "PATH_AMBIGUOUS"
+      ],
+      "verified_public_bundles": [
+        "bundle-batch-daily-review-20260927-v1",
+        "bundle-batch-daily-review-20260928-v1",
+        "review-bootstrap-manual-20260923-v1"
+      ]
+    },
+    {
+      "batch_id": "batch-daily-review-20260930-v1",
+      "cache_counts": {
+        "decode": 1,
+        "formal_resolution": 1,
+        "verified": 1
+      },
+      "child_accounting_equal": true,
+      "context": 1,
+      "counters": {
+        "bytes_exceeded": true,
+        "bytes_limit": 128000000,
+        "combined_bytes": 130760540,
+        "combined_nodes": 4,
+        "current_encoded_bytes": 16126811,
+        "nodes_exceeded": false,
+        "nodes_limit": 128,
+        "old_encoded_bytes": 57,
+        "public_replay_bytes": 114633672
+      },
+      "direct_child_combined_bytes": 114633672,
+      "outcome": "COMBINED_HISTORY_RESOURCE_LIMIT_EXCEEDED",
+      "parent_context": null,
+      "verified_public_bundles": [
+        "bundle-batch-daily-review-20260927-v1",
+        "bundle-batch-daily-review-20260928-v1",
+        "bundle-batch-daily-review-20260929-v1",
+        "review-bootstrap-manual-20260923-v1"
+      ]
+    }
+  ],
+  "input_manifest_sha256": "818f2c0dda9fa98c7f70930f4c71511aa4f4e1017635a2069c268ad2eebbf89f",
+  "limits_unchanged": true,
+  "natural_trigger": "UNKNOWN",
+  "observed_original_count": 206,
+  "outbox_written": false,
+  "outcome": "COMBINED_HISTORY_RESOURCE_LIMIT_EXCEEDED",
+  "reservations": [
+    {
+      "bytes": 57,
+      "caller": "_previous",
+      "context": 5
+    },
+    {
+      "bytes": 100,
+      "caller": "_previous",
+      "context": 4
+    },
+    {
+      "bytes": 2978398,
+      "caller": "_decoded",
+      "context": 4
+    },
+    {
+      "bytes": 2978634,
+      "caller": "_resolved",
+      "context": 4
+    },
+    {
+      "bytes": 57,
+      "caller": "_previous",
+      "context": 5
+    },
+    {
+      "bytes": 100,
+      "caller": "_previous",
+      "context": 4
+    },
+    {
+      "bytes": 2978634,
+      "caller": "_resolved",
+      "context": 4
+    },
+    {
+      "bytes": 57,
+      "caller": "_previous",
+      "context": 6
+    },
+    {
+      "bytes": 100,
+      "caller": "_previous",
+      "context": 3
+    },
+    {
+      "bytes": 2978398,
+      "caller": "_decoded",
+      "context": 3
+    },
+    {
+      "bytes": 2978634,
+      "caller": "_resolved",
+      "context": 3
+    },
+    {
+      "bytes": 10169679,
+      "caller": "_previous",
+      "context": 3
+    },
+    {
+      "bytes": 2978398,
+      "caller": "_decoded",
+      "context": 3
+    },
+    {
+      "bytes": 2978634,
+      "caller": "_resolved",
+      "context": 3
+    },
+    {
+      "bytes": 57,
+      "caller": "_previous",
+      "context": 6
+    },
+    {
+      "bytes": 100,
+      "caller": "_previous",
+      "context": 3
+    },
+    {
+      "bytes": 2978634,
+      "caller": "_resolved",
+      "context": 3
+    },
+    {
+      "bytes": 10169775,
+      "caller": "_previous",
+      "context": 3
+    },
+    {
+      "bytes": 2978634,
+      "caller": "_resolved",
+      "context": 3
+    },
+    {
+      "bytes": 57,
+      "caller": "_previous",
+      "context": 7
+    },
+    {
+      "bytes": 100,
+      "caller": "_previous",
+      "context": 2
+    },
+    {
+      "bytes": 2978398,
+      "caller": "_decoded",
+      "context": 2
+    },
+    {
+      "bytes": 2978634,
+      "caller": "_resolved",
+      "context": 2
+    },
+    {
+      "bytes": 10169679,
+      "caller": "_previous",
+      "context": 2
+    },
+    {
+      "bytes": 2978398,
+      "caller": "_decoded",
+      "context": 2
+    },
+    {
+      "bytes": 2978634,
+      "caller": "_resolved",
+      "context": 2
+    },
+    {
+      "bytes": 10169865,
+      "caller": "_previous",
+      "context": 2
+    },
+    {
+      "bytes": 2978398,
+      "caller": "_decoded",
+      "context": 2
+    },
+    {
+      "bytes": 2978634,
+      "caller": "_resolved",
+      "context": 2
+    },
+    {
+      "bytes": 57,
+      "caller": "_previous",
+      "context": 7
+    },
+    {
+      "bytes": 100,
+      "caller": "_previous",
+      "context": 2
+    },
+    {
+      "bytes": 2978634,
+      "caller": "_resolved",
+      "context": 2
+    },
+    {
+      "bytes": 10169775,
+      "caller": "_previous",
+      "context": 2
+    },
+    {
+      "bytes": 2978634,
+      "caller": "_resolved",
+      "context": 2
+    },
+    {
+      "bytes": 10169961,
+      "caller": "_previous",
+      "context": 2
+    },
+    {
+      "bytes": 2978634,
+      "caller": "_resolved",
+      "context": 2
+    },
+    {
+      "bytes": 57,
+      "caller": "_previous",
+      "context": 8
+    },
+    {
+      "bytes": 100,
+      "caller": "_previous",
+      "context": 1
+    },
+    {
+      "bytes": 2978398,
+      "caller": "_decoded",
+      "context": 1
+    },
+    {
+      "bytes": 2978634,
+      "caller": "_resolved",
+      "context": 1
+    },
+    {
+      "bytes": 10169679,
+      "caller": "_previous",
+      "context": 1
+    }
+  ],
+  "scope": "ISOLATED_ENGINEERING_DIAGNOSIS_NOT_NATURAL_REVIEW",
+  "store_committed": false,
+  "visible_original_count": 204
+}

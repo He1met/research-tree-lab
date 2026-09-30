@@ -1,0 +1,24 @@
+{
+  "scope": "INDEPENDENT_ENGINEERING_ONLY",
+  "exact_boundary_and_global_restoration": "PASS",
+  "unexpected_exception_propagation_and_restoration": "PASS",
+  "independently_reconciled_history_contexts": 4,
+  "real_replay_sha256": "b05daaf5412699120ff04d35428cc149e2a269ea096e15ac416b6fa97d1b3570",
+  "final_counters": {
+    "bytes_exceeded": true,
+    "bytes_limit": 128000000,
+    "combined_bytes": 130760540,
+    "combined_nodes": 4,
+    "current_encoded_bytes": 16126811,
+    "nodes_exceeded": false,
+    "nodes_limit": 128,
+    "old_encoded_bytes": 57,
+    "public_replay_bytes": 114633672
+  },
+  "byte_rejections": 3,
+  "complete_source_and_delivery_verified": true,
+  "old16_formal19_unchanged": true,
+  "public_guard_files": 7,
+  "public_guard_failures": [],
+  "capacity_bottleneck_fixed": false
+}
