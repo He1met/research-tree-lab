@@ -9,6 +9,7 @@ from pathlib import Path
 from .common import ContractError, atomic_write, canonical, digest, now_iso, read_json, under, utc
 from .contracts import record_ref, semantic_refs, validate_record, validate_relationships
 from .public import attachment_allowed, public_record, scan_bytes
+from .published_trade_public import selected_profile_refs, validate_public_archive_payload
 
 
 def _calendar_original_policy(original, extra):
@@ -203,6 +204,7 @@ def export_backup(store, destination, record_refs=None, extra_files=None):
                 selected.add(target)
                 todo.append(target)
     _validate_archive_closure({ref: records[ref] for ref in selected})
+    new_profile_refs = selected_profile_refs({ref: records[ref] for ref in selected})
     files, record_entries, excluded = {}, [], []
     bundle_cache = {}
     for ref in sorted(selected):
@@ -217,6 +219,8 @@ def export_backup(store, destination, record_refs=None, extra_files=None):
         if exact_policy is not None:
             record_entries[-1]['exact_export_policy'] = exact_policy
         bundle_id = metadata[ref]["bundle_id"]
+        if ref in new_profile_refs:
+            record_entries[-1]["original_bundle_id"] = bundle_id
         directory = store.root / "bundles" / bundle_id
         if bundle_id not in bundle_cache:
             bundle_cache[bundle_id] = store._read_bundle(directory)[0]
@@ -237,6 +241,8 @@ def export_backup(store, destination, record_refs=None, extra_files=None):
             raise ContractError("Backup file name conflict")
         files[name] = content
     _validate_reviewed_attachments({ref: records[ref] for ref in selected}, files)
+    validate_public_archive_payload({ref: records[ref] for ref in selected},
+        {ref: metadata[ref]['producer_role'] for ref in selected}, files, record_entries)
     manifest = {"schema_version": "1.0", "archive_kind": "PUBLIC_RESEARCH_SCOPE_V1",
                 "record_refs": sorted(selected), "records": record_entries,
                 "files": [{"path": path, "sha256": digest(raw), "bytes": len(raw)} for path, raw in sorted(files.items())],
@@ -302,6 +308,9 @@ def inspect_backup(path):
         validate_relationships(records)
         _validate_archive_closure(records)
         _validate_reviewed_attachments(records, {name: archive.read(name) for name in names})
+        validate_public_archive_payload(records,
+            {entry['record_ref']: entry['producer_role'] for entry in manifest['records']},
+            {name: archive.read(name) for name in names}, manifest['records'])
         return manifest
 
 

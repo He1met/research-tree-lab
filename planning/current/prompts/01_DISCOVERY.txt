@@ -14,3 +14,5 @@
 没有新有效问题可记录无增量；有新资料或可解决缺口再继续。任务频率按用户当前原生配置，不恢复日数量和统一时长限制，不用无限循环代替调度。首次没有数据/复核时也可开展来源和数据调查。
 
 输出开头不超过500字摘要，给真实产物、来源、重复/暂停判断与下一步。不得安装权限、购买、公开秘密或访问其他项目。
+
+Installed published-trade v2 route: first call `python3 scripts/published_trade_bridge.py discovery --cutoff <actual UTC cutoff>`. This fixed bridge verifies installed source/integration hashes before importing method code. Observe the existing single acquisition request only; never dispatch another download. Missing/changed installation is a gate failure; continue other independent directions.

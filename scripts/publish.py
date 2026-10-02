@@ -20,6 +20,7 @@ from researchlib import Store, publish_snapshot
 from researchlib.common import atomic_write, canonical, digest, now_iso, read_json
 from public_guard import check_paths,tracked_paths
 from researchlib.snapshot import GENERATOR_VERSION
+from researchlib.published_trade_public import validated_publication_store
 
 def command(args, cwd=ROOT):
     return subprocess.check_output(args,cwd=cwd,text=True).strip()
@@ -73,11 +74,12 @@ def publish(args):
         if args.push and source_hash()!=approved:raise RuntimeError('SOURCE_CHANGED_BEFORE_PROJECTION')
         store=Store(ROOT)
         records,metadata,anomalies=store.load(strict=False)
+        projection_store=validated_publication_store(store,records,metadata,anomalies)
         fingerprint=digest(canonical({'records':records,'metadata':metadata,'anomalies':anomalies,'generator_version':GENERATOR_VERSION,'approved_implementation':source_hash()}))
         previous_path=ROOT/'.local/receipts/projection.json'
         previous=read_json(previous_path) if previous_path.exists() else {}
         if fingerprint!=previous.get('input_sha256') or not (ROOT/'site/data/latest.json').exists():
-            result=publish_snapshot(store,ROOT/'site/data',now_iso())
+            result=publish_snapshot(projection_store,ROOT/'site/data',now_iso())
             atomic_write(previous_path,canonical({'input_sha256':fingerprint,'generated_at':now_iso(),'result':result}))
         pointer=read_json(ROOT/'site/data/latest.json')
         receipt={'schema_version':'1.0','invoked_at':now_iso(),'snapshot_id':pointer['snapshot_id'],'input_sha256':fingerprint,'shell_built':built,'status':'GENERATED_NOT_PUBLISHED','source_sha256':source_hash(),'rejected_bundles':[{'bundle_id':a.get('bundle_id'),'code':a.get('code')} for a in anomalies]}
