@@ -1,0 +1,57 @@
+{
+  "actual_net": null,
+  "address_A": {
+    "archive_sha256": "5d9937c04c08368d1ce4ade4dc728cc77df4849cf2d033cfe2eb5b1228953f87",
+    "asset_name": "research-published-trade-plan-20261003-v1.zip",
+    "asset_url": "https://github.com/He1met/research-tree-lab/releases/download/research-archives-20260926-v1/research-published-trade-plan-20261003-v1.zip",
+    "bytes": 4156,
+    "existing_actual_download_and_restore": "CONFIRMED_EXISTING_TWO_PUBLIC_ORIGINALS_ONLY",
+    "existing_operation_receipt_sha256": "7246909dcd813554d8e5c44e8cea61c4295a20fe26a38817e31cfbc65a7d5a1e",
+    "market_data_backup": false,
+    "record_refs": [
+      "p-btc-published-trade-sliced-long-20261003-v2@1",
+      "r-btc-published-trade-sliced-20261003-v2"
+    ],
+    "release_url": "https://github.com/He1met/research-tree-lab/releases/tag/research-archives-20260926-v1",
+    "reperformed_this_correction": false,
+    "scientific_reproduction": "NOT_RUN"
+  },
+  "address_B": {
+    "actual_download_and_restore": "UNKNOWN",
+    "complete_server_digest_verified": "UNKNOWN",
+    "documented_asset_name": "public-research-increment-20261003-v1.zip",
+    "documented_release_url": "https://github.com/He1met/research-tree-lab/releases/tag/research-increment-20261003-v1",
+    "exact_remote_link_target_verified": "UNKNOWN",
+    "local_archive_bytes": 4156,
+    "local_archive_sha256": "5d9937c04c08368d1ce4ade4dc728cc77df4849cf2d033cfe2eb5b1228953f87",
+    "not_declared_fabricated_or_permanently_missing": true,
+    "original_upload_tool_actor_claim": "UNKNOWN",
+    "prior_operator_claim": "UPLOADED_SERVER_SHA256_VERIFIED",
+    "prior_operator_observed_at": "2026-10-02T17:42:50.305884Z",
+    "retained_screenshot_sha256": "689447a39e554b3942d86ff38f1ff56412e2e267caf29db26326e3782bc854a3",
+    "server_asset_digest_visible": "Matching prefix only; remainder truncated. Full digest in Release description is an operator declaration.",
+    "supported": "Retained screenshot shows repository, release identifier and asset name; local ZIP bytes equal retained A download."
+  },
+  "clarified_at": "2026-10-02T19:44:22.653682Z",
+  "economic_complete": false,
+  "inventory_scope": {
+    "all_packages_fresh_downloaded_or_restored": false,
+    "basis": "Prior operator inventory only; not rerun in this correction.",
+    "data_files_excluded": 29,
+    "licensed_attachments": 235,
+    "local_only_excluded": 38,
+    "packages": 37,
+    "public_originals": 182
+  },
+  "limited_audit_sha256": "6fb4b54d483925f706c5cc269a90ac3f31eebd060ba5a2c10c11b123f4594355",
+  "natural_origin": "UNKNOWN",
+  "new_upload_download_restore": false,
+  "observation_scope": "DOCUMENT_CORRECTION_ONLY_NO_NEW_REMOTE_OPERATION",
+  "preserved_original_sha256": "aa125e548fc9226809d1a158d9b9bf9b75b7da5189bd8ed9e7f8b0a14a2b45b0",
+  "record_type": "APPEND_ONLY_ARCHIVE_ADDRESS_EVIDENCE_CLARIFICATION",
+  "same_sha256_does_not_establish_address_equivalence": true,
+  "schema_version": "1.0",
+  "status": "A_EXISTING_TWO_RECORD_RECOVERY_CONFIRMED_B_LIMITED_UI_AND_LOCAL_BYTES_EXACT_REMOTE_UNKNOWN",
+  "supersedes_current_interpretation_of": "docs/archive-increment-20261003-v1.json",
+  "trial_state": "PREPARATION_ONLY"
+}

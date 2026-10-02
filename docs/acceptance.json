@@ -1161,7 +1161,8 @@
     }
   ],
   "current_operations": {
-    "approved_source_sha256": "249d361bdb8d3dfaaab9adcfff3f3656caf3a02fe5e8cfde1187ad5e57e5743d",
+    "approved_source_sha256": "a2f18e2493f62a009f1ad219e0d65ef8e711c260c4308c2860a86abcc44eb175",
+    "archive_address_clarification": "docs/archive-increment-20261003-v2.json",
     "archive_compatibility_closeout": "docs/archive-compatibility-closeout-20260927.json",
     "archive_compatibility_installation_receipt": "docs/archive-compatibility-installation-v1-20260927.json",
     "archive_compatibility_maintenance": "SCOPED_CLOSED_NATIVE_ARCHIVE_CATCHUP_VERIFIED",
@@ -1284,18 +1285,45 @@
       "trigger_origin": "UNKNOWN"
     },
     "discovery_navigation_maintenance": "SCOPED_CLOSED_NATIVE_DEPLOYMENT_VERIFIED",
+    "documentation_clarified_at": "2026-10-02T19:44:22.653682Z",
+    "documentation_correction_scope": "Two bounded document interpretations only; historical observations/counts/results retained.",
     "documentation_reconciliation_receipt": "docs/economic-closure-doc-reconciliation-20261002-v1.json",
     "formal_candidate": "V4_INDEPENDENTLY_APPROVED_AND_INSTALLED",
     "formal_capacity_design": {
-      "candidate_manifest_sha256": "33b5797abee5f7a9d052a95a258ec569940376fa7c0bfd2f1643254e9afd424c",
-      "file_verdict": "CHANGES_REQUIRED",
+      "candidate_manifest_sha256": "6fc7bf19a919c95ebdb2296da57e19c12a7601a44a63df6e39045e5bcd290cca",
+      "completion_provenance": "Official reviewer completed turn and exact receipt creation command verified by original owner",
+      "completion_verified": true,
+      "experiment_authorized": false,
+      "file_verdict": "APPROVED_OFFLINE_MODEL_ONLY",
       "finding": "Offline model discounts repeated ECONOMIC entries; production evaluator unchanged",
-      "next_action": "Reconcile original bound reviewer; missing visibility is not termination proof; no duplicate dispatch",
-      "receipt_consumed": false,
-      "repair_dispatched": false,
-      "review_receipt": "review/continuation-audit/formal-capacity-design-independent-v1-20260930.json",
-      "review_sha256": "f5a400eed67acc957b3a46175d9b449c42ff9ea6327644644480ef64119981c9",
-      "state": "REVIEW_RUNNING_HANDLE_NOT_VISIBLE_STATUS_UNKNOWN"
+      "historical_next_action": "Separate frozen trace protocol preparation then independent review; no experiment execution authorized",
+      "historical_next_action_status": "SUPERSEDED_HISTORICAL_PRE_TRACE_STAGE",
+      "installation_authorized": false,
+      "next_action": "STOP selected PUBLIC_MEMBER_AND_LICENSED_ATTACHMENT_EQUALITY_V1 trace; static negative result consumed once. No experiment or capacity installation authorized. Other scopes UNKNOWN; reopen only on concrete different eligible PUBLIC statement with positive counted work and plausible complete-key repetition.",
+      "other_scopes": "UNKNOWN",
+      "previous_candidate_manifest_sha256": "33b5797abee5f7a9d052a95a258ec569940376fa7c0bfd2f1643254e9afd424c",
+      "receipt_consumed": true,
+      "repair_completed": true,
+      "repair_dispatched": true,
+      "review_receipt": "review/continuation-audit/formal-capacity-design-independent-v2-20261002.json",
+      "review_sha256": "f813e829547401395b1aeac3347cfe079a1eb67050785b3cb6f2d830518b758d",
+      "selected_trace_current_action": "STOP",
+      "state": "OFFLINE_MODEL_APPROVED_ONLY_INSTALLATION_NOT_AUTHORIZED",
+      "v2_review_receipt": "review/continuation-audit/formal-capacity-design-independent-v2-20261002.json"
+    },
+    "formal_capacity_trace": {
+      "author_static_conclusion": "Zero direct old byte charge; no byte capacity relief for this exact scope",
+      "candidate_manifest_sha256": "cb27de0f09a022ece9cc10b2f77c514e938c7b39a0dc7dd2bc9e8ab456b0829f",
+      "experiment_executed": false,
+      "independent_verdict": "APPROVED_NARROW_NEGATIVE_RESULT",
+      "installation_authorized": false,
+      "maximum_old_byte_savings": 0,
+      "next_action": "Stop this exact capacity trace. Reopen only on concrete different eligible PUBLIC statement with positive counted work and plausible complete-key repetition; no current supported alternative.",
+      "other_scopes": "UNKNOWN",
+      "review_receipt": "review/continuation-audit/formal-capacity-trace-independent-v1-20261002.json",
+      "review_sha256": "74dae7da45a9e24c62e164f51011abaa83fd80fdc30490935db8fcd7cc807fad",
+      "state": "SCOPED_CLOSED_STATIC_NEGATIVE_NO_EXECUTION",
+      "statement_id": "PUBLIC_MEMBER_AND_LICENSED_ATTACHMENT_EQUALITY_V1"
     },
     "formal_installation_receipt": "docs/formal-evaluator-installation-v4-20260926.json",
     "formal_resource_installation_receipt": "docs/formal-resource-installation-v1-20260930.json",
@@ -1316,7 +1344,7 @@
     "frozen_btc_window": "ENDED_2026-09-24T00:06:00Z",
     "heartbeat_status": "ACTIVE",
     "historical_evidence_and_acceptance_counts_not_upgraded": true,
-    "latest_acceptance_observation": "docs/acceptance-observation-20261002-v8.json",
+    "latest_acceptance_observation": "docs/acceptance-observation-20261003-v3.json",
     "latest_feedback_adoption": {
       "economic_results_added": false,
       "natural_trigger": "UNKNOWN",
@@ -1414,20 +1442,36 @@
       "visible_rounds": 23,
       "weekly_restore_check": "PRIOR_EVIDENCE_REUSED_NOT_RETESTED"
     },
-    "latest_publication_receipt": "docs/publication-run-20261002-v1.json",
+    "latest_publication_receipt": "docs/publication-run-20261003-v1.json",
     "latest_publisher_observation": {
-      "http_verified_at": "2026-10-02T06:43:34.887518Z",
-      "observed_at": "2026-10-02T06:44:22.833122Z",
-      "receipt": ".local/receipts/publication-nochange-20261002T063759Z.json",
-      "snapshot_id": "192f0dd5721d4d61efe815872d3b099ae093709115e268aa71365e43619d2c6e",
-      "status": "UNCHANGED_SNAPSHOT_REUSED_HTTP_REVERIFIED_ARCHIVE_COMPLETE"
+      "http_verified_at": "2026-10-02T19:40:28.135959Z",
+      "observed_at": "2026-10-02T19:40:34.537501Z",
+      "receipt": ".local/receipts/publication-nochange-20261002T193632Z.json",
+      "snapshot_id": "0935f6b5958230153c21d76d4c9ccccce6b5439c7da2ce3ea5a66123f3ac7caa",
+      "status": "NO_CHANGE_PUBLIC_SNAPSHOT_HTTP_REVERIFIED"
     },
-    "latest_publisher_receipt": "docs/publication-run-20261002-v1.json",
+    "latest_publisher_receipt": "docs/publication-run-20261003-v1.json",
+    "latest_publisher_verified_source_sha256": "a2f18e2493f62a009f1ad219e0d65ef8e711c260c4308c2860a86abcc44eb175",
     "latest_store_anomalies": 0,
-    "latest_store_count": 214,
+    "latest_store_count": 220,
     "maintenance_continuation_receipt": "docs/maintenance-continuation-installation-20260926.json",
     "maintenance_stage": "REAL_FLOW_WAIT",
     "model": "gpt-6-astra",
+    "new_forward_plan": {
+      "authentic_worker_qualified": false,
+      "economic_result": null,
+      "first_acquisition_check_not_before": "2026-10-05T00:00:00Z",
+      "installed_exact_rows_verified": 57,
+      "method": "m-btc-published-trade-sliced-counterfactual@2",
+      "natural_origin": "UNKNOWN",
+      "plan_ref": "p-btc-published-trade-sliced-long-20261003-v2@1",
+      "plan_sha256": "f4a85105f20a69e6044dde45c10e2701faec1948dc6d19c0c0c9a6077a8ea2b4",
+      "real_input_refs": [],
+      "source_registry_qualified": false,
+      "state": "WAITING_NATURAL_OUTCOME",
+      "window_end": "2026-10-03T00:11:00Z",
+      "window_start": "2026-10-03T00:05:00Z"
+    },
     "private_off_device_backup_confirmed": false,
     "private_same_device_backup_restored_files": 1621,
     "publisher_delivery": {
@@ -3042,5 +3086,5 @@
     "WAITING_NATURAL_OUTCOME": "所需自然触发、未来窗口或真实后继尚未发生，手动和合成不能补齐。",
     "WEAK_ISOLATION_CONFIRMED": "角色约定和程序准入可用，环境无角色级硬隔离；不是强隔离通过。"
   },
-  "updated_at": "2026-10-02T07:15:21.436881+00:00"
+  "updated_at": "2026-10-02T19:40:34.537501Z"
 }
