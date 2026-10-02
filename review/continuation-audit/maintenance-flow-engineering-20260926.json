@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "scope": "ISOLATED_MAINTENANCE_CONTROL_ENGINEERING_ONLY",
+  "result": "PASS_12_TESTS_PENDING_INDEPENDENT_REVIEW",
+  "command": "python3 -m unittest discover -s review/continuation-audit -p test_maintenance_flow.py -v",
+  "exit_code": 0,
+  "tests": 12,
+  "artifacts_sha256": {
+    "review/continuation-audit/maintenance_flow.py": "467f6d5c1038954c53a941865e1a0231627531f35cc5a0f814c9b558ead21dbf",
+    "review/continuation-audit/test_maintenance_flow.py": "44f86e0665ad24702e8c20fb091597a14d5f57989734ae66bcbbdbec8c93a35d",
+    "docs/MAINTENANCE_CONTINUATION.md": "2d5ec89740b34201365914139fd8045c7339b011324bbb9936edf9063f334daa"
+  },
+  "verified": [
+    "CHANGES_REQUIRED enters repair ready",
+    "Verified repair delivery enters independent review ready",
+    "Exact candidate approval enters installation ready and verified installation enters real flow wait",
+    "Direction-specific data wait does not block independent direction or maintenance",
+    "Same receipt content hash is consumed only once",
+    "Durable journal survives crash before current snapshot",
+    "Existing schema 1 imports without dropping owner, consumed hash, intent or handle",
+    "Wrong approval candidate and foreign owner are rejected",
+    "Busy advisory lock is not stolen",
+    "Unknown, timeout, busy, failed or missing dispatch observation never automatically redispatches",
+    "A newly frozen candidate may reserve a new repair intent",
+    "Journal state digest mismatch is rejected"
+  ],
+  "production_operations_modified": false,
+  "production_source_modified": false,
+  "automation_modified": false,
+  "business_triggered": false,
+  "natural_acceptance_contribution": false,
+  "limits": [
+    "Helper does not call tools, perform dispatch, install or evaluate research",
+    "Operator verifies callback content and actual evidence hashes before event admission",
+    "Advisory lock is coordination, not hard permission isolation",
+    "Ambiguous failed dispatch requires explicit owner reconciliation; no automatic reset"
+  ]
+}

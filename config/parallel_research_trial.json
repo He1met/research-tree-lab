@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "policy_version": "2026-09-26.v2",
+  "policy_path": "docs/PARALLEL_RESEARCH_TRIAL_V2.md",
+  "state": "PREPARATION_ONLY",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "medium",
+  "gate_evidence": {
+    "independent_method_approval": {
+      "reference": "review/continuation-audit/formal-safety-independent-v4-20260926.json",
+      "sha256": "4929f7490ad5c3d82469f60c0a4769be5174372d2ab2d7abf1a7c5b04d744d03"
+    },
+    "installation_receipt": {
+      "reference": "docs/formal-evaluator-installation-v4-20260926.json",
+      "sha256": "ed942ebc38179f5ef47514a274653d9585e737fa1ba47a67ce3d03c39a751051"
+    },
+    "real_cost_qualified_review_ref": null,
+    "feedback_ref": null,
+    "public_snapshot_readback": null
+  },
+  "routes": {
+    "A": {
+      "state": "PREPARATION_ONLY",
+      "problem_key": null,
+      "first_start_record_ref": null,
+      "started_at": null
+    },
+    "B": {
+      "state": "PREPARATION_ONLY",
+      "problem_key": null,
+      "first_start_record_ref": null,
+      "started_at": null
+    }
+  },
+  "trial_started_at": null,
+  "trial_ends_at": null,
+  "duration_hours": 168,
+  "start_rule": "LATER_OF_TWO_VERIFIED_FIRST_STARTS_IN_ACTUAL_PARALLEL_BATCH",
+  "evaluation_owner": "EXISTING_ACCEPTANCE_HEARTBEAT",
+  "evaluation_receipt": null,
+  "timing_without_evidence": "UNKNOWN",
+  "existing_frequencies_unchanged": true,
+  "new_schedulers_or_chats": false
+}

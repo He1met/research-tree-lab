@@ -1,0 +1,13 @@
+{
+  "scope": "FORMAL_CAPACITY_DESIGN_ONLY",
+  "baseline_review": "review/continuation-audit/formal-resource-independent-v1-20260930.json",
+  "question": "Can bounded historical verification reuse admit future batches without weakening closure or financial rules?",
+  "requirements": [
+    "Preserve immutable originals and old-method reconstruction",
+    "No production change or old batch replay",
+    "Propose separate evaluator version for any accounting change, explicitly compare old and new safety guarantees",
+    "Keep numeric guards and full identity, historical visibility, cache poisoning and cross-plan rejection checks",
+    "Freeze design and bounded engineering evidence for independent review before implementation"
+  ],
+  "capacity_fixed": false
+}

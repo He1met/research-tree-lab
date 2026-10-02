@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "reviewed_at": "2026-09-26T14:31:14Z",
+  "reviewer_role": "independent_trial_policy_audit",
+  "verdict": "PASS_POLICY_DESIGN_ONLY",
+  "policy_version": "2026-09-26.v1",
+  "reviewed_files": {
+    "docs/PARALLEL_RESEARCH_TRIAL.md": "e942467c9ed4d49186e41241a45c06298112581cc0c68143bc0c0eb530b1e5c9",
+    "config/parallel_research_trial.json": "388089eecfffbed98945e1129c074143750e8af2ad40dad82814e740b8072ef3"
+  },
+  "checks": {
+    "first_real_cost_review_feedback_publication_priority": "PASS",
+    "unsafe_formal_evaluator_requires_independent_approval_before_install": "PASS",
+    "frozen_btc_rules_and_ended_window_preserved": "PASS",
+    "route_a_admitted_data_and_one_falsifiable_question": "PASS",
+    "route_b_independent_mechanism_and_data_feasibility": "PASS",
+    "no_duplicate_claim_or_duplicate_business_dispatch": "PASS",
+    "exclusive_route_outputs_and_immutable_shared_inputs": "PASS",
+    "single_existing_publisher": "PASS",
+    "two_actual_parallel_first_start_records_required": "PASS",
+    "later_verified_start_plus_168_hours": "PASS",
+    "initial_state_preparation_only_null_times": "PASS",
+    "existing_coordinator_owns_control_state_with_append_only_receipts": "PASS",
+    "expiry_stops_new_trial_questions_without_stopping_original_tasks": "PASS",
+    "unique_problem_and_reproducible_output_metrics": "PASS",
+    "duplicate_reuse_waiting_accounting_and_unknown_without_timing": "PASS",
+    "no_speedup_or_profit_claim_without_evidence": "PASS",
+    "existing_frequency_permissions_and_notification_rules_preserved_by_policy": "PASS",
+    "gpt_6_astra_medium_for_research_agents": "PASS"
+  },
+  "source_identity": {
+    "command": "python3 scripts/publish.py --source-hash",
+    "observed_sha256": "eca93fe70146b1c6962842cd6b62dc8f66f89a47e8249017387202e1a6985277",
+    "matches_installation_approved_sha256": true,
+    "policy_files_excluded_from_source_hash_enumeration": true,
+    "source_hash_implementation_changed": false
+  },
+  "findings": [],
+  "limitations": [
+    "This is a policy and initial control-state review, not formal evaluator security approval.",
+    "Official automation prompt updates and unchanged non-prompt fields require separate actual configuration readback.",
+    "No research was started, no production record was submitted, and no trial gate was marked satisfied by this audit.",
+    "Claim ownership, true parallel execution, timing, economic results, publication and one-week evaluation remain future runtime evidence requirements.",
+    "Role and prompt agreements are not operating-system isolation."
+  ]
+}

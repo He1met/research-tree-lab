@@ -1,0 +1,125 @@
+{
+  "observed_at": "2026-10-01T20:47:59.450599+00:00",
+  "state": "WAITING_BOUND_REVIEWER_PENDING_INIT_NO_ACCEPTANCE_CHANGE",
+  "overall_status": "WAITING_NATURAL_OUTCOME",
+  "approved_source_sha256": "249d361bdb8d3dfaaab9adcfff3f3656caf3a02fe5e8cfde1187ad5e57e5743d",
+  "installation_receipt": "docs/formal-resource-installation-v1-20260930.json",
+  "store_records": 211,
+  "store_anomalies": 0,
+  "native_task_configs": {
+    "research-tree-lab": {
+      "status": "\"ACTIVE\"",
+      "rrule": "\"FREQ=DAILY;BYHOUR=7,19;BYMINUTE=30;BYSECOND=0\"",
+      "model": "\"gpt-6-astra\"",
+      "reasoning_effort": "\"medium\""
+    },
+    "research-tree-lab-2": {
+      "status": "\"ACTIVE\"",
+      "rrule": "\"FREQ=HOURLY;BYMINUTE=5;BYSECOND=0\"",
+      "model": "\"gpt-6-astra\"",
+      "reasoning_effort": "\"medium\""
+    },
+    "research-tree-lab-3": {
+      "status": "\"ACTIVE\"",
+      "rrule": "\"FREQ=DAILY;BYHOUR=8;BYMINUTE=15;BYSECOND=0\"",
+      "model": "\"gpt-6-astra\"",
+      "reasoning_effort": "\"medium\""
+    },
+    "research-tree-lab-4": {
+      "status": "\"ACTIVE\"",
+      "rrule": "\"FREQ=HOURLY;BYMINUTE=35;BYSECOND=0\"",
+      "model": "\"gpt-6-astra\"",
+      "reasoning_effort": "\"medium\""
+    }
+  },
+  "native_view_result": "FOUR_CARDS_RENDERED_NO_MACHINE_RUN_PROVENANCE",
+  "natural_trigger": "UNKNOWN",
+  "natural_research_times_verified": 0,
+  "natural_daily_review_verified": false,
+  "daily_failure_unchanged": "Sep30 batch 0 of 2 reviewed; no backfill",
+  "diagnostic_capacity_fixed": false,
+  "isolated_counters": {
+    "combined_bytes": 130760540,
+    "limit": 128000000
+  },
+  "original_failure_counters": "NOT_LOGGED",
+  "trial_state": "PREPARATION_ONLY",
+  "trial_start": null,
+  "trial_end": null,
+  "actual_net": null,
+  "missing": [
+    "Verified natural trigger provenance for two research times and daily review",
+    "Qualified real input and permitted complete cost evaluation followed by feedback adoption and public readback",
+    "Formal review cumulative-history capacity repair"
+  ],
+  "source_remote_status": "NATIVE_PUBLISHED_APPROVED_SOURCE_MAP_MATCH",
+  "full_market_data_remote_backup": false,
+  "new_restore_executed": false,
+  "business_triggered": false,
+  "notify": false,
+  "publication_receipt": "docs/publication-run-20261001-v3.json",
+  "snapshot_id": "22098b29f6577eea3f95f5c9836a30aa87b242f009bad10ffebec8fc182b8cf2",
+  "remote_source_commit": "e33cd63054ba7b7ca416013ee92772ee1b014226",
+  "http_readback": [
+    {
+      "path": "data/latest.json",
+      "status": 200,
+      "sha256": "9f7e96cb89af79fe36ffaa06757ee3a0b390f7e538c12dc65224c8facc57bc6d"
+    },
+    {
+      "path": "data/snapshots/22098b29f6577eea3f95f5c9836a30aa87b242f009bad10ffebec8fc182b8cf2/manifest.json",
+      "status": 200,
+      "sha256": "2fe28431b84da8e3e2fc5610851fec60c6a7e32f570bae30b9af3160def9cc0b"
+    },
+    {
+      "path": "data/snapshots/22098b29f6577eea3f95f5c9836a30aa87b242f009bad10ffebec8fc182b8cf2/catalog.json",
+      "status": 200,
+      "sha256": "90645f71a37f848c1b6c77f6fa48cafc68e85df5f17e25ce0a95d873c08c8490"
+    }
+  ],
+  "browser_readback": "REUSED_NATIVE_PUBLISHER_IAB_RECEIPT_NOT_RETESTED",
+  "archive_scope": {
+    "public_originals": 178,
+    "licensed_attachments": 233,
+    "packages": 35,
+    "local_only_excluded": 33,
+    "data_files_excluded": 29,
+    "new_restore_executed": false,
+    "verification": "Native publisher server digest receipt; supervisor scope receipt reviewed"
+  },
+  "formal_capacity_design": {
+    "state": "REVIEW_RUNNING_HANDLE_PENDING_INIT",
+    "candidate_manifest_sha256": "33b5797abee5f7a9d052a95a258ec569940376fa7c0bfd2f1643254e9afd424c",
+    "review_receipt": "review/continuation-audit/formal-capacity-design-independent-v1-20260930.json",
+    "review_sha256": "f5a400eed67acc957b3a46175d9b449c42ff9ea6327644644480ef64119981c9",
+    "file_verdict": "CHANGES_REQUIRED",
+    "receipt_consumed": false,
+    "finding": "Offline model discounts repeated ECONOMIC entries; production evaluator unchanged",
+    "next_action": "Wait original pending_init reviewer completion; no duplicate dispatch",
+    "repair_dispatched": false
+  },
+  "data_reuse": "Existing originals and four hash-bound inputs; no new data or economic computation",
+  "waiting_duration": "UNKNOWN",
+  "new_local_only_records": 0,
+  "new_public_records": 0,
+  "daily_review": {
+    "batch": "batch-daily-review-20261001-v1",
+    "evaluator_executed": false,
+    "evidence_ref": "e-daily-review-blocked-20261001-v1",
+    "evidence_sha256": "b9674e18cb708bb8f0f04a4bda328c715dede38fc04c9a661ba96328593e003c",
+    "new_economic_results": 0,
+    "new_failure_observed": false,
+    "new_feedback": 0,
+    "new_reviews": 0,
+    "previous_revision": 4,
+    "previous_stage": "PATH_AMBIGUOUS",
+    "publication_receipt": "docs/publication-run-20261001-v2.json",
+    "reason": "KNOWN_EVALUATOR_CAPACITY_BLOCKER_NOT_RETRIED",
+    "registered": 2,
+    "reviewed": 0,
+    "trigger_origin": "UNKNOWN"
+  },
+  "initial_http_error": null,
+  "http_attempts": 1,
+  "latest_native_publisher_observation": ".local/receipts/publication-nochange-20261002T0436.json"
+}

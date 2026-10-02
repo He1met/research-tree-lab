@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "policy_version": "2026-09-26.v1",
+  "policy_path": "docs/PARALLEL_RESEARCH_TRIAL.md",
+  "state": "PREPARATION_ONLY",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "medium",
+  "gate_evidence": {
+    "independent_method_approval": null,
+    "installation_receipt": null,
+    "real_cost_qualified_review_ref": null,
+    "feedback_ref": null,
+    "public_snapshot_readback": null
+  },
+  "routes": {
+    "A": {
+      "state": "PREPARATION_ONLY",
+      "problem_key": null,
+      "first_start_record_ref": null,
+      "started_at": null
+    },
+    "B": {
+      "state": "PREPARATION_ONLY",
+      "problem_key": null,
+      "first_start_record_ref": null,
+      "started_at": null
+    }
+  },
+  "trial_started_at": null,
+  "trial_ends_at": null,
+  "duration_hours": 168,
+  "start_rule": "LATER_OF_TWO_VERIFIED_FIRST_STARTS_IN_ACTUAL_PARALLEL_BATCH",
+  "evaluation_owner": "EXISTING_ACCEPTANCE_HEARTBEAT",
+  "evaluation_receipt": null,
+  "timing_without_evidence": "UNKNOWN",
+  "existing_frequencies_unchanged": true,
+  "new_schedulers_or_chats": false
+}

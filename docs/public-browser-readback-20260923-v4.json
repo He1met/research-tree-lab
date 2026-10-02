@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "verified_at": "2026-09-22T22:43:07.853Z",
+  "pages_url": "https://he1met.github.io/research-tree-lab/",
+  "snapshot_id": "385c4ffd99506e92e7505fb1bcf25d9443c61ed6aa2c02d0006f17f7feb40ee5",
+  "previous_snapshot_id": "86fef2218c8b65c855b304d7fbef4878e991282ecf5da78efed3228ac4d56263",
+  "tool": "OFFICIAL_CUA_IN_APP_BROWSER",
+  "status": "ACTUALLY_OPENED_DETAIL_AND_SCREENSHOT_INSPECTED",
+  "visible_rounds": 9,
+  "opened_round": "r-stock-corporate-action-accounting-20260923",
+  "opened_round_generation": 1,
+  "observed_information_available_at": "2026-09-22T22:18:26.995569+00:00",
+  "observed_evidence_stage": "REAL_SOURCE_RESEARCH_WITH_SEPARATE_SYNTHETIC_TESTS",
+  "visible_boundary": "Documentary evidence and synthetic bookkeeping, not a target-event return study or tradable strategy.",
+  "public_attachment_buttons": 3,
+  "actual_target_economic_result_claimed": false,
+  "refresh_preservation": {
+    "action": "PAGE_REFRESH_RECORDS_BUTTON_NOT_HARD_RELOAD",
+    "selected_before": "BTC区间库存：完整退出与换手成本归因",
+    "selected_after": "BTC区间库存：完整退出与换手成本归因",
+    "viewport_before": "transform: translate(53px, 44.5731px) scale(0.70235);",
+    "viewport_after": "transform: translate(53px, 44.5731px) scale(0.70235);",
+    "expanded_before": [
+      "收起后继 1",
+      "收起本轮 −",
+      "收起后继 —"
+    ],
+    "expanded_after": [
+      "收起后继 1",
+      "收起本轮 −",
+      "收起后继 —"
+    ],
+    "pass": true
+  },
+  "screenshot_evidence": "Official cua getScreenshot output inspected during this run; screenshot not added to public repository.",
+  "hard_reload_tested": false,
+  "limitations": [
+    "No new natural-origin evidence; official scheduled trigger origin UNKNOWN.",
+    "Research and synthetic accounting are separate; no new plan, formal review, readiness or actual target-event profit.",
+    "Archive upload blocked by locked Mac; public data refresh still verified."
+  ]
+}

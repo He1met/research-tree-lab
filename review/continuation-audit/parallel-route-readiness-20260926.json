@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "observation_cutoff": "2026-09-26T14:33:38Z",
+  "scope": "READ_ONLY_PREPARATION_NOT_TRIAL_RESEARCH",
+  "store_observation": {
+    "fresh_strict_load_records": 72,
+    "anomalies": [],
+    "in_progress_claims": [],
+    "uncommitted_staging_count": 0,
+    "limits": "Empty claims do not prove no official task is running. Recheck official handles and claims before choosing or starting work."
+  },
+  "datasets": [
+    {
+      "ref": "d-btc-eth-funding-exposed-20260921@1",
+      "record_sha256": "735625aec2c75ae507ca59075f008623db05ff2500e1cc676a64566b1391c6a3",
+      "data_sha256": "34a7e077c89ade3d60e5afe26e615bcf2df10fdfab04930b62d185810e8f698c",
+      "verified_bytes": 12419,
+      "declared_event_range": ["2026-09-20T16:00:00Z", "2026-09-21T08:00:00Z"],
+      "qualification": "Three already-exposed common funding events; source-event completeness UNKNOWN, no settlement marks or cost qualification."
+    },
+    {
+      "ref": "d-btc-candles-20260921@1",
+      "record_sha256": "05b48757938f592956a465bbe0f18c03a1754d270237f8c3521017ed02901c70",
+      "data_sha256": "5595c6777328eb5f392520fdf6bd9c59518018991c7f92dd376ce04b1c353287",
+      "verified_bytes": 44243,
+      "declared_event_range": ["2026-09-20T16:00:00Z", "2026-09-21T16:00:00Z"],
+      "qualification": "One-minute target trade candles, not mark data. Exposed development sample; formal event coverage/order/cost eligibility not established."
+    },
+    {
+      "ref": "d-btc-trades-20260921@1",
+      "record_sha256": "ed2df5284b083d82af19ce8bb35b3e1e8c1d4dd590b6141070c02987f8ed87a9",
+      "data_sha256": "efab589d1d2171e7bd589e334653bea29daa414b4c87239ad75c4f6c23886f69",
+      "verified_bytes": 28884745,
+      "declared_event_range": ["2026-09-20T16:00:00Z", "2026-09-21T16:00:00Z"],
+      "qualification": "Target trade history; same-millisecond chronology and source-event completeness UNKNOWN. Declared day partition is not completeness proof."
+    }
+  ],
+  "verification_boundary": "Store strict load rehashed manifests; resolve_evidence independently rehashed all three admitted dataset objects. No raw parser or economic calculation was rerun; schema/development diagnostics were read from committed records and are not business completeness certification.",
+  "route_a": {
+    "state": "NO_QUALIFIED_FORMAL_ENTRY_CURRENTLY",
+    "selected_problem": null,
+    "reason": "No admitted dataset covers the two frozen plans' September 23-24 event window. All three registered datasets are already exposed September 20-21 inputs. No installed approved formal evaluator supplies the required completed costed review pipeline.",
+    "possible_preparation_only": "Reuse existing input-completeness and entry/grid attribution reports to specify the missing input contract; do not rerun their same-sample conclusions as a new trial question.",
+    "entry_conditions": [
+      "Approved installed method and real costed formal-review, feedback and public-readback gate evidence",
+      "One nonduplicate question with preregistered falsification and completion criteria",
+      "Verified relevant target input coverage and ordering, with all required cost components explicitly represented under the frozen method",
+      "Current claim and official-run checks before actual route allocation"
+    ]
+  },
+  "frozen_btc": {
+    "plans": {
+      "p-btc-funding-short-20260923@1": "65ff62c3603d257b82b3274785fd1bfe2c5a784d215786be4775fe7fa076bce4",
+      "p-btc-funding-long-control-20260923@1": "a8dd9a25bd4a5353bc8ed479ec41056bcf07704fccb285f2d014a9615358d02c"
+    },
+    "evaluation_end": "2026-09-24T00:06:00Z",
+    "current_gap_classification": "METHOD_REQUIRED_AND_DATA_REQUIRED_NOT_FUTURE_WINDOW",
+    "missing": ["legal target entry and exit tick paths with first-event ordering", "all applicable realized funding settlements", "exact settlement mark values and full mark path", "verified actual cost inputs for actual_net; frozen cost scenarios remain separately labeled"],
+    "latest_committed_reviews": ["review-btc-funding-short-manual-20260923-v1", "review-btc-funding-long-control-manual-20260923-v1"],
+    "historical_review_limit": "Both historical reviews predate effectiveness. Their NOT_YET_EFFECTIVE status is preserved history, not the present gap classification. No new formal review was created by this inventory."
+  },
+  "route_b": {
+    "state": "PROPOSALS_ONLY_NOT_STARTED",
+    "avoid_repeating_rounds": ["r-funding-data-audit-20260923", "r-btc-funding-cost-counterevidence-20260923", "r-stock-session-mechanism-20260923", "r-feedback-input-completeness-20260923", "r-boundary-sensitivity-20260923", "r-btc-eth-paired-funding-20260923", "r-btc-entry-confirmation-20260923", "r-btc-grid-inventory-attribution-20260923", "r-stock-corporate-action-accounting-20260923", "r-adl-inventory-interruption-20260926", "r-order-admission-20260926"],
+    "existing_proposal": {
+      "ref": "seed-f-20260923",
+      "record_sha256": "93b215eff4cee004b334af9403bc3a9be8f260c7d6973004578d2c4b18fd89ce",
+      "question": "多产品结果是否只重复共同市场暴露？",
+      "current_state": "WAITING_SYNCHRONIZED_DATA",
+      "entry_condition": "Verify synchronous target-path availability and a materially distinct exposure-matched question; do not rename the completed three-event paired-funding study as common-exposure research."
+    },
+    "other_conditional_followups": [
+      {"ref": "decision-adl-boundary-20260926", "condition": "Exact public target ADL event, applicable rule and synchronous residual-path/cost evidence before comparing wait/close/rebuild"},
+      {"ref": "decision-order-admission-20260926", "condition": "New historical book/index/limit-parameter evidence before lifecycle comparison; touch-versus-fill documentary boundary is already completed"}
+    ],
+    "external_investigation_performed": false
+  },
+  "policy_correction_recommendation": {
+    "supersedes_scope": "The prior trial-policy-review-20260926.json PASS overlooked an overstrict actual-cost-only trial gate; historical receipt remains preserved.",
+    "finding": "Blocking every explicit cost scenario is stricter than PROJECT_SPEC section 8 and RESEARCH_PROGRAM sections 4-5, which permit unknown actual costs with clearly stated scenarios.",
+    "recommendation": "Allow independently approved formal review of real qualified inputs with all required, preregistered cost scenarios explicitly deducted, plus feedback and public readback, to satisfy the trial workflow gate. Keep actual_net unknown and conditional scenario results distinct; this does not grant FINAL, profitability or execution readiness, rewrite frozen plans, or permit omitted funding/exit costs.",
+    "still_insufficient": ["synthetic-only input", "missing-data-only status review", "gross-return-only result", "undisclosed or retrospectively selected costs", "missing necessary funding or exit costs"]
+  },
+  "production_changes": false,
+  "research_or_claim_started": false,
+  "network_downloads": false,
+  "economic_calculation_performed": false
+}

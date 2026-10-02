@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "observed_at": "2026-09-22T22:49:49.781745+00:00",
+  "state": "PASS_FROZEN_ENGINEERING_SUITE_NOT_APPROVAL",
+  "candidate_manifest_sha256": "c1462692042912dfac4b8ced5a26e3492b9ab94c606a7f97f4dfcff631713a73",
+  "source_sha256": "d2599ce3e09d937745511bbe8dc434079f93f2600aed3c65b20eaa4657d5b8fa",
+  "method_code_sha256": "fdc04ae33547764e49cae7fe60836a8922f6a568dd674188f7cac55ac00b2084",
+  "all_exact_delivery_and_method_files_verified": 26,
+  "source_files_unchanged": true,
+  "checks": [
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-q"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 47.775,
+      "output": "----------------------------------------------------------------------\nRan 312 tests in 47.677s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "planning/current/tests",
+        "-q"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.04,
+      "output": "----------------------------------------------------------------------\nRan 24 tests in 0.002s\n\nOK\n"
+    }
+  ],
+  "production_store_modified": false,
+  "economic_evaluation_claimed": false,
+  "independent_review_still_required": true
+}

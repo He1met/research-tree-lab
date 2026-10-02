@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "verdict": "CHANGES_REQUIRED",
+  "scope": "INDEPENDENT_ENGINEERING_SECURITY_REVIEW_ONLY_NOT_INSTALL_APPROVAL",
+  "candidate_manifest_sha256": "7a9581850f42aeb8aa1c4d717a1633972b6932e64afd6678d940ae874c27086d",
+  "formal_review_sha256": "cecd5f5036365409beabeb56e7aa2744e2bd45f54d724ceb5cb30b358745b666",
+  "method_code_sha256": "8c7fc46da560276b023d91e2bd73f67a909561c0478290be3848f1b46792d120",
+  "candidate_publishing_source_sha256": "9fd6deb6b312fc7d16532150decdd00ea37e0595d1b077f3997ed18beeb528f2",
+  "manifest_method_sources_map_sha256_not_install_hash": "a0bd67c4919b1321eb4a1f8664a9a9d90bac637af19c0bf9e85f6a187884b1fd",
+  "probe_script": "review/continuation-audit/probe_formal_safety_independent_v3_20260926.py",
+  "probe_script_sha256": "ca1cd974df02bd6dacd2a942fd43ee9c0adbfd6040fd20b8cb38c7f561e2329a",
+  "findings": [{
+    "priority": "P2",
+    "title": "Semantic ancestry wrongly consumes the review-node limit and stops complete batches",
+    "file": "researchlib/formal_review.py",
+    "line": 274,
+    "observed": "_ancestor_public_policy applies MAX_HISTORY_NODES=128 to every semantic reference, although the preliminary gate and documentation use a 4096-node semantic closure. These include plans, rounds, methods, feedback and other non-review records.",
+    "reproduction": "Register 127 additional supported-schema but evaluator-unsupported plans alongside the original two plans, retaining only the original two historical reviews. prepare_bundle rejects the entire 129-plan batch with PUBLIC_ANCESTOR_CLOSURE_LIMIT_EXCEEDED, before per-plan RULES_INCOMPLETE records.",
+    "expected": "Keep the documented 4096 semantic closure bound separate from 128 review-node and 64 depth bounds. Safe unsupported plans must get item dispositions rather than consuming the review history budget. Add regression at the true bounds without weakening the public reconstruction gate."
+  }],
+  "independent_checks": {
+    "old_attack_script": "probe_formal_early_20260923.py",
+    "old_attack_probes": 19,
+    "old_attack_results": "PASS: unsafe ancestors rejected, fifteen mutations rejected or isolated per-plan failure, combined cache budget enforced, FINAL reuse snapshot coverage 2/2 and batch-root archive original FINAL 2/2",
+    "new_security_probes": 13,
+    "new_security_results": "PASS: renamed source/private plus unknown method; nested coverage/results/inventory/private-hash; sibling feedback and batch fields; extra same-bundle member; private content renamed under SOURCE; unknown evaluator all rejected before new public root. Extra unlicensed source attachment accepted but actual archive and snapshot contain no private canary. Waiting profile reconstruction leaves shared method_material unchanged; modified bundled Python is rejected by byte hash and not executed.",
+    "resource_regression": "FAIL: 129 registered plans, 2 historical reviews, closure-limit rejection",
+    "author_suite_independently_rerun": {"command": "python3 -m unittest discover -s tests -p test_formal_review.py -q", "tests": 34, "seconds": 39.808, "failures": 0, "errors": 0},
+    "reviewed_cache_behavior": "Historical public reconstruction creates a child context and shares only public_verified_bundles; economic verified/resolution caches are separate. Byte accounting returns child usage to the combined budget. Chain-limit test still yields per-item failure, supporting no economic cache prewarming bypass.",
+    "reviewed_outbox_behavior": "Recovery rebuilds the full bundle at original preparation time from historical visible records and compares canonical bytes. Committed manifest file hashes, producer role and request identity are checked; old-method retained outbox cannot become a formal outbox.",
+    "source_drift": false
+  },
+  "limits": [
+    "Synthetic temporary Stores only; no production research or model calls.",
+    "Author tests supplement independent source inspection and new attacks; they do not confer security approval.",
+    "No claim of real source completeness, event order, exact mark, actual cost, economic FINAL, natural scheduling or profitability.",
+    "No candidate source, installation, production Store, Git or automation configuration changes by this reviewer.",
+    "Failure must be fixed in a new frozen revision and independently rechecked before installation."
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "version": "formal-capacity-design-independent-v1-20260930",
+  "verdict": "CHANGES_REQUIRED",
+  "reviewer": "/root/formal_safety_independent_v3",
+  "review_intent_sha256": "9e5cdcaf46af139faf79f37cec6af74f45ce781324284aa01e126fb97942e1d7",
+  "candidate_manifest": "docs/formal-capacity-design-v1-candidate.json",
+  "candidate_manifest_sha256": "33b5797abee5f7a9d052a95a258ec569940376fa7c0bfd2f1643254e9afd424c",
+  "baseline_publishing_source_sha256": "249d361bdb8d3dfaaab9adcfff3f3656caf3a02fe5e8cfde1187ad5e57e5743d",
+  "future_evaluator_source_sha256": null,
+  "approval_scope": "Design and offline model review only. No production source, evaluator implementation, installation, capacity recovery, financial result or natural review is approved.",
+  "design_assessment": "Written safety boundaries and explicit accounting-policy change are credible as a conditional research proposal. The symbolic model has a reproducible domain-eligibility defect and must be corrected before accepting the frozen design evidence.",
+  "implementation_authorized": false,
+  "installation_authorized": false,
+  "findings": [
+    {
+      "priority": "P2",
+      "file": "tests/probe_formal_capacity_design.py",
+      "start_line": 33,
+      "end_line": 40,
+      "title": "Symbolic ledger grants reduced-cost hits in the economic domain",
+      "reproduction": "Candidate unchanged ledger([(\"ECONOMIC:A\",50),(\"ECONOMIC:A\",50)],75,2) returns charge 51 and admitted true. Design requires economic verification to remain independently fully charged: charge 100 and admission false.",
+      "impact": "The one-economic-item example passes without testing repeated economic identities; the reusable model permits behavior explicitly prohibited by the design. This is a model defect, not a production evaluator bypass.",
+      "required_change": "Freeze a new candidate preserving v1. Restrict reusable insertion/hits to the explicitly eligible PUBLIC domain; repeated ECONOMIC and RAW_PARSE entries must retain required full charges, never gain economic/public authorization or evict PUBLIC proofs. Add mixed-domain repeated-key adversarial cases and regenerate the symbolic receipt."
+    }
+  ],
+  "evidence": {
+    "probe": "review/continuation-audit/probe_formal_capacity_design_independent_v1.py",
+    "probe_sha256": "710ce6b1e83c17030283884a9d3ae48f5916e731bf8a7c8ecf49978aa097127c",
+    "execution": "review/continuation-audit/formal-capacity-design-independent-v1-execution-20260930.json",
+    "execution_sha256": "6d279eabdfda1e8eab81dcf7876cf6d49a9638f3c279df4495ddc7d34382e728"
+  },
+  "verified": {
+    "all_manifest_delivery_and_evidence_hashes": true,
+    "installed_baseline_source_old16_formal19_unchanged": true,
+    "author_symbolic_output_reproduced_exactly": true,
+    "independent_public_only_model_totals": {
+      "resident": 141,
+      "evicted": 190,
+      "unchanged": 190
+    },
+    "real_diagnosis_reused_not_rerun": true,
+    "candidate_public_guard_files": 7,
+    "candidate_public_guard_failures": 0
+  },
+  "disclosed_research_gates_not_additional_defects": [
+    "Exact positive hit/miss/failed-work/live-memory accounting formulas remain unfrozen. Equal numeric caps do not establish equal policy after reduced logical-work charges.",
+    "Old 34e0 logical transcript/shadow-meter equivalence for differing incoming cache/context states remains unproved. Neither cost totals alone nor a cached final result proves all intermediate guards.",
+    "Conservative complete-identity keys have no demonstrated useful real hits; 141 symbolic units are not a prediction about the 130760540-byte workload."
+  ],
+  "old_history_bottleneck_assessment": {
+    "unchanged_current_accounting": "130760540 remains above 128000000, so ordinary caching that retains all charges cannot admit the failed batch.",
+    "historical_reconstruction": "Completed historical September 29 context is 114633672, below the old cap; this alone does not make old-history validation an inevitable blocker to every new-version root. Any required historical reconstruction that actually rejects under its own unchanged old meter remains an absolute rejection: no certificate, new meter or cache may waive it.",
+    "reuse_feasibility": "Whole public bundles were already reconstructed once by the existing shared verified set. A whole-bundle proof cache alone has no evidenced redundant completed work to remove. The recurring predecessor/economic work is deliberately outside discounted authorization. Any benefit requires demonstrated repeated PUBLIC substatements with identical complete keys, not deletion of the 114633672 child aggregate.",
+    "claim": "Feasibility remains UNKNOWN; capacity_fixed=false. No financial or natural gate is upgraded."
+  },
+  "next_minimal_falsifiable_step": {
+    "scope": "Separate frozen offline trace/key and shadow-ledger experiment; no evaluator replacement or business execution. First repair the model counterexample.",
+    "inputs": "Reuse existing approved aggregate diagnosis. If event identities are absent, specify a separately reviewed read-only instrumentation capture on an isolated historical copy; do not infer complete keys from aggregate counters or rerun a native batch.",
+    "test": "Select one repeated candidate PUBLIC verification statement, freeze its exact dependency/incoming-state key and positive hit/materialization/live-memory formula, then independently compare cold and shadow intermediate guard decisions against the exact old implementation across below/at/above and incoming-state variations. Record zero hits honestly.",
+    "stop_rules": [
+      "If only repeated economic work or distinct historical-key statements exist, reject that cache scope as a capacity remedy; do not weaken keys.",
+      "If old-method shadow checks reject or cannot be shown equivalent at every relevant boundary, the historical proof is ineligible regardless of new global budget.",
+      "Quantify potential savings net of all required hit/recheck/memory charges; the diagnosed 2760540 excess is a necessary baseline hurdle, not a future admission guarantee.",
+      "Do not authorize production implementation until all three disclosed gates have independently reviewed evidence. Preserve formulas, numeric limits, original chains and incomplete September 30 batch."
+    ]
+  },
+  "delivery_files_reviewed": {
+    "docs/formal-capacity-design-request-20260930.json": "d6d70c99c807b979522175832931f96f022f5edcfbef1318adc05ab22fde74f3",
+    "docs/formal-capacity-design-v1.md": "8ae68dc1b0237e457ec02e3a3e8b87e9bd992c2f6f23be43b06abf4e1f01d5ba",
+    "tests/probe_formal_capacity_design.py": "15d697e7c56f97dd1977f17a4569901ebaa4db58f674df658795753b0995a962"
+  },
+  "production_written": false,
+  "evaluator_executed": false,
+  "store_read_or_written": false,
+  "installed": false,
+  "published": false,
+  "old_batch_backfilled": false,
+  "new_formal_reviews": 0,
+  "capacity_fixed": false,
+  "actual_net": null
+}

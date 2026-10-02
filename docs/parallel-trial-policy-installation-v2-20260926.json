@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "observed_at": "2026-09-26T14:35:25.913113+00:00",
+  "state": "POLICY_V2_INSTALLED_PREPARATION_ONLY",
+  "policy_files": {
+    "docs/PARALLEL_RESEARCH_TRIAL_V2.md": "d84d8ef200d8c32c26afcc5a9d3d6e716e2178d7350a75f948fd92fceb951504",
+    "config/parallel_research_trial.json": "869736ab474b55c1b1584cdbd0124c10a1a3fbacfa822b79ac42cb939045258d"
+  },
+  "configuration_readback": [
+    {
+      "id": "research-tree-lab",
+      "status": "ACTIVE",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "prompt_sha256": "84f70202e89d49aa5c9aaeb4a07829a6e05a6bc2dc594cc016e7e325d0ed9375",
+      "policy_reference_updated": true,
+      "exact_prompt_verified": true,
+      "other_fields_preserved": true
+    },
+    {
+      "id": "research-tree-lab-2",
+      "status": "ACTIVE",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "prompt_sha256": "e660747327a252183bc1e80d07c56e61de8e899832c8ceb75570f4d662b65790",
+      "policy_reference_updated": true,
+      "exact_prompt_verified": true,
+      "other_fields_preserved": true
+    },
+    {
+      "id": "research-tree-lab-3",
+      "status": "ACTIVE",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "prompt_sha256": "d2eb2c4741d2fa66ba034f26da152bc0795978f5cb4dd8289ae82338cb1d234d",
+      "policy_reference_updated": false,
+      "exact_prompt_verified": true,
+      "other_fields_preserved": true
+    },
+    {
+      "id": "research-tree-lab-4",
+      "status": "ACTIVE",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "prompt_sha256": "676e9f601e4c930437fbfd3acf382175cb4f87e44b7154498b1884250441f66e",
+      "policy_reference_updated": false,
+      "exact_prompt_verified": true,
+      "other_fields_preserved": true
+    },
+    {
+      "id": "automation-3",
+      "status": "ACTIVE",
+      "model": "INHERITS_CURRENT_TASK",
+      "reasoning_effort": "INHERITS_CURRENT_TASK",
+      "prompt_sha256": "6e3e605e4990700ce676ee4fbe3a10158e575645dd3ce004f3a02bfe50a70f5e",
+      "policy_reference_updated": true,
+      "exact_prompt_verified": true,
+      "other_fields_preserved": true
+    }
+  ],
+  "supersedes": "docs/parallel-trial-policy-installation-20260926.json",
+  "correction": "ALLOW_EXPLICIT_ORIGINAL_RULE_COST_SCENARIOS_FOR_PROCESS_GATE_NOT_ACTUAL_NET_OR_FINAL",
+  "approved_source_sha256": "eca93fe70146b1c6962842cd6b62dc8f66f89a47e8249017387202e1a6985277",
+  "trial_started_at": null,
+  "trial_ends_at": null,
+  "new_automations": 0,
+  "new_user_tasks": 0,
+  "manual_business_runs": 0
+}

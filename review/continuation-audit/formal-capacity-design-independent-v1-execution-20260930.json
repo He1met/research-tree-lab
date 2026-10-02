@@ -1,0 +1,59 @@
+{
+  "scope": "DESIGN_ONLY_NO_EVALUATOR_STORE_OR_MARKET_EXECUTION",
+  "manifest_verified": true,
+  "all_bound_delivery_and_evidence_verified": true,
+  "baseline_source_unchanged": true,
+  "author_symbolic_output_exactly_reproduced": true,
+  "independent_symbolic_public_only_cache_totals": {
+    "resident": 141,
+    "evicted": 190,
+    "unchanged_old": 190
+  },
+  "counterexample": {
+    "sequence": [
+      [
+        "ECONOMIC:A",
+        50
+      ],
+      [
+        "ECONOMIC:A",
+        50
+      ]
+    ],
+    "cap": 75,
+    "slots": 2,
+    "candidate_result": [
+      51,
+      true,
+      [
+        {
+          "key": "ECONOMIC:A",
+          "hit": false,
+          "charged": 50,
+          "admitted": true
+        },
+        {
+          "key": "ECONOMIC:A",
+          "hit": true,
+          "charged": 51,
+          "admitted": true
+        }
+      ]
+    ],
+    "required_charge": 100,
+    "required_admission": false,
+    "finding": "ECONOMIC_DOMAIN_INCORRECTLY_ELIGIBLE_FOR_REUSE"
+  },
+  "historical_own_bytes": {
+    "batch-daily-review-20260927-v1": 8935980,
+    "batch-daily-review-20260928-v1": 38211100,
+    "batch-daily-review-20260929-v1": 67486592,
+    "batch-daily-review-20260930-v1": 16126868
+  },
+  "old_global_excess_bytes": 2760540,
+  "candidate_public_guard_files": 7,
+  "candidate_public_guard_failures": [],
+  "old_shadow_equivalence_proved": false,
+  "real_complete_key_reuse_proved": false,
+  "implementation_authorized": false
+}

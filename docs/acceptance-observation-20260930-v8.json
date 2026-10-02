@@ -1,0 +1,101 @@
+{
+  "observed_at": "2026-09-30T06:48:03.869457+00:00",
+  "state": "DIAGNOSTIC_PUBLISHED_CAPACITY_DESIGN_REVIEW_RUNNING",
+  "overall_status": "WAITING_NATURAL_OUTCOME",
+  "approved_source_sha256": "249d361bdb8d3dfaaab9adcfff3f3656caf3a02fe5e8cfde1187ad5e57e5743d",
+  "installation_receipt": "docs/formal-resource-installation-v1-20260930.json",
+  "store_records": 206,
+  "store_anomalies": 0,
+  "native_task_configs": {
+    "research-tree-lab": {
+      "status": "\"ACTIVE\"",
+      "rrule": "\"FREQ=DAILY;BYHOUR=7,19;BYMINUTE=30;BYSECOND=0\"",
+      "model": "\"gpt-6-astra\"",
+      "reasoning_effort": "\"medium\""
+    },
+    "research-tree-lab-2": {
+      "status": "\"ACTIVE\"",
+      "rrule": "\"FREQ=HOURLY;BYMINUTE=5;BYSECOND=0\"",
+      "model": "\"gpt-6-astra\"",
+      "reasoning_effort": "\"medium\""
+    },
+    "research-tree-lab-3": {
+      "status": "\"ACTIVE\"",
+      "rrule": "\"FREQ=DAILY;BYHOUR=8;BYMINUTE=15;BYSECOND=0\"",
+      "model": "\"gpt-6-astra\"",
+      "reasoning_effort": "\"medium\""
+    },
+    "research-tree-lab-4": {
+      "status": "\"ACTIVE\"",
+      "rrule": "\"FREQ=HOURLY;BYMINUTE=35;BYSECOND=0\"",
+      "model": "\"gpt-6-astra\"",
+      "reasoning_effort": "\"medium\""
+    }
+  },
+  "native_view_result": "FOUR_CARDS_RENDERED_NO_MACHINE_RUN_PROVENANCE",
+  "natural_trigger": "UNKNOWN",
+  "natural_research_times_verified": 0,
+  "natural_daily_review_verified": false,
+  "daily_failure_unchanged": "Sep30 batch 0 of 2 reviewed; no backfill",
+  "diagnostic_capacity_fixed": false,
+  "isolated_counters": {
+    "combined_bytes": 130760540,
+    "limit": 128000000
+  },
+  "original_failure_counters": "NOT_LOGGED",
+  "trial_state": "PREPARATION_ONLY",
+  "trial_start": null,
+  "trial_end": null,
+  "actual_net": null,
+  "missing": [
+    "Verified natural trigger provenance for two research times and daily review",
+    "Qualified real input and permitted complete cost evaluation followed by feedback adoption and public readback",
+    "Formal review cumulative-history capacity repair"
+  ],
+  "source_remote_status": "NATIVE_PUBLISHED_APPROVED_SOURCE_MAP_MATCH",
+  "full_market_data_remote_backup": false,
+  "new_restore_executed": false,
+  "business_triggered": false,
+  "notify": true,
+  "publication_receipt": "docs/publication-run-20260930-v3.json",
+  "snapshot_id": "c35e1cbcb8a6fd5e65a9d319a0e364643509c756fe31436b3fa30254fdc54c65",
+  "remote_source_commit": "bfcf22520ad60dec78d0d5ce7063627b86bac0b6",
+  "http_readback": [
+    {
+      "path": "data/latest.json",
+      "http": 200,
+      "sha256": "46fa2b8b67968cf13834c8a38523bf45080f59c12adef69966bf67e0c5ad3a65"
+    },
+    {
+      "path": "data/snapshots/c35e1cbcb8a6fd5e65a9d319a0e364643509c756fe31436b3fa30254fdc54c65/manifest.json",
+      "http": 200,
+      "sha256": "4419a3c144b414aaf9198ea6070ce134486108797e146d01a7e694a88eb40978"
+    },
+    {
+      "path": "data/snapshots/c35e1cbcb8a6fd5e65a9d319a0e364643509c756fe31436b3fa30254fdc54c65/catalog.json",
+      "http": 200,
+      "sha256": "64f6328868a3208c03a2e5ec1065e95c70ca07da55008e725e4e8bc121d949d2"
+    }
+  ],
+  "browser_readback": "REUSED_NATIVE_PUBLISHER_IAB_RECEIPT_NOT_RETESTED",
+  "archive_scope": {
+    "public_originals": 176,
+    "licensed_attachments": 231,
+    "packages": 34,
+    "local_only_excluded": 30,
+    "data_files_excluded": 29,
+    "new_restore_executed": false
+  },
+  "formal_capacity_design": {
+    "state": "REVIEW_RUNNING_NOT_IMPLEMENTATION_READY",
+    "candidate_manifest_sha256": "33b5797abee5f7a9d052a95a258ec569940376fa7c0bfd2f1643254e9afd424c",
+    "implementation_blockers": [
+      "Exact byte-work hit/live-memory formulas",
+      "Old-method shadow resource equivalence",
+      "Real useful reuse under full identity key"
+    ],
+    "reviewer": "/root/formal_safety_independent_v3"
+  },
+  "data_reuse": "Existing originals and four hash-bound inputs; no new data or economic computation",
+  "waiting_duration": "UNKNOWN"
+}

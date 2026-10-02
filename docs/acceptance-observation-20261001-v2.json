@@ -1,0 +1,105 @@
+{
+  "observed_at": "2026-09-30T18:47:52.161020+00:00",
+  "state": "WAITING_BOUND_REVIEWER_PENDING_INIT_NO_ACCEPTANCE_CHANGE",
+  "overall_status": "WAITING_NATURAL_OUTCOME",
+  "approved_source_sha256": "249d361bdb8d3dfaaab9adcfff3f3656caf3a02fe5e8cfde1187ad5e57e5743d",
+  "installation_receipt": "docs/formal-resource-installation-v1-20260930.json",
+  "store_records": 207,
+  "store_anomalies": 0,
+  "native_task_configs": {
+    "research-tree-lab": {
+      "status": "\"ACTIVE\"",
+      "rrule": "\"FREQ=DAILY;BYHOUR=7,19;BYMINUTE=30;BYSECOND=0\"",
+      "model": "\"gpt-6-astra\"",
+      "reasoning_effort": "\"medium\""
+    },
+    "research-tree-lab-2": {
+      "status": "\"ACTIVE\"",
+      "rrule": "\"FREQ=HOURLY;BYMINUTE=5;BYSECOND=0\"",
+      "model": "\"gpt-6-astra\"",
+      "reasoning_effort": "\"medium\""
+    },
+    "research-tree-lab-3": {
+      "status": "\"ACTIVE\"",
+      "rrule": "\"FREQ=DAILY;BYHOUR=8;BYMINUTE=15;BYSECOND=0\"",
+      "model": "\"gpt-6-astra\"",
+      "reasoning_effort": "\"medium\""
+    },
+    "research-tree-lab-4": {
+      "status": "\"ACTIVE\"",
+      "rrule": "\"FREQ=HOURLY;BYMINUTE=35;BYSECOND=0\"",
+      "model": "\"gpt-6-astra\"",
+      "reasoning_effort": "\"medium\""
+    }
+  },
+  "native_view_result": "FOUR_CARDS_RENDERED_NO_MACHINE_RUN_PROVENANCE",
+  "natural_trigger": "UNKNOWN",
+  "natural_research_times_verified": 0,
+  "natural_daily_review_verified": false,
+  "daily_failure_unchanged": "Sep30 batch 0 of 2 reviewed; no backfill",
+  "diagnostic_capacity_fixed": false,
+  "isolated_counters": {
+    "combined_bytes": 130760540,
+    "limit": 128000000
+  },
+  "original_failure_counters": "NOT_LOGGED",
+  "trial_state": "PREPARATION_ONLY",
+  "trial_start": null,
+  "trial_end": null,
+  "actual_net": null,
+  "missing": [
+    "Verified natural trigger provenance for two research times and daily review",
+    "Qualified real input and permitted complete cost evaluation followed by feedback adoption and public readback",
+    "Formal review cumulative-history capacity repair"
+  ],
+  "source_remote_status": "NATIVE_PUBLISHED_APPROVED_SOURCE_MAP_MATCH",
+  "full_market_data_remote_backup": false,
+  "new_restore_executed": false,
+  "business_triggered": false,
+  "notify": false,
+  "publication_receipt": "docs/publication-run-20260930-v4.json",
+  "snapshot_id": "b146ddb492280e6d04d6d032648d5e2d004fa856ed50a70aa4cb38c715064fa8",
+  "remote_source_commit": "7403eae20bec2787f203664705b269e34bf0b8f3",
+  "http_readback": [
+    {
+      "path": "data/latest.json",
+      "status": 200,
+      "sha256": "e34062c4778484c039dd8bafb6c8e1d1ae9fb91299d2ae5ddff97d3b8434d94a"
+    },
+    {
+      "path": "data/snapshots/b146ddb492280e6d04d6d032648d5e2d004fa856ed50a70aa4cb38c715064fa8/manifest.json",
+      "status": 200,
+      "sha256": "8bba2c551b4d09e7f8ee22408869bd783b8130d8a35e29561b55d5d5b21c349b"
+    },
+    {
+      "path": "data/snapshots/b146ddb492280e6d04d6d032648d5e2d004fa856ed50a70aa4cb38c715064fa8/catalog.json",
+      "status": 200,
+      "sha256": "de55452c1743050da601bb9191f9a064a403edfb155600748c02fd04475e2920"
+    }
+  ],
+  "browser_readback": "REUSED_NATIVE_PUBLISHER_IAB_RECEIPT_NOT_RETESTED",
+  "archive_scope": {
+    "public_originals": 176,
+    "licensed_attachments": 231,
+    "packages": 34,
+    "local_only_excluded": 31,
+    "data_files_excluded": 29,
+    "new_restore_executed": false
+  },
+  "formal_capacity_design": {
+    "state": "REVIEW_RUNNING_HANDLE_PENDING_INIT",
+    "candidate_manifest_sha256": "33b5797abee5f7a9d052a95a258ec569940376fa7c0bfd2f1643254e9afd424c",
+    "review_receipt": "review/continuation-audit/formal-capacity-design-independent-v1-20260930.json",
+    "review_sha256": "f5a400eed67acc957b3a46175d9b449c42ff9ea6327644644480ef64119981c9",
+    "file_verdict": "CHANGES_REQUIRED",
+    "receipt_consumed": false,
+    "finding": "Offline model discounts repeated ECONOMIC entries; production evaluator unchanged",
+    "next_action": "Wait original pending_init reviewer completion; no duplicate dispatch",
+    "repair_dispatched": false
+  },
+  "data_reuse": "Existing originals and four hash-bound inputs; no new data or economic computation",
+  "waiting_duration": "UNKNOWN",
+  "new_local_only_records": 0,
+  "new_public_records": 0,
+  "latest_native_publisher_observation": ".local/receipts/publication-nochange-20261001T0236.json"
+}

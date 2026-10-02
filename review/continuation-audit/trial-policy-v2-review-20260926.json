@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "reviewer_role": "independent_trial_policy_audit",
+  "policy_version": "2026-09-26.v2",
+  "verdict": "PASS_POLICY_DESIGN_ONLY_WITH_EXPLICIT_V1_CORRECTION",
+  "supersedes_review": "review/continuation-audit/trial-policy-review-20260926.json",
+  "correction": "The earlier PASS overlooked that rejecting every assumed-cost scenario imposed a stronger trial workflow prerequisite than the original specification or user authorization. Preserve that earlier receipt as history; this review corrects its cost-gate conclusion.",
+  "reviewed_files": {
+    "docs/PARALLEL_RESEARCH_TRIAL_V2.md": "d84d8ef200d8c32c26afcc5a9d3d6e716e2178d7350a75f948fd92fceb951504",
+    "config/parallel_research_trial.json": "869736ab474b55c1b1584cdbd0124c10a1a3fbacfa822b79ac42cb939045258d"
+  },
+  "verified_correction": [
+    "Formal evaluation must use real qualified inputs and an independently approved installed method.",
+    "All costs required by the original protocol must be accounted for, including funding, inventory and exit costs where applicable.",
+    "Explicit preregistered cost scenarios allowed by that protocol can satisfy workflow admission; no retrospective assumptions may be added to rewrite it.",
+    "Unknown actual costs and actual_net remain null; scenario net is not actual account PnL.",
+    "Trial admission does not grant economic FINAL, profitability or execution readiness and does not alter frozen-plan terminal rules.",
+    "Missing-data-only statements, synthetic-only inputs and gross-return-only results remain insufficient.",
+    "Feedback and public snapshot readback remain required; current state is PREPARATION_ONLY with null start/end times."
+  ],
+  "remaining_scope": "All other v1 policy-design checks remain applicable. This is not formal evaluator security approval, automation configuration readback, actual trial execution, or economic acceptance.",
+  "findings": [],
+  "writes_limited_to_own_review_receipts": true
+}

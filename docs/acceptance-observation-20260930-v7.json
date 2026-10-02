@@ -1,0 +1,65 @@
+{
+  "observed_at": "2026-09-30T04:51:11.316819+00:00",
+  "state": "DIAGNOSTIC_INSTALLED_CAPACITY_UNRESOLVED",
+  "overall_status": "WAITING_NATURAL_OUTCOME",
+  "approved_source_sha256": "249d361bdb8d3dfaaab9adcfff3f3656caf3a02fe5e8cfde1187ad5e57e5743d",
+  "installation_receipt": "docs/formal-resource-installation-v1-20260930.json",
+  "store_records": 206,
+  "store_anomalies": 0,
+  "native_task_configs": {
+    "research-tree-lab": {
+      "status": "\"ACTIVE\"",
+      "rrule": "\"FREQ=DAILY;BYHOUR=7,19;BYMINUTE=30;BYSECOND=0\"",
+      "model": "\"gpt-6-astra\"",
+      "reasoning_effort": "\"medium\""
+    },
+    "research-tree-lab-2": {
+      "status": "\"ACTIVE\"",
+      "rrule": "\"FREQ=HOURLY;BYMINUTE=5;BYSECOND=0\"",
+      "model": "\"gpt-6-astra\"",
+      "reasoning_effort": "\"medium\""
+    },
+    "research-tree-lab-3": {
+      "status": "\"ACTIVE\"",
+      "rrule": "\"FREQ=DAILY;BYHOUR=8;BYMINUTE=15;BYSECOND=0\"",
+      "model": "\"gpt-6-astra\"",
+      "reasoning_effort": "\"medium\""
+    },
+    "research-tree-lab-4": {
+      "status": "\"ACTIVE\"",
+      "rrule": "\"FREQ=HOURLY;BYMINUTE=35;BYSECOND=0\"",
+      "model": "\"gpt-6-astra\"",
+      "reasoning_effort": "\"medium\""
+    }
+  },
+  "native_view_result": "FOUR_CARDS_RENDERED_NO_MACHINE_RUN_PROVENANCE",
+  "natural_trigger": "UNKNOWN",
+  "natural_research_times_verified": 0,
+  "natural_daily_review_verified": false,
+  "daily_failure_unchanged": "Sep30 batch 0 of 2 reviewed; no backfill",
+  "diagnostic_capacity_fixed": false,
+  "isolated_counters": {
+    "combined_bytes": 130760540,
+    "limit": 128000000
+  },
+  "original_failure_counters": "NOT_LOGGED",
+  "capacity_design": {
+    "state": "REPAIR_RUNNING_DESIGN_ONLY",
+    "request": "docs/formal-capacity-design-request-20260930.json",
+    "worker": "/root/formal_safety_repair"
+  },
+  "trial_state": "PREPARATION_ONLY",
+  "trial_start": null,
+  "trial_end": null,
+  "actual_net": null,
+  "missing": [
+    "Verified natural trigger provenance for two research times and daily review",
+    "Qualified real input and permitted complete cost evaluation followed by feedback adoption and public readback",
+    "Formal review cumulative-history capacity repair"
+  ],
+  "source_remote_status": "AWAIT_EXISTING_NATIVE_PUBLISHER",
+  "full_market_data_remote_backup": false,
+  "new_restore_executed": false,
+  "business_triggered": false,
+  "notify": true
+}
