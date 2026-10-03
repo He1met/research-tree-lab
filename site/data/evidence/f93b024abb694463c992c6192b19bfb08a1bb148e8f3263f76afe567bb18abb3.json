@@ -1,0 +1,46 @@
+[
+  {
+    "url": "https://www.bls.gov/news.release/archives/cpi_01122023.htm",
+    "title": "BLS 2023年1月12日CPI归档",
+    "source_role": "PRIMARY_ARCHIVED_FIRST_RELEASE",
+    "observation_interval_utc": [
+      "2026-10-03T09:30:26Z",
+      "2026-10-03T09:33:08Z"
+    ],
+    "exact_retrieval_timestamp": null,
+    "historical_release_header": "2023-01-12 08:30 ET",
+    "metric": "2022年12月，美国城市平均全部项目CPI-U，季调后环比",
+    "reported_value_percent": "-0.1",
+    "locator": "归档页开头第181—185行和Table A第202—218行（官方web工具文本行号）",
+    "limitations": "本次取得的是2026年读取到的官方归档文本；历史页头公布安排不等于本项目当年接收证明。"
+  },
+  {
+    "url": "https://www.bls.gov/news.release/archives/cpi_02142023.htm",
+    "title": "BLS 2023年2月14日CPI归档",
+    "source_role": "PRIMARY_ARCHIVED_REVISED_COMPARISON",
+    "observation_interval_utc": [
+      "2026-10-03T09:30:26Z",
+      "2026-10-03T09:33:08Z"
+    ],
+    "exact_retrieval_timestamp": null,
+    "historical_release_header": "2023-02-14 08:30 ET",
+    "metric": "2022年12月，美国城市平均全部项目CPI-U，季调后环比",
+    "reported_value_percent": "0.1",
+    "locator": "开头第181—184行、Table A第202—218行；年度修订说明第329—336行（官方web工具文本行号）",
+    "facts": "相同月份同指标已变为+0.1%；该归档还说明2018—2022季调修订于2023年2月10日公开。",
+    "limitations": "2月14日是比较载体日期，不能称最早修订可得日；2月10日的准确公开时刻未从已读资料建立。"
+  },
+  {
+    "url": "https://alfred.stlouisfed.org/help",
+    "title": "St. Louis Fed ALFRED帮助",
+    "source_role": "OFFICIAL_VINTAGE_AVAILABILITY_BOUNDARY",
+    "observation_interval_utc": [
+      "2026-10-03T09:30:26Z",
+      "2026-10-03T09:33:08Z"
+    ],
+    "exact_retrieval_timestamp": null,
+    "locator": "第18—43行（官方web工具文本行号）",
+    "facts": "版本帮助说明修订后通常在一个工作日内加入；日期优先使用来源公布日期，再用数据提供者日期，否则用FRED首次可得日期。",
+    "limitations": "这些文档没有给出此CPI版本的实际日内入库、传送或本项目接收时刻。仅靠版本日期不足以证明某个日内决策前可得，此项为资料支持的推断。"
+  }
+]
